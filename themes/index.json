@@ -11,6 +11,7 @@
     "catppuccin-macchiato-theme",
     "catppuccin-latte-theme",
     "nord-light-theme",
-    "oled-black-theme"
+    "oled-black-theme",
+    "vscode-dark-theme"
   ]
 }
