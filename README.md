@@ -17,6 +17,8 @@ content.
 - [Nord Light](themes/nord-light-theme/) by PuddingKC
 - [OLED Black](themes/oled-black-theme/) by PuddingKC
 
+- [VS Code Dark](themes/vscode-dark-theme/) by FuLuTang
+
 ## Documentation
 
 - Submit, update, or author a theme: `CONTRIBUTING.md`

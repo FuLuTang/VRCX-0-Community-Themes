@@ -1,0 +1,19 @@
+{
+  "id": "vscode-dark-theme",
+  "name": "VS Code Dark",
+  "version": "1.0.0",
+  "author": {
+    "name": "FuLuTang",
+    "github": "FuLuTang"
+  },
+  "description": "VS Code Dark is an adaptation of Microsoft's built-in Dark (Visual Studio) palette for VRCX-0, with independently floating panel surfaces.",
+  "tags": [
+    "dark",
+    "editor",
+    "vscode"
+  ],
+  "testedWith": "2.30.0",
+  "remoteAssets": false,
+  "darkMode": true,
+  "accentMode": false
+}

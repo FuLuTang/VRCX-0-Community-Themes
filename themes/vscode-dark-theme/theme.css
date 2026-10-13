@@ -1,0 +1,605 @@
+/* VS Code Dark — based on official Visual Studio dark roles; VRCX adaptation; GPL-3.0-only.
+   Plain CSS, no remote assets. Internal surface tokens are compatibility helpers.
+   Preserve status categories and user colors, not original VRChat brand shades. */
+:root,
+:root.dark,
+.dark {
+  /* Official Dark (Visual Studio) roles + registry defaults, mapped by component role. */
+  --background: #1e1e1e;
+  --foreground: #cccccc;
+  --card: #252526;
+  --card-foreground: #cccccc;
+  --popover: #252526;
+  --popover-foreground: #cccccc;
+  --primary: #0e639c;
+  --primary-foreground: #ffffff;
+  --secondary: #222222;
+  --secondary-foreground: #cccccc;
+  --muted: #222222;
+  --muted-foreground: #989898;
+  --accent: #2a2d2e;
+  --accent-foreground: #cccccc;
+  --destructive: #f48771;
+  --destructive-foreground: #1e1e1e;
+  --border: #303031;
+  --input: transparent;
+  --ring: #007fd4;
+  /* --radius is intentionally NOT set: the app derives --radius-sm/-md/-lg/-xl from
+     it, so overriding it flattens every rounded-* utility in the product. The
+     application default (0.625rem) is kept. */
+  /* The left rail is navigation, so it maps to the Activity bar and not to a
+     list/tree: activityBar.background #333333 is intentionally lighter than the
+     editor, which is what makes it read as a panel floating on the shell. */
+  --sidebar: #333333;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #0e639c;
+  --sidebar-primary-foreground: #ffffff;
+  /* In VRCX sidebar-accent is the hover role; selection is styled separately. */
+  --sidebar-accent: #2a2d2e;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #252526;
+  --sidebar-ring: #007fd4;
+  --surface-canvas: #1e1e1e;
+  --surface-shell: #3c3c3c;
+  --surface-panel: #1e1e1e;
+  --surface-raised: #252526;
+  --surface-overlay: #252526;
+  --surface-interactive: #3c3c3c;
+  --surface-interactive-hover: #2a2d2e;
+  --content-primary: #d4d4d4;
+  --content-secondary: #989898;
+  --content-tertiary: #989898;
+  --content-disabled: #cccccc80;
+  --stroke-subtle: #303031;
+  --stroke-default: #303031;
+  --stroke-strong: #454545;
+  --border-subtle: #303031;
+  --border-hover: #454545;
+  --state-hover-surface: #2a2d2e;
+  --state-pressed-surface: #ffffff33;
+  --state-selected-surface: #04395e;
+  --state-selected-hover-surface: #04395e;
+  --vrcx-0-app-surface: #3c3c3c; /* modernUI.shellBackground */
+  --vrcx-0-titlebar-surface: #3c3c3c; /* titleBar.activeBackground */
+  /* .vrcx-0-main-shell is the container the .vrcx-0-workspace panel floats on.
+     It must NOT share editor.background, or the workspace gutter and its rounded
+     corners vanish into it on every side that is not bordered by another panel. */
+  --vrcx-0-main-surface: #3c3c3c; /* modernUI.shellBackground */
+  --vrcx-0-main-content-surface: #1e1e1e;
+  --vrcx-0-sidebar-surface: #333333; /* activityBar.background */
+  --vrcx-0-sidebar-inset-surface: #3c3c3c; /* shell behind independent panels */
+  --vrcx-0-side-panel-surface: #252526; /* sideBar.background */
+  --vrcx-0-statusbar-surface: #007acc; /* statusBar.background */
+  --vrcx-0-table-surface: #1e1e1e; /* panel.background == editor.background */
+  --vrcx-0-table-header-surface: #252526; /* editorGroupHeader.tabsBackground */
+  --vrcx-0-table-header-foreground: #cccccc;
+  --vrcx-0-table-row-hover-surface: #2a2d2e;
+  --vrcx-0-table-row-selected-surface: #04395e;
+  --vrcx-0-table-row-selected-hover-surface: #04395e;
+  --vrcx-0-table-row-expanded-surface: #ffffff33;
+  --vrcx-0-table-border: #303031;
+  --vrcx-0-table-divider: #303031;
+  /* Sticky cells need an opaque composited equivalent, not another alpha layer. */
+  --vrcx-0-table-sticky-edge: #303031;
+  --vrcx-0-toolbar-control-surface: #252526;
+  --vrcx-0-toolbar-control-hover-surface: #2a2d2e;
+  --vrcx-0-toolbar-control-border: #454545;
+  --vrcx-0-toolbar-group-surface: #252526;
+  --vrcx-0-toolbar-group-border: #303031;
+  /* Local panel geometry: a VRCX adaptation, not a VS Code color-theme role.
+     Keep the shared radius scale untouched; only the three shell panels change.
+     The nav resize handle also consumes main-content-gutter, so retain its token. */
+  --vrcx-0-main-content-gutter: 4px;
+  --vrcx-0-main-content-gutter-top: 0px;
+  --vrcx-0-main-content-gutter-bottom: 4px;
+  --vrcx-0-main-content-gutter-collapsed: 4px;
+  --vrcx-0-side-panel-resizer-width: 4px;
+  --vrcx-0-main-content-edge: #252526; /* surface.border */
+  --vrcx-0-main-content-highlight: transparent;
+  --vrcx-0-main-content-lift: none;
+  --vrcx-0-resize-accent-active: #007fd4;
+  --chart-1: #59a4f9;
+  --chart-2: #89d185;
+  --chart-3: #cca700;
+  --chart-4: #b180d7;
+  --chart-5: #f14c4c;
+  /* Distinct official roles must not be folded into generic shadcn tokens. */
+  --vscode-input-background: #3c3c3c;
+  --vscode-input-placeholder: #a6a6a6;
+  --vscode-input-error-border: #be1100;
+  --vscode-selection-background: #264f78;
+  --vscode-selection-foreground: #d4d4d4;
+  --vscode-link: #3794ff;
+  --vscode-link-active: #3794ff;
+  --vscode-active-tab-border: transparent;
+  --vscode-tab-selected-background: #37373d;
+  --vscode-tab-selected-foreground: #ffffff;
+  --vscode-tab-inactive-foreground: #a6a6a6;
+  --vscode-menu-selection-background: #0078d4;
+  --vscode-menu-selection-border: #454545;
+  /* Modern-layout roles: the floating activity-bar item and the status bar. */
+  --vscode-activity-item-active-background: #1e1e1e; /* modernActivityBarItem.activeBackground (dark_vs explicit) */
+  --vscode-activity-item-active-foreground: #cccccc; /* modernActivityBarItem.activeForeground */
+  --vscode-activity-item-hover-background: #1e1e1e66; /* modernActivityBarItem.hoverBackground (dark_vs explicit) */
+  --vscode-activity-inactive-foreground: #ffffff66; /* activityBar.inactiveForeground = transparent(foreground, .4) */
+  --vscode-icon-foreground: #c5c5c5; /* icon.foreground */
+  --vscode-statusbar-foreground: #ffffff; /* statusBar.foreground */
+  --vscode-statusbar-item-hover-background: #ffffff1f; /* statusBarItem.hoverBackground = white @ 12% */
+}
+
+/* Small component polish, never hide recovery or destructive controls. */
+.vrcx-0-titlebar {
+  border-bottom: 0;
+  color: #cccccc; /* titleBar.activeForeground */
+  /* TitleBarButton uses text-muted-foreground rather than inheriting the header. */
+  --muted-foreground: #cccccc;
+}
+.vrcx-0-titlebar [data-variant="ghost"] {
+  color: #cccccc;
+}
+/* Quick search is a toolbar button, not an input. Keep its border separate
+   from neutral input.background, which the official dark theme makes transparent. */
+.vrcx-0-titlebar [data-vrcx-0-control="toolbar"] {
+  border: 1px solid var(--vrcx-0-toolbar-control-border);
+}
+/* Base UI render composition replaces button's slot with hover-card-trigger.
+   Scope by the actual trigger + variant, covering downloaded/default as well. */
+/* The app renders the updater entry as a neutral secondary button. VS Code paints
+   the same action as a solid blue pill; in Dark (Visual Studio)
+   statusBar.background and activityBarBadge.background share #007ACC, so the
+   existing surface token carries that role rather than inventing a colour. */
+.vrcx-0-titlebar :is([data-slot="hover-card-trigger"], [data-slot="button"])[data-variant="secondary"],
+.vrcx-0-titlebar [data-slot="hover-card-trigger"][data-variant="default"] {
+  background: var(--vrcx-0-statusbar-surface); /* #007ACC, activityBarBadge.background */
+  color: #ffffff;
+  border-color: transparent;
+}
+.vrcx-0-titlebar :is([data-slot="hover-card-trigger"], [data-slot="button"])[data-variant="secondary"]:hover:not(:disabled),
+.vrcx-0-titlebar [data-slot="hover-card-trigger"][data-variant="default"]:hover:not(:disabled) {
+  background: #1177bb; /* button hover derivation, same family as #007ACC */
+}
+/* statusBar.border is null in dark: the bar separates itself by color, not a line,
+   and statusBar.foreground is white so items stay legible on the blue. */
+.vrcx-0-statusbar {
+  border-top: none;
+  color: var(--vscode-statusbar-foreground);
+  /* Status-bar children lean on text-muted-foreground, which is tuned for the
+     editor surface and turns illegible on statusBar.background. Re-point the
+     secondary foregrounds inside the bar instead of lightening them globally. */
+  --muted-foreground: #ffffff;
+  --content-secondary: #ffffff;
+  --content-tertiary: #ffffffcc;
+}
+.vrcx-0-statusbar :is(button, a, [role="button"], [data-slot="button"], [data-slot="badge"]):hover {
+  background: var(--vscode-statusbar-item-hover-background);
+}
+.vrcx-0-sidebar-layout {
+  background: var(--surface-shell);
+}
+/* Padding belongs to the existing nav container: leave width, positioning,
+   collapse transitions and the content's own scrolling untouched. The main
+   workspace's left gutter supplies the other half of the nav boundary. */
+.vrcx-0-sidebar-layout [data-slot="sidebar-container"] {
+  box-sizing: border-box;
+  padding: 0 0 4px 4px;
+  border: 0;
+  background: var(--surface-shell);
+}
+.vrcx-0-sidebar-layout [data-slot="sidebar-inner"] {
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* Middle + right are siblings inside this wrapper. It must not paint a dark
+   rectangular backing underneath their independently rounded corners. */
+.vrcx-0-workspace:not([data-window-sidebar-mode="true"]) {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.vrcx-0-workspace:not([data-window-sidebar-mode="true"]) > .vrcx-0-main-content {
+  background: var(--vrcx-0-main-content-surface);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.vrcx-0-side-panel {
+  background: var(--vrcx-0-side-panel-surface); /* sideBar.background */
+  border-left: 0;
+}
+.vrcx-0-workspace:not([data-window-sidebar-mode="true"]) > .vrcx-0-side-panel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* Keep the real 4px drag target between middle and right; the shell shows
+   through it. Remove only its decorative line, not the pointer handlers. */
+.vrcx-0-workspace:not([data-window-sidebar-mode="true"]) > [data-vrcx-0-resize="side-panel"]::before {
+  content: none;
+}
+[data-slot="card"] {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+}
+[data-slot="input"],
+[data-slot="textarea"],
+[data-slot="select-trigger"] {
+  background: var(--vscode-input-background);
+  color: var(--foreground);
+  border-color: var(--input);
+}
+[data-slot="input"][aria-invalid="true"],
+[data-slot="textarea"][aria-invalid="true"],
+[data-slot="select-trigger"][aria-invalid="true"] {
+  border-color: var(--vscode-input-error-border);
+}
+[data-slot="input"]::placeholder,
+[data-slot="textarea"]::placeholder {
+  color: var(--vscode-input-placeholder);
+  opacity: 1;
+}
+[data-slot="button"][data-variant="default"]:not(:disabled) {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+/* Dark (Visual Studio) never paints a disabled button with button.background.
+   Keeping the brand blue under the shared disabled foreground left the disabled
+   label at ~2.1:1, so fall back to the neutral input surface. */
+[data-slot="button"][data-variant="default"]:is(:disabled, [data-disabled]:not([data-disabled="false"])) {
+  background: var(--vscode-input-background);
+  color: var(--foreground);
+}
+[data-slot="button"][data-variant="outline"],
+[data-slot="button"][data-variant="secondary"] {
+  border-color: var(--input);
+}
+[data-slot="button"][data-variant="destructive"] {
+  background: color-mix(in srgb, var(--destructive) 12%, var(--background));
+  color: var(--destructive);
+  border: 1px solid var(--destructive);
+}
+/* Focus also applies to portaled dialogs and dropdown menus outside app-root. */
+:where(button, a, input, textarea, select, [tabindex], [role="checkbox"], [role="switch"]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+/* Activity-bar items: hover is the modern hover surface and the selected item is
+   the modern-layout card. The modern activity bar has no active left border, so
+   none is drawn — a white inset stripe reads as a different component family. */
+/* SidebarMenuButton gets data-active from Base UI useRender state, which renders a
+   true boolean as an EMPTY attribute (data-active=""), and omits it entirely when
+   false. Match on presence, not on ="true". */
+.vrcx-0-sidebar-surface :is([data-slot="sidebar-menu-button"], [data-slot="sidebar-menu-sub-button"]):hover:not(:disabled):not([data-active]) {
+  background: var(--vscode-activity-item-hover-background);
+  color: var(--sidebar-foreground);
+}
+.vrcx-0-sidebar-surface :is([data-slot="sidebar-menu-button"], [data-slot="sidebar-menu-sub-button"])[data-active] {
+  background: var(--vscode-activity-item-active-background);
+  color: var(--vscode-activity-item-active-foreground);
+}
+[data-slot="tabs-trigger"][data-state="active"] {
+  background: var(--vscode-tab-selected-background);
+  color: var(--vscode-tab-selected-foreground);
+  box-shadow: none;
+}
+[data-slot="dialog-content"],
+[data-slot="alert-dialog-content"],
+[data-slot="dropdown-menu-content"],
+[data-slot="popover-content"],
+[data-slot="tooltip-content"] {
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 32px #00000066;
+}
+:is([data-slot="dropdown-menu-item"], [data-slot="dropdown-menu-checkbox-item"], [data-slot="dropdown-menu-radio-item"], [data-slot="select-item"])[data-highlighted] {
+  background: var(--vscode-menu-selection-background);
+  color: var(--popover-foreground);
+  outline: 1px solid var(--vscode-menu-selection-border);
+  outline-offset: -1px;
+}
+.vrcx-0-data-table {
+  background: var(--vrcx-0-table-surface);
+  border-color: var(--vrcx-0-table-border);
+}
+.vrcx-0-data-table [data-slot="table-head"] {
+  background: var(--vrcx-0-table-header-surface);
+  color: var(--vrcx-0-table-header-foreground);
+}
+.vrcx-0-data-table :is([data-slot="table-row"], [data-vrcx-0-table-row]):hover {
+  background: var(--vrcx-0-table-row-hover-surface);
+}
+.vrcx-0-data-table :is([data-slot="table-row"], [data-vrcx-0-table-row])[data-state="selected"] {
+  background: var(--vrcx-0-table-row-selected-surface);
+  box-shadow: inset 3px 0 var(--ring);
+}
+::selection {
+  background: var(--vscode-selection-background);
+  color: var(--vscode-selection-foreground);
+}
+
+/* Tooltip Arrow is a direct aria-hidden div from Base UI, with its own
+   bg-foreground/fill-foreground utilities. The popup's background does not
+   propagate to it; recolor both properties without altering positioning. */
+[data-slot="tooltip-content"] > [aria-hidden="true"] {
+  background: var(--popover);
+  fill: var(--popover);
+}
+
+/* Exact derived Visual Studio button hover; not the button background role. */
+[data-slot="button"][data-variant="default"]:hover:not(:disabled) {
+  background: #1177bb;
+}
+[data-slot="card"] {
+  box-shadow: none;
+}
+
+
+/* Additional VRCX roles: official colors, analogous meaning, not VRChat brand claims. */
+:root, :root.dark, .dark {
+  --status-online: #89d185; /* gitDecoration.addedResourceForeground */
+  --status-joinme: #59a4f9; /* charts.blue */
+  --status-busy: #f48771; /* errorForeground */
+  --status-askme: #cca700; /* list.warningForeground */
+  --status-offline: #9a9a9a; /* descriptionForeground */
+  --status-offline-alt: #9a9a9a; /* descriptionForeground */
+  --status-offline-card: #9a9a9a; /* descriptionForeground */
+  --status-active: #cca700; /* notificationsWarningIcon.foreground */
+  --platform-pc: #59a4f9; /* charts.blue */
+  --platform-quest: #89d185; /* charts.green */
+  --platform-ios: #9a9a9a; /* descriptionForeground */
+  --owner-gold: #cca700; /* charts.yellow */
+  --owner-violet: #b180d7; /* charts.purple */
+  --owner-cyan: #3794ff; /* textLink.foreground */
+  --object-surface: #252526; /* sideBar.background */
+  --object-surface-hover: #2a2d2e; /* list.hoverBackground */
+  --object-border: #303031; /* sideBar.border */
+  --object-border-hover: #454545; /* input.border */
+  --object-selected-border: #007fd4; /* focusBorder */
+  --object-selected-surface: #04395e; /* list.activeSelectionBackground */
+  --control-quiet-foreground: #c5c5c5; /* icon.foreground */
+  --control-quiet-hover-foreground: #cccccc; /* foreground */
+  --control-quiet-hover-surface: #2a2d2e; /* list.hoverBackground */
+  --control-quiet-active-surface: #383a49; /* toolbar.activeBackground */
+  --vrcx-0-toolbar-item-foreground: #989898; /* descriptionForeground over editor.background */
+  --vrcx-0-toolbar-item-hover-surface: #2a2d2e; /* list.hoverBackground */
+  --vrcx-0-toolbar-item-selected-surface: #04395e; /* list.activeSelectionBackground */
+  --vrcx-0-toolbar-item-selected-hover-surface: #04395e; /* list.activeSelectionBackground */
+  --vrcx-0-toolbar-item-selected-foreground: #ffffff; /* list.activeSelectionForeground */
+  --vrcx-0-feed-row-arrival-surface: #383b3d; /* list.dropBackground */
+  --vrcx-0-table-row-striped-surface: #252526; /* sideBar.background */
+  --vrcx-0-table-striped-divider: #303031; /* widget.border */
+  --vrcx-0-table-row-focus: #007fd4; /* list.focusOutline */
+  --vrcx-0-workspace-divider: #252526; /* surface.border */
+  --vscode-badge-background: #4d4d4d; /* badge.background */
+  --vscode-activity-badge-background: #007acc; /* activityBarBadge.background, explicit */
+  --vscode-badge-foreground: #ffffff; /* badge.foreground */
+  --vscode-progress: #0e70c0; /* progressBar.background */
+  --vscode-scrollbar: #79797966; /* scrollbarSlider.background */
+  --vscode-scrollbar-hover: #646464b3; /* scrollbarSlider.hoverBackground */
+  --vscode-info: #59a4f9; /* notificationsInfoIcon.foreground */
+  --vscode-warning: #cca700; /* list.warningForeground */
+  --vscode-success: #89d185; /* gitDecoration.addedResourceForeground */
+
+  /* Tailwind utility colors: 500 = official anchor; other shades = explicit adaptation. */
+  --color-amber-50: color-mix(in srgb, #cca700, white 90%);
+  --color-amber-100: color-mix(in srgb, #cca700, white 80%);
+  --color-amber-300: color-mix(in srgb, #cca700, white 35%);
+  --color-amber-400: color-mix(in srgb, #cca700, white 12%);
+  --color-amber-500: #cca700;
+  --color-amber-600: color-mix(in srgb, #cca700, #1e1e1e 16%);
+  --color-amber-700: color-mix(in srgb, #cca700, #1e1e1e 35%);
+  --color-amber-800: color-mix(in srgb, #cca700, #1e1e1e 60%);
+  --color-amber-950: color-mix(in srgb, #cca700, #1e1e1e 90%);
+  --color-blue-100: color-mix(in srgb, #59a4f9, white 80%);
+  --color-blue-400: color-mix(in srgb, #59a4f9, white 12%);
+  --color-blue-500: #59a4f9;
+  --color-blue-600: color-mix(in srgb, #59a4f9, #1e1e1e 16%);
+  --color-blue-800: color-mix(in srgb, #59a4f9, #1e1e1e 60%);
+  --color-cyan-100: color-mix(in srgb, #3794ff, white 80%);
+  --color-cyan-500: #3794ff;
+  --color-cyan-800: color-mix(in srgb, #3794ff, #1e1e1e 60%);
+  --color-emerald-100: color-mix(in srgb, #89d185, white 80%);
+  --color-emerald-200: color-mix(in srgb, #89d185, white 60%);
+  --color-emerald-400: color-mix(in srgb, #89d185, white 12%);
+  --color-emerald-500: #89d185;
+  --color-emerald-600: color-mix(in srgb, #89d185, #1e1e1e 16%);
+  --color-emerald-800: color-mix(in srgb, #89d185, #1e1e1e 60%);
+  --color-green-400: color-mix(in srgb, #89d185, white 12%);
+  --color-green-500: #89d185;
+  --color-green-600: color-mix(in srgb, #89d185, #1e1e1e 16%);
+  --color-green-700: color-mix(in srgb, #89d185, #1e1e1e 35%);
+  --color-indigo-100: color-mix(in srgb, #59a4f9, white 80%);
+  --color-indigo-500: #59a4f9;
+  --color-indigo-800: color-mix(in srgb, #59a4f9, #1e1e1e 60%);
+  --color-neutral-500: #9a9a9a;
+  --color-neutral-950: color-mix(in srgb, #9a9a9a, #1e1e1e 90%);
+  --color-orange-100: color-mix(in srgb, #ea5c00, white 80%);
+  --color-orange-400: color-mix(in srgb, #ea5c00, white 12%);
+  --color-orange-500: #ea5c00;
+  --color-orange-600: color-mix(in srgb, #ea5c00, #1e1e1e 16%);
+  --color-orange-700: color-mix(in srgb, #ea5c00, #1e1e1e 35%);
+  --color-orange-800: color-mix(in srgb, #ea5c00, #1e1e1e 60%);
+  --color-pink-100: color-mix(in srgb, #b180d7, white 80%);
+  --color-pink-500: #b180d7;
+  --color-pink-800: color-mix(in srgb, #b180d7, #1e1e1e 60%);
+  --color-red-50: color-mix(in srgb, #f48771, white 90%);
+  --color-red-300: color-mix(in srgb, #f48771, white 35%);
+  --color-red-400: color-mix(in srgb, #f48771, white 12%);
+  --color-red-500: #f48771;
+  --color-red-600: color-mix(in srgb, #f48771, #1e1e1e 16%);
+  --color-red-700: color-mix(in srgb, #f48771, #1e1e1e 35%);
+  --color-red-950: color-mix(in srgb, #f48771, #1e1e1e 90%);
+  --color-rose-100: color-mix(in srgb, #f14c4c, white 80%);
+  --color-rose-300: color-mix(in srgb, #f14c4c, white 35%);
+  --color-rose-400: color-mix(in srgb, #f14c4c, white 12%);
+  --color-rose-500: #f14c4c;
+  --color-rose-600: color-mix(in srgb, #f14c4c, #1e1e1e 16%);
+  --color-rose-800: color-mix(in srgb, #f14c4c, #1e1e1e 60%);
+  --color-sky-50: color-mix(in srgb, #59a4f9, white 90%);
+  --color-sky-100: color-mix(in srgb, #59a4f9, white 80%);
+  --color-sky-300: color-mix(in srgb, #59a4f9, white 35%);
+  --color-sky-400: color-mix(in srgb, #59a4f9, white 12%);
+  --color-sky-500: #59a4f9;
+  --color-sky-700: color-mix(in srgb, #59a4f9, #1e1e1e 35%);
+  --color-sky-800: color-mix(in srgb, #59a4f9, #1e1e1e 60%);
+  --color-sky-950: color-mix(in srgb, #59a4f9, #1e1e1e 90%);
+  --color-slate-400: color-mix(in srgb, #9a9a9a, white 12%);
+  --color-slate-500: #9a9a9a;
+  --color-teal-100: color-mix(in srgb, #3794ff, white 80%);
+  --color-teal-500: #3794ff;
+  --color-teal-800: color-mix(in srgb, #3794ff, #1e1e1e 60%);
+  --color-violet-100: color-mix(in srgb, #b180d7, white 80%);
+  --color-violet-300: color-mix(in srgb, #b180d7, white 35%);
+  --color-violet-400: color-mix(in srgb, #b180d7, white 12%);
+  --color-violet-500: #b180d7;
+  --color-violet-600: color-mix(in srgb, #b180d7, #1e1e1e 16%);
+  --color-violet-700: color-mix(in srgb, #b180d7, #1e1e1e 35%);
+  --color-violet-800: color-mix(in srgb, #b180d7, #1e1e1e 60%);
+  --color-zinc-200: color-mix(in srgb, #9a9a9a, white 60%);
+  --color-zinc-400: color-mix(in srgb, #9a9a9a, white 12%);
+  --color-zinc-500: #9a9a9a;
+  --color-zinc-600: color-mix(in srgb, #9a9a9a, #1e1e1e 16%);
+  --color-zinc-800: color-mix(in srgb, #9a9a9a, #1e1e1e 60%);
+}
+
+/* Text links only: render-as-anchor UI components retain their own role colors.
+   :where keeps exclusions zero-specificity and identical in normal/hover states. */
+a:not(:where([data-slot="button"], [role="button"], [data-slot="sidebar-menu-button"], [data-slot="sidebar-menu-sub-button"], [data-slot="badge"], [data-slot="tabs-tab"], [data-slot="tabs-trigger"], [role="tab"], [role="menuitem"])) {
+  color: var(--vscode-link);
+}
+a:not(:where([data-slot="button"], [role="button"], [data-slot="sidebar-menu-button"], [data-slot="sidebar-menu-sub-button"], [data-slot="badge"], [data-slot="tabs-tab"], [data-slot="tabs-trigger"], [role="tab"], [role="menuitem"])):hover {
+  color: var(--vscode-link-active);
+}
+:where(button, input, textarea, select):disabled,
+[data-disabled]:not([data-disabled="false"]) {
+  color: var(--content-disabled);
+}
+/* Native checkboxes use the official dark neutral checkbox, not blue button fill. */
+[data-slot="checkbox"] {
+  background: #3c3c3c;
+  border-color: #6b6b6b;
+  color: #f0f0f0;
+}
+/* Base UI already dims the whole control through the root's opacity. The shared
+   disabled foreground dimmed the checked mark a second time, so the mark nearly
+   vanished; keep the mark and its indicator at the checkbox foreground. */
+[data-slot="checkbox"]:is([data-checked], [data-indeterminate])[data-disabled],
+[data-slot="checkbox"]:is([data-checked], [data-indeterminate])[data-disabled] [data-slot="checkbox-indicator"] {
+  color: var(--foreground);
+}
+[data-slot="checkbox"][aria-invalid="true"] { border-color: #be1100; }
+[data-slot="switch"][data-checked],
+[data-slot="switch"][aria-checked="true"] { background: var(--primary); }
+[data-slot="switch"][data-unchecked],
+[data-slot="switch"][aria-checked="false"] { background: #454545; }
+[data-slot="switch"][aria-invalid="true"] { border-color: #be1100; }
+[data-slot="switch-thumb"] { background: #cccccc; }
+/* SVG children have their own Tailwind foreground; target them too. */
+[data-slot="toast-viewport"] > [data-type="info"] [data-slot="toast-icon"] > svg { color: #59a4f9; }
+/* Base UI uses tabs-tab/data-active; also support legacy tabs-trigger. */
+[data-slot="tabs-tab"][data-active] {
+  background: var(--vscode-tab-selected-background);
+  color: var(--vscode-tab-selected-foreground);
+  box-shadow: none;
+}
+[data-slot="tabs-tab"]:not([data-active]) { color: var(--vscode-tab-inactive-foreground); }
+[data-slot="tabs-list"] { background: #252526; }
+[data-slot="tab-indicator"] { background: #1e1e1e; }
+[data-slot="command"] { background: #252526; color: #cccccc; }
+[data-slot="command-item"][data-selected="true"] {
+  background: #0e639c;
+  color: #ffffff;
+}
+/* Cover real portal slots, including submenus, drawers and notifications. */
+:is([data-slot="select-content"], [data-slot="context-menu-content"],
+    [data-slot="context-menu-sub-content"], [data-slot="dropdown-menu-sub-content"],
+    [data-slot="menubar-content"], [data-slot="menubar-sub-content"],
+    [data-slot="hover-card-content"], [data-slot="sheet-popup"],
+    [data-slot="combobox-content"]) {
+  background: #252526;
+  color: #cccccc;
+  border-color: #303031;
+}
+:is([data-slot="context-menu-item"], [data-slot="context-menu-checkbox-item"],
+    [data-slot="context-menu-radio-item"], [data-slot="context-menu-sub-trigger"],
+    [data-slot="dropdown-menu-sub-trigger"], [data-slot="menubar-item"],
+    [data-slot="menubar-checkbox-item"], [data-slot="menubar-radio-item"])[data-highlighted] {
+  background: #0078d4;
+  color: #cccccc;
+  outline: 1px solid #454545;
+  outline-offset: -1px;
+}
+/* Do not erase destructive menu-item semantics while highlighting. */
+:is([data-slot="context-menu-item"], [data-slot="dropdown-menu-item"], [data-slot="menubar-item"])[data-variant="destructive"] {
+  color: var(--destructive);
+}
+[data-slot="badge"][data-variant="default"],
+[data-slot="sidebar-menu-badge"] {
+  background: #4d4d4d;
+  color: #ffffff;
+}
+[data-slot="progress-indicator"] { background: #0e70c0; }
+[data-slot="slider-range"] { background: #0e639c; }
+[data-slot="slider-thumb"] { border-color: #007fd4; }
+[data-slot="scroll-area-thumb"] { background: #79797966; }
+[data-slot="scroll-area-thumb"]:hover { background: #646464b3; }
+/* Avoid alpha backgrounds being painted twice on sticky action cells. */
+.vrcx-0-data-table [data-slot="table-cell"].vrcx-0-table-sticky-action {
+  background: #1e1e1e;
+}
+.vrcx-0-data-table [data-vrcx-0-table-row]:hover > [data-slot="table-cell"].vrcx-0-table-sticky-action {
+  background: #2a2d2e;
+}
+.vrcx-0-data-table [data-vrcx-0-table-row][data-state="selected"] > [data-slot="table-cell"].vrcx-0-table-sticky-action {
+  background: #04395e;
+}
+.vrcx-0-data-table :is([data-slot="table-row"], [data-vrcx-0-table-row])[data-state="selected"] {
+  color: #ffffff;
+  box-shadow: none;
+}
+/* The activity page reads these actual CSS colors into its canvas palette. */
+.activity-skin, .dark .activity-skin {
+  --act-surface: #1e1e1e;
+  --act-edge: #303031;
+  --act-track: #303031;
+  --act-axis: #989898;
+  --act-accent: #0e639c;
+  --act-mark: #0e639c;
+  --act-mark-soft: #0e639c33;
+  --act-heat-empty: #1e1e1e;
+  --act-heat-min: color-mix(in srgb, #89d185 8%, #1e1e1e);
+  --act-heat-0: color-mix(in srgb, #89d185 16%, #1e1e1e);
+  --act-heat-1: color-mix(in srgb, #89d185 25%, #1e1e1e);
+  --act-heat-2: color-mix(in srgb, #89d185 50%, #1e1e1e);
+  --act-heat-3: color-mix(in srgb, #89d185 75%, #1e1e1e);
+  --act-heat-4: #89d185;
+}
+.owner-badge {
+  background: color-mix(in srgb, #cca700 15%, #1e1e1e);
+  box-shadow: none;
+}
+
+/* Local table declarations in the app shadow inherited root tokens. */
+.vrcx-0-data-table {
+  --vrcx-0-table-surface: #1e1e1e;
+  --vrcx-0-table-header-surface: #252526;
+  --vrcx-0-table-border: #303031;
+}
+/* Toast roots have data-type, not a toast-root slot. */
+[data-slot="toast-viewport"] > [data-type] {
+  background: #252526;
+  color: #cccccc;
+  border-color: #303031;
+}
+[data-type="info"] [data-slot="toast-icon"] { color: #59a4f9; }
+[data-type="success"] [data-slot="toast-icon"] { color: #89d185; }
+[data-type="warning"] [data-slot="toast-icon"] { color: #cca700; }
+[data-type="error"] [data-slot="toast-icon"] { color: #f48771; }
+/* Explicitly win over a persisted built-in accent preference. */
+:root[data-theme-color]:not([data-theme-color="default"]),
+:root.dark[data-theme-color]:not([data-theme-color="default"]) {
+  --primary: #0e639c;
+  --primary-foreground: #ffffff;
+  --ring: #007fd4;
+}
