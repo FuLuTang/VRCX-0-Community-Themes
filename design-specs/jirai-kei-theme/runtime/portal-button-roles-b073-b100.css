@@ -1,0 +1,5 @@
+/* Real responsibilities, not B IDs: portals are ordinary surfaces too. Entity/owner
+   roots retain their paint; nested independent portals use their own root. Render
+   props may replace data-slot (tooltip/menu trigger), so route by button+variant.
+   Width/height/padding, reveal opacity, selected borders/rings and joined borders
+   remain source-owned. Native CSS nesting keeps this patch within the 1MiB cap. */

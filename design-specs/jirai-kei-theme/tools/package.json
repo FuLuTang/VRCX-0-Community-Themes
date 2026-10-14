@@ -1,0 +1,10 @@
+{
+    "name": "jirai-theme-tools",
+    "private": true,
+    "type": "module",
+    "description": "VRCX-0 运行时探测工具：通过 CDP 读取真实运行的 app 状态，服务于 Jirai Kei 主题 CSS 重构",
+    "dependencies": {
+        "playwright": "^1.64.0",
+        "sharp": "^0.35.5"
+    }
+}

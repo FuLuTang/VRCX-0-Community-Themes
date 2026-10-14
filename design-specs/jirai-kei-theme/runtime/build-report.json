@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1035621,
+  "cssBytes": 1043966,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -161,7 +161,7 @@
     },
     {
       "name": "buttons-badges-r10",
-      "bytes": 16992
+      "bytes": 17098
     },
     {
       "name": "data-surfaces-r10",
@@ -210,6 +210,18 @@
     {
       "name": "nav-phone-r10",
       "bytes": 16543
+    },
+    {
+      "name": "portal-button-roles-b073-b100",
+      "bytes": 417
+    },
+    {
+      "name": "entity-button-roles-b054-b072: explicit action roles share portal states.",
+      "bytes": 6781
+    },
+    {
+      "name": "auth-button-feedback: retain login-r8 / privacy-lock-r96 paint.",
+      "bytes": 828
     }
   ],
   "previewBytes": 24252,
