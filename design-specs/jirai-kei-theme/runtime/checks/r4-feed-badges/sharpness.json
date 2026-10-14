@@ -1,0 +1,66 @@
+[
+  {
+    "icon": "pencil-line",
+    "box": 14,
+    "solid": 58,
+    "blended": 0,
+    "background": 838,
+    "blendedShare": 0
+  },
+  {
+    "icon": "pencil-line",
+    "box": 16,
+    "solid": 79,
+    "blended": 0,
+    "background": 945,
+    "blendedShare": 0
+  },
+  {
+    "icon": "map-pin",
+    "box": 14,
+    "solid": 55,
+    "blended": 0,
+    "background": 841,
+    "blendedShare": 0
+  },
+  {
+    "icon": "map-pin",
+    "box": 16,
+    "solid": 78,
+    "blended": 0,
+    "background": 946,
+    "blendedShare": 0
+  },
+  {
+    "icon": "log-in",
+    "box": 14,
+    "solid": 66,
+    "blended": 0,
+    "background": 830,
+    "blendedShare": 0
+  },
+  {
+    "icon": "log-in",
+    "box": 16,
+    "solid": 78,
+    "blended": 0,
+    "background": 946,
+    "blendedShare": 0
+  },
+  {
+    "icon": "file-text",
+    "box": 14,
+    "solid": 96,
+    "blended": 0,
+    "background": 800,
+    "blendedShare": 0
+  },
+  {
+    "icon": "file-text",
+    "box": 16,
+    "solid": 122,
+    "blended": 0,
+    "background": 902,
+    "blendedShare": 0
+  }
+]

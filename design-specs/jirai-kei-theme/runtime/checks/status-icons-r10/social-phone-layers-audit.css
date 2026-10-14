@@ -1,0 +1,96 @@
+/* Template for the audit-only SOCIAL phone fixture.
+   The verifier reads original-assets/r10-phone-layers/manifest.json and fills the
+   __MANIFEST_*__ dimensions/offsets before linking the generated CSS. All four PNGs
+   are embedded only in this fixture; runtime/build-runtime.mjs does not consume it. */
+:root {
+  --r10-phone-char-back-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAOVBMVEX48PpbtOJmc6p7X4CHpdmlfua73f/Eo+/ZTLTdv+7i5eDqUnbtzKHu3O7x7eD0t9n9/f3/e6//6/qEwD3sAAAAAXRSTlMAQObYZgAAALBJREFUeNpVkY0OwiAMhI/S6eI0e//HNG46x2i1hQ09khK+/kCOgKJoIddDqGiwba48NOSac4GxogfGO25G6WACbACGaJWx9ULIJ/Avwxv9Amt3pR2vFthIB0lCEGIIY3Uoya8p79ZOHZp6LJ4J9oQdTsDVAjFSJogVyFk1xlHVyym/yjiiEgSt/bR5BloNiZa/uHfIT8KW2dyiw8uJgL/bm9iLuLlOWy7foL4Kk2/2A6G2RQ0tdWSWAAAAAElFTkSuQmCC");
+  --r10-phone-front-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAMAAACZS1ciAAAAOVBMVEX48PpbtOJmc6p7X4CHpdmlfua73f/Eo+/ZTLTdv+7i5eDqUnbtzKHu3O7x7eD0t9n9/f3/e6//6/qEwD3sAAAAAXRSTlMAQObYZgAAACxJREFUeNpjYGBmBiEmBgYOZg4GBkZmBjBgYeADUZ9YGBh+gRhMEGGiaZg5AI2eAjg3jxg8AAAAAElFTkSuQmCC");
+  --r10-phone-glow-dim-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAHlBMVEXu9v/u9v/u9v/u9v/u9v/u9v/u9v/u9v/u9v/4/P8PMQpKAAAACnRSTlMACBAYICgwOECA0X24rQAAAFpJREFUeNo9yrEJgEAMQNEfr9HuErCwTAQHuAmcxQ2cVyysBbkR5BCsXvMAUc2kxtCTsE+ZLJSKzLZsXjrVdR97TYP54XcWm4vznL9dCee+2o/wApEBE8gVeAGciQ9NQIYesQAAAABJRU5ErkJggg==");
+  --r10-phone-glow-bright-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAHlBMVEXu9v/u9v/u9v/u9v/u9v/u9v/u9v/u9v/u9v/4/P8PMQpKAAAACXRSTlMAECAwQFBgcIDdtvKmAAAAW0lEQVR42iXJwQ1AQBBA0T9rDi6SGUc3GiBRg8KVoIGNAoTVgBHxL+/wBcSIoogbgeK/Yt5zloTkrcmm7uOy156QdvXOElQTM4k/LXEZRxEZLiNcI54MN2DffwF5kRgcjLtcfAAAAABJRU5ErkJggg==");
+
+  /* Canvas dimensions are fixture geometry; layer bounds/offsets are generated from manifest. */
+  --r10-phone-canvas-width: 68px;
+  --r10-phone-canvas-height: 22px;
+  --r10-phone-char-back-size: 20px 20px;
+  --r10-phone-char-back-position: 0px 0px;
+  --r10-phone-front-size: 7px 12px;
+  --r10-phone-front-rest: 17px 8px;
+  --r10-phone-front-tap: 18px 8px;
+  --r10-phone-glow-dim-size: 14px 13px;
+  --r10-phone-glow-dim-visible: 3px 7px;
+  --r10-phone-glow-bright-size: 14px 13px;
+  --r10-phone-glow-bright-visible: 3px 7px;
+  --r10-phone-glow-off: -14px -13px;
+
+  --r10-phone-size-base: var(--r10-phone-front-size), var(--r10-phone-glow-dim-size), var(--r10-phone-glow-bright-size), var(--r10-phone-char-back-size), 16px 16px, 18px 18px;
+  --r10-phone-size-star-small: var(--r10-phone-front-size), var(--r10-phone-glow-dim-size), var(--r10-phone-glow-bright-size), var(--r10-phone-char-back-size), 14px 14px, 18px 18px;
+  --r10-phone-frame-01: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 4px;
+  --r10-phone-frame-02: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 2px;
+  --r10-phone-frame-03: var(--r10-phone-front-tap), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 0px;
+  --r10-phone-frame-04: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 1px;
+  --r10-phone-frame-05: var(--r10-phone-front-tap), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 2px;
+  --r10-phone-frame-06: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 4px;
+  --r10-phone-frame-07: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 27px 6px, 50px 4px;
+  --r10-phone-frame-08: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 51px 4px;
+  --r10-phone-frame-09: var(--r10-phone-front-rest), var(--r10-phone-glow-dim-visible), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 4px;
+  --r10-phone-frame-10: var(--r10-phone-front-rest), var(--r10-phone-glow-dim-visible), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 2px;
+  --r10-phone-frame-11: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-bright-visible), var(--r10-phone-char-back-position), 26px 5px, 50px 0px;
+  --r10-phone-frame-12: var(--r10-phone-front-rest), var(--r10-phone-glow-dim-visible), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 1px;
+  --r10-phone-frame-13: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 2px;
+  --r10-phone-frame-14: var(--r10-phone-front-rest), var(--r10-phone-glow-dim-visible), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 50px 4px;
+  --r10-phone-frame-15: var(--r10-phone-front-rest), var(--r10-phone-glow-dim-visible), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 27px 6px, 50px 4px;
+  --r10-phone-frame-16: var(--r10-phone-front-rest), var(--r10-phone-glow-off), var(--r10-phone-glow-off), var(--r10-phone-char-back-position), 26px 5px, 51px 4px;
+  --r10-phone-frame-17: var(--r10-phone-frame-01);
+}
+
+/* The 68px canvas extends left; cross/cat stay at their original absolute x positions. */
+.vrcx-0-side-panel::after {
+  right: 88px;
+  top: 0;
+  width: var(--r10-phone-canvas-width);
+  height: var(--r10-phone-canvas-height);
+  opacity: 1;
+  /* CSS background layers paint first-to-last as front-to-back: phone-front > glow > char-back. */
+  background-image: var(--r10-phone-front-image), var(--r10-phone-glow-dim-image), var(--r10-phone-glow-bright-image), var(--r10-phone-char-back-image), var(--r5-star), var(--r5-pixel-mascot);
+  background-size: var(--r10-phone-size-base);
+  background-position: var(--r10-phone-frame-01);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+  animation: r10-social-phone-layers 4s steps(17, end) -2s infinite;
+}
+
+/* Seventeen explicit states; one stepped animation drives all six background layers. */
+@keyframes r10-social-phone-layers {
+  0%, 100% { background-position: var(--r10-phone-frame-01); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  5.882352941% { background-position: var(--r10-phone-frame-02); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  11.764705882% { background-position: var(--r10-phone-frame-03); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  17.647058824% { background-position: var(--r10-phone-frame-04); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  23.529411765% { background-position: var(--r10-phone-frame-05); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  29.411764706% { background-position: var(--r10-phone-frame-06); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  35.294117647% { background-position: var(--r10-phone-frame-07); background-size: var(--r10-phone-size-star-small); animation-timing-function: steps(1, end); }
+  41.176470588% { background-position: var(--r10-phone-frame-08); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  47.058823529% { background-position: var(--r10-phone-frame-09); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  52.941176471% { background-position: var(--r10-phone-frame-10); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  58.823529412% { background-position: var(--r10-phone-frame-11); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  64.705882353% { background-position: var(--r10-phone-frame-12); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  70.588235294% { background-position: var(--r10-phone-frame-13); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  76.470588235% { background-position: var(--r10-phone-frame-14); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  82.352941176% { background-position: var(--r10-phone-frame-15); background-size: var(--r10-phone-size-star-small); animation-timing-function: steps(1, end); }
+  88.235294118% { background-position: var(--r10-phone-frame-16); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+  94.117647059% { background-position: var(--r10-phone-frame-17); background-size: var(--r10-phone-size-base); animation-timing-function: steps(1, end); }
+}
+
+/* Reduced motion keeps the resting pose: no phone tap and no glow. */
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-side-panel::after {
+    animation: none !important;
+    background-position: var(--r10-phone-frame-01) !important;
+    background-size: var(--r10-phone-size-base) !important;
+  }
+}
+html.reduce-effects .vrcx-0-side-panel::after {
+  animation: none !important;
+  background-position: var(--r10-phone-frame-01) !important;
+  background-size: var(--r10-phone-size-base) !important;
+}

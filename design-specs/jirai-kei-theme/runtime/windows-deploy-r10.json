@@ -1,0 +1,60 @@
+{
+  "revision": "R9.10",
+  "previousRevision": "R9.9",
+  "deployedAt": "2026-10-14T09:04:34+08:00",
+  "target": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "version": "1.3.0-preview.10",
+  "status": "deployed and local preview reloaded on Windows",
+  "deploymentMethod": "Per-file atomic System.IO.File.Replace after verifying all old and staged SHA-256 hashes; backups retained in C:\\Users\\tangh",
+  "changedCssSections": ["nav-phone-r10"],
+  "preservedCssSections": 52,
+  "animation": {
+    "frames": 153,
+    "uniqueStates": 11,
+    "durationPerFrameMs": 400,
+    "durationPerTurnMs": 61200,
+    "loop": "infinite",
+    "states": ["stop", "tap", "dim", "bright", "dim-tap", "up", "look", "look-bright", "look-dim", "up-bright", "bright-tap"],
+    "verification": "Expanded CSS keyframe state schedule matched all 153 requested frames; six unique layer images embedded once."
+  },
+  "cssBudget": {
+    "bytes": 1042916,
+    "limit": 1048576,
+    "remaining": 5660
+  },
+  "files": {
+    "theme.css": {
+      "previousBytes": 1047242,
+      "previousSha256": "D9F312A19F2B1C88EA4655D27249E3536F387625400AC7C668AA9BC2B99DB842",
+      "bytes": 1042916,
+      "sha256": "48D8071E7CFAD47D75FE07CA12A9F4A7C49858F0A0E764304FA2F2E357659496"
+    },
+    "theme.json": {
+      "previousBytes": 1039,
+      "previousSha256": "03F68CCFA0A25014FB05B7BE15B7A31C3B61030D21D5AE72601995705C54DCCB",
+      "bytes": 1051,
+      "sha256": "535361B6729DE058748CCC7DBD6C4354245B6DC7D24DF97BD86BB180A26DB9BE"
+    },
+    "README.md": {
+      "previousBytes": 5936,
+      "previousSha256": "FA13EB0225560BF95471E7569D4F1A0CC3519A61C1093A4A37B9E78BB2ECC97E",
+      "bytes": 5774,
+      "sha256": "75293D061D30E8609951D22A61F3804BAACB005163B8142153C5168059DB9CD7"
+    },
+    "preview.webp": {
+      "bytes": 24252,
+      "sha256": "4048CC6F2ECD3A7E88CD43969002FBE339CE8E0B969FE250E16F79C61ACAB3E8",
+      "unchanged": true
+    }
+  },
+  "windowsVrcxRunning": true,
+  "windowsVrcxPid": 48160,
+  "localPreviewReloaded": true,
+  "targetFileCount": 4,
+  "userReloadPending": false,
+  "backupFiles": [
+    "C:\\Users\\tangh\\jirai-r10-backup-theme.css",
+    "C:\\Users\\tangh\\jirai-r10-backup-theme.json",
+    "C:\\Users\\tangh\\jirai-r10-backup-README.md"
+  ]
+}

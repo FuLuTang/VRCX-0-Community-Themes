@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>R9 brand heart fixture · NOT WINDOWS</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;min-width:800px;min-height:100%;background:#16112a;color:#f2ebff;font:14px/1.35 Arial,sans-serif}
+    body{padding:0 16px 20px}
+    .fixture-title{height:32px;margin:0 -16px 20px;padding:0 12px;display:flex;align-items:center;background:#d97fc6;color:#16112a;border-bottom:1px solid #1a1226;font:700 12px/1 monospace}
+    h1{margin:0 0 5px;color:#ffe4f2;font:700 18px/1.3 monospace}
+    .note{margin:0 0 16px;color:#c7b8db;font:12px/1.45 monospace}
+    .demo{display:grid;gap:12px;max-width:1120px}
+    .row-card{border:1px solid #6c5ce0;background:#201936;padding:12px}
+    .row-card h2{margin:0 0 8px;color:#d97fc6;font:700 13px/1.3 monospace}
+    .vrcx-0-titlebar[data-app-titlebar]{height:32px;min-height:32px;width:100%;display:flex;align-items:center;padding:0 8px;position:relative}
+    [data-slot="menubar"]{height:100%;display:flex;align-items:center;flex:none;gap:0}
+    [data-slot="menubar-menu"]{height:100%;display:flex;align-items:center}
+    [data-slot="menubar-trigger"]{height:100%;display:flex;align-items:center;white-space:nowrap;font:12px/1 'WD Pixel CJK',monospace}
+    .brand-spacer{flex:1;min-width:8px;height:100%}
+    .window-buttons{height:100%;display:flex;align-items:center;flex:none}
+    .window-buttons button{width:36px;height:100%;border:0;border-left:1px solid #1a1226;background:#cdb0e8;color:#16112a}
+    .measure{margin-top:8px;color:#c7b8db;font:11px/1.4 monospace}
+    .static-demo .vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand::after{animation:none!important;-webkit-mask-size:12px 12px!important;mask-size:12px 12px!important}
+    .caption{margin-top:14px;color:#bfb2d7;font:11px/1.4 monospace}
+  </style>
+</head>
+<body>
+  <header class="fixture-title">NOT WINDOWS · generated fixture; actual app remains untouched</header>
+  <main>
+    <h1>VRCX titlebar pixel-heart · R9</h1>
+    <p class="note">The source brand trigger, existing 12×12 SVG mask and help neighbor are retained. Compare the static medium frame to the discrete small/medium/large pulse.</p>
+    <div class="demo">
+      <section class="row-card static-demo" id="static-card">
+        <h2>STATIC · medium (12×12)</h2>
+        <header class="vrcx-0-titlebar" data-app-titlebar>
+          <div data-slot="menubar" role="menubar">
+            <div data-slot="menubar-menu"><button id="static-brand-trigger" data-slot="menubar-trigger" type="button"><span id="static-brand" class="vrcx-0-brand">VRCX-0-jirai</span></button></div>
+            <div data-slot="menubar-menu"><button id="static-help-trigger" data-slot="menubar-trigger" type="button">帮助</button></div>
+          </div>
+          <div class="brand-spacer" data-tauri-drag-region></div>
+          <div class="window-buttons"><button tabindex="-1">—</button><button tabindex="-1">□</button><button tabindex="-1">×</button></div>
+        </header>
+        <div class="measure" id="static-measure">Static reference row; the decorative heart remains non-interactive.</div>
+      </section>
+      <section class="row-card" id="animated-card">
+        <h2>ANIMATED · three discrete mask frames</h2>
+        <header class="vrcx-0-titlebar" data-app-titlebar id="animated-titlebar">
+          <div data-slot="menubar" role="menubar">
+            <div data-slot="menubar-menu"><button id="brand-trigger" data-slot="menubar-trigger" type="button"><span id="animated-brand" class="vrcx-0-brand">VRCX-0-jirai</span></button></div>
+            <div data-slot="menubar-menu"><button id="help-trigger" data-slot="menubar-trigger" type="button">帮助</button></div>
+          </div>
+          <div class="brand-spacer" data-tauri-drag-region></div>
+          <div class="window-buttons"><button tabindex="-1">—</button><button tabindex="-1">□</button><button tabindex="-1">×</button></div>
+        </header>
+        <div class="measure" id="geometry-report">Checking brand/help spacing…</div>
+      </section>
+    </div>
+    <p class="caption">Pixel-heart pseudo element stays pointer-events:none; the titlebar drag region, hover, focus-visible outline and help hitbox are unchanged.</p>
+  </main>
+</body>
+</html>

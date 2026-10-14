@@ -1,0 +1,141 @@
+{
+  "cssBytes": 903642,
+  "limit": 1048576,
+  "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/preview/preview.png",
+  "sections": [
+    {
+      "name": "tokens",
+      "bytes": 2696
+    },
+    {
+      "name": "native-icons",
+      "bytes": 8980
+    },
+    {
+      "name": "assets",
+      "bytes": 25560
+    },
+    {
+      "name": "fonts",
+      "bytes": 480288
+    },
+    {
+      "name": "icons",
+      "bytes": 111168
+    },
+    {
+      "name": "runtime",
+      "bytes": 10588
+    },
+    {
+      "name": "window-chrome",
+      "bytes": 14706
+    },
+    {
+      "name": "group-spacing",
+      "bytes": 1392
+    },
+    {
+      "name": "body-typography",
+      "bytes": 2616
+    },
+    {
+      "name": "side-panel",
+      "bytes": 6533
+    },
+    {
+      "name": "feed-badges",
+      "bytes": 5652
+    },
+    {
+      "name": "settings",
+      "bytes": 9843
+    },
+    {
+      "name": "pixel-controls",
+      "bytes": 13798
+    },
+    {
+      "name": "assets-r5",
+      "bytes": 91935
+    },
+    {
+      "name": "motion",
+      "bytes": 3679
+    },
+    {
+      "name": "navigation-r7",
+      "bytes": 4644
+    },
+    {
+      "name": "motion-r7",
+      "bytes": 2364
+    },
+    {
+      "name": "assets-r7",
+      "bytes": 3841
+    },
+    {
+      "name": "backgrounds-r7",
+      "bytes": 1027
+    },
+    {
+      "name": "chrome-r8",
+      "bytes": 8078
+    },
+    {
+      "name": "bio-diff-r8",
+      "bytes": 2068
+    },
+    {
+      "name": "motion-r8",
+      "bytes": 4004
+    },
+    {
+      "name": "cat-r8-final",
+      "bytes": 1258
+    },
+    {
+      "name": "user-dialog-r8",
+      "bytes": 3240
+    },
+    {
+      "name": "login-r8",
+      "bytes": 9428
+    },
+    {
+      "name": "user-dialog-r9",
+      "bytes": 2255
+    },
+    {
+      "name": "badge-r9",
+      "bytes": 2521
+    },
+    {
+      "name": "controls-r9",
+      "bytes": 12396
+    },
+    {
+      "name": "popups-r9",
+      "bytes": 13592
+    },
+    {
+      "name": "tools-ui-r9",
+      "bytes": 6901
+    },
+    {
+      "name": "avatars-status-r9",
+      "bytes": 2699
+    },
+    {
+      "name": "brand-heart-r9",
+      "bytes": 1524
+    },
+    {
+      "name": "loader-r9",
+      "bytes": 31432
+    }
+  ],
+  "previewBytes": 45218,
+  "output": "/tmp/jirai-r9-out-popups/jirai-kei-theme"
+}

@@ -1,0 +1,287 @@
+{
+ "pass": true,
+ "gridMatchesGenerator": true,
+ "tiles": [
+  {
+   "name": "A",
+   "pass": true,
+   "rows": [
+    "oooooooooooooooooooo",
+    "oooooooooooooooooooo",
+    "ooooo##oooooo##ooooo",
+    "#ooo#..#o##o#..#ooo#",
+    ".##o#..##..##..#o##.",
+    "...#o##o#..#o##o#...",
+    "...#####o##o#####...",
+    "........####........"
+   ],
+   "failed": [],
+   "results": [
+    {
+     "id": "palette-only",
+     "pass": true,
+     "detail": "每个像素只能是 布面/描边/全透明，alpha 只有 0 或 255"
+    },
+    {
+     "id": "holes-alpha-0",
+     "pass": true,
+     "detail": "12 个孔眼像素 alpha=0"
+    },
+    {
+     "id": "holes-2x2-enclosed-size-kept",
+     "pass": true,
+     "detail": "3 个 2×2 孔，四周都是布面（孔径未被描边吃掉、也没被扩大）"
+    },
+    {
+     "id": "old-hole-positions-reused",
+     "pass": true,
+     "detail": "{\"left\":\"3/3\",\"center\":\"4/6\",\"right\":\"3/3\"}"
+    },
+    {
+     "id": "outline-not-larger-than-current",
+     "pass": true,
+     "detail": "不透明区域 ⊆ 现版（布面∪外描边）"
+    },
+    {
+     "id": "stroke-inside-cloth",
+     "pass": true,
+     "detail": "描边像素全部不透明且位于布面最内缘：越界 []，非边缘描边 []"
+    },
+    {
+     "id": "stroke-ring-complete",
+     "pass": true,
+     "detail": "布面外缘与孔周一圈全部为描边色（第 0 行除外）"
+    },
+    {
+     "id": "no-seam-stripe-x0-x19",
+     "pass": true,
+     "detail": "x0 列 ooo#.... / x19 列 ooo#...."
+    },
+    {
+     "id": "seam-row-full-face",
+     "pass": true,
+     "detail": "y=0: oooooooooooooooooooo"
+    },
+    {
+     "id": "no-bottom-line",
+     "pass": true,
+     "detail": "没有整行描边"
+    },
+    {
+     "id": "svg-crisp-one-path-per-color",
+     "pass": true,
+     "detail": "2 个 path"
+    },
+    {
+     "id": "base64-le-1200",
+     "pass": true,
+     "detail": "base64 868 字符，SVG 651 B"
+    }
+   ]
+  },
+  {
+   "name": "B",
+   "pass": true,
+   "rows": [
+    "oooooooooooooooooooo",
+    "oooooooooooooooooooo",
+    "ooooo##oooooo##ooooo",
+    "#ooo#..#o##o#..#ooo#",
+    ".##o#..##..##..#o##.",
+    "...#o##o#..#o##o#...",
+    "...#####o##o#####...",
+    "........####........"
+   ],
+   "failed": [],
+   "results": [
+    {
+     "id": "palette-only",
+     "pass": true,
+     "detail": "每个像素只能是 布面/描边/全透明，alpha 只有 0 或 255"
+    },
+    {
+     "id": "holes-alpha-0",
+     "pass": true,
+     "detail": "12 个孔眼像素 alpha=0"
+    },
+    {
+     "id": "holes-2x2-enclosed-size-kept",
+     "pass": true,
+     "detail": "3 个 2×2 孔，四周都是布面（孔径未被描边吃掉、也没被扩大）"
+    },
+    {
+     "id": "old-hole-positions-reused",
+     "pass": true,
+     "detail": "{\"left\":\"3/3\",\"center\":\"4/6\",\"right\":\"3/3\"}"
+    },
+    {
+     "id": "outline-not-larger-than-current",
+     "pass": true,
+     "detail": "不透明区域 ⊆ 现版（布面∪外描边）"
+    },
+    {
+     "id": "stroke-inside-cloth",
+     "pass": true,
+     "detail": "描边像素全部不透明且位于布面最内缘：越界 []，非边缘描边 []"
+    },
+    {
+     "id": "stroke-ring-complete",
+     "pass": true,
+     "detail": "布面外缘与孔周一圈全部为描边色（第 0 行除外）"
+    },
+    {
+     "id": "no-seam-stripe-x0-x19",
+     "pass": true,
+     "detail": "x0 列 ooo#.... / x19 列 ooo#...."
+    },
+    {
+     "id": "seam-row-full-face",
+     "pass": true,
+     "detail": "y=0: oooooooooooooooooooo"
+    },
+    {
+     "id": "no-bottom-line",
+     "pass": true,
+     "detail": "没有整行描边"
+    },
+    {
+     "id": "svg-crisp-one-path-per-color",
+     "pass": true,
+     "detail": "2 个 path"
+    },
+    {
+     "id": "base64-le-1200",
+     "pass": true,
+     "detail": "base64 868 字符，SVG 651 B"
+    }
+   ]
+  },
+  {
+   "name": "current(预期失败)",
+   "pass": false,
+   "rows": [
+    "oooooooooooooooooooo",
+    "#oooooooooooooooooo#",
+    "ooooooooo##ooooooooo",
+    "#oooo##oooooo##oooo#",
+    ".##oo#ooo##ooo#oo##.",
+    "...#ooooo##ooooo#...",
+    "...#####oooo#####...",
+    "........####........"
+   ],
+   "failed": [
+    "holes-alpha-0",
+    "old-hole-positions-reused",
+    "stroke-inside-cloth",
+    "no-seam-stripe-x0-x19",
+    "svg-crisp-one-path-per-color",
+    "base64-le-1200"
+   ],
+   "results": [
+    {
+     "id": "palette-only",
+     "pass": true,
+     "detail": "每个像素只能是 布面/描边/全透明，alpha 只有 0 或 255"
+    },
+    {
+     "id": "holes-alpha-0",
+     "pass": false,
+     "detail": "不透明孔眼像素 [[5,3],[6,3],[5,4],[6,4],[9,4],[10,4],[9,5],[10,5],[13,3],[14,3],[13,4],[14,4]]"
+    },
+    {
+     "id": "holes-2x2-enclosed-size-kept",
+     "pass": true,
+     "detail": "3 个 2×2 孔，四周都是布面（孔径未被描边吃掉、也没被扩大）"
+    },
+    {
+     "id": "old-hole-positions-reused",
+     "pass": false,
+     "detail": "{\"left\":\"0/3\",\"center\":\"0/6\",\"right\":\"0/3\"}"
+    },
+    {
+     "id": "outline-not-larger-than-current",
+     "pass": true,
+     "detail": "不透明区域 ⊆ 现版（布面∪外描边）"
+    },
+    {
+     "id": "stroke-inside-cloth",
+     "pass": false,
+     "detail": "描边像素全部不透明且位于布面最内缘：越界 []，非边缘描边 [[0,1],[19,1],[9,2],[10,2],[5,3],[6,3],[13,3],[14,3],[5,4],[9,4],[10,4],[14,4],[9,5],[10,5]]"
+    },
+    {
+     "id": "stroke-ring-complete",
+     "pass": true,
+     "detail": "布面外缘与孔周一圈全部为描边色（第 0 行除外）"
+    },
+    {
+     "id": "no-seam-stripe-x0-x19",
+     "pass": false,
+     "detail": "孤立/非轮廓描边 [[0,1],[19,1]]"
+    },
+    {
+     "id": "seam-row-full-face",
+     "pass": true,
+     "detail": "y=0: oooooooooooooooooooo"
+    },
+    {
+     "id": "no-bottom-line",
+     "pass": true,
+     "detail": "没有整行描边"
+    },
+    {
+     "id": "svg-crisp-one-path-per-color",
+     "pass": false,
+     "detail": "0 个 path"
+    },
+    {
+     "id": "base64-le-1200",
+     "pass": false,
+     "detail": "base64 1940 字符，SVG 1454 B"
+    }
+   ]
+  }
+ ],
+ "scenes": {
+  "offset0": {
+   "current": {
+    "flippedTileMatches": true,
+    "mismatches": [],
+    "rowAboveLaceIsWindow": true,
+    "rowBelowSeamIsBar": true
+   },
+   "A": {
+    "flippedTileMatches": true,
+    "mismatches": [],
+    "rowAboveLaceIsWindow": true,
+    "rowBelowSeamIsBar": true
+   },
+   "B": {
+    "flippedTileMatches": true,
+    "mismatches": [],
+    "rowAboveLaceIsWindow": true,
+    "rowBelowSeamIsBar": true
+   }
+  },
+  "offset10": {
+   "current": {
+    "flippedTileMatches": true,
+    "mismatches": [],
+    "rowAboveLaceIsWindow": true,
+    "rowBelowSeamIsBar": true
+   },
+   "A": {
+    "flippedTileMatches": true,
+    "mismatches": [],
+    "rowAboveLaceIsWindow": true,
+    "rowBelowSeamIsBar": true
+   },
+   "B": {
+    "flippedTileMatches": true,
+    "mismatches": [],
+    "rowAboveLaceIsWindow": true,
+    "rowBelowSeamIsBar": true
+   }
+  }
+ },
+ "orientation": "Chromium DPR1：场景第 (seamY-r) 行 = SVG 第 r 行（scaleY(-1)），seamY=状态栏 border-top 行；SVG y=0 贴状态栏，y=7 扇贝尖朝上。"
+}

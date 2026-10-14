@@ -1,0 +1,320 @@
+{
+  "fixture": "NOT WINDOWS; source-shaped GroupMenu/checkbox visibility states with fabricated friend/world rows and a decoy page",
+  "themeCss": "/tmp/jirai-r9-out-badge/jirai-kei-theme/theme.css",
+  "cssBytes": 17510,
+  "remoteAssets": 0,
+  "scope": "favorites-${kind}-splitter + resizable handle slot; decoy splitter excluded",
+  "geometry": {
+    "friendRow": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "friendCreate": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "friendHandle": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "friendCard": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "friendCheck": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "avatar": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "worldRow": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "worldCreate": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "worldHandle": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "worldCard": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "worldCheck": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "worldBadge": {
+      "x": 0,
+      "y": 0,
+      "width": 2,
+      "height": 2
+    },
+    "decoyCard": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "decoyCreate": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    }
+  },
+  "maxGeometryDeltaPx": 2,
+  "resizeHitbox": {
+    "before": {
+      "width": 1,
+      "afterWidth": "4px",
+      "afterHeight": "426px"
+    },
+    "after": {
+      "width": 1,
+      "afterWidth": "4px",
+      "afterHeight": "426px"
+    }
+  },
+  "selectedRail": {
+    "background": "rgb(255, 184, 230)",
+    "foreground": "rgb(22, 17, 42)",
+    "radius": "0px"
+  },
+  "selectedRailDetails": {
+    "friend": {
+      "background": "rgb(255, 184, 230)",
+      "name": "rgb(22, 17, 42)",
+      "iconColor": "rgb(22, 17, 42)",
+      "countColor": "rgb(22, 17, 42)",
+      "iconContrast": 11.545274449256194,
+      "countContrast": 11.545274449256194
+    },
+    "world": {
+      "background": "rgb(255, 184, 230)",
+      "name": "rgb(22, 17, 42)",
+      "iconColor": "rgb(22, 17, 42)",
+      "countColor": "rgb(22, 17, 42)",
+      "iconContrast": 11.545274449256194,
+      "countContrast": 11.545274449256194
+    }
+  },
+  "unselectedRailColors": {
+    "before": {
+      "icon": "rgb(185, 173, 217)",
+      "count": "rgb(185, 173, 217)"
+    },
+    "after": {
+      "icon": "rgb(185, 173, 217)",
+      "count": "rgb(185, 173, 217)"
+    }
+  },
+  "createButton": {
+    "borderStyle": "dotted",
+    "borderColor": "rgb(108, 92, 224)",
+    "background": "rgb(32, 25, 54)",
+    "color": "rgb(227, 210, 245)"
+  },
+  "countBadges": {
+    "section": {
+      "background": "rgb(32, 25, 54)",
+      "foreground": "rgb(214, 184, 239)",
+      "radius": "0px"
+    },
+    "world": {
+      "background": "rgb(32, 25, 54)",
+      "foreground": "rgb(242, 235, 255)",
+      "radius": "0px"
+    }
+  },
+  "checkboxStates": [
+    {
+      "checked": true,
+      "width": "16px",
+      "height": "16px",
+      "borderRadius": "0px",
+      "backgroundColor": "rgb(255, 184, 230)",
+      "borderColor": "rgb(108, 92, 224)"
+    },
+    {
+      "checked": false,
+      "width": "16px",
+      "height": "16px",
+      "borderRadius": "0px",
+      "backgroundColor": "rgb(32, 25, 54)",
+      "borderColor": "rgb(108, 92, 224)"
+    }
+  ],
+  "handle": {
+    "width": 1,
+    "afterWidth": "4px",
+    "afterHeight": "426px",
+    "gripWidth": "4px",
+    "gripHeight": "28px",
+    "gripRadius": "0px",
+    "gripBackground": "rgb(108, 92, 224)",
+    "gripImage": "repeating-linear-gradient(rgb(255, 184, 230) 0px, rgb(255, 184, 230) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 5px)",
+    "hitBoxWidth": "4px"
+  },
+  "onlineDot": {
+    "width": "6px",
+    "height": "6px",
+    "radius": "0px",
+    "background": "rgb(111, 227, 211)"
+  },
+  "badgeSourceState": {
+    "sourcePosition": {
+      "left": "6px",
+      "top": "6px",
+      "right": "284.328px"
+    },
+    "selected": {
+      "badgeOpacity": "0",
+      "checkboxOpacity": "1"
+    },
+    "idle": {
+      "badgeOpacity": "1",
+      "checkboxOpacity": "0"
+    }
+  },
+  "worldCheckboxHover": {
+    "badgeOpacity": "0",
+    "checkboxOpacity": "1"
+  },
+  "railNameProbes": {
+    "VRC+ Group 2": {
+      "whiteSpace": "nowrap",
+      "overflow": "hidden",
+      "textOverflow": "ellipsis",
+      "labelHeight": 19.59375,
+      "lineHeight": 19.6,
+      "labelRight": 223,
+      "countLeft": 231,
+      "countRight": 261,
+      "buttonRight": 269,
+      "countEndGap": 8,
+      "menu": {
+        "width": 24,
+        "height": 24,
+        "left": 273,
+        "opacity": "0"
+      },
+      "countClearsMenu": true
+    },
+    "dormir / avatar": {
+      "whiteSpace": "nowrap",
+      "overflow": "hidden",
+      "textOverflow": "ellipsis",
+      "labelHeight": 19.59375,
+      "lineHeight": 19.6,
+      "labelRight": 279,
+      "countLeft": 287,
+      "countRight": 293,
+      "buttonRight": 301,
+      "countEndGap": 8,
+      "menu": null,
+      "countClearsMenu": true
+    }
+  },
+  "avatarRadius": "50%",
+  "sectionMarker": {
+    "content": "\"\"",
+    "width": "6px",
+    "height": "6px",
+    "background": "rgb(255, 184, 230)"
+  },
+  "contrast": {
+    "selectedGroup": 11.545274449256194,
+    "selectedFriendCount": 11.545274449256194,
+    "selectedFriendIcon": 11.545274449256194,
+    "selectedWorldCount": 11.545274449256194,
+    "selectedWorldIcon": 11.545274449256194,
+    "groupCount": 9.540943504442877,
+    "create": 11.80737563303805,
+    "onlineCount": 14.439071000509962
+  },
+  "focus": {
+    "focusVisible": true,
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "outlineColor": "rgb(255, 127, 207)"
+  },
+  "hover": {
+    "rail": "rgb(42, 33, 71)",
+    "groupMenu": {
+      "background": "rgb(42, 33, 71)",
+      "opacity": "1",
+      "width": 24,
+      "height": 24,
+      "countClearsMenu": true
+    },
+    "create": {
+      "background": "rgb(255, 184, 230)",
+      "color": "rgb(22, 17, 42)"
+    },
+    "handleDrag": {
+      "active": true,
+      "gripBackground": "rgb(255, 184, 230)",
+      "gripBorder": "rgb(255, 127, 207)",
+      "hitWidth": "4px"
+    }
+  },
+  "reducedMotion": {
+    "animationName": "none",
+    "transitionDuration": "0s",
+    "running": 0
+  },
+  "reduceEffects": {
+    "animationName": "none",
+    "transitionDuration": "0s",
+    "running": 0
+  },
+  "fixtureAnimations": 0,
+  "narrowViewport": {
+    "viewport": 1180,
+    "document": 1180,
+    "friend": 1144,
+    "world": 1144
+  },
+  "decoyUnchanged": {
+    "card": "9px",
+    "create": "4px"
+  },
+  "screenshots": [
+    "before-friends-review.png",
+    "after-friends-review.png",
+    "before-world-review.png",
+    "world-idle-r9.5-review.png",
+    "world-checkbox-hover-r9.5-review.png",
+    "handle-drag-review.png",
+    "decoy-review.png",
+    "selected-rail-closeup-r2.png"
+  ]
+}

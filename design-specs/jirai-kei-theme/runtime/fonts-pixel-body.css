@@ -1,0 +1,55 @@
+/* Windose body typography, r3: concatenate AFTER fonts.css and windose-runtime.css.
+   User-requested pixel UI + user text. No assets, size/line-height overrides,
+   blanket descendants, icon selectors, or font-synthesis changes here. */
+:root {
+  /* Keep the app's inline preference as the missing-glyph fallback, not a target.
+     Never point --vrcx-app-font-family back to --font-sans (variable cycle). */
+  /* R4: Fusion first — it has true lowercase and Latin-1/Ext-A accents. Silkscreen
+     ("WD Pixel") is caps-only and is reserved for intentional uppercase labels. */
+  --wd-body-font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
+  --font-sans: var(--wd-body-font-family);
+  --font-heading: var(--wd-body-font-family);
+}
+
+/* body inheritance reaches the application AND portals mounted outside #root. */
+html,
+body {
+  font-family: var(--wd-body-font-family);
+}
+
+/* Tailwind v4 @theme inline expands these utilities to the original app stack:
+   override the actual declarations too, rather than relying only on tokens.
+   pre.font-sans is intentional user/group prose and remains pixel text.
+   Kbd currently uses font-sans; keep its existing app font as an exception. */
+.font-sans:not(kbd):not(.font-mono),
+.font-heading:not(kbd):not(.font-mono) {
+  font-family: var(--wd-body-font-family);
+}
+
+/* Preserve native control inheritance, including controls inside mono scopes.
+   Explicit utility classes still own their family via the rules above/below. */
+:where(button, input, textarea, select):not(.font-sans):not(.font-heading):not(.font-mono) {
+  font-family: inherit;
+}
+
+/* AssistantDialog has an inline app-family declaration. This is the ONLY
+   important override: exact slot + inline variable, never all descendants. */
+[data-slot="dialog-content"][style*="--vrcx-app-font-family"]:not(.font-mono) {
+  font-family: var(--wd-body-font-family) !important;
+}
+
+/* Native code semantics and the existing JSON container retain monospace.
+   Do not select JSON descendants: nested controls inherit normally, SVG/icon
+   font declarations remain untouched. Explicit pre.font-sans is user prose. */
+.font-mono,
+:where(code, samp),
+pre:not(.font-sans):not(.font-heading),
+.entity-json-view {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+}
+
+/* Source Kbd is sans, not mono. Preserve that distinction; kbd.font-mono
+   continues to use the monospace rule. No forced font-size or line-height. */
+kbd:not(.font-mono) {
+  font-family: var(--vrcx-app-font-family, system-ui), sans-serif;
+}

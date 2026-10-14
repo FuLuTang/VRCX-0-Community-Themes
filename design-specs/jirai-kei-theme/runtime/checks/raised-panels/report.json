@@ -1,0 +1,50 @@
+{
+  "friend": {
+    "top": "rgb(162, 148, 200)",
+    "bottom": "rgb(16, 11, 30)",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "none",
+    "width": 240,
+    "height": 125
+  },
+  "world": {
+    "top": "rgb(162, 148, 200)",
+    "bottom": "rgb(16, 11, 30)",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "none",
+    "width": 250,
+    "height": 300
+  },
+  "legend": {
+    "top": "rgb(162, 148, 200)",
+    "bottom": "rgb(16, 11, 30)",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "none",
+    "width": 256,
+    "height": 172
+  },
+  "hover": {
+    "top": "rgb(255, 184, 230)",
+    "bottom": "rgb(255, 184, 230)",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "none",
+    "width": 250,
+    "height": 300
+  },
+  "selected": {
+    "top": "rgb(255, 184, 230)",
+    "bottom": "rgb(255, 184, 230)",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px, rgb(255, 184, 230) 0px 0px 0px 1px",
+    "outline": "none",
+    "width": 250,
+    "height": 300
+  },
+  "focus": {
+    "top": "rgb(255, 184, 230)",
+    "bottom": "rgb(255, 184, 230)",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "solid",
+    "width": 250,
+    "height": 300
+  }
+}

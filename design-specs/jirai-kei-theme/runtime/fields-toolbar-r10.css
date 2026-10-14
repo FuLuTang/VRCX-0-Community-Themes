@@ -1,0 +1,115 @@
+/* R10 G1 — text fields, toolbar search, filter chips and remaining native fields.
+   Deliberately avoids checkbox/range/select/combobox triggers (form-controls-r9),
+   Settings (w-44 rail), Login, entity dialogs, and the already-styled Tools toolbar. */
+
+/* Shared Win98 sunken field: two hard 1px steps, dark top/left and light bottom/right.
+   Keep border widths and hit boxes unchanged; all input/select owners reuse these tokens. */
+:root{
+  --jk-field-edge:#69557c #fdf4ff #fdf4ff #69557c;
+  --jk-field-inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;
+}
+
+/* Share the R9 Tools search-frame language with all other page toolbars. The exact
+   #chart + vertical-rail Tools surface remains exclusively owned by tools-ui-r9.css. */
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *){
+  border:1px solid #6c5ce0;
+  background:#201936;
+  color:#e3d2f5;
+  
+  transition:none;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *):focus-within{
+  outline:2px solid #ff7fcf;outline-offset:1px;z-index:2;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-addon"]{color:#d6b8ef}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-control"]{
+  border-radius:0;background:transparent;color:#f2ebff;caret-color:#ffb8e6;outline:none;box-shadow:none;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-control"]::placeholder{color:#b9add9;opacity:1}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-button"]{
+  border-radius:0;color:#16112a;background:#ffb8e6;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-button"]:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+
+/* Standalone fields: same dark inset field treatment; no geometry changes. */
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])){
+  border:1px solid #6c5ce0;background-color:#16112a;color:#f2ebff;
+  
+}
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]))::placeholder{color:#b9add9;opacity:1}
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):is(:disabled,[aria-disabled="true"])){color:#b9add9;opacity:.65}
+:where([data-slot="input-group"]:focus-within){outline:2px solid #ff7fcf;outline-offset:1px}
+:where([data-slot="field-label"]),:where([data-slot="label"]){color:#e3d2f5}
+:where([data-slot="field-description"]){color:#b9add9}
+:where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *)){color:#ff8fae}
+
+/* Toolbar default ToggleGroup is a multi-select chip row, not a segmented switch.
+   controls-r9 intentionally reserved the outline variant; chips retain small gaps. */
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"]{
+  display:flex;gap:2px;padding:0;max-width:100%;
+}
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]{
+  min-height:28px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#d6c8ee;
+  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;transition:none;
+}
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:hover:not(:disabled):not([aria-disabled="true"]){background:#392a52;color:#f2ebff}
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"]){border-color:#6c5ce0;background:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:focus-visible{z-index:2;outline:2px solid #ff7fcf;outline-offset:1px}
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"])::before{content:none!important}
+.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:disabled{opacity:.55}
+
+/* Feed multi-user search: scoped to the chip input group, not other comboboxes. */
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="input-group"]:has(> [data-slot="combobox-chips"]){
+  border:1px solid #6c5ce0;background:#201936;color:#e3d2f5;
+  
+}
+/* Shared text-field skin after base border shorthands; focus/error remain later state overrides. */
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])){
+  border-radius:0;
+  border-color:var(--jk-field-edge);
+  box-shadow:var(--jk-field-inset);
+}
+/* Input groups share it too, except the marked #chart toolbar owned by tools-ui-r9.css. */
+:where([data-slot="input-group"]:not(#chart [data-vrcx-0-control="toolbar"][data-slot="input-group"])){
+  border-radius:0;
+  border-color:var(--jk-field-edge);
+  box-shadow:var(--jk-field-inset);
+}
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):focus-visible){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):is([aria-invalid="true"],[data-invalid])){border-color:#ff6b8a}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="input-group"]:has(> [data-slot="combobox-chips"]):focus-within{outline:2px solid #ff7fcf;outline-offset:1px;z-index:2}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chips"]{border:0;border-radius:0;background:transparent;color:#f2ebff;box-shadow:none}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chips"] [data-slot="combobox-chip"]{
+  min-height:21px;border:1px solid #8c71b0;border-radius:0;background:#332650;color:#f2ebff;
+  align-items:center;justify-content:center;line-height:1;
+  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chip-remove"]{
+  width:24px;height:24px;min-width:24px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#ffb8e6;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chip-remove"]:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chip-input"]{min-height:20px;border:0;background:transparent;color:#f2ebff;outline:none;box-shadow:none}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chip-input"]::placeholder{color:#b9add9;opacity:1}
+
+/* Inline keyboard keycaps and one-time-code slots. */
+:where([data-slot="kbd"]){
+  border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+:where([data-slot="kbd-group"]){gap:1px}
+:where([data-slot="input-otp-slot"]){
+  border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;
+  box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;
+}
+:where([data-slot="input-otp-slot"]:is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+
+/* Remaining audited native controls. (Radio: shared square-pixel rule in form-controls-r9.css.) */
+:where(input[type="color"]){border:1px solid #6c5ce0;border-radius:0;background:#211a33;padding:2px}
+:where(input[type="color"])::-webkit-color-swatch-wrapper{padding:0}
+:where(input[type="color"])::-webkit-color-swatch{border:1px solid #8c71b0;border-radius:0}
+:where(input[type="file"])::file-selector-button{
+  appearance:none;-webkit-appearance:none;font:inherit;padding:3px 8px;
+  margin-right:8px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+:where(input[type="time"])::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}

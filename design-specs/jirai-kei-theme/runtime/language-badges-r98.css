@@ -1,0 +1,26 @@
+/* R9.8: selected 01 BlackBerry/Pink language labels, not generic Badge styling.
+   FriendListColumns:308–330 and PlayerListColumns:350–366 render the same
+   TooltipTrigger span directly inside a wrapping div directly inside TableCell.
+   DataTableSurface supplies .vrcx-0-data-table in BOTH lists. TableCell has no
+   column-id attribute, so use the exact source-shaped structure + utility contract.
+   DashboardInstanceWidget:446–467 instead wraps the same span in another span;
+   it is intentionally excluded, as are h-4 JP region chips and other triggers.
+   Keep app-owned height/min-width/padding/wrap/gap, attributes, tooltip portals,
+   borders' width/style and all row/column layout. No pseudo-elements or motion. */
+.vrcx-0-data-table td[data-slot="table-cell"]
+  > div.flex.flex-wrap.items-center.gap-1
+  > span[data-slot="tooltip-trigger"].inline-flex.h-5.min-w-8.items-center.justify-center.rounded.border.px-1.font-mono.text-\[10px\].leading-none.font-semibold {
+  border-color: #ff7fcf;
+  border-radius: 0;
+  background-color: #211a33;
+  color: #ffd9ee;
+  background-image: linear-gradient(90deg, #fff1f8 0 2px, #ff7fcf 2px 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  font-family: var(--wd-body-font-family);
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+}

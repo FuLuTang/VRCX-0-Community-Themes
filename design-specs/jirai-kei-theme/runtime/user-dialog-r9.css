@@ -1,0 +1,61 @@
+/* R9-D · cut the real banner avatar button, not its decoration-frame sibling. */
+.entity-dialog [data-slot="card-header"] > div.relative > div.absolute.bottom-3.left-3.z-30.size-16 > button[data-slot="button"] {
+  border-radius: 0;
+  clip-path: var(--wd-avatar-cut);
+  background-color: transparent;
+  box-shadow: none;
+}
+.entity-dialog [data-slot="card-header"] > div.relative > div.absolute.bottom-3.left-3.z-30.size-16 > button[data-slot="button"] > img {
+  border-radius: 0;
+  clip-path: var(--wd-avatar-cut);
+}
+
+/* Bio-link row (UserDialogInfoTab): reuse the existing outline-button raised bevel,
+   rather than letting ghost buttons hide their hit boxes. Includes favicon fallback. */
+.entity-dialog .flex.flex-wrap.gap-1\.5 > [data-slot="button"][data-variant="ghost"][data-size="icon-xs"][title]{
+  border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;
+  box-shadow:inset 1px 1px rgb(253 244 255/.72),inset -1px -1px rgb(22 17 42/.72);
+  cursor:pointer;transition:background-color 80ms steps(2,end),box-shadow 80ms steps(2,end),transform 80ms steps(2,end);
+}
+.entity-dialog .flex.flex-wrap.gap-1\.5 > [data-slot="button"][data-variant="ghost"][data-size="icon-xs"][title]:hover:not(:disabled){background:#392a52;color:#fff0fa}
+.entity-dialog .flex.flex-wrap.gap-1\.5 > [data-slot="button"][data-variant="ghost"][data-size="icon-xs"][title]:active:not(:disabled){box-shadow:inset 2px 2px #16112a,inset -1px -1px #fdf4ff;transform:translate(1px,1px)}
+.entity-dialog .flex.flex-wrap.gap-1\.5 > [data-slot="button"][data-variant="ghost"][data-size="icon-xs"][title]:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
+
+/* Banner treatment C (Lead pick after user said R8 pattern was barely visible). B = .28/5px/.82. */
+.entity-dialog {
+  --r9-banner-stitch-opacity: .38;
+  --r9-banner-stitch-size: 8px 12px, 8px 12px;
+  --r9-banner-hem-height: 6px;
+  --r9-banner-hem-opacity: .90;
+  --r9-banner-hem-size: 10px 6px;
+}
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {
+  opacity: var(--r9-banner-stitch-opacity);
+  -webkit-mask-size: var(--r9-banner-stitch-size);
+  mask-size: var(--r9-banner-stitch-size);
+}
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::after {
+  height: var(--r9-banner-hem-height);
+  opacity: var(--r9-banner-hem-opacity);
+  -webkit-mask-size: var(--r9-banner-hem-size);
+  mask-size: var(--r9-banner-hem-size);
+}
+
+/* Trace the lace interior, not the outside edge: this hollow pixel scallop sits
+   1px inside the existing hem strip and leaves the banner visible through it. */
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] > span.relative.size-full::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  z-index: 2;
+  height: var(--r9-banner-hem-height);
+  pointer-events: none;
+  opacity: .96;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' shape-rendering='crispEdges'%3E%3Cpath d='M0 0.5H1V1.5H2V2.5H3V3.5H4V4.5H6V3.5H7V2.5H8V1.5H9V0.5H10' fill='none' stroke='%23F3ADD9' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: left top;
+  background-size: var(--r9-banner-hem-size);
+  image-rendering: pixelated;
+}

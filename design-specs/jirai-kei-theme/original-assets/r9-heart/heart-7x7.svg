@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" shape-rendering="crispEdges"><title>R9 7x7 pixel heart</title><desc>Independent 7 by 7 pixel grid: one-pixel #34316a outline, #ffb8e6 body, upper-left #fdf4ff highlight.</desc>
+<g fill="#34316a">
+<rect x="1" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="5" y="0" width="1" height="1"/>
+<rect x="0" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/>
+<rect x="0" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/>
+<rect x="0" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/>
+<rect x="1" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/>
+<rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/>
+<rect x="3" y="6" width="1" height="1"/>
+</g>
+<g fill="#ffb8e6">
+<rect x="1" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/>
+<rect x="2" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/>
+<rect x="1" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/>
+<rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/>
+<rect x="3" y="5" width="1" height="1"/>
+</g>
+<g fill="#fdf4ff"><rect x="1" y="2" width="1" height="1"/></g>
+</svg>

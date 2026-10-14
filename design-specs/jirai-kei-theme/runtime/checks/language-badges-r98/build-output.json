@@ -1,0 +1,209 @@
+{
+  "cssBytes": 1025617,
+  "limit": 1048576,
+  "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/preview/preview.png",
+  "sections": [
+    {
+      "name": "tokens",
+      "bytes": 2696
+    },
+    {
+      "name": "native-icons",
+      "bytes": 8980
+    },
+    {
+      "name": "assets",
+      "bytes": 25560
+    },
+    {
+      "name": "fonts",
+      "bytes": 480288
+    },
+    {
+      "name": "icons",
+      "bytes": 111131
+    },
+    {
+      "name": "runtime",
+      "bytes": 11969
+    },
+    {
+      "name": "window-chrome",
+      "bytes": 14706
+    },
+    {
+      "name": "group-spacing",
+      "bytes": 1392
+    },
+    {
+      "name": "body-typography",
+      "bytes": 2616
+    },
+    {
+      "name": "side-panel",
+      "bytes": 6533
+    },
+    {
+      "name": "feed-badges",
+      "bytes": 5652
+    },
+    {
+      "name": "settings",
+      "bytes": 9843
+    },
+    {
+      "name": "pixel-controls",
+      "bytes": 13798
+    },
+    {
+      "name": "assets-r5",
+      "bytes": 79337
+    },
+    {
+      "name": "motion",
+      "bytes": 3679
+    },
+    {
+      "name": "navigation-r7",
+      "bytes": 4644
+    },
+    {
+      "name": "motion-r7",
+      "bytes": 2364
+    },
+    {
+      "name": "assets-r7",
+      "bytes": 3841
+    },
+    {
+      "name": "backgrounds-r7",
+      "bytes": 1027
+    },
+    {
+      "name": "chrome-r8",
+      "bytes": 7006
+    },
+    {
+      "name": "bio-diff-r8",
+      "bytes": 2014
+    },
+    {
+      "name": "motion-r8",
+      "bytes": 4004
+    },
+    {
+      "name": "cat-r8-final",
+      "bytes": 1258
+    },
+    {
+      "name": "user-dialog-r8",
+      "bytes": 3345
+    },
+    {
+      "name": "login-r8",
+      "bytes": 9691
+    },
+    {
+      "name": "user-dialog-r9",
+      "bytes": 2255
+    },
+    {
+      "name": "badge-r9",
+      "bytes": 2866
+    },
+    {
+      "name": "controls-r9",
+      "bytes": 12396
+    },
+    {
+      "name": "popups-r9",
+      "bytes": 14153
+    },
+    {
+      "name": "tools-ui-r9",
+      "bytes": 6901
+    },
+    {
+      "name": "avatars-status-r9",
+      "bytes": 11676
+    },
+    {
+      "name": "brand-heart-r9",
+      "bytes": 1581
+    },
+    {
+      "name": "loader-r9",
+      "bytes": 31815
+    },
+    {
+      "name": "form-controls-r9",
+      "bytes": 7661
+    },
+    {
+      "name": "dialogs-r9",
+      "bytes": 8159
+    },
+    {
+      "name": "fields-toolbar-r10",
+      "bytes": 12646
+    },
+    {
+      "name": "overlays-r10",
+      "bytes": 4242
+    },
+    {
+      "name": "favorites-r9",
+      "bytes": 17510
+    },
+    {
+      "name": "browse-history-r9",
+      "bytes": 7624
+    },
+    {
+      "name": "buttons-badges-r10",
+      "bytes": 19590
+    },
+    {
+      "name": "data-surfaces-r10",
+      "bytes": 21647
+    },
+    {
+      "name": "banner-frame-r96",
+      "bytes": 3956
+    },
+    {
+      "name": "privacy-lock-r96",
+      "bytes": 2679
+    },
+    {
+      "name": "brand-heart-r97",
+      "bytes": 3653
+    },
+    {
+      "name": "cat-motion-r96",
+      "bytes": 1472
+    },
+    {
+      "name": "dialog-header-r97",
+      "bytes": 2570
+    },
+    {
+      "name": "loader-r97",
+      "bytes": 1789
+    },
+    {
+      "name": "cards-r97",
+      "bytes": 4912
+    },
+    {
+      "name": "splitter-r97",
+      "bytes": 1657
+    },
+    {
+      "name": "language-badges-r98",
+      "bytes": 1377
+    }
+  ],
+  "previewBytes": 45310,
+  "output": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/preview-package/jirai-kei-theme"
+}

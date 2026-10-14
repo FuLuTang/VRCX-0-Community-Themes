@@ -1,0 +1,148 @@
+{
+  "fixture": "NOT WINDOWS; source-shaped VRCX titlebar brand + Help menubar trigger + drag region",
+  "baseCss": "/tmp/exclusion-migration/shim/new/r9-brand-heart.css",
+  "r9Css": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/brand-heart-r9.css",
+  "before": {
+    "paddingRight": "17px",
+    "brandWidth": 101,
+    "helpLeft": 138,
+    "helpRight": 178,
+    "helpWidth": 40,
+    "gap": 0,
+    "pseudo": {
+      "width": "12px",
+      "height": "12px",
+      "animationName": "r8-heart-beat",
+      "animationDuration": "3.2s",
+      "maskSize": "12px 12px",
+      "transform": "matrix(1, 0, 0, 1, 0, -6)",
+      "transformOrigin": "6px 6px",
+      "pointerEvents": "none"
+    }
+  },
+  "after": {
+    "paddingRight": "21px",
+    "brandWidth": 105,
+    "brandLeft": 37,
+    "brandRight": 142,
+    "helpLeft": 142,
+    "helpRight": 182,
+    "helpWidth": 40,
+    "gap": 0,
+    "pseudo": {
+      "width": "14px",
+      "height": "14px",
+      "animationName": "r9-brand-heart-size",
+      "animationDuration": "2.5s",
+      "animationTimingFunction": "steps(1)",
+      "maskSize": "10px 10px",
+      "maskPosition": "50% 50%",
+      "transform": "matrix(1, 0, 0, 1, 0, -7)",
+      "transformOrigin": "7px 7px",
+      "pointerEvents": "none",
+      "maskImage": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M6%2011C4.8%209.8%201%207%201%204.4%201%201.3%204.7.4%206%203c1.3-2.6%205-1.7%205%201.4%200%202.6-3.8%205.4-5%206.6z%22%2F%3E%3C%2Fsvg%3E\")"
+    },
+    "staticPseudo": {
+      "width": "14px",
+      "height": "14px",
+      "animationName": "none",
+      "maskSize": "12px 12px"
+    },
+    "dragRegion": true
+  },
+  "hover": {
+    "before": {
+      "background": "rgb(255, 227, 242)",
+      "color": "rgb(33, 19, 45)"
+    },
+    "after": {
+      "background": "rgb(255, 227, 242)",
+      "color": "rgb(33, 19, 45)"
+    }
+  },
+  "focus": {
+    "activeId": "help-trigger",
+    "focusVisible": true,
+    "outline": "rgb(22, 17, 42) solid 2px",
+    "outlineWidth": "2px",
+    "outlineOffset": "-3px"
+  },
+  "frames": [
+    {
+      "name": "small-1",
+      "timeMs": 250,
+      "maskSize": "10px 10px",
+      "width": "14px",
+      "height": "14px",
+      "transform": "matrix(1, 0, 0, 1, 0, -7)",
+      "transformOrigin": "7px 7px",
+      "animationName": "r9-brand-heart-size",
+      "animationCount": 1
+    },
+    {
+      "name": "small-2",
+      "timeMs": 750,
+      "maskSize": "10px 10px",
+      "width": "14px",
+      "height": "14px",
+      "transform": "matrix(1, 0, 0, 1, 0, -7)",
+      "transformOrigin": "7px 7px",
+      "animationName": "r9-brand-heart-size",
+      "animationCount": 1
+    },
+    {
+      "name": "medium-1",
+      "timeMs": 1250,
+      "maskSize": "12px 12px",
+      "width": "14px",
+      "height": "14px",
+      "transform": "matrix(1, 0, 0, 1, 0, -7)",
+      "transformOrigin": "7px 7px",
+      "animationName": "r9-brand-heart-size",
+      "animationCount": 1
+    },
+    {
+      "name": "large",
+      "timeMs": 1750,
+      "maskSize": "14px 14px",
+      "width": "14px",
+      "height": "14px",
+      "transform": "matrix(1, 0, 0, 1, 0, -7)",
+      "transformOrigin": "7px 7px",
+      "animationName": "r9-brand-heart-size",
+      "animationCount": 1
+    },
+    {
+      "name": "medium-2",
+      "timeMs": 2250,
+      "maskSize": "12px 12px",
+      "width": "14px",
+      "height": "14px",
+      "transform": "matrix(1, 0, 0, 1, 0, -7)",
+      "transformOrigin": "7px 7px",
+      "animationName": "r9-brand-heart-size",
+      "animationCount": 1
+    }
+  ],
+  "reducedMotion": {
+    "animationName": "none",
+    "maskSize": "12px 12px",
+    "width": "14px",
+    "height": "14px"
+  },
+  "reduceEffects": {
+    "animationName": "none",
+    "maskSize": "12px 12px",
+    "width": "14px",
+    "height": "14px"
+  },
+  "screenshots": [
+    "static-vs-animated.png",
+    "five-frames.png",
+    "heart-frames-zoom.png",
+    "help-spacing.png",
+    "focus-help.png",
+    "reduced-motion.png",
+    "reduce-effects.png"
+  ]
+}

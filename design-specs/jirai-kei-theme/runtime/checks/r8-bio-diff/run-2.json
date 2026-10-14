@@ -1,0 +1,94 @@
+{
+  "result": "PASS",
+  "authoritySource": "/tmp/vrcx-win-src/src/components/dialogs/user-dialog/components/UserDialogInfoTab.tsx:308-310,882-899",
+  "actualNestedStructureHit": {
+    "nestedPre": true,
+    "outerClasses": "text-muted-foreground m-0 min-w-0 font-sans text-xs whitespace-pre-wrap",
+    "oldDirectSelectorMatches": false,
+    "newReachableSelectorMatches": true
+  },
+  "groupDialogOrdinaryPreNonEntityDecoysUnchanged": true,
+  "actualNestedSpanBeforeAfter": {
+    "before": {
+      "color": "rgb(52, 211, 153)",
+      "bg": "rgba(16, 185, 129, 0.15)",
+      "borderBottom": "0px",
+      "borderLeft": "0px",
+      "borderLeftColor": "rgb(52, 211, 153)",
+      "textDecoration": "none",
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "height": 16,
+      "radius": "2px",
+      "shadow": "none"
+    },
+    "after": {
+      "color": "rgb(33, 19, 45)",
+      "bg": "rgb(255, 217, 238)",
+      "borderBottom": "1px",
+      "borderLeft": "0px",
+      "borderLeftColor": "rgb(33, 19, 45)",
+      "textDecoration": "none",
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "height": 17,
+      "radius": "0px",
+      "shadow": "none"
+    }
+  },
+  "fixture": "NOT WINDOWS · fictional examples, current body-level entity-dialog markup",
+  "loadedCssFiles": [
+    "theme.css"
+  ],
+  "signatureHistoryPortalOutsideMain": true,
+  "otherDialogUtilityDecoysUnchanged": true,
+  "contrastRatiosWCAG": {
+    "added": 13.73,
+    "deleted": 7.87,
+    "statusAdded": 13.73,
+    "statusDeleted": 7.87,
+    "detailAdded": 13.73,
+    "detailDeleted": 7.87
+  },
+  "nonColorCues": {
+    "feedAddUnderlinePx": 1,
+    "feedRemoveLineThrough": true,
+    "historyAddUnderlinePx": 1,
+    "historyRemoveLineThrough": true
+  },
+  "geometry": {
+    "feedPreBefore": {
+      "fontSize": "16px",
+      "lineHeight": "normal",
+      "height": 38
+    },
+    "feedPreAfter": {
+      "fontSize": "16px",
+      "lineHeight": "normal",
+      "height": 38
+    },
+    "historyPreBefore": {
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "height": 40
+    },
+    "historyPreAfter": {
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "height": 40
+    }
+  },
+  "cssBytes": 2068,
+  "cssLimitBytes": 8192,
+  "files": {
+    "before.png": {
+      "bytes": 60992
+    },
+    "after.png": {
+      "bytes": 60783
+    },
+    "comparison.png": {
+      "bytes": 117175
+    }
+  }
+}

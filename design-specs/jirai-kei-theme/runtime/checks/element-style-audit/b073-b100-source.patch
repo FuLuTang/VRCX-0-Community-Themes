@@ -1,0 +1,117 @@
+diff --git a/src/components/about/AboutDialog.tsx b/src/components/about/AboutDialog.tsx
+index 991abddf9..6b22b4464 100644
+--- a/src/components/about/AboutDialog.tsx
++++ b/src/components/about/AboutDialog.tsx
+@@ -288,6 +288,7 @@ export function AboutVrcxDialog({
+                         type="button"
+                         variant="ghost"
+                         size="sm"
++                        data-ui-role="text-link"
+                         className="text-muted-foreground/70 hover:text-foreground h-7 px-2 text-[11.5px] font-medium"
+                         onClick={() => {
+                             openExternalLink(links.license);
+@@ -299,6 +300,7 @@ export function AboutVrcxDialog({
+                         type="button"
+                         variant="ghost"
+                         size="sm"
++                        data-ui-role="text-link"
+                         className="text-muted-foreground/70 hover:text-foreground h-7 px-2 text-[11.5px] font-medium"
+                         onClick={onOpenLicenses}
+                     >
+diff --git a/src/components/hosts/tools-dialogs/GroupCalendarDialog.tsx b/src/components/hosts/tools-dialogs/GroupCalendarDialog.tsx
+index a05506c05..0764ea4ff 100644
+--- a/src/components/hosts/tools-dialogs/GroupCalendarDialog.tsx
++++ b/src/components/hosts/tools-dialogs/GroupCalendarDialog.tsx
+@@ -742,6 +742,10 @@ export function GroupCalendarDialog({
+                                         <Button
+                                             type="button"
+                                             variant="ghost"
++                                            data-ui-role="disclosure"
++                                            aria-expanded={
++                                                !collapsedGroups[group.groupId]
++                                            }
+                                             className="justify-start gap-2 px-1"
+                                             onClick={() =>
+                                                 setCollapsedGroups(
+diff --git a/src/components/hosts/tools-dialogs/LlmEndpointsDialog.tsx b/src/components/hosts/tools-dialogs/LlmEndpointsDialog.tsx
+index 3eb0754a8..c09815221 100644
+--- a/src/components/hosts/tools-dialogs/LlmEndpointsDialog.tsx
++++ b/src/components/hosts/tools-dialogs/LlmEndpointsDialog.tsx
+@@ -529,6 +529,7 @@ export function LlmEndpointsDialog({
+                                     <Button
+                                         type="button"
+                                         size="sm"
++                                        aria-pressed={draft.clearKey}
+                                         variant={
+                                             draft.clearKey
+                                                 ? 'secondary'
+diff --git a/src/components/layout/custom-nav-dialog/NavIconPicker.tsx b/src/components/layout/custom-nav-dialog/NavIconPicker.tsx
+index f94608a7a..9076c2d78 100644
+--- a/src/components/layout/custom-nav-dialog/NavIconPicker.tsx
++++ b/src/components/layout/custom-nav-dialog/NavIconPicker.tsx
+@@ -51,6 +51,7 @@ export function NavIconPicker({
+                 <TooltipContent>{ariaLabel}</TooltipContent>
+             </Tooltip>
+             <PopoverContent
++                data-ui-role="icon-grid"
+                 align="start"
+                 className="grid w-auto grid-cols-8 gap-1 p-2"
+             >
+diff --git a/src/components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx b/src/components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx
+index e2d15727b..2e1c138b5 100644
+--- a/src/components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx
++++ b/src/components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx
+@@ -107,6 +107,7 @@ export function AccountSwitcherPopover() {
+                 }
+             />
+             <PopoverContent
++                data-ui-role="choice-list"
+                 side="bottom"
+                 align="end"
+                 className="w-64 gap-1 p-1.5"
+diff --git a/src/components/sidebar/side-panel/SidePanelSettingsPopover.tsx b/src/components/sidebar/side-panel/SidePanelSettingsPopover.tsx
+index f34c580ee..fd1be16a7 100644
+--- a/src/components/sidebar/side-panel/SidePanelSettingsPopover.tsx
++++ b/src/components/sidebar/side-panel/SidePanelSettingsPopover.tsx
+@@ -277,6 +277,8 @@ export function SidePanelSettingsPopover({
+                         type="button"
+                         variant="ghost"
+                         size="sm"
++                        data-ui-role="disclosure"
++                        aria-expanded={isAdvancedOpen}
+                         className="text-muted-foreground hover:text-foreground h-auto w-full justify-between px-0 py-0.5 text-xs font-medium tracking-wide uppercase"
+                         onClick={() => onAdvancedOpenChange(!isAdvancedOpen)}
+                     >
+diff --git a/src/components/tile/TileShell.tsx b/src/components/tile/TileShell.tsx
+index c5a8ba324..a5e517f5a 100644
+--- a/src/components/tile/TileShell.tsx
++++ b/src/components/tile/TileShell.tsx
+@@ -9,6 +9,8 @@ const TILE_SHELL_BASE =
+ const TILE_SHELL_SELECTED =
+     'border-object-selected-border bg-object-selected-surface ring-object-selected-border hover:border-object-selected-border hover:bg-object-selected-surface ring-2';
+ 
++const TILE_ROLE_ATTRIBUTES = { 'data-ui-role': 'tile' } as const;
++
+ export function TileShell({
+     selected = false,
+     className,
+@@ -21,6 +23,7 @@ export function TileShell({
+         render,
+         props: mergeProps<'div'>(
+             {
++                ...TILE_ROLE_ATTRIBUTES,
+                 className: cn(
+                     TILE_SHELL_BASE,
+                     selected && TILE_SHELL_SELECTED,
+diff --git a/src/features/my-avatars/ManageAvatarTagsDialog.tsx b/src/features/my-avatars/ManageAvatarTagsDialog.tsx
+index ffdcdebd1..7dcdcae88 100644
+--- a/src/features/my-avatars/ManageAvatarTagsDialog.tsx
++++ b/src/features/my-avatars/ManageAvatarTagsDialog.tsx
+@@ -236,6 +236,7 @@ export function ManageAvatarTagsDialog({
+                                                                             ? 'ring-ring size-6 p-0 ring-2 ring-offset-2'
+                                                                             : 'size-6 p-0'
+                                                                     }
++                                                                    data-ui-role="color-swatch"
+                                                                     style={{
+                                                                         backgroundColor:
+                                                                             color.bg.replace(

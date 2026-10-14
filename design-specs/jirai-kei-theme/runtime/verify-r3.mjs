@@ -1,0 +1,52 @@
+/* R3 real primitive/compiled CSS fixture. NOT Windows/WebView acceptance. */
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import {chromium} from '/tmp/dsh-theme-tools/node_modules/playwright/index.mjs';
+const here=path.dirname(fileURLToPath(import.meta.url)),app='/home/fulutang/Documents/Github/VRCX-0-jirai';
+const req=createRequire(app+'/package.json'),React=req('react'),{renderToStaticMarkup}=req('react-dom/server');
+const {Tooltip}=req('@base-ui/react/tooltip'),{Button}=req('@base-ui/react/button');
+const {MinusIcon,SquareIcon,CopyIcon,XIcon}=req('lucide-react');
+function AppButton(props){return React.createElement(Button,{'data-slot':'button','data-variant':'ghost','data-size':'icon-sm',...props});}
+const control=(Icon,label,extra='')=>React.createElement(Tooltip.Root,{key:label},React.createElement(Tooltip.Trigger,{'data-slot':'tooltip-trigger',render:React.createElement(AppButton,{'aria-label':label,className:'inline-flex items-center justify-center h-full w-9 rounded-none border-0 text-muted-foreground '+extra},React.createElement(Icon,{'data-icon':'inline-start',className:Icon===SquareIcon?'size-3':undefined}))}));
+const chrome=renderToStaticMarkup(React.createElement(Tooltip.Provider,null,React.createElement('header',{'data-app-titlebar':true,'data-vrcx-0-surface':'titlebar',className:'vrcx-0-titlebar flex h-8 shrink-0 items-center border-b'},React.createElement('span',{className:'px-4'},'DOM FIXTURE / NOT WINDOWS'),React.createElement('div',{className:'ml-auto flex h-full shrink-0 items-center'},control(MinusIcon,'Minimize'),control(SquareIcon,'Maximize'),control(XIcon,'Close','hover:bg-destructive! hover:text-destructive-foreground!')))));
+let html=await fs.readFile(path.join(here,'checks/source-hooks-fixture.html'),'utf8');
+html=html.replace('<div class="vrcx-0-titlebar px-4" style="height:32px">DOM FIXTURE / NOT WINDOWS</div>',chrome);
+html=html.replaceAll('<div style="height:38px">','<div data-group-row>');
+html=html.replaceAll('<div data-slot="collapsible">','<div data-slot="collapsible" class="pt-2">');
+html=html.replace('<div data-slot="collapsible" class="pt-2">','<div data-slot="collapsible">');
+html=html.replace('<div class="vrcx-0-statusbar px-3" style="height:26px">状态栏</div>','<footer data-vrcx-0-surface="statusbar" class="vrcx-0-statusbar px-3 flex items-center gap-2" style="height:26px"><span class="inline-block size-2 rounded-full" style="background-color:#2ed319"></span><span class="text-content-tertiary">服务端状态</span><span class="text-content-tertiary/55">STEAMVR</span><span class="text-muted-foreground">缩放 100</span></footer>');
+html=html.replace('Sticky action surface probe','<span id="body-probe" class="font-sans text-sm">雪之夏萌心 二階堂アコ 冷風 皮卡丘</span><code id="code-probe">const value = 42;</code><pre id="bio-probe" class="font-sans text-sm">用户简介保留普通排版</pre><div id="json-probe" class="entity-json-view">{"key": "value"}</div>');
+const file=path.join(here,'checks/r3-source-fixture.html');await fs.writeFile(file,html);
+const css=await fs.readFile(path.join(here,'preview-package/jirai-kei-theme/theme.css'),'utf8');
+const browser=await chromium.launch();const page=await browser.newPage({viewport:{width:1387,height:1068}});
+await page.goto('file://'+file);
+const baseline=await page.evaluate(()=>{const e=document.querySelector('#body-probe'),c=getComputedStyle(e);return {size:c.fontSize,line:c.lineHeight,buttonHeight:document.querySelector('button.w-9').getBoundingClientRect().height};});
+await page.addStyleTag({content:css});await page.evaluate(async()=>{await document.fonts.load('14px "WD Pixel CJK"','雪之夏萌心二階堂アコ冷風皮卡丘');await document.fonts.load('12px "WD Pixel"');await document.fonts.ready;});
+const result=await page.evaluate(()=>{
+ const q=s=>document.querySelector(s),c=(s,p)=>getComputedStyle(q(s)).getPropertyValue(p);
+ const bar=q('.vrcx-0-titlebar'),footer=q('.vrcx-0-statusbar'),wave=getComputedStyle(footer,'::before');
+ const buttons=[...bar.querySelectorAll('button.w-9')].map(e=>{const r=e.getBoundingClientRect(),v=e.querySelector('svg'),s=getComputedStyle(v),cs=getComputedStyle(e);return {label:e.getAttribute('aria-label'),slot:e.dataset.slot,width:r.width,height:r.height,border:cs.borderTopWidth,bevel:cs.boxShadow,bg:cs.backgroundColor,svgWidth:s.width,svgHeight:s.height,mask:s.maskImage!=='none',hit:document.elementFromPoint(r.x+r.width/2,r.y+r.height/2)?.closest('button')===e};});
+ const groups=[...document.querySelectorAll('[data-group-row]')].map(e=>{const root=e.querySelector('[data-slot="collapsible"]'),b=root.querySelector('button');return {height:e.getBoundingClientRect().height,paddingBottom:getComputedStyle(root).paddingBottom,buttonHeight:b.getBoundingClientRect().height};});
+ const text=getComputedStyle(q('#body-probe'));
+ return {fixtureOnly:true,buttons,groups,titlePink:c('.vrcx-0-titlebar','background-color'),footerPink:c('.vrcx-0-statusbar','background-color'),footerImage:c('.vrcx-0-statusbar','background-image'),footerMargin:c('.vrcx-0-statusbar','margin-top'),footerSecondary:c('.vrcx-0-statusbar .text-muted-foreground','color'),dotFill:c('.vrcx-0-statusbar .size-2','background-color'),wave:{height:wave.height,bottom:wave.bottom,transform:wave.transform,mask:wave.maskImage!=='none',pointer:wave.pointerEvents},duplicateHeading:getComputedStyle(q('.vrcx-0-page-scaffold'),'::before').content,bodyFont:text.fontFamily,bodySize:text.fontSize,bodyLine:text.lineHeight,bioFont:c('#bio-probe','font-family'),codeFont:c('#code-probe','font-family'),jsonFont:c('#json-probe','font-family'),faces:[...document.fonts].map(f=>({family:f.family,status:f.status}))};
+});
+const assert=(v,m)=>{if(!v)throw Error(m+'\n'+JSON.stringify(result,null,2));};
+assert(result.buttons.length===3&&result.buttons.every(b=>b.slot==='tooltip-trigger'&&b.width===36&&b.height===baseline.buttonHeight&&b.border==='1px'&&b.bevel!=='none'&&b.svgWidth==='16px'&&b.mask&&b.hit),'Window primitive/paint regression');
+assert(result.titlePink==='rgb(217, 127, 198)'&&result.footerPink===result.titlePink&&result.footerImage==='none','Pink real bars regression');
+assert(result.footerMargin==='8px'&&result.wave.height==='8px'&&result.wave.mask&&result.wave.pointer==='none'&&result.wave.transform==='matrix(1, 0, 0, -1, 0, 0)','Upward lace clearance regression');
+assert(['none','normal'].includes(result.duplicateHeading),'Duplicate view heading persists');
+assert(result.groups.every(g=>g.paddingBottom==='10px'&&g.buttonHeight===28)&&result.groups[0].height===38&&result.groups.slice(1).every(g=>g.height===46),'Measured group spacing regression');
+assert(result.bodyFont.includes('WD Pixel')&&result.bioFont.includes('WD Pixel')&&!result.codeFont.includes('WD Pixel')&&!result.jsonFont.includes('WD Pixel'),'Body/mono scope regression');
+assert(result.bodySize===baseline.size&&result.bodyLine===baseline.line,'Typography size/line changed');
+assert(result.dotFill==='rgb(46, 211, 25)','Semantic dot recolored');
+/* Package preview must use neutral text, never the user's actual friend names. */
+await page.evaluate(()=>{document.querySelector('#body-probe').textContent='像素文字示例 あいうえお カキクケコ';});
+await page.screenshot({path:path.join(here,'checks/r3-source-main.png')});
+const copy=renderToStaticMarkup(React.createElement(CopyIcon,{'data-icon':'inline-start',className:'size-3'}));
+await page.evaluate(svg=>{document.querySelector('button[aria-label="Maximize"]').innerHTML=svg;},copy);
+const restored=await page.evaluate(()=>{const s=getComputedStyle(document.querySelector('button[aria-label="Maximize"] svg'));return {width:s.width,mask:s.maskImage!=='none'};});assert(restored.width==='16px'&&restored.mask,'Restore glyph regression');
+await page.hover('button[aria-label="Close"]');const closeHover=await page.evaluate(()=>{const c=getComputedStyle(document.querySelector('button[aria-label="Close"]'));return {background:c.backgroundColor,color:c.color};});
+result.restored=restored;result.closeHover=closeHover;result.cssBytes=Buffer.byteLength(css);assert(result.cssBytes<=1048576,'CSS over limit');
+await fs.writeFile(path.join(here,'checks/r3-report.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));await browser.close();

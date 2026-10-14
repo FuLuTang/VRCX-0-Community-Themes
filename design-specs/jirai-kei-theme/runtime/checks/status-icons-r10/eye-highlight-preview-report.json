@@ -1,0 +1,175 @@
+{
+  "result": "PASS",
+  "method": "Actual W320 fixture; capture F09 dim and F11 bright at DPR1, 25x20 CSS-pixel character crop, nearest-neighbour 8x enlargement.",
+  "highlightCells": [
+    [
+      9,
+      12
+    ],
+    [
+      14,
+      12
+    ]
+  ],
+  "candidates": {
+    "currentDimAlpha": 255,
+    "h1DimAlpha": 128,
+    "h2DimAlpha": 96,
+    "brightAlpha": 255,
+    "color": "#f8fcff"
+  },
+  "measuredScreenCellColors": {
+    "current": {
+      "dim": {
+        "9,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        },
+        "14,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        }
+      },
+      "bright": {
+        "9,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        },
+        "14,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        }
+      }
+    },
+    "h1": {
+      "dim": {
+        "9,12": {
+          "rgba": [
+            175,
+            183,
+            213,
+            255
+          ],
+          "hex": "#afb7d5"
+        },
+        "14,12": {
+          "rgba": [
+            175,
+            183,
+            213,
+            255
+          ],
+          "hex": "#afb7d5"
+        }
+      },
+      "bright": {
+        "9,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        },
+        "14,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        }
+      }
+    },
+    "h2": {
+      "dim": {
+        "9,12": {
+          "rgba": [
+            157,
+            167,
+            202,
+            255
+          ],
+          "hex": "#9da7ca"
+        },
+        "14,12": {
+          "rgba": [
+            157,
+            167,
+            202,
+            255
+          ],
+          "hex": "#9da7ca"
+        }
+      },
+      "bright": {
+        "9,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        },
+        "14,12": {
+          "rgba": [
+            248,
+            252,
+            255,
+            255
+          ],
+          "hex": "#f8fcff"
+        }
+      }
+    }
+  },
+  "images": [
+    {
+      "file": "eye-highlight-h1-8x.png",
+      "width": 412,
+      "height": 184,
+      "bytes": 6182
+    },
+    {
+      "file": "eye-highlight-h2-8x.png",
+      "width": 412,
+      "height": 184,
+      "bytes": 6199
+    },
+    {
+      "file": "eye-highlight-compare-8x.png",
+      "width": 1260,
+      "height": 184,
+      "bytes": 14279
+    },
+    {
+      "file": "eye-highlight-face-16x.png",
+      "width": 1116,
+      "height": 136,
+      "bytes": 10545
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R10 toast sprites — local CSS fixture</title>
+  <link rel="stylesheet" href="file:///home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css">
+  <link rel="stylesheet" href="file:///home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/App-C2mIqNXI.css">
+  <link rel="stylesheet" href="../../preview-package/jirai-kei-theme/theme.css">
+  <link rel="stylesheet" href="./social-phone-layers-audit.css">
+  <style>
+    html, body { width:1440px; height:900px; margin:0; overflow:hidden; }
+    body { background:#16112a; }
+    .fixture-window { display:flex; flex-direction:column; width:100%; height:100%; overflow:hidden; }
+    .fixture-titlebar { box-sizing:border-box; display:flex; align-items:center; height:32px; flex:none; padding:0 16px; color:#f2ebff; background:#211a33; border-bottom:1px solid #6c5ce0; }
+    .fixture-workspace { display:flex; flex:1; min-height:0; overflow:hidden; }
+    .fixture-nav { box-sizing:border-box; flex:none; width:220px; padding:24px 14px; color:#d6c8e6; background:#201936; border-right:1px solid #4a3784; }
+    .fixture-nav > div { padding:8px 10px; margin-bottom:6px; }
+    .fixture-main { box-sizing:border-box; flex:1; min-width:0; padding:24px; color:#f2ebff; background:#16112a; }
+    .fixture-main h1 { margin:0 0 16px; font-size:18px; }
+    .fixture-main p { max-width:540px; color:#d6c8e6; line-height:1.6; }
+    .fixture-table { margin-top:24px; border:1px solid #4a3784; background:#201936; }
+    .fixture-table > div { padding:12px 14px; border-bottom:1px solid #332650; }
+    .fixture-side { box-sizing:border-box; display:flex; flex:none; flex-direction:column; width:320px; min-width:240px; min-height:0; overflow:hidden; }
+    .fixture-side-self { box-sizing:border-box; display:flex; align-items:center; flex:none; height:70px; padding:12px 14px; color:#f2ebff; border-bottom:1px solid #332650; }
+    .fixture-avatar { display:grid; place-items:center; width:36px; height:36px; margin-right:10px; color:#21132d; background:#ff7fcf; border:2px solid #6c5ce0; }
+    .fixture-side-body { display:flex; flex:1; min-height:0; overflow:hidden; }
+    .fixture-side-list { flex:1; min-width:0; padding:10px; overflow:hidden; }
+    .fixture-side-list > div { padding:8px 6px; border-bottom:1px solid #332650; color:#d6c8e6; }
+    .fixture-side-rail { box-sizing:border-box; display:flex; flex:none; width:36px; flex-direction:column; align-items:center; gap:4px; padding:8px 2px; border-left:1px solid #332650; }
+    .fixture-side-rail span { display:grid; place-items:center; width:28px; height:28px; color:#d6c8e6; border:1px solid #4a3784; }
+    .fixture-toasts { position:absolute; top:64px; right:340px; z-index:1000; width:360px; }
+    .fixture-toasts[data-compact] { width:288px; }
+    .fixture-toasts [data-slot="toast-viewport"] { display:flex; width:100%; flex-direction:column; gap:12px; }
+    .fixture-toast { position:relative !important; inset:auto !important; width:100% !important; height:auto !important; transform:none !important; }
+    .fixture-tooltip-probe { position:fixed; left:-10000px; top:0; visibility:hidden; }
+  </style>
+</head>
+<body>
+  <div class="vrcx-0-app-root fixture-window">
+    <div class="vrcx-0-titlebar fixture-titlebar" data-app-titlebar>LOCAL CSS FIXTURE · NOT WINDOWS</div>
+    <div class="fixture-workspace">
+      <nav class="fixture-nav" aria-label="Primary navigation">
+        <div>好友动态</div><div>好友位置</div><div>游戏日志</div><div>搜索</div><div>设置</div>
+      </nav>
+      <main class="vrcx-0-main-content fixture-main">
+        <h1>好友动态</h1>
+        <p>CSS-only 本地预览：成功/错误 toast 静态换图；SOCIAL 运行 task-59 分层动画框架占位（素材未接入，也不进生产 CSS）。</p>
+        <div class="fixture-table"><div>示例好友　在线状态更新</div><div>示例好友　收藏列表同步</div><div>示例好友　活动记录</div></div>
+      </main>
+      <aside class="vrcx-0-side-panel fixture-side" data-vrcx-0-surface="side-panel">
+        <div class="vrcx-0-side-panel-self fixture-side-self">
+          <span class="fixture-avatar" aria-hidden="true">A</span><span>示例用户　在线</span>
+        </div>
+        <div class="fixture-side-body">
+          <div class="fixture-side-list"><div>好友筛选</div><div>在线 12</div><div>同一世界 3</div><div>最爱好友 5</div></div>
+          <div class="vrcx-0-side-panel-rail fixture-side-rail"><span>＋</span><span>⚙</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div data-slot="toast-portal" class="fixture-toasts">
+    <div data-slot="toast-viewport" data-position="top-right">
+      <div class="fixture-toast" data-type="success" data-position="top-right" data-expanded>
+        <div class="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm" data-slot="toast-content">
+          <div class="flex min-w-0 flex-1 gap-2">
+            <div class="shrink-0 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&>svg]:h-lh [&>svg]:w-4" data-slot="toast-icon">
+              <svg class="size-4 text-[var(--status-online)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div class="flex min-w-0 flex-col gap-0.5"><div class="font-medium" data-slot="toast-title">已保存到收藏</div><div class="text-muted-foreground" data-slot="toast-description">更改已同步。</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="fixture-toast" data-type="error" data-position="top-right" data-expanded>
+        <div class="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm" data-slot="toast-content">
+          <div class="flex min-w-0 flex-1 gap-2">
+            <div class="shrink-0 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&>svg]:h-lh [&>svg]:w-4" data-slot="toast-icon">
+              <svg class="size-4 text-destructive" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4m0 4h.01"></path></svg>
+            </div>
+            <div class="flex min-w-0 flex-col gap-0.5"><div class="font-medium" data-slot="toast-title">同步失败</div><div class="text-muted-foreground" data-slot="toast-description">同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。</div></div>
+          </div>
+          <button type="button" class="size-6 shrink-0" data-slot="toast-close" aria-label="关闭">×</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixture-tooltip-probe" data-slot="tooltip-content"><div class="rotate-45"></div>Tooltip probe</div>
+
+</body>
+</html>

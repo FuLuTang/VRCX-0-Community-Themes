@@ -1,0 +1,121 @@
+/* ==== R10 exclusion-migration, stage 1: gap A (Base UI/native checkbox in .entity-dialog) + gap D (fallback for native-checkbox,
+   native-range and Base UI slider in login-page / entity-dialog). Additive; declarations are copies of the generic rules above.
+   Context rules that already exist (login-r8 .. , user-dialog-r8 entity range) keep winning by specificity.
+   Superseded (and removed again) when stage 3 drops the exclusions. ==== */
+:where(.entity-dialog) :is([data-slot="checkbox"],input[type="checkbox"]),
+:where([data-vrcx-0-surface="login-page"]) :is([data-slot="checkbox"],input[type="checkbox"]) {
+  appearance:none;
+  -webkit-appearance:none;
+  position:relative;
+  width:14px;
+  height:14px;
+  min-width:14px;
+  min-height:14px;
+  flex:none;
+  border:1px solid #8c71b0;
+  border-radius:0;
+  background:#211a33;
+  color:#16112a;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+  accent-color:#ffb8e6;
+}
+:where(.entity-dialog) :is([data-slot="checkbox"],input[type="checkbox"]):is([data-checked],[aria-checked="true"],:checked),
+:where([data-vrcx-0-surface="login-page"]) :is([data-slot="checkbox"],input[type="checkbox"]):is([data-checked],[aria-checked="true"],:checked) {
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}
+:where(.entity-dialog) [data-slot="checkbox"][data-checked]::after,
+:where(.entity-dialog) input[type="checkbox"]:checked::after,
+:where([data-vrcx-0-surface="login-page"]) [data-slot="checkbox"][data-checked]::after,
+:where([data-vrcx-0-surface="login-page"]) input[type="checkbox"]:checked::after {
+  content:"";
+  position:absolute;
+  left:4px;
+  top:2px;
+  width:4px;
+  height:7px;
+  border:solid #16112a;
+  border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+:where(.entity-dialog) [data-slot="checkbox"] > [data-slot="checkbox-indicator"],
+:where([data-vrcx-0-surface="login-page"]) [data-slot="checkbox"] > [data-slot="checkbox-indicator"] {
+  display:none;
+}
+:where(.entity-dialog) :is([data-slot="checkbox"],input[type="checkbox"]):focus-visible,
+:where([data-vrcx-0-surface="login-page"]) :is([data-slot="checkbox"],input[type="checkbox"]):focus-visible {
+  outline:2px solid #ff7fcf;
+  outline-offset:2px;
+}
+:where([data-vrcx-0-surface="login-page"]) input[type="range"] {
+  appearance:none;
+  -webkit-appearance:none;
+  height:18px;
+  margin:0;
+  background:transparent;
+  accent-color:#ffb8e6;
+  cursor:pointer;
+}
+:where([data-vrcx-0-surface="login-page"]) input[type="range"]::-webkit-slider-runnable-track {
+  height:6px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+  box-shadow:inset 1px 1px #16112a;
+}
+:where([data-vrcx-0-surface="login-page"]) input[type="range"]::-webkit-slider-thumb {
+  appearance:none;
+  -webkit-appearance:none;
+  width:12px;
+  height:12px;
+  margin-top:-3px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+}
+:where([data-vrcx-0-surface="login-page"]) input[type="range"]::-moz-range-track {
+  height:4px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+}
+:where([data-vrcx-0-surface="login-page"]) input[type="range"]::-moz-range-thumb {
+  width:10px;
+  height:10px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+}
+:where([data-vrcx-0-surface="login-page"]) input[type="range"]:focus-visible {
+  outline:2px solid #ff7fcf;
+  outline-offset:2px;
+}
+:where(.entity-dialog) [data-slot="slider-track"],
+:where([data-vrcx-0-surface="login-page"]) [data-slot="slider-track"] {
+  height:6px!important;
+  border:1px solid #6c5ce0;
+  border-radius:0!important;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px)!important;
+  box-shadow:inset 1px 1px #16112a;
+}
+:where(.entity-dialog) [data-slot="slider-range"],
+:where([data-vrcx-0-surface="login-page"]) [data-slot="slider-range"] {
+  background:repeating-linear-gradient(90deg,#ffb8e6 0 3px,#f37fc4 3px 5px)!important;
+}
+:where(.entity-dialog) [data-slot="slider-thumb"],
+:where([data-vrcx-0-surface="login-page"]) [data-slot="slider-thumb"] {
+  width:12px!important;
+  height:12px!important;
+  border:1px solid #6c5ce0!important;
+  border-radius:0!important;
+  background:#ffb8e6!important;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c!important;
+}
+:where(.entity-dialog) [data-slot="slider"]:focus-visible [data-slot="slider-thumb"],
+:where([data-vrcx-0-surface="login-page"]) [data-slot="slider"]:focus-visible [data-slot="slider-thumb"] {
+  outline:2px solid #ff7fcf;
+  outline-offset:2px;
+}

@@ -1,0 +1,75 @@
+{
+  "sourceEvidence": {
+    "legacyHeart": "original-assets/src/s7-heart-12x12.svg (12x12 smooth cubic Bezier silhouette; existing CSS colors its mask #16112a)",
+    "pixelStyleReference": "original-assets/r5/src/heart.svg (1-cell crisp grid; source colors rgb(52,49,106), rgb(244,183,217), rgb(248,240,250))",
+    "titlebarHex": "#d97fc6",
+    "darkWindowHex": "#201936"
+  },
+  "palette": {
+    "outline": {
+      "hex": "#34316a",
+      "contrastOnPinkTitlebar": 4.35,
+      "contrastOnDarkWindow": 1.43
+    },
+    "body": {
+      "hex": "#ffb8e6",
+      "contrastOnPinkTitlebar": 1.7,
+      "contrastOnDarkWindow": 10.57
+    },
+    "highlight": {
+      "hex": "#fdf4ff",
+      "contrastOnPinkTitlebar": 2.51,
+      "contrastOnDarkWindow": 15.6
+    }
+  },
+  "titlebar": {
+    "hex": "#d97fc6",
+    "contrastAgainstItself": 1
+  },
+  "darkWindow": {
+    "hex": "#201936",
+    "contrastAgainstItself": 1
+  },
+  "variants": {
+    "5": {
+      "cssDisplayPx": "5px",
+      "viewBox": "5x5",
+      "occupiedPixels": 16,
+      "onePixelOutlineCells": 10,
+      "independentGrid": true
+    },
+    "7": {
+      "cssDisplayPx": "7px",
+      "viewBox": "7x7",
+      "occupiedPixels": 33,
+      "onePixelOutlineCells": 18,
+      "independentGrid": true
+    },
+    "9": {
+      "cssDisplayPx": "9px",
+      "viewBox": "9x9",
+      "occupiedPixels": 55,
+      "onePixelOutlineCells": 22,
+      "independentGrid": true
+    }
+  },
+  "note": "Decorative icon, not text: #34316a outline contrasts 4.35:1 on the pink title bar (above 3:1 non-text threshold); pink fill and highlight carry silhouette contrast on dark #201936.",
+  "outputs": {
+    "cssVariableBundle": "heart-assets-r9.css",
+    "comparisonOnPink": {
+      "file": "comparison-pink.png",
+      "width": 566,
+      "height": 304
+    },
+    "comparisonOnDark": {
+      "file": "comparison-dark.png",
+      "width": 566,
+      "height": 304
+    },
+    "nativeDisplaySizes": {
+      "file": "native-sizes.png",
+      "width": 834,
+      "height": 218
+    }
+  }
+}

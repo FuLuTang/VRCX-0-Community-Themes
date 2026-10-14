@@ -1,0 +1,1201 @@
+{
+  "sourceTheme": "pre-task55 preview-package",
+  "results": {
+    "320-360": {
+      "panel": {
+        "rect": {
+          "x": 1120,
+          "y": 32,
+          "width": 320,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 189,
+          "backgroundImageLayers": 2,
+          "backgroundPosition": "1px 6px, 24px 4px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "toastViewport": {
+        "x": 740,
+        "y": 64,
+        "width": 360,
+        "height": 188,
+        "right": 1100,
+        "bottom": 252
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 740,
+            "y": 64,
+            "width": 360,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 65,
+            "width": 355,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 77,
+              "width": 16,
+              "height": 42,
+              "right": 774,
+              "bottom": 119
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 758,
+              "y": 77,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 97
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 782,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 866,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 782,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 866,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 782,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 866,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 740,
+            "y": 144,
+            "width": 360,
+            "height": 108,
+            "right": 1100,
+            "bottom": 252
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 145,
+            "width": 355,
+            "height": 106,
+            "right": 1099,
+            "bottom": 251
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 157,
+              "width": 16,
+              "height": 82,
+              "right": 774,
+              "bottom": 239
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 758,
+              "y": 157,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 177
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 782,
+              "y": 157,
+              "width": 273,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 782,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 838,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 273,
+            "clientWidth": 273,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 782,
+              "y": 179,
+              "width": 273,
+              "height": 60,
+              "right": 1055,
+              "bottom": 239
+            },
+            "lineCount": 3,
+            "lineHeight": "20px",
+            "scrollWidth": 273,
+            "clientWidth": 273,
+            "scrollHeight": 60,
+            "clientHeight": 60
+          },
+          "close": {
+            "x": 1061,
+            "y": 186,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 210
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "320-288": {
+      "panel": {
+        "rect": {
+          "x": 1120,
+          "y": 32,
+          "width": 320,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 189,
+          "backgroundImageLayers": 2,
+          "backgroundPosition": "0px 5px, 25px 4px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "toastViewport": {
+        "x": 812,
+        "y": 64,
+        "width": 288,
+        "height": 208,
+        "right": 1100,
+        "bottom": 272
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 812,
+            "y": 64,
+            "width": 288,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 65,
+            "width": 283,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 77,
+              "width": 16,
+              "height": 42,
+              "right": 846,
+              "bottom": 119
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 830,
+              "y": 77,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 97
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 854,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 938,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 854,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 938,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 854,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 938,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 812,
+            "y": 144,
+            "width": 288,
+            "height": 128,
+            "right": 1100,
+            "bottom": 272
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 126,
+            "clientHeight": 126,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 145,
+            "width": 283,
+            "height": 126,
+            "right": 1099,
+            "bottom": 271
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 126,
+            "clientHeight": 126,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 157,
+              "width": 16,
+              "height": 102,
+              "right": 846,
+              "bottom": 259
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 830,
+              "y": 157,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 177
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 854,
+              "y": 157,
+              "width": 201,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 854,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 910,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 201,
+            "clientWidth": 201,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 854,
+              "y": 179,
+              "width": 201,
+              "height": 80,
+              "right": 1055,
+              "bottom": 259
+            },
+            "lineCount": 4,
+            "lineHeight": "20px",
+            "scrollWidth": 201,
+            "clientWidth": 201,
+            "scrollHeight": 80,
+            "clientHeight": 80
+          },
+          "close": {
+            "x": 1061,
+            "y": 196,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 220
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "240-360": {
+      "panel": {
+        "rect": {
+          "x": 1200,
+          "y": 32,
+          "width": 240,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 109,
+          "backgroundImageLayers": 2,
+          "backgroundPosition": "1px 6px, 24px 4px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "toastViewport": {
+        "x": 740,
+        "y": 64,
+        "width": 360,
+        "height": 188,
+        "right": 1100,
+        "bottom": 252
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 740,
+            "y": 64,
+            "width": 360,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 65,
+            "width": 355,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 77,
+              "width": 16,
+              "height": 42,
+              "right": 774,
+              "bottom": 119
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 758,
+              "y": 77,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 97
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 782,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 866,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 782,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 866,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 782,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 866,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 740,
+            "y": 144,
+            "width": 360,
+            "height": 108,
+            "right": 1100,
+            "bottom": 252
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 145,
+            "width": 355,
+            "height": 106,
+            "right": 1099,
+            "bottom": 251
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 157,
+              "width": 16,
+              "height": 82,
+              "right": 774,
+              "bottom": 239
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 758,
+              "y": 157,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 177
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 782,
+              "y": 157,
+              "width": 273,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 782,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 838,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 273,
+            "clientWidth": 273,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 782,
+              "y": 179,
+              "width": 273,
+              "height": 60,
+              "right": 1055,
+              "bottom": 239
+            },
+            "lineCount": 3,
+            "lineHeight": "20px",
+            "scrollWidth": 273,
+            "clientWidth": 273,
+            "scrollHeight": 60,
+            "clientHeight": 60
+          },
+          "close": {
+            "x": 1061,
+            "y": 186,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 210
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "240-288": {
+      "panel": {
+        "rect": {
+          "x": 1200,
+          "y": 32,
+          "width": 240,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 109,
+          "backgroundImageLayers": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "toastViewport": {
+        "x": 812,
+        "y": 64,
+        "width": 288,
+        "height": 208,
+        "right": 1100,
+        "bottom": 272
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 812,
+            "y": 64,
+            "width": 288,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 65,
+            "width": 283,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 77,
+              "width": 16,
+              "height": 42,
+              "right": 846,
+              "bottom": 119
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 830,
+              "y": 77,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 97
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 854,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 938,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 854,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 938,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 854,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 938,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 812,
+            "y": 144,
+            "width": 288,
+            "height": 128,
+            "right": 1100,
+            "bottom": 272
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 126,
+            "clientHeight": 126,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 145,
+            "width": 283,
+            "height": 126,
+            "right": 1099,
+            "bottom": 271
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 126,
+            "clientHeight": 126,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 157,
+              "width": 16,
+              "height": 102,
+              "right": 846,
+              "bottom": 259
+            },
+            "backgroundImage": "none",
+            "backgroundImageLayers": 0,
+            "backgroundSize": "auto",
+            "backgroundPosition": "0% 0%",
+            "imageRendering": "auto",
+            "display": "block",
+            "flexBasis": "auto",
+            "alignSelf": "auto",
+            "lineHeight": "20px",
+            "top": "auto",
+            "animationName": "none",
+            "svgOpacity": "1",
+            "svgRect": {
+              "x": 830,
+              "y": 157,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 177
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 854,
+              "y": 157,
+              "width": 201,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 854,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 910,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 201,
+            "clientWidth": 201,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 854,
+              "y": 179,
+              "width": 201,
+              "height": 80,
+              "right": 1055,
+              "bottom": 259
+            },
+            "lineCount": 4,
+            "lineHeight": "20px",
+            "scrollWidth": 201,
+            "clientWidth": 201,
+            "scrollHeight": 80,
+            "clientHeight": 80
+          },
+          "close": {
+            "x": 1061,
+            "y": 196,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 220
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    }
+  }
+}

@@ -1,0 +1,1769 @@
+{
+ "bytes": 1789,
+ "counts": {
+  "A": 32,
+  "B": 41,
+  "D": 7
+ },
+ "failures": [],
+ "motion": {
+  "prefers-reduced-motion": {
+   "staticA": 35,
+   "staticB": 43,
+   "notStatic": [],
+   "runningProbeAnimations": 0
+  },
+  "html.reduce-effects": {
+   "staticA": 35,
+   "staticB": 43,
+   "notStatic": [],
+   "runningProbeAnimations": 0
+  }
+ },
+ "shots": [
+  {
+   "file": "before-keys.png",
+   "w": 1576,
+   "h": 372
+  },
+  {
+   "file": "after-keys.png",
+   "w": 1576,
+   "h": 372
+  },
+  {
+   "file": "before-a1.png",
+   "w": 1576,
+   "h": 1308
+  },
+  {
+   "file": "after-a1.png",
+   "w": 1576,
+   "h": 1308
+  },
+  {
+   "file": "before-a2.png",
+   "w": 1576,
+   "h": 1028
+  },
+  {
+   "file": "after-a2.png",
+   "w": 1576,
+   "h": 1028
+  },
+  {
+   "file": "before-bd.png",
+   "w": 1576,
+   "h": 1588
+  },
+  {
+   "file": "after-bd.png",
+   "w": 1576,
+   "h": 1588
+  },
+  {
+   "file": "keys-before-after.png"
+  },
+  {
+   "file": "dance-frames-2x.png"
+  }
+ ],
+ "results": [
+  {
+   "id": "A01",
+   "cat": "A",
+   "src": "app/routes.tsx:9 (router.tsx:114 AppShellRoute + routes.tsx:38 lazy page)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,463,362.5,210"
+   ],
+   "geomAfter": [
+    "24,463,362.5,210"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A02",
+   "cat": "A",
+   "src": "features/charts/RelationshipTimelinePage.tsx:18 (+TwoPersonRelationshipPage.tsx:18, MutualFriendsPage.tsx:17)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,463,362.5,210"
+   ],
+   "geomAfter": [
+    "420.5,463,362.5,210"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A03",
+   "cat": "A",
+   "src": "features/charts/RelationshipTimelinePageImpl.tsx:447",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,88,230.33,290",
+    "24,88,230.33,290"
+   ],
+   "geomAfter": [
+    "24,88,230.33,290",
+    "24,88,230.33,290"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A04",
+   "cat": "A",
+   "src": "features/charts/TwoPersonRelationshipPageImpl.tsx:628",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "24pxx24px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "grow",
+   "geomBefore": [
+    "288.33,188,230.33,24"
+   ],
+   "geomAfter": [
+    "288.33,188,230.33,72"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A05",
+   "cat": "A",
+   "src": "features/instance-history/InstanceHistoryPage.tsx:900",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,816,362.5,230",
+    "24,816,362.5,230"
+   ],
+   "geomAfter": [
+    "24,816,362.5,230",
+    "24,816,362.5,230"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A06",
+   "cat": "A",
+   "src": "features/feed/FeedPage.tsx:87",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,816,362.5,210"
+   ],
+   "geomAfter": [
+    "420.5,816,362.5,210"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A07",
+   "cat": "A",
+   "src": "features/feed/columns/FeedColumnPane.tsx:352",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "817,816,362.5,210"
+   ],
+   "geomAfter": [
+    "817,816,362.5,210"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A08",
+   "cat": "A",
+   "src": "features/tools/VrchatLogPage.tsx:119",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,816,362.5,210"
+   ],
+   "geomAfter": [
+    "1213.5,816,362.5,210"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A09",
+   "cat": "A",
+   "src": "features/feed/components/FeedTableShell.tsx:148",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,1109,362.5,96",
+    "24,1109,362.5,96"
+   ],
+   "geomAfter": [
+    "24,1109,362.5,96",
+    "24,1109,362.5,96"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A10",
+   "cat": "A",
+   "src": "features/feed/components/FeedVirtualListShell.tsx:344 (via components/data-table/VirtualHistoryList.tsx:186)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,1109,362.5,96"
+   ],
+   "geomAfter": [
+    "420.5,1109,362.5,96"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A11",
+   "cat": "A",
+   "src": "features/dashboard/components/DashboardEmbeddedPagePanel.tsx:13",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "817,1109,362.5,220"
+   ],
+   "geomAfter": [
+    "817,1109,362.5,220"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A12",
+   "cat": "A",
+   "src": "features/dashboard/components/widgets/DashboardInstanceWidget.tsx:632 (+DashboardGameLogWidget.tsx:477, DashboardFeedWidget.tsx:462)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,1109,362.5,180"
+   ],
+   "geomAfter": [
+    "1213.5,1109,362.5,180"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A13",
+   "cat": "A",
+   "src": "components/layout/PageScaffold.tsx:258 LoadingState page/panel (21 call sites, see inventory)",
+   "before": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "552.66,88,230.33,288"
+   ],
+   "geomAfter": [
+    "552.66,88,230.33,288"
+   ],
+   "r9Before": true
+  },
+  {
+   "id": "A14",
+   "cat": "A",
+   "src": "components/dialogs/ProfileMediaPanel.tsx:177 (+UserDialogProfileDecorationsPanel.tsx:138 min-h-48)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,1402,362.5,192"
+   ],
+   "geomAfter": [
+    "420.5,1402,362.5,192"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A15",
+   "cat": "A",
+   "src": "components/dialogs/avatar-dialog/components/AvatarDialogPerformanceTab.tsx:275",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "817,1402,362.5,160"
+   ],
+   "geomAfter": [
+    "817,1402,362.5,160"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A16",
+   "cat": "A",
+   "src": "components/dialogs/avatar-dialog/components/AvatarDialogGalleryTab.tsx:70",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,1402,362.5,96"
+   ],
+   "geomAfter": [
+    "1213.5,1402,362.5,96"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A17",
+   "cat": "A",
+   "src": "components/dialogs/BoopEmojiDialog.tsx:277",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,1777,362.5,112"
+   ],
+   "geomAfter": [
+    "24,1777,362.5,112"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A18",
+   "cat": "A",
+   "src": "components/dialogs/UserActivityPanel.tsx:19",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,1777,362.5,192"
+   ],
+   "geomAfter": [
+    "420.5,1777,362.5,192"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A19",
+   "cat": "A",
+   "src": "components/dialogs/world-dialog/WorldDialogTabPanels.tsx:86",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "817,1777,362.5,128"
+   ],
+   "geomAfter": [
+    "817,1777,362.5,128"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A20",
+   "cat": "A",
+   "src": "components/dialogs/group-dialog/GroupListState.tsx:36",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,1777,362.5,128"
+   ],
+   "geomAfter": [
+    "1213.5,1777,362.5,128"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A21",
+   "cat": "A",
+   "src": "components/dialogs/user-dialog/components/UserDialogMutualGraphImpl.tsx:170",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,2022,362.5,190",
+    "24,2022,362.5,190"
+   ],
+   "geomAfter": [
+    "24,2022,362.5,190",
+    "24,2022,362.5,190"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A22",
+   "cat": "A",
+   "src": "components/dialogs/user-dialog/components/UserDialogDataTabs.tsx:583 (+UserDialogFeedTab.tsx:135)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,2022,362.5,208"
+   ],
+   "geomAfter": [
+    "420.5,2022,362.5,208"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A23",
+   "cat": "A",
+   "src": "components/dialogs/user-dialog/components/UserDialogEntityListState.tsx:46",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "817,2022,362.5,128"
+   ],
+   "geomAfter": [
+    "817,2022,362.5,128"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A24",
+   "cat": "A",
+   "src": "components/dialogs/user-dialog/components/UserDialogMutualGraph.tsx:18",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,2022,362.5,190",
+    "1213.5,2022,362.5,190"
+   ],
+   "geomAfter": [
+    "1213.5,2022,362.5,190",
+    "1213.5,2022,362.5,190"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A25",
+   "cat": "A",
+   "src": "components/dialogs/UserActivityPanelImpl.tsx:310",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "20pxx20px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,2283,362.5,190",
+    "24,2315,362.5,158"
+   ],
+   "geomAfter": [
+    "24,2283,362.5,190",
+    "24,2315,362.5,158"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A26",
+   "cat": "A",
+   "src": "components/hosts/system-dialogs/ChangelogDialog.tsx:238",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,2283,362.5,192"
+   ],
+   "geomAfter": [
+    "420.5,2283,362.5,192"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A27",
+   "cat": "A",
+   "src": "components/hosts/DialogHost.tsx:157",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "24pxx24px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "grow",
+   "geomBefore": [
+    "817,2315,362.5,24"
+   ],
+   "geomAfter": [
+    "817,2315,362.5,72"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A28",
+   "cat": "A",
+   "src": "components/media/FullscreenImageViewer.tsx:418",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "24pxx24px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,2283,362.5,190"
+   ],
+   "geomAfter": [
+    "1213.5,2283,362.5,190"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A29",
+   "cat": "A",
+   "src": "components/hosts/tools-dialogs/NoteExportDialog.tsx:604",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "20pxx20px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "column",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "24,2536,362.5,160"
+   ],
+   "geomAfter": [
+    "24,2536,362.5,160"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A30",
+   "cat": "A",
+   "src": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx:127",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "420.5,2536,362.5,72"
+   ],
+   "geomAfter": [
+    "420.5,2536,362.5,72"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A31",
+   "cat": "A",
+   "src": "components/media/ImageCropDialog.tsx:728",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "grow",
+   "geomBefore": [
+    "817,2536,362.5,34"
+   ],
+   "geomAfter": [
+    "817,2536,362.5,90"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "A32",
+   "cat": "A",
+   "src": "features/privacy-lock/PrivacyLockOverlay.tsx:65",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "jk-loader-dance",
+    "timing": "steps(11)",
+    "size": "56pxx72px",
+    "dir": "row",
+    "mask": "none"
+   },
+   "geom": "fixed",
+   "geomBefore": [
+    "1213.5,2536,362.5,190",
+    "1213.5,2536,362.5,190"
+   ],
+   "geomAfter": [
+    "1213.5,2536,362.5,190",
+    "1213.5,2536,362.5,190"
+   ],
+   "r9Before": false
+  },
+  {
+   "id": "B01",
+   "cat": "B",
+   "src": "components/dialogs/invite-message/InviteMessagePanel.tsx:419 (data-icon=inline-start, 49 sites: see inventory)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B02",
+   "cat": "B",
+   "src": "components/layout/ToolbarControls.tsx:421",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B03",
+   "cat": "B",
+   "src": "features/auth/components/LoginFormCard.tsx:171",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B04",
+   "cat": "B",
+   "src": "features/friends/components/FriendLogVirtualList.tsx:80 (+FeedVirtualListShell.tsx:329)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B05",
+   "cat": "B",
+   "src": "features/game-log/components/GameLogSessionsView.tsx:626",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B06",
+   "cat": "B",
+   "src": "components/media/ScreenshotThumbnailCard.tsx:250",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B07",
+   "cat": "B",
+   "src": "components/friends/FriendInstanceTimer.tsx:67",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B08",
+   "cat": "B",
+   "src": "components/sidebar/friends-sidebar/FriendsSidebarLocation.tsx:304 (+components/location/LocationDisplay.tsx:139)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B09",
+   "cat": "B",
+   "src": "features/friends/components/FriendsLocationsWorldSection.tsx:127",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B10",
+   "cat": "B",
+   "src": "components/tile/SelectableTile.tsx:104",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "20pxx20px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "20pxx20px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B11",
+   "cat": "B",
+   "src": "components/layout/SelectionActionBar.tsx:35",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B12",
+   "cat": "B",
+   "src": "features/activity/components/ActivityJourneyView.tsx:894",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B13",
+   "cat": "B",
+   "src": "features/feed/columns/FeedColumnPane.tsx:400",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B14",
+   "cat": "B",
+   "src": "features/feed/components/FeedSearchBox.tsx:139",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B15",
+   "cat": "B",
+   "src": "features/player-list/components/PlayerListColumns.tsx:118",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B16",
+   "cat": "B",
+   "src": "features/charts/components/mutual-friends/MutualFriendsStageOverlay.tsx:20",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B17",
+   "cat": "B",
+   "src": "features/charts/components/mutual-friends/MutualFriendsHud.tsx:184 (+MutualFriendsNodeCard.tsx:136)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B18",
+   "cat": "B",
+   "src": "features/settings/components/settings-tabs/AdvancedTroubleshootingGroup.tsx:88",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B19",
+   "cat": "B",
+   "src": "features/tools/vrchat-log/components/VrchatLogTable.tsx:116",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B20",
+   "cat": "B",
+   "src": "features/assistant/components/AssistantMessage.tsx:61",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B21",
+   "cat": "B",
+   "src": "components/dialogs/group-dialog/GroupDialogEvents.tsx:149 (+:247)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B22",
+   "cat": "B",
+   "src": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx:291",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B23",
+   "cat": "B",
+   "src": "components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx:218",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B24",
+   "cat": "B",
+   "src": "components/dialogs/user-dialog/components/UserActivityPanelSections.tsx:69",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B25",
+   "cat": "B",
+   "src": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx:909",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B26",
+   "cat": "B",
+   "src": "components/dialogs/user-dialog/components/UserDialogStatusDistribution.tsx:264",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "12pxx12px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B27",
+   "cat": "B",
+   "src": "components/dialogs/AvatarOwnerEditDialogs.tsx:382",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B28",
+   "cat": "B",
+   "src": "components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx:1012",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "14pxx14px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B29",
+   "cat": "B",
+   "src": "components/sidebar/side-panel/SidePanelSelfAccountMenu.tsx:141 (+friends-sidebar/AccountSwitcherPopover.tsx:119)",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B30",
+   "cat": "B",
+   "src": "components/hosts/LaunchDialogHost.tsx:168",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "20pxx20px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "20pxx20px",
+    "dir": "column",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B31",
+   "cat": "B",
+   "src": "features/tools/screenshotExportProgressToast.tsx:62",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B32",
+   "cat": "B",
+   "src": "features/notifications/components/NotificationFeed.tsx:138",
+   "before": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "r5-spinner-step",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": []
+  },
+  {
+   "id": "B33",
+   "cat": "B",
+   "src": "components/dialogs/group-dialog/GroupModerationTabPanel.tsx:398",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B34",
+   "cat": "B",
+   "src": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx:199 (+UserDialogGroupInviteDialog.tsx:242, MutualFriendsRelationsManager.tsx:162)",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B35",
+   "cat": "B",
+   "src": "components/hosts/system-dialogs/VRChatConfigDialog.tsx:564",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B36",
+   "cat": "B",
+   "src": "features/tools/components/ScreenshotGalleryView.tsx:568",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B37",
+   "cat": "B",
+   "src": "features/charts/RelationshipTimelinePageImpl.tsx:426 (+TwoPersonRelationshipPageImpl.tsx:600)",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B38",
+   "cat": "B",
+   "src": "components/hosts/system-dialogs/ProfileBackupDialogs.tsx:52 (+:62)",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "20pxx20px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "20pxx20px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B39",
+   "cat": "B",
+   "src": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx:305",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "12pxx12px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "12pxx12px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B40",
+   "cat": "B",
+   "src": "features/assistant/components/SessionSidebar.tsx:57",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "12pxx12px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "12pxx12px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "B41",
+   "cat": "B",
+   "src": "ui/shadcn/toast.tsx:25 (TOAST_ICON_CLASS in-data-[type=loading]:animate-spin)",
+   "before": {
+    "anim": "spin",
+    "timing": "linear",
+    "size": "16pxx20px"
+   },
+   "after": {
+    "anim": "spin",
+    "timing": "steps(8)",
+    "size": "16pxx20px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "changed": [
+    "animation-timing-function"
+   ]
+  },
+  {
+   "id": "D01",
+   "cat": "D",
+   "src": "features/charts/RelationshipTimelinePageImpl.tsx:426 idle",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  },
+  {
+   "id": "D02",
+   "cat": "D",
+   "src": "features/charts/TwoPersonRelationshipPageImpl.tsx:600 idle",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  },
+  {
+   "id": "D03",
+   "cat": "D",
+   "src": "MutualFriendsHud.tsx:184 idle",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  },
+  {
+   "id": "D04",
+   "cat": "D",
+   "src": "VRChatConfigDialog.tsx:564 idle",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  },
+  {
+   "id": "D05",
+   "cat": "D",
+   "src": "non-loading centred row with icon",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  },
+  {
+   "id": "D06",
+   "cat": "D",
+   "src": "components/layout/PageScaffold.tsx EmptyState with icon",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "24pxx24px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "24pxx24px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  },
+  {
+   "id": "D07",
+   "cat": "D",
+   "src": "input-group addon (div[data-slot] justify-center gap-2)",
+   "before": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px"
+   },
+   "after": {
+    "anim": "none",
+    "timing": "ease",
+    "size": "16pxx16px",
+    "dir": "row",
+    "mask": "url(\"data:im"
+   },
+   "unchanged": true
+  }
+ ]
+}

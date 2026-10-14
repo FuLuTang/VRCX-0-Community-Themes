@@ -1,0 +1,70 @@
+[
+ {
+  "prim": "badge",
+  "changed": 0
+ },
+ {
+  "prim": "base-checkbox",
+  "skip": "size differs 1068x1391 vs 1068x1383"
+ },
+ {
+  "prim": "base-slider",
+  "skip": "size differs 1068x1012 vs 1068x1016"
+ },
+ {
+  "prim": "button",
+  "changed": 0
+ },
+ {
+  "prim": "input-textarea",
+  "segments": 2,
+  "rows": 96,
+  "out": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/exclusion-migration/compare/input-textarea.png"
+ },
+ {
+  "prim": "kbd",
+  "segments": 2,
+  "rows": 40,
+  "out": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/exclusion-migration/compare/kbd.png"
+ },
+ {
+  "prim": "native-checkbox",
+  "skip": "size differs 1068x1503 vs 1068x1505"
+ },
+ {
+  "prim": "native-range",
+  "skip": "size differs 1068x1239 vs 1068x1241"
+ },
+ {
+  "prim": "progress",
+  "segments": 13,
+  "rows": 133,
+  "out": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/exclusion-migration/compare/progress.png"
+ },
+ {
+  "prim": "radio",
+  "segments": 21,
+  "rows": 423,
+  "out": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/exclusion-migration/compare/radio.png"
+ },
+ {
+  "prim": "select-trigger",
+  "segments": 5,
+  "rows": 88,
+  "out": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/exclusion-migration/compare/select-trigger.png"
+ },
+ {
+  "prim": "switch",
+  "changed": 0
+ },
+ {
+  "prim": "tabs-trigger",
+  "changed": 0
+ },
+ {
+  "prim": "toggle-group-item",
+  "segments": 1,
+  "rows": 22,
+  "out": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/exclusion-migration/compare/toggle-group-item.png"
+ }
+]

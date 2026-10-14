@@ -1,0 +1,281 @@
+{
+ "bytes": 2570,
+ "r9Strip": 30,
+ "asserts": {
+  "sameRowTop": true,
+  "headerOneRow": true,
+  "headerWasTwoRowsBefore": true,
+  "buttonSizesUnchangedVsOff": true,
+  "buttonHeightsUnchangedVsApp": true,
+  "tabIndexUnchanged": true,
+  "dialogSizeUnchanged": true,
+  "decoysIdentical": true,
+  "focusReachable": true
+ },
+ "decoyDiff": {
+  "sheet": 0,
+  "changelog": 0,
+  "memo": 0
+ },
+ "app": {
+  "dialogA": {
+   "x": 18,
+   "y": 36.296875,
+   "w": 1320,
+   "h": 230
+  },
+  "headerA": {
+   "x": 18,
+   "y": 36.296875,
+   "w": 1320,
+   "h": 57
+  },
+  "actionsA": {
+   "x": 1124,
+   "y": 48.296875,
+   "w": 202,
+   "h": 32
+  },
+  "titleA": {
+   "x": 34,
+   "y": 57.296875,
+   "w": 45.34375,
+   "h": 14
+  },
+  "headerCs": {
+   "flex-direction": "row",
+   "background-color": "rgba(0, 0, 0, 0)",
+   "border-bottom": "1px solid oklab(0.985 0 0 / 0.048)",
+   "padding": "12px 12px 12px 16px",
+   "margin": "0px"
+  },
+  "titleCs": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "oklch(0.985 0 0)",
+   "pad": "0px",
+   "border": "0px solid oklch(0.985 0 0 / 0.12)"
+  },
+  "buttons": {
+   "assist-a-endpoint": {
+    "w": 74,
+    "h": 32,
+    "color": "oklch(0.985 0 0)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "8px",
+    "tabIndex": 0
+   },
+   "assist-a-panel": {
+    "w": 28,
+    "h": 28,
+    "color": "oklch(0.6826 0 0)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "8px",
+    "tabIndex": 0
+   },
+   "assist-a-close": {
+    "w": 28,
+    "h": 28,
+    "color": "oklch(0.6826 0 0)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "8px",
+    "tabIndex": 0
+   },
+   "assist-b-endpoint": {
+    "w": 121.34375,
+    "h": 32,
+    "color": "oklch(0.985 0 0)",
+    "bg": "oklch(0.985 0 0 / 0.1)",
+    "radius": "8px",
+    "tabIndex": 0
+   },
+   "assist-b-panel": {
+    "w": 28,
+    "h": 28,
+    "color": "oklch(0.985 0 0)",
+    "bg": "oklch(0.205 0 0)",
+    "radius": "8px",
+    "tabIndex": 0
+   }
+  },
+  "status": "oklch(0.6826 0 0)"
+ },
+ "off": {
+  "dialogA": {
+   "x": 18,
+   "y": 36.296875,
+   "w": 1320,
+   "h": 230
+  },
+  "headerA": {
+   "x": 3,
+   "y": 21.296875,
+   "w": 1350,
+   "h": 95
+  },
+  "actionsA": {
+   "x": 19,
+   "y": 71.296875,
+   "w": 1318,
+   "h": 32
+  },
+  "titleA": {
+   "x": 3,
+   "y": 33.296875,
+   "w": 1350,
+   "h": 30
+  },
+  "headerCs": {
+   "flex-direction": "column",
+   "background-color": "rgba(0, 0, 0, 0)",
+   "border-bottom": "1px solid oklab(0.56234 0.0460524 -0.18758 / 0.4)",
+   "padding": "12px 16px",
+   "margin": "-16px -16px 0px"
+  },
+  "titleCs": {
+   "bg": "rgb(242, 198, 232)",
+   "color": "rgb(22, 17, 42)",
+   "pad": "5px 64px 5px 25px",
+   "border": "1px solid rgb(108, 92, 224)"
+  },
+  "buttons": {
+   "assist-a-endpoint": {
+    "w": 74,
+    "h": 32,
+    "color": "rgb(242, 235, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-a-panel": {
+    "w": 28,
+    "h": 28,
+    "color": "rgb(185, 173, 217)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-a-close": {
+    "w": 28,
+    "h": 28,
+    "color": "rgb(185, 173, 217)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-b-endpoint": {
+    "w": 118,
+    "h": 32,
+    "color": "rgb(242, 235, 255)",
+    "bg": "rgb(74, 55, 132)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-b-panel": {
+    "w": 28,
+    "h": 28,
+    "color": "rgb(242, 235, 255)",
+    "bg": "rgb(32, 25, 54)",
+    "radius": "0px",
+    "tabIndex": 0
+   }
+  },
+  "status": "rgb(185, 173, 217)"
+ },
+ "on": {
+  "dialogA": {
+   "x": 18,
+   "y": 36.296875,
+   "w": 1320,
+   "h": 230
+  },
+  "headerA": {
+   "x": 19,
+   "y": 37.296875,
+   "w": 1318,
+   "h": 33
+  },
+  "actionsA": {
+   "x": 1131,
+   "y": 37.296875,
+   "w": 202,
+   "h": 32
+  },
+  "titleA": {
+   "x": 19,
+   "y": 37.296875,
+   "w": 1104,
+   "h": 32
+  },
+  "headerCs": {
+   "flex-direction": "row",
+   "background-color": "rgb(242, 198, 232)",
+   "border-bottom": "1px solid rgb(108, 92, 224)",
+   "padding": "0px 4px 0px 0px",
+   "margin": "0px"
+  },
+  "titleCs": {
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(22, 17, 42)",
+   "pad": "5px 0px 5px 9px",
+   "border": "0px none rgb(22, 17, 42)"
+  },
+  "buttons": {
+   "assist-a-endpoint": {
+    "w": 74,
+    "h": 32,
+    "color": "rgb(22, 17, 42)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-a-panel": {
+    "w": 28,
+    "h": 28,
+    "color": "rgb(22, 17, 42)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-a-close": {
+    "w": 28,
+    "h": 28,
+    "color": "rgb(22, 17, 42)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-b-endpoint": {
+    "w": 118,
+    "h": 32,
+    "color": "rgb(242, 198, 232)",
+    "bg": "rgb(22, 17, 42)",
+    "radius": "0px",
+    "tabIndex": 0
+   },
+   "assist-b-panel": {
+    "w": 28,
+    "h": 28,
+    "color": "rgb(242, 198, 232)",
+    "bg": "rgb(22, 17, 42)",
+    "radius": "0px",
+    "tabIndex": 0
+   }
+  },
+  "status": "rgb(22, 17, 42)"
+ },
+ "hover": {
+  "color": "rgb(242, 198, 232)",
+  "bg": "rgb(22, 17, 42)"
+ },
+ "focus": {
+  "active": "assist-a-close",
+  "outline": "auto oklab(0.765878 0.172198 -0.0498766 / 0.5)"
+ },
+ "shots": {
+  "original-app": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-dialog-header/original-app.png",
+  "before": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-dialog-header/before.png",
+  "after": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-dialog-header/after.png",
+  "afterHover": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-dialog-header/after-hover-header.png",
+  "headerCompare": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-dialog-header/header-compare.png"
+ }
+}

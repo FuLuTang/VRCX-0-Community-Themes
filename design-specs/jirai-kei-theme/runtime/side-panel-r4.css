@@ -1,0 +1,146 @@
+/* ==========================================================================
+   R4 · right social side panel  (user feedback 4 + 9)
+   Scoped to the right panel only. No DOM is invented, no text is replaced, the
+   virtual lists' row heights / translateY are never touched and the 8px resize
+   handle keeps its hit box. Read-only source evidence lives in
+   ../research/side-panel-r4.md.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   R4-4 · "unexplained margin": the workspace gutter wrapped the whole right
+   rail. `.vrcx-0-workspace` carries margin 12px / 6px / 10px from
+   globals.css:835-846, so a band of shell colour sat above and right of the
+   rail, and the rail drew its own 1px left border inside it
+   (windose-runtime.css:20) -> the "box in a box" the user saw. Measured: the
+   rail was 12px from the right edge and the 8px resize slot exposed the
+   workspace canvas (#16112a) as a black seam on the left.
+   Keep the floating content card, but let the rail reach the window edge: the
+   workspace keeps no gutter and the card spacing moves onto the main content.
+   (The workspace's own 1px box-shadow edge never renders in this theme:
+   tokens set --vrcx-0-main-content-lift to `none` (theme.css:80), which drops
+   the whole box-shadow declaration. Measured, not assumed - see the report.)
+   -------------------------------------------------------------------------- */
+/* Leader: keep the app's workspace margin-left (it switches to the collapsed gutter
+   when the nav collapses, globals.css:848-851); only top/right/bottom move inward. */
+.vrcx-0-workspace:has(> [data-vrcx-0-surface='side-panel']) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.vrcx-0-workspace:has(> [data-vrcx-0-surface='side-panel'])
+    > [data-vrcx-0-surface='main-content'] {
+    margin: var(--vrcx-0-main-content-gutter-top) 0
+        var(--vrcx-0-main-content-gutter-bottom) 0;
+    border-radius: var(--vrcx-0-main-content-radius);
+    box-shadow: 0 0 0 1px var(--wd-frame);
+}
+
+/* The 8px resize slot keeps `bg-transparent`, so it used to expose the workspace
+   canvas colour (#16112a) as a black seam between card and rail. Give it the
+   window face; the rail's own 1px frame still marks the boundary. */
+.vrcx-0-workspace:has(> [data-vrcx-0-surface='side-panel'])
+    > [data-vrcx-0-resize='side-panel'] {
+    background-color: var(--wd-window);
+}
+
+/* --------------------------------------------------------------------------
+   R4-4b · the rail reads as one window pane: a 1px hard frame on all four
+   sides. windose-runtime.css:20 already draws the left one, this restates all
+   four so the pane keeps its frame even if that rule is folded in. SOCIAL stays
+   the pane's real title bar, now flush with the window edge.
+   -------------------------------------------------------------------------- */
+.vrcx-0-side-panel {
+    border: 1px solid var(--wd-frame);
+}
+
+/* --------------------------------------------------------------------------
+   R4-9 · the vertical tab strip becomes folder tabs on the pane's right edge.
+   Real DOM (SSR-verified, see checks/r4-side-panel/): each rail tab is
+   `button[role=tab]` and Base UI itself emits `data-active` on the selected one
+   (no `data-active="false"`), while the app's Tooltip wrapper overwrites
+   data-slot with "tooltip-trigger" - so `[data-slot='tabs-tab'][data-active]`
+   from windose-runtime.css:70 never matched these tabs. Select on the real
+   role/attribute instead of the slot.
+
+   The inner box is the friends panel: Tabs' first div child
+   (SidePanel.tsx:401); the rail is its sibling (SidePanel.tsx:499). They are
+   flush, so a selected tab can fuse with the panel.
+   -------------------------------------------------------------------------- */
+.vrcx-0-side-panel [data-slot='tabs'] > div:not(.vrcx-0-side-panel-rail) {
+    background-color: var(--wd-raised);
+    outline: 1px solid var(--wd-frame);
+    outline-offset: -1px; /* outline, not border: zero layout change */
+}
+
+/* Resting tabs: dark, frameless, clearly outside the panel. The list still
+   carries the underline variant's 4px inline padding, which left a 4px strip of
+   rail colour between panel and tab; drop it so the strip is flush with the
+   panel edge (measured: panel right 1350 == tab left 1350 after, tab left 1354
+   before). */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [data-slot='tabs-list'] {
+    padding-inline: 0;
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'] {
+    border-radius: 0;
+    border-color: transparent;
+    background-color: #1d1631;
+    color: var(--wd-faint);
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab']:hover {
+    background-color: var(--wd-select);
+    color: var(--wd-text);
+}
+
+/* Selected tab: same face as the panel, three-sided --wd-frame frame (the left
+   edge stays open) and a pink spine on the far side. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active] {
+    border-color: var(--wd-frame);
+    border-left-color: transparent;
+    background-color: var(--wd-raised);
+    color: var(--wd-pink);
+}
+
+/* Pink spine as a pseudo element, not an inset box-shadow: the app's
+   focus-visible ring is itself a box-shadow and must survive for keyboard use. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    pointer-events: none;
+    background-color: var(--wd-pink);
+}
+
+/* Cut the panel's right rule where the selected tab fuses with it. The panel's
+   outline sits in [right-1px, right) and the tab's own 1px transparent left
+   border starts at right, so the sliver has to start 2px left of the tab's
+   padding box (measured: panel rule at x1349 was still drawn at left:-1px). */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2px;
+    width: 3px;
+    pointer-events: none;
+    background-color: var(--wd-raised);
+}
+
+/* The configure "+" button belongs to the same strip. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail > [data-slot='button'] {
+    border-radius: 0;
+    background-color: #1d1631;
+    color: var(--wd-faint);
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail > [data-slot='button']:hover {
+    background-color: var(--wd-select);
+    color: var(--wd-text);
+}

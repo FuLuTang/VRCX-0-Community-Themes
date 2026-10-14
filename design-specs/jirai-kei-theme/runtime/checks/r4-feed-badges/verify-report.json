@@ -1,0 +1,357 @@
+{
+  "svgs": [
+    {
+      "type": "Online",
+      "cls": "lucide-log-in",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Offline",
+      "cls": "lucide-log-out",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Status",
+      "cls": "lucide-pencil-line",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Online",
+      "cls": "lucide-log-in",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Offline",
+      "cls": "lucide-log-out",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Status",
+      "cls": "lucide-pencil-line",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Avatar",
+      "cls": "lucide-person-standing",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "GPS",
+      "cls": "lucide-map-pin",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    },
+    {
+      "type": "Bio",
+      "cls": "lucide-file-text",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "16px 16px",
+      "hidden": true
+    }
+  ],
+  "dots": [
+    {
+      "radius": "0px",
+      "w": 10,
+      "h": 10,
+      "bg": "rgb(46, 211, 25)",
+      "shadow": "rgb(22, 17, 42) 0px 0px 0px 1px"
+    },
+    {
+      "radius": "0px",
+      "w": 10,
+      "h": 10,
+      "bg": "rgb(233, 124, 3)",
+      "shadow": "rgb(22, 17, 42) 0px 0px 0px 1px"
+    },
+    {
+      "radius": "0px",
+      "w": 10,
+      "h": 10,
+      "bg": "rgb(46, 211, 25)",
+      "shadow": "rgb(22, 17, 42) 0px 0px 0px 1px"
+    },
+    {
+      "radius": "0px",
+      "w": 10,
+      "h": 10,
+      "bg": "rgb(233, 124, 3)",
+      "shadow": "rgb(22, 17, 42) 0px 0px 0px 1px"
+    }
+  ],
+  "swatch": {
+    "radius": "3.35544e+07px",
+    "w": 2
+  },
+  "chips": [
+    {
+      "text": "USW",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 31.6,
+      "h": 16
+    },
+    {
+      "text": "EU",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 22.4,
+      "h": 16
+    },
+    {
+      "text": "USW",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 31.6,
+      "h": 16
+    },
+    {
+      "text": "EU",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 22.4,
+      "h": 16
+    },
+    {
+      "text": "USW",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 31.6,
+      "h": 16
+    },
+    {
+      "text": "EU",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 22.4,
+      "h": 16
+    },
+    {
+      "text": "USW",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 31.6,
+      "h": 16
+    },
+    {
+      "text": "EU",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 22.4,
+      "h": 16
+    },
+    {
+      "text": "USW",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 31.6,
+      "h": 16
+    },
+    {
+      "text": "EU",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 22.4,
+      "h": 16
+    },
+    {
+      "text": "USW",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 31.6,
+      "h": 16
+    },
+    {
+      "text": "EU",
+      "radius": "0px",
+      "border": "1px rgb(108, 92, 224)",
+      "bg": "rgb(42, 33, 71)",
+      "color": "rgb(255, 184, 230)",
+      "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "clip": "staircut",
+      "w": 22.4,
+      "h": 16
+    }
+  ],
+  "rows": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "cellSpan": [
+    326,
+    326,
+    326,
+    130,
+    130,
+    130,
+    130,
+    130,
+    130
+  ],
+  "fonts": [
+    "WD Pixel:unloaded",
+    "WD Pixel CJK:loaded"
+  ],
+  "baseline": {
+    "typeWidths": [
+      [
+        "Online",
+        14
+      ],
+      [
+        "Offline",
+        14
+      ],
+      [
+        "Status",
+        14
+      ],
+      [
+        "Online",
+        14
+      ],
+      [
+        "Offline",
+        14
+      ],
+      [
+        "Status",
+        14
+      ],
+      [
+        "Avatar",
+        20.3
+      ],
+      [
+        "GPS",
+        14
+      ],
+      [
+        "Bio",
+        14
+      ]
+    ],
+    "rowHeights": [
+      40,
+      40,
+      40,
+      40,
+      40,
+      40
+    ],
+    "typeCellSpanWidths": [
+      326,
+      326,
+      326,
+      130,
+      130,
+      130,
+      130,
+      130,
+      130
+    ],
+    "dotRadius": "3.35544e+07px",
+    "swatchRadius": null
+  },
+  "rowHeightDelta": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cellSpanDelta": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cssBytes": 5652
+}

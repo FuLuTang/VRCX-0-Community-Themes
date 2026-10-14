@@ -1,0 +1,410 @@
+{
+  "status": "PASS",
+  "fixture": {
+    "label": "NOT WINDOWS · fictional PrivacyLockOverlay DOM",
+    "sourceFiles": [
+      "/tmp/vrcx-win-src-r9/src/features/privacy-lock/PrivacyLockOverlay.tsx",
+      "/tmp/vrcx-win-src-r9/src/features/privacy-lock/LockCodeInput.tsx",
+      "/tmp/vrcx-win-src-r9/src/components/layout/status-bar/StatusBarParts.tsx"
+    ],
+    "appCssSource": "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+    "baseBundle": "/tmp/jirai-lead-r96d/jirai-kei-theme/theme.css",
+    "r96CssBytes": 2679,
+    "strictScopeSelectors": 7
+  },
+  "checks": {
+    "cards": {
+      "locked": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(32, 25, 54)",
+        "image": "linear-gradient(to right, rgb(255, 127, 207) 0px, rgb(255, 127, 207) 36px, rgb(108, 92, 224) 36px, rgb(108, 92, 224) 100%)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "0px",
+        "borderRadius": "2px",
+        "boxShadow": "rgb(108, 92, 224) 0px 0px 0px 1px, rgb(16, 11, 30) 4px 4px 0px 0px, rgba(253, 244, 255, 0.16) 1px 1px 0px 0px inset, rgb(22, 17, 42) -1px -1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 260,
+        "height": 271.25
+      },
+      "recovering": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(32, 25, 54)",
+        "image": "linear-gradient(to right, rgb(255, 127, 207) 0px, rgb(255, 127, 207) 36px, rgb(108, 92, 224) 36px, rgb(108, 92, 224) 100%)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "0px",
+        "borderRadius": "2px",
+        "boxShadow": "rgb(108, 92, 224) 0px 0px 0px 1px, rgb(16, 11, 30) 4px 4px 0px 0px, rgba(253, 244, 255, 0.16) 1px 1px 0px 0px inset, rgb(22, 17, 42) -1px -1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 260,
+        "height": 279.5
+      },
+      "startupError": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(32, 25, 54)",
+        "image": "linear-gradient(to right, rgb(255, 127, 207) 0px, rgb(255, 127, 207) 36px, rgb(108, 92, 224) 36px, rgb(108, 92, 224) 100%)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "0px",
+        "borderRadius": "2px",
+        "boxShadow": "rgb(108, 92, 224) 0px 0px 0px 1px, rgb(16, 11, 30) 4px 4px 0px 0px, rgba(253, 244, 255, 0.16) 1px 1px 0px 0px inset, rgb(22, 17, 42) -1px -1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 312,
+        "height": 146.25
+      },
+      "pass": true
+    },
+    "titles": {
+      "locked": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "startupError": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "pass": true
+    },
+    "statusDot": {
+      "before": {
+        "color": "rgb(185, 173, 217)",
+        "background": "rgb(46, 211, 25)",
+        "image": "none",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "0px",
+        "borderRadius": "3.35544e+07px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 6.5,
+        "height": 6.5
+      },
+      "after": {
+        "color": "rgb(185, 173, 217)",
+        "background": "rgb(46, 211, 25)",
+        "image": "none",
+        "borderColor": "rgb(26, 18, 38)",
+        "borderWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0.28) -1px -1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 6.5,
+        "height": 6.5
+      },
+      "statusbarDecoyUnchanged": true,
+      "pass": true
+    },
+    "pin": {
+      "before": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(22, 17, 42)",
+        "image": "none",
+        "borderColor": "rgb(255, 127, 207)",
+        "borderWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(61, 48, 94) 1px 1px 0px 0px inset, rgb(14, 10, 23) -1px -1px 0px 0px inset",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "1px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 40,
+        "height": 40
+      },
+      "after": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(22, 17, 42)",
+        "image": "none",
+        "borderColor": "rgb(255, 127, 207)",
+        "borderWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(61, 48, 94) 1px 1px 0px 0px inset, rgb(14, 10, 23) -1px -1px 0px 0px inset",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineOffset": "1px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 40,
+        "height": 40
+      },
+      "alreadyPinkFromFieldsToolbar": true,
+      "pass": true
+    },
+    "buttons": {
+      "beforeOutline": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "borderColor": "rgba(0, 0, 0, 0)",
+        "borderWidth": "1px",
+        "borderRadius": "2px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 70.25,
+        "height": 22.75
+      },
+      "afterOutline": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(59, 44, 85)",
+        "image": "none",
+        "borderColor": "rgb(140, 113, 176)",
+        "borderWidth": "1px",
+        "borderRadius": "2px",
+        "boxShadow": "rgb(16, 11, 30) 2px 2px 0px 0px, rgba(255, 255, 255, 0.12) 0px 1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 70.25,
+        "height": 22.75
+      },
+      "afterDefault": {
+        "color": "rgb(22, 17, 42)",
+        "background": "rgb(255, 127, 207)",
+        "image": "none",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "borderRadius": "2px",
+        "boxShadow": "rgb(16, 11, 30) 3px 3px 0px 0px, rgba(255, 255, 255, 0.38) 0px 1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineOffset": "0px",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "opacity": "1",
+        "width": 221,
+        "height": 26
+      },
+      "buttonsBadgesR10AppliedToPortal": false,
+      "scopedPrivacyButtonsPass": true
+    },
+    "decoys": {
+      "statusbarUnchanged": true,
+      "dialogUnchanged": true,
+      "pass": true
+    },
+    "focus": {
+      "before": {
+        "active": true,
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "offset": "2px"
+      },
+      "after": {
+        "active": true,
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "offset": "2px"
+      },
+      "pass": true
+    },
+    "recoveryInput": {
+      "before": {
+        "type": "password",
+        "autoComplete": "off",
+        "placeholder": "账户密码",
+        "disabled": false
+      },
+      "after": {
+        "type": "password",
+        "autoComplete": "off",
+        "placeholder": "账户密码",
+        "disabled": false
+      },
+      "pass": true
+    },
+    "geometry": {
+      "before": {
+        "#locked-card": {
+          "x": 117.33,
+          "y": 237.77,
+          "width": 260,
+          "height": 271.25
+        },
+        "#recovering-card": {
+          "x": 589.98,
+          "y": 233.64,
+          "width": 260,
+          "height": 279.5
+        },
+        "#startup-error-card": {
+          "x": 1036.66,
+          "y": 300.27,
+          "width": 312,
+          "height": 146.25
+        },
+        "#privacy-lock-code": {
+          "x": 164.33,
+          "y": 361.27,
+          "width": 166,
+          "height": 40
+        },
+        "#privacy-lock-code [data-slot=\"input-otp-slot\"]": {
+          "x": 164.33,
+          "y": 361.27,
+          "width": 40,
+          "height": 40
+        },
+        "#privacy-lock-account-password": {
+          "x": 609.48,
+          "y": 379.89,
+          "width": 221,
+          "height": 26
+        },
+        "#background-button": {
+          "x": 173.83,
+          "y": 466.77,
+          "width": 70.25,
+          "height": 22.75
+        },
+        "#logout-button": {
+          "x": 250.58,
+          "y": 466.77,
+          "width": 70.25,
+          "height": 22.75
+        },
+        "#clear-unlock-button": {
+          "x": 609.48,
+          "y": 415.64,
+          "width": 221,
+          "height": 26
+        },
+        "#retry-button": {
+          "x": 1170.53,
+          "y": 404.27,
+          "width": 44.25,
+          "height": 22.75
+        },
+        "#statusbar-probe": {
+          "x": 29,
+          "y": 711.89,
+          "width": 673,
+          "height": 42
+        },
+        "#dialog-decoy [data-slot=\"dialog-content\"]": {
+          "x": 738,
+          "y": 711.89,
+          "width": 320,
+          "height": 116
+        }
+      },
+      "after": {
+        "#locked-card": {
+          "x": 117.33,
+          "y": 237.77,
+          "width": 260,
+          "height": 271.25
+        },
+        "#recovering-card": {
+          "x": 589.98,
+          "y": 233.64,
+          "width": 260,
+          "height": 279.5
+        },
+        "#startup-error-card": {
+          "x": 1036.66,
+          "y": 300.27,
+          "width": 312,
+          "height": 146.25
+        },
+        "#privacy-lock-code": {
+          "x": 164.33,
+          "y": 361.27,
+          "width": 166,
+          "height": 40
+        },
+        "#privacy-lock-code [data-slot=\"input-otp-slot\"]": {
+          "x": 164.33,
+          "y": 361.27,
+          "width": 40,
+          "height": 40
+        },
+        "#privacy-lock-account-password": {
+          "x": 609.48,
+          "y": 379.89,
+          "width": 221,
+          "height": 26
+        },
+        "#background-button": {
+          "x": 173.83,
+          "y": 466.77,
+          "width": 70.25,
+          "height": 22.75
+        },
+        "#logout-button": {
+          "x": 250.58,
+          "y": 466.77,
+          "width": 70.25,
+          "height": 22.75
+        },
+        "#clear-unlock-button": {
+          "x": 609.48,
+          "y": 415.64,
+          "width": 221,
+          "height": 26
+        },
+        "#retry-button": {
+          "x": 1170.53,
+          "y": 404.27,
+          "width": 44.25,
+          "height": 22.75
+        },
+        "#statusbar-probe": {
+          "x": 29,
+          "y": 711.89,
+          "width": 673,
+          "height": 42
+        },
+        "#dialog-decoy [data-slot=\"dialog-content\"]": {
+          "x": 738,
+          "y": 711.89,
+          "width": 320,
+          "height": 116
+        }
+      },
+      "diffs": [],
+      "pass": true
+    },
+    "screenshots": {
+      "imageSizes": {
+        "before": {
+          "width": 1440,
+          "height": 960
+        },
+        "after": {
+          "width": 1440,
+          "height": 960
+        }
+      },
+      "edgesUnder2000px": true
+    }
+  },
+  "failures": []
+}

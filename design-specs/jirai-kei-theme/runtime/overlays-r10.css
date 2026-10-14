@@ -1,0 +1,105 @@
+/* R10-G3 overlay surfaces. Load after popups-r9.css.
+   Paint-only mini Windose language: no portal geometry, positioning, or avatar shaping. */
+
+/* Ordinary Tooltip.Content is portalled to body. Leave the two statusbar tooltip
+   stack signatures to popups-r9.css so its active-trigger guard stays authoritative. */
+[data-slot="tooltip-content"]:not(:has(> div.flex.flex-col.gap-1.text-xs)):not(.flex.flex-col.gap-1.text-xs) {
+  --radius: 0px;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  overflow-wrap: anywhere;
+  background: #211a33;
+  color: #f2ebff;
+  opacity: 1;
+  border: 1px solid #6c5ce0;
+  border-radius: 0;
+  box-shadow: inset 1px 1px 0 #69557c, inset -1px -1px 0 #7a3f6d, 3px 3px 0 #100b1e;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+/* Hide the diagonal diamond: the dark square panel reads cleaner without a detached arrow. */
+[data-slot="tooltip-content"]:not(:has(> div.flex.flex-col.gap-1.text-xs)):not(.flex.flex-col.gap-1.text-xs) > div.rotate-45 {
+  display: none;
+}
+
+/* Hover-card outer shell only. Its avatar/image/ring descendants remain owned by avatars-status-r9. */
+[data-slot="hover-card-content"] {
+  --radius: 0px;
+  background: #211a33 !important;
+  color: #f2ebff;
+  border: 1px solid #6c5ce0;
+  border-radius: 0 !important;
+  box-shadow: inset 1px 1px 0 #69557c, inset -1px -1px 0 #7a3f6d, 3px 3px 0 #100b1e !important;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Base UI toast Root is a direct child of its viewport and has no data-slot itself. */
+[data-slot="toast-viewport"] > * {
+  box-sizing: border-box;
+  background: #211a33 !important;
+  color: #f2ebff;
+  border: 1px solid #6c5ce0;
+  border-left: 4px solid #d97fc6;
+  border-radius: 0 !important;
+  box-shadow: inset 1px 1px 0 #69557c, inset -1px -1px 0 #7a3f6d, 3px 3px 0 #100b1e !important;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+[data-slot="toast-viewport"] [data-slot="toast-title"] { color: #ffe4f2; }
+[data-slot="toast-viewport"] [data-slot="toast-description"] { color: #d6c8e6; }
+[data-slot="toast-viewport"] [data-slot="toast-action"]:focus-visible,
+[data-slot="toast-viewport"] button:focus-visible {
+  outline: 2px solid #ffe4f2;
+  outline-offset: -3px;
+}
+
+/* Notification-center sheet only: BellIcon is a stable source anchor; other sheets stay untouched. */
+[data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) {
+  --radius: 0px;
+  background: #211a33 !important;
+  color: #f2ebff;
+  border: 1px solid #6c5ce0;
+  border-inline-start: 1px solid #6c5ce0;
+  border-radius: 0 !important;
+  box-shadow: inset 1px 1px 0 #69557c, inset -1px -1px 0 #7a3f6d, 3px 3px 0 #100b1e !important;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+[data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) > [data-slot="sheet-header"] {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  color: #21132d;
+  background: #d97fc6;
+  border-bottom: 1px solid #6c5ce0;
+  border-radius: 0;
+}
+[data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) [data-slot="sheet-title"],
+[data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) [data-slot="sheet-header"] button {
+  color: #21132d;
+}
+[data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) [data-slot="sheet-header"] button:focus-visible {
+  outline: 2px solid #21132d;
+  outline-offset: -3px;
+}
+
+/* No new motion: all four surfaces are static, including host reduce-effects mode. */
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="tooltip-content"], [data-slot="hover-card-content"],
+  [data-slot="toast-viewport"] > *,
+  [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+html.reduce-effects [data-slot="tooltip-content"],
+html.reduce-effects [data-slot="hover-card-content"],
+html.reduce-effects [data-slot="toast-viewport"] > *,
+html.reduce-effects [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .lucide-bell) {
+  animation: none !important;
+  transition: none !important;
+}

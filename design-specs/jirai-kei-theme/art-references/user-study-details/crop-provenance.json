@@ -1,0 +1,43 @@
+{
+  "purpose": "Private visual analysis crops only; not approved theme assets; no public release authorized",
+  "source": "user-noa-senpai-cover-ref.jpg",
+  "sourceSha256": "e425600c5b376654cd8e02c79df2f21a0096717940b51166895c26514951d388",
+  "crops": [
+    {
+      "file": "sns-window.png",
+      "box": {
+        "left": 1080,
+        "top": 185,
+        "width": 600,
+        "height": 420
+      }
+    },
+    {
+      "file": "pixel-hearts.png",
+      "box": {
+        "left": 1320,
+        "top": 495,
+        "width": 365,
+        "height": 100
+      }
+    },
+    {
+      "file": "capsule-label.png",
+      "box": {
+        "left": 88,
+        "top": 2080,
+        "width": 520,
+        "height": 135
+      }
+    },
+    {
+      "file": "purple-black-plaid.png",
+      "box": {
+        "left": 320,
+        "top": 1435,
+        "width": 300,
+        "height": 250
+      }
+    }
+  ]
+}

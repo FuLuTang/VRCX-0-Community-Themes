@@ -1,0 +1,30 @@
+{
+  "revision": "R6",
+  "directory": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "files": [
+    {
+      "Name": "preview.webp",
+      "Bytes": 44738,
+      "Hash": "EFEADBD653A54368CC761F270D5A33198C3E9831CA1F75BD0938A65EFBF11CC1"
+    },
+    {
+      "Name": "README.md",
+      "Bytes": 1123,
+      "Hash": "45C0FFB858709D7662BA4A4887DA7BBF1DB49EF09BD828FED5D6AE56E3AFF4E0"
+    },
+    {
+      "Name": "theme.css",
+      "Bytes": 814057,
+      "Hash": "669C7F59CF28A2D49602EF17E609AC97D854C7CA4E227D6E31D2A2099E3A9303"
+    },
+    {
+      "Name": "theme.json",
+      "Bytes": 481,
+      "Hash": "91162C6EB0E3BF8E03F1AAE8828A17DDC2AC297F25AB2870BF103CFE17BFB60E"
+    }
+  ],
+  "atomicFileReplacement": true,
+  "windowsVisualValidated": true,
+  "validationScope": ["Actual VRCX-0 window on Windows through cua-driver", "R6 / 1.2.0-preview.8 metadata visible", "Folder watch automatically reloaded staged deployment", "NSO tutorial-cat visible without covering settings buttons", "Friend feed and mixed-case pixel typography", "Settings: ON heart knob and OFF bandage knob visible", "Reduced-motion and resize accent regression passed in Linux fixture, not Windows motion proof"],
+  "privateEvidenceOutsideRepository": ["/tmp/jirai-live-review/r6-windows-live.png", "/tmp/jirai-live-review/r6-windows-settings.png"]
+}

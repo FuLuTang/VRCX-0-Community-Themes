@@ -1,0 +1,928 @@
+{
+  "sourceCrop": {
+    "width": 24,
+    "height": 20,
+    "sourceScale": 4,
+    "origins": {
+      "phone": {
+        "x": 302,
+        "y": 450
+      },
+      "happy": {
+        "x": 442,
+        "y": 450
+      },
+      "shock": {
+        "x": 582,
+        "y": 450
+      },
+      "awkward": {
+        "x": 722,
+        "y": 450
+      }
+    },
+    "uniform4xCells": true,
+    "socialCanvasMinimum": {
+      "width": 25,
+      "height": 20
+    }
+  },
+  "palette": {
+    "charBackAndPhoneFrontEntries": 19,
+    "sharedPalette": true,
+    "sourceOpaqueColors": 18,
+    "allLayerVisibleColors": 18,
+    "exactSourcePreserved": true,
+    "glowDim": {
+      "paletteEntries": 10,
+      "bitDepth": 4,
+      "tRNSBytes": 10
+    },
+    "glowBright": {
+      "paletteEntries": 10,
+      "bitDepth": 4,
+      "tRNSBytes": 9
+    }
+  },
+  "fillRule": {
+    "rule": ">=2 other poses give the same non-effect colour -> copy",
+    "alignment": {
+      "happy": "identity",
+      "shock": "identity",
+      "awkward": "+1 row for y=6..14"
+    },
+    "maskCells": 79,
+    "filledCells": 21,
+    "filled": [
+      {
+        "x": 18,
+        "y": 8,
+        "color": "#7b5f80",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 9,
+        "color": "#d94cb4",
+        "agree": 3
+      },
+      {
+        "x": 19,
+        "y": 9,
+        "color": "#7b5f80",
+        "agree": 3
+      },
+      {
+        "x": 17,
+        "y": 10,
+        "color": "#ddbfee",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 10,
+        "color": "#d94cb4",
+        "agree": 3
+      },
+      {
+        "x": 19,
+        "y": 10,
+        "color": "#7b5f80",
+        "agree": 3
+      },
+      {
+        "x": 17,
+        "y": 11,
+        "color": "#ddbfee",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 11,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 17,
+        "y": 12,
+        "color": "#c4a3ef",
+        "agree": 2
+      },
+      {
+        "x": 18,
+        "y": 12,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 17,
+        "y": 13,
+        "color": "#c4a3ef",
+        "agree": 2
+      },
+      {
+        "x": 18,
+        "y": 13,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 17,
+        "y": 14,
+        "color": "#c4a3ef",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 14,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 17,
+        "y": 15,
+        "color": "#c4a3ef",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 15,
+        "color": "#7b5f80",
+        "agree": 3
+      },
+      {
+        "x": 17,
+        "y": 16,
+        "color": "#c4a3ef",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 16,
+        "color": "#7b5f80",
+        "agree": 3
+      },
+      {
+        "x": 17,
+        "y": 17,
+        "color": "#c4a3ef",
+        "agree": 3
+      },
+      {
+        "x": 18,
+        "y": 17,
+        "color": "#7b5f80",
+        "agree": 3
+      },
+      {
+        "x": 17,
+        "y": 18,
+        "color": "#7b5f80",
+        "agree": 3
+      }
+    ],
+    "threeAgree": 15,
+    "twoAgree": [
+      {
+        "x": 18,
+        "y": 11,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 17,
+        "y": 12,
+        "color": "#c4a3ef",
+        "agree": 2
+      },
+      {
+        "x": 18,
+        "y": 12,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 17,
+        "y": 13,
+        "color": "#c4a3ef",
+        "agree": 2
+      },
+      {
+        "x": 18,
+        "y": 13,
+        "color": "#7b5f80",
+        "agree": 2
+      },
+      {
+        "x": 18,
+        "y": 14,
+        "color": "#7b5f80",
+        "agree": 2
+      }
+    ],
+    "singleVoteCells": [],
+    "unfillableCells": [],
+    "r2UnionRuleDisagreements": 0,
+    "effectPalette": [
+      "#5f62c1",
+      "#ae387d",
+      "#cc5282",
+      "#e1a639",
+      "#ff87c6",
+      "#ffcced"
+    ],
+    "headAlignment": {
+      "happy": {
+        "zeroOffsetMatches": 144,
+        "total": 144,
+        "bestShift": {
+          "matches": 144,
+          "dx": 0,
+          "dy": 0,
+          "total": 144
+        }
+      },
+      "shock": {
+        "zeroOffsetMatches": 144,
+        "total": 144,
+        "bestShift": {
+          "matches": 144,
+          "dx": 0,
+          "dy": 0,
+          "total": 144
+        }
+      },
+      "awkward": {
+        "zeroOffsetMatches": 124,
+        "total": 144,
+        "bestShift": {
+          "matches": 124,
+          "dx": 0,
+          "dy": 0,
+          "total": 144
+        }
+      }
+    }
+  },
+  "leftEdge": {
+    "region": "x=14..19, y=6..19",
+    "cells": 84,
+    "transparentHolesWithConsensus": 0,
+    "wholeCanvasHoles": 0,
+    "sharedEarCell": [
+      18,
+      8
+    ],
+    "r2TapEarGap": [
+      19,
+      8
+    ]
+  },
+  "tapFrames": {
+    "frames": [
+      3,
+      5
+    ],
+    "cellsAudited": "x=14..24,y=6..19 (phone-shifted cells compared to phone-front; the rest to the >=2 consensus)",
+    "problems": 0,
+    "column17AllCharBack": true,
+    "bezelColourOnColumn17Rows": [
+      18
+    ],
+    "column16Unchanged": true,
+    "transparentCellsX17toX24": 4,
+    "leftEarComplete": true
+  },
+  "composition": {
+    "visibleSourceCellDifferences": 0,
+    "phoneFrontMask": "y8: x18,19,21,22; y9: x18..22; y10..19: x17..23 (79 cells, (18,8) shared with char-back)"
+  },
+  "glow": {
+    "revision": "r4 translucent overlay",
+    "lightCentre": {
+      "cells": [
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "lineX": 10.5,
+      "metric": "d = sqrt(dx^2+dy^2) to the nearest centre cell: dx = 10-x (x<=10) | x-11 (x>=11), dy = y-14"
+    },
+    "formula": {
+      "falloff": "f(d) = 0.5*(1+cos(pi*d/R)) for d<R, else 0 (raised cosine; 1 at the centre, 0 with zero slope at the edge)",
+      "radius": 9,
+      "levels": 8,
+      "levelRule": "level = round(8 * f(d) * k(class)), k(class) = 0.3 for #7b5f80 outlines and #6673aa dark iris, 0.6 for #87a5d9 mid iris, 1 otherwise",
+      "alphaRule": "alpha8 = round(peakAlpha * level / 8)",
+      "peakAlpha": {
+        "dim": 64,
+        "bright": 128
+      },
+      "peakOpacity": {
+        "dim": 0.251,
+        "bright": 0.502
+      },
+      "blend": "out = base*(1-a) + overlay*a  (straight sRGB alpha, as a browser composites)"
+    },
+    "levelTable": [
+      {
+        "level": 1,
+        "alphaDim": 8,
+        "alphaBright": 16,
+        "cells": 26
+      },
+      {
+        "level": 2,
+        "alphaDim": 16,
+        "alphaBright": 32,
+        "cells": 41
+      },
+      {
+        "level": 3,
+        "alphaDim": 24,
+        "alphaBright": 48,
+        "cells": 23
+      },
+      {
+        "level": 4,
+        "alphaDim": 32,
+        "alphaBright": 64,
+        "cells": 8
+      },
+      {
+        "level": 5,
+        "alphaDim": 40,
+        "alphaBright": 80,
+        "cells": 13
+      },
+      {
+        "level": 6,
+        "alphaDim": 48,
+        "alphaBright": 96,
+        "cells": 9
+      },
+      {
+        "level": 7,
+        "alphaDim": 56,
+        "alphaBright": 112,
+        "cells": 11
+      },
+      {
+        "level": 8,
+        "alphaDim": 64,
+        "alphaBright": 128,
+        "cells": 11
+      }
+    ],
+    "litCells": 142,
+    "dimCells": 142,
+    "brightCells": 142,
+    "peakAlpha": {
+      "dim": 64,
+      "bright": 128,
+      "dimOpacity": 0.251,
+      "brightOpacity": 0.502
+    },
+    "overlayColour": "#eef6ff",
+    "highlightColour": "#f8fcff",
+    "highlight": {
+      "cells": [
+        [
+          9,
+          12
+        ],
+        [
+          14,
+          12
+        ]
+      ],
+      "alpha": 255,
+      "alphaByLayer": {
+        "dim": 128,
+        "bright": 255
+      },
+      "selectedCandidate": "H1",
+      "originalPixels": [
+        "#6673aa",
+        "#6673aa"
+      ],
+      "originalWhiteEyePixels": [
+        [
+          7,
+          12,
+          "#e2e5e0"
+        ],
+        [
+          7,
+          13,
+          "#e2e5e0"
+        ],
+        [
+          7,
+          14,
+          "#fdfdfd"
+        ],
+        [
+          12,
+          12,
+          "#ffebfa"
+        ],
+        [
+          12,
+          13,
+          "#ffebfa"
+        ],
+        [
+          12,
+          14,
+          "#ffebfa"
+        ]
+      ]
+    },
+    "sameShape": true,
+    "brightIsTwiceDimOnGradientCells": true,
+    "brightGreaterThanDimOnHighlights": true,
+    "brightSuperset": true,
+    "connectivity": {
+      "eightConnectedBlobs": 1,
+      "descentWithin1Level": true,
+      "maxEdgeLevelTouchingUnlitNormalCell": 2
+    },
+    "darkAttenuation": {
+      "factor": 0.3,
+      "darkCellsLit": 22,
+      "irisMidFactor": 0.6
+    },
+    "skin": {
+      "skinBase": "#ffebfa",
+      "skinDim": "#fbeefb",
+      "skinBright": "#f6f1fd",
+      "dE76": {
+        "dim": 2.73,
+        "bright": 5.6
+      },
+      "chromaSkin": 10.47,
+      "chromaBright": 6.41,
+      "aStarBright": 3.8
+    },
+    "oldVsNewSkin": {
+      "r3CoreColour": "#fffdfe",
+      "r3dE76": 10.62,
+      "r3RingColour": "#fff3f8",
+      "r3RingDE76": 6.16,
+      "r4BrightPeakDE76": 5.6,
+      "r4DimPeakDE76": 2.73
+    },
+    "candidateBrightPeaks": [
+      {
+        "alpha": 102,
+        "opacity": 0.4,
+        "skinHex": "#f8effc",
+        "skinDE76": 4.06,
+        "skinChroma": 7.41,
+        "skinAStar": 5.3
+      },
+      {
+        "alpha": 128,
+        "opacity": 0.502,
+        "skinHex": "#f6f1fd",
+        "skinDE76": 5.6,
+        "skinChroma": 6.41,
+        "skinAStar": 3.8
+      },
+      {
+        "alpha": 153,
+        "opacity": 0.6,
+        "skinHex": "#f5f2fd",
+        "skinDE76": 6.44,
+        "skinChroma": 5.75,
+        "skinAStar": 2.96
+      }
+    ],
+    "recommendedBrightPeak": {
+      "alpha": 128,
+      "opacity": 0.502
+    },
+    "encoding": {
+      "dim": {
+        "indexedBytes": 211,
+        "rgbaBytes": 230
+      },
+      "bright": {
+        "indexedBytes": 211,
+        "rgbaBytes": 238
+      }
+    },
+    "frozenLayersSha256": {
+      "char-back.png": "f442b6e476f4db53d71d7bed6bb292287c5a3eb122459cf184a6755fd2bb4670",
+      "phone-front.png": "5bb53ddea178a70e28b4ffb89226f115072bcae995512cec8c6b981d0f668950",
+      "char-back.svg": "462f60c8fd2457b37eb5e11543e0c2d990653232c34ef979ea1dc8f1a44de789",
+      "phone-front.svg": "6e80f83b881fc52a11c4db9e0e826e24eb6f46caa5fd758c8ea4ad665c4f2179"
+    }
+  },
+  "pngBytes": [
+    {
+      "layer": "char-back",
+      "pngBytes": 315,
+      "base64Bytes": 420,
+      "dimensions": "20x20",
+      "offset": "(0,0)",
+      "paletteColors": 16,
+      "bitDepth": 8
+    },
+    {
+      "layer": "phone-front",
+      "pngBytes": 183,
+      "base64Bytes": 244,
+      "dimensions": "7x12",
+      "offset": "(17,8)",
+      "paletteColors": 3,
+      "bitDepth": 8
+    },
+    {
+      "layer": "glow-dim",
+      "pngBytes": 211,
+      "base64Bytes": 284,
+      "dimensions": "14x13",
+      "offset": "(3,7)",
+      "paletteColors": 2,
+      "bitDepth": 4
+    },
+    {
+      "layer": "glow-bright",
+      "pngBytes": 211,
+      "base64Bytes": 284,
+      "dimensions": "14x13",
+      "offset": "(3,7)",
+      "paletteColors": 2,
+      "bitDepth": 4
+    }
+  ],
+  "aggregate": {
+    "pngBytes": 920,
+    "base64Bytes": 1232,
+    "base64Limit": 2500,
+    "prospectiveCssDeclarationsBytes": 1465,
+    "svgInCss": false
+  },
+  "strengthCandidates": {
+    "c2": {
+      "label": "medium",
+      "overlay": "#e8f2ff",
+      "levels": 9,
+      "profile": {
+        "dim": {
+          "coreRadius": 6,
+          "haloRadius": 6,
+          "haloTop": 0.6,
+          "haloPower": 3,
+          "peakAlpha": 77
+        },
+        "bright": {
+          "coreRadius": 6,
+          "haloRadius": 10,
+          "haloTop": 0.6,
+          "haloPower": 3,
+          "peakAlpha": 204
+        }
+      },
+      "litCells": {
+        "dim": 96,
+        "bright": 194
+      },
+      "bbox": {
+        "dim": {
+          "x": 5,
+          "y": 9,
+          "width": 12,
+          "height": 10
+        },
+        "bright": {
+          "x": 1,
+          "y": 5,
+          "width": 17,
+          "height": 15
+        }
+      },
+      "centreColourOverSkin": "#edf1fe",
+      "centreDE76VsSkin": 8.48,
+      "centreDimToBrightDE76": 5.33,
+      "haloRingAlpha": 80,
+      "haloRingDropDE76": 5.29,
+      "alphaSteps": 9,
+      "outermostAlpha": 23,
+      "maxEdgeLevel": 2,
+      "darkCellsAttenuated": 32,
+      "fourLayerBase64": 1264,
+      "browserMeanAbsRgbDelta": 4.337,
+      "browserMaxChannelDelta": 59,
+      "browserChangedPixels": 194,
+      "sharpRecomputedMeanAbsRgbDelta": 4.319,
+      "bytes": {
+        "dim": {
+          "file": "glow-dim-c2.png",
+          "svgFile": "glow-dim-c2.svg",
+          "pngBytes": 200,
+          "base64Bytes": 268,
+          "paletteEntries": 11,
+          "colors": 2,
+          "encoding": {
+            "indexedTrnsBytes": 200,
+            "rgbaBytes": 227,
+            "chosen": "indexed+tRNS"
+          }
+        },
+        "bright": {
+          "file": "glow-bright-c2.png",
+          "svgFile": "glow-bright-c2.svg",
+          "pngBytes": 248,
+          "base64Bytes": 332,
+          "paletteEntries": 11,
+          "colors": 2,
+          "encoding": {
+            "indexedTrnsBytes": 248,
+            "rgbaBytes": 300,
+            "chosen": "indexed+tRNS"
+          }
+        }
+      }
+    },
+    "c3": {
+      "label": "strong",
+      "overlay": "#e2eeff",
+      "levels": 10,
+      "profile": {
+        "dim": {
+          "coreRadius": 5,
+          "haloRadius": 5,
+          "haloTop": 0.52,
+          "haloPower": 3,
+          "peakAlpha": 90
+        },
+        "bright": {
+          "coreRadius": 5,
+          "haloRadius": 10.5,
+          "haloTop": 0.52,
+          "haloPower": 3,
+          "peakAlpha": 242
+        }
+      },
+      "litCells": {
+        "dim": 70,
+        "bright": 207
+      },
+      "bbox": {
+        "dim": {
+          "x": 6,
+          "y": 10,
+          "width": 10,
+          "height": 8
+        },
+        "bright": {
+          "x": 1,
+          "y": 4,
+          "width": 17,
+          "height": 16
+        }
+      },
+      "centreColourOverSkin": "#e3eeff",
+      "centreDE76VsSkin": 10.84,
+      "centreDimToBrightDE76": 6.9,
+      "haloRingAlpha": 104,
+      "haloRingDropDE76": 6.19,
+      "alphaSteps": 10,
+      "outermostAlpha": 24,
+      "maxEdgeLevel": 2,
+      "darkCellsAttenuated": 34,
+      "fourLayerBase64": 1248,
+      "browserMeanAbsRgbDelta": 4.775,
+      "browserMaxChannelDelta": 62,
+      "browserChangedPixels": 207,
+      "sharpRecomputedMeanAbsRgbDelta": 4.778,
+      "bytes": {
+        "dim": {
+          "file": "glow-dim-c3.png",
+          "svgFile": "glow-dim-c3.svg",
+          "pngBytes": 185,
+          "base64Bytes": 248,
+          "paletteEntries": 12,
+          "colors": 2,
+          "encoding": {
+            "indexedTrnsBytes": 185,
+            "rgbaBytes": 196,
+            "chosen": "indexed+tRNS"
+          }
+        },
+        "bright": {
+          "file": "glow-bright-c3.png",
+          "svgFile": "glow-bright-c3.svg",
+          "pngBytes": 251,
+          "base64Bytes": 336,
+          "paletteEntries": 12,
+          "colors": 2,
+          "encoding": {
+            "indexedTrnsBytes": 251,
+            "rgbaBytes": 294,
+            "chosen": "indexed+tRNS"
+          }
+        }
+      }
+    }
+  },
+  "previews": [
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-layer-8x.png",
+      "width": 600,
+      "height": 280
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-alpha-levels-16x.png",
+      "width": 300,
+      "height": 264
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-compare-4x.png",
+      "width": 348,
+      "height": 212
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-compare-1x.png",
+      "width": 219,
+      "height": 84
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-face-zoom-16x.png",
+      "width": 852,
+      "height": 266
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-bright-candidates-8x.png",
+      "width": 880,
+      "height": 159
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-old-vs-new-4x.png",
+      "width": 580,
+      "height": 212
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/timeline-17-frames-4x.png",
+      "width": 1780,
+      "height": 118
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/layer-decomposition-1x.png",
+      "width": 365,
+      "height": 84
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/layer-decomposition-4x.png",
+      "width": 580,
+      "height": 212
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/braid-restore-compare-4x.png",
+      "width": 580,
+      "height": 212
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/braid-restore-zoom-8x.png",
+      "width": 556,
+      "height": 148
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/tap-frames-8x.png",
+      "width": 484,
+      "height": 220
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/hair-reference-alignment-4x.png",
+      "width": 448,
+      "height": 112
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-strength-candidates-1x-8x.png",
+      "width": 1632,
+      "height": 746
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-strength-candidates-dpr2-8x.png",
+      "width": 1632,
+      "height": 746
+    },
+    {
+      "file": "runtime/checks/r10-phone-layers/glow-strength-candidates-table.png",
+      "width": 1360,
+      "height": 848
+    }
+  ],
+  "animationFrames": [
+    {
+      "frame": 1,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 2,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 3,
+      "activity": "tap",
+      "phoneDx": 1,
+      "glow": null
+    },
+    {
+      "frame": 4,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 5,
+      "activity": "tap",
+      "phoneDx": 1,
+      "glow": null
+    },
+    {
+      "frame": 6,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 7,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 8,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 9,
+      "activity": "dim",
+      "phoneDx": 0,
+      "glow": "glow-dim"
+    },
+    {
+      "frame": 10,
+      "activity": "dim",
+      "phoneDx": 0,
+      "glow": "glow-dim"
+    },
+    {
+      "frame": 11,
+      "activity": "bright",
+      "phoneDx": 0,
+      "glow": "glow-bright"
+    },
+    {
+      "frame": 12,
+      "activity": "dim",
+      "phoneDx": 0,
+      "glow": "glow-dim"
+    },
+    {
+      "frame": 13,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 14,
+      "activity": "dim",
+      "phoneDx": 0,
+      "glow": "glow-dim"
+    },
+    {
+      "frame": 15,
+      "activity": "dim",
+      "phoneDx": 0,
+      "glow": "glow-dim"
+    },
+    {
+      "frame": 16,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    },
+    {
+      "frame": 17,
+      "activity": "idle",
+      "phoneDx": 0,
+      "glow": null
+    }
+  ]
+}

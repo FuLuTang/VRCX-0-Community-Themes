@@ -1,0 +1,77 @@
+/* R8: user-dialog polish, scoped to real DialogContent/UserStatusAvatar DOM. */
+
+/* Mirror the sidebar/data-table pixel avatar. R9.5: no theme border on the avatar itself
+   (user request); the ProfileAvatarFrame is a sibling and is deliberately untouched. */
+[data-slot="dialog-content"] span:has(> span[class~="size-3.75"]) > span.overflow-hidden {
+  border-radius: 0;
+  clip-path: var(--wd-avatar-cut);
+  border-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  outline: none;
+}
+[data-slot="dialog-content"] span[class~="size-3.75"],
+[data-slot="dialog-content"] span[class~="size-3.75"] > span {
+  border-radius: 0;
+}
+
+/* CardTitle is inside a plain nameplate div, NOT CardHeader. This direct
+   size-4 holder/size-2.5 dot chain is UserDialog-specific, unlike GroupDialog.
+   Preserve fills and active status' existing colored border-2 ring. */
+[data-slot="dialog-content"].entity-dialog [data-slot="card-title"] > span.flex.size-4.shrink-0.items-center.justify-center > span.rounded-full.inline-block[class~="size-2.5"] {
+  border-radius: 0;
+}
+[data-slot="dialog-content"].entity-dialog [data-slot="card-title"] > span.flex.size-4.shrink-0.items-center.justify-center > span.rounded-full.inline-block[class~="size-2.5"]:not(.border-2) {
+  border: 1px solid #21132d;
+}
+
+/* Pixel slider: retain the browser's input box and hit area; only paint Chromium track/thumb.
+   Applies to EVERY native range in an entity dialog (bio-history `.accent-primary.min-w-16.flex-1`,
+   status-distribution `.accent-primary.w-28`, ...): form-controls-r9 excludes `.entity-dialog *`, so this
+   block is the only owner there. Do not re-narrow it to utility classes, and never set width/min-width. */
+[data-slot="dialog-content"].entity-dialog input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px; /* Chromium's unstyled range box in the supported runtime; preserve its hit box. */
+  background: transparent;
+  cursor: pointer;
+}
+[data-slot="dialog-content"].entity-dialog input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #100b1e;
+  border: 1px solid #4b3a63;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 55%);
+}
+[data-slot="dialog-content"].entity-dialog input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  border: 1px solid #21132d;
+  border-radius: 0;
+  background: #ffd9ee;
+  box-shadow: inset 0 0 0 2px #d97fc6, 0 1px 0 #f3add9;
+}
+[data-slot="dialog-content"].entity-dialog input[type="range"]:focus-visible {
+  outline: 2px dashed #d6b8ef;
+  outline-offset: 3px;
+}
+
+/* Date bubble, positioned by the application at the live slider percentage. */
+[data-slot="dialog-content"].entity-dialog div:has(> input[type="range"]) > span:has(~ input[type="range"]) {
+  border-radius: 0;
+  border-color: #8c71b0;
+  background-color: #211a33;
+  color: #ffd9ee;
+  box-shadow: 2px 2px 0 #100b1e;
+}
+
+/* Theme-owned banner base colors and margins. R9 is the sole owner of motif intensity,
+   stitch scale and hem geometry; R96 adds the scoped frame art. */
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {
+  inset: 8px 0 10px;
+  background-color: #d6b8ef;
+}
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::after {
+  background-color: #8c71b0;
+}

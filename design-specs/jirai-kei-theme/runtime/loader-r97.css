@@ -1,0 +1,18 @@
+/* R9.7 loader routing (inventory: checks/r97-loader/inventory.md).
+   A = page/block loaders -> loader-r9 dancer (reuses its sheet vars + keyframes).
+   B = button/inline spinners -> stepped pixel ring; static refresh icons untouched. */
+:root{--jk-dance:jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames),end) infinite}
+svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation-timing-function:steps(8,end)}
+div.justify-center.gap-2:not([data-slot],.min-h-\[72px\]):has(>svg:is([data-slot=spinner],.animate-spin)){flex-direction:column;gap:10px}
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg:is([data-slot=spinner],.animate-spin),.inset-0>svg.text-muted-foreground[data-slot=spinner],svg.my-8[data-slot=spinner]{
+  display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
+  background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
+  image-rendering:pixelated;animation:var(--jk-dance)!important;
+  transform:none;rotate:none;color:transparent;opacity:1;-webkit-mask:none;mask:none
+}
+@media(prefers-reduced-motion:reduce){
+  :root{--jk-dance:none}
+  svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation:none!important}
+}
+html.reduce-effects{--jk-dance:none}
+html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg){animation:none!important}

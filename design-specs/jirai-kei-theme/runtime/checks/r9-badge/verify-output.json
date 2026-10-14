@@ -1,0 +1,652 @@
+{
+  "fixture": "NOT WINDOWS; source-shaped notification trigger and 15-row R8 animation-budget scaffold",
+  "pixelAuditRasterizer": "Chromium --disable-lcd-text; 1x badge palette audit",
+  "aaComparison": {
+    "candidates": [
+      {
+        "kind": "baseline",
+        "text": "99+",
+        "width": 24,
+        "height": 13,
+        "minWidth": "14px",
+        "maxWidth": "24px",
+        "widthProperty": "24px",
+        "fontFamily": "\"WD Pixel\"",
+        "fontSize": "12px",
+        "scrollWidth": 24,
+        "clientWidth": 22,
+        "relativeX": 6,
+        "relativeY": -1.5,
+        "opacity": "1",
+        "willChange": "auto",
+        "animationName": "none"
+      },
+      {
+        "kind": "opacity",
+        "text": "99+",
+        "width": 24,
+        "height": 13,
+        "minWidth": "14px",
+        "maxWidth": "24px",
+        "widthProperty": "24px",
+        "fontFamily": "\"WD Pixel\"",
+        "fontSize": "12px",
+        "scrollWidth": 24,
+        "clientWidth": 22,
+        "relativeX": 6,
+        "relativeY": -1.5,
+        "opacity": "0.999",
+        "willChange": "auto",
+        "animationName": "none"
+      },
+      {
+        "kind": "will-change",
+        "text": "99+",
+        "width": 24,
+        "height": 13,
+        "minWidth": "14px",
+        "maxWidth": "24px",
+        "widthProperty": "24px",
+        "fontFamily": "\"WD Pixel\"",
+        "fontSize": "12px",
+        "scrollWidth": 24,
+        "clientWidth": 22,
+        "relativeX": 6,
+        "relativeY": -1.5,
+        "opacity": "1",
+        "willChange": "opacity",
+        "animationName": "none"
+      }
+    ],
+    "defaultChromium": {
+      "rasterizerFlag": "no --disable-lcd-text",
+      "fontLoaded": true,
+      "badgeOpacity": "0.999",
+      "animationName": "r9-notification-badge-flash"
+    },
+    "disableLcdScreenshot": "aa-options-lcd-disabled.png",
+    "defaultFlagsScreenshots": [
+      "after-c-no-lcd-disable.png",
+      "aa-options-no-lcd-disable.png",
+      "zoom-ninety-nine-plus-no-lcd-disable.png"
+    ],
+    "caveat": "Default Linux headless Chromium is not Windows ClearType; use screenshots as structure/variant comparison, then confirm on Windows WebView2."
+  },
+  "buildCss": "/tmp/exclusion-migration/shim/new/r9-badge.css",
+  "bellIconProbe": {
+    "directBellSvg": true,
+    "buttonHasSelector": true,
+    "svgDisplay": "block",
+    "svgVisibility": "visible",
+    "svgSize": {
+      "width": 16,
+      "height": 16
+    },
+    "svgRenderedBounds": {
+      "width": 18.97705078125,
+      "height": 18.976947784423828
+    },
+    "badgeMatches": true,
+    "iconCssVariable": true
+  },
+  "pixelFontLoaded": true,
+  "badgeSelector": ".vrcx-0-titlebar button:has(> svg.lucide-bell) > [data-slot=\"badge\"]",
+  "badgePlacement": "C: top:-2.5px/right:-3px; 12px WD Pixel, centered 11px line-height; integer box coordinates; opacity .999 AA layer; outer sizes 14x13 / 18x13 / 24x13; 99+ overlap is capped at 37.5% and keeps 2px before the next button",
+  "beforeB": "before-b.png (9px comparison profile)",
+  "afterC": "after-c.png",
+  "screenshots": [
+    "after-c.png",
+    "zoom-ninety-nine-plus.png",
+    "aa-options-lcd-disabled.png",
+    "after-c-no-lcd-disable.png",
+    "aa-options-no-lcd-disable.png",
+    "zoom-ninety-nine-plus-no-lcd-disable.png",
+    "reduced-motion.png"
+  ],
+  "samples": {
+    "one-digit": {
+      "text": "5",
+      "rect": {
+        "x": 1179,
+        "y": 1,
+        "width": 14,
+        "height": 13,
+        "left": 1179,
+        "right": 1193,
+        "top": 1,
+        "bottom": 14
+      },
+      "textRect": {
+        "x": 1182,
+        "y": 0,
+        "width": 8,
+        "height": 15,
+        "left": 1182,
+        "right": 1190,
+        "top": 0,
+        "bottom": 15
+      },
+      "textCenterOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "geometry": {
+        "iconRect": {
+          "left": 1169,
+          "top": 8.499999523162842,
+          "width": 16,
+          "height": 16,
+          "right": 1185,
+          "bottom": 24.499999523162842
+        },
+        "iconRenderedRect": {
+          "left": 1167.511474609375,
+          "top": 7.011525630950928,
+          "right": 1186.488525390625,
+          "bottom": 25.988473415374756,
+          "width": 18.97705078125,
+          "height": 18.976947784423828
+        },
+        "iconArea": 256,
+        "visualRect": {
+          "left": 1179,
+          "top": 1,
+          "right": 1193,
+          "bottom": 14,
+          "width": 14,
+          "height": 13
+        },
+        "overlapArea": 33,
+        "overlapRatio": 0.1289,
+        "titlebarRect": {
+          "x": 1,
+          "y": 1,
+          "width": 1278,
+          "height": 32,
+          "top": 1,
+          "right": 1279,
+          "bottom": 33,
+          "left": 1
+        },
+        "withinTitlebar": true,
+        "clearOfQuickSearch": true,
+        "clearOfNextAction": true
+      },
+      "background": "rgb(33, 19, 45)",
+      "color": "rgb(255, 217, 238)",
+      "borderColor": "rgb(22, 17, 42)",
+      "borderWidth": "1px",
+      "outlineColor": "rgb(255, 217, 238)",
+      "outlineWidth": "0px",
+      "outlineStyle": "none",
+      "boxShadow": "rgb(255, 228, 242) 0px 0px 0px 1px inset",
+      "radius": "0px",
+      "fontFamily": "\"WD Pixel\"",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "fontSynthesis": "none",
+      "letterSpacing": "-1px",
+      "lineHeight": "11px",
+      "textAlign": "center",
+      "opacity": "0.999",
+      "willChange": "auto",
+      "whiteSpace": "nowrap",
+      "textOverflow": "clip",
+      "overflow": "hidden",
+      "scrollWidth": 12,
+      "clientWidth": 12,
+      "position": "absolute",
+      "top": "-2.5px",
+      "right": "-3px",
+      "animationName": "r9-notification-badge-flash",
+      "animationDuration": "2.8s",
+      "animationTimingFunction": "steps(2)",
+      "transitionDuration": "0s",
+      "zoomRect": {
+        "left": 1167.511474609375,
+        "top": 1,
+        "right": 1193,
+        "bottom": 25.988473415374756
+      },
+      "pixelAudit": {
+        "rect": {
+          "left": 3,
+          "top": 0,
+          "right": 11,
+          "bottom": 13,
+          "width": 8,
+          "height": 13
+        },
+        "colorCount": 8,
+        "baseColorsPresent": [
+          "#21132d",
+          "#ffd9ee"
+        ],
+        "transitionColorCount": 6,
+        "colors": [
+          {
+            "color": "#21132d",
+            "count": 36
+          },
+          {
+            "color": "#ffd9ee",
+            "count": 19
+          },
+          {
+            "color": "#16112a",
+            "count": 16
+          },
+          {
+            "color": "#ffe4f2",
+            "count": 16
+          },
+          {
+            "color": "#d0afc4",
+            "count": 14
+          },
+          {
+            "color": "#e8c4d9",
+            "count": 1
+          },
+          {
+            "color": "#9d8298",
+            "count": 1
+          },
+          {
+            "color": "#665169",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "two-digit": {
+      "text": "42",
+      "rect": {
+        "x": 1175,
+        "y": 1,
+        "width": 18,
+        "height": 13,
+        "left": 1175,
+        "right": 1193,
+        "top": 1,
+        "bottom": 14
+      },
+      "textRect": {
+        "x": 1176,
+        "y": 0,
+        "width": 16,
+        "height": 15,
+        "left": 1176,
+        "right": 1192,
+        "top": 0,
+        "bottom": 15
+      },
+      "textCenterOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "geometry": {
+        "iconRect": {
+          "left": 1169,
+          "top": 8.499999523162842,
+          "width": 16,
+          "height": 16,
+          "right": 1185,
+          "bottom": 24.499999523162842
+        },
+        "iconRenderedRect": {
+          "left": 1167.511474609375,
+          "top": 7.011525630950928,
+          "right": 1186.488525390625,
+          "bottom": 25.988473415374756,
+          "width": 18.97705078125,
+          "height": 18.976947784423828
+        },
+        "iconArea": 256,
+        "visualRect": {
+          "left": 1175,
+          "top": 1,
+          "right": 1193,
+          "bottom": 14,
+          "width": 18,
+          "height": 13
+        },
+        "overlapArea": 55,
+        "overlapRatio": 0.2148,
+        "titlebarRect": {
+          "x": 1,
+          "y": 1,
+          "width": 1278,
+          "height": 32,
+          "top": 1,
+          "right": 1279,
+          "bottom": 33,
+          "left": 1
+        },
+        "withinTitlebar": true,
+        "clearOfQuickSearch": true,
+        "clearOfNextAction": true
+      },
+      "background": "rgb(33, 19, 45)",
+      "color": "rgb(255, 217, 238)",
+      "borderColor": "rgb(22, 17, 42)",
+      "borderWidth": "1px",
+      "outlineColor": "rgb(255, 217, 238)",
+      "outlineWidth": "0px",
+      "outlineStyle": "none",
+      "boxShadow": "rgb(255, 228, 242) 0px 0px 0px 1px inset",
+      "radius": "0px",
+      "fontFamily": "\"WD Pixel\"",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "fontSynthesis": "none",
+      "letterSpacing": "-1px",
+      "lineHeight": "11px",
+      "textAlign": "center",
+      "opacity": "0.999",
+      "willChange": "auto",
+      "whiteSpace": "nowrap",
+      "textOverflow": "clip",
+      "overflow": "hidden",
+      "scrollWidth": 16,
+      "clientWidth": 16,
+      "position": "absolute",
+      "top": "-2.5px",
+      "right": "-3px",
+      "animationName": "r9-notification-badge-flash",
+      "animationDuration": "2.8s",
+      "animationTimingFunction": "steps(2)",
+      "transitionDuration": "0s",
+      "zoomRect": {
+        "left": 1167.511474609375,
+        "top": 1,
+        "right": 1193,
+        "bottom": 25.988473415374756
+      },
+      "pixelAudit": {
+        "rect": {
+          "left": 1,
+          "top": 0,
+          "right": 17,
+          "bottom": 13,
+          "width": 16,
+          "height": 13
+        },
+        "colorCount": 8,
+        "baseColorsPresent": [
+          "#21132d",
+          "#ffd9ee"
+        ],
+        "transitionColorCount": 6,
+        "colors": [
+          {
+            "color": "#21132d",
+            "count": 62
+          },
+          {
+            "color": "#ffe4f2",
+            "count": 50
+          },
+          {
+            "color": "#ffd9ee",
+            "count": 33
+          },
+          {
+            "color": "#16112a",
+            "count": 32
+          },
+          {
+            "color": "#9d8298",
+            "count": 18
+          },
+          {
+            "color": "#d0afc4",
+            "count": 11
+          },
+          {
+            "color": "#665169",
+            "count": 1
+          },
+          {
+            "color": "#47354e",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "ninety-nine-plus": {
+      "text": "99+",
+      "rect": {
+        "x": 1169,
+        "y": 1,
+        "width": 24,
+        "height": 13,
+        "left": 1169,
+        "right": 1193,
+        "top": 1,
+        "bottom": 14
+      },
+      "textRect": {
+        "x": 1168,
+        "y": 0,
+        "width": 26,
+        "height": 15,
+        "left": 1168,
+        "right": 1194,
+        "top": 0,
+        "bottom": 15
+      },
+      "textCenterOffset": {
+        "x": 0,
+        "y": 0
+      },
+      "geometry": {
+        "iconRect": {
+          "left": 1169,
+          "top": 8.499999523162842,
+          "width": 16,
+          "height": 16,
+          "right": 1185,
+          "bottom": 24.499999523162842
+        },
+        "iconRenderedRect": {
+          "left": 1167.511474609375,
+          "top": 7.011525630950928,
+          "right": 1186.488525390625,
+          "bottom": 25.988473415374756,
+          "width": 18.97705078125,
+          "height": 18.976947784423828
+        },
+        "iconArea": 256,
+        "visualRect": {
+          "left": 1169,
+          "top": 1,
+          "right": 1193,
+          "bottom": 14,
+          "width": 24,
+          "height": 13
+        },
+        "overlapArea": 88,
+        "overlapRatio": 0.3438,
+        "titlebarRect": {
+          "x": 1,
+          "y": 1,
+          "width": 1278,
+          "height": 32,
+          "top": 1,
+          "right": 1279,
+          "bottom": 33,
+          "left": 1
+        },
+        "withinTitlebar": true,
+        "clearOfQuickSearch": true,
+        "clearOfNextAction": true
+      },
+      "background": "rgb(33, 19, 45)",
+      "color": "rgb(255, 217, 238)",
+      "borderColor": "rgb(22, 17, 42)",
+      "borderWidth": "1px",
+      "outlineColor": "rgb(255, 217, 238)",
+      "outlineWidth": "0px",
+      "outlineStyle": "none",
+      "boxShadow": "rgb(255, 228, 242) 0px 0px 0px 1px inset",
+      "radius": "0px",
+      "fontFamily": "\"WD Pixel\"",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "fontSynthesis": "none",
+      "letterSpacing": "-1px",
+      "lineHeight": "11px",
+      "textAlign": "center",
+      "opacity": "0.999",
+      "willChange": "auto",
+      "whiteSpace": "nowrap",
+      "textOverflow": "clip",
+      "overflow": "hidden",
+      "scrollWidth": 24,
+      "clientWidth": 22,
+      "position": "absolute",
+      "top": "-2.5px",
+      "right": "-3px",
+      "animationName": "r9-notification-badge-flash",
+      "animationDuration": "2.8s",
+      "animationTimingFunction": "steps(2)",
+      "transitionDuration": "0s",
+      "zoomRect": {
+        "left": 1167.511474609375,
+        "top": 1,
+        "right": 1193,
+        "bottom": 25.988473415374756
+      },
+      "pixelAudit": {
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 24,
+          "bottom": 13,
+          "width": 24,
+          "height": 13
+        },
+        "colorCount": 12,
+        "baseColorsPresent": [
+          "#21132d",
+          "#ffd9ee"
+        ],
+        "transitionColorCount": 10,
+        "colors": [
+          {
+            "color": "#21132d",
+            "count": 105
+          },
+          {
+            "color": "#16112a",
+            "count": 70
+          },
+          {
+            "color": "#ffe4f2",
+            "count": 57
+          },
+          {
+            "color": "#ffd9ee",
+            "count": 41
+          },
+          {
+            "color": "#d0afc4",
+            "count": 24
+          },
+          {
+            "color": "#9d8298",
+            "count": 7
+          },
+          {
+            "color": "#ffdbee",
+            "count": 2
+          },
+          {
+            "color": "#665169",
+            "count": 2
+          },
+          {
+            "color": "#ffe2f1",
+            "count": 1
+          },
+          {
+            "color": "#47354e",
+            "count": 1
+          },
+          {
+            "color": "#ffdeef",
+            "count": 1
+          },
+          {
+            "color": "#e8c4d9",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  "animation": {
+    "name": "r9-notification-badge-flash",
+    "durationMs": 2800,
+    "steps": "steps(2)",
+    "uniqueFrames": 2,
+    "before": {
+      "background": "rgb(33, 19, 45)",
+      "color": "rgb(255, 217, 238)",
+      "border": "rgb(22, 17, 42)",
+      "rim": "rgb(255, 228, 242) 0px 0px 0px 1px inset",
+      "opacity": "0.999",
+      "transform": "none"
+    },
+    "after": {
+      "background": "rgb(255, 217, 238)",
+      "color": "rgb(33, 19, 45)",
+      "border": "rgb(22, 17, 42)",
+      "rim": "rgb(217, 127, 198) 0px 0px 0px 1px inset",
+      "opacity": "0.999",
+      "transform": "none"
+    },
+    "contrast": {
+      "darkTextOnLight": 13.725552328024099,
+      "lightTextOnDark": 13.725552328024099
+    },
+    "normalBudget": {
+      "count": 6,
+      "names": [
+        "r97-brand-heart-pixels",
+        "r9-notification-badge-flash",
+        "r96-nav-cat",
+        "r8-nav-cursor",
+        "r96-social-cat",
+        "r8-lace-flow"
+      ]
+    },
+    "hoverBudget": {
+      "count": 6,
+      "names": [
+        "r97-brand-heart-pixels",
+        "r8-window-press",
+        "r96-nav-cat",
+        "r8-nav-cursor",
+        "r96-social-cat",
+        "r8-lace-flow"
+      ],
+      "badgeAnimation": "none"
+    }
+  },
+  "reducedMotion": {
+    "animationName": "none",
+    "background": "rgb(33, 19, 45)",
+    "color": "rgb(255, 217, 238)",
+    "running": []
+  },
+  "reduceEffects": {
+    "animationName": "none",
+    "background": "rgb(33, 19, 45)"
+  },
+  "zeroUnread": {
+    "badgeExists": false,
+    "runningR9": 0
+  }
+}

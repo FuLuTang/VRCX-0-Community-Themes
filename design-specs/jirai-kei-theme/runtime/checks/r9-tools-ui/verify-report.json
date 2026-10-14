@@ -1,0 +1,117 @@
+{
+  "result": "PASS",
+  "fixture": "NOT WINDOWS · source-shaped ToolsPageContent; invented labels/cards; no friend screenshot",
+  "source": {
+    "authority": "/tmp/vrcx-win-src-r9/src",
+    "root": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"])",
+    "children": "direct PageToolbar > ToolbarSearch; direct scroll body > Tabs[data-orientation=vertical] > TabsList[data-orientation=vertical]",
+    "sameIdDecoys": "MutualFriendsPage uses #chart without ToolbarSearch; legacy TwoPersonRelationshipPage is a #chart div, not PageScaffold"
+  },
+  "css": {
+    "bytes": 6901,
+    "selectors": [
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]:focus-within",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"input-group-addon\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"input-group-control\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"input-group-control\"]::placeholder",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"button\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"button\"]:focus-visible",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tab-indicator\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]:hover:not([data-disabled]):not([aria-disabled=\"true\"])",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]:is([data-active], [aria-selected=\"true\"])",
+      ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]:focus-visible"
+    ],
+    "allScopedToToolsRoot": true
+  },
+  "selectorHitsAndMisses": {
+    "toolsRoot": 1,
+    "toolsSearch": 1,
+    "toolsRail": 1,
+    "settingsVertical": 1,
+    "otherChart": 1,
+    "navigationRail": 0
+  },
+  "geometryDeltas": {
+    "searchGroup": {
+      "width": 0,
+      "height": 0
+    },
+    "input": {
+      "width": 0,
+      "height": 0
+    },
+    "rail": {
+      "width": 0,
+      "height": 0
+    },
+    "tabItems": [
+      {
+        "width": 0,
+        "height": 0
+      },
+      {
+        "width": 0,
+        "height": 0
+      },
+      {
+        "width": 0,
+        "height": 0
+      },
+      {
+        "width": 0,
+        "height": 0
+      },
+      {
+        "width": 0,
+        "height": 0
+      }
+    ]
+  },
+  "maxGeometryDeltaPx": 0,
+  "focusAndKeyboard": {
+    "inputFocus": {
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(255, 127, 207)",
+      "focused": true
+    },
+    "firstTabStop": "edit-tools",
+    "categoryTabFocus": {
+      "id": "tools-active-tab",
+      "role": "tab",
+      "style": {
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)"
+      }
+    },
+    "inputTabIndex": 0,
+    "activeTabIndex": 0
+  },
+  "contrast": {
+    "selectedCategory": 11.5453,
+    "filterInput": 14.439100000000002
+  },
+  "excludedUnchanged": {
+    "settingsVerticalTabs": true,
+    "unrelatedChartPage": true,
+    "appNavigationRail": true
+  },
+  "files": {
+    "before.png": {
+      "bytes": 43531
+    },
+    "after.png": {
+      "bytes": 42312
+    },
+    "focus-visible.png": {
+      "bytes": 42320
+    },
+    "comparison.png": {
+      "bytes": 108971
+    }
+  }
+}

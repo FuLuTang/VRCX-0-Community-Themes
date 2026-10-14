@@ -1,0 +1,353 @@
+{
+  "appCssPath": "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+  "themeBeforePath": "/tmp/jirai-r96-banner-frame/jirai-kei-theme/theme.before.css",
+  "themeAfterPath": "/tmp/jirai-r96-banner-frame/jirai-kei-theme/theme.css",
+  "dpr": [
+    {
+      "dpr": 1,
+      "layout": {
+        "stageWidth": 320,
+        "stageHeight": 240,
+        "buttonWidth": 320,
+        "buttonHeight": 240,
+        "stageX": 43,
+        "stageY": 128.390625
+      },
+      "frame": {
+        "content": "\"\"",
+        "left": "-4px",
+        "right": "-4px",
+        "top": "-4px",
+        "bottom": "-4px",
+        "zIndex": "20",
+        "pointerEvents": "none",
+        "imageRendering": "pixelated",
+        "animationName": "none",
+        "dataUri": true
+      },
+      "stitch": {
+        "zIndex": "21",
+        "opacity": "0.52",
+        "color": "rgb(243, 173, 217)"
+      },
+      "hem": {
+        "zIndex": "22",
+        "opacity": "0.96",
+        "color": "rgb(217, 127, 198)",
+        "height": "6px"
+      },
+      "scallop": {
+        "zIndex": "23",
+        "opacity": "0.96",
+        "svgPattern": true
+      },
+      "avatar": {
+        "zIndex": "30",
+        "pixelClip": true
+      },
+      "variables": {
+        "stitch": ".52",
+        "hem": ".96"
+      },
+      "nameClear": true,
+      "svgBytes": 1996,
+      "imagePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/dpr-1.png",
+      "clickThrough": {
+        "hit": {
+          "tag": "IMG",
+          "id": "",
+          "withinButton": true
+        },
+        "clicks": 1
+      }
+    },
+    {
+      "dpr": 1.25,
+      "layout": {
+        "stageWidth": 320,
+        "stageHeight": 240,
+        "buttonWidth": 320,
+        "buttonHeight": 240,
+        "stageX": 43,
+        "stageY": 128.390625
+      },
+      "frame": {
+        "content": "\"\"",
+        "left": "-4px",
+        "right": "-4px",
+        "top": "-4px",
+        "bottom": "-4px",
+        "zIndex": "20",
+        "pointerEvents": "none",
+        "imageRendering": "pixelated",
+        "animationName": "none",
+        "dataUri": true
+      },
+      "stitch": {
+        "zIndex": "21",
+        "opacity": "0.52",
+        "color": "rgb(243, 173, 217)"
+      },
+      "hem": {
+        "zIndex": "22",
+        "opacity": "0.96",
+        "color": "rgb(217, 127, 198)",
+        "height": "6px"
+      },
+      "scallop": {
+        "zIndex": "23",
+        "opacity": "0.96",
+        "svgPattern": true
+      },
+      "avatar": {
+        "zIndex": "30",
+        "pixelClip": true
+      },
+      "variables": {
+        "stitch": ".52",
+        "hem": ".96"
+      },
+      "nameClear": true,
+      "svgBytes": 1996,
+      "imagePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/dpr-1-25.png"
+    },
+    {
+      "dpr": 1.5,
+      "layout": {
+        "stageWidth": 320,
+        "stageHeight": 240,
+        "buttonWidth": 320,
+        "buttonHeight": 240,
+        "stageX": 43,
+        "stageY": 128.390625
+      },
+      "frame": {
+        "content": "\"\"",
+        "left": "-4px",
+        "right": "-4px",
+        "top": "-4px",
+        "bottom": "-4px",
+        "zIndex": "20",
+        "pointerEvents": "none",
+        "imageRendering": "pixelated",
+        "animationName": "none",
+        "dataUri": true
+      },
+      "stitch": {
+        "zIndex": "21",
+        "opacity": "0.52",
+        "color": "rgb(243, 173, 217)"
+      },
+      "hem": {
+        "zIndex": "22",
+        "opacity": "0.96",
+        "color": "rgb(217, 127, 198)",
+        "height": "6px"
+      },
+      "scallop": {
+        "zIndex": "23",
+        "opacity": "0.96",
+        "svgPattern": true
+      },
+      "avatar": {
+        "zIndex": "30",
+        "pixelClip": true
+      },
+      "variables": {
+        "stitch": ".52",
+        "hem": ".96"
+      },
+      "nameClear": true,
+      "svgBytes": 1996,
+      "imagePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/dpr-1-5.png"
+    },
+    {
+      "dpr": 2,
+      "layout": {
+        "stageWidth": 320,
+        "stageHeight": 240,
+        "buttonWidth": 320,
+        "buttonHeight": 240,
+        "stageX": 43,
+        "stageY": 128.390625
+      },
+      "frame": {
+        "content": "\"\"",
+        "left": "-4px",
+        "right": "-4px",
+        "top": "-4px",
+        "bottom": "-4px",
+        "zIndex": "20",
+        "pointerEvents": "none",
+        "imageRendering": "pixelated",
+        "animationName": "none",
+        "dataUri": true
+      },
+      "stitch": {
+        "zIndex": "21",
+        "opacity": "0.52",
+        "color": "rgb(243, 173, 217)"
+      },
+      "hem": {
+        "zIndex": "22",
+        "opacity": "0.96",
+        "color": "rgb(217, 127, 198)",
+        "height": "6px"
+      },
+      "scallop": {
+        "zIndex": "23",
+        "opacity": "0.96",
+        "svgPattern": true
+      },
+      "avatar": {
+        "zIndex": "30",
+        "pixelClip": true
+      },
+      "variables": {
+        "stitch": ".52",
+        "hem": ".96"
+      },
+      "nameClear": true,
+      "svgBytes": 1996,
+      "imagePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/dpr-2.png"
+    }
+  ],
+  "decoys": [
+    {
+      "id": "avatar-decoy-stage",
+      "exists": true,
+      "frameApplied": false,
+      "stitchOpacity": ".38",
+      "hemOpacity": ".90"
+    },
+    {
+      "id": "group-decoy-stage",
+      "exists": true,
+      "frameApplied": false,
+      "stitchOpacity": ".38",
+      "hemOpacity": ".90"
+    },
+    {
+      "id": "world-decoy-button",
+      "exists": true,
+      "frameApplied": false,
+      "stitchOpacity": ".38",
+      "hemOpacity": ".90"
+    },
+    {
+      "id": "user-target",
+      "frameApplied": true,
+      "stitchOpacity": ".52",
+      "hemOpacity": ".96"
+    }
+  ],
+  "reducedMotion": {
+    "preference": true,
+    "animationName": "none",
+    "transitionDuration": "0s",
+    "static": true
+  },
+  "layoutBeforeAfter": {
+    "baseline": {
+      "stage": {
+        "x": 43,
+        "y": 128.390625,
+        "width": 320,
+        "height": 240
+      },
+      "button": {
+        "x": 43,
+        "y": 128.390625,
+        "width": 320,
+        "height": 240
+      },
+      "stitchOpacity": ".38",
+      "hemOpacity": ".90"
+    },
+    "after": {
+      "stage": {
+        "stageWidth": 320,
+        "stageHeight": 240,
+        "buttonWidth": 320,
+        "buttonHeight": 240,
+        "stageX": 43,
+        "stageY": 128.390625
+      },
+      "variables": {
+        "stitch": ".52",
+        "hem": ".96"
+      }
+    },
+    "unchanged": true
+  },
+  "tiers": [
+    {
+      "id": "tier1",
+      "stitch": 0.52,
+      "hem": 0.96,
+      "frameApplied": true,
+      "buttonPseudoZ": "21"
+    },
+    {
+      "id": "tier2",
+      "stitch": 0.72,
+      "hem": 1,
+      "frameApplied": true,
+      "buttonPseudoZ": "21"
+    }
+  ],
+  "cornerCaptures": [
+    {
+      "name": "top-left",
+      "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/top-left-4x.png",
+      "cssCrop": [
+        64,
+        64
+      ],
+      "deviceScaleFactor": 4,
+      "expectedPixels": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "top-right",
+      "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/top-right-4x.png",
+      "cssCrop": [
+        64,
+        64
+      ],
+      "deviceScaleFactor": 4,
+      "expectedPixels": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "bottom-left",
+      "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/bottom-left-4x.png",
+      "cssCrop": [
+        64,
+        64
+      ],
+      "deviceScaleFactor": 4,
+      "expectedPixels": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "bottom-right",
+      "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-banner-frame/bottom-right-4x.png",
+      "cssCrop": [
+        64,
+        64
+      ],
+      "deviceScaleFactor": 4,
+      "expectedPixels": [
+        256,
+        256
+      ]
+    }
+  ]
+}

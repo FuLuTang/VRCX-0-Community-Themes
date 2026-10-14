@@ -1,0 +1,6 @@
+NOT WINDOWS
+CSS inputs: dist/assets/index-Cckb3vVG.css + App-C2mIqNXI.css; built theme.css; original-assets/r5/assets-r5.css; motion-r5.css
+Reduced-motion animation-name:none + pointer-events:none: PASS (7 pseudo-elements)
+Normal animation computed names: r5-heart-hop, r5-lace-flow, r5-star-a, r5-star-b, r5-charm-swing, r5-glint, r5-progress-flow, r5-spinner-step, r5-dialog-step-in
+Layout bounds unchanged after 350ms under reduced motion: PASS
+5 checked 2x DPR frames at animation currentTime 0, 1600, 2500, 3900, 5200ms: frame-1.png .. frame-5.png

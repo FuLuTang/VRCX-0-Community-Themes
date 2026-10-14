@@ -1,0 +1,45 @@
+{
+  "fixtureOnly": true,
+  "groups": [
+    {
+      "title": "已分组的好友",
+      "radius": "999px",
+      "shadow": "rgb(217, 127, 198) 3px 3px 0px 0px",
+      "height": 28
+    },
+    {
+      "title": "同一房间",
+      "radius": "999px",
+      "shadow": "rgb(217, 127, 198) 3px 3px 0px 0px",
+      "height": 28
+    },
+    {
+      "title": "在线",
+      "radius": "999px",
+      "shadow": "rgb(217, 127, 198) 3px 3px 0px 0px",
+      "height": 28
+    }
+  ],
+  "tableBackground": "rgba(0, 0, 0, 0)",
+  "tableSurface": "#201936",
+  "headerSurface": "#2a2147",
+  "stickyBackground": "rgb(32, 25, 54)",
+  "sidebarCharm": false,
+  "legacyBunny": false,
+  "narrow240pxGroupsFit": true,
+  "shortWindowLargeCharmHidden": true,
+  "dialog": {
+    "headers": [
+      "none",
+      "none",
+      "none"
+    ],
+    "activeBackground": "rgb(255, 127, 207)",
+    "activeFont": "\"WD Pixel CJK\", system-ui, sans-serif",
+    "tabsHeart": true,
+    "bannerLacing": true,
+    "bannerLace": true,
+    "decorPointerEvents": "none",
+    "avatarRing": false
+  }
+}

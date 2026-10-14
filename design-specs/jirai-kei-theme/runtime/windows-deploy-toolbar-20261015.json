@@ -1,0 +1,14 @@
+{
+  "scope": "Current pre-dialog snapshot including B026-B032 toolbar fix; B073-B100 implementation excluded",
+  "target": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme\\theme.css",
+  "snapshot": "/tmp/jirai-pre-dialog-20261015/theme.css",
+  "sha256": "3b7ab3b185095c814f55322a4a941c83bb0783a34f9e7e219f439b45be0e7a16",
+  "deploymentMethod": "Uploaded staged CSS, verified staged SHA256, System.IO.File.Replace with backup, verified target SHA256",
+  "backup": "C:\\Users\\tangh\\jiraiToolbar20261015Previous.css",
+  "pid": 29232,
+  "windowId": 525250,
+  "runtimeVerification": "WebView initially showed error 39; refresh restored app with preview inactive. Selected original theme folder via native folder picker. UI then reported local preview loaded and screenshot visibly showed Jirai theme.",
+  "previewLoaded": true,
+  "watchEnabled": false,
+  "manifestVersionUnchanged": true
+}

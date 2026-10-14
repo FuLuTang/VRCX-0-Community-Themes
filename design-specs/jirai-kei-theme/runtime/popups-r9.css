@@ -1,0 +1,143 @@
+/* R9-A: mini Windose popup / slanted pink options. Original CSS adaptation,
+   no copied art. NEVER touch positioner/select-content ::after (host RGB).
+   Entity-dialog internal controls, ordinary tooltips and hover-cards are excluded. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) {
+  --radius: 0px;
+  background: #211a33 !important; /* wins MyAvatarGridCard bg-popover! */
+  color: #f2ebff;
+  opacity: 1;
+  border: 1px solid #6c5ce0;
+  border-radius: 0 !important;
+  box-shadow: inset 1px 1px 0 #69557c, inset -1px -1px 0 #7a3f6d, 3px 3px 0 #100b1e;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+[data-slot="menu-positioner"] { --radius: 0px; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="select-content"],[data-slot="combobox-content"])::before { backdrop-filter: none; border-radius: 0; }
+/* Title marker is a background square, no new overlay/click layer. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-slot$="menu-label"],[data-slot="select-label"],[data-slot="combobox-label"]) {
+  color: #ffd9ee;
+  background: linear-gradient(#ffb8e6,#ffb8e6) 7px center / 7px 7px no-repeat #302344;
+  padding-left: 22px;
+  border-bottom: 1px solid #6c5ce0;
+  font-weight: 600;
+}
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-slot$="menu-item"],[data-slot$="menu-checkbox-item"],[data-slot$="menu-radio-item"],[data-slot$="menu-sub-trigger"],[data-slot="select-item"],[data-slot="combobox-item"],[data-slot="button"][data-variant="ghost"][class~="h-auto"][class~="justify-start"][class~="p-0"]) {
+  background: transparent;
+  color: #f2ebff;
+  border-radius: 0;
+  animation: none !important;
+  transition: none !important;
+}
+/* BaseUI keyboard highlights and mouse hover share the identical slanted bar.
+   Wrappers provide 6px content padding; no indicator or submenu arrow hidden. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-slot$="menu-item"],[data-slot$="menu-checkbox-item"],[data-slot$="menu-radio-item"],[data-slot$="menu-sub-trigger"],[data-slot="select-item"],[data-slot="combobox-item"],[data-slot="button"][data-variant="ghost"][class~="h-auto"][class~="justify-start"][class~="p-0"]):is(:hover,:focus-visible,[data-highlighted],[data-popup-open]):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) {
+  background: #ffb8e6 !important;
+  color: #16112a !important;
+  clip-path: polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);
+  box-shadow: inset 0 1px 0 #ffd9ee, inset 0 -1px 0 #d97fc6;
+}
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is(:focus-visible,[data-highlighted],[data-popup-open],[data-slot$="-item"]:hover,[data-slot$="-trigger"]:hover,[data-slot="button"][class~="h-auto"]:hover):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) :is(.text-muted-foreground,[data-slot$="menu-shortcut"]) { color: #2a1d6e !important; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-variant="destructive"],[data-variant="destructive"] *) { color: #ff7fae !important; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-variant="destructive"]:is(:hover,:focus-visible,[data-highlighted]):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) { color: #16112a !important; }
+/* Source popup's **:destructive:**:text-destructive! also colors icon/text
+   descendants. Override those explicitly on the pink hover/key-focus bar. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-variant="destructive"]:is(:hover,:focus-visible,[data-highlighted]):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) * { color: #16112a !important; }
+/* Disabled readable, not selected-looking; BaseUI interaction semantics stay. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-disabled],[aria-disabled="true"],:disabled) {
+  color: #b9add9 !important; background: transparent !important; opacity: 1; clip-path: none; box-shadow: none;
+}
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-disabled],[aria-disabled="true"],:disabled) .text-muted-foreground { color: #b9add9 !important; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-slot$="menu-separator"],[data-slot="select-separator"],[data-slot="combobox-separator"]) { background: repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px); border: 0; }
+/* Only shape: accessible masks and status color mapping remain untouched. */
+i.x-user-status { border-radius: 0; box-shadow: 0 0 0 1px #100b1e; }
+/* Keep VRChat membership-frame children visible. For unframed avatars, clear the shell border and
+   pixel-cut only the image/fallback; do not synthesize an avatar ring. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) { border-radius: 0; background: transparent; box-shadow: none; outline: none; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset]))::after { border-color: transparent; border-width: 0; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) { border-radius: 0; clip-path: var(--wd-avatar-cut-sm); border-width: 0; box-shadow: none; outline: none; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"][data-size="lg"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) { clip-path: var(--wd-avatar-cut); }
+/* A row containing an external member frame must not clip its descendants.
+   Keep its readable highlight, but deliberately use a square bar there. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-slot$="menu-item"],[data-slot="button"]):has([data-slot="avatar"] [class~="-inset-[18.75%]"],[data-profile-decoration-asset]) { clip-path: none !important; }
+/* Room history is Popover > scroll-area > ghost button > UserPickerRow.
+   Its hand-written inner backing is clipped, so corners really transparent. */
+[data-slot="popover-content"] [data-slot="scroll-area"] button:is([data-slot="button"],[data-slot="tooltip-trigger"])[data-variant="ghost"] span[class~="mr-2.5"][class~="size-9"][class~="rounded-full"][class~="border"] { border-radius: 0; border-width: 0; clip-path: var(--wd-avatar-cut-sm); box-shadow: none; outline: none; }
+/* AvatarImage source uses animate-in/fade-in/ease-out; remove that soft fade
+   here rather than inheriting motion into a hard-edged high-frequency menu. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar-image"] { animation: none !important; transition: none !important; }
+/* No motion added: system reduce and html.reduce-effects stay static. */
+@media (prefers-reduced-motion: reduce) {
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) { animation: none !important; transition: none !important; }
+}
+
+/* R9+ Help menubar: AppMenuBar uses menubar-* slots, not dropdown-menu-*.
+   Keep the host's positioner/pseudo ownership intact; only skin popup content. */
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) {
+  --radius: 0px;
+  background: #211a33 !important;
+  color: #f2ebff;
+  opacity: 1;
+  border: 1px solid #6c5ce0;
+  border-radius: 0 !important;
+  box-shadow: inset 1px 1px 0 #69557c, inset -1px -1px 0 #7a3f6d, 3px 3px 0 #100b1e;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) [data-slot="menubar-label"] {
+  color: #ffd9ee;
+  background: linear-gradient(#ffb8e6,#ffb8e6) 7px center / 7px 7px no-repeat #302344;
+  padding-left: 22px;
+  border-bottom: 1px solid #6c5ce0;
+  font-weight: 600;
+}
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) :is([data-slot="menubar-item"],[data-slot="menubar-checkbox-item"],[data-slot="menubar-radio-item"],[data-slot="menubar-sub-trigger"]) {
+  background: transparent;
+  color: #f2ebff;
+  border-radius: 0;
+  animation: none !important;
+  transition: none !important;
+}
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) :is([data-slot="menubar-item"],[data-slot="menubar-checkbox-item"],[data-slot="menubar-radio-item"],[data-slot="menubar-sub-trigger"]):is(:hover,:focus-visible,[data-highlighted],[data-popup-open]):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) {
+  background: #ffb8e6 !important;
+  color: #16112a !important;
+  clip-path: polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);
+  box-shadow: inset 0 1px 0 #ffd9ee, inset 0 -1px 0 #d97fc6;
+}
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) :is(:focus-visible,[data-highlighted],[data-popup-open],[data-slot="menubar-item"]:hover,[data-slot="menubar-sub-trigger"]:hover):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) :is(.text-muted-foreground,[data-slot="menubar-shortcut"]) { color: #2a1d6e !important; }
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) [data-variant="destructive"] { color: #ff7fae !important; }
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) [data-variant="destructive"]:is(:hover,:focus-visible,[data-highlighted]):not([data-disabled]):not(:disabled):not([aria-disabled="true"]),
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) [data-variant="destructive"]:is(:hover,:focus-visible,[data-highlighted]):not([data-disabled]):not(:disabled):not([aria-disabled="true"]) * { color: #16112a !important; }
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) :is([data-disabled],[aria-disabled="true"],:disabled) { color: #b9add9 !important; background: transparent !important; opacity: 1; clip-path: none; box-shadow: none; }
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) :is([data-slot="menubar-separator"]) { background: repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px); border: 0; }
+:is([data-slot="menubar-content"],[data-slot="menubar-sub-content"]) [data-slot="menubar-shortcut"] { color: #b9add9; }
+
+/* StatusBarFooter server and WebSocket tooltips are body portals. BaseUI
+   TooltipTrigger exposes data-popup-open, including render={<div/>} triggers.
+   Server has an inner stack; WebSocket has stack classes on Popup itself.
+   Only an OPEN statusbar trigger enables this treatment, and only popups with
+   either stack shape match, so a concurrently mounted ordinary tooltip is left alone. */
+body:has(.vrcx-0-statusbar [data-slot="tooltip-trigger"][data-popup-open])
+  [data-slot="tooltip-content"]:is(:has(> div.flex.flex-col.gap-1.text-xs),.flex.flex-col.gap-1.text-xs) {
+  --radius: 0px;
+  padding: 6px 8px;
+  overflow-wrap: anywhere;
+  background: #211a33 !important;
+  color: #f2ebff;
+  opacity: 1;
+  border: 1px solid #6c5ce0;
+  border-radius: 0 !important;
+  box-shadow: inset 1px 1px 0 #69557c, 2px 2px 0 #100b1e;
+  backdrop-filter: none;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Hide the actual BaseUI Arrow child, NOT a pseudo or its positioner. */
+body:has(.vrcx-0-statusbar [data-slot="tooltip-trigger"][data-popup-open])
+  [data-slot="tooltip-content"]:is(:has(> div.flex.flex-col.gap-1.text-xs),.flex.flex-col.gap-1.text-xs) > div[class~="rotate-45"] { display: none; }
+
+/* ToolsPageContent is ToolbarSearch + vertical TabsList, NOT a dropdown.
+   Independent tools-ui-r9.css owns that rail. Popup CSS does not style it. */

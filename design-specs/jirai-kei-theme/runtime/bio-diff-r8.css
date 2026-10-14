@@ -1,0 +1,44 @@
+/* R8: scoped to the confirmed feed main-content DOM and entity-dialog portal only. */
+
+/* Expanded feed signature history: recolor only the 2px rail wrapping the bio pre. */
+.vrcx-0-main-content div.ml-3.border-l-2.py-3.pl-4:has(> pre.max-w-prose.whitespace-pre-wrap) {
+  border-left-color: #d97fc6;
+}
+
+/* Word-level additions: reuse the former removal palette without a strike-through. */
+.vrcx-0-main-content pre.max-w-prose.whitespace-pre-wrap span.text-primary[class~="bg-primary/10"],
+.vrcx-0-main-content div.flex.max-w-2xl.items-center.gap-2 span.text-primary[class~="bg-primary/10"] {
+  background-color: #4b3a63;
+  color: #ffd9ee;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+/* Word-level removals: pale pink fill, dark ink, and a dark strike-through. */
+.vrcx-0-main-content pre.max-w-prose.whitespace-pre-wrap span.text-destructive[class~="bg-destructive/10"],
+.vrcx-0-main-content div.flex.max-w-2xl.items-center.gap-2 span.text-destructive[class~="bg-destructive/10"] {
+  background-color: #ffd9ee;
+  color: #21132d;
+  text-decoration-line: line-through;
+  text-decoration-color: #21132d;
+  text-decoration-thickness: 1px;
+}
+
+/* TextScroll renders an outer pre, then the supplied leading-5 diff pre.
+   Descendant lookup reaches that inner pre; direct span child keeps scope on
+   the user biography diff (GroupDialog/ordinary TextScroll have no such pre). */
+[data-slot="dialog-content"].entity-dialog .overflow-auto.h-52.min-w-0 pre.m-0.font-sans.text-xs.leading-5.whitespace-pre-wrap > span.rounded-sm[class~="bg-emerald-500/15"] {
+  background-color: #4b3a63;
+  color: #ffd9ee;
+  border-bottom: 0;
+  border-radius: 0;
+  text-decoration: none;
+}
+[data-slot="dialog-content"].entity-dialog .overflow-auto.h-52.min-w-0 pre.m-0.font-sans.text-xs.leading-5.whitespace-pre-wrap > span.rounded-sm[class~="bg-rose-500/15"] {
+  background-color: #ffd9ee;
+  color: #21132d;
+  border-radius: 0;
+  text-decoration-line: line-through;
+  text-decoration-color: #21132d;
+  text-decoration-thickness: 1px;
+}

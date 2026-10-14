@@ -1,0 +1,53 @@
+{
+  "method": "border-connected exact colour key, flat global alpha, nearest pre-scale",
+  "tolerance": 12,
+  "globalAlpha": 0.22,
+  "targetSize": 200,
+  "derivedFrom": [
+    "source/Icon_game-32x32.png",
+    "source/Icon_poketter_ame_-25x25.png"
+  ],
+  "entries": [
+    {
+      "tag": "game",
+      "varName": "--r7-game-icon",
+      "title": "Icon for the game. (KAngel)",
+      "role": "big icon, bottom-RIGHT of the main content",
+      "corner": "bottom-left",
+      "key": "#f4b7d9",
+      "keyRgb": [
+        244,
+        183,
+        217
+      ],
+      "sourceWidth": 32,
+      "sourceHeight": 32,
+      "targetSize": 200,
+      "removedPixels": 164,
+      "removedPercent": 16,
+      "survivingKeyedRingPixels": 0,
+      "pngBytes": 1479
+    },
+    {
+      "tag": "ame",
+      "varName": "--r7-ame-tweeter",
+      "title": "Ame-chan's Tweeter profile",
+      "role": "small icon, bottom-LEFT of the main content",
+      "corner": "bottom-right",
+      "key": "#d8c6c3",
+      "keyRgb": [
+        216,
+        198,
+        195
+      ],
+      "sourceWidth": 25,
+      "sourceHeight": 25,
+      "targetSize": 200,
+      "removedPixels": 72,
+      "removedPercent": 11.5,
+      "survivingKeyedRingPixels": 0,
+      "pngBytes": 1214
+    }
+  ],
+  "cssBytes": 3841
+}

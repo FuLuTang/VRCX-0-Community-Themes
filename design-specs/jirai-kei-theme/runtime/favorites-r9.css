@@ -1,0 +1,323 @@
+/* R9.5 · Favorites page surfaces only.
+   DOM evidence: /tmp/vrcx-win-src-r9/src/features/favorites/FavoritesPage.tsx
+   mounts ResizablePanelGroup id="favorites-${kind}-splitter" with groups/content panels;
+   FavoritesGroupRail.tsx renders `.group/rail-row`, an active-state class
+   `bg-(--state-selected-surface)`, section Badge, and `.border-dashed` create button;
+   FavoriteCardView.tsx uses TileShell `.group/tile`/`.object-row`; the real resize
+   separator is `[data-slot="resizable-handle"]`. No avatar descendants are reshaped. */
+
+/* The splitter ID + handle slot are a page-unique anchor, not a global TileShell rule. */
+/* Rail section headings: reuse Windose window colors, with a tiny pixel marker. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] > .flex.h-full.min-h-0.flex-col.gap-3.overflow-auto.p-2
+  > .flex.flex-col.gap-1 > .mb-1.flex.items-center.justify-between.text-sm.font-semibold > span.flex.min-w-0.items-center.gap-1\.5::before{
+  content:"";
+  display:block;
+  flex:0 0 6px;
+  width:6px;
+  height:6px;
+  background:#ffb8e6;
+  box-shadow:1px 1px 0 #7a3f6d;
+  image-rendering:pixelated;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] > .flex.h-full.min-h-0.flex-col.gap-3.overflow-auto.p-2
+  > .flex.flex-col.gap-1 > .mb-1.flex.items-center.justify-between.text-sm.font-semibold{
+  color:#f2ebff;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [data-slot="badge"]{
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#201936;
+  color:#d6b8ef;
+  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;
+  font-variant-numeric:tabular-nums;
+}
+
+/* Folder rows keep their source padding and hit targets; only the face changes. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]{
+  border-radius:0;
+  background-color:transparent;
+  color:#f2ebff;
+  box-shadow:none;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"]{
+  border-radius:0;
+  background:transparent;
+  color:#f2ebff;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]:hover:not([class~="bg-(--state-selected-surface)"]){
+  background-color:#2a2147;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"]{
+  background-color:#ffb8e6;
+  color:#16112a;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"]{
+  color:#16112a;
+}
+
+/* Selected rows keep their label treatment; force muted icon/count descendants to ink. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"] :is([class~="text-muted-foreground"],[class~="tabular-nums"]){
+  color:#16112a;
+}
+
+/* The source's label flexes/truncates; its numeric count remains a fixed trailing item. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"] > span[class~="truncate"]{
+  display:block;
+  flex:1 1 auto;
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"] > span[class~="tabular-nums"]{
+  flex:0 0 auto;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:-2px;
+  z-index:2;
+}
+
+/* Small square affordances: the refresh/menu buttons and dotted create affordance. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-sm"],
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-xs"]{
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#201936;
+  color:#f2ebff;
+  box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a;
+  transition:none;
+}
+
+/* Source GroupMenu is inside a shrink-0/pr-1 wrapper; keep its icon-xs hit box square. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] button[data-size="icon-xs"]{
+  width:24px;
+  height:24px;
+  min-width:24px;
+  flex:0 0 24px;
+  padding:0;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-sm"]:hover,
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-xs"]:hover{
+  background:#ffb8e6;
+  color:#16112a;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]{
+  border:1px dotted #6c5ce0;
+  border-radius:0;
+  background:#201936;
+  color:#e3d2f5;
+  box-shadow:inset 1px 1px rgb(253 244 255/.08),inset -1px -1px #16112a;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]:is(:hover,:focus-visible){
+  background:#ffb8e6;
+  color:#16112a;
+  border-color:#ff7fcf;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+  z-index:2;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"] [data-icon="inline-start"]{
+  shape-rendering:crispEdges;
+  stroke-linecap:square;
+  stroke-width:2.5px;
+}
+
+/* Vertical split grip: paint the existing 1px separator and 4px hit zone, do not resize either. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]{
+  background:#6c5ce0;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]::after{
+  width:4px;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"] > div{
+  width:4px;
+  height:28px;
+  border-radius:0;
+  border:1px solid #6c5ce0;
+  background-color:#6c5ce0;
+  background-image:repeating-linear-gradient(to bottom,#ffb8e6 0 1px,transparent 1px 5px);
+  box-shadow:inset 1px 0 #fdf4ff,inset -1px 0 #16112a;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]:is(:hover,:active) > div{
+  border-color:#ff7fcf;
+  background-color:#ffb8e6;
+  background-image:repeating-linear-gradient(to bottom,#6c5ce0 0 1px,transparent 1px 5px);
+  box-shadow:inset 1px 0 #fdf4ff,inset -1px 0 #7a3f6d;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+}
+
+/* Favorite TileShell cards only: square window frame, hard bevel, pink selected edge. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"]{
+  border:1px solid;
+  border-color:var(--jk-panel-edge);
+  border-radius:0;
+  background-color:#201936;
+  color:#f2ebff;
+  box-shadow:var(--jk-panel-raised);
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"]:hover:not([class~="border-object-selected-border"]){
+  border-color:#ffb8e6;
+  box-shadow:var(--jk-panel-raised);
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"][class~="border-object-selected-border"]{
+  border-color:#ffb8e6;
+  background-color:#3b2c55;
+  box-shadow:var(--jk-panel-raised),0 0 0 1px #ffb8e6;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+  z-index:2;
+}
+
+/* The checked tile selector is intentionally square and pink; its 16px box and hit expansion stay intact. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"]{
+  width:16px;
+  height:16px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background-color:#201936;
+  color:#16112a;
+  box-shadow:inset 1px 1px rgb(253 244 255/.18),inset -1px -1px #16112a;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"]:is([data-checked],[aria-checked="true"]){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  color:#16112a;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"] [data-slot="checkbox-indicator"]{
+  color:#16112a;
+  transition:none;
+}
+
+/* Keep FavoriteCardView's source top-left placement; its own selection/hover states hide the pill. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]){
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#201936;
+  color:#f2ebff;
+  backdrop-filter:none;
+  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]) > span[class*="bg-[var(--status-online)]"]{
+  width:6px;
+  height:6px;
+  border-radius:0;
+  background-color:var(--status-online,#6fe3d3);
+  image-rendering:pixelated;
+}
+
+/* Favorite cards' context menu is square, but card actions keep their existing size and placement. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] button[data-size="icon-sm"]{
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#201936;
+  color:#f2ebff;
+  box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a;
+  transition:none;
+}
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] button[data-size="icon-sm"]:is(:hover,:focus-visible){
+  border-color:#ff7fcf;
+  background:#ffb8e6;
+  color:#16112a;
+}
+
+/* No motion is introduced by this layer; keep hover/selected state changes static for both reducers. */
+@media (prefers-reduced-motion:reduce){
+  .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+    :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"],[data-slot="checkbox"]){
+    animation:none!important;
+    transition:none!important;
+  }
+}
+
+html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"],[data-slot="checkbox"]){
+  animation:none!important;
+  transition:none!important;
+}

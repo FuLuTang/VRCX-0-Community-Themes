@@ -1,0 +1,42 @@
+/* Integration pass: pixel chrome, complete covered icon set, and focal decorations.
+   Prototype only: these selectors must be translated to verified app hooks before shipping. */
+/* Explicit chrome scope: do not change body or html font settings. */
+.nav, .toolbar, .ghead:not(.room), .ct, .statusbar, .udlg .tabs, .table thead, .table .type, .btn, .filter, .qs, .menu, .foot-count, .banner .ph {
+ font-family:"WD Pixel", "WD Pixel CJK", var(--font); font-synthesis:none; font-size:12px; }
+/* User-generated values retain the app's readable font, including room names and friend statuses. */
+.who, .meta, .udlg .nm, .table .sub, .ucard .cb, .ghead.room { font-family:var(--font); font-synthesis:weight style; }
+
+/* Left window has a hanging bunny/bow composition in its empty foot, not another full-area texture. */
+.nav .foot { position: relative; }
+.nav .foot::before { content:""; position:absolute; right:18px; top:-110px; width:48px; height:60px; pointer-events:none;
+ background-color:var(--wd-square); mask:var(--jk-mask-s24) center/48px 60px no-repeat; opacity:.65; }
+.nav-win .wb { background-size: auto; }
+/* Existing table tail becomes a large double-line heart + little sparkles, keeping decoration away from rows. */
+.tail { position:relative; }
+.foot-count + .tail { height:180px; background:transparent; mask:none; -webkit-mask:none; }
+.tail::after { content:""; position:absolute; inset:0; pointer-events:none; background-color:#503364;
+ mask:var(--jk-mask-s22) no-repeat center 16px/96px 84px,
+ var(--jk-mask-s23) no-repeat calc(50% - 84px) 30px/24px 24px,
+ var(--jk-mask-s23) no-repeat calc(50% + 76px) 62px/16px 16px; }
+/* Different window contents: pale accents on empty regions, never semantic colours. */
+.side .list::after { background-color:#795184; opacity:.65; height:126px;
+ mask:var(--jk-mask-s27) no-repeat 25% 24px/96px 48px,
+ var(--jk-mask-s27) no-repeat 75% 60px/72px 36px,
+ var(--jk-mask-s23) no-repeat 68% 12px/16px 16px; }
+/* Wings/cross medallion centred on each frame footer. */
+.tail::before { content:""; position:absolute; left:calc(50% - 32px); top:124px; width:64px; height:24px;
+ background-color:var(--wd-square); mask:var(--jk-mask-s15) center/64px 24px no-repeat; opacity:.75; pointer-events:none; }
+/* Keep the original mint frame footer. Gem heart replaces the title-strip square. */
+.win > .wt::before { background-color:var(--wd-square); width:16px; height:16px;
+ mask:var(--jk-mask-s16) center/16px 16px no-repeat; }
+.win.active > .wt::before { background-color:var(--wd-ink); }
+/* A graphic margin on the detail cards, with scalloped trim using existing original lace. */
+.ucard { position:relative; }
+.ucard .ct { background:linear-gradient(90deg,#412950,#2a2147); }
+.udlg .banner::after { height:12px; }
+.udlg .foot { background-image:var(--jk-bg-dark-s1-s); background-repeat:repeat-x;
+ background-position:left top; background-size:16px 8px; padding-top:16px; }
+/* Contrast fix: decorative translucency must not dim actual status text. */
+:root { --wd-faint:#a294c8; }
+.statusbar .seg-s.dim { opacity:1; color:var(--wd-faint); }
+@media(prefers-reduced-motion:reduce){ *,*::before,*::after {animation:none!important;transition:none!important;} }

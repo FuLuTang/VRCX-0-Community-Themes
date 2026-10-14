@@ -1,0 +1,144 @@
+/* Windose × Jirai: runtime adaptation. No fake DOM, no structural layout replacement. */
+:root { --wd-desktop:#16112a; --wd-window:#201936; --wd-raised:#2a2147;
+ --wd-title:#2f2552; --wd-title-active:#d97fc6; --wd-frame:#6c5ce0;
+ --wd-square:#ffb8e6; --wd-mint:#6fe3d3; --wd-select:#4a3784;
+ --wd-text:#f2ebff; --wd-muted:#b9add9; --wd-faint:#a294c8; --wd-pink:#ff7fcf;
+ /* Shared, slightly raised Win98 panels: light top/left, dark bottom/right. */
+ --jk-panel-edge:#a294c8 #100b1e #100b1e #a294c8;
+ --jk-panel-raised:inset 1px 1px #e3d2f5,inset -1px -1px #4b3a63,1px 1px 0 #100b1e;
+ --jk-button-edge:#6c5ce0; --jk-button-face:#211a33; --jk-button-text:#f2ebff;
+ --jk-button-hover-face:#392a52; --jk-button-hover-text:#fff0fa;
+ --jk-button-default-face:#ffb8e6; --jk-button-default-hover:#f37fc4; --jk-button-default-text:#16112a;
+ --jk-button-danger-edge:#ff6b8a; --jk-button-danger-face:#3d1b35; --jk-button-danger-text:#ffd9e4;
+ --jk-button-bevel:inset 1px 1px rgb(253 244 255/.72),inset -1px -1px rgb(22 17 42/.72);
+ --jk-button-pressed:inset 2px 2px #16112a,inset -1px -1px #fdf4ff;
+ }
+/* Explicit chrome-only font. Preserve user content and user-selected body font. */
+.vrcx-0-titlebar, .vrcx-0-statusbar,
+.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"],
+.vrcx-0-sidebar-surface [data-slot="sidebar-group-label"],
+.vrcx-0-table-header, [data-slot="dialog-title"],
+[data-slot="tabs-tab"] {
+ font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
+ font-synthesis:none; font-size:12px;
+}
+.vrcx-0-app-root { background-color:var(--wd-desktop); }
+.vrcx-0-titlebar { background-color:var(--wd-title); border-bottom:1px solid var(--wd-frame); }
+.vrcx-0-statusbar { background-color:var(--wd-title); border-top:1px solid var(--wd-frame); }
+.vrcx-0-sidebar-surface { background-color:#1e1a3e; border-right:1px solid var(--wd-frame); }
+/* Main-content wallpaper and surface are owned by backgrounds-r7.css. */
+.vrcx-0-side-panel { background-color:#291c3e; border-left:1px solid var(--wd-frame); }
+/* FriendsSidebar ListSectionHeader: actual collapsible button with title, count and chevron.
+   Keep its virtual-row allocation; do not add blocks or alter spacer/row transforms. */
+.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down) {
+ display:flex; /* Block-level flex avoids anonymous inline baseline gaps in measured group rows. */
+ background-color:var(--wd-raised); color:var(--wd-text); border:1px solid var(--wd-frame); border-radius:999px;
+ box-shadow:3px 3px 0 var(--wd-title-active); font-size:12px;
+ font-family:"WD Pixel CJK",var(--vrcx-app-font-family,system-ui); font-synthesis:none;
+}
+.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down)::before {
+ content:""; width:6px; height:6px; flex:none; border-radius:50%; background-color:var(--wd-title-active);
+}
+.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down) > [data-slot="badge"] {
+ background:transparent; border-color:transparent; color:var(--wd-muted); font-family:"WD Pixel CJK",sans-serif;
+}
+.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down):hover { background-color:var(--wd-select); }
+/* R7 owns the visible expanded-nav banner; this base rule keeps only the flex layout roles. */
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::before {
+ display:block; flex:none;
+}
+.vrcx-0-workspace { --vrcx-0-main-content-edge:var(--wd-frame); --vrcx-0-main-content-radius:2px; }
+/* Textures live on existing surfaces, not pseudo-elements already used by wallpaper or resize. */
+/* R6: heart-check texture plus the NSO tutorial-cat fan transcription.
+   The 30px sprite is displayed at integer 2x; the pendant remains motion-r5.css ::after. */
+.vrcx-0-sidebar-surface {
+ /* Leader: the raw tile competes with nav labels; a 70% veil of the surface colour keeps it as texture. */
+ background-image:var(--r5-pixel-mascot),linear-gradient(rgb(30 26 62 / .7),rgb(30 26 62 / .7)),var(--r5-pattern-heart-check);
+ background-repeat:no-repeat,no-repeat,repeat; background-position:left 14px bottom 92px,0 0,0 0; background-size:60px 60px,100% 100%,32px 32px;
+}
+/* The former heart/star main-content image is superseded by backgrounds-r7.css. */
+/* Only the data container is transparent. Sticky header/action surfaces and hover/expanded states stay opaque. */
+.vrcx-0-main-content .vrcx-0-data-table {
+ --vrcx-0-table-surface:var(--wd-window); --vrcx-0-table-header-surface:var(--wd-raised);
+ background-color:transparent; background-image:none;
+}
+.vrcx-0-side-panel { background-image:var(--wd-bg-cloud); background-repeat:no-repeat; background-position:right 20px bottom 24px; background-size:96px 48px; }
+[data-slot="card"] { border-color:var(--wd-frame); border-radius:2px; }
+/* No baked strip behind header text: SVG default dimensions had enlarged the stitch tile. */
+[data-slot="card-header"] { background-image:none; border-bottom:1px dotted #70518f; }
+
+[data-slot="dialog-content"] {
+ border:1px solid var(--wd-frame); border-radius:2px;
+ box-shadow:0 0 0 1px #3d305e,5px 5px 0 rgb(11 7 24 / .55);
+ background-color:var(--wd-window);
+}
+[data-slot="dialog-overlay"] { background-color:rgb(36 18 66 / .62); }
+[data-slot="dialog-title"] { color:var(--wd-text); }
+[data-slot="button"], [data-slot="select-trigger"] { border-radius:2px; } /* [data-slot="input"] radius: owned by the generic field rule in fields-toolbar-r10.css (login-r8 keeps 2px) */
+[data-slot="button"]:focus-visible { outline:2px dashed var(--wd-pink); outline-offset:2px; }
+[data-slot="tabs-tab"][data-active] { background-color:var(--wd-pink); color:#16112a; }
+/* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] { position:relative; }
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {
+ content:""; position:absolute; z-index:1; pointer-events:none;
+ mask-image:var(--jk-mask-s4),var(--jk-mask-s4);
+ mask-position:left top,right top; mask-repeat:repeat-y,repeat-y;
+}
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::after {
+ content:""; position:absolute; inset:auto 0 0; z-index:1; pointer-events:none;
+ mask:var(--jk-mask-s2) left bottom/10px 6px repeat-x;
+}
+/* Inline decorative heart sits in the real tabs row; no clipped negative-bottom pseudo-element. */
+.entity-dialog [data-slot="tabs-list"][class~="h-11"]::before {
+ content:""; display:block; width:16px; height:16px; flex:none; margin:0 4px 0 8px; pointer-events:none;
+ background-color:var(--wd-square); mask:var(--jk-mask-s16) center/16px 16px no-repeat;
+}
+/* A custom VRChat icon frame remains a separate application-owned node; remove theme avatar borders/rings. */
+.entity-dialog [data-slot="card-header"] div.absolute.bottom-3.left-3 [data-slot="button"]:not(.border-0) {
+ border-color:transparent; border-radius:0; border-width:0; box-shadow:none; outline:none;
+}
+.entity-dialog [data-slot="card-header"] div.absolute.bottom-3.left-3 [data-slot="button"]:not(.border-0) img { border-radius:0; clip-path:var(--wd-avatar-cut); }
+/* Image-only pixel cuts: preserve external decoration nodes and keep avatar shells free of theme rings. */
+:root {
+ --wd-avatar-cut:polygon(37.5% 0,62.5% 0,62.5% 3.125%,71.875% 3.125%,71.875% 6.25%,78.125% 6.25%,78.125% 9.375%,81.25% 9.375%,81.25% 12.5%,84.375% 12.5%,84.375% 15.625%,87.5% 15.625%,87.5% 18.75%,90.625% 18.75%,90.625% 21.875%,93.75% 21.875%,93.75% 28.125%,96.875% 28.125%,96.875% 37.5%,100% 37.5%,100% 62.5%,96.875% 62.5%,96.875% 71.875%,93.75% 71.875%,93.75% 78.125%,90.625% 78.125%,90.625% 81.25%,87.5% 81.25%,87.5% 84.375%,84.375% 84.375%,84.375% 87.5%,81.25% 87.5%,81.25% 90.625%,78.125% 90.625%,78.125% 93.75%,71.875% 93.75%,71.875% 96.875%,62.5% 96.875%,62.5% 100%,37.5% 100%,37.5% 96.875%,28.125% 96.875%,28.125% 93.75%,21.875% 93.75%,21.875% 90.625%,18.75% 90.625%,18.75% 87.5%,15.625% 87.5%,15.625% 84.375%,12.5% 84.375%,12.5% 81.25%,9.375% 81.25%,9.375% 78.125%,6.25% 78.125%,6.25% 71.875%,3.125% 71.875%,3.125% 62.5%,0 62.5%,0 37.5%,3.125% 37.5%,3.125% 28.125%,6.25% 28.125%,6.25% 21.875%,9.375% 21.875%,9.375% 18.75%,12.5% 18.75%,12.5% 15.625%,15.625% 15.625%,15.625% 12.5%,18.75% 12.5%,18.75% 9.375%,21.875% 9.375%,21.875% 6.25%,28.125% 6.25%,28.125% 3.125%,37.5% 3.125%);
+ --wd-avatar-cut-sm:polygon(31.25% 0%,68.75% 0%,68.75% 6.25%,81.25% 6.25%,81.25% 12.5%,87.5% 12.5%,87.5% 18.75%,93.75% 18.75%,93.75% 25%,93.75% 31.25%,100% 31.25%,100% 37.5%,100% 43.75%,100% 50%,100% 56.25%,100% 62.5%,100% 68.75%,93.75% 68.75%,93.75% 75%,93.75% 81.25%,87.5% 81.25%,87.5% 87.5%,81.25% 87.5%,81.25% 93.75%,68.75% 93.75%,68.75% 100%,31.25% 100%,31.25% 93.75%,18.75% 93.75%,18.75% 87.5%,12.5% 87.5%,12.5% 81.25%,6.25% 81.25%,6.25% 75%,6.25% 68.75%,0 68.75%,0 62.5%,0 56.25%,0 50%,0 43.75%,0 37.5%,0 31.25%,6.25% 31.25%,6.25% 25%,6.25% 18.75%,12.5% 18.75%,12.5% 12.5%,18.75% 12.5%,18.75% 6.25%,31.25% 6.25%);
+}
+[data-slot="avatar"] { border-radius:0; background:transparent; box-shadow:none; outline:none; }
+[data-slot="avatar-image"], [data-slot="avatar-fallback"] { border-radius:0; clip-path:var(--wd-avatar-cut-sm); border-width:0; box-shadow:none; outline:none; }
+[data-slot="avatar"][data-size="lg"] > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) { clip-path:var(--wd-avatar-cut); }
+[data-slot="avatar"]::after { border-color:transparent; border-width:0; }
+[data-slot="avatar"]::before { content:none; }
+.vrcx-0-side-panel span:has(>span[class~="size-3.75"]) > span.overflow-hidden,
+.vrcx-0-data-table span:has(>span[class~="size-3.75"]) > span.overflow-hidden { border-radius:0; clip-path:var(--wd-avatar-cut-sm); border-color:transparent; border-width:0; box-shadow:none; outline:none; }
+.vrcx-0-side-panel span[class~="size-3.75"],
+.vrcx-0-side-panel span[class~="size-3.75"] > span { border-radius:0; }
+/* R3: use the real application titlebar; no duplicate heading in the main view. */
+.vrcx-0-side-panel::before { content:"SOCIAL"; display:block; flex:none; min-height:24px; padding:3px 10px;
+ font:12px/18px "WD Pixel",sans-serif; color:var(--wd-muted); background-color:var(--wd-title); border-bottom:1px solid var(--wd-frame); }
+/* R3 lace is outside and above the real footer; no inside-bar background strip. */
+
+/* Preserve native control interaction; only change their arrow/clock artwork. */
+/* native <select>: generic rule lives in form-controls-r9.css (same chevron art, applies in every context). */
+.vrcx-0-app-root input[type="time"]::-webkit-calendar-picker-indicator {
+ background-image:var(--wd-native-clock); background-size:16px 16px; background-position:center; background-repeat:no-repeat;
+}
+.entity-json-view-collapse::after, .entity-json-view-expand::after, .entity-json-view-collapsed::after {
+ content:""; display:inline-block; width:12px; height:12px; vertical-align:middle; background-color:currentColor; mask:var(--wd-icon-chevron) center/contain no-repeat;
+}
+.entity-json-view-expand::after { mask-image:var(--wd-icon-right); }
+.entity-json-view-collapsed::after { mask-image:var(--wd-icon-ellipsis); }
+/* Accessibility/VRChat status masks and data-driven charts intentionally retain semantic artwork. */
+.vrcx-0-app-root ::selection { background-color:var(--wd-pink); color:#16112a; }
+/* R6: preserve the 2x cat in normal windows; hide only the tall pendant.
+   Very short windows cannot spare 60px below the navigation items. */
+@media(max-height:880px) {
+ .vrcx-0-sidebar-surface::after { display:none; }
+}
+@media(max-height:680px) {
+ .vrcx-0-sidebar-surface { background-image:linear-gradient(rgb(30 26 62 / .7),rgb(30 26 62 / .7)),var(--r5-pattern-heart-check); background-size:100% 100%,32px 32px; background-position:0 0,0 0; background-repeat:no-repeat,repeat; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .vrcx-0-app-root *, .vrcx-0-app-root *::before, .vrcx-0-app-root *::after {
+ animation:none !important; transition:none !important;
+ }
+}

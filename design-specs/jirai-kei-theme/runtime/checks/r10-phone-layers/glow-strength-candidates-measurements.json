@@ -1,0 +1,139 @@
+{
+  "schema": "r10-glow-strength-candidates/measurements@1",
+  "generatedBy": "/tmp/r10-glow-fixture/render.mjs - Playwright chromium, real CSS multi-layer composite (phone-front > glow > char-back, image-rendering:pixelated, 1 cell = 1 css px)",
+  "fixture": "320px wide panel #201936 with the 24x21 canvas anchored like .vrcx-0-side-panel::after (right:84px, top:40px)",
+  "crop": "24x21 css px: x 0..23 (20-cell head plus the phone column) x y 0..20",
+  "metric": "adjacent-frame diff, sum of |delta| over R,G,B divided by (W*H*3)",
+  "baselineReference": "the r4 audit reported meanAbsRgbDelta 1.324 and maxChannelDelta 18 for the shipping glow; this fixture reproduces 1.313 and 18 on the same 24x21 crop",
+  "centreOfHead": {
+    "off": {
+      "rgb": [
+        239,
+        228,
+        248
+      ],
+      "hex": "#efe4f8"
+    },
+    "c1-dim": {
+      "rgb": [
+        238,
+        232,
+        249
+      ],
+      "hex": "#eee8f9"
+    },
+    "c1-bright": {
+      "rgb": [
+        237,
+        235,
+        251
+      ],
+      "hex": "#edebfb"
+    },
+    "c2-dim": {
+      "rgb": [
+        237,
+        231,
+        249
+      ],
+      "hex": "#ede7f9"
+    },
+    "c2-bright": {
+      "rgb": [
+        232,
+        236,
+        252
+      ],
+      "hex": "#e8ecfc"
+    },
+    "c3-dim": {
+      "rgb": [
+        234,
+        230,
+        250
+      ],
+      "hex": "#eae6fa"
+    },
+    "c3-bright": {
+      "rgb": [
+        225,
+        234,
+        253
+      ],
+      "hex": "#e1eafd"
+    }
+  },
+  "dpr1": {
+    "dimVsBright": {
+      "c1": {
+        "changedPixels": 140,
+        "cropPixels": 504,
+        "meanAbsRgbDelta": 1.313,
+        "maxChannelDelta": 18
+      },
+      "c2": {
+        "changedPixels": 194,
+        "cropPixels": 504,
+        "meanAbsRgbDelta": 4.337,
+        "maxChannelDelta": 59
+      },
+      "c3": {
+        "changedPixels": 207,
+        "cropPixels": 504,
+        "meanAbsRgbDelta": 4.775,
+        "maxChannelDelta": 62
+      }
+    },
+    "offVsBright": {
+      "c1": {
+        "changedPixels": 142,
+        "cropPixels": 504,
+        "meanAbsRgbDelta": 3.077,
+        "maxChannelDelta": 146
+      },
+      "c3": {
+        "changedPixels": 209,
+        "cropPixels": 504,
+        "meanAbsRgbDelta": 5.869,
+        "maxChannelDelta": 146
+      }
+    }
+  },
+  "dpr2": {
+    "dimVsBright": {
+      "c1": {
+        "changedPixels": 560,
+        "cropPixels": 2016,
+        "meanAbsRgbDelta": 1.313,
+        "maxChannelDelta": 18
+      },
+      "c2": {
+        "changedPixels": 776,
+        "cropPixels": 2016,
+        "meanAbsRgbDelta": 4.337,
+        "maxChannelDelta": 59
+      },
+      "c3": {
+        "changedPixels": 828,
+        "cropPixels": 2016,
+        "meanAbsRgbDelta": 4.775,
+        "maxChannelDelta": 62
+      }
+    },
+    "offVsBright": {
+      "c1": {
+        "changedPixels": 568,
+        "cropPixels": 2016,
+        "meanAbsRgbDelta": 3.077,
+        "maxChannelDelta": 146
+      },
+      "c3": {
+        "changedPixels": 836,
+        "cropPixels": 2016,
+        "meanAbsRgbDelta": 5.869,
+        "maxChannelDelta": 146
+      }
+    }
+  },
+  "note": "DPR1 and DPR2 agree exactly (1.313 / 4.337 / 4.775): the sprite is drawn with image-rendering:pixelated, so no resampling is involved."
+}

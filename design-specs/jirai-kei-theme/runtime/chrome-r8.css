@@ -1,0 +1,149 @@
+/* R8 chrome pass. Append after window-chrome.css and navigation-r7.css.
+   Scope is paint only: preserve titlebar/statusbar dimensions, all app status fills,
+   statusbar ::before lace geometry/animation, and application-owned RGB ::after. */
+:root {
+    --r8-ink: #21132d;
+    --r8-frame: #d97fc6;
+    --r8-face: #f8c6e3;
+    --r8-face-hi: #fff1f8;
+    --r8-face-low: #b86ba4;
+    --r8-hover: #ffe3f2;
+    --r8-pressed: #f3add9;
+    --r8-status-face: #f9d1e7;
+    --r8-lace-fill: var(--r8-status-face);
+    --r8-lace-tile: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxwYXRoIGZpbGw9IiNmOWQxZTciIGQ9Ik0wIDBoMjB2MmgtMjB6TTAgMmg1djFoLTV6TTcgMmg2djFoLTZ6TTE1IDJoNXYxaC01ek0xIDNoM3YxaC0zek04IDNoMXYxaC0xek0xMSAzaDF2MWgtMXpNMTYgM2gzdjFoLTN6TTMgNGgxdjFoLTF6TTE2IDRoMXYxaC0xek00IDVoMXYxaC0xek03IDVoMXYxaC0xek0xMiA1aDF2MWgtMXpNMTUgNWgxdjFoLTF6TTggNmgxdjFoLTF6TTExIDZoMXYxaC0xeiIvPjxwYXRoIGZpbGw9IiNkOTdmYzYiIGQ9Ik01IDJoMnYxaC0yek0xMyAyaDJ2MWgtMnpNMCAzaDF2MWgtMXpNNCAzaDF2MmgtMXpNNyAzaDF2MmgtMXpNOSAzaDJ2MWgtMnpNMTIgM2gxdjJoLTF6TTE1IDNoMXYyaC0xek0xOSAzaDF2MWgtMXpNMSA0aDJ2MWgtMnpNOCA0aDF2MmgtMXpNMTEgNGgxdjJoLTF6TTE3IDRoMnYxaC0yek0zIDVoMXYyaC0xek01IDVoMnYyaC0yek0xMyA1aDJ2MmgtMnpNMTYgNWgxdjJoLTF6TTQgNmgxdjFoLTF6TTcgNmgxdjFoLTF6TTkgNmgydjJoLTJ6TTEyIDZoMXYxaC0xek0xNSA2aDF2MWgtMXpNOCA3aDF2MWgtMXpNMTEgN2gxdjFoLTF6Ii8+PC9zdmc+");
+    --r8-close-face: #b0305f;
+    --r8-close-ink: #fff1f8;
+}
+
+/* Titlebar frame uses the same pink edge at both ends. The app owns the 32px geometry. */
+.vrcx-0-titlebar[data-app-titlebar] {
+    background-color: var(--r8-frame);
+    color: var(--r8-ink);
+}
+
+/* Square outer corners across brand/help, middle actions, and native window controls. */
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']) {
+    box-sizing: border-box;
+    border-radius: 0;
+    transition: none;
+}
+
+/* Left plate and right window buttons share one face, 1px ink frame, and Win95 bevel. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'],
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'],
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'][class*='destructive'] {
+    background-color: var(--r8-face);
+    background-image: none;
+    border: 1px solid var(--r8-ink);
+    color: var(--r8-ink);
+    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
+        inset -1px -1px 0 var(--r8-face-low);
+}
+
+/* Keep the existing quick-search hit area; align its frame and face with the plates. */
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] {
+    background-color: var(--r8-face);
+    border-color: var(--r8-ink);
+    border-radius: 0;
+    color: var(--r8-ink);
+    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
+        inset -1px -1px 0 var(--r8-face-low);
+}
+
+/* Mid-bar icon actions stay flat at rest, but share the same square interaction language. */
+.vrcx-0-titlebar[data-app-titlebar] button:not([class~='w-9'][class~='rounded-none'][class~='border-0']) {
+    border-radius: 0;
+    transition: none;
+}
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):is(
+    :hover,
+    [aria-expanded='true'],
+    [aria-pressed='true'],
+    [data-popup-open]
+) {
+    background-color: var(--r8-hover) !important;
+    border-color: var(--r8-ink);
+    color: var(--r8-ink) !important;
+    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
+        inset -1px -1px 0 var(--r8-face-low);
+}
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):active {
+    background-color: var(--r8-pressed) !important;
+    box-shadow: inset 1px 1px 0 var(--r8-face-low),
+        inset -1px -1px 0 var(--r8-face-hi);
+}
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):focus-visible {
+    outline: 2px solid var(--r8-ink);
+    outline-offset: -3px;
+}
+/* Keep the destructive close action legible and semantically distinct on hover/press. */
+.vrcx-0-titlebar[data-app-titlebar] button[class*='destructive']:is(:hover, :active) {
+    background-color: var(--r8-close-face) !important;
+    border-color: var(--r8-ink);
+    color: var(--r8-close-ink) !important;
+    box-shadow: inset 1px 1px 0 rgb(255 241 248 / 0.55),
+        inset -1px -1px 0 rgb(72 12 39 / 0.5);
+}
+
+/* Footer becomes a recessed sibling of the R7 menu panel. Reserve right-side cat space;
+   no pseudo-element is claimed here, so a later task can own footer::after. */
+.vrcx-0-sidebar-surface [data-sidebar='footer'] {
+    background-color: #211a33;
+    border: 1px solid #4b3a63;
+    border-radius: 0;
+    padding-block: 7px;
+    box-shadow: inset 1px 1px 0 #120d20,
+        inset -1px -1px 0 #4b3a63,
+        inset 0 2px 0 #3f2c50;
+}
+[data-slot='sidebar'][data-state='expanded'] .vrcx-0-sidebar-surface [data-sidebar='footer'] {
+    box-sizing: border-box;
+    padding-inline-end: 32px;
+}
+
+/* Statusbar and lace share the measured R8.2 cloth color; keep its 1px border box. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] {
+    background-color: var(--r8-status-face);
+    border-top-color: var(--r8-status-face);
+    color: var(--r8-ink);
+}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] > div[class~='min-h-6'][class~='flex-col'] {
+    background-color: var(--r8-status-face);
+    box-shadow: none;
+}
+/* B · library s2 fan-lace pixels, flipped up and reduced to the existing 8px strip.
+   The pseudo box geometry is untouched; only its two-color repeat paint is replaced. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before {
+    background-color: transparent;
+    background-image: var(--r8-lace-tile);
+    background-repeat: repeat-x;
+    background-position: 0 center;
+    background-size: 20px 8px;
+    image-rendering: pixelated;
+    -webkit-mask: none;
+    mask: none;
+}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(
+    [class*='text-content-'],
+    [class*='text-muted-foreground']
+) {
+    color: var(--r8-ink);
+}
+/* Preserve each semantic lamp fill; the existing 1px square outline only gains ink. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'] {
+    border-color: var(--r8-ink);
+}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button']):hover,
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button'])[aria-expanded='true'] {
+    background-color: var(--r8-hover);
+    color: var(--r8-ink);
+}
+
+/* No new motion or ornamental pseudo-elements are introduced by R8. */
+@media (prefers-reduced-motion: reduce) {
+    .vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']),
+    .vrcx-0-sidebar-surface [data-sidebar='footer'] {
+        transition: none !important;
+    }
+}

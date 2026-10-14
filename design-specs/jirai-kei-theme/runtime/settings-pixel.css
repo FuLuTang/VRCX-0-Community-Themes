@@ -1,0 +1,83 @@
+/* ==========================================================================
+   R4 · settings-page pixel components (independent sub-task).
+   Scope: the settings rail and settings cards are limited to the settings page,
+   identified structurally as the vertical Tabs that is a DIRECT child of the page
+   scaffold (.vrcx-0-page-scaffold > [data-slot=tabs]) — SettingsPage.tsx:67-77;
+   ToolsPageContent.tsx:817 nests its Tabs in a grid div, SidePanel.tsx:389 is not
+   inside a scaffold. (Was: the style class w-44 on the TabsList.) Switch / segmented group / number
+   stepper are global control primitives by design (see research notes).
+   Evidence: SSR dump checks/r4-settings-pixel/ssr-probe.txt,
+   switch.tsx:19/26, toggle-group.tsx:34-42, number-field.tsx:50-102,
+   SettingsCard.tsx:50-97, card.tsx / collapsible.tsx / tabs.tsx data-slots.
+   Artwork: inline data: URIs plus the existing --jk-mask-* set (jirai-assets.css).
+   No imports, no remote URL, no fabricated DOM, no layout/virtual-row changes.
+   ========================================================================== */
+:root{
+ --jk-px-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px));
+}
+
+/* (7) Switch: removed by Leader — user chose concept C (heart / bandage-X knobs);
+   the single Switch implementation lives in runtime/pixel-controls.css. */
+
+/* --------------------------------------------------------------------------
+   (7) Number stepper ("− 60 +"): sunken pixel value slot + two bevel squares.
+   data-slot=number-field-group/-input/-decrement/-increment (number-field.tsx).
+   The lucide −/+ is replaced by an 8x8 native-size pixel glyph mask.
+   -------------------------------------------------------------------------- */
+[data-slot=number-field-group]{border:1px solid #16112a;border-radius:0;background-color:#120d22;box-shadow:inset 1px 1px rgb(0 0 0/.55),inset -1px -1px #8f7fe0;clip-path:var(--jk-px-cut)}
+[data-slot=number-field-group]:focus-within{outline:2px solid #ff7fcf;outline-offset:1px}
+[data-slot=number-field-decrement]:focus-visible,[data-slot=number-field-increment]:focus-visible{outline:2px solid #16112a;outline-offset:-2px}
+[data-slot=number-field-input]{height:20px;line-height:20px;padding:0 6px;background-color:transparent;color:#f2ebff;font-size:12px}
+[data-slot=number-field-decrement],[data-slot=number-field-increment]{width:20px;height:20px;padding:0;border:0;border-radius:0;background-color:#cdb0e8;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+[data-slot=number-field-decrement]:hover,[data-slot=number-field-increment]:hover{background-color:#e3cbf2}
+[data-slot=number-field-decrement]:active,[data-slot=number-field-increment]:active{box-shadow:inset 2px 2px #7a3f6d,inset -2px -2px #fdf4ff}
+[data-slot=number-field-decrement] > svg,[data-slot=number-field-increment] > svg{display:none}
+[data-slot=number-field-decrement]::before,[data-slot=number-field-increment]::before{content:"";position:absolute;width:8px;height:8px;background-color:#16112a;pointer-events:none;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23000' d='M2 3h4v2H2z'/%3E%3C/svg%3E") 0 0/8px 8px no-repeat}
+[data-slot=number-field-increment]::before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23000' d='M2 3h4v2H2zM3 2h2v4H3z'/%3E%3C/svg%3E")}
+
+/* --------------------------------------------------------------------------
+   (6)④ Segmented groups (SettingsField SegmentedPreference => ToggleGroup
+   variant="outline" size="sm", toggle-group.tsx:34-42, SettingsField.tsx:175-198).
+   Unselected = dark sunken face, selected = light pink face + 1px ink frame +
+   bevel + dark text, both with hover feedback. tooltip-trigger is included
+   because TooltipTrigger overrides data-slot (tooltip.tsx:27,
+   ToolbarControls.tsx:350 wraps a ToggleGroupItem).
+   -------------------------------------------------------------------------- */
+[data-slot=toggle-group][data-variant=outline]{border:1px solid #16112a;border-radius:0;background-color:#201936;gap:0;clip-path:var(--jk-px-cut)}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]){border:0;border-radius:0;background-color:#201936;color:#b9add9;box-shadow:inset 1px 1px rgb(0 0 0/.5),inset -1px -1px #8f7fe0}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])::before{border-radius:0}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):hover{background-color:#4a3784;color:#f2ebff;box-shadow:inset 1px 1px #8f7fe0,inset -1px -1px rgb(0 0 0/.5)}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])[data-pressed]{background-color:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d,inset 0 0 0 1px #16112a}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]{width:2px;background-color:#16112a}
+[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]::before{display:none}
+
+/* --------------------------------------------------------------------------
+   (6)① Settings rail (系统/界面/社交…) as a pixel window list.
+   -------------------------------------------------------------------------- */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px 3px 12px;gap:1px;border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;clip-path:var(--jk-px-cut)}
+/* Lace fringe inside the rail's bottom padding. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]::after{content:"";position:absolute;left:3px;right:3px;bottom:2px;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
+/* The app's sliding indicator would double the selected face; the app already
+   hides it this way in SidePanel.tsx:502. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tab-indicator]{display:none}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]{border:1px solid transparent;border-radius:0;background-color:transparent;color:#b9add9;box-shadow:none}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab] .lucide{color:inherit;opacity:1}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:hover{background-color:#4a3784;border-color:#6c5ce0;color:#f2ebff}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]{background-color:#ffb8e6;border-color:#16112a;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]:focus-visible{outline-color:#16112a}
+
+/* --------------------------------------------------------------------------
+   (6)②③ Settings cards: pixel window title bar + bow charm + lace, and
+   stair-stepped corners instead of right angles. SettingsCard.tsx:50-97.
+   -------------------------------------------------------------------------- */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card]{border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-content]{border-radius:0}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
+/* 24x16 bow charm at its native 1:1 size. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);width:24px;height:16px;background-color:#ffb8e6;pointer-events:none;mask:var(--jk-mask-s6) 0 0/24px 16px no-repeat}
+/* Lace fringe hangs inside the title bar's 10px bottom padding, below the text. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}

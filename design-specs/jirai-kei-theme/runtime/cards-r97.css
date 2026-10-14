@@ -1,0 +1,30 @@
+/* R9.7 Q3+Q4 · pixel cards (Settings + Tools) and outward-hanging lace.
+   Tools reuses SettingsCard (ToolsPageContent.tsx:456-476, anchor [data-tools-section]); its rail is the
+   vertical Tabs right before the card column (:816-845). Lace head hangs on the OUTER edge of the frame
+   line, tails outward. Charm = --jk-r97-card-charm (Q5 #3 pill, original-assets/r97-charm/cand-3-pill.svg,
+   16x8 multi-colour, 1:1 centred in the 24x16 box). Lace = --jk-r97-lace-px, native 16x8 grid. */
+:root{
+ --jk-r97-card-charm:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8' shape-rendering='crispEdges'><path fill='%2316112a' d='M2 0h12v1H2M1 1h1v1H1M8 1h1v6H8M14 1h1v1H14M0 2h1v4H0M15 2h1v4H15M1 6h1v1H1M14 6h1v1H14M2 7h12v1H2'/><path fill='%23ff7fcf' d='M2 1h1v1H2M5 1h3v1H5M1 2h1v1H1M3 2h5v1H3M1 3h7v2H1M1 5h6v1H1'/><path fill='%23fdf4ff' d='M3 1h2v1H3M9 1h5v4H9M2 2h1v1H2M9 5h4v1H9'/><path fill='%23cdb0e8' d='M14 2h1v3H14M13 5h2v1H13M9 6h5v1H9'/><path fill='%23d97fc6' d='M7 5h1v1H7M2 6h6v1H2'/></svg>");
+ --jk-r97-lace-px:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8' shape-rendering='crispEdges'><path d='M0 0h16v3H0M1 3h14v1H1M1 4h6v1H1M9 4h6v1H9M2 5h5v1H2M9 5h5v1H9M3 6h10v1H3M5 7h6v1H5'/></svg>");
+ --jk-r97-lace:var(--jk-r97-lace-px) 0 0/16px 8px repeat-x;
+ --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
+}
+/* Rails: keep the stair corners, open an 8px strip under the bottom edge, hang the lace there. */
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+/* settings-pixel.css:57 padded the rail bottom to 12px for the old in-frame lace; back to the 3px of its other sides. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+/* Tools cards: same face as Settings (settings-pixel.css:74-78). */
+[data-tools-section] [data-slot=card]{position:relative;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
+[data-tools-section] [data-slot=card]::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid #6c5ce0;pointer-events:none}
+[data-tools-section] [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
+[data-tools-section] [data-slot=card-content]{border-radius:0}
+[data-tools-section] [data-slot=card-content] .rounded-b-xl{border-radius:0}
+[data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
+[data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
+/* Charm (both pages): 24x16 box, position unchanged; top floored to whole px. Multi-colour, so no mask. */
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);top:round(down,50% - 8px,1px);width:24px;height:16px;pointer-events:none;mask:none;background:var(--jk-r97-card-charm) center/16px 8px no-repeat;image-rendering:pixelated}
+/* Title-bar lace: head on the bar's bottom line, tails into the card body (inside the card clip). */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:none}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]{position:relative;z-index:1}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]::after{content:"";position:absolute;left:0;right:0;top:calc(100% + 1px);height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}

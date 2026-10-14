@@ -1,0 +1,418 @@
+/* R10-G4 · pixel language for dense data, lists and page surfaces.
+   Source anchors: ui/shadcn/table.tsx:20-76, components/data-table/DataTableView.tsx:306-360,
+   ui/shadcn/empty.tsx:5-98, calendar.tsx:115-157/219-240, resizable.tsx:25-44,
+   and G4 page rows in checks/r9-coverage-audit/coverage-table.md.
+   Paint-only on virtual/compact rows: do not alter their height, padding, position, or hit-area. */
+
+/* Data-table-only palette; do not leak table tokens into unrelated page surfaces. */
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) {
+  --vrcx-0-table-header-surface: var(--wd-raised);
+  --vrcx-0-table-header-foreground: var(--wd-text);
+  --vrcx-0-table-row-hover-surface: #302650;
+  --vrcx-0-table-row-selected-surface: var(--wd-select);
+  --vrcx-0-table-row-selected-hover-surface: #58458f;
+  --vrcx-0-table-row-expanded-surface: #332650;
+  --vrcx-0-table-row-striped-surface: #241b3c;
+  --vrcx-0-table-border: var(--wd-frame);
+  --vrcx-0-table-divider: #51436d;
+  --vrcx-0-table-striped-divider: #49385f;
+  --vrcx-0-table-sticky-edge: var(--wd-frame);
+  --vrcx-0-table-row-focus: var(--wd-pink);
+}
+
+/* Sticky table header: keep its existing pixel font, height, sticky position and cell sizing. */
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is(.vrcx-0-table-header, [data-slot="table-header"]) {
+  color: var(--wd-text);
+  background-color: var(--wd-raised);
+  border-bottom-color: #70518f;
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-header"] > tr {
+  border-bottom-style: dotted;
+  border-bottom-color: #70518f;
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-head"] {
+  color: var(--wd-text);
+  border-bottom-color: #70518f;
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-footer"] {
+  border-top-style: dotted;
+  border-top-color: #70518f;
+  border-radius: 0;
+  background-color: var(--wd-raised);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-caption"] {
+  color: var(--wd-muted);
+}
+
+/* Selected rows echo the sidebar's pixel selection: pale violet field + 3px pink left edge.
+   The gradient is paint-only; no table-column width or virtual-row height is added. */
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row]):hover:where(:not([data-state="selected"]):not([data-state="expanded"]):not(:has([aria-expanded="true"]))) {
+  background-color: var(--vrcx-0-table-row-hover-surface);
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-row"][data-state="selected"],
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-vrcx-0-table-row][data-state="selected"] {
+  background-color: var(--wd-select);
+  background-image: linear-gradient(to right, var(--wd-square) 0 3px, transparent 3px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-row"][data-state="selected"] > [data-slot="table-cell"]:first-child,
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-vrcx-0-table-row][data-state="selected"] > [data-slot="table-cell"]:first-child {
+  box-shadow: inset 3px 0 var(--wd-square);
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-row"][data-state="selected"]:hover,
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-vrcx-0-table-row][data-state="selected"]:hover {
+  background-color: var(--vrcx-0-table-row-selected-hover-surface);
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row]):has([aria-expanded="true"]),
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row])[data-state="expanded"] {
+  background-color: var(--vrcx-0-table-row-expanded-surface);
+}
+:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row]):focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -2px;
+}
+
+/* Empty states get a quiet dashed pixel frame; LoadingState is explicitly left to loader-r9. */
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) {
+  border-radius: 0;
+  border-color: #70518f;
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-header"] {
+  border-bottom: 1px dotted #70518f;
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-icon"][data-variant="icon"] {
+  border: 1px solid var(--wd-frame);
+  border-radius: 0;
+  background: var(--wd-raised);
+  color: var(--wd-square);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .16), inset -1px -1px #16112a;
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-title"] {
+  color: var(--wd-text);
+  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
+  font-synthesis: none;
+  text-wrap: pretty;
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] {
+  color: var(--wd-muted);
+  text-wrap: pretty;
+}
+
+/* Calendar lives in the main surface or a date-picker popover (not modal/dialog content). */
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) {
+  border-radius: 0;
+  background-color: var(--wd-window);
+  color: var(--wd-text);
+  box-shadow: inset 0 0 0 1px var(--wd-frame);
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-slot="calendar-month-caption"],
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) .text-sm.font-medium {
+  color: var(--wd-text);
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day] {
+  border-radius: 0;
+  color: var(--wd-text);
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day][data-selected-single="true"],
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day][data-range-start="true"],
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day][data-range-end="true"] {
+  border-radius: 0;
+  background-color: var(--wd-square);
+  color: #16112a;
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day][data-range-middle="true"] {
+  border-radius: 0;
+  background-color: var(--wd-select);
+  color: var(--wd-text);
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) td[data-today="true"] > [data-day]:not([data-selected-single="true"]):not([data-range-start="true"]):not([data-range-end="true"]) {
+  outline: 1px dashed var(--wd-pink);
+  outline-offset: -2px;
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -2px;
+}
+:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day]:is(:disabled, [aria-disabled="true"]) {
+  color: var(--wd-faint);
+  opacity: .55;
+}
+
+/* Resize grip: use the existing pseudo hit-strip; keep separator dimensions and focus geometry intact.
+   Favorites owns its splitter via favorites-r9; exclude its group ID and the favorites-body decoy host. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"] {
+  background-color: var(--wd-frame);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 16px;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, var(--wd-square) 0 2px, transparent 2px 4px);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"][aria-orientation="horizontal"]::before {
+  width: 16px;
+  height: 3px;
+  background: repeating-linear-gradient(to right, var(--wd-square) 0 2px, transparent 2px 4px);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: 1px;
+}
+
+/* Card footers: dotted separator, but preserve Card's slot padding and child flow. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="card-footer"] {
+  border-top-style: dotted;
+  border-top-color: #70518f;
+  border-radius: 0;
+  background-color: var(--wd-raised);
+  color: var(--wd-text);
+}
+
+/* TileShell consumers owned by G4: MediaAssetTile (gallery/inventory) and MyGroupCard only.
+   Favorites TileShell and .object-row consumers (favorites/browse-history) remain untouched;
+   My Avatars has its separate controls-r9 selector and is intentionally not matched here. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"],
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"] {
+  border-radius: 0;
+  border-color: var(--jk-panel-edge);
+  background-color: var(--wd-window);
+  color: var(--wd-text);
+  box-shadow: var(--jk-panel-raised);
+  transition: border-color 100ms steps(2, end), background-color 100ms steps(2, end), box-shadow 100ms steps(2, end);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"]:hover,
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"]:hover {
+  border-color: var(--wd-pink);
+  background-color: var(--wd-raised);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"][class~="ring-2"],
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"][class~="ring-2"] {
+  --tw-ring-color: var(--wd-square);
+  border-color: var(--wd-pink);
+  background-color: var(--wd-select);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"]:focus-visible,
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -2px;
+}
+
+/* Feed columns: square, opaque Windose panel + compact title band. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) .group\/feed-column {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background-color: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), inset -1px -1px #16112a, 2px 2px 0 #100b1e;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) .group\/feed-column-header {
+  border-bottom: 1px dotted #70518f;
+  background-color: var(--wd-raised);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) .group\/feed-column-header [class~="rounded-sm"] {
+  border-color: #70518f;
+  border-radius: 0;
+  background-color: #201936;
+  color: var(--wd-muted);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) .group\/feed-column .feed-column-row-new::after {
+  background-color: #f2c6e8;
+  animation-timing-function: steps(4, end);
+}
+
+/* Drag/drop is a Feed-only transient overlay; make its targets crisp without changing area/hit targets. */
+:where(.vrcx-0-main-content) [data-testid="feed-image-drop-overlay"] {
+  border-radius: 0;
+  background-color: rgb(22 17 42 / .88);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+:where(.vrcx-0-main-content) [data-testid="feed-image-drop-overlay"] [data-drop-target] {
+  border-radius: 0;
+  border-color: #70518f;
+  background-color: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), inset -1px -1px #16112a;
+}
+:where(.vrcx-0-main-content) [data-testid="feed-image-drop-overlay"] [data-drop-target]:hover {
+  border-color: var(--wd-pink);
+  background-color: var(--wd-select);
+}
+
+/* Friend location cards and their revealed action tray; no card padding or density changes. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] {
+  border-radius: 0;
+  border-color: var(--jk-panel-edge);
+  background-color: var(--wd-window);
+  box-shadow: var(--jk-panel-raised);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"]:hover,
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"]:focus-visible {
+  border-color: var(--wd-pink);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -3px;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] > [data-dim-exempt] {
+  border: 1px solid var(--wd-frame);
+  border-radius: 0;
+  background: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), 2px 2px 0 #100b1e;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] > [data-dim-exempt] [data-slot="button"] {
+  border-radius: 0;
+}
+
+/* Instance History is a fixed-height virtual list. Change paint only; retain its 36px allocation. */
+:where(.vrcx-0-main-content #instance-history-list) .group:has(> button[aria-pressed="true"]) {
+  background-color: var(--wd-select);
+  box-shadow: inset 3px 0 var(--wd-square);
+  border-radius: 0;
+}
+:where(.vrcx-0-main-content #instance-history-list) .group:hover:not(:has(> button[aria-pressed="true"])) {
+  background-color: var(--wd-raised);
+  border-radius: 0;
+}
+:where(.vrcx-0-main-content #instance-history-list) .group > button[aria-pressed] {
+  border-radius: 0;
+}
+:where(.vrcx-0-main-content #instance-history-list) .group > button[aria-pressed]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -2px;
+}
+:where(.vrcx-0-main-content #instance-history-list) .group > div.bg-popover {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), 2px 2px 0 #100b1e;
+}
+
+/* GameLog sticky session header: reuse the shared window-chrome surface, not new layout. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="collapsible"] > div.sticky.top-0)) [data-slot="collapsible"] > div.sticky.top-0.border-b {
+  border-bottom: 1px dotted #70518f;
+  background-color: var(--wd-raised);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="collapsible"] > div.sticky.top-0)) [data-slot="collapsible"] > div.sticky.top-0.border-b [data-slot="button"] {
+  border-radius: 0;
+}
+
+/* Dashboard panels/editor: scope to its page-only workspace grid; modal panel picker stays out. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has(.grid.min-h-0.flex-1.grid-cols-1.gap-3.overflow-y-auto)) section.bg-muted\/5.rounded-lg.border,
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has(.grid.min-h-0.flex-1.grid-cols-1.gap-3.overflow-y-auto)) .bg-card.relative.h-full.min-h-0.min-w-0.flex-1.overflow-hidden.rounded-lg.border {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background-color: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), inset -1px -1px #16112a;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has(.grid.min-h-0.flex-1.grid-cols-1.gap-3.overflow-y-auto)) .bg-card.relative.h-full.min-h-0.min-w-0.flex-1.overflow-hidden.rounded-lg.border:has(> button[aria-pressed="true"]) {
+  border-color: var(--wd-pink);
+  background-color: var(--wd-select);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), inset -1px -1px #16112a, 0 0 0 2px var(--wd-square);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has(.grid.min-h-0.flex-1.grid-cols-1.gap-3.overflow-y-auto)) .bg-card.relative.h-full.min-h-0.min-w-0.flex-1.overflow-hidden.rounded-lg.border > button[aria-pressed]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -3px;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="dashboard-"])) [data-slot="resizable-panel-group"] {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background-color: var(--wd-window);
+}
+
+/* Group moderation page rail. Its LoadingState spinner remains exclusively loader-r9. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.group-moderation) .bg-muted\/30.w-60.border-r {
+  border-right-color: var(--wd-frame);
+  background-color: var(--wd-raised);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.group-moderation) .bg-muted\/30.w-60.border-r > .shrink-0.px-3.py-2\.5 {
+  border-bottom: 1px dotted #70518f;
+  color: var(--wd-text);
+}
+
+/* VRChat log container/error surface only (no modal and no browser-generated table layout). */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.vrchat-log-page) .border-destructive\/40.bg-destructive\/10.rounded-md {
+  border-color: #ff6b8a;
+  border-radius: 0;
+  background-color: rgb(255 107 138 / .12);
+  color: #ffd9e5;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.vrchat-log-page) .border-border.bg-background.relative.min-h-0.flex-1.overflow-hidden.rounded-md.border {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background-color: #16112a;
+}
+
+/* Two-person relationship history rows are main-chart cards, not generic buttons/dialogs. */
+:where(.vrcx-0-main-content #chart) button.group.hover\:bg-accent.flex.w-full.items-center.rounded-lg.border {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background-color: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .12), inset -1px -1px #16112a;
+}
+:where(.vrcx-0-main-content #chart) button.group.hover\:bg-accent.flex.w-full.items-center.rounded-lg.border:hover {
+  border-color: var(--wd-pink);
+  background-color: var(--wd-raised);
+}
+:where(.vrcx-0-main-content #chart) button.group.hover\:bg-accent.flex.w-full.items-center.rounded-lg.border:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -3px;
+}
+
+/* Activity chart palette only: keep controls-r9 --act-surface/edge/accent and activity-card chrome intact.
+   The tabs-content anchor distinguishes the real Activity route from shared activity-like decoys. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="tabs-content"] > .activity-skin)) [data-slot="tabs-content"] > .activity-skin {
+  --act-track: #16112a;
+  --act-axis: var(--wd-muted);
+  --act-mark: var(--wd-pink);
+  --act-mark-soft: rgb(255 127 207 / .42);
+  --act-heat-empty: #201936;
+  --act-heat-min: color-mix(in srgb, var(--wd-pink) 24%, var(--wd-raised));
+  --act-heat-0: color-mix(in srgb, var(--wd-pink) 38%, var(--wd-raised));
+  --act-heat-1: color-mix(in srgb, var(--wd-pink) 54%, var(--wd-raised));
+  --act-heat-2: color-mix(in srgb, var(--wd-pink) 70%, var(--wd-raised));
+  --act-heat-3: color-mix(in srgb, var(--wd-pink) 86%, var(--wd-raised));
+  --act-heat-4: var(--wd-square);
+}
+:where(.vrcx-0-main-content) .activity-skin [data-slot="button"].h-auto.w-full.justify-start.rounded-none {
+  border-radius: 0;
+  transition: background-color 100ms steps(2, end);
+}
+:where(.vrcx-0-main-content .activity-skin) [data-slot="button"].h-auto.w-full.justify-start.rounded-none:hover {
+  background-color: var(--act-track);
+  box-shadow: inset 3px 0 var(--wd-pink);
+}
+:where(.vrcx-0-main-content .activity-skin) [data-slot="button"].h-auto.w-full.justify-start.rounded-none:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: -2px;
+}
+
+/* Custom rounded progress bars outside dialog/user-dialog surfaces only. */
+:where(.vrcx-0-titlebar) span.h-\[2px\].rounded-full {
+  border-radius: 0;
+  background-color: #16112a;
+}
+:where(.vrcx-0-titlebar) span.h-\[2px\].rounded-full > span {
+  border-radius: 0;
+  background-color: var(--wd-pink);
+}
+:where(.vrcx-0-main-content #chart) > .relative .h-1.rounded-full {
+  border-radius: 0;
+  background-color: #16112a;
+}
+:where(.vrcx-0-main-content #chart) > .relative .h-1.rounded-full > .bg-primary {
+  border-radius: 0;
+  background-color: var(--wd-pink);
+}

@@ -1,0 +1,398 @@
+{
+  "switches": {
+    "sw-off": {
+      "attrs": [
+        "data-unchecked",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 14,
+        "y": 40,
+        "w": 46,
+        "h": 22
+      },
+      "thumb": {
+        "x": 16,
+        "y": 42,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "0px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "26px",
+        "right": "6px",
+        "width": "12px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "1",
+      "filter": "none",
+      "outline": "none 3px oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "focusVisible": false,
+      "transition": "translate 0.16s steps(3)"
+    },
+    "sw-on": {
+      "attrs": [
+        "data-checked",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 78,
+        "y": 40,
+        "w": 46,
+        "h": 22
+      },
+      "thumb": {
+        "x": 104,
+        "y": 42,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "24px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "8px",
+        "right": "27px",
+        "width": "9px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "1",
+      "filter": "none",
+      "outline": "none 3px oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "focusVisible": false,
+      "transition": "translate 0.16s steps(3)"
+    },
+    "sw-dis-off": {
+      "attrs": [
+        "data-disabled",
+        "data-unchecked",
+        "aria-disabled",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 142,
+        "y": 40,
+        "w": 46,
+        "h": 22
+      },
+      "thumb": {
+        "x": 144,
+        "y": 42,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "0px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "26px",
+        "right": "6px",
+        "width": "12px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "0.45",
+      "filter": "saturate(0.35)",
+      "outline": "none 3px oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "focusVisible": false,
+      "transition": "translate 0.16s steps(3)"
+    },
+    "sw-dis-on": {
+      "attrs": [
+        "data-disabled",
+        "data-checked",
+        "aria-disabled",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 214,
+        "y": 40,
+        "w": 46,
+        "h": 22
+      },
+      "thumb": {
+        "x": 240,
+        "y": 42,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "24px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "8px",
+        "right": "27px",
+        "width": "9px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "0.45",
+      "filter": "saturate(0.35)",
+      "outline": "none 3px oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "focusVisible": false,
+      "transition": "translate 0.16s steps(3)"
+    },
+    "sw-sm-off": {
+      "attrs": [
+        "data-unchecked",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 14,
+        "y": 79,
+        "w": 44,
+        "h": 20
+      },
+      "thumb": {
+        "x": 15,
+        "y": 80,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "0px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "25px",
+        "right": "5px",
+        "width": "12px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "1",
+      "filter": "none",
+      "outline": "none 3px oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "focusVisible": false,
+      "transition": "translate 0.16s steps(3)"
+    },
+    "sw-sm-on": {
+      "attrs": [
+        "data-checked",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 78,
+        "y": 79,
+        "w": 44,
+        "h": 20
+      },
+      "thumb": {
+        "x": 103,
+        "y": 80,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "24px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "7px",
+        "right": "26px",
+        "width": "9px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "1",
+      "filter": "none",
+      "outline": "none 3px oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "focusVisible": false,
+      "transition": "translate 0.16s steps(3)"
+    },
+    "sw-focus": {
+      "attrs": [
+        "data-unchecked",
+        "aria-checked",
+        "data-slot",
+        "data-size"
+      ],
+      "root": {
+        "x": 146,
+        "y": 76,
+        "w": 46,
+        "h": 22
+      },
+      "thumb": {
+        "x": 148,
+        "y": 78,
+        "w": 18,
+        "h": 18
+      },
+      "thumbTranslate": "0px",
+      "thumbBg": "url(\"data:image/svg+xml,%3Csvg xmlns='ht",
+      "before": {
+        "content": "\"\"",
+        "color": "rgb(242, 235, 255)",
+        "left": "26px",
+        "right": "6px",
+        "width": "12px",
+        "font": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "pe": "none"
+      },
+      "opacity": "1",
+      "filter": "none",
+      "outline": "solid 2px rgb(255, 184, 230)",
+      "focusVisible": true,
+      "transition": "translate 0.16s steps(3)"
+    }
+  },
+  "native": {
+    "offsetMinusClient": 14,
+    "scrollbarWidthProp": "auto",
+    "scrollbarColor": "auto"
+  },
+  "baseui": {
+    "bar": {
+      "x": 408,
+      "y": 218,
+      "w": 14,
+      "h": 150
+    },
+    "padding": "14px 0px",
+    "thumb": {
+      "x": 408,
+      "y": 270.35,
+      "w": 14,
+      "h": 45.3
+    },
+    "bars": [
+      {
+        "bar": {
+          "x": 200,
+          "y": 218,
+          "w": 14,
+          "h": 150
+        },
+        "thumb": {
+          "x": 200,
+          "y": 232,
+          "w": 14,
+          "h": 45.3
+        }
+      },
+      {
+        "bar": {
+          "x": 616,
+          "y": 218,
+          "w": 14,
+          "h": 150
+        },
+        "thumb": {
+          "x": 616,
+          "y": 308.7,
+          "w": 14,
+          "h": 45.3
+        }
+      }
+    ]
+  },
+  "progress": {
+    "p0": {
+      "track": {
+        "x": 666,
+        "y": 218,
+        "w": 240,
+        "h": 14
+      },
+      "ind": {
+        "x": 669,
+        "y": 219,
+        "w": 0,
+        "h": 12
+      },
+      "bgSize": "10px 8px",
+      "bgRepeat": "repeat-x",
+      "radius": "0px",
+      "anim": "steps(5)"
+    },
+    "p45": {
+      "track": {
+        "x": 666,
+        "y": 242,
+        "w": 240,
+        "h": 14
+      },
+      "ind": {
+        "x": 669,
+        "y": 243,
+        "w": 105.3,
+        "h": 12
+      },
+      "bgSize": "10px 8px",
+      "bgRepeat": "repeat-x",
+      "radius": "0px",
+      "anim": "steps(5)"
+    },
+    "p100": {
+      "track": {
+        "x": 666,
+        "y": 266,
+        "w": 240,
+        "h": 14
+      },
+      "ind": {
+        "x": 669,
+        "y": 267,
+        "w": 234,
+        "h": 12
+      },
+      "bgSize": "10px 8px",
+      "bgRepeat": "repeat-x",
+      "radius": "0px",
+      "anim": "steps(5)"
+    },
+    "p-ind": {
+      "track": {
+        "x": 666,
+        "y": 290,
+        "w": 240,
+        "h": 14
+      },
+      "ind": {
+        "x": 857.39,
+        "y": 291,
+        "w": 95.19,
+        "h": 12
+      },
+      "bgSize": "10px 8px",
+      "bgRepeat": "repeat-x",
+      "radius": "0px",
+      "anim": "steps(10)"
+    }
+  },
+  "before": {
+    "w": 32,
+    "h": 18.390625,
+    "nativeSb": 10
+  },
+  "cssBytes": 13798,
+  "fixtureOnly": "NOT WINDOWS",
+  "reducedMotionThumbTransition": "0s",
+  "shots": {
+    "switches": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r4-pixel-controls/switches-x4.png",
+    "native-scrollbars": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r4-pixel-controls/native-scrollbars-x4.png",
+    "baseui-scrollarea": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r4-pixel-controls/baseui-scrollarea-x4.png",
+    "progress": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r4-pixel-controls/progress-x4.png"
+  }
+}

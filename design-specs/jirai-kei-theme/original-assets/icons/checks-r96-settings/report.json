@@ -1,0 +1,22 @@
+{
+  "task": "task-48",
+  "glyph": "settings",
+  "changedRules": [
+    "svg.lucide-settings"
+  ],
+  "cssVariable": "--px",
+  "distBytes": {
+    "before": 111168,
+    "after": 111131,
+    "delta": -37
+  },
+  "ruleBytes": {
+    "before": 533,
+    "after": 496
+  },
+  "unchangedLines": 292,
+  "filledPixels": 112,
+  "holePixels": 32,
+  "symmetry": "D4",
+  "components": 1
+}

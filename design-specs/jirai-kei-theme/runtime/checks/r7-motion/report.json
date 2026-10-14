@@ -1,0 +1,70 @@
+{
+  "fixture": "NOT WINDOWS",
+  "cssPaths": [
+    "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+    "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/App-C2mIqNXI.css",
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/preview-package/jirai-kei-theme/theme.css",
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/original-assets/r5/assets-r5.css",
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/navigation-r7.css",
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/motion-r5.css",
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/motion-r7.css"
+  ],
+  "activeNames": [
+    [
+      ".vrcx-0-side-panel::after",
+      "r7-corner-twinkle",
+      "none"
+    ],
+    [
+      ".vrcx-0-titlebar .vrcx-0-brand::after",
+      "r5-heart-hop",
+      "none"
+    ],
+    [
+      ".vrcx-0-statusbar::before",
+      "r5-lace-flow",
+      "none"
+    ]
+  ],
+  "reducedNames": [
+    [
+      ".vrcx-0-side-panel::after",
+      "none",
+      "none"
+    ],
+    [
+      ".vrcx-0-titlebar .vrcx-0-brand::after",
+      "none",
+      "none"
+    ],
+    [
+      ".vrcx-0-statusbar::before",
+      "none",
+      "none"
+    ]
+  ],
+  "cornerOrnament": {
+    "right": "88px",
+    "top": "4px",
+    "width": "42px",
+    "height": "18px",
+    "position": "absolute",
+    "content": "\"\"",
+    "images": 2
+  },
+  "resizeNormal": {
+    "width": "2px",
+    "pointerEvents": "none",
+    "content": "\"\""
+  },
+  "resizeReduced": {
+    "width": "2px",
+    "pointerEvents": "none",
+    "content": "\"\""
+  },
+  "layoutBoundsStable": true,
+  "screenshots": [
+    "normal.png",
+    "reduced.png"
+  ]
+}

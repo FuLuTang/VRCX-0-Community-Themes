@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NOT WINDOWS · R9.5 generic dialogs fixture</title>
+  <style id="fixture-base">
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #16112a; color: #f2ebff; font: 14px/1.45 system-ui, sans-serif; }
+    body { padding: 22px; }
+    .review-heading { display:flex; align-items:baseline; gap:12px; margin:0 0 14px; color:#f2ebff; }
+    .review-heading h1 { margin:0; font:600 17px/1.2 system-ui,sans-serif; }
+    .review-heading small { color:#b9add9; font-size:11px; }
+    .fixture-stage { max-width:1480px; margin:0 auto; }
+    .fixture-grid { display:grid; grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr); align-items:start; gap:22px; }
+    .fixture-grid > [data-slot="dialog-content"], .fixture-grid > [data-slot="alert-dialog-content"] {
+      position:relative !important; inset:auto !important; top:auto !important; left:auto !important; transform:none !important;
+      width:100% !important; min-width:0; max-width:none !important; max-height:none !important; overflow:visible !important;
+      margin:0 !important; gap:15px; padding:16px;
+    }
+    [data-slot="dialog-header"], [data-slot="alert-dialog-header"] { display:flex; flex-direction:column; gap:8px; min-width:0; }
+    [data-slot="dialog-title"], [data-slot="alert-dialog-title"] { margin:0; font-size:16px; font-weight:650; line-height:1.25; }
+    [data-slot="dialog-description"], [data-slot="alert-dialog-description"] { margin:0; color:#c7b8dc; font-size:12px; line-height:1.5; }
+    .info-body, .launch-body, .alert-body { min-width:0; display:flex; flex-direction:column; gap:13px; color:#f2ebff; }
+    .roster-line { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; padding-bottom:9px; border-bottom:1px solid #51436d; }
+    .roster-line strong { font-size:13px; }
+    .roster-line span { color:#c7b8dc; font-size:11px; }
+    .stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; }
+    .stat { min-width:0; padding:9px; border:1px solid #51436d; background:#2a2140; }
+    .stat small { display:block; color:#c7b8dc; font-size:10px; }
+    .stat b { display:block; margin-top:3px; font-size:17px; font-variant-numeric:tabular-nums; }
+    .progress-card { padding:10px; border:1px solid #51436d; background:#2a2140; }
+    .progress-row { display:flex; justify-content:space-between; margin-bottom:7px; font-size:12px; }
+    .track { height:9px; border:1px solid #8a79ad; background:#151022; }
+    .track > i { display:block; width:63%; height:100%; background:#a99be8; }
+    .fine-print { margin:0; color:#c7b8dc; font-size:10px; }
+    .launch-body code { display:block; padding:11px; border:1px solid #51436d; background:#191428; color:#eadfff; font:12px/1.6 ui-monospace,monospace; overflow-wrap:anywhere; }
+    .field { display:flex; flex-direction:column; gap:5px; }
+    .field label { font-size:11px; color:#dfd3ed; }
+    .field textarea, .field input { width:100%; min-height:36px; padding:8px 9px; border:1px solid #75659c; border-radius:4px; background:#191428; color:#f2ebff; font:12px/1.4 ui-monospace,monospace; }
+    .field textarea { min-height:74px; resize:vertical; }
+    .path-row { display:flex; gap:7px; }
+    .path-row input { min-width:0; flex:1; }
+    [data-slot="dialog-footer"], [data-slot="alert-dialog-footer"] { display:flex; align-items:center; flex-wrap:wrap; justify-content:flex-end; gap:8px; min-width:0; padding:12px 0 0; border-top:1px solid #51436d; }
+    [data-slot="dialog-footer"] .footer-hint { flex:1 1 180px; margin:0; color:#c7b8dc; font-size:10px; }
+    [data-slot="button"], [data-slot="dialog-close"] { display:inline-flex; min-height:32px; align-items:center; justify-content:center; gap:6px; padding:6px 10px; border:1px solid #75659c; border-radius:4px; background:#302449; color:#f2ebff; font:600 11px/1.1 system-ui,sans-serif; cursor:pointer; }
+    [data-slot="button"][data-variant="default"] { border-color:#d97fc6; background:#b86ba4; color:#16112a; }
+    [data-slot="button"][data-variant="outline"] { background:#211a33; }
+    [data-slot="dialog-close"] { position:absolute; top:6px; right:6px; width:22px; height:22px; min-height:22px; padding:0; }
+    .fixture-grid > [data-slot="alert-dialog-content"] { grid-column:1 / -1; max-width:640px !important; background:#302449; color:#f2ebff; border:1px solid #6c5ce0; border-radius:12px; box-shadow:0 0 0 1px #3d305e,5px 5px 0 rgb(11 7 24 / .55); }
+    .decoys { display:none; }
+    @media (max-width:900px) {
+      body { padding:12px; }
+      .fixture-grid { grid-template-columns:minmax(0,1fr); }
+      [data-slot="alert-dialog-content"] { grid-column:auto; }
+      .stat-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main class="fixture-stage">
+    <div class="review-heading"><h1>NOT WINDOWS · 地雷系 Win98 弹窗检查</h1><small>Fictional content only · static CSS specimen</small></div>
+    <section class="fixture-grid" aria-label="fictional dialog specimens">
+      <section id="info-dialog" data-slot="dialog-content" data-open aria-labelledby="info-title">
+        <header id="info-header" data-slot="dialog-header">
+          <h2 id="info-title" data-slot="dialog-title">增强型信息抓取</h2>
+          <p id="info-description" data-slot="dialog-description">手动刷新虚构账户的关系摘要与统计；此演示不会访问网络或读取真实数据。</p>
+        </header>
+        <div id="info-body" class="info-body">
+          <div class="roster-line"><strong>示例账号 · 128 位好友 / 42 位已追踪</strong><span>上次完成：刚刚 · 下次计划：约 1 小时</span></div>
+          <div class="stat-grid" id="stats-grid">
+            <div class="stat"><small>好友资料</small><b>128</b></div><div class="stat"><small>关系记录</small><b>42</b></div><div class="stat"><small>在线地点</small><b>17</b></div><div class="stat"><small>新近变化</small><b>6</b></div>
+          </div>
+          <div class="progress-card" id="progress-card"><div class="progress-row"><span>关系索引进度</span><b>63%</b></div><div class="track"><i></i></div></div>
+          <p class="fine-print">后台刷新只更新示例统计；关闭窗口不会启动工作。</p>
+        </div>
+        <footer data-slot="dialog-footer" id="info-footer">
+          <p class="footer-hint">演示状态：等待刷新 · 不含用户资料</p>
+          <button id="info-refresh" data-slot="button" data-variant="default">立即刷新</button>
+          <button id="info-cancel" data-slot="button" data-variant="outline">取消本轮</button>
+          <button id="info-dismiss" data-slot="button" data-variant="outline">关闭</button>
+        </footer>
+        <button id="info-close" data-slot="dialog-close" aria-label="关闭弹窗">×</button>
+      </section>
+
+      <section id="launch-dialog" data-slot="dialog-content" data-open aria-labelledby="launch-title">
+        <header id="launch-header" data-slot="dialog-header">
+          <h2 id="launch-title" data-slot="dialog-title">启动选项</h2>
+          <p id="launch-description" data-slot="dialog-description">设置启动参数与可选程序路径。这里只展示虚构样例，不会写入设置。</p>
+        </header>
+        <div id="launch-body" class="launch-body">
+          <code id="launch-code">--fps=144<br>--enable-sdk-log-levels<br>--enable-debug-gui</code>
+          <div class="field"><label for="launch-args">启动参数</label><textarea id="launch-args" rows="3">--fps=144 --enable-sdk-log-levels</textarea></div>
+          <div class="field"><label for="launch-path">VRChat 程序路径</label><div class="path-row"><input id="launch-path" value="D:\\Games\\VRChat\\launch.exe"><button data-slot="button" data-variant="outline">浏览…</button></div></div>
+        </div>
+        <footer data-slot="dialog-footer" id="launch-footer">
+          <button data-slot="button" data-variant="outline">VRChat 文档</button><button data-slot="button" data-variant="outline">Unity 手册</button><button id="launch-save" data-slot="button" data-variant="default">保存</button>
+        </footer>
+        <button id="launch-close" data-slot="dialog-close" aria-label="关闭弹窗">×</button>
+      </section>
+
+      <section id="alert-dialog" data-slot="alert-dialog-content" data-size="default" data-open aria-labelledby="alert-title" class="group/alert-dialog-content bg-popover text-popover-foreground ring-foreground/10 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 fixed top-[calc(50%+1rem)] left-1/2 z-50 grid max-h-[calc(100vh-4rem)] w-full -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-xl p-4 ring-1 duration-100 outline-none data-[size=default]:max-w-xs data-[size=sm]:max-w-xs sm:max-w-sm">
+        <header data-slot="alert-dialog-header"><h2 id="alert-title" data-slot="alert-dialog-title">确认取消本轮</h2><p data-slot="alert-dialog-description">已完成的记录会保留；仍在运行的示例任务将停止。</p></header>
+        <div class="alert-body"><p>这是一条虚构的 alert dialog 文案，用于确认标题栏与暗色正文的层级。</p></div>
+        <footer data-slot="alert-dialog-footer"><button data-slot="button" data-variant="outline">返回</button><button data-slot="button" data-variant="default">确认取消</button></footer>
+      </section>
+    </section>
+    <section class="decoys" aria-hidden="true">
+      <div id="entity-decoy" data-slot="dialog-content" class="entity-dialog"><header data-slot="dialog-header"><h2 data-slot="dialog-title">实体详情窗 decoy</h2></header><div>用户 / 世界 / 头像 / 群组详情窗不得重绘。</div></div>
+      <div id="login-decoy" class="vrcx-0-main-shell" data-vrcx-0-surface="login-page"><div data-slot="card" id="login-card">登录页卡片不得匹配 dialog 选择器。</div></div>
+      <!-- real structure: a dialog opened from the login surface is portalled to body by Base UI's FloatingPortal, it is never a child of the login shell -->
+      <div id="login-portal-dialog" data-slot="dialog-content"><header data-slot="dialog-header"><h2 data-slot="dialog-title">登录流程 decoy</h2></header></div>
+      <div id="command-search-dialog" data-slot="dialog-content"><div data-slot="command">CommandDialog / QuickSearchDialog 的无可见标题专用内容</div></div>
+    </section>
+  </main>
+</body>
+</html>

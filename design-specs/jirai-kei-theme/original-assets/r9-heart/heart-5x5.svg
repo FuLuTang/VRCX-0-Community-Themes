@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 5 5" shape-rendering="crispEdges"><title>R9 5x5 pixel heart</title><desc>Independent 5 by 5 pixel grid: one-pixel #34316a outline, #ffb8e6 body, upper-left #fdf4ff highlight.</desc>
+<g fill="#34316a">
+<rect x="1" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/>
+<rect x="0" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/>
+<rect x="0" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/>
+<rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/>
+<rect x="2" y="4" width="1" height="1"/>
+</g>
+<g fill="#ffb8e6">
+<rect x="3" y="1" width="1" height="1"/>
+<rect x="1" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/>
+<rect x="2" y="3" width="1" height="1"/>
+</g>
+<g fill="#fdf4ff"><rect x="1" y="1" width="1" height="1"/></g>
+</svg>

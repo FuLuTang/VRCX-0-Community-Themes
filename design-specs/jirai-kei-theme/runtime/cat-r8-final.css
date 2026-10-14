@@ -1,0 +1,40 @@
+/* R8-cat-final · user-selected pocket below the nav menu, above the footer.
+   The source-shaped [data-sidebar="content"] is a flex column and already has
+   4px bottom padding in navigation-r7.css; 4px extra margin yields ~8px to the
+   footer divider. Right padding (6px) + this 6px margin leaves ~12px outer gap. */
+.vrcx-0-sidebar-surface [data-sidebar="content"]::after {
+  content: "";
+  display: block;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-top: auto;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  align-self: flex-end;
+  background-image: var(--r5-pixel-mascot);
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  opacity: .95;
+  pointer-events: none;
+}
+
+/* Avoid a stray ornament in the collapsed icon rail. */
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="content"]::after {
+  display: none;
+}
+
+/* In a short window, keep the scroll contribution to the 36px image only. */
+@media (max-height: 760px) {
+  .vrcx-0-sidebar-surface [data-sidebar="content"]::after {
+    margin-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-sidebar-surface [data-sidebar="content"]::after {
+    animation: none !important;
+    opacity: .95;
+  }
+}

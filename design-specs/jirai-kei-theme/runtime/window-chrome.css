@@ -1,0 +1,173 @@
+/* SECTION chrome · Windose × Jirai — window chrome R3.
+   Scope: only the two real chrome bars. No invented text, icons, DOM or events.
+   Every selector is anchored to a real attribute or a literal class token of the
+   app source (main app is read-only; paths relative to /home/fulutang/Documents/Github/VRCX-0-jirai):
+     - src/components/layout/AppTitleBar.tsx:90-96   <header data-app-titlebar="true" class="vrcx-0-titlebar … h-8 …">
+     - src/components/layout/AppTitleBar.tsx:43      window buttons: "h-full w-9 rounded-none border-0"
+     - src/components/layout/AppTitleBar.tsx:83,148,157,170  MinusIcon / Square|CopyIcon / XIcon stay as-is
+     - src/components/layout/AppTitleBar.tsx:165     close keeps "hover:bg-destructive! hover:text-destructive-foreground!"
+     - src/components/layout/status-bar/StatusBarFooter.tsx:353,371  <footer data-vrcx-0-surface="statusbar" class="vrcx-0-statusbar …">
+   These rules are unlayered, so they outrank Tailwind's @layer utilities; the two
+   "!" utilities on the close button are NOT overridden on purpose (see R3-3b).
+   Line numbers are the 2026-10-11 20:38 UTC snapshot; runtime/windose-runtime.css
+   is being edited concurrently by the Lead (the fake pink page header it used to
+   draw is already gone), so match by selector, not by line, when re-checking.
+   R4 adds the quick-search control, key caps, brand plate, help trigger and the
+   status pixel square; the R4 block at the end carries its source evidence. */
+
+/* R3 text/keycap tokens remain here; chrome-r8.css owns the shared bar/control faces. */
+:root {
+    --jk-chrome-ink: #16112a;
+    --jk-chrome-ink-soft: #3b2a45;
+    --jk-chrome-edge: #1a1226;
+    --jk-chrome-bevel-light: #fdf4ff;
+    --jk-chrome-bevel-dark: #7a3f6d;
+}
+
+/* Chrome R8 owns titlebar fill/ink; this structural rule only clears the legacy
+   gradient and keeps the one-pixel bottom frame. Text and icons remain untouched. */
+.vrcx-0-titlebar[data-app-titlebar] {
+    background-image: none;
+    border-bottom: 1px solid var(--jk-chrome-edge);
+}
+
+/* R3-2 · grey control text on pink. Only the greyscale content tokens are matched,
+   so --status-online / --status-active dots, destructive and primary badges keep
+   their semantic colours (StatusBarParts.tsx:40-45 uses background, never matched). */
+.vrcx-0-titlebar[data-app-titlebar] :is([class*='text-muted-foreground'], [class*='text-content-']) {
+    color: var(--jk-chrome-ink-soft);
+}
+.vrcx-0-titlebar[data-app-titlebar] :is([class*='text-muted-foreground'], [class*='text-content-']):hover {
+    color: var(--jk-chrome-ink);
+}
+/* R8 owns titlebar interaction-state paint; keep the older text-color states below. */
+/* R8 owns the window-button face, frame, ink and bevel; keep the source-backed
+   glyph sizing rule below (the app's 36x32 hit target remains untouched). */
+/* Lock every glyph to 16px: Square|Copy carries class "size-3" (12px, AppTitleBar.tsx:159)
+   which lands on a fractional device-pixel grid under 125%/150% Windows scaling. */
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'] > svg {
+    width: 16px;
+    height: 16px;
+    flex: none;
+}
+
+/* The R8 pass owns the resting close face; preserve only its source-backed
+   frame reassertion on the destructive hover/active state below. */
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'][class*='destructive']:hover {
+    border-color: var(--jk-chrome-edge);
+    box-shadow: inset 1px 1px 0 rgb(255 255 255 / 0.45),
+        inset -1px -1px 0 rgb(0 0 0 / 0.45);
+}
+
+/* Chrome R8 owns statusbar fill/ink and lace paint. This rule keeps the bar geometry,
+   clears the legacy inner background image, and reserves the safe 8px lace gutter. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] {
+    position: relative;
+    overflow: visible;
+    margin-top: 8px; /* Safe lace strip also above the nav and in sidebar-only mode. */
+    background-image: none;
+    border-top: 1px solid var(--jk-chrome-edge);
+}
+/* Statusbar text colors are owned by chrome-r8.css. */
+/* R3-4b / R4-4 · semantic fills are preserved, the round ring becomes a pixel
+   square: square corners, a real 1px ink frame and a shaded lower/right edge so
+   the dot reads as a solid block on the pink bar instead of a hollow circle. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'] {
+    border: 1px solid var(--jk-chrome-edge);
+    border-radius: 0;
+    background-image: none;
+    box-shadow: inset -1px -1px 0 rgb(0 0 0 / 0.28);
+}
+/* R4-4b · the disconnected state used bg-muted-foreground/40, which stayed
+   see-through and read as a hollow ring on the pink bar; give that one state an
+   opaque muted face. --status-online/-active fills are never touched here. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'][class*='bg-muted-foreground']{background-color:var(--wd-faint,#a294c8)}
+
+/* R3-5 · lace grows UPWARD from the bar's top edge. The S1 tile (16x8 scallop,
+   name confirmed in the built sheet: --jk-mask-s1-s, preview-package/…/theme.css:91)
+   is mirrored with scaleY(-1) and placed entirely above the bar, so the scallops
+   point up and the tile's solid edge meets the pink bar.
+   Clearance: the footer reserves its own 8px margin above the bar, including
+   the nav area and sidebar-only mode where workspace margin is zero. The normal
+   workspace's existing 10px gutter is additional, not the only safety guarantee.
+   pointer-events:none keeps that gutter mouse-transparent (no drag/resize blocked).
+   ::before is free on this element — RGB only claims ::after (vrcx-0-rgb.css:112),
+   and that ::after sits 1px inside the bar, so the two never overlap. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    height: 8px;
+    pointer-events: none;
+    transform: scaleY(-1);
+}
+
+/* R4 · review round 4. Source evidence (main app, read-only, 2026-10-11 snapshot):
+     - useTitleBarActions.tsx:472-498  quick search Button[data-vrcx-0-control=
+       "toolbar"]; the compiled sheet paints it dark via
+       ".vrcx-0-toolbar-control[data-vrcx-0-control=toolbar]" (#2a2147) — the block
+       the user reported, and it survives the TooltipTrigger slot override.
+     - useTitleBarActions.tsx:128-129 → KeyboardShortcut.tsx:57-68 → kbd.tsx:5-13
+       render <kbd data-slot="kbd">; matched by that attribute, not by a class guess.
+     - AppMenuBar.tsx:133-137  brand <span class="vrcx-0-brand"> "VRCX-0-jirai"
+       (real text, never replaced); :194-206 help; menubar.tsx:60-74 both triggers.
+     - StatusBarParts.tsx:47-56  StatusDot = span.size-2.rounded-full + bg utility.
+   Geometry untouched: control h-6/24px, triggers h-full/31px in the 32px bar,
+   status pixel size-2/8px (border-box). */
+
+:root {
+    --jk-r4-keycap: #fff2fb;    /* key cap face, ~15:1 with --jk-chrome-ink */
+}
+
+/* R4-1 · quick-search hitbox remains source-sized. R8 owns its current face/ink/bevel;
+   retain only the image reset, 1px frame and compact padding unique to this control. */
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] {
+    background-image: none;
+    border: 1px solid var(--jk-chrome-edge);
+    padding-inline: 7px;
+}
+
+/* R4-2 · Ctrl / K caps: light face, 1px ink frame, bevel, ink text. The app
+   painted them bg-background/45 (dark on dark). height 14px→16px centres the
+   14px line box inside the frame, still well inside the 24px control. */
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] kbd[data-slot='kbd'] {
+    height: 16px;
+    min-width: 16px;
+    padding-inline: 3px;
+    border: 1px solid var(--jk-chrome-edge);
+    border-radius: 0;
+    background-color: var(--jk-r4-keycap);
+    color: var(--jk-chrome-ink);
+    box-shadow: inset 1px 1px 0 #ffffff,
+        inset -1px -1px 0 var(--jk-chrome-bevel-dark);
+}
+
+/* R4-3 · R8 owns the plate/help face and bevel; retain its unique 7px inset. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'] {
+    padding-inline: 7px;
+}
+/* Brand keeps its 12px optical inset and gains 5px on the right for the heart. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger']:has(> .vrcx-0-brand) {
+    padding-left: 12px;
+    padding-right: 17px;
+}
+/* Fusion Pixel has real lowercase (Silkscreen does not), so the brand never gets
+   forced to caps; --wd-body-font-family is defined in fonts-pixel-body.css. */
+.vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand {
+    position: relative;
+    font-family: var(--wd-body-font-family, 'WD Pixel CJK');
+    font-synthesis: none;
+}
+/* Reserve the decorative pseudo-element without adding DOM/layout impact.
+   brand-heart-r97.css is the single owner of its art, placement and animation. */
+.vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
+/* Build badge inside the help trigger follows the square pixel language. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'] [data-slot='badge'] {
+    border-radius: 0;
+}

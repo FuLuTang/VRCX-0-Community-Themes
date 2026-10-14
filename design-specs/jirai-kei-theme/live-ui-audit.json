@@ -1,0 +1,101 @@
+{
+  "generatedAt": "2026-10-09T22:49:16.678Z",
+  "method": "canvas sRGB sampling with effective opacity chain, WCAG 2.x contrast formula",
+  "note": "Measured in the real VRCX-0 frontend (Vite dev server, headless Chromium). Each theme is injected into a freshly loaded page; never inject two themes into one page, that produces artefact ratios.",
+  "themes": {
+    "unstyledBaseline": {
+      "pageBg": "oklch(1 0 0)",
+      "items": [
+        {
+          "label": "checkbox (checked, disabled)",
+          "sel": "[data-slot=\"checkbox\"]",
+          "disabled": true,
+          "fgRaw": "oklch(0.985 0 0)",
+          "fillRaw": "oklch(0.205 0 0)",
+          "effectiveOpacity": 0.5,
+          "idealFg": "#fafafa",
+          "idealFill": "#171717",
+          "renderedFg": "#fcfcfc",
+          "renderedFill": "#8b8b8b",
+          "text": "",
+          "contrast": 3.32
+        },
+        {
+          "label": "primary button (disabled)",
+          "sel": "[data-slot=\"button\"][data-variant=\"default\"]",
+          "disabled": true,
+          "fgRaw": "oklch(0.985 0 0)",
+          "fillRaw": "oklch(0.205 0 0)",
+          "effectiveOpacity": 0.5,
+          "idealFg": "#fafafa",
+          "idealFill": "#171717",
+          "renderedFg": "#fcfcfc",
+          "renderedFill": "#8b8b8b",
+          "text": "Login",
+          "contrast": 3.32
+        },
+        {
+          "label": "input",
+          "sel": "[data-slot=\"input\"]",
+          "disabled": true,
+          "fgRaw": "oklch(0.145 0 0)",
+          "fillRaw": "oklab(0.145 0 0 / 0.08)",
+          "effectiveOpacity": 0.5,
+          "idealFg": "#0a0a0a",
+          "idealFill": "#ececec",
+          "renderedFg": "#848484",
+          "renderedFill": "#f5f5f5",
+          "text": "",
+          "contrast": 3.43
+        }
+      ]
+    },
+    "jirai": {
+      "pageBg": "rgb(22, 18, 25)",
+      "items": [
+        {
+          "label": "checkbox (checked, disabled)",
+          "sel": "[data-slot=\"checkbox\"]",
+          "disabled": true,
+          "fgRaw": "rgb(39, 23, 34)",
+          "fillRaw": "rgb(240, 168, 200)",
+          "effectiveOpacity": 0.5,
+          "idealFg": "#271722",
+          "idealFill": "#f0a8c8",
+          "renderedFg": "#1f151d",
+          "renderedFill": "#835d70",
+          "text": "",
+          "contrast": 3.18
+        },
+        {
+          "label": "primary button (disabled)",
+          "sel": "[data-slot=\"button\"][data-variant=\"default\"]",
+          "disabled": true,
+          "fgRaw": "rgb(39, 23, 34)",
+          "fillRaw": "rgb(240, 168, 200)",
+          "effectiveOpacity": 0.5,
+          "idealFg": "#271722",
+          "idealFill": "#f0a8c8",
+          "renderedFg": "#1f151d",
+          "renderedFill": "#835d70",
+          "text": "Login",
+          "contrast": 3.18
+        },
+        {
+          "label": "input",
+          "sel": "[data-slot=\"input\"]",
+          "disabled": true,
+          "fgRaw": "rgb(247, 238, 244)",
+          "fillRaw": "rgb(22, 18, 25)",
+          "effectiveOpacity": 0.5,
+          "idealFg": "#f7eef4",
+          "idealFill": "#161219",
+          "renderedFg": "#878086",
+          "renderedFill": "#161219",
+          "text": "",
+          "contrast": 4.81
+        }
+      ]
+    }
+  }
+}

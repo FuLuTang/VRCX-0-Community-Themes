@@ -1,0 +1,26 @@
+/* R96 · Windows: cats too slow/faint. Discrete integer hops. Nav (2x art): 2px grid,
+   peak 8px. SOCIAL (1x): 1px grid, peak 4px; box grows upward only, ground y=22. */
+@keyframes r96-nav-cat{
+0%,37%,76%,100%{transform:translate(0,0)}
+5%,15%{transform:translate(0,-4px)}
+10%{transform:translate(0,-8px)}
+20%{transform:translate(0,0)}
+24%{transform:translate(-2px,-4px)}
+28%{transform:translate(-2px,-6px)}
+33%{transform:translate(-2px,-2px)}
+68%{transform:translate(2px,0)}
+}
+@keyframes r96-social-cat{
+0%,30%,78%,100%{background-size:16px 16px,18px 18px;background-position:0 5px,24px 4px}
+6%,24%{background-position:0 5px,24px 2px}
+12%{background-position:0 5px,24px 0}
+18%{background-position:0 5px,24px 1px}
+60%,72%{background-size:14px 14px,18px 18px;background-position:1px 6px,24px 4px}
+66%{background-size:16px 16px,18px 18px;background-position:0 5px,25px 4px}
+}
+.vrcx-0-sidebar-surface [data-sidebar="content"]::after{opacity:1;animation:r96-nav-cat 2s step-end infinite}
+.vrcx-0-side-panel::after{top:0;height:22px;opacity:1;background-position:0 5px,24px 4px;animation:r96-social-cat 2s step-end -1s infinite}
+@media(prefers-reduced-motion:reduce){
+.vrcx-0-sidebar-surface [data-sidebar="content"]::after,.vrcx-0-side-panel::after{animation:none!important;transform:none;opacity:1}
+}
+html.reduce-effects .vrcx-0-sidebar-surface [data-sidebar="content"]::after,html.reduce-effects .vrcx-0-side-panel::after{animation:none!important;transform:none;opacity:1}

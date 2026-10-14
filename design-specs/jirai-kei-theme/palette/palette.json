@@ -1,0 +1,659 @@
+{
+  "nso-steam-ss-01.jpg": {
+    "kmeans": [
+      {
+        "hex": "#F2E9F9",
+        "ratio": 0.4298
+      },
+      {
+        "hex": "#D0CEEC",
+        "ratio": 0.1659
+      },
+      {
+        "hex": "#CDA6DD",
+        "ratio": 0.1561
+      },
+      {
+        "hex": "#8F9BE7",
+        "ratio": 0.0987
+      },
+      {
+        "hex": "#BB82C1",
+        "ratio": 0.0568
+      },
+      {
+        "hex": "#786BB3",
+        "ratio": 0.0426
+      },
+      {
+        "hex": "#50485A",
+        "ratio": 0.0332
+      },
+      {
+        "hex": "#97D074",
+        "ratio": 0.0169
+      }
+    ],
+    "points": {
+      "窗口标题栏底色": {
+        "hex": "#E2E2E0",
+        "x": 900,
+        "y": 78,
+        "method": "5x5-median"
+      },
+      "标题栏左侧靛蓝小方块": {
+        "hex": "#361DC3",
+        "x": 443,
+        "y": 77,
+        "method": "5x5-median"
+      },
+      "窗口外框描边": {
+        "hex": "#260DB1",
+        "x": 416,
+        "y": 400,
+        "method": "5x1-median"
+      },
+      "窗口底部薄荷色细条": {
+        "hex": "#A7EFE3",
+        "x": 1200,
+        "y": 1011,
+        "method": "5x5-median"
+      },
+      "桌面背景底色": {
+        "hex": "#F7ECFC",
+        "x": 333,
+        "y": 900,
+        "method": "5x5-median"
+      },
+      "桌面锯齿底纹线色": {
+        "hex": "#D3EBF7",
+        "x": 556,
+        "y": 792,
+        "method": "5x5-median"
+      },
+      "任务栏底色": {
+        "hex": "#F3E1F7",
+        "x": 1500,
+        "y": 1070,
+        "method": "5x5-median"
+      },
+      "正文文字色": {
+        "hex": "#290EBD",
+        "x": 510,
+        "y": 76,
+        "method": "region-darkest-8pct",
+        "note": "窗口标题文字笔画区域(160x28)最暗8%均值"
+      }
+    }
+  },
+  "nso-steam-ss-03.jpg": {
+    "kmeans": [
+      {
+        "hex": "#FBF4FC",
+        "ratio": 0.406
+      },
+      {
+        "hex": "#EDD8F2",
+        "ratio": 0.2034
+      },
+      {
+        "hex": "#BCBAE2",
+        "ratio": 0.1173
+      },
+      {
+        "hex": "#201633",
+        "ratio": 0.0874
+      },
+      {
+        "hex": "#412B67",
+        "ratio": 0.072
+      },
+      {
+        "hex": "#A774D6",
+        "ratio": 0.0419
+      },
+      {
+        "hex": "#6ED2DF",
+        "ratio": 0.0362
+      },
+      {
+        "hex": "#6F1CB4",
+        "ratio": 0.0358
+      }
+    ],
+    "points": {
+      "窗口标题栏底色(活动窗口)": {
+        "hex": "#EDC9ED",
+        "x": 700,
+        "y": 72,
+        "method": "5x5-median"
+      },
+      "窗口正文底色": {
+        "hex": "#FCF7FD",
+        "x": 700,
+        "y": 800,
+        "method": "5x5-median"
+      },
+      "列表选中行底色(薄荷绿)": {
+        "hex": "#7CF0B1",
+        "x": 1300,
+        "y": 370,
+        "method": "5x5-median"
+      },
+      "列表项目符号方块": {
+        "hex": "#4770E1",
+        "x": 1096,
+        "y": 268,
+        "method": "5x5-median"
+      },
+      "窗口外框薄荷内衬": {
+        "hex": "#8DECE8",
+        "x": 294,
+        "y": 400,
+        "method": "5x5-median"
+      },
+      "桌面背景底色": {
+        "hex": "#F7DEFC",
+        "x": 250,
+        "y": 950,
+        "method": "5x5-median"
+      },
+      "任务栏底色": {
+        "hex": "#F4DBF9",
+        "x": 1500,
+        "y": 1070,
+        "method": "5x5-median"
+      },
+      "正文文字色": {
+        "hex": "#533B8F",
+        "x": 1240,
+        "y": 419,
+        "method": "region-darkest-6pct",
+        "note": "列表项文字笔画区域(254x28)最暗6%均值"
+      }
+    }
+  },
+  "nso-steam-ss-05.jpg": {
+    "kmeans": [
+      {
+        "hex": "#C1DEF2",
+        "ratio": 0.2668
+      },
+      {
+        "hex": "#81B66D",
+        "ratio": 0.2231
+      },
+      {
+        "hex": "#F1E4F9",
+        "ratio": 0.2073
+      },
+      {
+        "hex": "#C9B4DE",
+        "ratio": 0.0976
+      },
+      {
+        "hex": "#8998EC",
+        "ratio": 0.0878
+      },
+      {
+        "hex": "#C674C4",
+        "ratio": 0.0646
+      },
+      {
+        "hex": "#7169CA",
+        "ratio": 0.042
+      },
+      {
+        "hex": "#544469",
+        "ratio": 0.0108
+      }
+    ],
+    "points": {
+      "桌面背景底色": {
+        "hex": "#F7E6FE",
+        "x": 300,
+        "y": 900,
+        "method": "5x5-median"
+      },
+      "任务栏底色": {
+        "hex": "#F4DBF9",
+        "x": 1500,
+        "y": 1070,
+        "method": "5x5-median"
+      },
+      "窗口标题栏底色(活动窗口)": {
+        "hex": "#EDC9ED",
+        "x": 700,
+        "y": 240,
+        "method": "5x5-median"
+      },
+      "窗口内容区(地图绿地)": {
+        "hex": "#7FBA68",
+        "x": 600,
+        "y": 700,
+        "method": "5x5-median"
+      }
+    }
+  },
+  "nso-steam-ss-02.jpg": {
+    "kmeans": [
+      {
+        "hex": "#F5E9F9",
+        "ratio": 0.3092
+      },
+      {
+        "hex": "#1B1723",
+        "ratio": 0.1833
+      },
+      {
+        "hex": "#CDC3E5",
+        "ratio": 0.1768
+      },
+      {
+        "hex": "#3D2D5D",
+        "ratio": 0.1029
+      },
+      {
+        "hex": "#D189E3",
+        "ratio": 0.0806
+      },
+      {
+        "hex": "#A398C6",
+        "ratio": 0.0685
+      },
+      {
+        "hex": "#6E28A7",
+        "ratio": 0.0503
+      },
+      {
+        "hex": "#63CCEC",
+        "ratio": 0.0284
+      }
+    ],
+    "points": {
+      "桌面背景底色": {
+        "hex": "#F7E6FE",
+        "x": 300,
+        "y": 900,
+        "method": "5x5-median"
+      },
+      "任务栏底色": {
+        "hex": "#F6DDFB",
+        "x": 1500,
+        "y": 1070,
+        "method": "5x5-median"
+      },
+      "窗口标题栏底色": {
+        "hex": "#DEDEDE",
+        "x": 1480,
+        "y": 41,
+        "method": "5x5-median"
+      },
+      "窗口正文底色": {
+        "hex": "#FDFDFD",
+        "x": 1000,
+        "y": 620,
+        "method": "5x5-median"
+      }
+    }
+  },
+  "nso-steam-ss-06.jpg": {
+    "kmeans": [
+      {
+        "hex": "#9B97DB",
+        "ratio": 0.3853
+      },
+      {
+        "hex": "#7D70CD",
+        "ratio": 0.1587
+      },
+      {
+        "hex": "#A158D2",
+        "ratio": 0.1324
+      },
+      {
+        "hex": "#1F1632",
+        "ratio": 0.0843
+      },
+      {
+        "hex": "#3F2A64",
+        "ratio": 0.0719
+      },
+      {
+        "hex": "#6927B0",
+        "ratio": 0.0605
+      },
+      {
+        "hex": "#D7D3F4",
+        "ratio": 0.0558
+      },
+      {
+        "hex": "#FAF2FB",
+        "ratio": 0.051
+      }
+    ],
+    "points": {
+      "弹窗粉色标题栏": {
+        "hex": "#EDC9ED",
+        "x": 900,
+        "y": 385,
+        "method": "5x5-median"
+      },
+      "弹窗浅蓝信息条": {
+        "hex": "#CCE7F8",
+        "x": 1100,
+        "y": 440,
+        "method": "5x5-median"
+      },
+      "弹窗标题栏靛蓝小方块": {
+        "hex": "#431CC3",
+        "x": 699,
+        "y": 383,
+        "method": "5x5-median"
+      },
+      "弹窗底部薄荷色细条": {
+        "hex": "#85F2DD",
+        "x": 900,
+        "y": 743,
+        "method": "5x5-median"
+      },
+      "窗口标题栏底色(压暗)": {
+        "hex": "#938CCF",
+        "x": 1450,
+        "y": 41,
+        "method": "5x5-median"
+      },
+      "窗口正文底色(压暗)": {
+        "hex": "#A49FD9",
+        "x": 900,
+        "y": 250,
+        "method": "5x5-median"
+      },
+      "窗口外框描边(压暗)": {
+        "hex": "#4E33B6",
+        "x": 452,
+        "y": 274,
+        "method": "5x1-median"
+      },
+      "桌面背景底色(压暗)": {
+        "hex": "#A292DD",
+        "x": 300,
+        "y": 900,
+        "method": "5x5-median"
+      },
+      "桌面锯齿底纹线色(压暗)": {
+        "hex": "#A48DDD",
+        "x": 300,
+        "y": 880,
+        "method": "5x5-median"
+      },
+      "任务栏底色(压暗)": {
+        "hex": "#A28AD8",
+        "x": 1500,
+        "y": 1070,
+        "method": "5x5-median"
+      },
+      "弹窗标题文字色": {
+        "hex": "#5A33B3",
+        "x": 775,
+        "y": 385,
+        "method": "region-darkest-8pct",
+        "note": "Meta Get 标题文字区域(130x26)最暗8%均值"
+      }
+    }
+  },
+  "nso-fandom-stream-ui-dark.webp": {
+    "kmeans": [
+      {
+        "hex": "#000000",
+        "ratio": 0.6329
+      },
+      {
+        "hex": "#002333",
+        "ratio": 0.2015
+      },
+      {
+        "hex": "#000033",
+        "ratio": 0.1291
+      },
+      {
+        "hex": "#20104B",
+        "ratio": 0.0281
+      },
+      {
+        "hex": "#000022",
+        "ratio": 0.0044
+      },
+      {
+        "hex": "#752390",
+        "ratio": 0.0027
+      },
+      {
+        "hex": "#F89EFA",
+        "ratio": 0.0008
+      },
+      {
+        "hex": "#CD47D4",
+        "ratio": 0.0005
+      }
+    ],
+    "points": {
+      "外框/底板底色": {
+        "hex": "#000033",
+        "x": 1200,
+        "y": 850,
+        "method": "5x5-median"
+      },
+      "视频区底色": {
+        "hex": "#000000",
+        "x": 400,
+        "y": 400,
+        "method": "5x5-median"
+      },
+      "评论区底色": {
+        "hex": "#002333",
+        "x": 1200,
+        "y": 400,
+        "method": "5x5-median"
+      },
+      "洋红强调色": {
+        "hex": "#FF42F1",
+        "x": 1120,
+        "y": 782,
+        "method": "5x5-median"
+      },
+      "细边框描边": {
+        "hex": "#DF3AD9",
+        "x": 1057,
+        "y": 400,
+        "method": "5x1-median"
+      }
+    }
+  },
+  "nso-fandom-stream-ui-default.webp": {
+    "kmeans": [
+      {
+        "hex": "#FFF8FF",
+        "ratio": 0.7702
+      },
+      {
+        "hex": "#FEF0FF",
+        "ratio": 0.151
+      },
+      {
+        "hex": "#FFFEFF",
+        "ratio": 0.0705
+      },
+      {
+        "hex": "#EBE4F5",
+        "ratio": 0.0046
+      },
+      {
+        "hex": "#F8E3FA",
+        "ratio": 0.0031
+      },
+      {
+        "hex": "#698DEA",
+        "ratio": 0.0002
+      },
+      {
+        "hex": "#F2A3A3",
+        "ratio": 0.0002
+      },
+      {
+        "hex": "#BBCCF5",
+        "ratio": 0.0001
+      }
+    ],
+    "points": {
+      "页面/顶栏底色": {
+        "hex": "#FFFFFF",
+        "x": 900,
+        "y": 30,
+        "method": "5x5-median"
+      },
+      "正文面板底色": {
+        "hex": "#FEF0FF",
+        "x": 900,
+        "y": 300,
+        "method": "5x5-median"
+      },
+      "视频区底色": {
+        "hex": "#FFF8FF",
+        "x": 400,
+        "y": 300,
+        "method": "5x5-median"
+      },
+      "强调粉底色": {
+        "hex": "#F7E1FB",
+        "x": 1190,
+        "y": 30,
+        "method": "5x5-median"
+      },
+      "项目符号方块": {
+        "hex": "#527CE7",
+        "x": 812,
+        "y": 614,
+        "method": "5x5-median"
+      },
+      "分隔线": {
+        "hex": "#AB9ED8",
+        "x": 300,
+        "y": 663,
+        "method": "5x1-median"
+      }
+    }
+  },
+  "nso-fandom-jine-bg.webp": {
+    "kmeans": [
+      {
+        "hex": "#EE98EE",
+        "ratio": 0.8407
+      },
+      {
+        "hex": "#EDB4E0",
+        "ratio": 0.0843
+      },
+      {
+        "hex": "#EDA6E7",
+        "ratio": 0.0484
+      },
+      {
+        "hex": "#ECB7DF",
+        "ratio": 0.0074
+      },
+      {
+        "hex": "#E4CFDF",
+        "ratio": 0.0061
+      },
+      {
+        "hex": "#E9C2DF",
+        "ratio": 0.0058
+      },
+      {
+        "hex": "#EBBCDF",
+        "ratio": 0.0054
+      },
+      {
+        "hex": "#E7C8DF",
+        "ratio": 0.002
+      }
+    ],
+    "points": {
+      "背景主色": {
+        "hex": "#EE98EE",
+        "x": 133,
+        "y": 150,
+        "method": "5x5-median"
+      },
+      "像素云高光": {
+        "hex": "#EDB5DF",
+        "x": 60,
+        "y": 110,
+        "method": "5x5-median"
+      }
+    }
+  },
+  "user-noa-senpai-cover-ref.jpg": {
+    "kmeans": [
+      {
+        "hex": "#FCFBF9",
+        "ratio": 0.2466
+      },
+      {
+        "hex": "#E8DCE7",
+        "ratio": 0.1936
+      },
+      {
+        "hex": "#C9B5CE",
+        "ratio": 0.1573
+      },
+      {
+        "hex": "#07060A",
+        "ratio": 0.1139
+      },
+      {
+        "hex": "#9F8DAF",
+        "ratio": 0.1131
+      },
+      {
+        "hex": "#2F313C",
+        "ratio": 0.0972
+      },
+      {
+        "hex": "#5E5A70",
+        "ratio": 0.0698
+      },
+      {
+        "hex": "#CC2580",
+        "ratio": 0.0085
+      }
+    ],
+    "points": {
+      "紫(格纹裙)": {
+        "hex": "#8E72AA",
+        "x": 700,
+        "y": 1690,
+        "method": "5x5-median"
+      },
+      "黑(蕾丝上衣)": {
+        "hex": "#11121C",
+        "x": 560,
+        "y": 1130,
+        "method": "5x5-median"
+      },
+      "粉(发色)": {
+        "hex": "#F5C1CD",
+        "x": 944,
+        "y": 470,
+        "method": "5x5-median"
+      },
+      "薄荷(点缀)": {
+        "hex": "#9FD8D0",
+        "x": 1355,
+        "y": 2290,
+        "method": "5x5-median"
+      }
+    }
+  }
+}

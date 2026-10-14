@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NOT WINDOWS · R9+ Tools filter and category rail</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#100b1e;color:#f2ebff;font-family:Inter,system-ui,sans-serif}
+    .fixture-window{display:flex;width:100%;height:100%;flex-direction:column;background:#201936}
+    .fixture-titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding-left:12px;border-bottom:1px solid #6c5ce0;background:#2f2552;color:#f2ebff;font:12px/1 system-ui,sans-serif}
+    .fixture-shell{display:flex;min-height:0;flex:1}
+    .fixture-navigation{width:190px;flex:none;padding:16px 12px;border-right:1px solid #6c5ce0;background:#201936}
+    .fixture-navigation strong{display:block;margin:0 0 16px}.fixture-navigation button{display:block;width:100%;padding:8px;text-align:left;border:0;border-bottom:1px solid rgb(108 92 224/.25);background:transparent;color:#d6b8ef}
+    .vrcx-0-main-content{position:relative;display:flex;min-width:0;min-height:0;flex:1;overflow:hidden;background:#16112a}
+    .vrcx-0-page-scaffold{display:flex;width:100%;min-width:0;min-height:0;flex:1;flex-direction:column;overflow:hidden;padding:20px}
+    .vrcx-0-page-toolbar{display:flex;flex:none;flex-direction:column;gap:8px}
+    .toolbar-row{display:flex;min-width:0;flex-wrap:wrap;align-items:center;gap:8px}
+    .toolbar-spacer{flex:1}
+    .toolbar-search{position:relative;display:flex;width:256px;height:32px;flex:none;align-items:center;gap:8px;padding:0 8px;border:1px solid #8f7fe0;border-radius:8px;background:#302449;color:#d6b8ef;box-shadow:0 1px 2px #0004}
+    .toolbar-search [data-slot="input-group-addon"]{display:flex;align-items:center;color:#b9add9}
+    .toolbar-search svg{width:16px;height:16px;flex:none}
+    .toolbar-search input{width:100%;min-width:0;height:100%;border:0;outline:none;background:transparent;color:#f2ebff;font:13px system-ui,sans-serif}
+    .toolbar-search input::placeholder{color:#b9add9}
+    .toolbar-edit{height:32px;padding:0 12px;border:1px solid #8f7fe0;border-radius:6px;background:#302449;color:#d6b8ef}
+    .tools-scroll{position:relative;min-height:0;flex:1;overflow-y:auto;margin-top:16px}
+    .tools-layout{display:grid;width:100%;max-width:80rem;grid-template-columns:11rem minmax(0,1fr);gap:24px;margin:0 auto;padding-bottom:24px}
+    [data-slot="tabs"]{display:flex;min-width:0;flex-direction:column;gap:8px}
+    [data-slot="tabs"][data-orientation="vertical"]{flex-direction:row;align-items:flex-start}
+    [data-slot="tabs-list"]{position:relative;z-index:0;display:flex;width:100%;height:max-content;flex-direction:column;gap:2px;overflow:visible;padding:2px;border:0;border-radius:8px;background:#302449;color:#d6b8ef}
+    [data-slot="tabs-tab"]{position:relative;display:flex;width:100%;min-width:0;min-height:30px;flex:none;align-items:center;justify-content:flex-start;gap:8px;padding:4px 10px;border:1px solid transparent;border-radius:6px;background:transparent;color:#d6b8ef;text-align:left;font-size:13px;white-space:nowrap}
+    [data-slot="tabs-tab"] svg{width:16px;height:16px;flex:none}
+    [data-slot="tab-indicator"]{position:absolute;z-index:-1;top:2px;left:2px;width:100%;height:32px;border-radius:6px;background:#fff;box-shadow:0 1px 2px #0004}
+    .tools-content{display:flex;min-width:0;flex-direction:column;gap:10px}
+    .tool-heading{font-size:16px;font-weight:600}.tool-card{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #6c5ce0;border-radius:8px;background:#201936;color:#e3d2f5}
+    .fixture-status{height:24px;flex:none;padding:4px 12px;background:#ffb8e6;color:#16112a;font:11px system-ui,sans-serif}
+    .excluded{position:fixed;left:-12000px;top:0;width:320px;overflow:hidden}
+    .excluded .settings-page{display:block;width:240px;height:240px}
+    .excluded .wrong-chart{height:240px}
+  </style>
+</head>
+<body>
+<div class="fixture-window">
+  <header class="fixture-titlebar"><span>VRCX-0-jirai　·　NOT WINDOWS</span><span>□　×</span></header>
+  <div class="fixture-shell">
+    <nav class="fixture-navigation" data-fixture-navigation><strong>导航</strong><button>好友动态</button><button>好友位置</button><button>工具</button><button>设置</button></nav>
+    <main class="vrcx-0-main-content">
+      <!-- Source-shaped ToolsPageContent: PageScaffold#chart > PageToolbar/ToolbarSearch + scroll body > vertical TabsList. -->
+      <section id="chart" class="vrcx-0-page-scaffold" data-fixture-tools-root>
+        <header class="vrcx-0-page-toolbar"><div class="toolbar-row">
+          <div data-vrcx-0-control="toolbar" data-slot="input-group" role="group" class="toolbar-search vrcx-0-toolbar-control">
+            <div data-slot="input-group-addon" role="group"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m10 10 4 4" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <input id="filter-tools" data-slot="input-group-control" type="text" aria-label="筛选工具" placeholder="筛选工具" tabindex="0">
+          </div>
+          <span class="toolbar-spacer"></span><button id="edit-tools" class="toolbar-edit" type="button">编辑快捷访问</button>
+        </div></header>
+        <div class="tools-scroll relative mt-4">
+          <div class="tools-layout">
+            <div data-slot="tabs" data-orientation="vertical" role="tablist-container">
+              <div data-slot="tabs-list" data-orientation="vertical" data-fixture-tools-rail role="tablist" aria-label="工具分类">
+                <button id="tools-active-tab" data-slot="tabs-tab" data-active="true" aria-selected="true" aria-orientation="vertical" tabindex="0" role="tab">★　快捷访问</button>
+                <button data-slot="tabs-tab" aria-selected="false" aria-orientation="vertical" tabindex="-1" role="tab">最近使用</button>
+                <button data-slot="tabs-tab" aria-selected="false" aria-orientation="vertical" tabindex="-1" role="tab">VRChat</button>
+                <button data-slot="tabs-tab" aria-selected="false" aria-orientation="vertical" tabindex="-1" role="tab">开发工具</button>
+                <button data-slot="tabs-tab" aria-selected="false" aria-orientation="vertical" tabindex="-1" role="tab">网络工具</button>
+                <span data-slot="tab-indicator"></span>
+              </div>
+            </div>
+            <div class="tools-content"><div class="tool-heading">快捷访问</div><div class="tool-card">常用工具一　·　虚构工具内容</div><div class="tool-card">常用工具二　·　虚构工具内容</div></div>
+          </div>
+        </div>
+      </section>
+      <!-- A second real source root also uses id=chart (MutualFriendsPage), but lacks ToolbarSearch. -->
+      <section id="chart" class="vrcx-0-page-scaffold excluded wrong-chart" data-fixture-other-chart>
+        <div data-slot="tabs" data-orientation="vertical"><div data-slot="tabs-list" data-orientation="vertical"><button data-slot="tabs-tab" aria-selected="true">关系图节点</button></div></div>
+      </section>
+      <!-- Settings vertical Tabs: same orientation but not the ToolsPage root. -->
+      <section id="settings-fixture" class="vrcx-0-page-scaffold excluded settings-page" data-fixture-settings-page>
+        <div data-slot="tabs" data-orientation="vertical"><div data-slot="tabs-list" data-orientation="vertical" data-fixture-settings-rail><button data-slot="tabs-tab" data-active="true" aria-selected="true">系统设置</button><span data-slot="tab-indicator"></span></div></div>
+      </section>
+    </main>
+  </div>
+  <footer class="fixture-status">● 服务器状态　● 实时连接　VRChat</footer>
+</div>
+<p style="position:fixed;right:8px;bottom:24px;color:#b9add9;font-size:10px">NOT WINDOWS · fictional labels and tool cards · no user screenshot</p>
+</body>
+</html>

@@ -1,0 +1,292 @@
+# Chromium 实际 primitive / portal 结构探针
+
+Actual React Button/Dialog/Popover/Tooltip/TileShell components; source-derived responsibility subtrees, not authenticated business routes
+
+- CSS: 1043931 bytes；余量 4645
+- 86 元素 × 11 状态，285 断言，失败 0
+
+- PASS dialog-73 square
+- PASS dialog-73 active bevel
+- PASS dialog-73 latched survives hover
+- PASS dialog-73 focus
+- PASS dialog-73 disabled no active offset
+- PASS dialog-73 disabled hover paint stable
+- PASS dialog-74 square
+- PASS dialog-74 active bevel
+- PASS dialog-74 latched survives hover
+- PASS dialog-74 focus
+- PASS dialog-74 disabled no active offset
+- PASS dialog-74 disabled hover paint stable
+- PASS dialog-75 square
+- PASS dialog-75 active bevel
+- PASS dialog-75 latched survives hover
+- PASS dialog-75 focus
+- PASS dialog-75 disabled no active offset
+- PASS dialog-75 disabled hover paint stable
+- PASS dialog-76 square
+- PASS dialog-76 active bevel
+- PASS dialog-76 latched survives hover
+- PASS dialog-76 focus
+- PASS dialog-76 disabled no active offset
+- PASS dialog-76 disabled hover paint stable
+- PASS dialog-77 square
+- PASS dialog-77 active bevel
+- PASS dialog-77 latched survives hover
+- PASS dialog-77 focus
+- PASS dialog-77 disabled no active offset
+- PASS dialog-77 disabled hover paint stable
+- PASS dialog-78 square
+- PASS dialog-78 active bevel
+- PASS dialog-78 latched survives hover
+- PASS dialog-78 focus
+- PASS dialog-78 disabled no active offset
+- PASS dialog-78 disabled hover paint stable
+- PASS dialog-79 square
+- PASS dialog-79 active bevel
+- PASS dialog-79 latched survives hover
+- PASS dialog-79 focus
+- PASS dialog-79 disabled no active offset
+- PASS dialog-79 disabled hover paint stable
+- PASS dialog-80 square
+- PASS dialog-80 active bevel
+- PASS dialog-80 latched survives hover
+- PASS dialog-80 focus
+- PASS dialog-80 disabled no active offset
+- PASS dialog-80 disabled hover paint stable
+- PASS dialog-81 square
+- PASS dialog-81 active bevel
+- PASS dialog-81 latched survives hover
+- PASS dialog-81 focus
+- PASS dialog-81 disabled no active offset
+- PASS dialog-81 disabled hover paint stable
+- PASS dialog-82 square
+- PASS dialog-82 active bevel
+- PASS dialog-82 latched survives hover
+- PASS dialog-82 focus
+- PASS dialog-82 disabled no active offset
+- PASS dialog-82 disabled hover paint stable
+- PASS dialog-83 square
+- PASS dialog-83 active bevel
+- PASS dialog-83 latched survives hover
+- PASS dialog-83 focus
+- PASS dialog-83 disabled no active offset
+- PASS dialog-83 disabled hover paint stable
+- PASS dialog-84 square
+- PASS dialog-84 active bevel
+- PASS dialog-84 latched survives hover
+- PASS dialog-84 focus
+- PASS dialog-84 disabled no active offset
+- PASS dialog-84 disabled hover paint stable
+- PASS dialog-85 square
+- PASS dialog-85 active bevel
+- PASS dialog-85 latched survives hover
+- PASS dialog-85 focus
+- PASS dialog-85 disabled no active offset
+- PASS dialog-85 disabled hover paint stable
+- PASS dialog-86 square
+- PASS dialog-86 active bevel
+- PASS dialog-86 latched survives hover
+- PASS dialog-86 focus
+- PASS dialog-86 disabled no active offset
+- PASS dialog-86 disabled hover paint stable
+- PASS dialog-87 square
+- PASS dialog-87 active bevel
+- PASS dialog-87 latched survives hover
+- PASS dialog-87 focus
+- PASS dialog-87 disabled no active offset
+- PASS dialog-87 disabled hover paint stable
+- PASS dialog-88 square
+- PASS dialog-88 active bevel
+- PASS dialog-88 latched survives hover
+- PASS dialog-88 focus
+- PASS dialog-88 disabled no active offset
+- PASS dialog-88 disabled hover paint stable
+- PASS dialog-89 square
+- PASS dialog-89 focus
+- PASS dialog-89 disabled no active offset
+- PASS dialog-89 disabled hover paint stable
+- PASS dialog-90 square
+- PASS dialog-90 focus
+- PASS dialog-90 disabled no active offset
+- PASS dialog-90 disabled hover paint stable
+- PASS dialog-91 square
+- PASS dialog-91 active bevel
+- PASS dialog-91 latched survives hover
+- PASS dialog-91 focus
+- PASS dialog-91 disabled no active offset
+- PASS dialog-91 disabled hover paint stable
+- PASS dialog-92 square
+- PASS dialog-92 active bevel
+- PASS dialog-92 latched survives hover
+- PASS dialog-92 focus
+- PASS dialog-92 disabled no active offset
+- PASS dialog-92 disabled hover paint stable
+- PASS dialog-93 square
+- PASS dialog-93 active bevel
+- PASS dialog-93 latched survives hover
+- PASS dialog-93 focus
+- PASS dialog-93 disabled no active offset
+- PASS dialog-93 disabled hover paint stable
+- PASS popover-73 square
+- PASS popover-73 active bevel
+- PASS popover-73 latched survives hover
+- PASS popover-73 focus
+- PASS popover-73 disabled no active offset
+- PASS popover-73 disabled hover paint stable
+- PASS popover-74 square
+- PASS popover-74 active bevel
+- PASS popover-74 latched survives hover
+- PASS popover-74 focus
+- PASS popover-74 disabled no active offset
+- PASS popover-74 disabled hover paint stable
+- PASS popover-75 square
+- PASS popover-75 active bevel
+- PASS popover-75 latched survives hover
+- PASS popover-75 focus
+- PASS popover-75 disabled no active offset
+- PASS popover-75 disabled hover paint stable
+- PASS popover-76 square
+- PASS popover-76 active bevel
+- PASS popover-76 latched survives hover
+- PASS popover-76 focus
+- PASS popover-76 disabled no active offset
+- PASS popover-76 disabled hover paint stable
+- PASS popover-77 square
+- PASS popover-77 active bevel
+- PASS popover-77 latched survives hover
+- PASS popover-77 focus
+- PASS popover-77 disabled no active offset
+- PASS popover-77 disabled hover paint stable
+- PASS popover-78 square
+- PASS popover-78 active bevel
+- PASS popover-78 latched survives hover
+- PASS popover-78 focus
+- PASS popover-78 disabled no active offset
+- PASS popover-78 disabled hover paint stable
+- PASS popover-79 square
+- PASS popover-79 active bevel
+- PASS popover-79 latched survives hover
+- PASS popover-79 focus
+- PASS popover-79 disabled no active offset
+- PASS popover-79 disabled hover paint stable
+- PASS popover-80 square
+- PASS popover-80 active bevel
+- PASS popover-80 latched survives hover
+- PASS popover-80 focus
+- PASS popover-80 disabled no active offset
+- PASS popover-80 disabled hover paint stable
+- PASS popover-81 square
+- PASS popover-81 active bevel
+- PASS popover-81 latched survives hover
+- PASS popover-81 focus
+- PASS popover-81 disabled no active offset
+- PASS popover-81 disabled hover paint stable
+- PASS popover-82 square
+- PASS popover-82 active bevel
+- PASS popover-82 latched survives hover
+- PASS popover-82 focus
+- PASS popover-82 disabled no active offset
+- PASS popover-82 disabled hover paint stable
+- PASS popover-83 square
+- PASS popover-83 active bevel
+- PASS popover-83 latched survives hover
+- PASS popover-83 focus
+- PASS popover-83 disabled no active offset
+- PASS popover-83 disabled hover paint stable
+- PASS popover-84 square
+- PASS popover-84 active bevel
+- PASS popover-84 latched survives hover
+- PASS popover-84 focus
+- PASS popover-84 disabled no active offset
+- PASS popover-84 disabled hover paint stable
+- PASS popover-85 square
+- PASS popover-85 active bevel
+- PASS popover-85 latched survives hover
+- PASS popover-85 focus
+- PASS popover-85 disabled no active offset
+- PASS popover-85 disabled hover paint stable
+- PASS popover-86 square
+- PASS popover-86 active bevel
+- PASS popover-86 latched survives hover
+- PASS popover-86 focus
+- PASS popover-86 disabled no active offset
+- PASS popover-86 disabled hover paint stable
+- PASS popover-87 square
+- PASS popover-87 active bevel
+- PASS popover-87 latched survives hover
+- PASS popover-87 focus
+- PASS popover-87 disabled no active offset
+- PASS popover-87 disabled hover paint stable
+- PASS popover-88 square
+- PASS popover-88 active bevel
+- PASS popover-88 latched survives hover
+- PASS popover-88 focus
+- PASS popover-88 disabled no active offset
+- PASS popover-88 disabled hover paint stable
+- PASS popover-89 square
+- PASS popover-89 focus
+- PASS popover-89 disabled no active offset
+- PASS popover-89 disabled hover paint stable
+- PASS popover-90 square
+- PASS popover-90 focus
+- PASS popover-90 disabled no active offset
+- PASS popover-90 disabled hover paint stable
+- PASS popover-91 square
+- PASS popover-91 active bevel
+- PASS popover-91 latched survives hover
+- PASS popover-91 focus
+- PASS popover-91 disabled no active offset
+- PASS popover-91 disabled hover paint stable
+- PASS popover-92 square
+- PASS popover-92 active bevel
+- PASS popover-92 latched survives hover
+- PASS popover-92 focus
+- PASS popover-92 disabled no active offset
+- PASS popover-92 disabled hover paint stable
+- PASS popover-93 square
+- PASS popover-93 active bevel
+- PASS popover-93 latched survives hover
+- PASS popover-93 focus
+- PASS popover-93 disabled no active offset
+- PASS popover-93 disabled hover paint stable
+- PASS tile before/after all states unchanged
+- PASS image-tile before/after all states unchanged
+- PASS badge-tile before/after all states unchanged
+- PASS entity-text before/after all states unchanged
+- PASS avatar-row before/after all states unchanged
+- PASS circle before/after all states unchanged
+- PASS swatch before/after all states unchanged
+- PASS grid-selected before/after all states unchanged
+- PASS grid-idle before/after all states unchanged
+- PASS title-action before/after all states unchanged
+- PASS entity-protected before/after all states unchanged
+- PASS owner-protected before/after all states unchanged
+- PASS main-old before/after all states unchanged
+- PASS severity-old before/after all states unchanged
+- PASS toolbar-old before/after all states unchanged
+- PASS menu-old before/after all states unchanged
+- PASS nested-menu-old before/after all states unchanged
+- PASS viewer-image before/after all states unchanged
+- PASS fullscreen before/after all states unchanged
+- PASS joined-apply dimensions preserved
+- PASS joined-remove dimensions preserved
+- PASS zoom-out dimensions preserved
+- PASS zoom-reset dimensions preserved
+- PASS joined apply right seam
+- PASS joined halves depress without opening seam
+- PASS popover danger focus retains readable red face
+- PASS reveal remains hidden
+- PASS reveal hover remains operable
+- PASS reveal focus-within remains operable
+- PASS B086 source ghost default and outline prop both themed
+- PASS NoteExport include/skip semantic colour retained
+- PASS disclosure flat
+- PASS list flat hover feedback
+- PASS current account retains paint
+- PASS other account theme row hover
+- PASS picker child selected visible
+- PASS tooltip render slot replaced but themed
+- PASS fullscreen copy/download ghost feedback
+- PASS danger retains red family
+- PASS ordinary footer action still executes
+- PASS no browser runtime errors

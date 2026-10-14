@@ -1,0 +1,63 @@
+--- a/theme.css
++++ b/theme.css
+@@ -5197,3 +5197,60 @@
+   [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
+ }
+ html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
++
++/* SECTION portal-button-roles-b073-b100 */
++/* Real responsibilities, not B IDs: portals are ordinary surfaces too. Entity/owner
++   roots retain their paint; nested independent portals use their own root. Render
++   props may replace data-slot (tooltip/menu trigger), so route by button+variant.
++   Width/height/padding, reveal opacity, selected borders/rings and joined borders
++   remain source-owned. Native CSS nesting keeps this patch within the 1MiB cap. */
++:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]){
++  & button[data-variant]:where(:not([data-ui-role="tile"],[data-ui-role="color-swatch"],.rounded-object,.rounded-full,[data-ui-role="text-link"],[data-ui-role="disclosure"],[data-slot="dialog-close"],[data-slot$="dialog-header"] *,[data-slot$="menu-content"] *,[data-slot$="menu-sub-content"] *,[data-ui-role="icon-grid"] *,[data-ui-role="choice-list"] *,[data-slot="collapsible-trigger"],.h-auto.justify-start,.h-auto:has(img),.absolute.inset-0.h-full.w-full)){
++    border-radius:0;appearance:none;box-shadow:var(--jk-button-bevel);
++    --jk-portal-open-face:var(--jk-button-hover-face);--jk-portal-open-text:var(--jk-button-hover-text);
++    transition:background-color 80ms steps(2,end),color 80ms steps(2,end),box-shadow 80ms steps(2,end),transform 80ms steps(2,end);
++    &[data-variant="default"]{border-color:var(--jk-button-edge);background:var(--jk-button-default-face);color:var(--jk-button-default-text);--jk-portal-open-face:var(--jk-button-default-hover);--jk-portal-open-text:var(--jk-button-default-text)}
++    &[data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){background:var(--jk-button-default-hover);color:var(--jk-button-default-text)}
++    &:is([data-variant="outline"],[data-variant="secondary"]){border-color:var(--jk-button-edge);background:var(--jk-button-face);color:var(--jk-button-text)}
++    &:is([data-variant="outline"],[data-variant="secondary"]):hover:not(:disabled):not([aria-disabled="true"]){background:var(--jk-button-hover-face);color:var(--jk-button-hover-text)}
++    &[data-variant="ghost"]{background:transparent;color:#e3d2f5;box-shadow:none;--jk-portal-open-face:#392a52;--jk-portal-open-text:#fff0fa}
++    &[data-variant="ghost"]:hover:not(:disabled):not([aria-disabled="true"]){background:#392a52;color:#fff0fa;box-shadow:inset 1px 1px #6c5ce0,inset -1px -1px #16112a}
++    /* NoteExport's include/skip utility colours are semantic, not ghost exemption. */
++    &[data-variant="ghost"].text-primary{color:#ffb8e6}
++    &[data-variant="ghost"][class~="hover:text-destructive"]:hover:not(:disabled):not([aria-disabled="true"]){color:var(--jk-button-danger-text)}
++    &[data-variant="destructive"]{border-color:var(--jk-button-danger-edge);background:var(--jk-button-danger-face);color:var(--jk-button-danger-text);box-shadow:inset 1px 1px var(--jk-button-default-face),inset -1px -1px #16112a;--jk-portal-open-face:#ff6b8a;--jk-portal-open-text:#16112a}
++    &[data-variant="destructive"]:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]){background:#ff6b8a;color:#16112a}
++    &[data-variant="link"]{border:0;background:transparent;color:#d6b8ef;box-shadow:none;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px}
++    &[data-variant="link"]:hover:not(:disabled):not([aria-disabled="true"]){color:#ffb8e6;text-decoration-color:#ffb8e6}
++    /* State comes AFTER variant paint, including pointer hover. Open/latched != idle. */
++    &:not([data-variant="link"]):is([aria-expanded="true"],[aria-pressed="true"],[data-pressed],[data-popup-open]):not(:disabled):not([aria-disabled="true"]){background:var(--jk-portal-open-face);color:var(--jk-portal-open-text);box-shadow:var(--jk-button-pressed)}
++    &:not([data-variant="link"]):active:not(:disabled):not([aria-disabled="true"]){box-shadow:var(--jk-button-pressed);translate:none;transform:translate(1px,1px)}
++    /* Joined preset halves depress in place: translating only one half opens a seam. */
++    &:is(.rounded-r-none.border-r-0,.rounded-l-none):active:not(:disabled):not([aria-disabled="true"]){transform:none;translate:none}
++    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
++    &:is(:disabled,[aria-disabled="true"],[data-disabled]){cursor:not-allowed;filter:grayscale(.65);opacity:.58;box-shadow:inset 1px 1px rgb(253 244 255/.24),inset -1px -1px #16112a;transform:none;translate:none}
++    &[data-variant="link"]:is(:disabled,[aria-disabled="true"],[data-disabled]){box-shadow:none}
++  }
++  /* List/identity rows are flat, not entity keys. Do not repaint selected/current
++     state: variants, aria-current and UserPickerRow's selected child stay intact. */
++  & button[data-variant]:is(.h-auto.justify-start,[data-ui-role="choice-list"] button):not([data-ui-role="tile"],.rounded-object,.rounded-full):where(:not(.p-0):not(:has(img))){
++    border-radius:0;
++    &:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]):not([aria-current="true"]):not([aria-pressed="true"]):not([data-variant="secondary"]):not(.border-primary){background:#392a52;color:#fff0fa;box-shadow:inset 2px 0 #ff7fcf}
++    &:active:not(:disabled):not([aria-disabled="true"]){outline:1px solid #8f7fe0;outline-offset:-1px}
++    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
++    &:is(:disabled,[aria-disabled="true"],[data-disabled]){filter:grayscale(.65);opacity:.58}
++  }
++  & button[data-ui-role="text-link"]{border:0;border-radius:0;background:transparent;color:#d6b8ef;box-shadow:none;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px;
++    &:hover:not(:disabled){color:#ffb8e6;text-decoration-color:#ffb8e6}
++    &:active:not(:disabled){color:#fdf4ff}
++    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
++    &:disabled{opacity:.58}
++  }
++  /* B096 p-0 UserPickerRow wrappers retain child-selected paint and existing list
++     rules. B097 keeps secondary vs ghost and its dense grid geometry. B100 and
++     collapsible/group headings remain flat disclosures; no bevel/translation. */
++  & button:is([data-ui-role="disclosure"],[data-slot="collapsible-trigger"],.h-auto.justify-between):not([data-size^="icon"]){
++    border-radius:0;box-shadow:none;
++    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
++  }
++}

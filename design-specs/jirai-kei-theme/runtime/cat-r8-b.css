@@ -1,0 +1,21 @@
+/* R8-cat candidate B: 18px needy_cat in the existing drag-region gap after Help. */
+.vrcx-0-titlebar[data-app-titlebar] > [data-tauri-drag-region] > [data-tauri-drag-region] {
+  position: relative;
+}
+.vrcx-0-titlebar[data-app-titlebar] > [data-tauri-drag-region] > [data-tauri-drag-region]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(50% - 9px);
+  top: 7px;
+  width: 18px;
+  height: 18px;
+  background-image: var(--r5-pixel-mascot);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  opacity: .9;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-titlebar[data-app-titlebar] > [data-tauri-drag-region] > [data-tauri-drag-region]::after { animation: none; opacity: .9; }
+}

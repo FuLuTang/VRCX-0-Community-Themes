@@ -1,0 +1,222 @@
+{
+  "fixture": "NOT WINDOWS; 15 source-shaped menu buttons + two footer buttons; 1668px width",
+  "heights": {
+    "580": {
+      "rect": {
+        "x": 188,
+        "y": 619,
+        "width": 36,
+        "height": 36,
+        "left": 188,
+        "right": 224,
+        "top": 619,
+        "bottom": 655
+      },
+      "display": "block",
+      "opacity": 0.78,
+      "animationName": "r8-cat-hop",
+      "pointerEvents": "none",
+      "backgroundImage": true,
+      "backgroundSize": "36px 36px",
+      "imageRendering": "pixelated",
+      "scrolls": true,
+      "scrollHeight": 626,
+      "clientHeight": 455,
+      "menuCount": 15,
+      "menuOverlaps": false,
+      "footerTextOverlaps": false,
+      "footerTop": 488,
+      "footerGap": -167,
+      "lastMenuBottom": 614,
+      "outerRightGap": 13,
+      "activeAnimations": [
+        "r10-nav-phone-loop",
+        "r8-cat-hop",
+        "r8-nav-cursor"
+      ],
+      "extraScrollHeight": 36,
+      "scrolledView": {
+        "rect": {
+          "x": 188,
+          "y": 448,
+          "width": 36,
+          "height": 36,
+          "left": 188,
+          "right": 224,
+          "top": 448,
+          "bottom": 484
+        },
+        "display": "block",
+        "opacity": 0.78,
+        "animationName": "r8-cat-hop",
+        "pointerEvents": "none",
+        "backgroundImage": true,
+        "backgroundSize": "36px 36px",
+        "imageRendering": "pixelated",
+        "scrolls": true,
+        "scrollHeight": 626,
+        "clientHeight": 455,
+        "menuCount": 15,
+        "menuOverlaps": false,
+        "footerTextOverlaps": false,
+        "footerTop": 488,
+        "footerGap": 4,
+        "lastMenuBottom": 443,
+        "outerRightGap": 13,
+        "activeAnimations": [
+          "r10-nav-phone-loop",
+          "r8-cat-hop",
+          "r8-nav-cursor"
+        ]
+      }
+    },
+    "720": {
+      "rect": {
+        "x": 188,
+        "y": 619,
+        "width": 36,
+        "height": 36,
+        "left": 188,
+        "right": 224,
+        "top": 619,
+        "bottom": 655
+      },
+      "display": "block",
+      "opacity": 0.78,
+      "animationName": "r8-cat-hop",
+      "pointerEvents": "none",
+      "backgroundImage": true,
+      "backgroundSize": "36px 36px",
+      "imageRendering": "pixelated",
+      "scrolls": true,
+      "scrollHeight": 626,
+      "clientHeight": 595,
+      "menuCount": 15,
+      "menuOverlaps": false,
+      "footerTextOverlaps": false,
+      "footerTop": 628,
+      "footerGap": -27,
+      "lastMenuBottom": 614,
+      "outerRightGap": 13,
+      "activeAnimations": [
+        "r10-nav-phone-loop",
+        "r8-cat-hop",
+        "r8-nav-cursor"
+      ],
+      "extraScrollHeight": 31,
+      "scrolledView": {
+        "rect": {
+          "x": 188,
+          "y": 588,
+          "width": 36,
+          "height": 36,
+          "left": 188,
+          "right": 224,
+          "top": 588,
+          "bottom": 624
+        },
+        "display": "block",
+        "opacity": 0.78,
+        "animationName": "r8-cat-hop",
+        "pointerEvents": "none",
+        "backgroundImage": true,
+        "backgroundSize": "36px 36px",
+        "imageRendering": "pixelated",
+        "scrolls": true,
+        "scrollHeight": 626,
+        "clientHeight": 595,
+        "menuCount": 15,
+        "menuOverlaps": false,
+        "footerTextOverlaps": false,
+        "footerTop": 628,
+        "footerGap": 4,
+        "lastMenuBottom": 583,
+        "outerRightGap": 13,
+        "activeAnimations": [
+          "r10-nav-phone-loop",
+          "r8-cat-hop",
+          "r8-nav-cursor"
+        ]
+      }
+    },
+    "900": {
+      "rect": {
+        "x": 188,
+        "y": 764,
+        "width": 36,
+        "height": 36,
+        "left": 188,
+        "right": 224,
+        "top": 764,
+        "bottom": 800
+      },
+      "display": "block",
+      "opacity": 0.78,
+      "animationName": "r8-cat-hop",
+      "pointerEvents": "none",
+      "backgroundImage": true,
+      "backgroundSize": "36px 36px",
+      "imageRendering": "pixelated",
+      "scrolls": false,
+      "scrollHeight": 775,
+      "clientHeight": 775,
+      "menuCount": 15,
+      "menuOverlaps": false,
+      "footerTextOverlaps": false,
+      "footerTop": 808,
+      "footerGap": 8,
+      "lastMenuBottom": 614,
+      "outerRightGap": 13,
+      "activeAnimations": [
+        "r10-nav-phone-loop",
+        "r8-cat-hop",
+        "r8-nav-cursor"
+      ],
+      "extraScrollHeight": 0
+    },
+    "1067": {
+      "rect": {
+        "x": 188,
+        "y": 931,
+        "width": 36,
+        "height": 36,
+        "left": 188,
+        "right": 224,
+        "top": 931,
+        "bottom": 967
+      },
+      "display": "block",
+      "opacity": 0.78,
+      "animationName": "r8-cat-hop",
+      "pointerEvents": "none",
+      "backgroundImage": true,
+      "backgroundSize": "36px 36px",
+      "imageRendering": "pixelated",
+      "scrolls": false,
+      "scrollHeight": 942,
+      "clientHeight": 942,
+      "menuCount": 15,
+      "menuOverlaps": false,
+      "footerTextOverlaps": false,
+      "footerTop": 975,
+      "footerGap": 8,
+      "lastMenuBottom": 614,
+      "outerRightGap": 13,
+      "activeAnimations": [
+        "r10-nav-phone-loop",
+        "r8-cat-hop",
+        "r8-nav-cursor"
+      ],
+      "extraScrollHeight": 0
+    }
+  },
+  "reducedMotion": {
+    "animationName": "none",
+    "opacity": 0.95,
+    "pointerEvents": "none",
+    "staticGeometry": true
+  },
+  "collapsed": {
+    "display": "none"
+  }
+}

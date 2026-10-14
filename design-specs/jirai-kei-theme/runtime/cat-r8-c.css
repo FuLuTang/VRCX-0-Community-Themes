@@ -1,0 +1,12 @@
+/* R8-cat candidate C: put the 18px cat directly after the existing SOCIAL label,
+   in the same header pseudo-element and far from its right-side action controls. */
+.vrcx-0-side-panel::before {
+  background-image: var(--r5-pixel-mascot);
+  background-position: 64px center;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-side-panel::before { animation: none; }
+}

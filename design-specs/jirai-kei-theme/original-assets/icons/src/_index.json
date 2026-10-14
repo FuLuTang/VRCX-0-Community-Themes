@@ -1,0 +1,1252 @@
+{
+ "grid": 16,
+ "stroke": 2.6,
+ "threshold": 0.45,
+ "icons": [
+  {
+   "used": "trash-2",
+   "cls": "trash",
+   "bytes": 263
+  },
+  {
+   "used": "x",
+   "cls": "x",
+   "bytes": 292
+  },
+  {
+   "used": "user",
+   "cls": "user",
+   "bytes": 329
+  },
+  {
+   "used": "image",
+   "cls": "image",
+   "bytes": 304
+  },
+  {
+   "used": "refresh-cw",
+   "cls": "refresh-cw",
+   "bytes": 284
+  },
+  {
+   "used": "chevron-down",
+   "cls": "chevron-down",
+   "bytes": 222
+  },
+  {
+   "used": "external-link",
+   "cls": "external-link",
+   "bytes": 298
+  },
+  {
+   "used": "plus",
+   "cls": "plus",
+   "bytes": 156
+  },
+  {
+   "used": "users-round",
+   "cls": "users-round",
+   "bytes": 422
+  },
+  {
+   "used": "more-horizontal",
+   "cls": "ellipsis",
+   "bytes": 153
+  },
+  {
+   "used": "chevron-right",
+   "cls": "chevron-right",
+   "bytes": 222
+  },
+  {
+   "used": "check",
+   "cls": "check",
+   "bytes": 260
+  },
+  {
+   "used": "copy",
+   "cls": "copy",
+   "bytes": 278
+  },
+  {
+   "used": "users",
+   "cls": "users",
+   "bytes": 470
+  },
+  {
+   "used": "person-standing",
+   "cls": "person-standing",
+   "bytes": 202
+  },
+  {
+   "used": "globe",
+   "cls": "globe",
+   "bytes": 459
+  },
+  {
+   "used": "star",
+   "cls": "star",
+   "bytes": 331
+  },
+  {
+   "used": "lock",
+   "cls": "lock",
+   "bytes": 256
+  },
+  {
+   "used": "pencil",
+   "cls": "pencil",
+   "bytes": 375
+  },
+  {
+   "used": "folder-open",
+   "cls": "folder-open",
+   "bytes": 266
+  },
+  {
+   "used": "eye-off",
+   "cls": "eye-off",
+   "bytes": 419
+  },
+  {
+   "used": "history",
+   "cls": "rotate-ccw-clock",
+   "bytes": 316
+  },
+  {
+   "used": "settings",
+   "cls": "settings",
+   "bytes": 421
+  },
+  {
+   "used": "eye",
+   "cls": "eye",
+   "bytes": 350
+  },
+  {
+   "used": "download",
+   "cls": "download",
+   "bytes": 250
+  },
+  {
+   "used": "search",
+   "cls": "search",
+   "bytes": 354
+  },
+  {
+   "used": "ban",
+   "cls": "ban",
+   "bytes": 470
+  },
+  {
+   "used": "share-2",
+   "cls": "share-2",
+   "bytes": 304
+  },
+  {
+   "used": "heart",
+   "cls": "heart",
+   "bytes": 381
+  },
+  {
+   "used": "chevron-left",
+   "cls": "chevron-left",
+   "bytes": 223
+  },
+  {
+   "used": "bell",
+   "cls": "bell",
+   "bytes": 262
+  },
+  {
+   "used": "log-out",
+   "cls": "log-out",
+   "bytes": 259
+  },
+  {
+   "used": "message-square",
+   "cls": "message-square",
+   "bytes": 199
+  },
+  {
+   "used": "loader-circle",
+   "cls": "loader-circle",
+   "bytes": 262
+  },
+  {
+   "used": "arrow-right",
+   "cls": "arrow-right",
+   "bytes": 225
+  },
+  {
+   "used": "settings-2",
+   "cls": "settings-2",
+   "bytes": 280
+  },
+  {
+   "used": "monitor",
+   "cls": "monitor",
+   "bytes": 195
+  },
+  {
+   "used": "rectangle-goggles",
+   "cls": "rectangle-goggles",
+   "bytes": 217
+  },
+  {
+   "used": "map-pin",
+   "cls": "map-pin",
+   "bytes": 361
+  },
+  {
+   "used": "triangle-alert",
+   "cls": "triangle-alert",
+   "bytes": 359
+  },
+  {
+   "used": "grip-vertical",
+   "cls": "grip-vertical",
+   "bytes": 188
+  },
+  {
+   "used": "clock",
+   "cls": "clock",
+   "bytes": 417
+  },
+  {
+   "used": "log-in",
+   "cls": "log-in",
+   "bytes": 258
+  },
+  {
+   "used": "crown",
+   "cls": "crown",
+   "bytes": 335
+  },
+  {
+   "used": "alert-triangle",
+   "cls": "triangle-alert",
+   "bytes": 359
+  },
+  {
+   "used": "palette",
+   "cls": "palette",
+   "bytes": 449
+  },
+  {
+   "used": "arrow-left",
+   "cls": "arrow-left",
+   "bytes": 225
+  },
+  {
+   "used": "save",
+   "cls": "save",
+   "bytes": 287
+  },
+  {
+   "used": "minus",
+   "cls": "minus",
+   "bytes": 133
+  },
+  {
+   "used": "search-x",
+   "cls": "search-x",
+   "bytes": 432
+  },
+  {
+   "used": "arrow-down",
+   "cls": "arrow-down",
+   "bytes": 234
+  },
+  {
+   "used": "list-filter",
+   "cls": "list-filter",
+   "bytes": 168
+  },
+  {
+   "used": "waypoints",
+   "cls": "waypoints",
+   "bytes": 253
+  },
+  {
+   "used": "file-text",
+   "cls": "file-text",
+   "bytes": 272
+  },
+  {
+   "used": "gamepad-2",
+   "cls": "gamepad-2",
+   "bytes": 427
+  },
+  {
+   "used": "panel-left",
+   "cls": "panel-left",
+   "bytes": 213
+  },
+  {
+   "used": "square",
+   "cls": "square",
+   "bytes": 201
+  },
+  {
+   "used": "check-check",
+   "cls": "check-check",
+   "bytes": 341
+  },
+  {
+   "used": "arrow-up",
+   "cls": "arrow-up",
+   "bytes": 235
+  },
+  {
+   "used": "calendar-range",
+   "cls": "calendar-range",
+   "bytes": 337
+  },
+  {
+   "used": "calendar",
+   "cls": "calendar",
+   "bytes": 280
+  },
+  {
+   "used": "badge-check",
+   "cls": "badge-check",
+   "bytes": 446
+  },
+  {
+   "used": "tag",
+   "cls": "tag",
+   "bytes": 399
+  },
+  {
+   "used": "list",
+   "cls": "list",
+   "bytes": 217
+  },
+  {
+   "used": "user-minus",
+   "cls": "user-minus",
+   "bytes": 341
+  },
+  {
+   "used": "sparkles",
+   "cls": "sparkles",
+   "bytes": 363
+  },
+  {
+   "used": "shield-check",
+   "cls": "shield-check",
+   "bytes": 331
+  },
+  {
+   "used": "user-round",
+   "cls": "user-round",
+   "bytes": 296
+  },
+  {
+   "used": "package",
+   "cls": "package",
+   "bytes": 385
+  },
+  {
+   "used": "chevrons-up-down",
+   "cls": "chevrons-up-down",
+   "bytes": 304
+  },
+  {
+   "used": "info",
+   "cls": "info",
+   "bytes": 407
+  },
+  {
+   "used": "calendar-days",
+   "cls": "calendar-days",
+   "bytes": 347
+  },
+  {
+   "used": "sliders-horizontal",
+   "cls": "sliders-horizontal",
+   "bytes": 325
+  },
+  {
+   "used": "arrow-up-down",
+   "cls": "arrow-up-down",
+   "bytes": 256
+  },
+  {
+   "used": "arrow-up-to-line",
+   "cls": "arrow-up-to-line",
+   "bytes": 225
+  },
+  {
+   "used": "bell-off",
+   "cls": "bell-off",
+   "bytes": 420
+  },
+  {
+   "used": "shield",
+   "cls": "shield",
+   "bytes": 274
+  },
+  {
+   "used": "loader-2",
+   "cls": "loader-circle",
+   "bytes": 262
+  },
+  {
+   "used": "send",
+   "cls": "send",
+   "bytes": 353
+  },
+  {
+   "used": "hand",
+   "cls": "hand",
+   "bytes": 389
+  },
+  {
+   "used": "message-square-x",
+   "cls": "message-square-x",
+   "bytes": 255
+  },
+  {
+   "used": "user-plus",
+   "cls": "user-plus",
+   "bytes": 375
+  },
+  {
+   "used": "volume-x",
+   "cls": "volume-x",
+   "bytes": 296
+  },
+  {
+   "used": "user-round-check",
+   "cls": "user-round-check",
+   "bytes": 377
+  },
+  {
+   "used": "apple",
+   "cls": "apple",
+   "bytes": 423
+  },
+  {
+   "used": "database",
+   "cls": "database",
+   "bytes": 355
+  },
+  {
+   "used": "link",
+   "cls": "link",
+   "bytes": 398
+  },
+  {
+   "used": "pin-off",
+   "cls": "pin-off",
+   "bytes": 409
+  },
+  {
+   "used": "ellipsis",
+   "cls": "ellipsis",
+   "bytes": 153
+  },
+  {
+   "used": "check-circle-2",
+   "cls": "circle-check",
+   "bytes": 449
+  },
+  {
+   "used": "camera",
+   "cls": "camera",
+   "bytes": 285
+  },
+  {
+   "used": "compass",
+   "cls": "compass",
+   "bytes": 469
+  },
+  {
+   "used": "folder",
+   "cls": "folder",
+   "bytes": 202
+  },
+  {
+   "used": "network",
+   "cls": "network",
+   "bytes": 368
+  },
+  {
+   "used": "layout-grid",
+   "cls": "layout-grid",
+   "bytes": 350
+  },
+  {
+   "used": "chevron-up",
+   "cls": "chevron-up",
+   "bytes": 224
+  },
+  {
+   "used": "arrow-up-right",
+   "cls": "arrow-up-right",
+   "bytes": 212
+  },
+  {
+   "used": "bookmark",
+   "cls": "bookmark",
+   "bytes": 230
+  },
+  {
+   "used": "link-2",
+   "cls": "link-2",
+   "bytes": 296
+  },
+  {
+   "used": "shield-alert",
+   "cls": "shield-alert",
+   "bytes": 296
+  },
+  {
+   "used": "message-square-text",
+   "cls": "message-square-text",
+   "bytes": 244
+  },
+  {
+   "used": "mouse-pointer-click",
+   "cls": "mouse-pointer-click",
+   "bytes": 327
+  },
+  {
+   "used": "flag",
+   "cls": "flag",
+   "bytes": 268
+  },
+  {
+   "used": "home",
+   "cls": "house",
+   "bytes": 312
+  },
+  {
+   "used": "pin",
+   "cls": "pin",
+   "bytes": 320
+  },
+  {
+   "used": "mail",
+   "cls": "mail",
+   "bytes": 279
+  },
+  {
+   "used": "archive-restore",
+   "cls": "archive-restore",
+   "bytes": 301
+  },
+  {
+   "used": "circle-check",
+   "cls": "circle-check",
+   "bytes": 449
+  },
+  {
+   "used": "square-pen",
+   "cls": "square-pen",
+   "bytes": 404
+  },
+  {
+   "used": "list-plus",
+   "cls": "list-plus",
+   "bytes": 218
+  },
+  {
+   "used": "activity",
+   "cls": "activity",
+   "bytes": 249
+  },
+  {
+   "used": "archive",
+   "cls": "archive",
+   "bytes": 247
+  },
+  {
+   "used": "bot",
+   "cls": "bot",
+   "bytes": 266
+  },
+  {
+   "used": "footprints",
+   "cls": "footprints",
+   "bytes": 349
+  },
+  {
+   "used": "images",
+   "cls": "images",
+   "bytes": 383
+  },
+  {
+   "used": "layout-dashboard",
+   "cls": "layout-dashboard",
+   "bytes": 394
+  },
+  {
+   "used": "logs",
+   "cls": "logs",
+   "bytes": 289
+  },
+  {
+   "used": "plug",
+   "cls": "plug",
+   "bytes": 224
+  },
+  {
+   "used": "shield-user",
+   "cls": "shield-user",
+   "bytes": 397
+  },
+  {
+   "used": "smile",
+   "cls": "face-slightly-smiling",
+   "bytes": 450
+  },
+  {
+   "used": "tags",
+   "cls": "tags",
+   "bytes": 444
+  },
+  {
+   "used": "wrench",
+   "cls": "wrench",
+   "bytes": 420
+  },
+  {
+   "used": "panel-right",
+   "cls": "panel-right",
+   "bytes": 213
+  },
+  {
+   "used": "panel-right-open",
+   "cls": "panel-right-open",
+   "bytes": 270
+  },
+  {
+   "used": "rotate-cw",
+   "cls": "rotate-cw",
+   "bytes": 284
+  },
+  {
+   "used": "eraser",
+   "cls": "eraser",
+   "bytes": 429
+  },
+  {
+   "used": "languages",
+   "cls": "languages",
+   "bytes": 335
+  },
+  {
+   "used": "cloud",
+   "cls": "cloud",
+   "bytes": 322
+  },
+  {
+   "used": "globe-2",
+   "cls": "earth",
+   "bytes": 525
+  },
+  {
+   "used": "image-off",
+   "cls": "image-off",
+   "bytes": 413
+  },
+  {
+   "used": "play",
+   "cls": "play",
+   "bytes": 283
+  },
+  {
+   "used": "layers",
+   "cls": "layers",
+   "bytes": 476
+  },
+  {
+   "used": "type",
+   "cls": "type",
+   "bytes": 215
+  },
+  {
+   "used": "clock-3",
+   "cls": "clock-3",
+   "bytes": 406
+  },
+  {
+   "used": "key-round",
+   "cls": "key-round",
+   "bytes": 406
+  },
+  {
+   "used": "clipboard-copy",
+   "cls": "clipboard-copy",
+   "bytes": 356
+  },
+  {
+   "used": "star-off",
+   "cls": "star-off",
+   "bytes": 440
+  },
+  {
+   "used": "coffee",
+   "cls": "coffee",
+   "bytes": 325
+  },
+  {
+   "used": "refresh-ccw",
+   "cls": "refresh-ccw",
+   "bytes": 280
+  },
+  {
+   "used": "sprout",
+   "cls": "sprout",
+   "bytes": 305
+  },
+  {
+   "used": "tractor",
+   "cls": "tractor",
+   "bytes": 353
+  },
+  {
+   "used": "upload",
+   "cls": "upload",
+   "bytes": 252
+  },
+  {
+   "used": "check-circle",
+   "cls": "circle-check-big",
+   "bytes": 462
+  },
+  {
+   "used": "shield-off",
+   "cls": "shield-off",
+   "bytes": 405
+  },
+  {
+   "used": "ticket",
+   "cls": "ticket",
+   "bytes": 399
+  },
+  {
+   "used": "bug",
+   "cls": "bug",
+   "bytes": 376
+  },
+  {
+   "used": "mail-plus",
+   "cls": "mail-plus",
+   "bytes": 337
+  },
+  {
+   "used": "mail-question",
+   "cls": "mail-question-mark",
+   "bytes": 354
+  },
+  {
+   "used": "message-square-plus",
+   "cls": "message-square-plus",
+   "bytes": 245
+  },
+  {
+   "used": "notebook-pen",
+   "cls": "notebook-pen",
+   "bytes": 433
+  },
+  {
+   "used": "rotate-ccw",
+   "cls": "rotate-ccw",
+   "bytes": 281
+  },
+  {
+   "used": "user-check",
+   "cls": "user-check",
+   "bytes": 386
+  },
+  {
+   "used": "user-round-minus",
+   "cls": "user-round-minus",
+   "bytes": 327
+  },
+  {
+   "used": "user-x",
+   "cls": "user-x",
+   "bytes": 386
+  },
+  {
+   "used": "gem",
+   "cls": "gem",
+   "bytes": 382
+  },
+  {
+   "used": "pencil-line",
+   "cls": "pencil-line",
+   "bytes": 387
+  },
+  {
+   "used": "app-window",
+   "cls": "app-window",
+   "bytes": 185
+  },
+  {
+   "used": "inbox",
+   "cls": "inbox",
+   "bytes": 291
+  },
+  {
+   "used": "calendar-clock",
+   "cls": "calendar-clock",
+   "bytes": 434
+  },
+  {
+   "used": "circle-dashed",
+   "cls": "circle-dashed",
+   "bytes": 386
+  },
+  {
+   "used": "circle-x",
+   "cls": "circle-x",
+   "bytes": 459
+  },
+  {
+   "used": "minus-circle",
+   "cls": "circle-minus",
+   "bytes": 396
+  },
+  {
+   "used": "x-circle",
+   "cls": "circle-x",
+   "bytes": 459
+  },
+  {
+   "used": "panel-left-open",
+   "cls": "panel-left-open",
+   "bytes": 269
+  },
+  {
+   "used": "folder-plus",
+   "cls": "folder-plus",
+   "bytes": 247
+  },
+  {
+   "used": "ungroup",
+   "cls": "ungroup",
+   "bytes": 257
+  },
+  {
+   "used": "book-open",
+   "cls": "book-open",
+   "bytes": 229
+  },
+  {
+   "used": "box",
+   "cls": "box",
+   "bytes": 377
+  },
+  {
+   "used": "boxes",
+   "cls": "boxes",
+   "bytes": 436
+  },
+  {
+   "used": "chart-bar",
+   "cls": "chart-bar",
+   "bytes": 204
+  },
+  {
+   "used": "circle",
+   "cls": "circle",
+   "bytes": 386
+  },
+  {
+   "used": "contact",
+   "cls": "contact",
+   "bytes": 347
+  },
+  {
+   "used": "contact-round",
+   "cls": "contact-round",
+   "bytes": 393
+  },
+  {
+   "used": "cuboid",
+   "cls": "cuboid",
+   "bytes": 437
+  },
+  {
+   "used": "database-backup",
+   "cls": "database-backup",
+   "bytes": 452
+  },
+  {
+   "used": "gauge",
+   "cls": "gauge",
+   "bytes": 335
+  },
+  {
+   "used": "house",
+   "cls": "house",
+   "bytes": 312
+  },
+  {
+   "used": "list-checks",
+   "cls": "list-checks",
+   "bytes": 280
+  },
+  {
+   "used": "map-pinned",
+   "cls": "map-pinned",
+   "bytes": 400
+  },
+  {
+   "used": "rocket",
+   "cls": "rocket",
+   "bytes": 399
+  },
+  {
+   "used": "rss",
+   "cls": "rss",
+   "bytes": 313
+  },
+  {
+   "used": "server-cog",
+   "cls": "server-cog",
+   "bytes": 385
+  },
+  {
+   "used": "square-terminal",
+   "cls": "square-terminal",
+   "bytes": 256
+  },
+  {
+   "used": "text-search",
+   "cls": "text-search",
+   "bytes": 250
+  },
+  {
+   "used": "user-star",
+   "cls": "user-star",
+   "bytes": 327
+  },
+  {
+   "used": "minimize-2",
+   "cls": "minimize-2",
+   "bytes": 304
+  },
+  {
+   "used": "music",
+   "cls": "music",
+   "bytes": 305
+  },
+  {
+   "used": "arrow-left-from-line",
+   "cls": "arrow-left-from-line",
+   "bytes": 237
+  },
+  {
+   "used": "arrow-right-to-line",
+   "cls": "arrow-right-to-line",
+   "bytes": 237
+  },
+  {
+   "used": "keyboard",
+   "cls": "keyboard",
+   "bytes": 273
+  },
+  {
+   "used": "unlock",
+   "cls": "lock-open",
+   "bytes": 279
+  },
+  {
+   "used": "zoom-in",
+   "cls": "zoom-in",
+   "bytes": 399
+  },
+  {
+   "used": "zoom-out",
+   "cls": "zoom-out",
+   "bytes": 364
+  },
+  {
+   "used": "flip-horizontal-2",
+   "cls": "triangles-centerline-dashed-horizontal",
+   "bytes": 349
+  },
+  {
+   "used": "flip-vertical-2",
+   "cls": "triangles-centerline-dashed-vertical",
+   "bytes": 356
+  },
+  {
+   "used": "maximize-2",
+   "cls": "maximize-2",
+   "bytes": 281
+  },
+  {
+   "used": "flask-conical",
+   "cls": "flask-conical",
+   "bytes": 275
+  },
+  {
+   "used": "repeat",
+   "cls": "repeat",
+   "bytes": 336
+  },
+  {
+   "used": "user-search",
+   "cls": "user-search",
+   "bytes": 314
+  },
+  {
+   "used": "folder-heart",
+   "cls": "folder-heart",
+   "bytes": 304
+  },
+  {
+   "used": "more-vertical",
+   "cls": "ellipsis-vertical",
+   "bytes": 153
+  },
+  {
+   "used": "sticky-note",
+   "cls": "sticky-note",
+   "bytes": 253
+  },
+  {
+   "used": "rows-2",
+   "cls": "rows-2",
+   "bytes": 236
+  },
+  {
+   "used": "rows-3",
+   "cls": "rows-3",
+   "bytes": 274
+  },
+  {
+   "used": "rows-4",
+   "cls": "rows-4",
+   "bytes": 312
+  },
+  {
+   "used": "shirt",
+   "cls": "shirt",
+   "bytes": 329
+  },
+  {
+   "used": "trending-up",
+   "cls": "trending-up",
+   "bytes": 283
+  },
+  {
+   "used": "arrow-left-right",
+   "cls": "arrow-left-right",
+   "bytes": 260
+  },
+  {
+   "used": "hash",
+   "cls": "hash",
+   "bytes": 352
+  },
+  {
+   "used": "scan-search",
+   "cls": "scan-search",
+   "bytes": 344
+  },
+  {
+   "used": "hard-drive",
+   "cls": "hard-drive",
+   "bytes": 269
+  },
+  {
+   "used": "arrow-down-to-line",
+   "cls": "arrow-down-to-line",
+   "bytes": 225
+  },
+  {
+   "used": "move-right",
+   "cls": "move-right",
+   "bytes": 182
+  },
+  {
+   "used": "save-off",
+   "cls": "save-off",
+   "bytes": 410
+  },
+  {
+   "used": "columns-3",
+   "cls": "columns-3",
+   "bytes": 226
+  },
+  {
+   "used": "table",
+   "cls": "table",
+   "bytes": 304
+  },
+  {
+   "used": "user-round-search",
+   "cls": "user-round-search",
+   "bytes": 386
+  },
+  {
+   "used": "video",
+   "cls": "video",
+   "bytes": 230
+  },
+  {
+   "used": "chevrons-down-up",
+   "cls": "chevrons-down-up",
+   "bytes": 280
+  },
+  {
+   "used": "table-2",
+   "cls": "table-2",
+   "bytes": 256
+  },
+  {
+   "used": "door-open",
+   "cls": "door-open",
+   "bytes": 254
+  },
+  {
+   "used": "list-x",
+   "cls": "list-x",
+   "bytes": 239
+  },
+  {
+   "used": "volume-2",
+   "cls": "volume-2",
+   "bytes": 356
+  },
+  {
+   "used": "scan-face",
+   "cls": "scan-face",
+   "bytes": 345
+  },
+  {
+   "used": "smartphone",
+   "cls": "smartphone",
+   "bytes": 209
+  },
+  {
+   "used": "message-circle",
+   "cls": "message-circle",
+   "bytes": 376
+  },
+  {
+   "used": "reply",
+   "cls": "reply",
+   "bytes": 238
+  },
+  {
+   "used": "id-card",
+   "cls": "id-card",
+   "bytes": 325
+  },
+  {
+   "used": "timer-off",
+   "cls": "timer-off",
+   "bytes": 426
+  },
+  {
+   "used": "terminal",
+   "cls": "terminal",
+   "bytes": 244
+  },
+  {
+   "used": "code-xml",
+   "cls": "code-xml",
+   "bytes": 316
+  },
+  {
+   "used": "circle-help",
+   "cls": "circle-question-mark",
+   "bytes": 460
+  },
+  {
+   "used": "folder-search",
+   "cls": "folder-search",
+   "bytes": 313
+  },
+  {
+   "used": "shuffle",
+   "cls": "shuffle",
+   "bytes": 375
+  },
+  {
+   "used": "brush",
+   "cls": "brush",
+   "bytes": 387
+  },
+  {
+   "used": "cloud-off",
+   "cls": "cloud-off",
+   "bytes": 454
+  },
+  {
+   "used": "code",
+   "cls": "code",
+   "bytes": 331
+  },
+  {
+   "used": "gift",
+   "cls": "gift",
+   "bytes": 275
+  },
+  {
+   "used": "file-search",
+   "cls": "file-search",
+   "bytes": 328
+  },
+  {
+   "used": "file-archive",
+   "cls": "file-archive",
+   "bytes": 405
+  },
+  {
+   "used": "folder-tree",
+   "cls": "folder-tree",
+   "bytes": 351
+  },
+  {
+   "used": "dices",
+   "cls": "dices",
+   "bytes": 376
+  },
+  {
+   "used": "panel-right-close",
+   "cls": "panel-right-close",
+   "bytes": 269
+  },
+  {
+   "used": "case-sensitive",
+   "cls": "case-sensitive",
+   "bytes": 351
+  },
+  {
+   "used": "chevrons-down",
+   "cls": "chevrons-down",
+   "bytes": 291
+  },
+  {
+   "used": "regex",
+   "cls": "regex",
+   "bytes": 294
+  },
+  {
+   "used": "moon",
+   "cls": "moon",
+   "bytes": 327
+  },
+  {
+   "used": "sun",
+   "cls": "sun",
+   "bytes": 396
+  },
+  {
+   "used": "circle-alert",
+   "cls": "circle-alert",
+   "bytes": 407
+  }
+ ]
+}

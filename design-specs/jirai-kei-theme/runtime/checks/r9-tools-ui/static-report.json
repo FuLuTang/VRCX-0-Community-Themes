@@ -1,0 +1,144 @@
+{
+  "result": "PASS_STATIC",
+  "note": "JSDOM + PostCSS structural selector audit; browser layout/screenshot phase is not covered here.",
+  "rules": 13,
+  "sourceRoot": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"])",
+  "selectorAudit": [
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "border-color",
+        "border-radius",
+        "background-color",
+        "color",
+        "box-shadow",
+        "transition"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]:focus-within",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "outline",
+        "outline-offset",
+        "z-index"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"input-group-addon\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "color"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"input-group-control\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "border-radius",
+        "background-color",
+        "color",
+        "caret-color",
+        "outline",
+        "box-shadow"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"input-group-control\"]::placeholder",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "color",
+        "opacity"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"button\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "border-radius",
+        "color",
+        "background-color",
+        "box-shadow"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-slot=\"button\"]:focus-visible",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "outline",
+        "outline-offset"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "gap",
+        "padding",
+        "border",
+        "border-radius",
+        "background-color",
+        "color",
+        "box-shadow"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tab-indicator\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "display"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "border-radius",
+        "border-color",
+        "background-color",
+        "color",
+        "box-shadow",
+        "transition"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]:hover:not([data-disabled]):not([aria-disabled=\"true\"])",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "background-color",
+        "color"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]:is([data-active],[aria-selected=\"true\"])",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "border-color",
+        "background-color",
+        "color",
+        "box-shadow"
+      ]
+    },
+    {
+      "selector": ".vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) > div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-tab\"]:focus-visible",
+      "scopedToToolsRoot": true,
+      "declarations": [
+        "z-index",
+        "outline",
+        "outline-offset"
+      ]
+    }
+  ],
+  "matchCounts": {
+    "root": 1,
+    "toolbarSearch": 1,
+    "categoryRail": 1,
+    "settingsRail": 1,
+    "otherChartRail": 1,
+    "appNavigation": 1
+  },
+  "toolsCategoryTabs": 5,
+  "settingsAndNavigationExcluded": true,
+  "newCSSHasNoExternalImports": true
+}

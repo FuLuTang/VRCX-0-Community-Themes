@@ -1,0 +1,69 @@
+{
+  "fixture": "NOT WINDOWS; same synthetic 320x240 banner/avatar/name and UserDialogHeaderMedia DOM structure for all six candidates",
+  "appCss": "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+  "themeCss": "/tmp/jirai-lead-r95c/jirai-kei-theme/theme.css",
+  "mount": "Sibling overlay on existing UserDialogHeaderMedia .relative wrapper; inset -4px across button edge; CardHeader inline padding 12px; root Card overflow hidden; avatar z-30 above overlay",
+  "candidates": [
+    {
+      "id": "01",
+      "slug": "scallop-eyelet-bezel",
+      "name": "扇贝孔眼 · 电子相框",
+      "source": "灵感：assets-redistributable/lace/scallop-eyelet-frame-navy.svg；像素图案为本任务原创重绘，不嵌入源 SVG。",
+      "license": "候选新稿 GPL-3.0-only；参考素材许可/来源未核实，仅灵感、不随包。",
+      "design": "全周 8px 深色底轨，粉色阶梯扇贝与象牙孔眼；四角对称铆钉。",
+      "cssBytes": 3553
+    },
+    {
+      "id": "02",
+      "slug": "fan-lace",
+      "name": "扇形蕾丝 · 展开花瓣",
+      "source": "original-assets/src/s2-fan-lace-20x12.svg（项目自绘扇形蕾丝形态）。",
+      "license": "项目原作，GPL-3.0-only（仓库 LICENSE）；候选文件是新像素重绘。",
+      "design": "每 24px 一组阶梯扇瓣，内外双层紫/粉；四角向外展开成风扇。",
+      "cssBytes": 2610
+    },
+    {
+      "id": "03",
+      "slug": "scallop-corner-clasp",
+      "name": "像素波瓣 · 四角扣片",
+      "source": "original-assets/r5/src/scallop-edge.svg + lace-corner.svg；同系列像素角花。",
+      "license": "项目原作，GPL-3.0-only（original-assets/r5/README.md）。",
+      "design": "低矮 4px 波瓣边 + 靛紫长轨，四角各一枚方形蕾丝扣，头像下方留白。",
+      "cssBytes": 3546
+    },
+    {
+      "id": "04",
+      "slug": "loop-stitch-piping",
+      "name": "环线缝迹 · 软边包线",
+      "source": "assets-redistributable/pattern/stitch-loop-frame-1.svg（Arvin61r58 / Openclipart）。",
+      "license": "源 SVG 内嵌 CC0 1.0；本候选是简化配色像素改绘，保留来源注明。",
+      "design": "乳白短环线沿紫色包边重复，角落以交错线结收束，轻量不抢照片。",
+      "cssBytes": 3343
+    },
+    {
+      "id": "05",
+      "slug": "window-corner-rails",
+      "name": "窗口角轨 · 像素窗框",
+      "source": "original-assets/r5/src/window-corner.svg（窗口角素材，项目自绘）。",
+      "license": "项目原作，GPL-3.0-only（original-assets/r5/README.md）。",
+      "design": "细紫色电子轨道只在四角加粗，粉色像素灯点；留出照片呼吸感。",
+      "cssBytes": 1542
+    },
+    {
+      "id": "06",
+      "slug": "perforated-digital-bezel",
+      "name": "穿孔数字边 · 介质盒框",
+      "source": "灵感：assets-redistributable/pattern/perforated-dot-strip.svg；形状为原创方孔重绘，不嵌入源 SVG。",
+      "license": "候选新稿 GPL-3.0-only；参考素材授权/来源未核实，仅灵感、不随包。",
+      "design": "深色粗框、粉/象牙方孔节奏与四角状态灯，最像电子设备面板。",
+      "cssBytes": 3508
+    }
+  ],
+  "cssEstimateMethod": "UTF-8 bytes of one minified selector + background-image CSS declaration with a percent-encoded SVG data URI; excludes common frame positioning rules and theme baseline.",
+  "assetsReviewed": {
+    "redistributableLace": "scallop-eyelet-frame-navy.svg, scallop-eyelet-trim-navy.svg, scallop-eyelet-trim-teal.svg, wavy-trim-border.svg, lace-divider-simple.svg: assets-report.md says provenance not individually verified; no license metadata in selected SVGs. Visual reference only; do not embed.",
+    "redistributablePattern": "stitch-loop-frame-1/2.svg embed CC0 1.0 and creator/source metadata; perforated-dot-strip.svg has no clear license/source in metadata, visual reference only.",
+    "original": "S1/S2 are original project-authored SVG; repo LICENSE GPL-3.0. R5 README explicitly GPL-3.0-only; no third-party paths embedded.",
+    "artReferences": "sozaino-ribbon-lace-frame.png and aomaterial-jirai-bg-black-ribbon-frame.png used only as visual reference, not included in candidate SVGs."
+  }
+}

@@ -1,0 +1,15 @@
+/* task-47 · lace3 —— 直接替换 runtime/chrome-r8.css 第 14 行的 --r8-lace-tile 声明（放在 :root 内）。
+   A 档（默认）：内描边 #d97fc6；布面 #f9d1e7；孔眼与扇贝外侧完全透明。SVG 651 B，base64 868 字符。 */
+    --r8-lace-tile: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxwYXRoIGZpbGw9IiNmOWQxZTciIGQ9Ik0wIDBoMjB2MmgtMjB6TTAgMmg1djFoLTV6TTcgMmg2djFoLTZ6TTE1IDJoNXYxaC01ek0xIDNoM3YxaC0zek04IDNoMXYxaC0xek0xMSAzaDF2MWgtMXpNMTYgM2gzdjFoLTN6TTMgNGgxdjFoLTF6TTE2IDRoMXYxaC0xek00IDVoMXYxaC0xek03IDVoMXYxaC0xek0xMiA1aDF2MWgtMXpNMTUgNWgxdjFoLTF6TTggNmgxdjFoLTF6TTExIDZoMXYxaC0xeiIvPjxwYXRoIGZpbGw9IiNkOTdmYzYiIGQ9Ik01IDJoMnYxaC0yek0xMyAyaDJ2MWgtMnpNMCAzaDF2MWgtMXpNNCAzaDF2MmgtMXpNNyAzaDF2MmgtMXpNOSAzaDJ2MWgtMnpNMTIgM2gxdjJoLTF6TTE1IDNoMXYyaC0xek0xOSAzaDF2MWgtMXpNMSA0aDJ2MWgtMnpNOCA0aDF2MmgtMXpNMTEgNGgxdjJoLTF6TTE3IDRoMnYxaC0yek0zIDVoMXYyaC0xek01IDVoMnYyaC0yek0xMyA1aDJ2MmgtMnpNMTYgNWgxdjJoLTF6TTQgNmgxdjFoLTF6TTcgNmgxdjFoLTF6TTkgNmgydjJoLTJ6TTEyIDZoMXYxaC0xek0xNSA2aDF2MWgtMXpNOCA3aDF2MWgtMXpNMTEgN2gxdjFoLTF6Ii8+PC9zdmc+");
+
+/* B 档（备选，内描边 #f3add9）：用下面这行替换上面那行即可。SVG 651 B，base64 868 字符。
+    --r8-lace-tile: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxwYXRoIGZpbGw9IiNmOWQxZTciIGQ9Ik0wIDBoMjB2MmgtMjB6TTAgMmg1djFoLTV6TTcgMmg2djFoLTZ6TTE1IDJoNXYxaC01ek0xIDNoM3YxaC0zek04IDNoMXYxaC0xek0xMSAzaDF2MWgtMXpNMTYgM2gzdjFoLTN6TTMgNGgxdjFoLTF6TTE2IDRoMXYxaC0xek00IDVoMXYxaC0xek03IDVoMXYxaC0xek0xMiA1aDF2MWgtMXpNMTUgNWgxdjFoLTF6TTggNmgxdjFoLTF6TTExIDZoMXYxaC0xeiIvPjxwYXRoIGZpbGw9IiNmM2FkZDkiIGQ9Ik01IDJoMnYxaC0yek0xMyAyaDJ2MWgtMnpNMCAzaDF2MWgtMXpNNCAzaDF2MmgtMXpNNyAzaDF2MmgtMXpNOSAzaDJ2MWgtMnpNMTIgM2gxdjJoLTF6TTE1IDNoMXYyaC0xek0xOSAzaDF2MWgtMXpNMSA0aDJ2MWgtMnpNOCA0aDF2MmgtMXpNMTEgNGgxdjJoLTF6TTE3IDRoMnYxaC0yek0zIDVoMXYyaC0xek01IDVoMnYyaC0yek0xMyA1aDJ2MmgtMnpNMTYgNWgxdjJoLTF6TTQgNmgxdjFoLTF6TTcgNmgxdjFoLTF6TTkgNmgydjJoLTJ6TTEyIDZoMXYxaC0xek0xNSA2aDF2MWgtMXpNOCA3aDF2MWgtMXpNMTEgN2gxdjFoLTF6Ii8+PC9zdmc+");
+*/
+
+/* ::before 其他属性：无需改动。
+   - window-chrome.css:151-163 的几何保持：bottom:100%; height:8px; left/right:0; transform:scaleY(-1)
+     （SVG 第 0 行=满宽布面，翻转后贴住状态栏顶边；第 7 行扇贝尖朝上）。
+   - chrome-r8.css:119-128 的 paint 保持：background-color:transparent（不得改成布面色，否则孔眼被填实）、
+     background-repeat:repeat-x; background-size:20px 8px; -webkit-mask:none; mask:none。
+   - motion-r8.css 的 r8-lace-flow（background-position 0→20px，steps(2)）照旧可用：
+     20px 周期内任意整数偏移都无竖纹。 */

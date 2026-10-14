@@ -1,0 +1,607 @@
+{
+  "scope": "Formal brand-heart set: 7x6 (base) / 9x8 (mid) / 11x10 (large, user-selected V1 domed cap3 + soft-Y transition color on (4,0)/(6,0)). Old 11x9 V1/V2 and A/B/C candidates are deprecated comparison-only assets, frozen by SHA-256. No runtime CSS, builder or preview package was changed; verify.mjs never rewrites assets.",
+  "source": {
+    "file": "art-references/nso-fandom-desktop-icons-sheet.png",
+    "sha256": "5c9d442eb5ceee97e4fadad0f877fd9045c545454a72601f84cee2f2d1f16453",
+    "dimensions": "1120x700",
+    "cellCrop": {
+      "x": 510,
+      "y": 494,
+      "sourceCellPx": 4,
+      "width": 7,
+      "height": 6,
+      "sourceBoxPixels": "28x24"
+    },
+    "sampledCellColors": [
+      [
+        "#ddbfee",
+        "#ae387d",
+        "#ae387d",
+        "#f8f0fa",
+        "#ae387d",
+        "#ae387d",
+        "#f8f0fa"
+      ],
+      [
+        "#ae387d",
+        "#ffcced",
+        "#ff87c6",
+        "#ae387d",
+        "#ffcced",
+        "#ff87c6",
+        "#ae387d"
+      ],
+      [
+        "#ae387d",
+        "#ff87c6",
+        "#ff87c6",
+        "#ff87c6",
+        "#ff87c6",
+        "#cc5282",
+        "#ae387d"
+      ],
+      [
+        "#c4a3ef",
+        "#ae387d",
+        "#ff87c6",
+        "#cc5282",
+        "#cc5282",
+        "#ae387d",
+        "#f8f0fa"
+      ],
+      [
+        "#c4a3ef",
+        "#7b5f80",
+        "#ae387d",
+        "#cc5282",
+        "#ae387d",
+        "#f8f0fa",
+        "#f8f0fa"
+      ],
+      [
+        "#c4a3ef",
+        "#7b5f80",
+        "#f8f0fa",
+        "#ae387d",
+        "#f8f0fa",
+        "#f8f0fa",
+        "#f8f0fa"
+      ]
+    ],
+    "baseMatrix": [
+      ".OO.OO.",
+      "OHPOHPO",
+      "OPPPPSO",
+      ".OPSSO.",
+      "..OSO..",
+      "...O..."
+    ],
+    "underlayNote": "Transparent cells in the flattened collage expose hair colors #ddbfee/#c4a3ef/#7b5f80; these are not heart pixels and are omitted from the isolated SVG."
+  },
+  "legend": {
+    ".": "transparent",
+    "O": "#ae387d",
+    "H": "#ffcced",
+    "P": "#ff87c6",
+    "S": "#cc5282",
+    "T": "#d760a2 (11x10 only; transition = O/P channel average, only at (4,0),(6,0))"
+  },
+  "formalTiers": {
+    "base": "7x6",
+    "mid": "9x8",
+    "large": "11x10",
+    "large11x10": {
+      "file": "heart-11x10.svg",
+      "bridgeVariable": "--jk-r10-heart-11-10",
+      "origin": "heart-v1-domed/heart-v1-domed-cap3.svg (user-selected) + soft variant Y on (4,0),(6,0)",
+      "softening": {
+        "variant": "Y",
+        "cells": [
+          [
+            4,
+            0
+          ],
+          [
+            6,
+            0
+          ]
+        ],
+        "change": "O->T",
+        "transitionColor": "#d760a2",
+        "rule": "per-channel average of O #ae387d and P #ff87c6, rounded half-up (214.5/95.5/161.5 -> 215/96/162)",
+        "unsoftenedRollbackFile": "heart-11x10-soft/heart-11x10-cap3-original.svg",
+        "compareFiles": [
+          "heart-11x10-soft/heart-11x10-soft-X.svg",
+          "heart-11x10-soft/heart-11x10-soft-Y.svg"
+        ]
+      },
+      "width": 11,
+      "height": 10,
+      "rows": [
+        "..OOT.TOO..",
+        ".OPPO.OHPO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "filledPixels": 72,
+      "outlinePixels": 24,
+      "differsFromCap3Only": [
+        "4,0:O>T",
+        "6,0:O>T"
+      ],
+      "fileBytes": 3490,
+      "rectCount": 72,
+      "distinctColors": 5,
+      "colorCounts": {
+        "O": 24,
+        "H": 3,
+        "P": 36,
+        "S": 7,
+        "T": 2
+      },
+      "outlineConnectivity": {
+        "components8": 1,
+        "components4": 18
+      }
+    },
+    "rhythm": {
+      "0%": "7x6",
+      "20%": "7x6",
+      "40%": "9x8",
+      "60%": "11x10",
+      "80%": "9x8",
+      "reducedMotionStatic": "9x8"
+    }
+  },
+  "matrices": {
+    "7x6": [
+      ".OO.OO.",
+      "OHPOHPO",
+      "OPPPPSO",
+      ".OPSSO.",
+      "..OSO..",
+      "...O..."
+    ],
+    "9x8": [
+      ".OOO.OOO.",
+      "OHPPOHPPO",
+      "OPPPPPPSO",
+      "OPPPPPSSO",
+      ".OPPPPSO.",
+      "..OPPSO..",
+      "...OSO...",
+      "....O...."
+    ],
+    "11x9": [
+      "...OO.OO...",
+      "..OHPOPHO..",
+      ".OPPPPPPPO.",
+      "OPPPPPPPPPO",
+      ".OPSPPPSPO.",
+      "..OPSPSPO..",
+      "...OPSPO...",
+      "....OPO....",
+      ".....O....."
+    ],
+    "11x10": [
+      "..OOT.TOO..",
+      ".OPPO.OHPO.",
+      "OHPPPOPHPPO",
+      "OPPPPPPPPSO",
+      "OPPPPPPPSSO",
+      ".OPPPPPPSO.",
+      "..OPPPPSO..",
+      "...OPPSO...",
+      "....OSO....",
+      ".....O....."
+    ]
+  },
+  "matrixStatus": {
+    "7x6": "formal-base",
+    "9x8": "formal-mid",
+    "11x9": "deprecated (old 11x9 V2, comparison only)",
+    "11x10": "formal-large"
+  },
+  "dimensions": {
+    "7x6": {
+      "width": 7,
+      "height": 6,
+      "rows": [
+        ".OO.OO.",
+        "OHPOHPO",
+        "OPPPPSO",
+        ".OPSSO.",
+        "..OSO..",
+        "...O..."
+      ],
+      "filledPixels": 27,
+      "outlinePixels": 14,
+      "status": "formal-base",
+      "deprecated": false
+    },
+    "9x8": {
+      "width": 9,
+      "height": 8,
+      "rows": [
+        ".OOO.OOO.",
+        "OHPPOHPPO",
+        "OPPPPPPSO",
+        "OPPPPPSSO",
+        ".OPPPPSO.",
+        "..OPPSO..",
+        "...OSO...",
+        "....O...."
+      ],
+      "filledPixels": 49,
+      "outlinePixels": 20,
+      "status": "formal-mid",
+      "deprecated": false
+    },
+    "11x9": {
+      "width": 11,
+      "height": 9,
+      "rows": [
+        "...OO.OO...",
+        "..OHPOPHO..",
+        ".OPPPPPPPO.",
+        "OPPPPPPPPPO",
+        ".OPSPPPSPO.",
+        "..OPSPSPO..",
+        "...OPSPO...",
+        "....OPO....",
+        ".....O....."
+      ],
+      "filledPixels": 56,
+      "outlinePixels": 20,
+      "status": "deprecated",
+      "deprecated": true
+    },
+    "11x10": {
+      "width": 11,
+      "height": 10,
+      "rows": [
+        "..OOT.TOO..",
+        ".OPPO.OHPO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "filledPixels": 72,
+      "outlinePixels": 24,
+      "status": "formal-large",
+      "deprecated": false
+    }
+  },
+  "outlineConnectivity": {
+    "7x6": {
+      "components8": 1,
+      "components4": 10
+    },
+    "9x8": {
+      "components8": 1,
+      "components4": 12
+    },
+    "11x9": {
+      "components8": 1,
+      "components4": 18
+    },
+    "11x10": {
+      "components8": 1,
+      "components4": 18
+    }
+  },
+  "slotFootprint": {
+    "slotCssPx": "14x14",
+    "tiers": {
+      "7x6": {
+        "native1xCssPx": "7x6",
+        "backgroundSize": "7px 6px",
+        "spareInSlot": "7x8",
+        "integerPosition": "3px 4px"
+      },
+      "9x8": {
+        "native1xCssPx": "9x8",
+        "backgroundSize": "9px 8px",
+        "spareInSlot": "5x6",
+        "integerPosition": "2px 3px"
+      },
+      "11x10": {
+        "native1xCssPx": "11x10",
+        "backgroundSize": "11px 10px",
+        "spareInSlot": "3x4",
+        "integerPosition": "1px 2px",
+        "integerMultiples": [
+          "11x10 (1x)",
+          "22x20 (2x)",
+          "33x30 (3x)",
+          "44x40 (4x)"
+        ]
+      }
+    },
+    "note": "11x10 is one row taller than the deprecated 11x9; a 14px slot has 3px horizontal / 4px vertical spare, so 1x fits. Odd native widths in an even slot give half-pixel centering; use explicit integer background-position per frame instead of \"center\". Recommended: size the pseudo box to 11x10 and position frames at 2px 2px (7x6) / 1px 1px (9x8) / 0 0 (11x10). background-size must be an integer multiple of 11x10 (never 11x9 or fractional)."
+  },
+  "deprecated": {
+    "note": "Old 11x9 V1/V2, A/B/C candidates and non-selected domed caps are deprecated; kept for comparison only and not drawn in the regenerated previews.",
+    "previous11x9V1": {
+      "rows": [
+        ".OOOO.OOOO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "width": 11,
+      "height": 9,
+      "filledPixels": 66,
+      "outlinePixels": 24,
+      "deprecated": true,
+      "comparisonOnly": true,
+      "bridgeVariable": "--jk-r10-heart-11-9 (embeds this V1; deprecated, do not use)"
+    },
+    "revised11x9V2": {
+      "rows": [
+        "...OO.OO...",
+        "..OHPOPHO..",
+        ".OPPPPPPPO.",
+        "OPPPPPPPPPO",
+        ".OPSPPPSPO.",
+        "..OPSPSPO..",
+        "...OPSPO...",
+        "....OPO....",
+        ".....O....."
+      ],
+      "width": 11,
+      "height": 9,
+      "filledPixels": 56,
+      "outlinePixels": 20,
+      "deprecated": true,
+      "comparisonOnly": true,
+      "shapeWidths": [
+        4,
+        7,
+        9,
+        11,
+        9,
+        7,
+        5,
+        3,
+        1
+      ],
+      "horizontallySymmetric": true,
+      "file": "heart-11x9.svg"
+    },
+    "protectedSha256": {
+      "heart-7x6.svg": "935c91838130dac9ab5944e664765f83f0d44ec5954a657741dfe627c2e20389",
+      "heart-9x8.svg": "92950f4311e06747175a6d086b07ad2414e9f8261b9f2de1bae2d0f381932e21",
+      "heart-11x9.svg": "c253761d6f26f49823f8ef03ec390ba7172102e10bee3bc911f4b5a7ef7f2e23",
+      "heart-11x9-candidates/A-wide-round-13x11.svg": "22213d954a2cddf362abe9474cb689aaa9c55d6c7459c457a86d9cc33db06961",
+      "heart-11x9-candidates/B-tall-classic-13x13.svg": "580ea03d38a86a6d57f4a049d18bf4f4872163942dc5ff4750036d56df3ba966",
+      "heart-11x9-candidates/C-shallow-soft-15x13.svg": "bc8ad80005a510d18f01d708bb1b5a38035b1ed3a84966094a1376829aa5cacd",
+      "heart-v1-domed/heart-v1-domed-cap2.svg": "f00908fa06b3fbe8a52411775af0eb9d1b75b360a442894673e613df6bf56f7f",
+      "heart-v1-domed/heart-v1-domed-cap3.svg": "3eee277d7df6b414a2f29f5822ad3ab0e1d8763e67b3d8dae5029a986023f113",
+      "heart-v1-domed/heart-v1-domed-cap4.svg": "52bbfc6360cd67b5fdc086928bde8badeee4a4ad24d2b538f3da5a00b7d37f37"
+    }
+  },
+  "comparisonDrafts": {
+    "deprecated": true,
+    "previous11x9V1": {
+      "rows": [
+        ".OOOO.OOOO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "width": 11,
+      "height": 9,
+      "filledPixels": 66,
+      "outlinePixels": 24,
+      "deprecated": true,
+      "comparisonOnly": true
+    },
+    "revised11x9V2": {
+      "rows": [
+        "...OO.OO...",
+        "..OHPOPHO..",
+        ".OPPPPPPPO.",
+        "OPPPPPPPPPO",
+        ".OPSPPPSPO.",
+        "..OPSPSPO..",
+        "...OPSPO...",
+        "....OPO....",
+        ".....O....."
+      ],
+      "width": 11,
+      "height": 9,
+      "filledPixels": 56,
+      "outlinePixels": 20,
+      "deprecated": true,
+      "comparisonOnly": true,
+      "shapeWidths": [
+        4,
+        7,
+        9,
+        11,
+        9,
+        7,
+        5,
+        3,
+        1
+      ],
+      "horizontallySymmetric": true
+    }
+  },
+  "cssBridge": {
+    "file": "heart-assets-r10.css",
+    "variables": {
+      "--jk-r10-heart-7-6": {
+        "payloadBytes": 2792,
+        "declarationBytes": 2838,
+        "decodedBytes": 1522,
+        "decodedMatchesSvg": true,
+        "status": "formal"
+      },
+      "--jk-r10-heart-9-8": {
+        "payloadBytes": 4438,
+        "declarationBytes": 4484,
+        "decodedBytes": 2352,
+        "decodedMatchesSvg": true,
+        "status": "formal"
+      },
+      "--jk-r10-heart-11-9": {
+        "payloadBytes": 5770,
+        "declarationBytes": 5817,
+        "decodedBytes": 3038,
+        "decodedMatchesSvg": "deprecated old V1 (matrix verified, no SVG on disk)",
+        "status": "deprecated: old V1, do not use"
+      },
+      "--jk-r10-heart-11-10": {
+        "payloadBytes": 6548,
+        "declarationBytes": 6596,
+        "decodedBytes": 3490,
+        "decodedMatchesSvg": true,
+        "status": "formal"
+      }
+    },
+    "unchangedDeclarationSha256": {
+      "--jk-r10-heart-7-6": "56bba21eac08d84baffcbe486fa44d57aea3488a115191d4af6f90e8e0d35b56",
+      "--jk-r10-heart-9-8": "ab7cc031fd989a89a47b1da05869912c177f20aaefec407f3fa32e75abfd4e20",
+      "--jk-r10-heart-11-9": "051b0617b0c7b310de7296685ae597b20d3993e7ba3b9ee829279e8928ab7a0c"
+    },
+    "note": "--jk-r10-heart-7-6 and --jk-r10-heart-9-8 are byte-identical to the pre-11x10 bridge; --jk-r10-heart-11-9 is the old V1, deprecated; --jk-r10-heart-11-10 decodes byte-identically to heart-11x10.svg."
+  },
+  "paletteContrast": {
+    "O": {
+      "hex": "#ae387d",
+      "onPinkTitlebar": 2.13,
+      "onDarkWindow": 2.92,
+      "pixelCountBySize": {
+        "7x6": 14,
+        "9x8": 20,
+        "11x9": 20,
+        "11x10": 24
+      }
+    },
+    "H": {
+      "hex": "#ffcced",
+      "onPinkTitlebar": 1.94,
+      "onDarkWindow": 12.05,
+      "pixelCountBySize": {
+        "7x6": 2,
+        "9x8": 2,
+        "11x9": 2,
+        "11x10": 3
+      }
+    },
+    "P": {
+      "hex": "#ff87c6",
+      "onPinkTitlebar": 1.22,
+      "onDarkWindow": 7.6,
+      "pixelCountBySize": {
+        "7x6": 7,
+        "9x8": 21,
+        "11x9": 29,
+        "11x10": 36
+      }
+    },
+    "S": {
+      "hex": "#cc5282",
+      "onPinkTitlebar": 1.53,
+      "onDarkWindow": 4.07,
+      "pixelCountBySize": {
+        "7x6": 4,
+        "9x8": 6,
+        "11x9": 5,
+        "11x10": 7
+      }
+    },
+    "T": {
+      "hex": "#d760a2",
+      "onPinkTitlebar": 1.28,
+      "onDarkWindow": 4.85,
+      "pixelCountBySize": {
+        "7x6": 0,
+        "9x8": 0,
+        "11x9": 0,
+        "11x10": 2
+      }
+    }
+  },
+  "contrastNote": "7x6 and 9x8 keep the four source colors. 11x10 additionally uses the transition color T only at (4,0)/(6,0) (T on pink 1.28:1, on dark 4.85:1). No individual color reaches 3:1 on titlebar pink #d97fc6; outline 2.13:1.",
+  "backgrounds": {
+    "pink": "#d97fc6",
+    "dark": "#201936"
+  },
+  "displaySizes": {
+    "note": "5/7/9px nearest-neighbor study of the formal tiers (11x10 shown reduced at 9x8 in the 9px column, plus native 11x10 in the 14px slot). Deprecated 11x9 drafts are no longer drawn. Main comparisons show 7x6 / 9x8 / 11x10 at 1x/2x/4x/6x.",
+    "frames": [
+      {
+        "grid": "7x6",
+        "cssDisplay": "5x4px"
+      },
+      {
+        "grid": "9x8",
+        "cssDisplay": "7x6px"
+      },
+      {
+        "grid": "11x10 (study)",
+        "cssDisplay": "9x8px"
+      },
+      {
+        "grid": "11x10 (native)",
+        "cssDisplay": "11x10px"
+      }
+    ]
+  },
+  "outputs": {
+    "sourceContext": {
+      "file": "source-context.png",
+      "width": 544,
+      "height": 384
+    },
+    "sourceCellCrop": {
+      "file": "source-crop-7x6.png",
+      "width": 336,
+      "height": 288
+    },
+    "sourceHeartIsolated": {
+      "file": "source-heart-isolated.png",
+      "width": 140,
+      "height": 120
+    },
+    "comparisonPink": {
+      "file": "comparison-pink.png",
+      "width": 455,
+      "height": 274
+    },
+    "comparisonDark": {
+      "file": "comparison-dark.png",
+      "width": 455,
+      "height": 274
+    },
+    "displaySizes": {
+      "file": "display-5-7-9.png",
+      "width": 972,
+      "height": 218
+    }
+  }
+}

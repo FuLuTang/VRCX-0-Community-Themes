@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R9.6 · UserDialog banner frame check · NOT WINDOWS</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:auto;min-height:0;overflow:visible;background:#16112a;color:#fdf4ff;font:14px/1.4 system-ui,sans-serif}
+body{padding:18px 20px 24px}
+.board-head{margin:0 0 14px;padding:0 0 10px;border-bottom:1px solid #6c5ce0}
+h1{margin:0;color:#ffb8e6;font:700 16px/1.25 ui-monospace,monospace}
+.board-head p{margin:4px 0 0;color:#d6b8ef;font:11px/1.4 ui-monospace,monospace}
+.board{display:none;grid-template-columns:repeat(2,370px);gap:14px;align-items:start}
+body[data-view="before"] #before-board,body[data-view="after"] #after-board{display:grid;grid-template-columns:370px}
+body[data-view="tiers"] #tier-board,body[data-view="decoys"] #decoy-board{display:grid}
+.panel{width:370px;min-width:0;padding:9px;background:#201936;border:1px solid #6c5ce0;box-shadow:3px 3px 0 #100b1e}
+.panel h2{margin:0 0 8px;color:#fdf4ff;font:700 12px/1.25 ui-monospace,monospace}
+.panel p{margin:4px 0 0;color:#b9add9;font:10px/1.4 ui-monospace,monospace}
+.entity-dialog{position:relative;inset:auto;transform:none;width:346px;max-width:none;max-height:none;overflow:visible;margin:0;padding:0;background:transparent;border:0;box-shadow:none}
+.profile-card{display:flex;flex-direction:column;gap:12px;position:relative;isolation:isolate;overflow:hidden;width:346px;margin:0;padding:12px 0;background:#201936;border:1px solid #6c5ce0;border-radius:8px;box-shadow:none}
+.card-header{display:block;position:relative;padding:0 12px;margin:0}
+.banner-stage{position:relative;width:320px;height:240px;overflow:visible;isolation:auto}
+.banner-button{position:relative;display:block;width:320px;height:240px;overflow:hidden;padding:0;border:1px solid #6c5ce0;border-radius:8px;background:#2a2147;line-height:0;aspect-ratio:4/3}
+.banner-button>span{position:relative;display:block;width:100%;height:100%}
+.banner-button>span>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+.avatar-wrap{position:absolute;bottom:12px;left:12px;z-index:30;width:64px;height:64px;overflow:visible}
+.avatar-button{position:relative;z-index:0;display:block;width:64px;height:64px;overflow:hidden;padding:0;border:2px solid #fff;border-radius:9999px;background:rgba(18,11,30,.9);box-shadow:0 4px 12px rgba(0,0,0,.62)}
+.avatar-button>img{display:block;width:100%;height:100%;object-fit:cover}
+.card-content{padding:0 12px 4px}
+.nameplate{display:flex;align-items:center;gap:8px;min-height:22px;color:#f2ebff;font-size:13px}
+.status-dot{width:10px;height:10px;flex:none;background:#f4e05e}
+.fake-media{display:block;width:320px;height:240px;overflow:hidden;border:1px solid #6c5ce0;background:#2a2147}
+.fake-media img{display:block;width:100%;height:100%;object-fit:cover}
+.world-header{padding:0 12px}
+.decoy-stage{position:relative;width:320px;height:240px}
+.decoy-stage .banner-button{width:320px;height:240px}
+#decoy-board{grid-template-columns:repeat(2,370px)}
+.footer-note{max-width:754px;margin:14px 0 0;padding-top:8px;border-top:1px solid #6c5ce0;color:#b9add9;font:10px/1.4 ui-monospace,monospace}
+</style>
+</head>
+<body data-view="after">
+<header class="board-head"><h1>R9.6 · USERDIALOG BANNER FRAME · NOT WINDOWS</h1><p>Fictional photo-like banner + synthetic pixel avatar · same profile/name · 320×240 CSS px · no real user data</p></header>
+<main>
+<section id="before-board" class="board" aria-label="Before baseline"><article class="panel"><h2>BEFORE · current R9 banner, no outer bezel</h2>__BEFORE_CARD__<p>R9 baseline opacity: X stitch .38 · scallop hem .90</p></article></section>
+<section id="after-board" class="board" aria-label="After recommended tier"><article class="panel"><h2>AFTER · #06 perforated bezel · Tier 1</h2>__AFTER_CARD__<p>Recommended: stitch .52 · hem .96 · brighter pink/lilac · static frame</p></article></section>
+<section id="tier-board" class="board" aria-label="Two stitch visibility tiers"><article class="panel"><h2>TIER 1 · recommended</h2>__TIER1_CARD__<p>Moderate lift; keeps the photo dominant.</p></article><article class="panel"><h2>TIER 2 · stronger</h2>__TIER2_CARD__<p>Stitch .72 · hem 1.0; compare for brighter photos.</p></article></section>
+<section id="decoy-board" class="board" aria-label="Non-UserDialog decoys"><article class="panel"><h2>DECOY · AvatarDialog (4:3 + relative, no User label)</h2>__AVATAR_DECOY__</article><article class="panel"><h2>DECOY · WorldDialog (4:3 direct media button)</h2>__WORLD_DECOY__</article><article class="panel"><h2>DECOY · GroupDialog (square media)</h2>__GROUP_DECOY__</article></section>
+</main>
+<p class="footer-note">挂载依据：UserDialog 的 card-header &gt; div.relative 包含 4:3 aria-labeled banner button；overlay inset:-4px、pointer-events:none、z20。十字绣与底部扇贝仍用原 button pseudos，抬到 frame 上方；头像 z30 保持最上层。没有新增动画。</p>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse history — source-shaped fixture</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;background:#171326;color:#f2ebff;font-family:Inter,"Noto Sans SC",sans-serif}
+    body{overflow:hidden}
+    .vrcx-0-main-content{width:min(100%,1000px);height:100vh;margin:0 auto;padding:12px;box-sizing:border-box;background:#171326}
+    .vrcx-0-page-scaffold{height:100%;box-sizing:border-box}
+    .fixture-caption{position:absolute;right:16px;bottom:8px;color:#b9add9;font-size:10px;letter-spacing:.03em}
+    .decoy{position:absolute;left:-10000px;top:0;width:320px}.decoy #miss-card{position:absolute;left:0;top:72px;width:300px;height:64px}
+  </style>
+</head>
+<body>
+  <main class="vrcx-0-main-content flex min-w-0 flex-1 flex-col" aria-label="synthetic browse history fixture">
+    <div class="vrcx-0-page-scaffold x-container x-container--auto-height p-4 flex h-full min-h-0 min-w-0 flex-col overflow-hidden" id="browse-history-fixture">
+      <div data-slot="tabs" data-orientation="horizontal" data-value="all" class="flex min-h-0 flex-1 flex-col gap-0">
+        <div class="vrcx-0-page-toolbar flex shrink-0 flex-col gap-2">
+          <div class="flex min-w-0 flex-wrap items-center gap-2">
+            <div class="flex flex-auto flex-wrap items-center gap-2">
+              <div data-slot="tabs-list" data-orientation="horizontal" data-size="default" class="text-muted-foreground/72 relative z-0 flex w-fit items-center justify-center gap-x-0.5 rounded-lg bg-(--state-pressed-surface) p-0.5 max-w-full shrink-0 overflow-x-auto">
+                <button type="button" data-slot="tabs-tab" role="tab" data-orientation="horizontal" data-value="all" data-active aria-selected="true" tabindex="0" class="relative flex shrink-0 items-center justify-center gap-1.5 border border-transparent text-sm font-medium whitespace-nowrap h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5" id="filter-all">全部</button>
+                <button type="button" data-slot="tabs-tab" role="tab" data-orientation="horizontal" data-value="user" aria-selected="false" tabindex="-1" class="relative flex shrink-0 items-center justify-center gap-1.5 border border-transparent text-sm font-medium whitespace-nowrap h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5">用户</button>
+                <button type="button" data-slot="tabs-tab" role="tab" data-orientation="horizontal" data-value="world" aria-selected="false" tabindex="-1" class="relative flex shrink-0 items-center justify-center gap-1.5 border border-transparent text-sm font-medium whitespace-nowrap h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5">世界</button>
+                <button type="button" data-slot="tabs-tab" role="tab" data-orientation="horizontal" data-value="avatar" aria-selected="false" tabindex="-1" class="relative flex shrink-0 items-center justify-center gap-1.5 border border-transparent text-sm font-medium whitespace-nowrap h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5">模型</button>
+                <button type="button" data-slot="tabs-tab" role="tab" data-orientation="horizontal" data-value="group" aria-selected="false" tabindex="-1" class="relative flex shrink-0 items-center justify-center gap-1.5 border border-transparent text-sm font-medium whitespace-nowrap h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5">群组</button>
+                <div data-slot="tab-indicator" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div data-vrcx-0-control="toolbar" data-slot="input-group" role="group" class="vrcx-0-toolbar-control w-40 shrink-0 sm:w-64 relative flex h-8 min-w-0 items-center rounded-lg border transition-colors">
+              <div data-slot="input-group-addon" data-align="inline-start" role="group" class="text-muted-foreground flex h-auto items-center justify-center gap-2 py-1.5 pl-2">
+                <svg aria-hidden="true" class="lucide lucide-search size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+              </div>
+              <input data-slot="input-group-control" id="browse-search" type="search" aria-label="搜索浏览记录" placeholder="搜索名称或描述" class="flex-1 rounded-none border-0 bg-transparent shadow-none ring-0">
+              <div data-slot="input-group-addon" data-align="inline-end" role="group" class="gap-1 py-0 pr-2">
+                <button type="button" data-slot="button" data-variant="ghost" data-size="icon-xs" aria-label="选择日期范围" class="flex size-6 items-center justify-center rounded-md border border-transparent">
+                  <svg aria-hidden="true" class="lucide lucide-calendar-range size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18M8 14h3M8 18h2"></path></svg>
+                </button>
+              </div>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <button type="button" data-slot="button" data-size="icon" data-variant="ghost" data-vrcx-0-control="toolbar" aria-label="刷新浏览记录" class="vrcx-0-quiet-control size-8 rounded-lg border border-transparent">
+                <svg aria-hidden="true" class="lucide lucide-refresh-cw size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M5.6 9A7 7 0 0 1 18 6l2 2M4 16l2 2a7 7 0 0 0 12.4-3"></path></svg>
+              </button>
+              <button type="button" data-slot="button" data-slot-menu-trigger="true" data-vrcx-0-control="toolbar" data-size="icon" data-variant="ghost" aria-label="更多操作" class="vrcx-0-quiet-control size-8 rounded-lg border border-transparent">
+                <svg aria-hidden="true" class="lucide lucide-ellipsis size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div data-slot="tabs-content" data-index="0" data-value="all" class="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden outline-none">
+          <div class="min-h-0 flex-1 overflow-y-auto pr-1 transition-opacity duration-150 ease-out" data-fixture-scroll>
+            <div class="relative" style="height:216px">
+              <div class="absolute right-0 left-0" style="top:0px;height:32px">
+                <div class="flex h-full items-center gap-3 px-1">
+                  <h2 class="text-muted-foreground shrink-0 text-xs font-medium tracking-wide tabular-nums">2026年10月10日</h2>
+                  <div data-slot="separator" data-orientation="horizontal" role="separator" class="bg-border h-px w-full shrink-0 flex-1 opacity-60"></div>
+                </div>
+              </div>
+              <div class="absolute right-0 left-0 grid" style="top:32px;height:72px;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+                <div class="object-row h-16" id="card-user" data-fixture-card="user">
+                  <button type="button" class="object-row__pressable flex size-full min-w-0 cursor-pointer items-stretch rounded-lg text-left" aria-label="打开用户：纸箱月亮">
+                    <div class="object-row__media">
+                      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233b2a55'/%3E%3Cpath fill='%23ffb8e6' d='M8 8h16v8H8zm32 0h16v8H40zM16 24h32v8H16zm-8 16h16v8H8zm32 0h16v8H40zM24 48h16v8H24z'/%3E%3C/svg%3E" alt="" class="size-full object-cover">
+                      <div aria-hidden="true" class="object-row__media-blend"></div>
+                    </div>
+                    <div class="flex min-w-0 flex-1 flex-col justify-center gap-0.5 px-2.5 pr-8">
+                      <div class="flex items-center gap-1.5"><svg aria-hidden="true" class="lucide lucide-user-round text-muted-foreground size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg><span class="object-row__title truncate text-[13px] leading-tight">纸箱月亮</span></div>
+                      <p class="object-row__meta truncate text-[11px] leading-tight">20:37 · ×4</p>
+                    </div>
+                  </button>
+                  <div class="absolute inset-y-0 right-1 z-10 flex items-center">
+                    <button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" id="remove-user" class="size-7 border border-transparent object-row__context-action text-muted-foreground hover:bg-destructive/10 hover:text-destructive focus-visible:bg-destructive/10 focus-visible:text-destructive" aria-label="删除浏览记录：纸箱月亮"><svg aria-hidden="true" class="lucide lucide-x size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"></path></svg></button>
+                  </div>
+                </div>
+                <div class="object-row h-16" id="card-world" data-fixture-card="world">
+                  <button type="button" class="object-row__pressable flex size-full min-w-0 cursor-pointer items-stretch rounded-lg text-left" aria-label="打开世界：雨夜电台">
+                    <div class="object-row__media"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23253645'/%3E%3Cpath fill='%238c71b0' d='M0 40h16v8h8v-8h8v16H0zm40-8h8v8h16v24H40z'/%3E%3Cpath fill='%23ffb8e6' d='M8 8h8v8H8zm32 8h8v8h-8zM24 32h8v8h-8z'/%3E%3C/svg%3E" alt="" class="size-full object-cover"><div aria-hidden="true" class="object-row__media-blend"></div></div>
+                    <div class="flex min-w-0 flex-1 flex-col justify-center gap-0.5 px-2.5 pr-8"><div class="flex items-center gap-1.5"><svg aria-hidden="true" class="lucide lucide-globe-2 text-muted-foreground size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg><span class="object-row__title truncate text-[13px] leading-tight">雨夜电台</span></div><p class="object-row__meta truncate text-[11px] leading-tight">20:31 · ×2</p></div>
+                  </button>
+                  <div class="absolute inset-y-0 right-1 z-10 flex items-center"><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="size-7 border border-transparent object-row__context-action text-muted-foreground hover:bg-destructive/10 hover:text-destructive" aria-label="删除浏览记录：雨夜电台"><svg aria-hidden="true" class="lucide lucide-x size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"></path></svg></button></div>
+                </div>
+                <div class="object-row h-16" id="card-avatar" data-fixture-card="avatar">
+                  <button type="button" class="object-row__pressable flex size-full min-w-0 cursor-pointer items-stretch rounded-lg text-left" aria-label="打开模型：云层档案">
+                    <div class="object-row__media"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23412a54'/%3E%3Cpath fill='%23d6b8ef' d='M8 16h8v8H8zm16-8h8v8h-8zm16 8h8v8h-8zM8 40h16v8H8zm32 0h16v8H40zM24 48h16v8H24z'/%3E%3Cpath fill='%23ffb8e6' d='M28 24h8v16h-8z'/%3E%3C/svg%3E" alt="" class="size-full object-cover"><div aria-hidden="true" class="object-row__media-blend"></div></div>
+                    <div class="flex min-w-0 flex-1 flex-col justify-center gap-0.5 px-2.5 pr-8"><div class="flex items-center gap-1.5"><svg aria-hidden="true" class="lucide lucide-person-standing text-muted-foreground size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"></circle><path d="m9 21 3-8 3 8M6 10l6 2 6-2"></path></svg><span class="object-row__title truncate text-[13px] leading-tight">云层档案</span></div><p class="object-row__meta truncate text-[11px] leading-tight">20:26 · ×7</p></div>
+                  </button>
+                  <div class="absolute inset-y-0 right-1 z-10 flex items-center"><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="size-7 border border-transparent object-row__context-action text-muted-foreground hover:bg-destructive/10 hover:text-destructive" aria-label="删除浏览记录：云层档案"><svg aria-hidden="true" class="lucide lucide-x size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"></path></svg></button></div>
+                </div>
+              </div>
+              <div class="absolute right-0 left-0" style="top:112px;height:32px"><div class="flex h-full items-center gap-3 px-1"><h2 class="text-muted-foreground shrink-0 text-xs font-medium tracking-wide tabular-nums">2026年10月9日</h2><div data-slot="separator" data-orientation="horizontal" role="separator" class="bg-border h-px w-full shrink-0 flex-1 opacity-60"></div></div></div>
+              <div class="absolute right-0 left-0 grid" style="top:144px;height:72px;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+                <div class="object-row h-16" id="card-group" data-fixture-card="group"><button type="button" class="object-row__pressable flex size-full min-w-0 cursor-pointer items-stretch rounded-lg text-left" aria-label="打开群组：像素庭院"><div class="object-row__media"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232a244b'/%3E%3Cpath fill='%23ffb8e6' d='M8 8h16v8H8zm32 0h16v8H40zM16 24h32v8H16zM8 40h16v8H8zm32 0h16v8H40zM24 48h16v8H24z'/%3E%3C/svg%3E" alt="" class="size-full object-cover"><div aria-hidden="true" class="object-row__media-blend"></div></div><div class="flex min-w-0 flex-1 flex-col justify-center gap-0.5 px-2.5 pr-8"><div class="flex items-center gap-1.5"><svg aria-hidden="true" class="lucide lucide-users-round text-muted-foreground size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="object-row__title truncate text-[13px] leading-tight">像素庭院</span></div><p class="object-row__meta truncate text-[11px] leading-tight">昨日 · ×3</p></div></button><div class="absolute inset-y-0 right-1 z-10 flex items-center"><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="size-7 border border-transparent object-row__context-action text-muted-foreground hover:bg-destructive/10 hover:text-destructive" aria-label="删除浏览记录：像素庭院"><svg aria-hidden="true" class="lucide lucide-x size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"></path></svg></button></div></div>
+                <div class="object-row h-16" id="card-world-2" data-fixture-card="world-2"><button type="button" class="object-row__pressable flex size-full min-w-0 cursor-pointer items-stretch rounded-lg text-left" aria-label="打开世界：旧信号站"><div class="object-row__media"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23273c54'/%3E%3Cpath fill='%238c71b0' d='M0 40h24v8H0zm32-8h32v8H32zM8 56h48v8H8z'/%3E%3Cpath fill='%23ffb8e6' d='M16 8h8v8h-8zm24 8h8v8h-8zM28 32h8v8h-8z'/%3E%3C/svg%3E" alt="" class="size-full object-cover"><div aria-hidden="true" class="object-row__media-blend"></div></div><div class="flex min-w-0 flex-1 flex-col justify-center gap-0.5 px-2.5 pr-8"><div class="flex items-center gap-1.5"><svg aria-hidden="true" class="lucide lucide-globe-2 text-muted-foreground size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg><span class="object-row__title truncate text-[13px] leading-tight">旧信号站</span></div><p class="object-row__meta truncate text-[11px] leading-tight">18:54 · ×2</p></div></button><div class="absolute inset-y-0 right-1 z-10 flex items-center"><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="size-7 border border-transparent object-row__context-action text-muted-foreground hover:bg-destructive/10 hover:text-destructive" aria-label="删除浏览记录：旧信号站"><svg aria-hidden="true" class="lucide lucide-x size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"></path></svg></button></div></div>
+                <div class="object-row h-16" id="card-avatar-2" data-fixture-card="avatar-2"><button type="button" class="object-row__pressable flex size-full min-w-0 cursor-pointer items-stretch rounded-lg text-left" aria-label="打开模型：雾中群岛"><div class="object-row__media"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23362b54'/%3E%3Cpath fill='%23d6b8ef' d='M8 16h16v8H8zm32-8h16v8H40zM16 32h32v8H16zM8 48h16v8H8zm32 0h16v8H40z'/%3E%3C/svg%3E" alt="" class="size-full object-cover"><div aria-hidden="true" class="object-row__media-blend"></div></div><div class="flex min-w-0 flex-1 flex-col justify-center gap-0.5 px-2.5 pr-8"><div class="flex items-center gap-1.5"><svg aria-hidden="true" class="lucide lucide-person-standing text-muted-foreground size-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"></circle><path d="m9 21 3-8 3 8M6 10l6 2 6-2"></path></svg><span class="object-row__title truncate text-[13px] leading-tight">雾中群岛</span></div><p class="object-row__meta truncate text-[11px] leading-tight">17:26 · ×5</p></div></button><div class="absolute inset-y-0 right-1 z-10 flex items-center"><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="size-7 border border-transparent object-row__context-action text-muted-foreground hover:bg-destructive/10 hover:text-destructive" aria-label="删除浏览记录：雾中群岛"><svg aria-hidden="true" class="lucide lucide-x size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 6-12 12M6 6l12 12"></path></svg></button></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fixture-caption" aria-hidden="true">NOT WINDOWS · synthetic browse-history fixture</div>
+    <div class="vrcx-0-page-scaffold decoy" id="unrelated-page" aria-hidden="true">
+      <div data-slot="tabs" data-orientation="horizontal" class="flex min-h-0 flex-1 flex-col">
+        <div class="vrcx-0-page-toolbar flex items-center gap-2">
+          <div data-vrcx-0-control="toolbar" data-slot="input-group" role="group">
+            <div data-slot="input-group-addon" data-align="inline-end" role="group"><button tabindex="-1" data-slot="button"><svg class="lucide lucide-calendar-range"></svg></button></div>
+          </div>
+          <button tabindex="-1" data-vrcx-0-control="toolbar" data-slot="button"><svg class="lucide lucide-refresh-cw"></svg></button>
+          <button tabindex="-1" data-vrcx-0-control="toolbar" data-slot="button"><svg class="lucide lucide-ellipsis"></svg></button>
+          <div data-slot="tabs-list" data-orientation="horizontal">
+            <button tabindex="-1" role="tab" data-slot="tabs-tab">All</button><button tabindex="-1" role="tab" data-slot="tabs-tab">Users</button><button tabindex="-1" role="tab" data-slot="tabs-tab">Worlds</button><button tabindex="-1" role="tab" data-slot="tabs-tab">Groups</button>
+          </div>
+        </div>
+        <div data-slot="tabs-content"><div class="object-row" id="miss-card"><button tabindex="-1" class="object-row__pressable">Unrelated</button><button tabindex="-1" class="size-7 border border-transparent object-row__context-action">X</button></div></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

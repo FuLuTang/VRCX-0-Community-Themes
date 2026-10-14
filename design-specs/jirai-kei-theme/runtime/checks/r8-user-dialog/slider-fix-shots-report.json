@@ -1,0 +1,85 @@
+{
+  "mode": "pre-fix=old narrow selector; after=current",
+  "shots": {
+    "slider-status-before-4x.png": {
+      "cssClip": {
+        "x": 855,
+        "y": 465,
+        "w": 480,
+        "h": 44
+      },
+      "px": {
+        "w": 1920,
+        "h": 176
+      }
+    },
+    "slider-bio-before-4x.png": {
+      "cssClip": {
+        "x": 686.625,
+        "y": 546,
+        "w": 480,
+        "h": 56
+      },
+      "px": {
+        "w": 1920,
+        "h": 224
+      }
+    },
+    "slider-status-after-4x.png": {
+      "cssClip": {
+        "x": 855,
+        "y": 465,
+        "w": 480,
+        "h": 44
+      },
+      "px": {
+        "w": 1920,
+        "h": 176
+      }
+    },
+    "slider-bio-after-4x.png": {
+      "cssClip": {
+        "x": 686.625,
+        "y": 546,
+        "w": 480,
+        "h": 56
+      },
+      "px": {
+        "w": 1920,
+        "h": 224
+      }
+    }
+  },
+  "before": [
+    {
+      "cls": "accent-primary w-28",
+      "w": 112,
+      "h": 16,
+      "appearance": "auto",
+      "cursor": "default"
+    },
+    {
+      "cls": "accent-primary min-w-16 flex-1",
+      "w": 512.375,
+      "h": 16,
+      "appearance": "none",
+      "cursor": "pointer"
+    }
+  ],
+  "after": [
+    {
+      "cls": "accent-primary w-28",
+      "w": 112,
+      "h": 16,
+      "appearance": "none",
+      "cursor": "pointer"
+    },
+    {
+      "cls": "accent-primary min-w-16 flex-1",
+      "w": 512.375,
+      "h": 16,
+      "appearance": "none",
+      "cursor": "pointer"
+    }
+  ]
+}

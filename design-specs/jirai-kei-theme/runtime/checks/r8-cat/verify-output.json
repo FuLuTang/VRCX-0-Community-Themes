@@ -1,0 +1,62 @@
+{
+  "fixture": "NOT WINDOWS",
+  "candidates": [
+    {
+      "id": "A",
+      "label": "A · Nav footer",
+      "selector": ".vrcx-0-sidebar-surface [data-sidebar=\"footer\"]::after",
+      "catRect": {
+        "x": 270,
+        "y": 655,
+        "width": 18,
+        "height": 18
+      },
+      "opacityNormal": 0.9,
+      "opacityReduced": 0.9,
+      "pointerEvents": "none",
+      "animationNormal": "none",
+      "animationReduced": "none",
+      "nonOverlap": true,
+      "layoutStable": true,
+      "catImageSize": "18px 18px"
+    },
+    {
+      "id": "B",
+      "label": "B · Title gap",
+      "selector": ".title-gap::after",
+      "catRect": {
+        "x": 536,
+        "y": 40,
+        "width": 18,
+        "height": 18
+      },
+      "opacityNormal": 0.9,
+      "opacityReduced": 0.9,
+      "pointerEvents": "none",
+      "animationNormal": "none",
+      "animationReduced": "none",
+      "nonOverlap": true,
+      "layoutStable": true,
+      "catImageSize": "18px 18px"
+    },
+    {
+      "id": "C",
+      "label": "C · SOCIAL title",
+      "selector": ".vrcx-0-side-panel::before",
+      "catRect": {
+        "x": 801.5,
+        "y": 120.75,
+        "width": 18,
+        "height": 18
+      },
+      "opacityNormal": 1,
+      "opacityReduced": 1,
+      "pointerEvents": "none",
+      "animationNormal": "none",
+      "animationReduced": "none",
+      "nonOverlap": true,
+      "layoutStable": true,
+      "catImageSize": "18px 18px"
+    }
+  ]
+}

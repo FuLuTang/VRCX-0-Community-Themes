@@ -1,0 +1,92 @@
+{
+  "hud": {
+    "bg": "rgb(32, 25, 54)",
+    "border": "rgb(162, 148, 200)",
+    "radius": "0px",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "none",
+    "w": 812,
+    "h": 46,
+    "backdrop": "none"
+  },
+  "fetch": {
+    "bg": "rgb(255, 184, 230)",
+    "border": "rgb(108, 92, 224)",
+    "radius": "0px",
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "outline": "none",
+    "w": 86,
+    "h": 32,
+    "backdrop": "none"
+  },
+  "refresh": {
+    "bg": "rgb(33, 26, 51)",
+    "border": "rgb(108, 92, 224)",
+    "radius": "0px",
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "outline": "none",
+    "w": 28,
+    "h": 28,
+    "backdrop": "none"
+  },
+  "settings": {
+    "bg": "rgb(33, 26, 51)",
+    "border": "rgb(108, 92, 224)",
+    "radius": "0px",
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "outline": "none",
+    "w": 28,
+    "h": 28,
+    "backdrop": "none"
+  },
+  "cancel": {
+    "bg": "rgb(61, 27, 53)",
+    "border": "rgb(255, 107, 138)",
+    "radius": "0px",
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "outline": "none",
+    "w": 66,
+    "h": 28,
+    "backdrop": "none"
+  },
+  "search": {
+    "bg": "rgb(22, 17, 42)",
+    "border": "rgb(105, 85, 124)",
+    "radius": "0px",
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "outline": "none",
+    "w": 224,
+    "h": 32,
+    "backdrop": "none"
+  },
+  "legend": {
+    "bg": "rgb(32, 25, 54)",
+    "border": "rgb(162, 148, 200)",
+    "radius": "0px",
+    "shadow": "rgb(227, 210, 245) 1px 1px 0px 0px inset, rgb(75, 58, 99) -1px -1px 0px 0px inset, rgb(16, 11, 30) 1px 1px 0px 0px",
+    "outline": "none",
+    "w": 256,
+    "h": 50,
+    "backdrop": "none"
+  },
+  "focus": {
+    "bg": "rgb(33, 26, 51)",
+    "border": "rgb(108, 92, 224)",
+    "radius": "0px",
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "outline": "solid",
+    "w": 28,
+    "h": 28,
+    "backdrop": "none"
+  },
+  "pressed": {
+    "bg": "rgb(57, 42, 82)",
+    "border": "rgb(108, 92, 224)",
+    "radius": "0px",
+    "shadow": "rgb(22, 17, 42) 2px 2px 0px 0px inset, rgb(253, 244, 255) -1px -1px 0px 0px inset",
+    "outline": "solid",
+    "w": 28,
+    "h": 28,
+    "backdrop": "none"
+  }
+}

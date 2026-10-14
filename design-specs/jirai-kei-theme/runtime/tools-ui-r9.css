@@ -1,0 +1,81 @@
+/* R9+ ToolsPageContent only. Source anchor: ToolsPageContent.tsx renders a PageScaffold
+   id="chart", direct PageToolbar > ToolbarSearch (data-vrcx-0-control="toolbar"), and a
+   vertical TabsList under its scroll body. Other #chart roots are excluded unless they expose
+   that exact toolbar control. This is not the app navigation rail or Settings vertical Tabs. */
+
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]{
+  border-radius:0;
+  background-color:#201936;
+  color:#e3d2f5;
+  border-color:var(--jk-field-edge);
+  box-shadow:var(--jk-field-inset);
+  transition:none;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:focus-within{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+  z-index:2;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-slot="input-group-addon"]{
+  color:#d6b8ef;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-slot="input-group-control"]{
+  border-radius:0;
+  background-color:transparent;
+  color:#f2ebff;
+  caret-color:#ffb8e6;
+  outline:none;
+  box-shadow:none;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-slot="input-group-control"]::placeholder{
+  color:#b9add9;
+  opacity:1;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-slot="button"]{
+  border-radius:0;
+  color:#16112a;
+  background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-slot="button"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+}
+
+/* The category rail is TabsList's direct child under a vertical Tabs root in Tools' own
+   scroll body. Preserve its full-width rows and current 2px spacing/padding geometry. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]{
+  gap:2px;
+  padding:1px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background-color:#201936;
+  color:#e3d2f5;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"] > [data-slot="tab-indicator"]{
+  display:none;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"] > [data-slot="tabs-tab"]{
+  border-radius:0;
+  border-color:transparent;
+  background-color:transparent;
+  color:#e3d2f5;
+  box-shadow:none;
+  transition:none;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"] > [data-slot="tabs-tab"]:hover:not([data-disabled]):not([aria-disabled="true"]){
+  background-color:#3b2c55;
+  color:#f2ebff;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"] > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  color:#16112a;
+  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"] > [data-slot="tabs-tab"]:focus-visible{
+  z-index:2;
+  outline:2px solid #ff7fcf;
+  outline-offset:-2px;
+}

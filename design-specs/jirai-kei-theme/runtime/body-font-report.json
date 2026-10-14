@@ -1,0 +1,44 @@
+{
+  "source": "/tmp/pixfont/dl/fus12p-ttf/fusion-pixel-12px-proportional-zh_hans.ttf",
+  "requestedPoints": 11384,
+  "sourceAvailableSelected": 11072,
+  "woff2Bytes": 351564,
+  "cssBytes": 471418,
+  "actualThemeBytes": 693719,
+  "hardLimit": 1048576,
+  "remainingBudgetBytes": 354857,
+  "actualThemeFitsBudget": true,
+  "previousSubsetPointsApprox": 20000,
+  "reductionPointsApprox": 8928,
+  "coverage": {"GB2312Level1":{"hits":3008,"total":3008,"percent":100.0},"GB2312All":{"hits":6620,"total":6763,"percent":97.9},"Big5Common":{"hits":4239,"total":4239,"percent":100.0},"Big5Secondary":{"hits":1256,"total":1256,"percent":100.0},"JISFirst":{"hits":2965,"total":2965,"percent":100.0},"JISSecond":{"hits":3390,"total":3390,"percent":100.0},"kana":{"hits":252,"total":255,"percent":98.8},"Latin1":{"hits":95,"total":96,"percent":99.0},"LatinExtendedA":{"hits":128,"total":128,"percent":100.0},"LatinExtendedB":{"hits":208,"total":208,"percent":100.0}},
+  "samples": {
+    "二階堂アコ": {
+      "missingAfterSubset": ""
+    },
+    "雪之夏萌心": {
+      "missingAfterSubset": ""
+    },
+    "冷風": {
+      "missingAfterSubset": ""
+    },
+    "皮卡丘": {
+      "missingAfterSubset": ""
+    },
+    "・": {
+      "missingAfterSubset": ""
+    },
+    "あいうえおカキクケコ": {
+      "missingAfterSubset": ""
+    },
+    "àâæçéèêëîïôœùûüÿ ÀÇÉŒ «»": {
+      "missingAfterSubset": ""
+    },
+    "abcdefghijklmnopqrstuvwxyz": {
+      "missingAfterSubset": ""
+    },
+    "ƒǎǐǒǔ": {
+      "missingAfterSubset": ""
+    }
+  },
+  "missingRequestedFromSourceCount": 312
+}

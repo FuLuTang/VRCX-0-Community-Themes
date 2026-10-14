@@ -1,0 +1,16 @@
+/* R9.7 Q6 pixel splitter. ui/shadcn/resizable.tsx Separator[data-slot=resizable-handle];
+   react-resizable-panels 4.12 sets data-separator=inactive|hover|active|focus|disabled.
+   Paint only: ::after hit area, widths and panel layout stay source-owned.
+   WorkspaceResizeHandle = 8px .bg-transparent slot whose ::before is the line. */
+[data-slot=resizable-handle]{--jk-sl:#6c5ce0;--jk-sb:#16112a;--jk-sd:#ffb8e6}
+[data-slot=resizable-handle]:is([data-separator=hover],[data-separator=active]){--jk-sl:#ff7fcf;--jk-sd:#fdf4ff}
+[data-slot=resizable-handle][data-separator=active]{--jk-sb:#ff7fcf;--jk-sd:#16112a}
+[data-slot=resizable-handle]:not(.bg-transparent),[data-slot=resizable-handle].bg-transparent::before{background:var(--jk-sl);box-shadow:1px 0 #16112a}
+[data-slot=resizable-handle][aria-orientation=horizontal]:not(.bg-transparent){box-shadow:0 1px #16112a}
+[data-slot=resizable-handle].bg-transparent{box-shadow:none}
+[data-slot=resizable-handle].bg-transparent::before{left:calc(50% - 1px);translate:none}
+[data-slot=resizable-handle]:focus-visible{outline:1px dotted #ff7fcf;outline-offset:1px}
+/* withHandle grip: 4x16, 1px line-colour frame, ink well, three 2x2 dots (drag = filled/pressed);
+   horizontal keeps the source rotate-90. */
+[data-slot=resizable-handle]>div{width:4px;height:16px;border-radius:0;box-shadow:inset 0 0 0 1px var(--jk-sl);background:linear-gradient(#0000 2px,var(--jk-sd) 0 4px,#0000 0 7px,var(--jk-sd) 0 9px,#0000 0 12px,var(--jk-sd) 0 14px,#0000 0) 1px 0/2px 100% no-repeat var(--jk-sb)}
+@media (prefers-reduced-motion:reduce){[data-slot=resizable-handle],[data-slot=resizable-handle]::before{transition:none}}

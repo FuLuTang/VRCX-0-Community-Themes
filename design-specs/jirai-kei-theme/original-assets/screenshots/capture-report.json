@@ -1,0 +1,164 @@
+{
+  "browser": "Playwright Chromium",
+  "checks": {
+    "dataUriCssLoaded": true,
+    "maskPseudoElementRendered": true,
+    "bakedBackgroundOnScrollableDialog": true,
+    "titlebarIs32CssPx": true,
+    "bothLightDarkSurfaces": true,
+    "dialogContentScrolls": true,
+    "allS1S11SpecimenSlotsPresent": true,
+    "noBrowserErrors": true,
+    "noFailedRequests": true
+  },
+  "screenshots": [
+    {
+      "dpr": 1,
+      "file": "screenshots/specimen-dpr-1.webp",
+      "width": 1440,
+      "height": 1413,
+      "bytes": 222026,
+      "state": {
+        "titlebarHeight": 32,
+        "maskDataUri": true,
+        "maskBase64": false,
+        "pseudoMask": true,
+        "dialogBackgroundDataUri": true,
+        "dialogBackgroundAttachment": "scroll, scroll",
+        "sceneModes": [
+          {
+            "dark": false,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 673
+          },
+          {
+            "dark": true,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 551
+          }
+        ],
+        "assetCount": 22,
+        "cssSheets": [
+          "file:///home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/original-assets/dist/jirai-assets.css"
+        ]
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "dpr": 1.25,
+      "file": "screenshots/specimen-dpr-1-25.webp",
+      "width": 1800,
+      "height": 1766,
+      "bytes": 304860,
+      "state": {
+        "titlebarHeight": 32,
+        "maskDataUri": true,
+        "maskBase64": false,
+        "pseudoMask": true,
+        "dialogBackgroundDataUri": true,
+        "dialogBackgroundAttachment": "scroll, scroll",
+        "sceneModes": [
+          {
+            "dark": false,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 673
+          },
+          {
+            "dark": true,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 551
+          }
+        ],
+        "assetCount": 22,
+        "cssSheets": [
+          "file:///home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/original-assets/dist/jirai-assets.css"
+        ]
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "dpr": 1.5,
+      "file": "screenshots/specimen-dpr-1-5.webp",
+      "width": 2160,
+      "height": 2120,
+      "bytes": 361312,
+      "state": {
+        "titlebarHeight": 32,
+        "maskDataUri": true,
+        "maskBase64": false,
+        "pseudoMask": true,
+        "dialogBackgroundDataUri": true,
+        "dialogBackgroundAttachment": "scroll, scroll",
+        "sceneModes": [
+          {
+            "dark": false,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 673
+          },
+          {
+            "dark": true,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 551
+          }
+        ],
+        "assetCount": 22,
+        "cssSheets": [
+          "file:///home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/original-assets/dist/jirai-assets.css"
+        ]
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "dpr": 2,
+      "file": "screenshots/specimen-dpr-2.webp",
+      "width": 2880,
+      "height": 2826,
+      "bytes": 498674,
+      "state": {
+        "titlebarHeight": 32,
+        "maskDataUri": true,
+        "maskBase64": false,
+        "pseudoMask": true,
+        "dialogBackgroundDataUri": true,
+        "dialogBackgroundAttachment": "scroll, scroll",
+        "sceneModes": [
+          {
+            "dark": false,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 673
+          },
+          {
+            "dark": true,
+            "dialog": true,
+            "height": 32,
+            "modalClient": 338,
+            "modalScroll": 551
+          }
+        ],
+        "assetCount": 22,
+        "cssSheets": [
+          "file:///home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/original-assets/dist/jirai-assets.css"
+        ]
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    }
+  ]
+}

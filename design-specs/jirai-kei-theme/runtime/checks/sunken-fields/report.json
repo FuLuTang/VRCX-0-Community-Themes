@@ -1,0 +1,119 @@
+{
+  "native": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 256,
+    "height": 32
+  },
+  "select": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 256,
+    "height": 32
+  },
+  "combo": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 256,
+    "height": 32
+  },
+  "search": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgb(32, 25, 54)",
+    "outline": "none",
+    "width": 256,
+    "height": 32
+  },
+  "group": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "outline": "none",
+    "width": 256,
+    "height": 32
+  },
+  "input": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgb(22, 17, 42)",
+    "outline": "none",
+    "width": 256,
+    "height": 32
+  },
+  "nav": {
+    "shadow": "rgb(22, 17, 42) 1px 1px 0px 0px inset, rgb(162, 148, 200) -1px -1px 0px 0px inset",
+    "top": "rgb(105, 85, 124)",
+    "bottom": "rgb(253, 244, 255)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 647,
+    "height": 78
+  },
+  "bio": {
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "top": "rgb(108, 92, 224)",
+    "bottom": "rgb(108, 92, 224)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 24,
+    "height": 24
+  },
+  "fallback": {
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "top": "rgb(108, 92, 224)",
+    "bottom": "rgb(108, 92, 224)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 24,
+    "height": 24
+  },
+  "hover": {
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "top": "rgb(108, 92, 224)",
+    "bottom": "rgb(108, 92, 224)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "none",
+    "width": 24,
+    "height": 24
+  },
+  "pressed": {
+    "shadow": "rgb(22, 17, 42) 2px 2px 0px 0px inset, rgb(253, 244, 255) -1px -1px 0px 0px inset",
+    "top": "rgb(108, 92, 224)",
+    "bottom": "rgb(108, 92, 224)",
+    "bg": "rgb(57, 42, 82)",
+    "outline": "none",
+    "width": 24,
+    "height": 24
+  },
+  "focus": {
+    "shadow": "rgba(253, 244, 255, 0.72) 1px 1px 0px 0px inset, rgba(22, 17, 42, 0.72) -1px -1px 0px 0px inset",
+    "top": "rgb(108, 92, 224)",
+    "bottom": "rgb(108, 92, 224)",
+    "bg": "rgb(33, 26, 51)",
+    "outline": "solid",
+    "width": 24,
+    "height": 24
+  },
+  "other": {
+    "shadow": "none",
+    "top": "rgb(108, 92, 224)",
+    "bottom": "rgb(108, 92, 224)",
+    "bg": "rgba(0, 0, 0, 0)",
+    "outline": "none",
+    "width": 104,
+    "height": 24
+  }
+}

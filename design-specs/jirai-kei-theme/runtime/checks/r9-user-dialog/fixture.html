@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R9 user dialog · NOT WINDOWS</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#16112a;color:#f2ebff;font:14px/1.45 system-ui,sans-serif}
+body{padding:18px 20px 28px}
+header{margin:0 0 14px}
+h1{margin:0;color:#ffd9ee;font:600 14px/1.4 ui-monospace,monospace}
+.subtitle{margin:3px 0 0;color:#b9add9;font:11px/1.4 ui-monospace,monospace}
+.tier-grid{display:grid;grid-template-columns:repeat(3,346px);gap:16px;align-items:start}
+.tier-title{height:32px;display:flex;align-items:center;gap:8px;margin:0;color:#d6b8ef;font:12px/1.3 ui-monospace,monospace}
+.tier-title b{display:inline-grid;place-items:center;width:18px;height:18px;background:#6c5ce0;color:#fff;font-size:11px}
+.entity-dialog{position:relative;inset:auto;transform:none;width:346px;max-width:none;max-height:none;overflow:visible;margin:0;padding:12px;border:1px solid #6c5ce0;background:#201936;box-shadow:3px 3px 0 #100b1e}
+.profile-card{position:relative;isolation:isolate;overflow:hidden;margin:0;padding:0;border:0;background:transparent;box-shadow:none}
+.card-header{padding:0;margin:0}
+.banner-stage{position:relative;width:320px;height:240px}
+.banner-button{position:relative;display:block;width:320px;height:240px;overflow:hidden;padding:0;border:1px solid #6c5ce0;border-radius:8px;background:#2a2147;line-height:0;aspect-ratio:4/3}
+.banner-button>span{position:relative;display:block;width:100%;height:100%}
+.banner-button>span>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+.avatar-wrap{position:absolute;bottom:12px;left:12px;z-index:30;width:64px;height:64px;overflow:visible}
+.avatar-button{position:relative;z-index:0;display:block;width:64px;height:64px;overflow:hidden;padding:0;border:2px solid #fff;border-radius:9999px;background:rgba(18,11,30,.9);box-shadow:0 4px 12px rgba(0,0,0,.62)}
+.avatar-button>img{display:block;width:100%;height:100%;object-fit:cover}
+.avatar-frame{position:absolute;inset:-12px;z-index:10;display:block;pointer-events:none;overflow:visible}
+.avatar-frame>img{display:block;width:100%;height:100%;object-fit:contain}
+.card-content{padding:10px 2px 0}
+.nameplate{display:flex;align-items:center;gap:8px;color:#f2ebff;font-size:13px}
+.size-4{width:16px;height:16px;display:flex;align-items:center;justify-content:center;flex:none}
+.size-2\.5{width:10px;height:10px;flex:none}
+.rounded-full{border-radius:9999px}
+.inline-block{display:inline-block}
+#frame-control{position:absolute;left:-10000px;top:0;width:346px}
+.note{margin-top:12px;color:#a294c8;font:10px/1.4 ui-monospace,monospace}
+@media(max-width:1150px){.tier-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.entity-dialog{width:100%}.banner-stage,.banner-button{width:100%;height:auto;aspect-ratio:4/3}}
+</style>
+</head>
+<body>
+<header><h1>NOT WINDOWS · R9-D banner/avatar visual check</h1><p class="subtitle">Synthetic image and fictional labels · no real profile data · A/B/C stitch tiers plus a hollow inset scallop trace</p></header>
+<main class="tier-grid">
+  <article class="tier-panel">
+    <h2 class="tier-title"><b>A</b> Subtle · stitch .18 · hem 4px / .72</h2>
+    <section class="entity-dialog" data-slot="dialog-content" data-tier="A" style="--r9-banner-stitch-opacity:.18;--r9-banner-stitch-size:8px 12px,8px 12px;--r9-banner-hem-height:4px;--r9-banner-hem-opacity:.72;--r9-banner-hem-size:10px 4px">
+      <div data-slot="card" data-size="sm" class="profile-card relative isolate overflow-hidden">
+        <div data-slot="card-header" class="card-header"><div class="relative banner-stage">
+          <button data-slot="button" data-variant="ghost" class="bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 banner-button" aria-label="Synthetic landscape banner"><span class="relative size-full"><img alt="Synthetic landscape" src="__BANNER_SRC__"></span></button>
+          <div class="absolute bottom-3 left-3 z-30 size-16 avatar-wrap"><button data-slot="button" data-variant="ghost" title="Open example icon" class="bg-background/90 relative z-0 size-full overflow-hidden rounded-full p-0 shadow-md border-2 border-white avatar-button"><img alt="" src="__AVATAR_SRC__"></button></div>
+        </div></div>
+        <div data-slot="card-content" class="card-content"><div data-slot="card-title" class="nameplate"><span class="flex size-4 shrink-0 items-center justify-center"><span class="rounded-full inline-block size-2.5 shrink-0 align-middle" data-header-status style="background:#f4e05e"></span></span><strong>Example Member</strong></div></div>
+      </div>
+    </section>
+  </article>
+  <article class="tier-panel">
+    <h2 class="tier-title"><b>B</b> Recommended · stitch .28 · hem 5px / .82</h2>
+    <section id="tier-b" class="entity-dialog" data-slot="dialog-content" data-tier="B" style="--r9-banner-stitch-opacity:.28;--r9-banner-stitch-size:8px 12px,8px 12px;--r9-banner-hem-height:5px;--r9-banner-hem-opacity:.82;--r9-banner-hem-size:10px 5px">
+      <div data-slot="card" data-size="sm" class="profile-card relative isolate overflow-hidden">
+        <div data-slot="card-header" class="card-header"><div class="relative banner-stage">
+          <button data-slot="button" data-variant="ghost" class="bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 banner-button" aria-label="Synthetic landscape banner"><span class="relative size-full"><img alt="Synthetic landscape" src="__BANNER_SRC__"></span></button>
+          <div class="absolute bottom-3 left-3 z-30 size-16 avatar-wrap"><button data-slot="button" data-variant="ghost" title="Open example icon" class="bg-background/90 relative z-0 size-full overflow-hidden rounded-full p-0 shadow-md border-2 border-white avatar-button"><img alt="" src="__AVATAR_SRC__"></button></div>
+        </div></div>
+        <div data-slot="card-content" class="card-content"><div data-slot="card-title" class="nameplate"><span class="flex size-4 shrink-0 items-center justify-center"><span class="rounded-full inline-block size-2.5 shrink-0 align-middle" data-header-status style="background:#f4e05e"></span></span><strong>Example Member</strong></div></div>
+      </div>
+    </section>
+  </article>
+  <article class="tier-panel">
+    <h2 class="tier-title"><b>C</b> Strong · stitch .38 · hem 6px / .90</h2>
+    <section class="entity-dialog" data-slot="dialog-content" data-tier="C" style="--r9-banner-stitch-opacity:.38;--r9-banner-stitch-size:8px 12px,8px 12px;--r9-banner-hem-height:6px;--r9-banner-hem-opacity:.90;--r9-banner-hem-size:10px 6px">
+      <div data-slot="card" data-size="sm" class="profile-card relative isolate overflow-hidden">
+        <div data-slot="card-header" class="card-header"><div class="relative banner-stage">
+          <button data-slot="button" data-variant="ghost" class="bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 banner-button" aria-label="Synthetic landscape banner"><span class="relative size-full"><img alt="Synthetic landscape" src="__BANNER_SRC__"></span></button>
+          <div class="absolute bottom-3 left-3 z-30 size-16 avatar-wrap"><button data-slot="button" data-variant="ghost" title="Open example icon" class="bg-background/90 relative z-0 size-full overflow-hidden rounded-full p-0 shadow-md border-2 border-white avatar-button"><img alt="" src="__AVATAR_SRC__"></button></div>
+        </div></div>
+        <div data-slot="card-content" class="card-content"><div data-slot="card-title" class="nameplate"><span class="flex size-4 shrink-0 items-center justify-center"><span class="rounded-full inline-block size-2.5 shrink-0 align-middle" data-header-status style="background:#f4e05e"></span></span><strong>Example Member</strong></div></div>
+      </div>
+    </section>
+  </article>
+</main>
+<section id="frame-control" aria-hidden="true">
+  <div class="entity-dialog" data-slot="dialog-content" style="--r9-banner-stitch-opacity:.28;--r9-banner-stitch-size:8px 12px,8px 12px;--r9-banner-hem-height:5px;--r9-banner-hem-opacity:.82;--r9-banner-hem-size:10px 5px">
+    <div data-slot="card-header" class="card-header"><div class="relative banner-stage">
+      <button data-slot="button" data-variant="ghost" class="bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 banner-button"><span class="relative size-full"><img alt="" src="__BANNER_SRC__"></span></button>
+      <div class="absolute bottom-3 left-3 z-30 size-16 avatar-wrap"><button data-slot="button" data-variant="ghost" title="Icon with user-owned frame" class="bg-background/90 relative z-0 size-full overflow-hidden rounded-full p-0 shadow-md border-0 avatar-button"><img alt="" src="__AVATAR_SRC__"></button><span aria-hidden="true" class="pointer-events-none block absolute -inset-3 z-10 avatar-frame"><img data-profile-decoration-asset alt="" src="__FRAME_SRC__"></span></div>
+    </div></div>
+  </div>
+</section>
+<p class="note">Pattern tiers only affect theme-owned banner ::before/::after. The avatar frame is a sibling fixture control and must remain untouched.</p>
+</body></html>

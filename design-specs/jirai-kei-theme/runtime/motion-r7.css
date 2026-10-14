@@ -1,0 +1,41 @@
+/* R7: quiet chrome motion, never transform body/nav text or virtual rows.
+   Statusbar ::after belongs to the application's RGB accent, leave it alone.
+   Windows-acceptance finding: R5 parked this ornament at `right:10px`, but the app now
+   renders its own add/gear buttons at the SOCIAL panel's top-right corner, so the cat
+   was fully covered and never visible. Moved into the empty run of the panel header. */
+.vrcx-0-side-panel::after {
+ right:88px;
+ width:42px;
+ background-image:var(--r5-star),var(--r5-pixel-mascot);
+ background-size:16px 16px,18px 18px;
+ image-rendering:pixelated;
+ pointer-events:none;
+}
+/* Title-heart and statusbar-lace animations have dedicated owners in R9.7/R8. */
+/* Leader review: the inherited left-edge star can cover the tab label.
+   Put the glint in the 2px bottom border instead; no text transform/overpaint. */
+@keyframes r7-tab-edge {
+ 0%,60% { opacity:0; background-position:-24px 0; }
+ 68% { opacity:.65; background-position:0 0; }
+ 80% { opacity:.65; background-position:24px 0; }
+ 90% { opacity:.45; background-position:48px 0; }
+ 100% { opacity:0; background-position:72px 0; }
+}
+[data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after {
+ top:auto;
+ bottom:0;
+ left:0;
+ width:100%;
+ height:2px;
+ transform:none;
+ background-image:linear-gradient(#ffe4f5,#ffe4f5);
+ background-size:24px 2px;
+ background-repeat:no-repeat;
+ animation:r7-tab-edge 6s steps(4,end) infinite;
+}
+/* R7's tab glint owns the only reduced-motion override in this module. */
+@media(prefers-reduced-motion:reduce) {
+ [data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after {
+  animation:none !important;
+ }
+}

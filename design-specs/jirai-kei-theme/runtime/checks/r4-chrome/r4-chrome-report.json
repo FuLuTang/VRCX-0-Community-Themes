@@ -1,0 +1,198 @@
+{
+  "fixtureOnly": true,
+  "bar": {
+    "x": 0,
+    "y": 0,
+    "w": 1387,
+    "h": 32,
+    "bg": "rgb(217, 127, 198)"
+  },
+  "search": {
+    "x": 1051,
+    "y": 3.5,
+    "w": 224,
+    "h": 24,
+    "bg": "rgb(255, 184, 230)",
+    "color": "rgb(22, 17, 42)",
+    "border": "1px solid rgb(26, 18, 38)",
+    "radius": "0px",
+    "shadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+    "padding": "7px",
+    "display": "flex",
+    "slot": "tooltip-trigger"
+  },
+  "caps": [
+    {
+      "text": "Ctrl",
+      "x": 1226.02,
+      "y": 7.5,
+      "w": 22.98,
+      "h": 16,
+      "bg": "rgb(255, 242, 251)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgb(255, 255, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "fontSize": "9px",
+      "lineHeight": "14px",
+      "contrast": 16.86
+    },
+    {
+      "text": "K",
+      "x": 1251,
+      "y": 7.5,
+      "w": 16,
+      "h": 16,
+      "bg": "rgb(255, 242, 251)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgb(255, 255, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "fontSize": "9px",
+      "lineHeight": "14px",
+      "contrast": 16.86
+    }
+  ],
+  "brand": {
+    "x": 0,
+    "y": 0,
+    "w": 101,
+    "h": 31,
+    "bg": "rgb(205, 176, 232)",
+    "color": "rgb(22, 17, 42)",
+    "border": "1px solid rgb(26, 18, 38)",
+    "radius": "0px",
+    "shadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+    "text": "VRCX-0-jirai",
+    "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+    "textTransform": "none",
+    "contrast": 9.56
+  },
+  "help": {
+    "x": 107,
+    "y": 0,
+    "w": 75,
+    "h": 31,
+    "bg": "rgb(205, 176, 232)",
+    "color": "rgb(22, 17, 42)",
+    "border": "1px solid rgb(26, 18, 38)",
+    "radius": "0px",
+    "shadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset"
+  },
+  "heart": {
+    "content": "\"\"",
+    "mask": true,
+    "pointer": "none",
+    "width": "12px",
+    "height": "12px",
+    "bg": "rgb(22, 17, 42)"
+  },
+  "dots": [
+    {
+      "x": 12,
+      "y": 680.5,
+      "w": 8,
+      "h": 8,
+      "bg": "rgb(46, 211, 25)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgba(0, 0, 0, 0.28) -1px -1px 0px 0px inset",
+      "fill": "rgb(46, 211, 25)",
+      "raw": "rgb(46, 211, 25)"
+    },
+    {
+      "x": 84,
+      "y": 680.5,
+      "w": 8,
+      "h": 8,
+      "bg": "rgb(162, 148, 200)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgba(0, 0, 0, 0.28) -1px -1px 0px 0px inset",
+      "fill": "rgb(162, 148, 200)",
+      "raw": "rgb(162, 148, 200)"
+    }
+  ],
+  "winButtons": [
+    {
+      "label": "最小化窗口",
+      "slot": "tooltip-trigger",
+      "x": 1279,
+      "y": 0,
+      "w": 36,
+      "h": 31,
+      "bg": "rgb(205, 176, 232)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "svg": "16px",
+      "hit": true
+    },
+    {
+      "label": "还原窗口",
+      "slot": "tooltip-trigger",
+      "x": 1315,
+      "y": 0,
+      "w": 36,
+      "h": 31,
+      "bg": "rgb(205, 176, 232)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "svg": "16px",
+      "hit": true
+    },
+    {
+      "label": "关闭窗口",
+      "slot": "tooltip-trigger",
+      "x": 1351,
+      "y": 0,
+      "w": 36,
+      "h": 31,
+      "bg": "rgb(240, 166, 203)",
+      "color": "rgb(22, 17, 42)",
+      "border": "1px solid rgb(26, 18, 38)",
+      "radius": "0px",
+      "shadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "svg": "16px",
+      "hit": true
+    }
+  ],
+  "focusable": true,
+  "beforeR4": {
+    "searchBg": "rgb(0, 0, 0)",
+    "searchBorder": "0px",
+    "searchColor": "rgb(59, 42, 69)",
+    "searchShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+    "capBg": "rgb(22, 18, 42)",
+    "capColor": "rgb(59, 42, 69)",
+    "capHeight": "14px",
+    "brandBg": "rgb(0, 0, 0)",
+    "brandBorder": "0px",
+    "brandRadius": "0px",
+    "dotRadius": "3.35544e+07px",
+    "dotBorder": "0px",
+    "capContrast": 1.39
+  },
+  "brandWidthWithoutR4": 94,
+  "brandHover": "rgb(255, 217, 239)",
+  "helpOpen": "rgb(255, 217, 239)",
+  "searchHover": "rgb(255, 217, 239)",
+  "capHover": {
+    "bg": "rgb(255, 242, 251)",
+    "border": "rgb(26, 18, 38)"
+  },
+  "closeHover": {
+    "bg": "rgb(255, 107, 138)",
+    "color": "rgb(22, 17, 42)"
+  },
+  "searchFocus": {
+    "outline": "2px solid rgb(22, 17, 42)",
+    "offset": "-3px"
+  },
+  "cssBytes": 14706
+}

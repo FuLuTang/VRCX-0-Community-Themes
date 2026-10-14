@@ -1,0 +1,148 @@
+{
+  "fixture": "NOT WINDOWS; sample nickname only; chosen nav-pocket cat motion",
+  "viewport": "1600x1024",
+  "normal": [
+    {
+      "selector": ".vrcx-0-titlebar .vrcx-0-brand::after",
+      "animationName": "r8-heart-beat",
+      "pointerEvents": "none",
+      "opacity": 0.86,
+      "width": 11,
+      "height": 9
+    },
+    {
+      "selector": ".vrcx-0-statusbar::before",
+      "animationName": "r8-lace-flow",
+      "pointerEvents": "none",
+      "opacity": 1,
+      "width": 1572,
+      "height": 8
+    },
+    {
+      "selector": ".vrcx-0-sidebar-surface [data-sidebar=\"menu-button\"][data-active]::before",
+      "animationName": "r8-nav-cursor",
+      "pointerEvents": "none",
+      "opacity": 1,
+      "width": 3,
+      "height": 14
+    },
+    {
+      "selector": "#window-hover::after",
+      "animationName": "r8-window-press",
+      "pointerEvents": "none",
+      "opacity": 0.62,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "selector": ".vrcx-0-sidebar-surface [data-sidebar=\"content\"]::after",
+      "animationName": "r8-cat-hop",
+      "pointerEvents": "none",
+      "opacity": 0.78,
+      "width": 36,
+      "height": 36
+    }
+  ],
+  "reduced": [
+    {
+      "selector": ".vrcx-0-titlebar .vrcx-0-brand::after",
+      "animationName": "none",
+      "pointerEvents": "none",
+      "opacity": 1,
+      "width": 11,
+      "height": 9
+    },
+    {
+      "selector": ".vrcx-0-statusbar::before",
+      "animationName": "none",
+      "pointerEvents": "none",
+      "opacity": 1,
+      "width": 1572,
+      "height": 8
+    },
+    {
+      "selector": ".vrcx-0-sidebar-surface [data-sidebar=\"menu-button\"][data-active]::before",
+      "animationName": "none",
+      "pointerEvents": "none",
+      "opacity": 1,
+      "width": 3,
+      "height": 14
+    },
+    {
+      "selector": "#window-hover::after",
+      "animationName": "none",
+      "pointerEvents": "none",
+      "opacity": 0.62,
+      "width": 3,
+      "height": 3
+    },
+    {
+      "selector": ".vrcx-0-sidebar-surface [data-sidebar=\"content\"]::after",
+      "animationName": "none",
+      "pointerEvents": "none",
+      "opacity": 1,
+      "width": 36,
+      "height": 36
+    }
+  ],
+  "laceBackgroundPosition": {
+    "normal": [
+      "0px 50%",
+      "10px 50%"
+    ],
+    "reduced": [
+      "0px 50%",
+      "0px 50%"
+    ]
+  },
+  "runningAnimations": [
+    {
+      "name": "r8-heart-beat",
+      "target": "vrcx-0-brand",
+      "pseudo": "::after"
+    },
+    {
+      "name": "r8-window-press",
+      "target": "关闭",
+      "pseudo": "::after"
+    },
+    {
+      "name": "r8-cat-hop",
+      "target": "nav-list",
+      "pseudo": "::after"
+    },
+    {
+      "name": "r8-nav-cursor",
+      "target": "BUTTON",
+      "pseudo": "::before"
+    },
+    {
+      "name": "r7-corner-twinkle",
+      "target": "vrcx-0-side-panel",
+      "pseudo": "::after"
+    },
+    {
+      "name": "r8-lace-flow",
+      "target": "vrcx-0-statusbar",
+      "pseudo": "::before"
+    }
+  ],
+  "runningCount": 6,
+  "protectedPseudoStateStable": true,
+  "layoutBoundsStable": true,
+  "legacySocialAnimationPreserved": true,
+  "legacySocialAnimationReducedName": "none",
+  "selectedCatRect": {
+    "selector": ".vrcx-0-sidebar-surface [data-sidebar=\"content\"]::after",
+    "animationName": "r8-cat-hop",
+    "pointerEvents": "none",
+    "opacity": 0.78,
+    "width": 36,
+    "height": 36
+  },
+  "catMotionSelector": ".vrcx-0-sidebar-surface [data-sidebar=\"content\"]::after",
+  "recording": {
+    "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r8-motion/r8-motion-demo.webm",
+    "durationSeconds": 7.96
+  }
+}

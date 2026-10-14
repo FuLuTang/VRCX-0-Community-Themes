@@ -1,0 +1,120 @@
+{
+  "fixtureOnly": true,
+  "buttons": [
+    {
+      "label": "Minimize",
+      "slot": "tooltip-trigger",
+      "width": 36,
+      "height": 31,
+      "border": "1px",
+      "bevel": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "bg": "rgb(205, 176, 232)",
+      "svgWidth": "16px",
+      "svgHeight": "16px",
+      "mask": true,
+      "hit": true
+    },
+    {
+      "label": "Maximize",
+      "slot": "tooltip-trigger",
+      "width": 36,
+      "height": 31,
+      "border": "1px",
+      "bevel": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "bg": "rgb(205, 176, 232)",
+      "svgWidth": "16px",
+      "svgHeight": "16px",
+      "mask": true,
+      "hit": true
+    },
+    {
+      "label": "Close",
+      "slot": "tooltip-trigger",
+      "width": 36,
+      "height": 31,
+      "border": "1px",
+      "bevel": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "bg": "rgb(240, 166, 203)",
+      "svgWidth": "16px",
+      "svgHeight": "16px",
+      "mask": true,
+      "hit": true
+    }
+  ],
+  "groups": [
+    {
+      "height": 38,
+      "paddingBottom": "10px",
+      "buttonHeight": 28
+    },
+    {
+      "height": 46,
+      "paddingBottom": "10px",
+      "buttonHeight": 28
+    },
+    {
+      "height": 46,
+      "paddingBottom": "10px",
+      "buttonHeight": 28
+    }
+  ],
+  "titlePink": "rgb(217, 127, 198)",
+  "footerPink": "rgb(217, 127, 198)",
+  "footerImage": "none",
+  "footerMargin": "8px",
+  "footerSecondary": "rgb(59, 42, 69)",
+  "dotFill": "rgb(46, 211, 25)",
+  "wave": {
+    "height": "8px",
+    "bottom": "25px",
+    "transform": "matrix(1, 0, 0, -1, 0, 0)",
+    "mask": true,
+    "pointer": "none"
+  },
+  "duplicateHeading": "none",
+  "bodyFont": "\"WD Pixel CJK\", system-ui, sans-serif",
+  "bodySize": "14px",
+  "bodyLine": "20px",
+  "bioFont": "\"WD Pixel CJK\", system-ui, sans-serif",
+  "codeFont": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+  "jsonFont": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+  "faces": [
+    {
+      "family": "Geist Variable",
+      "status": "unloaded"
+    },
+    {
+      "family": "Geist Variable",
+      "status": "unloaded"
+    },
+    {
+      "family": "Geist Variable",
+      "status": "unloaded"
+    },
+    {
+      "family": "Geist Variable",
+      "status": "unloaded"
+    },
+    {
+      "family": "Geist Variable",
+      "status": "loaded"
+    },
+    {
+      "family": "WD Pixel",
+      "status": "loaded"
+    },
+    {
+      "family": "WD Pixel CJK",
+      "status": "loaded"
+    }
+  ],
+  "restored": {
+    "width": "16px",
+    "mask": true
+  },
+  "closeHover": {
+    "background": "rgb(255, 107, 138)",
+    "color": "rgb(22, 17, 42)"
+  },
+  "cssBytes": 713000
+}

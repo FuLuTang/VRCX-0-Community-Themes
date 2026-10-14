@@ -1,0 +1,3621 @@
+{
+  "generatedFrom": {
+    "src": "/tmp/vrcx-win-src-r9/src",
+    "theme": "/tmp/jirai-elem-audit/jirai-kei-theme/theme.css",
+    "tag": "before-fix",
+    "revertR8Slider": true,
+    "appCss": [
+      "index-Cckb3vVG.css",
+      "App-C2mIqNXI.css"
+    ],
+    "sections": [
+      "preamble",
+      "tokens",
+      "native-icons",
+      "assets",
+      "fonts",
+      "icons",
+      "runtime",
+      "window-chrome",
+      "chrome · Windose × Jirai — window chrome R3.\n   Scope: only the two real chrome bars. No invented text, icons, DOM or events.\n   Every selector is anchored to a real attribute or a literal class token of the\n   app source (main app is read-only; paths relative to /home/fulutang/Documents/Github/VRCX-0-jirai):\n     - src/components/layout/AppTitleBar.tsx:90-96   <header data-app-titlebar=\"true\" class=\"vrcx-0-titlebar … h-8 …\">\n     - src/components/layout/AppTitleBar.tsx:43      window buttons: \"h-full w-9 rounded-none border-0\"\n     - src/components/layout/AppTitleBar.tsx:83,148,157,170  MinusIcon / Square|CopyIcon / XIcon stay as-is\n     - src/components/layout/AppTitleBar.tsx:165     close keeps \"hover:bg-destructive! hover:text-destructive-foreground!\"\n     - src/components/layout/status-bar/StatusBarFooter.tsx:353,371  <footer data-vrcx-0-surface=\"statusbar\" class=\"vrcx-0-statusbar …\">\n   These rules are unlayered, so they outrank Tailwind's @layer utilities; the two\n   \"!\" utilities on the close button are NOT overridden on purpose (see R3-3b).\n   Line numbers are the 2026-10-11 20:38 UTC snapshot; runtime/windose-runtime.css\n   is being edited concurrently by the Lead (the fake pink page header it used to\n   draw is already gone), so match by selector, not by line, when re-checking.\n   R4 adds the quick-search control, key caps, brand plate, help trigger and the\n   status pixel square; the R4 block at the end carries its source evidence.",
+      "group-spacing",
+      "body-typography",
+      "side-panel",
+      "feed-badges",
+      "settings",
+      "pixel-controls",
+      "assets-r5",
+      "motion",
+      "navigation-r7",
+      "motion-r7",
+      "assets-r7",
+      "backgrounds-r7",
+      "chrome-r8",
+      "bio-diff-r8",
+      "motion-r8",
+      "cat-r8-final",
+      "user-dialog-r8",
+      "login-r8",
+      "user-dialog-r9",
+      "badge-r9",
+      "controls-r9",
+      "popups-r9",
+      "tools-ui-r9",
+      "avatars-status-r9",
+      "brand-heart-r9",
+      "loader-r9",
+      "form-controls-r9",
+      "dialogs-r9",
+      "fields-toolbar-r10",
+      "overlays-r10",
+      "favorites-r9",
+      "browse-history-r9",
+      "buttons-badges-r10",
+      "data-surfaces-r10",
+      "banner-frame-r96",
+      "privacy-lock-r96",
+      "brand-heart-r97",
+      "cat-motion-r96",
+      "dialog-header-r97",
+      "loader-r97",
+      "cards-r97",
+      "splitter-r97",
+      "language-badges-r98",
+      "status-icons-r10"
+    ],
+    "ruleCount": 4222
+  },
+  "contexts": [
+    "main-content",
+    "main-toolbar",
+    "main-card-sm",
+    "side-panel",
+    "settings-vertical-tabs",
+    "entity-dialog",
+    "dialog",
+    "popover",
+    "menu-popup",
+    "login-page",
+    "privacy-lock",
+    "toast",
+    "app-chrome"
+  ],
+  "scanStats": {
+    "files": 584,
+    "sites": 1319
+  },
+  "matrix": {
+    "native-range": {
+      "main-content": {
+        "status": "✓",
+        "latent": false,
+        "used": true,
+        "siteCount": 2,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "main-toolbar": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "main-card-sm": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "side-panel": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "settings-vertical-tabs": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "entity-dialog": {
+        "status": "✗",
+        "latent": false,
+        "used": true,
+        "siteCount": 2,
+        "gapSiteCount": 1,
+        "diffsFromCanonical": [
+          "host: -webkit-slider-thumb.width, -webkit-slider-thumb.height, -webkit-slider-thumb.margin-top, -webkit-slider-thumb.border-top-color, -webkit-slider-thumb.background-color, -webkit-slider-thumb.box-shadow"
+        ],
+        "notes": []
+      },
+      "dialog": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "popover": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "menu-popup": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "login-page": {
+        "status": "–",
+        "latent": true,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "privacy-lock": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "toast": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "app-chrome": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      }
+    },
+    "base-slider": {
+      "main-content": {
+        "status": "✓",
+        "latent": false,
+        "used": true,
+        "siteCount": 1,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "main-toolbar": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "main-card-sm": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "side-panel": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "settings-vertical-tabs": {
+        "status": "✓",
+        "latent": false,
+        "used": true,
+        "siteCount": 3,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "entity-dialog": {
+        "status": "–",
+        "latent": true,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "dialog": {
+        "status": "✓",
+        "latent": false,
+        "used": true,
+        "siteCount": 1,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "popover": {
+        "status": "✓",
+        "latent": false,
+        "used": true,
+        "siteCount": 1,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "menu-popup": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "login-page": {
+        "status": "–",
+        "latent": true,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "privacy-lock": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "toast": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      },
+      "app-chrome": {
+        "status": "–",
+        "latent": false,
+        "used": false,
+        "siteCount": 0,
+        "gapSiteCount": 0,
+        "diffsFromCanonical": [],
+        "notes": []
+      }
+    }
+  },
+  "gaps": [
+    {
+      "primitive": "native-range",
+      "context": "entity-dialog",
+      "latent": false,
+      "sites": [
+        "components/dialogs/user-dialog/components/UserDialogStatusDistribution.tsx:311"
+      ],
+      "why": [
+        "host:unthemed (unchanged appearance,-webkit-slider-thumb.appearance,-webkit-slider-thumb.-webkit-appearance,-webkit-slider-thumb.width)"
+      ],
+      "exclHints": [
+        "form-controls-r9: input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold: ⟵ excluded by .entity-dialog *"
+      ],
+      "hitSections": [],
+      "fix": "user-dialog-r8.css 的滑条选择器不得带 .accent-primary/.min-w-16/.flex-1 等工具类；entity-dialog 内所有 input[type=range] 以 `[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"]` 统一接管。"
+    },
+    {
+      "primitive": "native-range",
+      "context": "login-page",
+      "latent": true,
+      "sites": [],
+      "why": [
+        "host:unthemed (unchanged appearance,-webkit-slider-thumb.appearance,-webkit-slider-thumb.-webkit-appearance,-webkit-slider-thumb.width)"
+      ],
+      "exclHints": [
+        "form-controls-r9: input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold: ⟵ excluded by [data-vrcx-0-surface=\"login-page\"] *"
+      ],
+      "hitSections": [],
+      "fix": "user-dialog-r8.css 的滑条选择器不得带 .accent-primary/.min-w-16/.flex-1 等工具类；entity-dialog 内所有 input[type=range] 以 `[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"]` 统一接管。"
+    },
+    {
+      "primitive": "base-slider",
+      "context": "entity-dialog",
+      "latent": true,
+      "sites": [],
+      "why": [
+        "track:unthemed (unchanged borderTopLeftRadius,borderTopRightRadius,borderBottomRightRadius,borderBottomLeftRadius)",
+        "range:unthemed",
+        "thumb:unthemed (unchanged borderTopLeftRadius,borderTopRightRadius,borderBottomRightRadius,borderBottomLeftRadius)"
+      ],
+      "exclHints": [
+        "form-controls-r9: [data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-sc ⟵ excluded by .entity-dialog *",
+        "form-controls-r9: [data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-sc ⟵ excluded by .entity-dialog *",
+        "form-controls-r9: [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-sc ⟵ excluded by .entity-dialog *"
+      ],
+      "hitSections": [],
+      "fix": "form-controls-r9.css 的 [data-slot=slider*] 规则对 entity-dialog 被排除；在 entity-dialog 加同形规则（或按 user-dialog-r8 的做法对 [data-slot=dialog-content].entity-dialog 单独接管）。"
+    },
+    {
+      "primitive": "base-slider",
+      "context": "login-page",
+      "latent": true,
+      "sites": [],
+      "why": [
+        "track:unthemed (unchanged borderTopLeftRadius,borderTopRightRadius,borderBottomRightRadius,borderBottomLeftRadius)",
+        "range:unthemed",
+        "thumb:unthemed (unchanged borderTopLeftRadius,borderTopRightRadius,borderBottomRightRadius,borderBottomLeftRadius)"
+      ],
+      "exclHints": [
+        "form-controls-r9: [data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-sc ⟵ excluded by [data-vrcx-0-surface=\"login-page\"] *",
+        "form-controls-r9: [data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-sc ⟵ excluded by [data-vrcx-0-surface=\"login-page\"] *",
+        "form-controls-r9: [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-sc ⟵ excluded by [data-vrcx-0-surface=\"login-page\"] *"
+      ],
+      "hitSections": [],
+      "fix": "form-controls-r9.css 的 [data-slot=slider*] 规则对 login-page 被排除；在 login-page 加同形规则（或按 user-dialog-r8 的做法对 [data-vrcx-0-surface=login-page] 单独接管）。"
+    }
+  ],
+  "primitivesWithoutShapeTheme": [],
+  "exclusionClauseLiveness": {
+    ".entity-dialog *": {
+      "rules": 136,
+      "scenes": [
+        "entity-dialog"
+      ],
+      "sections": [
+        "popups-r9",
+        "avatars-status-r9",
+        "form-controls-r9",
+        "dialogs-r9",
+        "fields-toolbar-r10",
+        "overlays-r10",
+        "buttons-badges-r10",
+        "dialog-header-r97"
+      ],
+      "matches": 13
+    },
+    "[data-vrcx-0-surface=\"login-page\"] *": {
+      "rules": 82,
+      "scenes": [
+        "login-page"
+      ],
+      "sections": [
+        "form-controls-r9",
+        "fields-toolbar-r10",
+        "buttons-badges-r10"
+      ],
+      "matches": 13
+    },
+    ".vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *": {
+      "rules": 82,
+      "scenes": [],
+      "sections": [
+        "form-controls-r9",
+        "fields-toolbar-r10",
+        "buttons-badges-r10"
+      ],
+      "matches": 0
+    },
+    ".vrcx-0-main-shell[data-vrcx-0-surface=\"login-page\"] *": {
+      "rules": 14,
+      "scenes": [
+        "login-page"
+      ],
+      "sections": [
+        "dialogs-r9",
+        "dialog-header-r97"
+      ],
+      "matches": 13
+    },
+    ".vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"]):has(> div.relative.mt-4 [data-slot=\"tabs\"][data-orientation=\"vertical\"] > [data-slot=\"tabs-list\"][data-orientation=\"vertical\"]) *": {
+      "rules": 7,
+      "scenes": [],
+      "sections": [
+        "fields-toolbar-r10"
+      ],
+      "matches": 0
+    },
+    ".vrcx-0-page-toolbar *": {
+      "rules": 39,
+      "scenes": [
+        "main-toolbar"
+      ],
+      "sections": [
+        "buttons-badges-r10"
+      ],
+      "matches": 9
+    },
+    "[class~=\"bg-popover/70\"] *": {
+      "rules": 39,
+      "scenes": [
+        "menu-popup"
+      ],
+      "sections": [
+        "buttons-badges-r10"
+      ],
+      "matches": 9
+    },
+    "article[data-slot=\"card\"][data-size=\"sm\"] *": {
+      "rules": 39,
+      "scenes": [
+        "main-card-sm"
+      ],
+      "sections": [
+        "buttons-badges-r10"
+      ],
+      "matches": 9
+    },
+    ".vrcx-0-titlebar *": {
+      "rules": 7,
+      "scenes": [
+        "app-chrome"
+      ],
+      "sections": [
+        "buttons-badges-r10"
+      ],
+      "matches": 9
+    },
+    ".vrcx-0-page-scaffold *": {
+      "rules": 4,
+      "scenes": [
+        "main-content",
+        "main-toolbar",
+        "main-card-sm",
+        "settings-vertical-tabs"
+      ],
+      "sections": [
+        "buttons-badges-r10"
+      ],
+      "matches": 52
+    }
+  },
+  "cells": {
+    "native-range": {
+      "main-content": [
+        {
+          "aid": "native-range__main-content__0",
+          "variant": "",
+          "sig": "accent-primary w-24",
+          "sites": [
+            "features/charts/RelationshipTimelinePageImpl.tsx:366"
+          ],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        },
+        {
+          "aid": "native-range__main-content__1",
+          "variant": "",
+          "sig": "accent-primary w-28",
+          "sites": [
+            "features/charts/RelationshipTimelinePageImpl.tsx:470"
+          ],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "main-toolbar": [
+        {
+          "aid": "native-range__main-toolbar__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "main-card-sm": [
+        {
+          "aid": "native-range__main-card-sm__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "side-panel": [
+        {
+          "aid": "native-range__side-panel__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "settings-vertical-tabs": [
+        {
+          "aid": "native-range__settings-vertical-tabs__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "entity-dialog": [
+        {
+          "aid": "native-range__entity-dialog__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [
+            "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx:833"
+          ],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "allDiffFromCanonical": [
+                "accentColor",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow",
+                ":focus.outlineStyle",
+                ":focus.outlineColor",
+                ":focus.outlineOffset",
+                ":focus.__w",
+                ":focus.__h"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 4,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"].accent-primary.min-w-16.flex-1",
+                  "section": "user-dialog-r8",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"].accent-primary.min-w-16.flex-1::-webkit-slider-runnable-track",
+                  "section": "user-dialog-r8",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"].accent-primary.min-w-16.flex-1::-webkit-slider-thumb",
+                  "section": "user-dialog-r8",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"].accent-primary.min-w-16.flex-1:focus-visible",
+                  "section": "user-dialog-r8",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                }
+              ],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [
+            "host: -webkit-slider-thumb.width, -webkit-slider-thumb.height, -webkit-slider-thumb.margin-top, -webkit-slider-thumb.border-top-color, -webkit-slider-thumb.background-color, -webkit-slider-thumb.box-shadow"
+          ],
+          "geometry": []
+        },
+        {
+          "aid": "native-range__entity-dialog__1",
+          "variant": "",
+          "sig": "accent-primary w-28",
+          "sites": [
+            "components/dialogs/user-dialog/components/UserDialogStatusDistribution.tsx:311"
+          ],
+          "parts": {
+            "host": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "appearance",
+                "cursor",
+                "accentColor",
+                ":focus.outlineStyle",
+                ":focus.outlineWidth",
+                ":focus.outlineColor",
+                ":focus.outlineOffset",
+                ":focus.__h",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 0,
+              "excluded": 4,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            }
+          },
+          "verdict": "gap",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "dialog": [
+        {
+          "aid": "native-range__dialog__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "popover": [
+        {
+          "aid": "native-range__popover__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "menu-popup": [
+        {
+          "aid": "native-range__menu-popup__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "login-page": [
+        {
+          "aid": "native-range__login-page__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "appearance",
+                "cursor",
+                "accentColor",
+                ":focus.outlineStyle",
+                ":focus.outlineWidth",
+                ":focus.outlineColor",
+                ":focus.outlineOffset",
+                ":focus.__w",
+                ":focus.__h",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 0,
+              "excluded": 4,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": [],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": [],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            }
+          },
+          "verdict": "gap",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "privacy-lock": [
+        {
+          "aid": "native-range__privacy-lock__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "toast": [
+        {
+          "aid": "native-range__toast__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "app-chrome": [
+        {
+          "aid": "native-range__app-chrome__0",
+          "variant": "",
+          "sig": "accent-primary min-w-16 flex-1",
+          "sites": [],
+          "parts": {
+            "host": {
+              "state": "themed",
+              "changedShape": [
+                "appearance",
+                "-webkit-slider-thumb.appearance",
+                "-webkit-slider-thumb.-webkit-appearance",
+                "-webkit-slider-thumb.width",
+                "-webkit-slider-thumb.height",
+                "-webkit-slider-thumb.margin-top",
+                "-webkit-slider-thumb.border-top-width",
+                "-webkit-slider-thumb.border-top-style",
+                "-webkit-slider-thumb.border-top-color",
+                "-webkit-slider-thumb.background-color",
+                "-webkit-slider-thumb.background-image",
+                "-webkit-slider-thumb.box-shadow",
+                "-webkit-slider-runnable-track.height",
+                "-webkit-slider-runnable-track.border-top-width",
+                "-webkit-slider-runnable-track.border-top-style",
+                "-webkit-slider-runnable-track.border-top-color",
+                "-webkit-slider-runnable-track.background-color",
+                "-webkit-slider-runnable-track.background-image",
+                "-webkit-slider-runnable-track.box-shadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "fontFamily",
+                ":focus.__w"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            }
+          },
+          "rules": {
+            "host": {
+              "hit": 4,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-runnable-track",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-runnable-track",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)::-webkit-slider-thumb",
+                  "section": "form-controls-r9",
+                  "pseudo": "-webkit-slider-thumb",
+                  "dyn": []
+                },
+                {
+                  "sel": "input[type=\"range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *):focus-visible",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ]
+    },
+    "base-slider": {
+      "main-content": [
+        {
+          "aid": "base-slider__main-content__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [
+            "components/mutual-friends/CommitSlider.tsx:36"
+          ],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "main-toolbar": [
+        {
+          "aid": "base-slider__main-toolbar__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "main-card-sm": [
+        {
+          "aid": "base-slider__main-card-sm__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "side-panel": [
+        {
+          "aid": "base-slider__side-panel__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "settings-vertical-tabs": [
+        {
+          "aid": "base-slider__settings-vertical-tabs__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [
+            "features/settings/components/settings-tabs/SettingsNotificationsTab.tsx:395",
+            "features/settings/components/settings-tabs/SettingsVrTab.tsx:368",
+            "features/settings/components/settings-tabs/SettingsVrTab.tsx:567"
+          ],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "entity-dialog": [
+        {
+          "aid": "base-slider__entity-dialog__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius"
+              ],
+              "secondaryUnchanged": [
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "borderTopWidth",
+                "borderBottomWidth",
+                "backgroundColor",
+                "backgroundImage",
+                "boxShadow"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            },
+            "range": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [],
+              "secondaryUnchanged": [
+                "backgroundImage"
+              ],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "backgroundColor",
+                "backgroundImage"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius"
+              ],
+              "secondaryUnchanged": [
+                "boxShadow"
+              ],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "borderTopColor",
+                "backgroundColor",
+                "boxShadow"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 0,
+              "excluded": 1,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            },
+            "range": {
+              "hit": 0,
+              "excluded": 1,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            },
+            "thumb": {
+              "hit": 0,
+              "excluded": 2,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ],
+                  "culprit": [
+                    ".entity-dialog *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            }
+          },
+          "verdict": "gap",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "dialog": [
+        {
+          "aid": "base-slider__dialog__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [
+            "components/media/ImageCropToolbar.tsx:125"
+          ],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "popover": [
+        {
+          "aid": "base-slider__popover__0",
+          "variant": "",
+          "sig": "w-40",
+          "sites": [
+            "features/instance-history/components/InstanceActivitySettingsPopover.tsx:53"
+          ],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "menu-popup": [
+        {
+          "aid": "base-slider__menu-popup__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "login-page": [
+        {
+          "aid": "base-slider__login-page__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius"
+              ],
+              "secondaryUnchanged": [
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "borderTopWidth",
+                "borderBottomWidth",
+                "backgroundColor",
+                "backgroundImage",
+                "boxShadow"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            },
+            "range": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [],
+              "secondaryUnchanged": [
+                "backgroundImage"
+              ],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "backgroundColor",
+                "backgroundImage"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "unthemed",
+              "changedShape": [],
+              "unchangedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius"
+              ],
+              "secondaryUnchanged": [
+                "boxShadow"
+              ],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "borderTopColor",
+                "backgroundColor",
+                "boxShadow"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 0,
+              "excluded": 1,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            },
+            "range": {
+              "hit": 0,
+              "excluded": 1,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            },
+            "thumb": {
+              "hit": 0,
+              "excluded": 2,
+              "hitSample": [],
+              "exclSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ],
+                  "culprit": [
+                    "[data-vrcx-0-surface=\"login-page\"] *"
+                  ]
+                }
+              ],
+              "gapStatic": true
+            }
+          },
+          "verdict": "gap",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "privacy-lock": [
+        {
+          "aid": "base-slider__privacy-lock__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "toast": [
+        {
+          "aid": "base-slider__toast__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ],
+      "app-chrome": [
+        {
+          "aid": "base-slider__app-chrome__0",
+          "variant": "",
+          "sig": "(default)",
+          "sites": [],
+          "parts": {
+            "track": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow",
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "fontFamily"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 2
+              }
+            },
+            "range": {
+              "state": "themed",
+              "changedShape": [
+                "backgroundImage"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "fontFamily"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": -0.8100000000000023,
+                "dh": 0
+              }
+            },
+            "thumb": {
+              "state": "themed",
+              "changedShape": [
+                "borderTopLeftRadius",
+                "borderTopRightRadius",
+                "borderBottomRightRadius",
+                "borderBottomLeftRadius",
+                "boxShadow"
+              ],
+              "unchangedShape": [],
+              "secondaryUnchanged": [],
+              "shapeDiffersFromCanonical": [],
+              "allDiffFromCanonical": [
+                "fontFamily"
+              ],
+              "focusNote": null,
+              "geometry": {
+                "dw": 0,
+                "dh": 0
+              }
+            }
+          },
+          "rules": {
+            "track": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-track\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "range": {
+              "hit": 1,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-range\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            },
+            "thumb": {
+              "hit": 2,
+              "excluded": 0,
+              "hitSample": [
+                {
+                  "sel": "[data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": []
+                },
+                {
+                  "sel": "[data-slot=\"slider\"]:focus-visible [data-slot=\"slider-thumb\"]:not([data-vrcx-0-surface=\"login-page\"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot=\"tabs-list\"][class~=\"w-44\"]) *)",
+                  "section": "form-controls-r9",
+                  "pseudo": null,
+                  "dyn": [
+                    "focus-visible"
+                  ]
+                }
+              ],
+              "exclSample": [],
+              "gapStatic": false
+            }
+          },
+          "verdict": "ok",
+          "differsFromCanonical": [],
+          "geometry": []
+        }
+      ]
+    }
+  },
+  "sites": {
+    "native-range": [
+      {
+        "loc": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx:833",
+        "ctx": "entity-dialog",
+        "ctxWhy": "entity (user/world/avatar/group) dialog file",
+        "summary": "<input type=range> class=\"accent-primary min-w-16 flex-1\""
+      },
+      {
+        "loc": "components/dialogs/user-dialog/components/UserDialogStatusDistribution.tsx:311",
+        "ctx": "entity-dialog",
+        "ctxWhy": "entity (user/world/avatar/group) dialog file",
+        "summary": "<input type=range> class=\"accent-primary w-28\""
+      },
+      {
+        "loc": "features/charts/RelationshipTimelinePageImpl.tsx:366",
+        "ctx": "main-content",
+        "ctxWhy": "default: routed page / shared component",
+        "summary": "<input type=range> class=\"accent-primary w-24\""
+      },
+      {
+        "loc": "features/charts/RelationshipTimelinePageImpl.tsx:470",
+        "ctx": "main-content",
+        "ctxWhy": "default: routed page / shared component",
+        "summary": "<input type=range> class=\"accent-primary w-28\""
+      }
+    ],
+    "base-slider": [
+      {
+        "loc": "components/media/ImageCropToolbar.tsx:125",
+        "ctx": "dialog",
+        "ctxWhy": "ImageCropDialog (portal dialog opened from any page)",
+        "summary": "<Slider>"
+      },
+      {
+        "loc": "components/mutual-friends/CommitSlider.tsx:36",
+        "ctx": "main-content",
+        "ctxWhy": "default: routed page / shared component",
+        "summary": "<Slider>"
+      },
+      {
+        "loc": "features/instance-history/components/InstanceActivitySettingsPopover.tsx:53",
+        "ctx": "popover",
+        "ctxWhy": "inside <PopoverContent> (L44, portal)",
+        "summary": "<Slider> class=\"w-40\""
+      },
+      {
+        "loc": "features/settings/components/settings-tabs/SettingsNotificationsTab.tsx:395",
+        "ctx": "settings-vertical-tabs",
+        "ctxWhy": "features/settings (w-44 vertical tabs scaffold)",
+        "summary": "<Slider>"
+      },
+      {
+        "loc": "features/settings/components/settings-tabs/SettingsVrTab.tsx:368",
+        "ctx": "settings-vertical-tabs",
+        "ctxWhy": "features/settings (w-44 vertical tabs scaffold)",
+        "summary": "<Slider>"
+      },
+      {
+        "loc": "features/settings/components/settings-tabs/SettingsVrTab.tsx:567",
+        "ctx": "settings-vertical-tabs",
+        "ctxWhy": "features/settings (w-44 vertical tabs scaffold)",
+        "summary": "<Slider>"
+      }
+    ]
+  }
+}

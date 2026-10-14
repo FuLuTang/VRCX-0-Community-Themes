@@ -1,0 +1,12 @@
+import { chromium } from '/tmp/dsh-theme-tools/node_modules/playwright/index.mjs';
+import { readFileSync } from 'node:fs';
+const src='/home/fulutang/.dsh/attachments/v1/objects/fa/fa2bcc23547e78244c20ed30346bfb336020d9d77bc643025f0029b281f45b0b';
+const uri='data:image/png;base64,'+readFileSync(src).toString('base64');
+const b=await chromium.launch();
+const p=await b.newPage({viewport:{width:452,height:1029}});
+await p.setContent(`<body style="margin:0"><img id=i src="${uri}" style="display:block"></body>`,{waitUntil:'load'});
+await p.waitForTimeout(500);
+const box=await p.evaluate(()=>{const i=document.getElementById('i');return {w:i.naturalWidth,h:i.naturalHeight,cw:i.clientWidth,complete:i.complete};});
+console.log(box);
+await p.screenshot({path:'dbg.png'});
+await b.close();

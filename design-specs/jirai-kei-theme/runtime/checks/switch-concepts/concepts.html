@@ -1,0 +1,41 @@
+<!doctype html><html><meta charset="utf-8"><title>Original pixel switch concepts — NOT WINDOWS</title>
+<link rel="stylesheet" href="../../../fonts/fonts-body.css">
+<style>
+:root{--ink:#16112a;--frame:#6c5ce0;--pink:#ff7fcf;--pink2:#d97fc6;--lpink:#ffb8e6;--raised:#2a2147;--window:#201936;--muted:#b9add9;--off:#4a3784;--hl:#fdf4ff;--sh:#7a3f6d}
+body{margin:0;background:#16112a;color:#f2ebff;font-family:"WD Pixel CJK",sans-serif;font-size:12px}
+.sheet{zoom:4;padding:6px 8px;width:300px}
+h1{font-size:12px;font-weight:400;margin:0 0 6px;color:var(--lpink)}
+.row{display:grid;grid-template-columns:86px 60px 60px;align-items:center;gap:4px;margin:6px 0;padding:4px;background:var(--window);box-shadow:0 -1px var(--frame),0 1px var(--frame),-1px 0 var(--frame),1px 0 var(--frame)}
+.cap{color:var(--muted);font-size:12px;line-height:12px}.st{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted)}
+.sw{position:relative;width:32px;height:16px;flex:none}
+/* A: notched-corner NES-like track; square bevel knob hops in steps */
+.a{background:var(--off);box-shadow:0 -2px var(--ink),0 2px var(--ink),-2px 0 var(--ink),2px 0 var(--ink),inset 0 2px rgb(0 0 0/.35)}
+.a i{position:absolute;top:2px;left:2px;width:12px;height:12px;background:#cdb0e8;box-shadow:inset 2px 2px var(--hl),inset -2px -2px var(--sh)}
+.a.on{background:var(--pink)}.a.on i{left:18px;background:var(--lpink)}
+/* B: heart knob — off grey square, on pink heart */
+.b{background:var(--off);clip-path:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px))}
+.b::before{content:"";position:absolute;inset:1px;outline:1px solid var(--ink);outline-offset:-1px}
+.b i{position:absolute;top:2px;left:3px;width:12px;height:12px;background:#9d8fc4}
+.b.on{background:#3a2550}.b.on i{left:17px;background:var(--pink);-webkit-mask:var(--heart) center/12px 12px no-repeat;mask:var(--heart) center/12px 12px no-repeat}
+/* C: Windose sunken bevel slot with ON/OFF lamp text and raised knob */
+.c{width:40px;background:#120d22;box-shadow:inset 1px 1px #000,inset -1px -1px #8f7fe0,0 0 0 1px var(--ink)}
+.c b{position:absolute;top:4px;font:400 12px/8px "WD Pixel",monospace;font-size:8px;color:#6b5a99}
+.c b.l{left:3px}.c b.r{right:3px}
+.c i{position:absolute;top:2px;left:2px;width:16px;height:12px;background:#cdb0e8;box-shadow:inset 1px 1px var(--hl),inset -1px -1px var(--sh),0 0 0 1px var(--ink)}
+.c.on i{left:22px;background:var(--lpink)}.c.on b.l{color:var(--pink)}.c:not(.on) b.r{color:var(--muted)}
+/* D: ribbon — pink track with scallop underline, bow-tie knob */
+.d{background:var(--off);box-shadow:0 0 0 1px var(--ink),inset 0 -3px #362a5c}
+.d i{position:absolute;top:1px;left:1px;width:14px;height:14px;background:#cdb0e8;-webkit-mask:var(--bow) center/14px 14px no-repeat;mask:var(--bow) center/14px 14px no-repeat}
+.d.on{background:var(--pink2);box-shadow:0 0 0 1px var(--ink),inset 0 -3px #b35aa0}.d.on i{left:17px;background:var(--lpink)}
+</style>
+<body><div class="sheet"><h1>原创像素开关候选 · 非实机 · 关 / 开</h1>
+<div class="row"><span class="cap">A 缺角卡带<br>方块步进</span><div class="st"><span class="sw a"><i></i></span>关</div><div class="st"><span class="sw a on"><i></i></span>开</div></div>
+<div class="row"><span class="cap">B 爱心滑块<br>开时变心</span><div class="st"><span class="sw b"><i></i></span>关</div><div class="st"><span class="sw b on"><i></i></span>开</div></div>
+<div class="row"><span class="cap">C Windose 凹槽<br>ON/OFF 灯</span><div class="st"><span class="sw c"><b class="l">ON</b><b class="r">OFF</b><i></i></span>关</div><div class="st"><span class="sw c on"><b class="l">ON</b><b class="r">OFF</b><i></i></span>开</div></div>
+<div class="row"><span class="cap">D 缎带轨道<br>蝴蝶结滑块</span><div class="st"><span class="sw d"><i></i></span>关</div><div class="st"><span class="sw d on"><i></i></span>开</div></div>
+</div>
+<script>
+const px=(rows)=>{const w=rows[0].length,h=rows.length;let r='';rows.forEach((s,y)=>[...s].forEach((c,x)=>{if(c==='#')r+=`<rect x="${x}" y="${y}" width="1" height="1"/>`}));return `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${w} ${h}' shape-rendering='crispEdges'>${r}</svg>`)}")`;};
+document.documentElement.style.setProperty('--heart',px(['.##.##.','#######','#######','.#####.','..###..','...#...']));
+document.documentElement.style.setProperty('--bow',px(['.......','##...##','###.###','#######','###.###','##...##','.......']));
+</script></body></html>

@@ -1,0 +1,249 @@
+/* R9+ user profile/activity/favorite friend faces and semantic user-presence lamps only.
+   Do NOT target [data-slot=avatar], generic img, world/group media, mixed search cards,
+   friendship-network circles, or i.x-status-icon. Surface selectors mirror the source-only
+   UserStatusAvatar, UserHoverCardContent and UserDialogHeaderMedia structures, activity Face
+   variants under .activity-skin, and FavoriteCardView's friend-row face with its sibling lamp. */
+
+/* UserStatusAvatar.tsx defaults to size-9 for rows and uses size-10 for the self face. */
+button:has(> span[class~="size-10"][class~="overflow-visible"] > span[class~="bg-muted"][class~="size-full"][class~="overflow-hidden"][class~="rounded-full"]) > span[class~="size-10"][class~="overflow-visible"] > span[class~="bg-muted"][class~="size-full"][class~="overflow-hidden"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+button:has(> span[class~="size-9"][class~="overflow-visible"] > span[class~="bg-muted"][class~="size-full"][class~="overflow-hidden"][class~="rounded-full"]) > span[class~="size-9"][class~="overflow-visible"] > span[class~="bg-muted"][class~="size-full"][class~="overflow-hidden"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+
+/* UserHoverCardContent.tsx's profile icon; its sibling world banner is a separate wide button. */
+[data-slot="hover-card-content"] > div[class~="relative"][class~="isolate"][class~="w-full"] > div[class~="space-y-2.5"] > div[class~="relative"][class~="isolate"] > button[class~="size-10"] > span[class~="bg-muted"][class~="size-full"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+
+/* UserDialogHeaderMedia.tsx has one unique size-16/bottom-left userIcon slot.
+   Clear its backing/shadow so corners reveal the banner; exclude sibling-owned VRChat avatar frames. */
+[data-slot="dialog-content"] [class~="bottom-3"][class~="left-3"][class~="z-30"][class~="size-16"]:not(:has([data-profile-decoration-asset])) > [data-slot="button"][class~="rounded-full"]{
+  border-radius:0;
+  clip-path:var(--wd-avatar-cut);
+  background-color:transparent;
+  box-shadow:none;
+  border-color:transparent;
+  border-width:0;
+  outline:none;
+}
+[data-slot="dialog-content"] [class~="bottom-3"][class~="left-3"][class~="z-30"][class~="size-16"]:not(:has([data-profile-decoration-asset])) > [data-slot="button"][class~="rounded-full"] > img{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+
+/* ActivityPeopleExhibit.Face is reused by the lead, companion list, and strangers exhibit.
+   Remove the image/fallback circle too; the shared outer clip alone must define the silhouette. */
+.activity-skin span.block.shrink-0.overflow-hidden.rounded-full[class~="size-16"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+.activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~="size-7"],[class~="size-9"]){
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+.activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~="size-16"],[class~="size-7"],[class~="size-9"]) > :is(img,span[class~="rounded-full"]){
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+}
+
+/* FavoriteCardView's friend-row face; UserStatusDot is a sibling, so its square lamp stays clear. */
+.object-row > [data-slot="hover-card-trigger"] > div[class~="relative"][class~="ml-2"][class~="overflow-visible"] > span[class~="bg-muted"][class~="rounded-full"][class~="border"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+
+/* These classes are emitted only by UserStatusDot / the legacy user-presence element.
+   Alter shape only: keep status backgrounds, borders, and accessible join/ask/busy masks. */
+.user-status-indicator,
+i.x-user-status{
+  border-radius:0;
+}
+span[class~="border-background"][class~="bg-background"][class~="rounded-full"][class~="border-3"]:has(> .user-status-indicator){
+  border-radius:0;
+}
+
+/* G5 residuals: user faces outside UserStatusAvatar, user-avatar skeletons,
+   square semantic group icons, and source-confirmed status/unread markers. */
+.vrcx-0-data-table :is(
+  img[class~="size-6"][class~="rounded-full"][class~="object-cover"],
+  div[class~="bg-muted"][class~="size-6"][class~="rounded-full"]
+){
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+.vrcx-0-main-content span[class~="bg-muted"][class~="size-6"][class~="shrink-0"][class~="overflow-hidden"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+:is(.entity-dialog,[data-slot="dialog-content"]) :is(
+  img[class~="size-9"][class~="shrink-0"][class~="rounded-full"][class~="object-cover"],
+  div[class~="bg-muted"][class~="size-9"][class~="shrink-0"][class~="rounded-full"]
+){
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+img[class~="mr-2.5"][class~="size-9"][class~="shrink-0"][class~="rounded-full"][class~="object-cover"],
+div[class~="bg-muted"][class~="mr-2.5"][class~="size-9"][class~="shrink-0"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+:is([data-slot="dialog-content"],.entity-dialog) span[class~="mr-2.5"][class~="size-9"][class~="rounded-full"][class~="border"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+:is([data-slot="dialog-content"],.entity-dialog) span[class~="mr-2.5"][class~="size-9"][class~="rounded-full"][class~="border"] > img{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+/* NoteExportDialog's row is the only user face with this size; MutualFriendsNodeCard
+   uses the same size-11 circle inside a graph surface and must remain untouched. */
+[data-slot="dialog-content"] div[class~="bg-card/40"][class~="rounded-lg"][class~="p-3"] > button[class~="size-11"][class~="rounded-full"][class~="border"],
+[data-slot="dialog-content"] div[class~="bg-card/40"][class~="rounded-lg"][class~="p-3"] span[class~="bg-muted"][class~="size-11"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+[data-slot="dialog-content"] div[class~="bg-card/40"][class~="rounded-lg"][class~="p-3"] > button[class~="size-11"][class~="rounded-full"][class~="border"] > img{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+[data-slot="combobox-chip"] span[class~="bg-muted"][class~="size-3.5"][class~="rounded-full"]{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+[data-slot="combobox-chip"] span[class~="bg-muted"][class~="size-3.5"][class~="rounded-full"] > img{
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+
+/* Group Avatar components declare rounded-md/rounded-lg intentionally. Undo
+   only the inherited global circle mask; preserve their source corner radius,
+   image/fallback fill, and the app-owned transparent decoration pseudo. */
+[data-slot="avatar"][class~="rounded-md"]{
+  border-radius:var(--radius-md,calc(var(--radius) - 2px));
+  clip-path:none;
+}
+[data-slot="avatar"][class~="rounded-lg"]{
+  border-radius:var(--radius-lg,var(--radius));
+  clip-path:none;
+}
+[data-slot="avatar"][class~="rounded-md"] > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]),
+[data-slot="avatar"][class~="rounded-lg"] > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]){
+  border-radius:inherit;
+  clip-path:none;
+}
+[data-slot="avatar"][class~="rounded-md"]::after,
+[data-slot="avatar"][class~="rounded-lg"]::after{
+  border-radius:inherit;
+  clip-path:none;
+}
+/* Popup avatar masks are more specific than the global runtime rule. Keep the
+   same square-group exception there without widening it to framed/user circles. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"][class~="rounded-md"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])){
+  border-radius:var(--radius-md,calc(var(--radius) - 2px));
+  clip-path:none;
+}
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"][class~="rounded-lg"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])){
+  border-radius:var(--radius-lg,var(--radius));
+  clip-path:none;
+}
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"][class~="rounded-md"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]),
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"][class~="rounded-lg"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]){
+  border-radius:inherit;
+  clip-path:none;
+}
+
+/* Stack separators are app-owned AvatarGroup rings, not the profile-frame art.
+   Keep a single-pixel square separator and never add the theme's avatar-ring asset. */
+[data-slot="avatar-group"] [data-slot="avatar"]:not([class~="rounded-md"]):not([class~="rounded-lg"]),
+[data-slot="avatar-group-count"]{
+  box-shadow:0 0 0 1px var(--background);
+}
+[data-slot="avatar-badge"],
+[data-slot="avatar-group-count"]{
+  border-radius:0;
+}
+
+/* Skeleton circles are only converted at known avatar sizes; pill skeletons stay semantic. */
+[data-slot="skeleton"][class~="rounded-full"]:is([class~="size-14"],[class~="size-16"]){
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut);
+}
+[data-slot="skeleton"][class~="rounded-full"]:is([class~="size-7"],[class~="size-8"],[class~="size-9"]){
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  outline:none;
+  clip-path:var(--wd-avatar-cut-sm);
+}
+
+/* Source-specific status dots/hints: leave unrelated, semantic circles alone. */
+[data-dashboard-feed-status-dot]{border-radius:0;}
+.vrcx-0-main-content [data-slot="tooltip-trigger"][class~="size-2.5"][class~="rounded-full"][class~="border"]{border-radius:0;}
+.vrcx-0-main-content [class~="bg-primary"][class~="size-2"][class~="rounded-full"]:has(> span[class~="sr-only"]){border-radius:0;}
+.vrcx-0-sidebar-surface span[class~="relative"][class~="inline-flex"][class~="size-4"] > span[class~="bg-destructive"][class~="size-1.5"][class~="rounded-full"][aria-hidden="true"]{border-radius:0;}
+.vrcx-0-side-panel button[class~="focus-visible:ring-2"][class~="rounded-full"]:has(> span.user-status-avatar):focus-visible{
+  outline:1px dashed var(--wd-square);
+  outline-offset:2px;
+  box-shadow:none;
+}

@@ -1,0 +1,168 @@
+/* R9.5 generic second-level dialogs: Win98/Windose chrome for ordinary dialogs only.
+   Paint/layout-safe: do not touch Popup/Positioner/Backdrop placement or dimensions.
+   Entity details (.entity-dialog/.owner-dialog), login surfaces, nested entity portals, and sr-only-header command/quick-search popups stay out. */
+:root {
+  --r9-dialog-face: #211a33;
+  --r9-dialog-ink: #16112a;
+  --r9-dialog-pink: #f2c6e8;
+  --r9-dialog-pink-edge: #d97fc6;
+  --r9-dialog-indigo: #3a22c8;
+  --r9-dialog-frame: #6c5ce0;
+  --r9-dialog-inner: #f2ebff;
+  --r9-dialog-mint: #8ee6dd;
+  --r9-dialog-lace: var(--r8-lace-tile);
+}
+
+/* Restrict the pass to real Base UI popup slots. Login uses card surfaces rather
+   than DialogContent; an explicitly nested login fixture is excluded as a guard. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only)) {
+  --r9-dialog-inset: 1rem;
+  color: var(--r9-dialog-inner);
+  background-color: var(--r9-dialog-face);
+  background-image:
+    linear-gradient(#ff7fcf, #ff7fcf),
+    linear-gradient(var(--r9-dialog-mint), var(--r9-dialog-mint));
+  background-repeat: no-repeat;
+  background-size: 18px 5px, 100% 5px;
+  background-position: bottom left, bottom center;
+  border: 1px solid var(--r9-dialog-frame);
+  border-radius: 0 !important;
+  box-shadow:
+    inset 0 0 0 1px var(--r9-dialog-inner),
+    4px 4px 0 #100b1e;
+}
+
+/* Preserve dialogs whose existing call site deliberately uses a flush frame. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-0"] {
+  --r9-dialog-inset: 0px;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-2"] {
+  --r9-dialog-inset: .5rem;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-3"] {
+  --r9-dialog-inset: .75rem;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-5"] {
+  --r9-dialog-inset: 1.25rem;
+}
+
+/* The title itself is the title-bar row: it remains in flow (including wrapping),
+   while the existing description/content remain in the dark body below it. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .5rem;
+  margin-block-start: calc(-1 * var(--r9-dialog-inset, 1rem));
+  margin-inline: calc(-1 * var(--r9-dialog-inset, 1rem));
+  padding-inline: var(--r9-dialog-inset, 1rem);
+  min-width: 0;
+}
+
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]) > :is([data-slot="dialog-title"], [data-slot="alert-dialog-title"]) {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 8px;
+  margin-inline: calc(-1 * var(--r9-dialog-inset, 1rem));
+  margin-block: 0;
+  padding-block: 5px;
+  padding-inline: calc(var(--r9-dialog-inset, 1rem) + 9px) calc(var(--r9-dialog-inset, 1rem) + 48px);
+  border-bottom: 1px solid var(--r9-dialog-frame);
+  border-radius: 0;
+  background: var(--r9-dialog-pink);
+  color: var(--r9-dialog-ink);
+  font-family: var(--wd-body-font-family, system-ui, sans-serif);
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]) > :is([data-slot="dialog-title"], [data-slot="alert-dialog-title"])::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  background: var(--r9-dialog-indigo);
+  box-shadow: 1px 1px 0 #b86ba4;
+}
+
+/* The component's real DialogClose remains keyboard-operable and gets a Win95 face. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > [data-slot="dialog-close"] {
+  position: absolute !important;
+  top: 4px !important;
+  right: 4px !important;
+  z-index: 2;
+  display: inline-flex;
+  width: 22px !important;
+  min-width: 22px;
+  height: 22px !important;
+  min-height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: 1px solid var(--r9-dialog-ink) !important;
+  border-radius: 0 !important;
+  background: #f8d8ed !important;
+  color: var(--r9-dialog-ink) !important;
+  box-shadow: inset 1px 1px 0 #fff1f8, inset -1px -1px 0 #b86ba4;
+  opacity: 1;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > [data-slot="dialog-close"]:hover:not(:disabled) {
+  background: var(--r9-dialog-ink) !important;
+  color: var(--r9-dialog-pink) !important;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > [data-slot="dialog-close"]:focus-visible {
+  outline: 2px solid var(--r9-dialog-mint);
+  outline-offset: 1px;
+}
+
+/* Reuse --r8-lace-tile for a pixel-lace divider without adding footer height. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-footer"], [data-slot="alert-dialog-footer"]) {
+  position: relative;
+  border-top-color: transparent;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-footer"], [data-slot="alert-dialog-footer"])::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  left: 0;
+  height: 8px;
+  background-color: transparent;
+  background-image: var(--r9-dialog-lace);
+  background-position: left center;
+  background-repeat: repeat-x;
+  background-size: 20px 8px;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* motion-r5.css already owns the single dialog step animation; do not add a second.
+   The effects preference and reduced-motion media query both force a static frame. */
+html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[data-open]:not(.entity-dialog):not(.owner-dialog) {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[data-open]:not(.entity-dialog):not(.owner-dialog) {
+    animation: none !important;
+    transition: none !important;
+  }
+}

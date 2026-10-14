@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "section": "data-surfaces-r10",
+  "baselineBundle": "/tmp/jirai-lead-r95c/jirai-kei-theme/theme.css",
+  "integratedBundle": "/tmp/jirai-r10-g4-regression-20261012-2/theme.css",
+  "checkScript": "/tmp/jirai-lead-integ/check.mjs",
+  "command": "OFFDIFFS=1 PLAYWRIGHT_BROWSERS_PATH=/tmp/dsh-theme-browsers node /tmp/jirai-lead-integ/check.mjs /tmp/jirai-r10-g4-regression-20261012-2/theme.css /tmp/jirai-r10-g4-regression-20261012-2/output-explicit-nonowners data-surfaces-r10:r9-controls:1360:980:r9-controls data-surfaces-r10:r9-favorites:1360:980:r9-favorites data-surfaces-r10:r9-dialogs:1360:980:r9-dialogs data-surfaces-r10:r10-fields-toolbar:1360:980:r10-fields-toolbar data-surfaces-r10:r9-popups:1360:980:r9-popups data-surfaces-r10:r9-tools-ui:1360:980:r9-tools-ui data-surfaces-r10:r10-overlays:1360:980:r10-overlays data-surfaces-r10:r9-form-controls:1360:980:r9-form-controls data-surfaces-r10:r9-browse-history:1360:980:r9-browse-history",
+  "fixtures": [
+    { "fixture": "r9-controls", "elements": 444, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r9-favorites", "elements": 223, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r9-dialogs", "elements": 81, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r10-fields-toolbar", "elements": 55, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r9-popups", "elements": 123, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r9-tools-ui", "elements": 48, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r10-overlays", "elements": 48, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r9-form-controls", "elements": 53, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true },
+    { "fixture": "r9-browse-history", "elements": 163, "integratedVsMovedLast": 0, "integratedVsOff": 0, "offDiffs": 0, "pass": true }
+  ],
+  "checkerNote": "For cross-owner fixtures the check script expects an explicit owner field; omitting it defaults owner=section and makes pass=false when the required integratedVsOff=0. The exact owner-default invocation was also run; its final offDiffs were all empty after the Favorites host guard. This report records the explicit non-owner invocation which exits 0.",
+  "intentionalNonzeroDiffs": []
+}

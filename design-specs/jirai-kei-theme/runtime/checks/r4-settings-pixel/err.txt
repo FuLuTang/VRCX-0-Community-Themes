@@ -1,0 +1,18 @@
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `TabsRoot`. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `TabsPanel`. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `TabsRoot`. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CompositeRoot`. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CompositeRoot`. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `CompositeRoot`. See https://react.dev/link/warning-keys for more information.

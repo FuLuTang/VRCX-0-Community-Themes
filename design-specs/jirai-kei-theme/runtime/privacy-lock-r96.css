@@ -1,0 +1,54 @@
+/* R9.6 privacy-lock surface only. Paint-only: keep Popup/card geometry, focus and PIN keyboard semantics. */
+[data-vrcx-0-surface="privacy-lock"] > div[class~="bg-popover/80"][class~="rounded-2xl"][class~="ring-1"]:is([class~="max-w-xs"], [class~="max-w-sm"]) {
+  border-radius: 2px;
+  background-color: var(--wd-window, #201936);
+  background-image: linear-gradient(to right, var(--wd-pink, #ff7fcf) 0 36px, var(--wd-frame, #6c5ce0) 36px 100%);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  color: var(--wd-text, #f2ebff);
+  box-shadow: 0 0 0 1px var(--wd-frame, #6c5ce0), 4px 4px 0 #100b1e, inset 1px 1px rgb(253 244 255 / .16), inset -1px -1px #16112a;
+}
+
+/* PrivacyLockOverlay imports Base UI Title directly (not the shared DialogTitle wrapper). */
+[data-vrcx-0-surface="privacy-lock"] > div[class~="bg-popover/80"][class~="rounded-2xl"] > :is(h1, h2, h3)[class~="text-base"][class~="font-medium"] {
+  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
+  font-synthesis: none;
+}
+
+/* Match the status-bar pixel lamp while retaining each semantic fill and blink state. */
+[data-vrcx-0-surface="privacy-lock"] span[class~="inline-block"][class~="size-2"][class~="rounded-full"] {
+  border: 1px solid var(--jk-chrome-edge, #1a1226);
+  border-radius: 0;
+  background-image: none;
+  box-shadow: inset -1px -1px 0 rgb(0 0 0 / .28);
+}
+
+/* R10 fields-toolbar already provides this treatment; scope it here as a lock-surface guarantee. */
+[data-vrcx-0-surface="privacy-lock"] [data-slot="input-otp-slot"][data-active="true"] {
+  border-color: var(--wd-pink, #ff7fcf);
+  outline: 2px solid var(--wd-pink, #ff7fcf);
+  outline-offset: 1px;
+}
+
+/* The overlay is portaled outside main-content; buttons-badges-r10 does not own it. */
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"] {
+  border: 1px solid #8c71b0;
+  border-radius: 2px;
+  background-color: #3b2c55;
+  color: #f2ebff;
+  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
+}
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"] {
+  border: 1px solid var(--wd-frame, #6c5ce0);
+  border-radius: 2px;
+  background-color: var(--wd-pink, #ff7fcf);
+  color: #16112a;
+  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
+}
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"]:hover:not(:disabled) {
+  border-color: var(--wd-pink, #ff7fcf);
+  background-color: var(--wd-select, #4a3784);
+  color: var(--wd-text, #f2ebff);
+}

@@ -1,0 +1,314 @@
+{
+  "preview": {
+    "animationOrder": "left→right",
+    "frames": 4,
+    "frameDelayMs": 250,
+    "totalLoopMs": 1000,
+    "loop": "infinite in preview only",
+    "sourceSequence": "not established",
+    "previewHtml": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/format-preview.html",
+    "screenshot": {
+      "width": 1180,
+      "height": 525,
+      "imgs": [
+        {
+          "alt": "APNG preview",
+          "w": 120,
+          "h": 120,
+          "complete": true
+        },
+        {
+          "alt": "animated WebP preview",
+          "w": 120,
+          "h": 120,
+          "complete": true
+        },
+        {
+          "alt": "SVG SMIL preview",
+          "w": 120,
+          "h": 120,
+          "complete": true
+        }
+      ],
+      "spriteBackgrounds": [
+        {
+          "size": "480px 120px",
+          "position": "0px 0px",
+          "animation": "frames"
+        }
+      ],
+      "playbackChecks": {
+        "pngSprite": {
+          "samples": 15,
+          "uniqueFrames": 4,
+          "changedDuringCapture": true
+        },
+        "apng": {
+          "samples": 15,
+          "uniqueFrames": 4,
+          "changedDuringCapture": true
+        },
+        "animatedWebp": {
+          "samples": 15,
+          "uniqueFrames": 4,
+          "changedDuringCapture": true
+        },
+        "svgSmil": {
+          "samples": 15,
+          "uniqueFrames": 4,
+          "changedDuringCapture": true
+        }
+      },
+      "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/format-preview.png"
+    }
+  },
+  "frame": {
+    "width": 120,
+    "height": 120,
+    "contentBounds": "96×80 at x=12,y=20 in each 120×120 crop",
+    "resize": "none; preserve source pixel grid",
+    "colorsIncludingTransparency": 27
+  },
+  "formats": [
+    {
+      "format": "PNG sprite + CSS steps",
+      "file": "sprite-4frame-palette.png",
+      "bytes": 940,
+      "dataUriMime": "image/png",
+      "dataUriChars": 1278,
+      "canvas": "480×120",
+      "animation": "host CSS steps(4,end), 250 ms/frame",
+      "lossless": true,
+      "displaySize": "120×120 native; image-rendering:pixelated"
+    },
+    {
+      "format": "APNG",
+      "file": "animation-4frame-250ms.apng",
+      "bytes": 1628,
+      "dataUriMime": "image/png (APNG chunks)",
+      "dataUriChars": 2194,
+      "canvas": "120×120",
+      "frames": 4,
+      "delayMs": [
+        250,
+        250,
+        250,
+        250
+      ],
+      "loop": "infinite",
+      "lossless": true,
+      "encoding": "indexed PNG with shared palette"
+    },
+    {
+      "format": "Animated WebP",
+      "file": "animation-4frame-250ms.webp",
+      "bytes": 1444,
+      "dataUriMime": "image/webp",
+      "dataUriChars": 1951,
+      "canvas": "120×120",
+      "frames": 4,
+      "delayMs": [
+        250,
+        250,
+        250,
+        250
+      ],
+      "loop": 0,
+      "lossless": true,
+      "encoding": "VP8L lossless per full-canvas frame",
+      "metadata": {
+        "pages": 4,
+        "pageHeight": 120,
+        "delay": [
+          250,
+          250,
+          250,
+          250
+        ],
+        "loop": 0
+      }
+    },
+    {
+      "format": "SVG SMIL",
+      "file": "animation-4frame-250ms.svg",
+      "bytes": 42391,
+      "dataUriMime": "image/svg+xml percent-encoded",
+      "dataUriChars": 49988,
+      "canvas": "120×120",
+      "frames": 4,
+      "delayMs": 250,
+      "loop": "infinite",
+      "lossless": true,
+      "encoding": "integer pixel-run vector paths; SMIL opacity steps"
+    },
+    {
+      "format": "SVG sprite + CSS steps",
+      "file": "sprite-4frame.svg",
+      "bytes": 41913,
+      "dataUriMime": "image/svg+xml percent-encoded",
+      "dataUriChars": 49238,
+      "canvas": "480×120",
+      "frames": 4,
+      "lossless": true,
+      "animation": "host CSS steps(4,end)"
+    }
+  ],
+  "pixelFidelity": {
+    "pngSprite": "indexed PNG generated from the exact shared palette",
+    "apng": "same palette-index pixels, transparent index 0",
+    "webp": "VP8L lossless; decoder reports 4 frames",
+    "svg": "one crispEdges rect-run per solid row-color run",
+    "resampling": "none",
+    "rgbaComparisons": {
+      "pngSprite": [
+        {
+          "frame": 1,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 2,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 3,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 4,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        }
+      ],
+      "apng": [
+        {
+          "frame": 1,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 2,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 3,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 4,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        }
+      ],
+      "animatedWebp": [
+        {
+          "frame": 1,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 2,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 3,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 4,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        }
+      ],
+      "svgSprite": [
+        {
+          "frame": 1,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 2,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 3,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        },
+        {
+          "frame": 4,
+          "pixelsCompared": 14400,
+          "mismatchPixels": 0,
+          "channelMismatches": 0,
+          "alphaMismatches": 0,
+          "exact": true
+        }
+      ]
+    },
+    "allFramesExact": true
+  },
+  "notes": {
+    "existingPipeline": "runtime/tools/build-loader-sprite.mjs + loader-r9.css use a horizontal PNG sprite sheet, palette compression, CSS steps(N,end), pixelated rendering, and reduced-motion freeze. This sample mirrors that control model for PNG/SVG sprite candidates while retaining native 120×120 pixel art (no Lanczos resize).",
+    "autoplay": "APNG, WebP and SMIL auto-play as image formats; an ordinary CSS animation:none does not freeze them. A production feature would need a static reduced-motion fallback or explicit playback control.",
+    "sourceRights": "The local reference sheet does not establish attribution/license. Internal preview only; do not integrate or publicly redistribute without user authorization."
+  },
+  "generatedFiles": {
+    "pngSprite": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/sprite-4frame-palette.png",
+    "apng": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/animation-4frame-250ms.apng",
+    "webp": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/animation-4frame-250ms.webp",
+    "svgSprite": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/sprite-4frame.svg",
+    "animatedSvg": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/animation-4frame-250ms.svg"
+  }
+}

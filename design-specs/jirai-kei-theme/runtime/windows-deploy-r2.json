@@ -1,0 +1,28 @@
+{
+  "revision": "R2",
+  "directory": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "files": [
+    {
+      "Name": "preview.webp",
+      "Bytes": 33896,
+      "Hash": "28FFF5D14199F96DC04AD4AACD25060A91932D308D0D30797FE177DE31D4CB83"
+    },
+    {
+      "Name": "README.md",
+      "Bytes": 756,
+      "Hash": "4E6EE612676CFB587D659D2933C66B86C5586FC3C02DBDAA879BB65FE9803F14"
+    },
+    {
+      "Name": "theme.css",
+      "Bytes": 242802,
+      "Hash": "8E702F3E34B043749356F1F4CC71EAEFE977FDC33ACCE3A2E50FECFBC9EB24B7"
+    },
+    {
+      "Name": "theme.json",
+      "Bytes": 461,
+      "Hash": "FF06C84B7261EDCA4A6D57AF22C0522A2E260CBFC1FA6E92363939CA3CD78814"
+    }
+  ],
+  "atomicFileReplacement": true,
+  "windowsVisualValidated": false
+}

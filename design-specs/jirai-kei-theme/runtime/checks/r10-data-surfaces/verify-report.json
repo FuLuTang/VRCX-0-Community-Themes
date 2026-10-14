@@ -1,0 +1,552 @@
+{
+  "status": "PASS",
+  "fixture": {
+    "label": "NOT WINDOWS · fictional app DOM specimen",
+    "appCssSource": "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+    "appCssEmbedded": true,
+    "baseBundle": "/tmp/jirai-lead-r95c/jirai-kei-theme/theme.css",
+    "baseBundleBytes": 949295,
+    "r10CssBytes": 21647
+  },
+  "checks": {
+    "appBaseAndThemeLoaded": {
+      "pass": true,
+      "rootTokens": {
+        "window": "#201936",
+        "pink": "#ff7fcf"
+      }
+    },
+    "tableSelected": {
+      "background": "rgb(74, 55, 132)",
+      "foreground": "rgb(242, 235, 255)",
+      "leftCellInsetShadow": "rgb(255, 184, 230) 3px 0px 0px 0px inset",
+      "backgroundImage": "linear-gradient(to right, rgb(255, 184, 230) 0px, rgb(255, 184, 230) 3px, rgba(0, 0, 0, 0) 3px)",
+      "hoverBackground": "rgb(88, 69, 143)",
+      "keyboardFocus": {
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)"
+      }
+    },
+    "tableExpanded": {
+      "background": "rgb(51, 38, 80)",
+      "state": "data-state=expanded / aria-expanded descendant"
+    },
+    "metadataTableOnly": {
+      "wrapperClass": "app-data-table only",
+      "selectedBackground": "rgb(74, 55, 132)",
+      "leftCellInsetShadow": "rgb(255, 184, 230) 3px 0px 0px 0px inset",
+      "token": "#4a3784"
+    },
+    "tableHeader": {
+      "background": "rgb(42, 33, 71)",
+      "foreground": "rgb(242, 235, 255)",
+      "borderStyle": "dotted"
+    },
+    "emptyState": {
+      "borderRadius": "0px",
+      "titleFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+      "titleContrast": 14.44,
+      "descriptionContrast": 8.01,
+      "spinnerExclusion": "PASS"
+    },
+    "calendar": {
+      "selected": {
+        "color": "rgb(22, 17, 42)",
+        "background": "rgb(255, 184, 230)",
+        "image": "none",
+        "borderColor": "rgb(22, 17, 42)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderBottomStyle": "none",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "opacity": "1",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "lineHeight": "18.2px",
+        "animationTimingFunction": "ease",
+        "beforeContent": "none"
+      },
+      "rangeMiddle": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(74, 55, 132)",
+        "image": "none",
+        "borderColor": "rgb(242, 235, 255)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderBottomStyle": "none",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "opacity": "1",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "lineHeight": "18.2px",
+        "animationTimingFunction": "ease",
+        "beforeContent": "none"
+      },
+      "todayOutline": {
+        "style": "dashed",
+        "width": "1px"
+      },
+      "disabledDay": {
+        "color": "rgb(185, 173, 217)",
+        "opacity": "0.55"
+      },
+      "selectedFocus": {
+        "style": "dashed",
+        "width": "2px"
+      }
+    },
+    "activity": {
+      "variables": {
+        "--act-surface": "oklch(24% 0 0/.66)",
+        "--act-edge": "oklch(100% 0 0/.09)",
+        "--act-accent": "#ff7fcf",
+        "--act-track": "#16112a",
+        "--act-axis": "#b9add9",
+        "--act-mark": "#ff7fcf",
+        "--act-mark-soft": "rgb(255 127 207 / .42)",
+        "--act-heat-empty": "#201936",
+        "--act-heat-min": "color-mix(in srgb, #ff7fcf 24%, #2a2147)",
+        "--act-heat-0": "color-mix(in srgb, #ff7fcf 38%, #2a2147)",
+        "--act-heat-1": "color-mix(in srgb, #ff7fcf 54%, #2a2147)",
+        "--act-heat-2": "color-mix(in srgb, #ff7fcf 70%, #2a2147)",
+        "--act-heat-3": "color-mix(in srgb, #ff7fcf 86%, #2a2147)",
+        "--act-heat-4": "#ffb8e6"
+      },
+      "unchangedControlsOwnedVariables": {
+        "--act-surface": {
+          "before": "oklch(24% 0 0/.66)",
+          "after": "oklch(24% 0 0/.66)"
+        },
+        "--act-edge": {
+          "before": "oklch(100% 0 0/.09)",
+          "after": "oklch(100% 0 0/.09)"
+        },
+        "--act-accent": {
+          "before": "#ff7fcf",
+          "after": "#ff7fcf"
+        }
+      },
+      "heatColors": [
+        "color(srgb 0.482118 0.26949 0.481098)",
+        "color(srgb 0.615765 0.328471 0.566431)",
+        "color(srgb 0.749412 0.387451 0.651765)",
+        "color(srgb 0.883059 0.446431 0.737098)",
+        "rgb(255, 184, 230)"
+      ],
+      "adjacentRgbDistances": [
+        43.14,
+        43.14,
+        43.14,
+        87.06
+      ],
+      "heatLuminance": [
+        0.09850463636158913,
+        0.1550068347282285,
+        0.2273569776989549,
+        0.31664160694975857,
+        0.6125415062457272
+      ],
+      "distinctOrderedRamp": true,
+      "track": "rgb(22, 17, 42)",
+      "fill": "rgb(255, 127, 207)"
+    },
+    "hover": {
+      "regularTableRow": {
+        "before": "rgba(0, 0, 0, 0)",
+        "after": "rgb(48, 38, 80)"
+      },
+      "selectedRow": "rgb(88, 69, 143)"
+    },
+    "focus": {
+      "tableRow": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(74, 55, 132)",
+        "image": "linear-gradient(to right, rgb(255, 184, 230) 0px, rgb(255, 184, 230) 3px, rgba(0, 0, 0, 0) 3px)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderRadius": "0px",
+        "borderWidth": "0px 0px 1px",
+        "borderStyle": "solid",
+        "borderBottomStyle": "solid",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "opacity": "1",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "lineHeight": "18.2px",
+        "animationTimingFunction": "ease",
+        "beforeContent": "none"
+      },
+      "calendarDay": {
+        "color": "rgb(22, 17, 42)",
+        "background": "rgb(255, 184, 230)",
+        "image": "none",
+        "borderColor": "rgb(22, 17, 42)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "borderStyle": "none",
+        "borderBottomStyle": "none",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "opacity": "1",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "lineHeight": "18.2px",
+        "animationTimingFunction": "ease",
+        "beforeContent": "none"
+      },
+      "resizeHandle": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(108, 92, 224)",
+        "image": "none",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "borderStyle": "solid",
+        "borderBottomStyle": "solid",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "opacity": "1",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "lineHeight": "18.2px",
+        "animationTimingFunction": "ease",
+        "beforeContent": "\"\""
+      },
+      "friendCard": {
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(32, 25, 54)",
+        "image": "none",
+        "borderColor": "rgb(255, 127, 207)",
+        "borderRadius": "0px",
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderBottomStyle": "solid",
+        "boxShadow": "rgba(253, 244, 255, 0.12) 1px 1px 0px 0px inset, rgb(22, 17, 42) -1px -1px 0px 0px inset",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "opacity": "1",
+        "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+        "lineHeight": "18.2px",
+        "animationTimingFunction": "ease",
+        "beforeContent": "none"
+      },
+      "pass": {
+        "selectedFocusPass": true,
+        "calendarFocusPass": true,
+        "friendFocusPass": true,
+        "handlePseudo": true
+      }
+    },
+    "contrast": {
+      "selectedTable": 8.34,
+      "tableHeader": 12.87,
+      "emptyTitle": 14.44,
+      "emptyDescription": 8.01,
+      "selectedCalendarDay": 11.55,
+      "rangeCalendarDay": 8.34
+    },
+    "geometry": {
+      "virtualRowHeightBefore": 36,
+      "virtualRowHeightAfter": 36,
+      "sizeDiffsOver2px": [],
+      "positionDiffsOver2px": [],
+      "pass": true
+    },
+    "protectedScopes": {
+      "unchangedIds": [
+        "favorites-handle",
+        "favorites-tile",
+        "my-avatars-tile",
+        "browse-history-tile",
+        "loading-state",
+        "dialog-progress"
+      ],
+      "changedIds": [],
+      "details": {
+        "favorites-handle": {
+          "before": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(108, 92, 224)",
+            "image": "none",
+            "borderColor": "rgb(108, 92, 224)",
+            "borderRadius": "0px",
+            "borderWidth": "0px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          },
+          "after": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(108, 92, 224)",
+            "image": "none",
+            "borderColor": "rgb(108, 92, 224)",
+            "borderRadius": "0px",
+            "borderWidth": "0px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          }
+        },
+        "favorites-tile": {
+          "before": {
+            "color": "rgb(185, 173, 217)",
+            "background": "rgb(42, 33, 71)",
+            "image": "none",
+            "borderColor": "rgb(81, 67, 109)",
+            "borderRadius": "10px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          },
+          "after": {
+            "color": "rgb(185, 173, 217)",
+            "background": "rgb(42, 33, 71)",
+            "image": "none",
+            "borderColor": "rgb(81, 67, 109)",
+            "borderRadius": "10px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          }
+        },
+        "my-avatars-tile": {
+          "before": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(42, 33, 71)",
+            "image": "none",
+            "borderColor": "rgb(81, 67, 109)",
+            "borderRadius": "2px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(242, 235, 255) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          },
+          "after": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(42, 33, 71)",
+            "image": "none",
+            "borderColor": "rgb(81, 67, 109)",
+            "borderRadius": "2px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(242, 235, 255) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          }
+        },
+        "browse-history-tile": {
+          "before": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(42, 33, 71)",
+            "image": "none",
+            "borderColor": "rgb(81, 67, 109)",
+            "borderRadius": "10px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "rgb(242, 235, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          },
+          "after": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(42, 33, 71)",
+            "image": "none",
+            "borderColor": "rgb(81, 67, 109)",
+            "borderRadius": "10px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "rgb(242, 235, 255)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          }
+        },
+        "loading-state": {
+          "before": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none",
+            "borderColor": "rgb(108, 92, 224)",
+            "borderRadius": "0px",
+            "borderWidth": "0px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          },
+          "after": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none",
+            "borderColor": "rgb(108, 92, 224)",
+            "borderRadius": "0px",
+            "borderWidth": "0px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "none",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          }
+        },
+        "dialog-progress": {
+          "before": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(32, 25, 54)",
+            "image": "none",
+            "borderColor": "rgb(108, 92, 224)",
+            "borderRadius": "2px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          },
+          "after": {
+            "color": "rgb(242, 235, 255)",
+            "background": "rgb(32, 25, 54)",
+            "image": "none",
+            "borderColor": "rgb(108, 92, 224)",
+            "borderRadius": "2px",
+            "borderWidth": "1px",
+            "borderStyle": "solid",
+            "borderBottomStyle": "solid",
+            "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+            "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "opacity": "1",
+            "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+            "lineHeight": "18.2px",
+            "animationTimingFunction": "ease",
+            "beforeContent": "none"
+          }
+        }
+      },
+      "pass": true
+    },
+    "selectedStripePixels": {
+      "samples": [
+        [
+          255,
+          184,
+          230
+        ],
+        [
+          74,
+          55,
+          132
+        ]
+      ],
+      "expectedPink": [
+        255,
+        184,
+        230
+      ],
+      "rowImage": "linear-gradient(to right, rgb(255, 184, 230) 0px, rgb(255, 184, 230) 3px, rgba(0, 0, 0, 0) 3px)",
+      "pass": true
+    },
+    "screenshots": {
+      "before": "before.png",
+      "after": "after.png",
+      "comparison": "comparison.png"
+    }
+  },
+  "liveApp": {
+    "checked": false,
+    "note": "No live GUI/route was opened; route state and actual VRChat data remain unverified."
+  },
+  "failures": []
+}

@@ -1,0 +1,725 @@
+{
+ "pass": true,
+ "fails": [],
+ "geometry": {
+  "settings": [],
+  "tools": [],
+  "toolsTriggerText": [
+   "SPAN[] 254,602,56,19.25 -> 274,602,56,19.25",
+   "SPAN[] 254,602,56,19.25 -> 274,602,56,19.25",
+   "svg[] 1030,603.63,16,16 -> 1036,603.63,16,16",
+   "SPAN[] 254,732.25,56,19.25 -> 274,732.25,56,19.25",
+   "SPAN[] 254,732.25,56,19.25 -> 274,732.25,56,19.25",
+   "svg[] 1030,733.88,16,16 -> 1036,733.88,16,16",
+   "SPAN[] 254,927.5,28,19.25 -> 274,927.5,28,19.25",
+   "SPAN[] 254,927.5,28,19.25 -> 274,927.5,28,19.25",
+   "svg[] 1030,929.13,16,16 -> 1036,929.13,16,16"
+  ],
+  "other": [],
+  "decoy": []
+ },
+ "measure": {
+  "rail": {
+   "settings": {
+    "rect": {
+     "x": 16,
+     "y": 80,
+     "w": 176,
+     "h": 171,
+     "bottom": 251
+    },
+    "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% + 8px), 2px calc(100% + 8px), 2px calc(100% - 2px), 0px calc(100% - 2px))",
+    "border": "1px rgb(108, 92, 224)",
+    "lace": {
+     "content": "\"\"",
+     "position": "absolute",
+     "top": "170px",
+     "left": "1px",
+     "right": "1px",
+     "width": "172px",
+     "height": "8px",
+     "bg": "rgba(217, 127, 198, 0.55)",
+     "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+     "maskSize": "16px 8px",
+     "maskRepeat": "repeat-x",
+     "maskPos": "0px 0px",
+     "pe": "none",
+     "transform": "none"
+    },
+    "laceTopAbs": 251,
+    "laceLeftAbs": 18,
+    "laceTopEqualsFrameOuterBottom": true
+   },
+   "tools": {
+    "rect": {
+     "x": 38,
+     "y": 592,
+     "w": 176,
+     "h": 98,
+     "bottom": 690
+    },
+    "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% + 8px), 2px calc(100% + 8px), 2px calc(100% - 2px), 0px calc(100% - 2px))",
+    "border": "1px rgb(108, 92, 224)",
+    "lace": {
+     "content": "\"\"",
+     "position": "absolute",
+     "top": "97px",
+     "left": "1px",
+     "right": "1px",
+     "width": "172px",
+     "height": "8px",
+     "bg": "rgba(217, 127, 198, 0.55)",
+     "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+     "maskSize": "16px 8px",
+     "maskRepeat": "repeat-x",
+     "maskPos": "0px 0px",
+     "pe": "none",
+     "transform": "none"
+    },
+    "laceTopAbs": 690,
+    "laceLeftAbs": 40,
+    "laceTopEqualsFrameOuterBottom": true
+   }
+  },
+  "cards": {
+   "settings": [
+    {
+     "card": {
+      "bg": "rgb(32, 25, 54)",
+      "radius": "0px",
+      "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))",
+      "shadow": "none",
+      "frame": "border 1px rgb(108, 92, 224)",
+      "rect": [
+       209,
+       84,
+       818,
+       171.25
+      ]
+     },
+     "header": {
+      "bg": "rgb(47, 37, 82)",
+      "shadow": "rgb(253, 244, 255) 0px 1px 0px 0px inset",
+      "position": "relative",
+      "z": "1",
+      "bottomLine": "header border-bottom 1px rgb(22, 17, 42)"
+     },
+     "trigger": {
+      "pad": "10px 10px 10px 36px",
+      "radius": "0px",
+      "color": "rgb(242, 235, 255)",
+      "position": "relative",
+      "oldLace": "none"
+     },
+     "charm": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "11.625px",
+      "left": "7px",
+      "right": "785px",
+      "width": "24px",
+      "height": "16px",
+      "bg": "rgb(255, 184, 230)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "24px 16px",
+      "maskRepeat": "no-repeat",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "charmOffsetInCard": [
+      8
+     ],
+     "titleOffsetInCard": 37,
+     "lace": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "40.25px",
+      "left": "0px",
+      "right": "0px",
+      "width": "816px",
+      "height": "8px",
+      "bg": "rgba(217, 127, 198, 0.55)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "16px 8px",
+      "maskRepeat": "repeat-x",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "laceTopAbs": 125.25,
+     "lineBottom": 125.25,
+     "laceTopEqualsLineOuterEdge": true,
+     "laceInsideCard": true
+    },
+    {
+     "card": {
+      "bg": "rgb(32, 25, 54)",
+      "radius": "0px",
+      "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))",
+      "shadow": "none",
+      "frame": "border 1px rgb(108, 92, 224)",
+      "rect": [
+       209,
+       283.25,
+       818,
+       139.25
+      ]
+     },
+     "header": {
+      "bg": "rgb(47, 37, 82)",
+      "shadow": "rgb(253, 244, 255) 0px 1px 0px 0px inset",
+      "position": "relative",
+      "z": "1",
+      "bottomLine": "header border-bottom 1px rgb(22, 17, 42)"
+     },
+     "trigger": {
+      "pad": "10px 10px 10px 36px",
+      "radius": "0px",
+      "color": "rgb(242, 235, 255)",
+      "position": "relative",
+      "oldLace": "none"
+     },
+     "charm": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "22.625px",
+      "left": "7px",
+      "right": "719px",
+      "width": "24px",
+      "height": "16px",
+      "bg": "rgb(255, 184, 230)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "24px 16px",
+      "maskRepeat": "no-repeat",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "charmOffsetInCard": [
+      8
+     ],
+     "titleOffsetInCard": 37,
+     "lace": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "62.25px",
+      "left": "0px",
+      "right": "0px",
+      "width": "816px",
+      "height": "8px",
+      "bg": "rgba(217, 127, 198, 0.55)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "16px 8px",
+      "maskRepeat": "repeat-x",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "laceTopAbs": 346.5,
+     "lineBottom": 346.5,
+     "laceTopEqualsLineOuterEdge": true,
+     "laceInsideCard": true
+    }
+   ],
+   "tools": [
+    {
+     "card": {
+      "bg": "rgb(32, 25, 54)",
+      "radius": "0px",
+      "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))",
+      "shadow": "none",
+      "frame": "overlay 1px rgb(108, 92, 224) z2",
+      "rect": [
+       238,
+       592,
+       824,
+       114.25
+      ]
+     },
+     "header": {
+      "bg": "rgb(47, 37, 82)",
+      "shadow": "rgb(253, 244, 255) 0px 1px 0px 0px inset",
+      "position": "relative",
+      "z": "1",
+      "bottomLine": "header border-bottom 1px rgb(22, 17, 42)"
+     },
+     "trigger": {
+      "pad": "10px 10px 10px 36px",
+      "radius": "0px",
+      "color": "rgb(242, 235, 255)",
+      "position": "relative",
+      "oldLace": "none"
+     },
+     "charm": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "11.625px",
+      "left": "7px",
+      "right": "793px",
+      "width": "24px",
+      "height": "16px",
+      "bg": "rgb(255, 184, 230)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "24px 16px",
+      "maskRepeat": "no-repeat",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "charmOffsetInCard": [
+      7
+     ],
+     "titleOffsetInCard": 36,
+     "lace": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "40.25px",
+      "left": "0px",
+      "right": "0px",
+      "width": "824px",
+      "height": "8px",
+      "bg": "rgba(217, 127, 198, 0.55)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "16px 8px",
+      "maskRepeat": "repeat-x",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "laceTopAbs": 632.25,
+     "lineBottom": 632.25,
+     "laceTopEqualsLineOuterEdge": true,
+     "laceInsideCard": true
+    },
+    {
+     "card": {
+      "bg": "rgb(32, 25, 54)",
+      "radius": "0px",
+      "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))",
+      "shadow": "none",
+      "frame": "overlay 1px rgb(108, 92, 224) z2",
+      "rect": [
+       238,
+       722.25,
+       824,
+       179.25
+      ]
+     },
+     "header": {
+      "bg": "rgb(47, 37, 82)",
+      "shadow": "rgb(253, 244, 255) 0px 1px 0px 0px inset",
+      "position": "relative",
+      "z": "1",
+      "bottomLine": "header border-bottom 1px rgb(22, 17, 42)"
+     },
+     "trigger": {
+      "pad": "10px 10px 10px 36px",
+      "radius": "0px",
+      "color": "rgb(242, 235, 255)",
+      "position": "relative",
+      "oldLace": "none"
+     },
+     "charm": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "11.625px",
+      "left": "7px",
+      "right": "793px",
+      "width": "24px",
+      "height": "16px",
+      "bg": "rgb(255, 184, 230)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "24px 16px",
+      "maskRepeat": "no-repeat",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "charmOffsetInCard": [
+      7
+     ],
+     "titleOffsetInCard": 36,
+     "lace": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "40.25px",
+      "left": "0px",
+      "right": "0px",
+      "width": "824px",
+      "height": "8px",
+      "bg": "rgba(217, 127, 198, 0.55)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "16px 8px",
+      "maskRepeat": "repeat-x",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "laceTopAbs": 762.5,
+     "lineBottom": 762.5,
+     "laceTopEqualsLineOuterEdge": true,
+     "laceInsideCard": true
+    },
+    {
+     "card": {
+      "bg": "rgb(32, 25, 54)",
+      "radius": "0px",
+      "clip": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))",
+      "shadow": "none",
+      "frame": "overlay 1px rgb(108, 92, 224) z2",
+      "rect": [
+       238,
+       917.5,
+       824,
+       151.25
+      ]
+     },
+     "header": {
+      "bg": "rgb(47, 37, 82)",
+      "shadow": "rgb(253, 244, 255) 0px 1px 0px 0px inset",
+      "position": "relative",
+      "z": "1",
+      "bottomLine": "header border-bottom 1px rgb(22, 17, 42)"
+     },
+     "trigger": {
+      "pad": "10px 10px 10px 36px",
+      "radius": "0px",
+      "color": "rgb(242, 235, 255)",
+      "position": "relative",
+      "oldLace": "none"
+     },
+     "charm": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "11.625px",
+      "left": "7px",
+      "right": "793px",
+      "width": "24px",
+      "height": "16px",
+      "bg": "rgb(255, 184, 230)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "24px 16px",
+      "maskRepeat": "no-repeat",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "charmOffsetInCard": [
+      7
+     ],
+     "titleOffsetInCard": 36,
+     "lace": {
+      "content": "\"\"",
+      "position": "absolute",
+      "top": "40.25px",
+      "left": "0px",
+      "right": "0px",
+      "width": "824px",
+      "height": "8px",
+      "bg": "rgba(217, 127, 198, 0.55)",
+      "mask": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg",
+      "maskSize": "16px 8px",
+      "maskRepeat": "repeat-x",
+      "maskPos": "0px 0px",
+      "pe": "none",
+      "transform": "none"
+     },
+     "laceTopAbs": 957.75,
+     "lineBottom": 957.75,
+     "laceTopEqualsLineOuterEdge": true,
+     "laceInsideCard": true
+    }
+   ]
+  }
+ },
+ "laceProfiles": {
+  "settingsRail": {
+   "rows": [
+    {
+     "dy": -2,
+     "cover": 0
+    },
+    {
+     "dy": -1,
+     "cover": 0
+    },
+    {
+     "dy": 0,
+     "cover": 1
+    },
+    {
+     "dy": 1,
+     "cover": 1
+    },
+    {
+     "dy": 2,
+     "cover": 1
+    },
+    {
+     "dy": 3,
+     "cover": 1
+    },
+    {
+     "dy": 4,
+     "cover": 0.88
+    },
+    {
+     "dy": 5,
+     "cover": 0.88
+    },
+    {
+     "dy": 6,
+     "cover": 0.75
+    },
+    {
+     "dy": 7,
+     "cover": 0.5,
+     "cols": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "dy": 8,
+     "cover": 0
+    },
+    {
+     "dy": 9,
+     "cover": 0
+    },
+    {
+     "dy": 10,
+     "cover": 0
+    }
+   ],
+   "lineRow": "rgb(108,92,224)",
+   "afterTailRow": "rgb(32,25,54)",
+   "afterTailMid": "rgb(32,25,54)"
+  },
+  "toolsRail": {
+   "rows": [
+    {
+     "dy": -2,
+     "cover": 0
+    },
+    {
+     "dy": -1,
+     "cover": 0
+    },
+    {
+     "dy": 0,
+     "cover": 1
+    },
+    {
+     "dy": 1,
+     "cover": 1
+    },
+    {
+     "dy": 2,
+     "cover": 1
+    },
+    {
+     "dy": 3,
+     "cover": 1
+    },
+    {
+     "dy": 4,
+     "cover": 0.88
+    },
+    {
+     "dy": 5,
+     "cover": 0.88
+    },
+    {
+     "dy": 6,
+     "cover": 0.75
+    },
+    {
+     "dy": 7,
+     "cover": 0.5,
+     "cols": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "dy": 8,
+     "cover": 0
+    },
+    {
+     "dy": 9,
+     "cover": 0
+    },
+    {
+     "dy": 10,
+     "cover": 0
+    }
+   ],
+   "lineRow": "rgb(108,92,224)",
+   "afterTailRow": "rgb(32,25,54)",
+   "afterTailMid": "rgb(32,25,54)"
+  },
+  "settingsCard": {
+   "rows": [
+    {
+     "dy": -2,
+     "cover": 0
+    },
+    {
+     "dy": -1,
+     "cover": 0
+    },
+    {
+     "dy": 0,
+     "cover": 1
+    },
+    {
+     "dy": 1,
+     "cover": 1
+    },
+    {
+     "dy": 2,
+     "cover": 1
+    },
+    {
+     "dy": 3,
+     "cover": 1
+    },
+    {
+     "dy": 4,
+     "cover": 0.88
+    },
+    {
+     "dy": 5,
+     "cover": 0.88
+    },
+    {
+     "dy": 6,
+     "cover": 0.75
+    },
+    {
+     "dy": 7,
+     "cover": 0.5,
+     "cols": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "dy": 8,
+     "cover": 0
+    },
+    {
+     "dy": 9,
+     "cover": 0
+    },
+    {
+     "dy": 10,
+     "cover": 0
+    }
+   ],
+   "lineRow": "rgb(22,17,42)",
+   "afterTailRow": "rgb(32,25,54)",
+   "afterTailMid": "rgb(32,25,54)"
+  },
+  "toolsCard": {
+   "rows": [
+    {
+     "dy": -2,
+     "cover": 0
+    },
+    {
+     "dy": -1,
+     "cover": 0
+    },
+    {
+     "dy": 0,
+     "cover": 1
+    },
+    {
+     "dy": 1,
+     "cover": 1
+    },
+    {
+     "dy": 2,
+     "cover": 1
+    },
+    {
+     "dy": 3,
+     "cover": 1
+    },
+    {
+     "dy": 4,
+     "cover": 0.88
+    },
+    {
+     "dy": 5,
+     "cover": 0.88
+    },
+    {
+     "dy": 6,
+     "cover": 0.75
+    },
+    {
+     "dy": 7,
+     "cover": 0.5,
+     "cols": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "dy": 8,
+     "cover": 0
+    },
+    {
+     "dy": 9,
+     "cover": 0
+    },
+    {
+     "dy": 10,
+     "cover": 0
+    }
+   ],
+   "lineRow": "rgb(22,17,42)",
+   "afterTailRow": "rgb(32,25,54)",
+   "afterTailMid": "rgb(32,25,54)"
+  }
+ },
+ "bytes": 3999,
+ "shots": {
+  "settings-before": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/settings-before.png",
+  "tools-before": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/tools-before.png",
+  "other-before": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/other-before.png",
+  "decoy-before": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/decoy-before.png",
+  "settings-after": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/settings-after.png",
+  "tools-after": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/tools-after.png",
+  "other-after": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/other-after.png",
+  "decoy-after": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/decoy-after.png",
+  "zoom4-settings-rail-lace": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-settings-rail-lace.png",
+  "zoom4-tools-rail-lace": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-tools-rail-lace.png",
+  "zoom4-settings-card-head": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-settings-card-head.png",
+  "zoom4-tools-card-head": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-tools-card-head.png",
+  "zoom4-before-settings-rail": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-before-settings-rail.png",
+  "zoom4-before-tools-rail": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-before-tools-rail.png",
+  "zoom4-before-settings-card-head": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-before-settings-card-head.png",
+  "zoom4-before-tools-card-head": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-before-tools-card-head.png"
+ }
+}

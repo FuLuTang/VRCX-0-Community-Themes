@@ -1,0 +1,352 @@
+diff -ruN a/runtime/cards-r97.css b/runtime/cards-r97.css
+--- a/runtime/cards-r97.css	2026-10-13 19:59:39.595495469 +0000
++++ b/runtime/cards-r97.css	2026-10-13 19:59:39.598782332 +0000
+@@ -10,10 +10,10 @@
+  --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
+ }
+ /* Rails: keep the stair corners, open an 8px strip under the bottom edge, hang the lace there. */
+-:is([data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
+-:is([data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
++:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
++:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+ /* settings-pixel.css:57 padded the rail bottom to 12px for the old in-frame lace; back to the 3px of its other sides. */
+-[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+ /* Tools cards: same face as Settings (settings-pixel.css:74-78). */
+ [data-tools-section] [data-slot=card]{position:relative;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
+ [data-tools-section] [data-slot=card]::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid #6c5ce0;pointer-events:none}
+@@ -23,8 +23,8 @@
+ [data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
+ [data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
+ /* Charm (both pages): 24x16 box, position unchanged; top floored to whole px. Multi-colour, so no mask. */
+-:is([data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);top:round(down,50% - 8px,1px);width:24px;height:16px;pointer-events:none;mask:none;background:var(--jk-r97-card-charm) center/16px 8px no-repeat;image-rendering:pixelated}
++:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);top:round(down,50% - 8px,1px);width:24px;height:16px;pointer-events:none;mask:none;background:var(--jk-r97-card-charm) center/16px 8px no-repeat;image-rendering:pixelated}
+ /* Title-bar lace: head on the bar's bottom line, tails into the card body (inside the card clip). */
+-[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:none}
+-:is([data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]{position:relative;z-index:1}
+-:is([data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][class~=w-44][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]::after{content:"";position:absolute;left:0;right:0;top:calc(100% + 1px);height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:none}
++:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]{position:relative;z-index:1}
++:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]::after{content:"";position:absolute;left:0;right:0;top:calc(100% + 1px);height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+diff -ruN a/runtime/fields-toolbar-r10.css b/runtime/fields-toolbar-r10.css
+--- a/runtime/fields-toolbar-r10.css	2026-10-13 19:59:39.595914152 +0000
++++ b/runtime/fields-toolbar-r10.css	2026-10-13 19:59:39.599124854 +0000
+@@ -26,19 +26,19 @@
+ .vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-button"]:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+ 
+ /* Standalone fields: same dark inset field treatment; no geometry changes. */
+-:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   border:1px solid #6c5ce0;border-radius:0;background-color:#16112a;color:#f2ebff;
+   box-shadow:inset 1px 1px rgb(0 0 0/.28),inset -1px -1px #3d305e;
+ }
+-:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::placeholder{color:#b9add9;opacity:1}
+-:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible{border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
++:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::placeholder{color:#b9add9;opacity:1}
++:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+ :is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is(:disabled,[aria-disabled="true"]){color:#b9add9;opacity:.65}
+ :is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is([aria-invalid="true"],[data-invalid]){border-color:#ff6b8a}
+-[data-slot="input-group"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){border-radius:0}
+-[data-slot="input-group"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-within{outline:2px solid #ff7fcf;outline-offset:1px}
+-[data-slot="field-label"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *),[data-slot="label"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){color:#e3d2f5}
+-[data-slot="field-description"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){color:#b9add9}
+-[data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){color:#ff8fae}
++:where([data-slot="input-group"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){border-radius:0}
++:where([data-slot="input-group"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-within){outline:2px solid #ff7fcf;outline-offset:1px}
++:where([data-slot="field-label"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)),:where([data-slot="label"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){color:#e3d2f5}
++:where([data-slot="field-description"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){color:#b9add9}
++:where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){color:#ff8fae}
+ 
+ /* Toolbar default ToggleGroup is a multi-select chip row, not a segmented switch.
+    controls-r9 intentionally reserved the outline variant; chips retain small gaps. */
+@@ -75,29 +75,24 @@
+ .vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="combobox-chip-input"]::placeholder{color:#b9add9;opacity:1}
+ 
+ /* Inline keyboard keycaps and one-time-code slots. */
+-[data-slot="kbd"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where([data-slot="kbd"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;
+   box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+ }
+-[data-slot="kbd-group"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){gap:1px}
+-[data-slot="input-otp-slot"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where([data-slot="kbd-group"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){gap:1px}
++:where([data-slot="input-otp-slot"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;
+   box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;
+ }
+-[data-slot="input-otp-slot"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is([data-active="true"],[data-focused]){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
++:where([data-slot="input-otp-slot"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+ 
+-/* Remaining audited native controls. Radio retains its circular semantic affordance. */
+-input[type="radio"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
+-  appearance:none;-webkit-appearance:none;width:15px;height:15px;border:1px solid #8c71b0;border-radius:50%;background:#211a33;accent-color:#ffb8e6;
+-}
+-input[type="radio"]:checked:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){border-color:#6c5ce0;background:radial-gradient(circle,#16112a 0 2px,#ffb8e6 2.5px 100%)}
+-input[type="radio"]:focus-visible:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){outline:2px solid #ff7fcf;outline-offset:2px}
+-input[type="color"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){border:1px solid #6c5ce0;border-radius:0;background:#211a33;padding:2px}
+-input[type="color"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-webkit-color-swatch-wrapper{padding:0}
+-input[type="color"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-webkit-color-swatch{border:1px solid #8c71b0;border-radius:0}
+-input[type="file"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::file-selector-button{
++/* Remaining audited native controls. (Radio: shared square-pixel rule in form-controls-r9.css.) */
++:where(input[type="color"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){border:1px solid #6c5ce0;border-radius:0;background:#211a33;padding:2px}
++:where(input[type="color"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-webkit-color-swatch-wrapper{padding:0}
++:where(input[type="color"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-webkit-color-swatch{border:1px solid #8c71b0;border-radius:0}
++:where(input[type="file"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::file-selector-button{
+   appearance:none;-webkit-appearance:none;font:inherit;padding:3px 8px;
+   margin-right:8px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;
+   box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+ }
+-input[type="time"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}
++:where(input[type="time"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}
+diff -ruN a/runtime/form-controls-r9.css b/runtime/form-controls-r9.css
+--- a/runtime/form-controls-r9.css	2026-10-13 19:59:39.595968033 +0000
++++ b/runtime/form-controls-r9.css	2026-10-13 19:59:39.599180015 +0000
+@@ -1,6 +1,6 @@
+ /* R9.5 shared native and Base UI form controls. Preserve control boxes/hit targets;
+    excluded surfaces already have deliberate control treatments. */
+-:is([data-slot="checkbox"],input[type="checkbox"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where(:is([data-slot="checkbox"],input[type="checkbox"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   appearance:none;
+   -webkit-appearance:none;
+   position:relative;
+@@ -16,25 +16,48 @@
+   box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+   accent-color:#ffb8e6;
+ }
+-:is([data-slot="checkbox"],input[type="checkbox"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is([data-checked],[aria-checked="true"],:checked){
++:where(:is([data-slot="checkbox"],input[type="checkbox"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is([data-checked],[aria-checked="true"],:checked)){
+   border-color:#6c5ce0;
+   background-color:#ffb8e6;
+   box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+ }
+-[data-slot="checkbox"][data-checked]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::after,
+-input[type="checkbox"]:checked:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::after{
++:where([data-slot="checkbox"][data-checked]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::after,:where(input[type="checkbox"]:checked:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::after{
+   content:"";
+   position:absolute;
+   left:4px;top:2px;width:4px;height:7px;
+   border:solid #16112a;border-width:0 2px 2px 0;
+   transform:rotate(45deg);
+ }
+-[data-slot="checkbox"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *) > [data-slot="checkbox-indicator"]{display:none}
+-:is([data-slot="checkbox"],input[type="checkbox"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible{
++:where([data-slot="checkbox"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *) > [data-slot="checkbox-indicator"]){display:none}
++:where(:is([data-slot="checkbox"],input[type="checkbox"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible){
+   outline:2px solid #ff7fcf;
+   outline-offset:2px;
+ }
+-input[type="range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++/* Radio: Base UI Radio.Root is a span[role=radio] with a Radio.Indicator child (DataDirMigrationDialog.tsx:222); a native
++   input[type=radio] gets the same square pixel box. Sizes are not set for [role=radio] (the app's size-4 / size-1.5 stay). */
++:where([role="radio"],input[type="radio"]){
++  appearance:none;
++  -webkit-appearance:none;
++  border:1px solid #8c71b0;
++  border-radius:0;
++  background-color:#211a33;
++  color:#16112a;
++  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
++  accent-color:#ffb8e6;
++}
++:where(input[type="radio"]){width:15px;height:15px}
++:where(:is([role="radio"],input[type="radio"]):is([data-checked],[aria-checked="true"],:checked)){
++  border-color:#6c5ce0;
++  background-color:#ffb8e6;
++  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
++}
++:where([role="radio"] > span){border-radius:0;background-color:#16112a}
++:where(input[type="radio"]:checked){background-image:linear-gradient(#16112a,#16112a);background-size:6px 6px;background-position:center;background-repeat:no-repeat}
++:where(:is([role="radio"],input[type="radio"]):focus-visible){
++  outline:2px solid #ff7fcf;
++  outline-offset:2px;
++}
++:where(input[type="range"]:not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   appearance:none;-webkit-appearance:none;
+   height:18px;
+   margin:0;
+@@ -42,58 +65,58 @@
+   accent-color:#ffb8e6;
+   cursor:pointer;
+ }
+-input[type="range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-webkit-slider-runnable-track{
++:where(input[type="range"]:not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-webkit-slider-runnable-track{
+   height:6px;border:1px solid #6c5ce0;border-radius:0;
+   background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+   box-shadow:inset 1px 1px #16112a;
+ }
+-input[type="range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-webkit-slider-thumb{
++:where(input[type="range"]:not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-webkit-slider-thumb{
+   appearance:none;-webkit-appearance:none;
+   width:12px;height:12px;margin-top:-3px;
+   border:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;
+   box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+ }
+-input[type="range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-moz-range-track{
++:where(input[type="range"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-moz-range-track{
+   height:4px;border:1px solid #6c5ce0;border-radius:0;
+   background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+ }
+-input[type="range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)::-moz-range-thumb{
++:where(input[type="range"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *))::-moz-range-thumb{
+   width:10px;height:10px;border:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;
+   box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+ }
+-input[type="range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible{
++:where(input[type="range"]:not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible){
+   outline:2px solid #ff7fcf;outline-offset:2px;
+ }
+ /* Base UI sliders expose a live Indicator, so its pink fill follows the actual value. */
+-[data-slot="slider-track"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where([data-slot="slider-track"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   height:6px!important;border:1px solid #6c5ce0;border-radius:0!important;
+   background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px)!important;
+   box-shadow:inset 1px 1px #16112a;
+ }
+-[data-slot="slider-range"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where([data-slot="slider-range"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   background:repeating-linear-gradient(90deg,#ffb8e6 0 3px,#f37fc4 3px 5px)!important;
+ }
+-[data-slot="slider-thumb"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where([data-slot="slider-thumb"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   width:12px!important;height:12px!important;border:1px solid #6c5ce0!important;border-radius:0!important;
+   background:#ffb8e6!important;
+   box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c!important;
+ }
+-[data-slot="slider"]:focus-visible [data-slot="slider-thumb"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where([data-slot="slider"]:focus-visible [data-slot="slider-thumb"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   outline:2px solid #ff7fcf;outline-offset:2px;
+ }
+-:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   border-radius:0!important;border-color:#6c5ce0!important;
+   background-color:#211a33!important;color:#f2ebff!important;
+   box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d!important;
+ }
+-:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible{
++:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible){
+   outline:2px solid #ff7fcf;outline-offset:1px;
+ }
+ :is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *) > svg:is(.lucide-chevron-down,.lucide-chevrons-up-down){
+   width:12px;height:12px;
+ }
+ /* The two-person chart uses native select elements rather than the shared Select primitive. */
+-select:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){
++:where(select:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){
+   appearance:none;-webkit-appearance:none;
+   border-radius:0!important;border-color:#6c5ce0!important;
+   background-color:#211a33!important;color:#f2ebff!important;
+@@ -102,12 +125,12 @@
+   padding-right:28px;
+   box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d!important;
+ }
+-select:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
++:where(select:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):focus-visible){outline:2px solid #ff7fcf;outline-offset:1px}
+ /* Ordinary inline spinner: existing pixel mask glyph, small and stepped (not the page loader). */
+-[data-slot="spinner"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is(.size-4,.size-3\.5){
++:where([data-slot="spinner"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *):is(.size-4,.size-3\.5)){
+   animation:r5-spinner-step 1s steps(8,end) infinite;
+   transform-origin:center;
+ }
+ @media(prefers-reduced-motion:reduce){
+-  [data-slot="spinner"]:not([data-vrcx-0-surface="login-page"] *):not(.entity-dialog *):not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *){animation:none!important}
++  :where([data-slot="spinner"]:not(.vrcx-0-page-scaffold:has(> [data-slot="tabs-list"][class~="w-44"]) *)){animation:none!important}
+ }
+diff -ruN a/runtime/settings-pixel.css b/runtime/settings-pixel.css
+--- a/runtime/settings-pixel.css	2026-10-13 19:59:39.596339235 +0000
++++ b/runtime/settings-pixel.css	2026-10-13 19:59:39.599556337 +0000
+@@ -1,9 +1,10 @@
+ /* ==========================================================================
+    R4 · settings-page pixel components (independent sub-task).
+-   Scope: the settings rail and settings cards are limited to the settings page
+-   with :has(> [data-slot=tabs-list][class~=w-44]) — SettingsPage.tsx:77 is the
+-   only TabsList in src carrying the w-44 token (ToolsPageContent.tsx:825 is
+-   w-full, SidePanel.tsx:502 is w-full). Switch / segmented group / number
++   Scope: the settings rail and settings cards are limited to the settings page,
++   identified structurally as the vertical Tabs that is a DIRECT child of the page
++   scaffold (.vrcx-0-page-scaffold > [data-slot=tabs]) — SettingsPage.tsx:67-77;
++   ToolsPageContent.tsx:817 nests its Tabs in a grid div, SidePanel.tsx:389 is not
++   inside a scaffold. (Was: the style class w-44 on the TabsList.) Switch / segmented group / number
+    stepper are global control primitives by design (see research notes).
+    Evidence: SSR dump checks/r4-settings-pixel/ssr-probe.txt,
+    switch.tsx:19/26, toggle-group.tsx:34-42, number-field.tsx:50-102,
+@@ -54,29 +55,29 @@
+ /* --------------------------------------------------------------------------
+    (6)① Settings rail (系统/界面/社交…) as a pixel window list.
+    -------------------------------------------------------------------------- */
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list]{position:relative;padding:3px 3px 12px;gap:1px;border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;clip-path:var(--jk-px-cut)}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px 3px 12px;gap:1px;border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;clip-path:var(--jk-px-cut)}
+ /* Lace fringe inside the rail's bottom padding. */
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list]::after{content:"";position:absolute;left:3px;right:3px;bottom:2px;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]::after{content:"";position:absolute;left:3px;right:3px;bottom:2px;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
+ /* The app's sliding indicator would double the selected face; the app already
+    hides it this way in SidePanel.tsx:502. */
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tab-indicator]{display:none}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tabs-tab]{border:1px solid transparent;border-radius:0;background-color:transparent;color:#b9add9;box-shadow:none}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tabs-tab] .lucide{color:inherit;opacity:1}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:hover{background-color:#4a3784;border-color:#6c5ce0;color:#f2ebff}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]{background-color:#ffb8e6;border-color:#16112a;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]:focus-visible{outline-color:#16112a}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tab-indicator]{display:none}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]{border:1px solid transparent;border-radius:0;background-color:transparent;color:#b9add9;box-shadow:none}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab] .lucide{color:inherit;opacity:1}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:hover{background-color:#4a3784;border-color:#6c5ce0;color:#f2ebff}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]{background-color:#ffb8e6;border-color:#16112a;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]:focus-visible{outline-color:#16112a}
+ 
+ /* --------------------------------------------------------------------------
+    (6)②③ Settings cards: pixel window title bar + bow charm + lace, and
+    stair-stepped corners instead of right angles. SettingsCard.tsx:50-97.
+    -------------------------------------------------------------------------- */
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card]{border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card-content]{border-radius:0}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card]{border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-content]{border-radius:0}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
+ /* 24x16 bow charm at its native 1:1 size. */
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);width:24px;height:16px;background-color:#ffb8e6;pointer-events:none;mask:var(--jk-mask-s6) 0 0/24px 16px no-repeat}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);width:24px;height:16px;background-color:#ffb8e6;pointer-events:none;mask:var(--jk-mask-s6) 0 0/24px 16px no-repeat}
+ /* Lace fringe hangs inside the title bar's 10px bottom padding, below the text. */
+-[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list][class~=w-44]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
++.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
+diff -ruN a/runtime/user-dialog-r8.css b/runtime/user-dialog-r8.css
+--- a/runtime/user-dialog-r8.css	2026-10-13 19:59:39.596478876 +0000
++++ b/runtime/user-dialog-r8.css	2026-10-13 19:59:39.599768219 +0000
+@@ -58,7 +58,7 @@
+ }
+ 
+ /* Date bubble, positioned by the application at the live slider percentage. */
+-[data-slot="dialog-content"].entity-dialog .relative.min-w-16.flex-1.py-3 > span.absolute.top-0.z-10 {
++[data-slot="dialog-content"].entity-dialog div:has(> input[type="range"]) > span:has(~ input[type="range"]) {
+   border-radius: 0;
+   border-color: #8c71b0;
+   background-color: #211a33;
+diff -ruN a/runtime/windose-runtime.css b/runtime/windose-runtime.css
+--- a/runtime/windose-runtime.css	2026-10-13 19:59:39.596526436 +0000
++++ b/runtime/windose-runtime.css	2026-10-13 19:59:39.599821339 +0000
+@@ -67,7 +67,7 @@
+ }
+ [data-slot="dialog-overlay"] { background-color:rgb(36 18 66 / .62); }
+ [data-slot="dialog-title"] { color:var(--wd-text); }
+-[data-slot="button"], [data-slot="input"], [data-slot="select-trigger"] { border-radius:2px; }
++[data-slot="button"], [data-slot="select-trigger"] { border-radius:2px; } /* [data-slot="input"] radius: owned by the generic field rule in fields-toolbar-r10.css (login-r8 keeps 2px) */
+ [data-slot="button"]:focus-visible { outline:2px dashed var(--wd-pink); outline-offset:2px; }
+ [data-slot="tabs-tab"][data-active] { background-color:var(--wd-pink); color:#16112a; }
+ /* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
+@@ -112,8 +112,7 @@
+ /* R3 lace is outside and above the real footer; no inside-bar background strip. */
+ 
+ /* Preserve native control interaction; only change their arrow/clock artwork. */
+-.vrcx-0-app-root select:not([multiple]):not([size]) { appearance:none; padding-right:24px;
+- background-image:var(--wd-native-chevron); background-repeat:no-repeat; background-size:12px 12px; background-position:right 6px center; }
++/* native <select>: generic rule lives in form-controls-r9.css (same chevron art, applies in every context). */
+ .vrcx-0-app-root input[type="time"]::-webkit-calendar-picker-indicator {
+  background-image:var(--wd-native-clock); background-size:16px 16px; background-position:center; background-repeat:no-repeat;
+ }

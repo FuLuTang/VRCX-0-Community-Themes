@@ -1,0 +1,134 @@
+{
+  "theme": "jirai-kei-theme",
+  "version": "1.1.0",
+  "status": "Canonical theme verified by static Chromium CSS checks; not live VRCX-0 or BaseUI runtime tested",
+  "visualReview": {
+    "method": "Read the actual rendered canonical desktop, 480px, dialog and decoration-off WebP after merge.",
+    "observations": [
+      "The dark faceted switch thumb is visibly distinct on the pink checked track.",
+      "Ribbon stitch, lace and collar stay at component edges; dense friend rows remain unpatterned.",
+      "Danger, validation error, disabled save, close, cancel and theme recovery controls remain visible."
+    ],
+    "boundary": "Static CSS specimen only; not a live VRCX-0 screenshot."
+  },
+  "screenshots": {
+    "desktop": {
+      "width": 1280,
+      "height": 1135,
+      "bytes": 75988
+    },
+    "dialog": {
+      "width": 1280,
+      "height": 1135,
+      "bytes": 58102
+    },
+    "decorationOff": {
+      "width": 1280,
+      "height": 1135,
+      "bytes": 64442
+    },
+    "mobile": {
+      "width": 480,
+      "height": 2308,
+      "bytes": 68650
+    }
+  },
+  "contrastRatios": {
+    "body": 16.296281764327894,
+    "primary": 9.042872032394921,
+    "danger": 6.7159370482236636,
+    "error": 6.719242337188935,
+    "muted": 8.63472178190942,
+    "badge": 13.455720565968608,
+    "checked": 9.042872032394921,
+    "checkedThumbWorst": 5.047612366024527,
+    "placeholder": 8.63472178190942,
+    "satinActiveWorst": 6.98876349710644,
+    "enamelWorst": 10.071679326985553,
+    "mutedPopover": 7.129626570190046,
+    "onlineSelected": 6.733214795459544,
+    "focus": 9.81790924215954
+  },
+  "checks": [
+    "Full manifest Draft2020-12",
+    "Explicit unverified draft",
+    "No remote imports/fonts or layout/pointer overrides",
+    "body text >=4.5",
+    "primary text >=4.5",
+    "danger text >=4.5",
+    "error text >=4.5",
+    "muted text >=4.5",
+    "badge text >=4.5",
+    "checked text >=4.5",
+    "Checked switch gradient worst endpoint >=3:1",
+    "Checked thumb uses dark facet",
+    "data-disabled sidebar hover stays disabled",
+    "aria-disabled sidebar hover stays disabled",
+    "Placeholder >=4.5",
+    "Dense row avatar no bezel",
+    "Portrait image unchanged",
+    "Main/titlebar quiet canvas",
+    "Danger, disabled save, recovery visible",
+    "Weave/enamel/popover/status conservative text >=4.5",
+    "Plain :root CSS override wins",
+    "Dense row unpatterned",
+    "Desktop no horizontal overflow",
+    "Focus offset 3px",
+    "Focus contrast >=3",
+    "Focus visible 2px",
+    "Error red border",
+    "Checked-invalid outer red rail",
+    "Tabs actual data-active and roving focus",
+    "Checkbox unchecked state",
+    "Checkbox checked state restored",
+    "desktop real WebP <=256KiB",
+    "Modal visible",
+    "Modal Tab contained",
+    "dialog real WebP <=256KiB",
+    "Escape closes modal",
+    "Close button works",
+    "Decoration off removes SVG height",
+    "Decoration off keeps error",
+    "Decoration off keeps focus",
+    "decorationOff real WebP <=256KiB",
+    "Reduced motion thumb/control transitions off",
+    "Forced-colors ornaments disabled",
+    "App reduce-effects transitions off",
+    "Theme disabled recovery visible",
+    "Theme restored",
+    "Toast retry feedback",
+    "Recovery clears invalid",
+    "480px no horizontal overflow",
+    "mobile real WebP <=256KiB",
+    "480px modal no overflow",
+    "No remote requests",
+    "No browser errors"
+  ],
+  "validator": "Theme validation passed.\n",
+  "tests": "TAP version 13\n# Subtest: accepts a valid catalog and theme package\nok 1 - accepts a valid catalog and theme package\n  ---\n  duration_ms: 53.982587\n  type: 'test'\n  ...\n# Subtest: requires the root README to link each catalog theme id\nok 2 - requires the root README to link each catalog theme id\n  ---\n  duration_ms: 51.516086\n  type: 'test'\n  ...\n# Subtest: reports duplicate ids, missing tags, invalid JSON, and preview issues\nok 3 - reports duplicate ids, missing tags, invalid JSON, and preview issues\n  ---\n  duration_ms: 55.581001\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 233.559862\n",
+  "limitations": [
+    "Static preview only, not live VRCX-0 or BaseUI runtime.",
+    "Computed solid colors plus conservative checked-thumb gradient endpoint, not all image pixel contrast.",
+    "No portal stacking, virtual lists, actual desktop window controls, DPI/zoom or OS scrollbars tested.",
+    "Disabled contrast follows app opacity and is WCAG-exempt."
+  ],
+  "teamChanges": [
+    "Checked thumb dark faceted gradient preserves >=3:1 boundary on pink track.",
+    "Sidebar hover excludes data-disabled and aria-disabled.",
+    "Forced-colors switches decoration var to 0."
+  ],
+  "liveUiVerification": {
+    "date": "2026-10-10",
+    "method": "Real VRCX-0 frontend served by `npm run dev` (Vite, http://localhost:9000) loaded in headless Chromium; each theme injected into a freshly loaded page. Contrast from canvas-sampled sRGB pixels: foreground over its own fill, then over the page background at the element's effective opacity chain (0.5 for disabled controls).",
+    "result": "No change needed. Disabled checked checkbox and disabled primary button both measure 3.18:1, level with the unstyled app baseline of 3.32:1.",
+    "methodologyCorrection": "An earlier run reported about 1.1:1 for this theme. That was an artefact of injecting two theme files into one page; with one theme per freshly loaded page the ratio is 3.18:1. VRCX-0 installs a single theme snapshot, so the stacked scenario does not occur.",
+    "noteOnDisabled": "WCAG exempts inactive components; the numbers are reported only for comparison against the unstyled app.",
+    "evidence": [
+      "live-ui-audit.json"
+    ],
+    "limits": [
+      "Real frontend has no Tauri backend",
+      "No official DevKit run, testedWith stays 0.0.0-unverified"
+    ]
+  }
+}

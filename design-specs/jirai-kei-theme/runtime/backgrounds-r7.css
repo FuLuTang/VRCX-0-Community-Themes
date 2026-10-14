@@ -1,0 +1,20 @@
+/* R7 main-content wallpaper. Ordering note: this layer loads AFTER windose-runtime.css
+   so it replaces that file's old right-bottom heart outline with the requested art.
+   ::before (app wallpaper) and ::after (nav-resize accent) stay untouched.
+   User layout: Ame-chan's Tweeter profile bottom-LEFT, Icon for the game bottom-RIGHT,
+   flush to the corners and now the SAME size. Assets are keyed, pre-scaled to 200px
+   with nearest, and drawn at 22% alpha because they are background material only. */
+.vrcx-0-main-content {
+ --r7-bg-size:200px;
+ background-color:#201936;
+ background-image:var(--r7-ame-tweeter,none),var(--r7-game-icon,none),var(--wd-bg-stars);
+ background-repeat:no-repeat,no-repeat,repeat;
+ background-position:left 0 bottom 0,right 0 bottom 0,0 0;
+ background-size:var(--r7-bg-size) var(--r7-bg-size),var(--r7-bg-size) var(--r7-bg-size),128px 128px;
+}
+@media(max-width:900px) {
+ .vrcx-0-main-content { --r7-bg-size:150px; }
+}
+@media(max-width:640px) {
+ .vrcx-0-main-content { --r7-bg-size:120px; }
+}

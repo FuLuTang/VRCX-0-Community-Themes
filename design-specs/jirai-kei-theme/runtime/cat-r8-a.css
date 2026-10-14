@@ -1,0 +1,22 @@
+/* R8-cat candidate A: 18px needy_cat in the reserved right slot of the nav footer. */
+.vrcx-0-sidebar-surface [data-sidebar="footer"] {
+  position: relative;
+  padding-inline-end: 32px;
+}
+.vrcx-0-sidebar-surface [data-sidebar="footer"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 18px;
+  height: 18px;
+  background-image: var(--r5-pixel-mascot);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  opacity: .9;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-sidebar-surface [data-sidebar="footer"]::after { animation: none; opacity: .9; }
+}

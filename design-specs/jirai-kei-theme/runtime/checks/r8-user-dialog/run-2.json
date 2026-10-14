@@ -1,0 +1,197 @@
+{
+  "result": "PASS",
+  "authoritySources": [
+    "/tmp/vrcx-win-src/src/components/dialogs/user-dialog/components/UserDialogHeaderSection.tsx:709-734",
+    "/tmp/vrcx-win-src/src/components/UserStatusDot.tsx:26-35",
+    "/tmp/vrcx-win-src/src/components/dialogs/group-dialog/GroupDialogHeaderSection.tsx:254-282"
+  ],
+  "actualSourceStructureHit": {
+    "titleHasNoCardHeader": true,
+    "titleHasCardTitle": true,
+    "nestedPre": true,
+    "newInlineDotSelectorHits": true
+  },
+  "groupDialogAndNonEntityDecoysUnchanged": true,
+  "inlineActiveRingPreserved": {
+    "before": {
+      "id": "active",
+      "radius": "9999px",
+      "borderWidth": "2px",
+      "borderColor": "rgb(244, 224, 94)",
+      "bg": "rgb(33, 26, 51)",
+      "width": 10,
+      "height": 10
+    },
+    "after": {
+      "id": "active",
+      "radius": "0px",
+      "borderWidth": "2px",
+      "borderColor": "rgb(244, 224, 94)",
+      "bg": "rgb(33, 26, 51)",
+      "width": 10,
+      "height": 10
+    }
+  },
+  "headerDotBeforeAfter": {
+    "before": {
+      "color": "rgb(242, 235, 255)",
+      "bg": "rgb(244, 224, 94)",
+      "borderRadius": "9999px",
+      "borderColor": "rgb(242, 235, 255)",
+      "borderWidth": "0px",
+      "clipPath": "none",
+      "opacity": "1",
+      "position": "static",
+      "top": "auto",
+      "right": "auto",
+      "bottom": "auto",
+      "left": "auto",
+      "x": 619.625,
+      "y": 244.5,
+      "width": 10,
+      "height": 10,
+      "transform": "none",
+      "outline": "rgb(242, 235, 255) none 3px",
+      "outlineOffset": "0px",
+      "appearance": "none",
+      "boxShadow": "none",
+      "textDecoration": "none",
+      "borderBottom": "0px"
+    },
+    "after": {
+      "color": "rgb(242, 235, 255)",
+      "bg": "rgb(244, 224, 94)",
+      "borderRadius": "0px",
+      "borderColor": "rgb(33, 19, 45)",
+      "borderWidth": "1px",
+      "clipPath": "none",
+      "opacity": "1",
+      "position": "static",
+      "top": "auto",
+      "right": "auto",
+      "bottom": "auto",
+      "left": "auto",
+      "x": 619.625,
+      "y": 244.5,
+      "width": 10,
+      "height": 10,
+      "transform": "none",
+      "outline": "rgb(242, 235, 255) none 3px",
+      "outlineOffset": "0px",
+      "appearance": "none",
+      "boxShadow": "none",
+      "textDecoration": "none",
+      "borderBottom": "1px"
+    }
+  },
+  "fixture": "NOT WINDOWS · fictional names and solid-color data-URI images only",
+  "loadedCssFiles": [
+    "theme.css"
+  ],
+  "missingTailwindUtilitiesSuppliedInFixture": [
+    "bg-emerald-500/15",
+    "bg-rose-500/15",
+    "text-emerald-700",
+    "dark:text-emerald-400",
+    "text-rose-700",
+    "dark:text-rose-400"
+  ],
+  "portalOutsideMain": true,
+  "worldDialogAvatarMatchesSidebar": true,
+  "avatarCutMatchesSidebar": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "frameNodesUnchanged": {
+    "ProfileAvatarFrame": true,
+    "profileIconFrame": true
+  },
+  "statusFillColorsUnchanged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "activeInnerStatusRingAfter": {
+    "radius": "0px",
+    "borderColor": "rgb(244, 224, 94)",
+    "unchanged": true
+  },
+  "headerStatusAfter": {
+    "background": "rgb(244, 224, 94)",
+    "borderRadius": "0px",
+    "border": "1px",
+    "borderColor": "rgb(33, 19, 45)",
+    "size": {
+      "width": 10,
+      "height": 10
+    }
+  },
+  "range": {
+    "widthBefore": 470.375,
+    "widthAfter": 470.375,
+    "heightBefore": 16,
+    "heightAfter": 16,
+    "track": {
+      "track": [
+        {
+          "selector": "[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"].accent-primary.min-w-16.flex-1::-webkit-slider-runnable-track",
+          "hostMatches": true,
+          "declarations": "height: 8px; background: rgb(16, 11, 30); border: 1px solid rgb(75, 58, 99); box-shadow: rgba(0, 0, 0, 0.55) 0px 1px 3px inset;"
+        }
+      ],
+      "thumb": [
+        {
+          "selector": "[data-slot=\"dialog-content\"].entity-dialog input[type=\"range\"].accent-primary.min-w-16.flex-1::-webkit-slider-thumb",
+          "hostMatches": true,
+          "declarations": "appearance: none; width: 16px; height: 16px; margin-top: -5px; border: 1px solid rgb(33, 19, 45); border-radius: 0px; background: rgb(255, 217, 238); box-shadow: rgb(217, 127, 198) 0px 0px 0px 2px inset, rgb(243, 173, 217) 0px 1px 0px;"
+        }
+      ]
+    },
+    "focus": {
+      "visible": true,
+      "outlineStyle": "dashed",
+      "outlineWidth": "2px",
+      "outlineOffset": "3px"
+    }
+  },
+  "bioDiffContrastWCAG": {
+    "added": 13.73,
+    "deleted": 7.87
+  },
+  "bioDiffNonColorCues": {
+    "addUnderlinePx": 1,
+    "removeLineThrough": true
+  },
+  "themeDecorationSourcesAndTreatment": {
+    "dialogAvatarPixelCut": "theme-authored windose-runtime.css avatar cut/frame rules; extended side-panel/data-table selectors to all dialog-content portals, including generic world dialogs",
+    "defaultThemeAvatarFrame": "theme-authored windose-runtime.css:91-97, only for icon buttons without app border-0; inset:0 frame uses --wd-avatar-ring; paired image uses --wd-avatar-cut; neither rule is overridden in R8",
+    "bannerCrossStitch": "theme-authored windose-runtime.css ::before; margins narrowed and opacity lowered to 0.12",
+    "bannerScallop": "theme-authored windose-runtime.css ::after; height 4px and opacity 0.68",
+    "profileAvatarFrame": "application/VRChat ProfileAvatarFrame sibling, computed style unchanged; not clipped/covered by dialog avatar selectors",
+    "profileIconFrame": "application/VRChat profileAppearance.iconFrame sibling, computed style unchanged and original border-0 protection retained"
+  },
+  "cssBytes": {
+    "user-dialog-r8.css": 3240,
+    "bio-diff-r8.css": 2068,
+    "limit": 10240
+  },
+  "files": {
+    "before.png": {
+      "bytes": 114790
+    },
+    "after.png": {
+      "bytes": 105501
+    },
+    "comparison.png": {
+      "bytes": 190326
+    }
+  }
+}

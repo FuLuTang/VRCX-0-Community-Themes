@@ -1,0 +1,99 @@
+/* ==========================================================================
+   R4 · dynamic-list (feed) type icons & badges            feed-badges.css
+   Concatenate LAST in build-runtime.mjs (after body-typography). Main app is
+   read-only; every selector below is anchored on a class/attribute that the
+   application writes as a literal (evidence in ../research/feed-r4.md).
+   No DOM is invented, no text is replaced; row heights, spacer heights and the
+   virtual rows' translateY are never touched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   5a · type-column glyphs were reported as "not pixelated" while map-pin and
+   person-standing looked fine. The class audit shows the opposite of a missing
+   selector: all 257 lucide identifiers imported by src SSR-render a class that
+   IS inside jirai-icons.css' `svg.lucide:is(...)` union (only the jsdom-only
+   grid-3x3 is out). The real defect is the icon BOX: FeedTypeIndicator renders
+   its glyph with `size-3.5` (14px, FeedTypeIndicator.tsx:43), so a 16x16 pixel
+   mask is resampled by 0.875 and loses ~27% of its lit pixels
+   (checks/r4-feed-badges/sharpness.json: pencil-line 58 solid px at 14px vs 79
+   at 16px). Sparse 1px drawings degrade far more than solid ones, which is why
+   only the pencil read as "an ordinary lucide stroke". Put the glyph back on the
+   16px integer grid; the label span has min-w-0/truncate and the row height is
+   set by the table/grid, so nothing reflows vertically.
+   The anchor is the component's own wrapper span plus the aria-hidden svg it
+   renders (FeedTypeIndicator.tsx:39-45); FeedStatusBadge uses the same wrapper
+   classes but has no svg child, so it is not matched.
+   Scope note: `grep -rn "inline-flex min-w-0 items-center gap-1.5" src` returns
+   four more TypeIndicator twins that emit the identical
+   wrapper + `size-3.5 shrink-0` aria-hidden lucide glyph — GameLogType-
+   Indicator.tsx:40, FriendLogViewParts.tsx:100, ModerationViewParts.tsx:53,
+   MyAvatarsViewParts.tsx:169. They are the same widget family over the same
+   icon set, so they move to the same grid in one go; leaving them at 14px would
+   make the identical glyph two different sizes in one app. ------------------ */
+span.inline-flex.min-w-0.items-center.gap-1\.5:has(> svg.lucide[aria-hidden='true'])
+    > svg.lucide[aria-hidden='true'] {
+    width: 16px;
+    height: 16px;
+    /* mask-size:contain then blits 16x16 -> 16x16 with no resampling. */
+    -webkit-mask-size: 16px 16px;
+    mask-size: 16px 16px;
+}
+
+/* --------------------------------------------------------------------------
+   5b · the "status change" detail cell printed two round dots
+   (`size-2.5 shrink-0 rounded-full` in FeedStatusBadge.tsx:22-25) next to a
+   lucide arrow, while the friend avatars in the rail already show square pixel
+   status blocks (windose-runtime.css:105 zeroes the radius of the rail's
+   `size-3.75` status spans). Square the feed dots and give them the same 1px
+   dark keyline so both surfaces read as the same material. The status fill is
+   untouched: it still comes from the row's --status-* class
+   (feedRows.ts resolveFeedStatusMeta). box-shadow, not border/outline, because
+   it is the only way to draw the keyline without changing the 10px box. ------ */
+span.inline-flex.min-w-0.items-center.gap-1\.5:has(> span.size-2\.5.rounded-full)
+    > span.size-2\.5.rounded-full {
+    border-radius: 0;
+    box-shadow: 0 0 0 1px #16112a;
+}
+
+/* The expanded row (FeedExpandedRow.tsx:131-146) wraps the same component in a
+   plain `span.inline-flex.items-center.gap-1.5`, and the component emits the
+   min-w-0 wrapper itself, so the rule above already covers it. Intentional
+   non-targets, verified by class shape: the accent swatch in
+   themes/components/AccentColorPicker.tsx:82,101 and the community dots in
+   charts/components/mutual-friends/*.tsx sit directly under a Button, not under
+   an `inline-flex min-w-0 items-center gap-1.5` span. */
+
+/* --------------------------------------------------------------------------
+   5c · region chips ("JP" / "USE" / "USW" / "EU" / "US", RegionCodeBadge.tsx:
+   32-42) shipped as `rounded border bg-muted/70 text-muted-foreground font-mono
+   text-[10px]`: a 4px-radius translucent pill in low-contrast grey on grey.
+   Rebuild them as Windose chips: square corners, one hard --wd-frame keyline,
+   an opaque raised face and bright pixel-type label. The literal class list is
+   the component's own; h-4 (16px) is kept so no row can grow. -------------- */
+span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
+    border-radius: 0;
+    border: 1px solid var(--wd-frame);
+    background-color: var(--wd-raised);
+    color: var(--wd-square);
+    /* "WD Pixel CJK" (Fusion) — real lowercase + accents, unlike Silkscreen. */
+    font-family: var(--wd-body-font-family);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    /* 1px stair notch on the two outer corners; the keyline follows the cut. */
+    clip-path: polygon(
+        1px 0,
+        100% 0,
+        100% calc(100% - 1px),
+        calc(100% - 1px) 100%,
+        0 100%,
+        0 1px
+    );
+}
+
+/* Chips that sit on a hovered/selected feed row keep their own opaque face:
+   the row's translucent hover surface must not show through the label. */
+.feed-column-row-new span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\],
+[data-feed-list-summary]:hover
+    span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
+    background-color: var(--wd-title);
+}

@@ -1,0 +1,45 @@
+[
+ {
+  "offDiffs": [],
+  "section": "brand-heart-r97",
+  "fixture": "r9-dialogs",
+  "elements": 81,
+  "integratedVsMovedLast": 0,
+  "integratedVsOff": 0,
+  "firstDiffs": [],
+  "pass": true
+ },
+ {
+  "offDiffs": [],
+  "section": "brand-heart-r97",
+  "fixture": "r9-popups",
+  "elements": 123,
+  "integratedVsMovedLast": 0,
+  "integratedVsOff": 0,
+  "firstDiffs": [],
+  "pass": true
+ },
+ {
+  "offDiffs": [],
+  "section": "brand-heart-r97",
+  "fixture": "r8-login",
+  "elements": 93,
+  "integratedVsMovedLast": 0,
+  "integratedVsOff": 0,
+  "firstDiffs": [],
+  "pass": true
+ },
+ {
+  "offDiffs": [
+   "11|SPAN|static-brand :: 20:none -> url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000",
+   "26|SPAN|animated-brand :: 20:none -> url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000"
+  ],
+  "section": "brand-heart-r97",
+  "fixture": "r9-brand-heart",
+  "elements": 36,
+  "integratedVsMovedLast": 0,
+  "integratedVsOff": 2,
+  "firstDiffs": [],
+  "pass": true
+ }
+]

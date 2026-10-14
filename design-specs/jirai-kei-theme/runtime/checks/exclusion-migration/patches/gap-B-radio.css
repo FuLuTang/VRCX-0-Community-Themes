@@ -1,0 +1,25 @@
+/* ==== R10 exclusion-migration, gap B: Base UI Radio (Radio.Root = [role=radio], Radio.Indicator = its child span;
+   DataDirMigrationDialog.tsx:222). Square pixel box, same bevel/colour language as the pixel checkbox above; the 16px
+   (size-4) box and the 6px indicator box are not resized. Global (no context exclusion) so it follows the
+   "same element, same style" rule. The native input[type=radio] rule in fields-toolbar-r10.css is left alone. ==== */
+[role="radio"] {
+  appearance:none;-webkit-appearance:none;
+  border:1px solid #8c71b0;border-radius:0;
+  background:#211a33;color:#16112a;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+}
+[role="radio"]:is([data-checked],[aria-checked="true"]) {
+  border-color:#6c5ce0;background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}
+[role="radio"] > span {
+  border-radius:0;background:#16112a;
+}
+/* shadcn's focus ring is a rounded box-shadow ring: replace it with the theme's square focus frame */
+[role="radio"]:focus-visible {
+  outline:2px solid #ff7fcf;outline-offset:2px;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+}
+[role="radio"]:is([data-checked],[aria-checked="true"]):focus-visible {
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}

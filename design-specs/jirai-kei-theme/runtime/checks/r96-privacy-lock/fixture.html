@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOT WINDOWS · Privacy Lock R9.6</title>
+  <style id="fixture-layout">
+    * { box-sizing:border-box; }
+    html,body { margin:0; height:auto!important; min-height:100vh; overflow:visible!important; background:#16112a; color:#f2ebff; font:13px/1.45 system-ui,sans-serif; }
+    body { padding:18px; }
+    #fixture-heading { display:flex; align-items:baseline; gap:12px; margin:0 0 14px; border-bottom:2px solid #6c5ce0; padding:0 0 8px; }
+    #fixture-heading h1 { margin:0; font:600 17px/1.2 system-ui,sans-serif; }
+    #fixture-heading small { color:#b9add9; font-size:10px; }
+    #state-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; align-items:start; }
+    #state-grid > .state-panel { min-width:0; padding:10px; border:1px solid #51436d; background:#1b1430; }
+    #state-grid > .state-panel > h2 { margin:0 0 8px; color:#b9add9; font-size:10px; line-height:1.2; font-weight:650; letter-spacing:.06em; text-transform:uppercase; }
+    #state-grid [data-vrcx-0-surface="privacy-lock"] { position:relative!important; inset:auto!important; z-index:1!important; display:flex!important; width:100%!important; min-height:560px; padding:12px!important; align-items:center; justify-content:center; overflow:visible!important; outline:none!important; background:#16112a; }
+    #state-grid [data-vrcx-0-surface="privacy-lock"] > div[class~="bg-popover/80"] { width:100%; }
+    #state-grid .fixture-field { display:flex; width:100%; flex-direction:column; align-items:center; gap:7px; }
+    #state-grid [data-slot="input-otp"] { display:flex; justify-content:center; }
+    #state-grid [data-slot="input-otp-group"] { display:flex; gap:2px; }
+    /* Lead fix: zero-specificity layout shim. The previous ID-specific rule repainted border-color and masked the theme's active-slot pink. */
+    :where(#state-grid [data-slot="input-otp-slot"]) { display:flex; width:40px; height:40px; align-items:center; justify-content:center; border:1px solid #6c5ce0; border-radius:0; background:#16112a; color:#f2ebff; }
+    #state-grid .fixture-muted { color:#b9add9; }
+    #state-grid .fixture-actions { display:flex; justify-content:center; gap:8px; }
+    #lower-probes { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px; }
+    #lower-probes > section { min-width:0; padding:10px; border:1px solid #51436d; background:#1b1430; }
+    #lower-probes h2 { margin:0 0 8px; color:#b9add9; font-size:10px; letter-spacing:.06em; text-transform:uppercase; }
+    #statusbar-probe { display:flex; min-height:42px; align-items:center; gap:12px; padding:8px 12px; border:1px solid #1a1226; background:#d97fc6; color:#16112a; }
+    #statusbar-probe > span { display:flex; align-items:center; gap:6px; }
+    #dialog-decoy [data-slot="dialog-content"] { display:flex; max-width:320px; min-height:116px; flex-direction:column; gap:9px; padding:16px; border:1px solid #51436d; border-radius:16px; background:#2a2147; box-shadow:0 5px 16px #0008; }
+    #dialog-decoy h3 { margin:0; font-size:15px; }
+    #dialog-decoy p { margin:0; color:#b9add9; }
+    .fixture-note { margin:8px 0 0; color:#b9add9; font-size:10px; }
+    @media (max-width:1100px) { #state-grid { grid-template-columns:1fr; } #lower-probes { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header id="fixture-heading">
+    <h1>NOT WINDOWS · Privacy Lock R9.6</h1>
+    <small>fictional DOM specimen · locked / recovering / startup-error · no account data</small>
+  </header>
+
+  <main id="state-grid">
+    <section class="state-panel" id="locked-state">
+      <h2>locked · source-shaped PrivacyLockOverlay</h2>
+      <div data-vrcx-0-surface="privacy-lock" class="vrcx-0-app-overlay fixed z-[10000] flex items-center justify-center overflow-y-auto p-6 outline-none" role="dialog" aria-modal="true">
+        <div class="bg-popover/80 text-popover-foreground ring-foreground/10 flex w-full max-w-xs flex-col items-center gap-5 rounded-2xl p-6 shadow-lg ring-1" id="locked-card">
+          <span data-slot="avatar" data-size="default" class="group/avatar after:border-border relative flex size-8 shrink-0 rounded-full select-none size-16" aria-hidden="true"><span data-slot="avatar-fallback" class="bg-muted text-muted-foreground flex size-full items-center justify-center rounded-full text-sm">▧</span></span>
+          <h2 class="text-base font-medium" id="locked-title">已锁定</h2>
+          <div class="fixture-field" data-slot="field">
+            <label class="sr-only" for="privacy-lock-code">隐私锁 PIN</label>
+            <div data-slot="input-otp" class="cn-input-otp flex items-center justify-center" id="privacy-lock-code" role="group" aria-label="4 位锁屏 PIN">
+              <div data-slot="input-otp-group" class="flex items-center">
+                <div data-slot="input-otp-slot" data-active="true" class="relative flex size-10 items-center justify-center border-y border-r text-base">•</div>
+                <div data-slot="input-otp-slot" data-active="false" class="relative flex size-10 items-center justify-center border-y border-r text-base">•</div>
+                <div data-slot="input-otp-slot" data-active="false" class="relative flex size-10 items-center justify-center border-y border-r text-base"></div>
+                <div data-slot="input-otp-slot" data-active="false" class="relative flex size-10 items-center justify-center border-y border-r text-base"></div>
+              </div>
+            </div>
+            <button data-slot="button" data-variant="link" data-size="default" type="button" id="forgot-button" class="text-primary underline-offset-4 hover:underline h-auto p-0 text-xs text-muted-foreground">忘记密码？</button>
+          </div>
+          <div class="text-muted-foreground flex w-full items-center justify-center gap-3 text-xs" aria-label="连接状态">
+            <span class="flex items-center gap-1.5"><span class="inline-block size-2 shrink-0 rounded-full bg-[var(--status-online)]"></span>VRChat 服务</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block size-2 shrink-0 rounded-full bg-muted-foreground/40"></span>实时连接</span>
+          </div>
+          <div class="flex justify-center gap-2">
+            <button data-slot="button" data-variant="outline" data-size="sm" class="inline-flex h-7 gap-1 px-2.5 rounded-lg border border-transparent" type="button" id="background-button">后台模式</button>
+            <button data-slot="button" data-variant="outline" data-size="sm" class="inline-flex h-7 gap-1 px-2.5 rounded-lg border border-transparent" type="button" id="logout-button">退出登录</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="state-panel" id="recovering-state">
+      <h2>recovering · RecoverForm</h2>
+      <div data-vrcx-0-surface="privacy-lock" class="vrcx-0-app-overlay fixed z-[10000] flex items-center justify-center overflow-y-auto p-6 outline-none" role="dialog" aria-modal="true">
+        <div class="bg-popover/80 text-popover-foreground ring-foreground/10 flex w-full max-w-xs flex-col items-center gap-5 rounded-2xl p-6 shadow-lg ring-1" id="recovering-card">
+          <span data-slot="avatar" data-size="default" class="group/avatar after:border-border relative flex size-8 shrink-0 rounded-full select-none size-16" aria-hidden="true"><span data-slot="avatar-fallback" class="bg-muted text-muted-foreground flex size-full items-center justify-center rounded-full text-sm">▧</span></span>
+          <h2 class="text-base font-medium" id="recovering-title">已锁定</h2>
+          <form class="flex w-full flex-col gap-3" id="recover-form">
+            <p class="fixture-muted text-center text-xs">输入账户密码即可清除本机锁屏 PIN。</p>
+            <div data-slot="field"><label class="sr-only" for="privacy-lock-account-password">账户密码</label><input data-slot="input" id="privacy-lock-account-password" type="password" class="h-8 w-full min-w-0 rounded-lg border bg-transparent px-2.5 py-1 text-base" autocomplete="off" placeholder="账户密码"></div>
+            <button data-slot="button" data-variant="default" data-size="default" class="inline-flex h-8 gap-1.5 px-2.5 rounded-lg border border-transparent bg-primary text-primary-foreground w-full" type="submit" class="w-full" id="clear-unlock-button">清除密码并解锁</button>
+            <button data-slot="button" data-variant="link" data-size="default" type="button" id="back-button" class="text-primary underline-offset-4 hover:underline h-auto p-0 text-xs text-muted-foreground">返回</button>
+          </form>
+          <div class="text-muted-foreground flex w-full items-center justify-center gap-3 text-xs" aria-label="连接状态">
+            <span class="flex items-center gap-1.5"><span class="inline-block size-2 shrink-0 rounded-full bg-[var(--status-active)]"></span>VRChat 服务</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block size-2 shrink-0 rounded-full bg-[var(--status-online)]"></span>实时连接</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="state-panel" id="startup-error-state">
+      <h2>startup-error · BackendUnavailablePanel</h2>
+      <div data-vrcx-0-surface="privacy-lock" class="vrcx-0-app-overlay fixed z-[10000] flex items-center justify-center overflow-y-auto p-6 outline-none" role="dialog" aria-modal="true">
+        <div class="bg-popover/80 text-popover-foreground ring-foreground/10 flex w-full max-w-sm flex-col items-center gap-3 rounded-2xl p-6 text-center shadow-lg ring-1" id="startup-error-card">
+          <span class="text-muted-foreground size-6" aria-hidden="true">▣</span>
+          <h2 class="text-base font-medium" id="startup-error-title">无法连接本地服务</h2>
+          <p class="fixture-muted text-sm">请检查服务是否启动，然后重试。</p>
+          <button data-slot="button" data-variant="outline" data-size="sm" class="inline-flex h-7 gap-1 px-2.5 rounded-lg border border-transparent" type="button" id="retry-button">重试</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="lower-probes">
+    <section id="statusbar-probe-panel">
+      <h2>statusbar · 同款 StatusDot（应保持原样）</h2>
+      <footer id="statusbar-probe" class="vrcx-0-statusbar" data-vrcx-0-surface="statusbar">
+        <span><span class="inline-block size-2 shrink-0 rounded-full bg-[var(--status-online)]"></span>服务器在线</span>
+        <span><span class="inline-block size-2 shrink-0 rounded-full bg-muted-foreground/40"></span>连接断开</span>
+      </footer>
+      <p class="fixture-note">该组件不在 privacy-lock surface 内，不应因 R9.6 规则改变。</p>
+    </section>
+    <section id="dialog-decoy">
+      <h2>dialog decoy · must remain unchanged</h2>
+      <div data-slot="dialog-content" role="dialog" aria-modal="true" class="entity-dialog">
+        <h3 id="dialog-decoy-title">其他对话框</h3>
+        <p>这张圆角软卡故意不属于隐私锁屏。</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

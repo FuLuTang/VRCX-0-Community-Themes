@@ -1,0 +1,71 @@
+{
+  "probe": [
+    {
+      "k": "pencil-line-14",
+      "w": 14,
+      "h": 14,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "pencil-line-16",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "map-pin-14",
+      "w": 14,
+      "h": 14,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "map-pin-16",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "person-standing-14",
+      "w": 14,
+      "h": 14,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "person-standing-16",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "log-in-14",
+      "w": 14,
+      "h": 14,
+      "mask": true,
+      "maskSize": "contain"
+    },
+    {
+      "k": "log-in-16",
+      "w": 16,
+      "h": 16,
+      "mask": true,
+      "maskSize": "contain"
+    }
+  ],
+  "imageRenderingAfter": [
+    "pixelated",
+    "pixelated",
+    "pixelated",
+    "pixelated",
+    "pixelated",
+    "pixelated",
+    "pixelated",
+    "pixelated"
+  ],
+  "legend": "rows: pencil-line, map-pin, person-standing, log-in | cols: 14px (app size-3.5), 16px (integer grid)"
+}

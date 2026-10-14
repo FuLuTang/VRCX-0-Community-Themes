@@ -1,0 +1,108 @@
+/* R10 toast sprites only. Phone layer deferred until task-59 assets; static CSS, no SVG data. */
+:root {
+  --r10-toast-success-face-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABP0lEQVRIie3WsWrCQBgH8HusPkSnrh18kA+LdHHwKUpx7SS4CC7FKS8gVJAOXUpSBCchnHxn/se/Z3JeEh0KDfzJl3h8P3MmOY3534wxMhjZMDeZGKma7/LtWa6KSwRqwnthu0jzx9mnS1mWvu6MygUsz148wnXnK5UW04gv0Hl6pSWmmT59uRQfha+lL7hZFhfB99effuCGEG2mx9iHdXgsXcCwOdIEru9nLjq1uk9CY+B+vnZhnAMQ+NXApuhvh/Fvd0MX7cl1LYjbnBtorU3x9rHfBx+cw3htbrPc2vHqrI6iIajnFWVMgyvUz3UmHDJe/Ur28NwetJPFKQGI83g0GFUoijHKDTxYIWjEKI+XwcghSRijDPINApCnMwRNdcMkYXVg3QLMqQNbb0BTXlcY23sxTl3Vb/q3w/y17QjDXyUWZSx1OwAAAABJRU5ErkJggg==");
+  --r10-toast-error-face-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABEklEQVRIie3WQQrCMBAF0BzQG7gIeI2AeA53It6g4EYQwaUXqCiICzfSitCVUCoTOmUcm2batAvBwKdTbPPaGBOV+jellNGzgmeQgTFl58/k8pVecdMAuXB6v57s5A/RBnKhugS9sAQbR1ebPM+rmqOagU7YByaHRYXQmr+ploBdhhLQuqHVQ4Gr6c0mPaVVbULB8zb1gvvl4wNUkslDQYpAZ3COR17zc1Pzu/SCvHOMC4xHkQ0MLRxFi0ETeJxvbChOgyDiYhBnHXwXCEKNoCv0etNmqUO0Kwhv2wuYreOiuL+cwZnaGkSUduAD4bMgEBrcxEFX+AOaPsC6DZgmGKQoXz2arg3ejKW7+qB/O9SvtTd4eyFNZRXZ3gAAAABJRU5ErkJggg==");
+}
+:root {
+  --r10-toast-success-ring-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAtUlEQVRIidXW0QnFIAwF0LuGS2Sm7OwgHcFHoQUJVxOLBt5HoNXQQxpRIbVgEiq1XFJLI3E981gJBKDZB5ZxfIRYhFAQbBVaQrERC6HoknZg8NC3ui89i6Bg4O7q8AQtYjjxr6BmgmDtOg02uxOdBmGq1UwQN5oNNtrY06Bm9hFdQ9MWDTafFhhh93M/eHIT1/edTW5bIEKOKZvk/Vp2mXKrkgnooXac5YVO/BHqXQttnnun+QH56DcU93KK1wAAAABJRU5ErkJggg==");
+  --r10-toast-error-ring-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAs0lEQVRIie2WSwoEIQxE66juvYmXmCPmCGmEbnBCaVRMw8AssjB+XqpECTQXDCJpLqK5KAm557ESmACNDliGYxPEou77NPtpEQy2CrKKYcZf4JMwrxCpnNaOKBha2x91O3e2pRQvqsMDfEsd/kD8oqXKnkU0UOzDjwSKzdHkQXWJAaN+GmX5rvRoYAqA6ggYYa16wNPWygzQs5Y1Uz1YmgF6UJtn64YNVU8Jaw/ZQXad271doLh4+prx93AAAAAASUVORK5CYII=");
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"],
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"] {
+  box-sizing:content-box;
+  /* NOTHING here may set a height: the app measures this box into --toast-height, so declaring
+     one inflates the toast and then traps the sticker inside it. Keep the app's natural height
+     (one line box) and let the sticker overhang the toast's edges.
+     Width opens to 56px so the sticker does not run under the message text. */
+  /* flex, not block: an inline svg inside a block box drags in the line-box descender and
+     inflates this box to ~26px, which then pushes the toast taller than the 48px sticker.
+     As a flex item the box is exactly the svg height (1lh = 20px), the toast lands at 46px,
+     and the sticker covers its top and bottom edges. */
+  display:flex; flex:0 0 75.6px; width:75.6px; min-width:75.6px;
+  position:relative;
+  background-image:none;
+}
+/* Sticker layer. Absolutely positioned, so it contributes ZERO to the measured height: the
+   toast keeps its original box while the 2x sprite covers its top and bottom borders. */
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::before,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::before {
+  content:""; position:absolute; left:50%; top:50%;
+  width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  background-repeat:no-repeat; background-position:center center;
+  background-size:75.6px 64.8px; image-rendering:pixelated; pointer-events:none;
+}
+/* The app clips Toast.Content with overflow-hidden, which is what kept the sticker from ever
+   covering the toast border. Nothing inside the toast needs that clip (the shell has the same
+   rounded corner), so release it and let the sticker cover the top and bottom edges. */
+[data-slot="toast-viewport"] [data-slot="toast-content"] {
+  overflow:visible;
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::before,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::before {
+  background-size:75.6px 64.8px; image-rendering:pixelated;
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::before { background-image:var(--r10-toast-success-ring-png); }
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::before { background-image:var(--r10-toast-error-ring-png); }
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::after,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::after {
+  content:""; position:absolute; left:50%; top:50%; width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  background-position:center; background-repeat:no-repeat; background-size:75.6px 64.8px; image-rendering:pixelated; pointer-events:none;
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::after { background-image:var(--r10-toast-success-face-png); }
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::after { background-image:var(--r10-toast-error-face-png); }
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"] > svg,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"] > svg { opacity:0 !important; }
+
+/* Info and warning share the original shocked-expression logical grid.
+   The generated face and colored rings are padded 28x24 one-times PNG layers. */
+:root {
+  --r10-toast-shock-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABPUlEQVRIie2WsWrDMBCG9Vp9h05dO3TrC3QUlJKlz1FCOnQ2dMjQpaNfwJBAHEiWEpdCpoBR+EV/caiyckXOUOjBj09n+T75JEs25t+MMfbmwcU6S2Hsd/Kv3eqHRoXbDGgInsrTPl84KgvLJb+u1l593wc/BW3HgO3qpwCRfvymrQamAaYGoC1vMQya3W+9ukUXfFsKXL51J4Hv088ksM2VVgIlBMnQ5jX247bVzqMExsmpIWBzWXmhtLiqypoD7l8bLwmXIpDwYiA3AoKlEMfcxSU9aejIZS4TwF9vVu727sUncx+HILQRZ38O7lcfPqAp4OOs8ZJAxrhSJVAFHQJiG5svnZcEMjYEVBnnhAngY64kSAr3ioAwPBQDqfpqEiQXzahAmziApYqBEqrZH9m3+DDWnupn/e0wf82OYBkkii6CAXMAAAAASUVORK5CYII=");
+  --r10-toast-shock-ring-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABgCAYAAADm4nCVAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAB3UlEQVR4nO3aMY7DMAxEUd7/0pMmVYoYgmhqxv6vXqwofSjJrlM1TGYKBHwVmSkQ8FHcb4C4sb0H5D7f6XnHaZH7fKfnHadF7vOdnredFlU4Le5Pw9o3tL2AGS3uT8PaN7S9gBkt7k/D2je0vYAZLe5Pw9o38HTqPuDN9bcHrpcRAbOJgNnkHpCXzDXTbykEbEbAcOIGZpN7wLsHwhoChiNgOAI+LSB/93m77ENAbwQMR8C3BTw98NtpEQHNEDAcAcMR8OF4DwxHwHAEDEfAcAQMR8BwBAxHwHAEDEfAcAQMR8AwPA8MR8BwBAxHwPAHtpffWbr8AbQiYDhxA7OJgO8ivheajYDhCBiOgA/DP7PDETAcAcMRMBwBwxEwHAGfHpDHS94IGI6A4QgYjq9YhD3AXf6MwoeYXgQMJ25gNp0OyEvqnvHzI2AvAoYTNzCbpgNeDXB8oDA6fV4E3EPAcOIGZtPpgPYDmbM7L7uBzNmdl91A5uzOy24gc3bndfrPCjWr4fm614sbsK3c1/R83evFDahmNTxf93pxA7aV+5qer9xMD7z7+9U8X1ywXwT8r9xdzM8NdEfA/yqNhpXZfJXu7gPaPTCZzWPn7gPaPTCZzWPn7gPaPTCZzbPrAyVApOVXHmSVAAAAAElFTkSuQmCC");
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"],
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"] {
+  box-sizing:content-box;
+  display:flex; flex:0 0 75.6px; width:75.6px; min-width:75.6px;
+  position:relative; background-image:none;
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"]::before,
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"]::before {
+  content:""; position:absolute; left:50%; top:50%;
+  width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  
+  
+  
+  
+  pointer-events:none;
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"]::after,
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"]::after {
+  content:""; position:absolute; left:50%; top:50%;
+  width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  /* The face includes the same two-cell padding as the 28x24 ring. */
+  background:var(--r10-toast-shock-png) center / 75.6px 64.8px no-repeat;
+  image-rendering:pixelated; pointer-events:none;
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"] > svg,
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"] > svg { opacity:0 !important; }
+
+/* Keep the face pixel-crisp; render its separate ring with four-sample coverage only on
+   the outside edge. The inner moat stays a hard transparent logical cell. */
+:root {
+  --r10-toast-info-ring-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAuUlEQVRIid2WQQ7EIAhF/8nribwBd/EiJDaZjAnpIKhhWHTBomJ8/k+DoNcGI0qvjXptrAR989gJLICsA7bhOARpIaFFceaT12C7oCf0Ms6hSJi0GbOcvFkEDJ4DQ91JzY5qjCR1LIEZ6iAtzQTyqxVSRg1ZxDVa26sUQqthVpfB+EuzOg1k8/6HSraep8jXAgL4sy4/oq1lDxhtLa0APWu1YWoGKytAD/pc1/aZA9VMyXQIcva509sN2LAGU+4btdMAAAAASUVORK5CYII=");
+  --r10-toast-warning-ring-png: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAuUlEQVRIid2WQQ7EIAhFf+K1Tb0YF/IOLJpMxoR0ENQwLLpgUTE+/6dB0GuBEa3XQr0WVoK+eewEFkDWAdtwHIK0kNCmOPPJa7Bd0BN6GedQJEzajFlO3iwCBs+Boe6kZkc1RpI6lsAMdZCWZgL51Qopo4Ys4hqt7VUKodUwq8tg/KVZnQayef9DJVvPU+RrAQH8WZcf0dayB4y2llaAnrXaMDWDtRWgB32ua/vMgWqmZDoEOfvc6e0GTu4KRqxySbcAAAAASUVORK5CYII=");
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"]::before {
+  -webkit-mask:none; mask:none;
+  background-color:transparent;
+  background-image:var(--r10-toast-info-ring-png);
+  background-position:center; background-repeat:no-repeat; background-size:75.6px 64.8px;
+  image-rendering:pixelated;
+}
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"]::before {
+  -webkit-mask:none; mask:none;
+  background-color:transparent;
+  background-image:var(--r10-toast-warning-ring-png);
+  background-position:center; background-repeat:no-repeat; background-size:75.6px 64.8px;
+  image-rendering:pixelated;
+}

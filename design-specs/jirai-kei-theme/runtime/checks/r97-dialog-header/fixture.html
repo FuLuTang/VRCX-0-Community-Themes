@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+<meta charset="utf-8">
+<title>R9.7 dialog-header fixture (source DOM: AssistantDialog.tsx:313 etc.)</title>
+<style id="fixture-base">
+  body{margin:0;padding:18px;background:#16112a;}
+  .fx-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;max-width:1320px}
+  .fx-wide{grid-column:1/-1}
+  .fx-label{color:#b9add9;font:11px/1.3 monospace;margin:0 0 4px}
+  /* Stage only: pin portal popups in flow; layout of their insides is untouched. */
+  .fx-grid [data-slot$="dialog-content"]{position:relative!important;top:auto!important;left:auto!important;transform:none!important;translate:none!important;max-height:none!important}
+  .fx-grid #assist-a,.fx-grid #assist-b{height:230px!important;width:100%!important}
+  .fx-grid [data-slot="sheet-popup"]{position:relative!important}
+</style>
+</head>
+<body>
+<div class="fx-grid">
+ <!-- 1. AssistantDialog.tsx:308-437 (showCloseButton=false, p-0, flex-row header) -->
+ <div class="fx-wide"><p class="fx-label">AssistantDialog · panel closed</p>
+ <div id="assist-a" role="dialog" tabindex="-1" data-open="" data-slot="dialog-content" aria-labelledby="t-a" style="font-family:var(--vrcx-app-font-family, inherit)"
+  class="bg-popover text-popover-foreground ring-foreground/10 fixed top-[calc(50%+1rem)] left-1/2 z-50 max-h-[calc(100vh-4rem)] -translate-x-1/2 -translate-y-1/2 rounded-xl text-sm ring-1 outline-none flex h-[84vh] w-[min(1360px,96vw)] max-w-none flex-col gap-0 overflow-hidden p-0 sm:max-w-none">
+  <div id="assist-a-header" data-slot="dialog-header" class="flex gap-2 border-border/40 flex-row items-center justify-between space-y-0 border-b py-3 pr-3 pl-4">
+   <h2 id="t-a" data-slot="dialog-title" class="font-heading leading-none font-medium text-sm" style="font-family:inherit">AI 助手</h2>
+   <div id="assist-a-actions" class="flex items-center gap-1.5">
+    <button id="assist-a-endpoint" type="button" data-slot="popover-trigger" data-variant="ghost" data-size="sm" aria-haspopup="dialog" aria-expanded="false" class="group/button focus-visible:border-ring focus-visible:ring-ring/50 inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding font-medium whitespace-nowrap transition-[color,background-color,border-color,box-shadow,opacity,transform] outline-none select-none focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:text-foreground aria-expanded:text-foreground hover:bg-(--state-hover-surface) aria-expanded:bg-(--state-pressed-surface) rounded-[min(var(--radius-md),12px)] has-data-[icon=inline-start]:pl-1.5 [&amp;_svg:not([class*='size-'])]:size-3.5 h-8 gap-1.5 px-2 text-xs">
+     <svg data-icon="inline-start" class="lucide lucide-settings-2 size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 17H5"/><path d="M19 7h-9"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+     <span class="hidden max-w-40 truncate sm:inline">无端点</span>
+    </button>
+    <span id="assist-a-status" class="text-muted-foreground mr-1 flex items-center gap-1.5 text-xs" title="未配置"><span class="size-2 rounded-full bg-muted-foreground/50"></span><span class="hidden sm:inline">未配置</span></span>
+    <button id="assist-a-panel" type="button" title="提及" class="rounded-md p-1.5 transition-colors text-muted-foreground hover:text-foreground"><svg class="lucide lucide-panel-right size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></button>
+    <button id="assist-a-close" type="button" data-slot="dialog-close" title="关闭" class="text-muted-foreground hover:text-foreground rounded-md p-1.5 transition-colors"><svg class="lucide lucide-x size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span class="sr-only">关闭</span></button>
+   </div>
+  </div>
+  <div data-slot="resizable-panel-group" class="min-h-0 flex-1 flex"><div class="w-1/5 border-r border-border/40 p-3 text-xs text-muted-foreground">会话</div><div class="flex-1 p-4 text-muted-foreground">在下方输入问题…</div></div>
+ </div></div>
+
+ <!-- 1b. same dialog, entity panel open (bg-card active) + endpoint popover open (aria-expanded) -->
+ <div class="fx-wide"><p class="fx-label">AssistantDialog · panel open + popover open</p>
+ <div id="assist-b" role="dialog" tabindex="-1" data-open="" data-slot="dialog-content" aria-labelledby="t-b" style="font-family:var(--vrcx-app-font-family, inherit)"
+  class="bg-popover text-popover-foreground ring-foreground/10 fixed top-[calc(50%+1rem)] left-1/2 z-50 max-h-[calc(100vh-4rem)] -translate-x-1/2 -translate-y-1/2 rounded-xl text-sm ring-1 outline-none flex h-[84vh] w-[min(1360px,96vw)] max-w-none flex-col gap-0 overflow-hidden p-0 sm:max-w-none">
+  <div id="assist-b-header" data-slot="dialog-header" class="flex gap-2 border-border/40 flex-row items-center justify-between space-y-0 border-b py-3 pr-3 pl-4">
+   <h2 id="t-b" data-slot="dialog-title" class="font-heading leading-none font-medium text-sm" style="font-family:inherit">AI 助手</h2>
+   <div class="flex items-center gap-1.5">
+    <button id="assist-b-endpoint" type="button" data-slot="popover-trigger" data-variant="ghost" data-size="sm" aria-haspopup="dialog" aria-expanded="true" data-popup-open="" class="group/button inline-flex shrink-0 items-center justify-center border border-transparent bg-clip-padding font-medium whitespace-nowrap outline-none select-none hover:text-foreground aria-expanded:text-foreground hover:bg-(--state-hover-surface) aria-expanded:bg-(--state-pressed-surface) rounded-[min(var(--radius-md),12px)] has-data-[icon=inline-start]:pl-1.5 h-8 gap-1.5 px-2 text-xs">
+     <svg data-icon="inline-start" class="lucide lucide-settings-2 size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 17H5"/><path d="M19 7h-9"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+     <span class="hidden max-w-40 truncate sm:inline">DeepSeek 端点</span>
+    </button>
+    <span class="text-muted-foreground mr-1 flex items-center gap-1.5 text-xs" title="正常"><span class="size-2 rounded-full bg-emerald-500"></span><span class="hidden sm:inline">已连接</span></span>
+    <button id="assist-b-panel" type="button" title="提及" class="rounded-md p-1.5 transition-colors text-foreground bg-card"><svg class="lucide lucide-panel-right size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></button>
+    <button type="button" data-slot="dialog-close" title="关闭" class="text-muted-foreground hover:text-foreground rounded-md p-1.5 transition-colors"><svg class="lucide lucide-x size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span class="sr-only">关闭</span></button>
+   </div>
+  </div>
+  <div class="min-h-0 flex-1 flex"><div class="w-1/5 border-r border-border/40 p-3 text-xs text-muted-foreground">会话</div><div class="flex-1 p-4 text-muted-foreground">…</div><div class="w-1/4 border-l border-border/40 p-3 text-xs text-muted-foreground">实体</div></div>
+ </div></div>
+
+ <!-- 2. VrcNotificationCenterHost.tsx:150 SheetHeader with actions (sheet, NOT dialog-content: must stay untouched) -->
+ <div><p class="fx-label">Notification center sheet (decoy, out of dialog scope)</p>
+ <div id="sheet" data-slot="sheet-popup" role="dialog" class="bg-popover text-popover-foreground relative flex max-h-full min-h-0 w-full min-w-0 flex-col shadow-lg/5 sm:rounded-2xl sm:border gap-0 p-0">
+  <div id="sheet-header" data-slot="sheet-header" class="flex flex-col gap-2 border-b px-4 py-3">
+   <div class="flex items-center justify-between gap-3">
+    <h2 data-slot="sheet-title" class="font-heading leading-none font-semibold flex items-center gap-2 text-base"><svg class="lucide lucide-bell text-muted-foreground size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>通知中心</h2>
+    <div class="flex items-center gap-0.5">
+     <button type="button" data-slot="tooltip-trigger" data-variant="ghost" data-size="icon-sm" aria-label="全部已读" class="inline-flex shrink-0 items-center justify-center border border-transparent hover:bg-(--state-hover-surface) size-7 rounded-[min(var(--radius-md),12px)]"><svg data-icon="inline-start" class="lucide size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 7 17l-5-5"/></svg></button>
+     <button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" aria-label="关闭" class="inline-flex shrink-0 items-center justify-center border border-transparent hover:bg-(--state-hover-surface) size-7 rounded-[min(var(--radius-md),12px)]"><svg data-icon="inline-start" class="lucide lucide-x size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </div>
+   </div>
+  </div>
+  <div class="p-4 text-muted-foreground text-sm">暂无通知</div>
+ </div></div>
+
+ <!-- 3. ChangelogDialog.tsx:229 header = title + plain text div (decoy: no action, must stay unchanged) -->
+ <div><p class="fx-label">ChangelogDialog (decoy)</p>
+ <div id="changelog" role="dialog" tabindex="-1" data-open="" data-slot="dialog-content" class="bg-popover text-popover-foreground ring-foreground/10 fixed z-50 grid max-h-[calc(100vh-4rem)] w-full max-w-[calc(100%-2rem)] gap-4 overflow-y-auto rounded-xl p-4 text-sm ring-1 outline-none sm:max-w-3xl">
+  <div data-slot="dialog-header" class="flex flex-col gap-2"><h2 data-slot="dialog-title" class="font-heading text-base leading-none font-medium">更新日志</h2><div class="text-muted-foreground text-sm">VRCX-0 2026.10.12</div></div>
+  <div class="text-sm">· 修复若干问题</div>
+  <button type="button" data-slot="dialog-close" class="inline-flex size-7 items-center justify-center absolute top-2 right-2"><svg class="lucide lucide-x size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span class="sr-only">关闭</span></button>
+ </div></div>
+
+ <!-- 4. UserNoteMemoDialog.tsx:50 header = title + description (decoy, must stay unchanged) -->
+ <div><p class="fx-label">UserNoteMemoDialog (decoy)</p>
+ <div id="memo" role="dialog" tabindex="-1" data-open="" data-slot="dialog-content" class="bg-popover text-popover-foreground ring-foreground/10 fixed z-50 grid max-h-[calc(100vh-4rem)] w-full max-w-[calc(100%-2rem)] gap-4 overflow-y-auto rounded-xl p-4 text-sm ring-1 outline-none sm:max-w-xl">
+  <div data-slot="dialog-header" class="flex flex-col gap-2"><h2 data-slot="dialog-title" class="font-heading text-base leading-none font-medium">编辑线上备注与本地备注</h2><p data-slot="dialog-description" class="text-muted-foreground text-sm">Natsumi</p></div>
+  <textarea class="min-h-24 rounded-md border border-input bg-transparent p-2"></textarea>
+  <button type="button" data-slot="dialog-close" class="inline-flex size-7 items-center justify-center absolute top-2 right-2"><svg class="lucide lucide-x size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg><span class="sr-only">关闭</span></button>
+ </div></div>
+</div>
+</body>
+</html>

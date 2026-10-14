@@ -1,0 +1,245 @@
+/* R8 Login · paint-only Windose × jirai pass. Every rule is anchored to the login surface. */
+[data-vrcx-0-surface="login-page"].vrcx-0-main-shell {
+  isolation: isolate;
+  background-color: var(--wd-window, #201936);
+}
+[data-vrcx-0-surface="login-page"].vrcx-0-main-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.38;
+  background-image: var(--wd-bg-stars, none);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 128px 128px;
+}
+[data-vrcx-0-surface="login-page"].vrcx-0-main-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.92;
+  image-rendering: pixelated;
+  background-image: var(--r7-ame-tweeter, none), var(--r7-game-icon, none);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0 bottom 0, right 0 bottom 0;
+  background-size: var(--login-r8-corner-size, 200px) var(--login-r8-corner-size, 200px), var(--login-r8-corner-size, 200px) var(--login-r8-corner-size, 200px);
+}
+@media (max-width: 900px) {
+  [data-vrcx-0-surface="login-page"].vrcx-0-main-shell { --login-r8-corner-size: 150px; }
+}
+@media (max-width: 640px) {
+  [data-vrcx-0-surface="login-page"].vrcx-0-main-shell { --login-r8-corner-size: 120px; }
+}
+[data-vrcx-0-surface="login-page"].vrcx-0-main-shell > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* A small, existing 18px sprite marks the product name without changing its text. */
+[data-vrcx-0-surface="login-page"] > div.flex.flex-1.items-center.justify-center > div.flex.w-full.max-w-lg.flex-col.gap-4 > div.flex.flex-wrap.items-center.justify-between.gap-3 > div.min-w-0.truncate.text-lg.font-semibold::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-inline-end: 6px;
+  vertical-align: -4px;
+  background-image: var(--r5-pixel-mascot, none);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  image-rendering: pixelated;
+}
+
+/* The two auth cards become window panels. The negative outer margins cancel
+   Card's real block padding; paired inner padding preserves the source geometry. */
+[data-vrcx-0-surface="login-page"] [data-slot="card"] {
+  border-color: var(--wd-frame, #6c5ce0);
+  border-radius: 2px;
+  background-color: var(--wd-window, #201936);
+  box-shadow: 0 0 0 1px var(--wd-frame, #6c5ce0), 4px 4px 0 #100b1e;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] {
+  margin-block-start: calc(-1 * var(--card-spacing, 1rem));
+  margin-inline: calc(-1 * var(--card-spacing, 1rem));
+  padding-block: calc(var(--card-spacing, 1rem) / 2);
+  padding-inline: calc(2 * var(--card-spacing, 1rem));
+  clip-path: polygon(2px 0, calc(100% - 2px) 0, 100% 2px, 100% 100%, 0 100%, 0 2px);
+  border: 0;
+  border-bottom: 1px solid var(--wd-frame, #6c5ce0);
+  border-radius: 2px 2px 0 0;
+  background-color: var(--wd-title-active, #d97fc6);
+  background-image: none;
+  color: #21132d;
+  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
+  font-synthesis: none;
+}
+/* Source CardHeader is 16px + 4px gap + 22px title, with 8px inset + 1px rule.
+   Collapse it to one row but retain the deployed 51px border-box and card geometry. */
+[data-vrcx-0-surface="login-page"] [data-slot="card"]:has(> [data-slot="card-content"] form) > [data-slot="card-header"] {
+  margin-block-start: -0.5rem;
+  padding-block: 0;
+  min-height: 3.1875rem;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card"]:has(> [data-slot="card-content"] form) > [data-slot="card-header"] > [data-slot="button"][data-variant="link"] {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: center;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card"]:has(> [data-slot="card-content"] form) > [data-slot="card-header"] > [data-slot="card-title"] {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="card-title"] {
+  color: #21132d;
+  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
+  font-synthesis: none;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="button"][data-variant="link"] {
+  color: #21132d;
+  text-decoration: underline;
+  text-decoration-color: rgb(33 19 45 / 50%);
+  text-underline-offset: 3px;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="button"][data-variant="link"]:hover {
+  color: #100b1e;
+  text-decoration-color: currentColor;
+}
+
+/* Saved rows: crisp tile buttons; preserve data, hit targets and the real image. */
+[data-vrcx-0-surface="login-page"] [data-slot="card-content"] [data-slot="button"][data-variant="ghost"]:has([data-slot="avatar"]) {
+  border: 1px solid #4b3a63;
+  border-radius: 2px;
+  background-color: #2a2147;
+  color: #f2ebff;
+  box-shadow: 2px 2px 0 #100b1e;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card-content"] [data-slot="button"][data-variant="ghost"]:has([data-slot="avatar"]):hover:not(:disabled) {
+  border-color: #d97fc6;
+  background-color: #3b2c55;
+  color: #fff4fb;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card-content"] div.overflow-y-auto > div.flex.items-center.gap-2 > [data-slot="button"][data-size="icon-sm"] {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #d6b8ef;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="card-content"] div.overflow-y-auto > div.flex.items-center.gap-2 > [data-slot="button"][data-size="icon-sm"]:hover:not(:disabled) {
+  border-color: #ff7fcf;
+  background-color: #4b1c3a;
+  color: #ffd9ee;
+  box-shadow: 2px 2px 0 #100b1e;
+}
+
+/* Login account portraits are user avatars too: pixel-cut the photo, with no theme avatar ring. */
+[data-vrcx-0-surface="login-page"] [data-slot="avatar"] {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="avatar"]::before {
+  content: none;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="avatar"]::after {
+  border-color: transparent;
+  border-width: 0;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="avatar-image"],
+[data-vrcx-0-surface="login-page"] [data-slot="avatar-fallback"] {
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none;
+  outline: none;
+  clip-path: var(--wd-avatar-cut-sm);
+}
+[data-vrcx-0-surface="login-page"] [data-slot="avatar"][data-size="lg"] > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) {
+  clip-path: var(--wd-avatar-cut);
+}
+
+/* Secondary controls keep their native box, disabled opacity, focus ring and icons. */
+[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="outline"],
+[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="secondary"] {
+  border: 1px solid #8c71b0;
+  border-radius: 2px;
+  background-color: #3b2c55;
+  color: #f2ebff;
+  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
+}
+[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
+[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="secondary"]:hover:not(:disabled) {
+  border-color: #ff7fcf;
+  background-color: #4a3784;
+  color: #fff4fb;
+}
+[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"] {
+  border: 1px solid #6c5ce0;
+  border-radius: 2px;
+  background-color: #ff7fcf;
+  color: #21132d;
+  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
+}
+[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"]:hover:not(:disabled) {
+  border-color: #8c71b0;
+  background-color: #ffb8e6;
+}
+[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"]:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #100b1e;
+}
+
+/* Recessed inputs; no changes to source height, padding, type, or focus behavior. */
+[data-vrcx-0-surface="login-page"] [data-slot="input"] {
+  border: 1px solid #8c71b0;
+  border-radius: 2px;
+  background-color: #16112a;
+  color: #f2ebff;
+  box-shadow: inset 2px 2px 0 rgb(0 0 0 / 28%), inset -1px -1px 0 #3d305e;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="input"]::placeholder {
+  color: #c5b5e1;
+  opacity: 1;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="input"]:focus-visible {
+  border-color: #ff7fcf;
+  border-radius: 0;
+  outline: 2px solid #ff7fcf;
+  outline-offset: 1px;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="input"][aria-invalid="true"] {
+  border-color: #ff5a83;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="input"][aria-invalid="true"]:focus-visible {
+  border-color: #ff5a83;
+  outline-color: #ff5a83;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="field-error"] {
+  color: #ff9eb5;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="checkbox"] {
+  border-radius: 0;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="link"] {
+  color: #d6b8ef;
+}
+[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="link"]:hover {
+  color: #ffd9ee;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::before,
+  [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::after,
+  [data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"],
+  [data-vrcx-0-surface="login-page"] [data-slot="spinner"] {
+    animation: none !important;
+    transition-duration: 0s !important;
+  }
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN" class="dark accessible-status-indicators">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NOT WINDOWS · profile/activity/favorite avatar and status fixture</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#100b1e;color:#f2ebff;font-family:Inter,system-ui,sans-serif}
+    .fixture-window{display:flex;width:100%;height:100%;flex-direction:column;background:#201936}
+    .fixture-titlebar{height:32px;flex:none;display:flex;align-items:center;padding-left:12px;border-bottom:1px solid #6c5ce0;background:#2f2552;color:#f2ebff;font:12px/1 system-ui,sans-serif}
+    .fixture-body{display:grid;min-height:0;flex:1;grid-template-columns:260px 1fr;gap:18px;padding:18px}
+    .panel{min-width:0;padding:14px;border:1px solid #6c5ce0;border-radius:6px;background:#201936}
+    .panel h2{margin:0 0 12px;font-size:14px;color:#ffd9ee}
+    .person-row{display:flex;align-items:center;gap:12px;min-height:64px;margin:8px 0;padding:8px;border:1px solid #6c5ce0;border-radius:5px;background:#16112a}
+    .person-button{display:flex;align-items:center;gap:10px;padding:4px;border:1px solid transparent;border-radius:8px;background:transparent;color:#f2ebff}
+    .self-shell{position:relative;display:flex;align-items:center;gap:12px}
+    .self-avatar-button{padding:0;border:0;border-radius:50%;background:transparent}
+    .user-row-button{display:flex;align-items:center;gap:10px;padding:4px;border:1px solid transparent;border-radius:8px;background:transparent;color:#f2ebff}
+    .user-status-avatar{position:relative;display:flex;width:36px;height:36px;flex:none;align-items:center;justify-content:center;overflow:visible}
+    .user-avatar-face{position:relative;z-index:0;display:flex;width:100%;height:100%;align-items:center;justify-content:center;overflow:hidden;border:1px solid #8f7fe0;border-radius:50%;background:#302449}
+    .user-avatar-face img,.user-hover-face img,.user-dialog-icon img{width:100%;height:100%;object-fit:cover}
+    .user-dot{position:absolute;right:-2px;bottom:-2px;z-index:10;width:15px;height:15px;border:3px solid #201936;border-radius:50%}
+    .active-dot-shell{position:absolute;right:-2px;bottom:-2px;z-index:10;width:15px;height:15px;border:3px solid #201936;border-radius:50%;background:#201936}
+    .active-dot-core{position:absolute;inset:0;border:2px solid var(--status-joinme);border-radius:50%;background:var(--status-joinme)}
+    .status-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .status-sample{display:flex;align-items:center;gap:6px;padding:5px 7px;border:1px solid #6c5ce0;border-radius:5px;background:#16112a;color:#e3d2f5;font-size:11px}
+    .user-status-indicator{display:inline-block;width:12px;height:12px;flex:none;border:1px solid currentColor;border-radius:50%;vertical-align:middle}
+    .legacy-lamp{display:inline-block;width:10px;height:10px;flex:none;border-radius:50%}
+    .hover-demo{position:relative;width:330px;margin:10px 0 0 22px}
+    .hover-card{width:320px;padding:0;border:1px solid #6c5ce0;border-radius:8px;background:#201936;box-shadow:0 4px 12px #0008}
+    .hover-card-inner{position:relative;width:100%;padding:8px}
+    .hover-card-content{padding:8px}
+    .hover-header{position:relative;display:flex;align-items:center;gap:10px;padding:6px}
+    .user-hover-avatar{position:relative;display:flex;width:40px;height:40px;flex:none;border-radius:50%;background:#302449}
+    .user-hover-face{display:flex;width:100%;height:100%;align-items:center;justify-content:center;overflow:hidden;border:1px solid #8f7fe0;border-radius:50%;background:#302449}
+    .hover-user-dot{position:absolute;right:-2px;bottom:-2px;width:15px;height:15px;border:3px solid #201936;border-radius:50%}
+    .dialog-demo{position:absolute;right:20px;top:230px;width:400px;height:220px;padding:22px;border:1px solid #6c5ce0;border-radius:8px;background:#201936}
+    .dialog-media{position:relative;width:280px;height:150px;border:1px solid #6c5ce0;background:linear-gradient(135deg,#385879,#d780bd)}
+    .dialog-user-icon{position:absolute;bottom:12px;left:12px;z-index:30;width:64px;height:64px}.dialog-user-icon [data-slot="button"]{border:2px solid #fff;border-radius:50%;overflow:hidden;background:#201936}
+    .dialog-user-icon img{width:100%;height:100%;object-fit:cover}
+    .activity-fixture,.favorite-fixture{position:absolute;left:310px;width:370px;padding:12px;border:1px solid #6c5ce0;border-radius:7px;background:#201936}
+    .activity-fixture{top:460px}.favorite-fixture{top:710px}
+    .activity-fixture h2,.favorite-fixture h2{margin:0 0 8px;color:#ffd9ee;font-size:13px}
+    .activity-skin{padding:8px;background:#251c3a;--act-track:#3d2d57}
+    .activity-face-row{display:flex;min-height:36px;align-items:center;gap:10px;color:#f2ebff;font-size:11px}
+    .favorite-fixture .object-row{display:flex;min-height:56px;align-items:center;gap:10px;padding:8px;border:1px solid #6c5ce0;background:#16112a;color:#f2ebff;font-size:12px}
+    .favorite-fixture .object-row [data-slot="hover-card-trigger"]{display:block;flex:none}
+    .favorite-fixture .object-row img{width:100%;height:100%;object-fit:cover}
+    .fixture-favorite-outer{position:relative;display:flex;width:36px;height:36px;flex:none;align-items:center;justify-content:center;overflow:visible}
+    .fixture-favorite-lamp{position:absolute;right:-2px;bottom:-2px;width:12px;height:12px;border:3px solid #16112a;border-radius:50%}
+    .entity-grid{display:flex;gap:12px;margin-top:12px}
+    .entity-thumb{display:flex;flex:none;width:54px;height:54px;align-items:center;justify-content:center;overflow:hidden;border:1px solid #8f7fe0;border-radius:50%;background:linear-gradient(135deg,#4e6788,#c47bbb)}
+    .entity-thumb img{width:100%;height:100%;object-fit:cover}
+    .search-result{display:flex;align-items:center;gap:8px;margin-top:10px;padding:8px;border:1px solid #6c5ce0;background:#16112a}
+    .graph{position:absolute;right:34px;bottom:24px;width:180px;height:120px;border:1px dashed #8f7fe0;background:#16112a}
+    .graph circle{fill:#d97fc6;stroke:#f2ebff;stroke-width:2}
+    .fixture-status{height:24px;flex:none;padding:4px 12px;background:#ffb8e6;color:#16112a;font:11px system-ui,sans-serif}
+  </style>
+</head>
+<body>
+<div class="fixture-window">
+  <header class="fixture-titlebar">VRCX-0-jirai　·　NOT WINDOWS　·　profile/activity/favorite avatar audit</header>
+  <main class="fixture-body">
+    <section class="panel vrcx-0-side-panel" data-fixture-user-surfaces>
+      <h2>用户资料头像 / synthetic only</h2>
+      <div class="self-shell vrcx-0-side-panel-self">
+        <button class="self-avatar-button" aria-label="虚构当前用户">
+          <span class="user-status-avatar relative flex size-10 shrink-0 items-center justify-center overflow-visible" data-fixture-user-status-avatar="self" data-fixture-pixel-color="#465b84">
+            <span class="user-avatar-face bg-muted relative z-0 flex size-full items-center justify-center overflow-hidden rounded-full border"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23465b84'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23ffb8e6'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%23d97fc6'/%3E%3C/svg%3E" alt=""></span>
+            <span class="active-dot-shell absolute -right-0.5 -bottom-0.5 z-10 size-3.75 border-background bg-background rounded-full border-3" data-fixture-active-dot><span class="active-dot-core absolute inset-0 rounded-full border-2 user-status-indicator joinme" style="mask-image:url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='black' d='M1 3h4V1l3 3-3 3V5H1z'/%3E%3C/svg%3E)"></span></span>
+          </span>
+        </button>
+        <span>Demo Self　·　Profile icon · 有灯</span>
+      </div>
+      <div class="self-shell vrcx-0-side-panel-self" data-fixture-no-lamp-case>
+        <button class="self-avatar-button" aria-label="虚构用户无状态灯" data-fixture-no-lamp>
+          <span class="user-status-avatar relative flex size-10 shrink-0 items-center justify-center overflow-visible" data-fixture-pixel-color="#465b84">
+            <span class="user-avatar-face bg-muted relative z-0 flex size-full items-center justify-center overflow-hidden rounded-full border"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23465b84'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23ffb8e6'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%23d97fc6'/%3E%3C/svg%3E" alt=""></span>
+          </span>
+        </button>
+        <span>Demo user · 无状态灯</span>
+      </div>
+      <button class="user-row-button" data-slot="button" data-variant="ghost" data-fixture-user-detail>
+        <span class="user-status-avatar relative flex size-9 shrink-0 items-center justify-center overflow-visible" data-fixture-user-status-avatar="detail" data-fixture-pixel-color="#385464"><span class="user-avatar-face bg-muted relative z-0 flex size-full items-center justify-center overflow-hidden rounded-full border"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23385464'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23e4cbff'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%2377c8ac'/%3E%3C/svg%3E" alt=""></span><span class="user-dot user-status-indicator online" style="background-color:var(--status-online)"></span></span>
+        <span>Demo Friend　·　UserDetailTile user row</span>
+      </button>
+      <div class="status-list" aria-label="User presence states">
+        <span class="status-sample">online <span class="user-status-indicator online" style="background-color:var(--status-online)"></span></span>
+        <span class="status-sample">join me <span class="user-status-indicator joinme" style="background-color:var(--status-joinme);mask-image:url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='black' d='M1 3h4V1l3 3-3 3V5H1z'/%3E%3C/svg%3E)"></span></span>
+        <span class="status-sample">ask me <span class="user-status-indicator askme" style="background-color:var(--status-askme);mask-image:linear-gradient(black,black)"></span></span>
+        <span class="status-sample">busy <span class="user-status-indicator busy" style="background-color:var(--status-busy);mask-image:linear-gradient(black,black)"></span></span>
+        <span class="status-sample">offline <span class="user-status-indicator offline" style="background-color:var(--status-offline-alt)"></span></span>
+        <span class="status-sample">legacy online <i class="x-user-status online" data-fixture-legacy-status></i></span><span class="status-sample">legacy join me <i class="x-user-status joinme" data-fixture-legacy-mask></i></span>
+        <span class="status-sample">generic status icon <i class="x-status-icon green" data-fixture-generic-status></i></span>
+      </div>
+      <div class="search-result" data-fixture-search-mixed>
+        <span class="entity-thumb" data-slot="avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%234b6380'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23f3bde0'/%3E%3C/svg%3E" alt=""></span>
+        <span>Mixed search result · user / world / group; generic Avatar primitive</span><i class="x-status-icon green"></i>
+      </div>
+      <div class="entity-grid" aria-label="Entity thumbnail exclusions">
+        <span class="entity-thumb" data-fixture-world-thumb><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23435b72'/%3E%3Cpath d='M0 40 14 15l11 14 9-12 14 23' fill='%2388c9ba'/%3E%3C/svg%3E" alt=""></span>
+        <span class="entity-thumb" data-fixture-group-thumb><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23516a87'/%3E%3Ccircle cx='17' cy='19' r='7' fill='%23ffb8e6'/%3E%3Ccircle cx='32' cy='19' r='7' fill='%23d6b8ef'/%3E%3Cpath d='M4 44c1-10 7-15 13-15s12 5 13 15M19 44c1-10 7-15 13-15s12 5 13 15' fill='%2381b5d2'/%3E%3C/svg%3E" alt=""></span>
+      </div>
+    </section>
+    <section class="panel" data-fixture-hover-card-host>
+      <h2>UserHoverCardContent profile surface</h2>
+      <div class="hover-demo"><div data-slot="hover-card-portal"><div data-slot="hover-card-content" class="hover-card">
+        <div class="hover-card-inner relative isolate w-full"><div class="hover-card-content space-y-2.5">
+          <div class="hover-header relative isolate"><button class="user-hover-avatar relative flex size-10 shrink-0 rounded-full"><span class="user-hover-face bg-muted flex size-full rounded-full" data-fixture-pixel-color="#426871"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23426871'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23f3bde0'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%2379cdb1'/%3E%3C/svg%3E" alt=""></span><span class="hover-user-dot user-status-indicator joinme" style="background-color:var(--status-joinme)"></span></button><span>Demo profile hovercard</span></div>
+        </div></div>
+      </div></div></div>
+    </section>
+    <section class="dialog-demo" data-slot="dialog-content" data-fixture-user-dialog>
+      <h2>UserDialogHeaderMedia userIcon slot</h2><div class="dialog-media"><div class="dialog-user-icon absolute bottom-3 left-3 z-30 size-16" data-fixture-dialog-avatar><button data-slot="button" class="bg-background/90 relative z-0 size-full overflow-hidden rounded-full p-0 shadow-md" data-fixture-pixel-color="#4e5e82"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%234e5e82'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23ffb8e6'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%23cc84c1'/%3E%3C/svg%3E" alt=""></button></div></div>
+    </section>
+    <section class="activity-fixture" aria-label="Synthetic activity profile faces">
+      <h2>ActivityPeopleExhibit Face · synthetic only</h2>
+      <div class="activity-skin" data-fixture-activity style="background:#251c3a;--act-track:#3d2d57">
+        <div class="activity-face-row"><span class="block shrink-0 overflow-hidden rounded-full size-16" data-fixture-activity-face="lead" data-fixture-pixel-color="#465b84"><img class="size-full rounded-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23465b84'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23ffb8e6'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%23d97fc6'/%3E%3C/svg%3E" alt=""></span><span>Lead user · size-16</span></div>
+        <div class="activity-face-row"><span class="block shrink-0 overflow-hidden rounded-full size-7" data-fixture-activity-face="companion" data-fixture-pixel-color="#385464"><img class="size-full rounded-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23385464'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23e4cbff'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%2377c8ac'/%3E%3C/svg%3E" alt=""></span><span>Companion · size-7</span></div>
+        <div class="activity-face-row"><span class="block shrink-0 overflow-hidden rounded-full size-9" data-fixture-activity-face="stranger" data-fixture-pixel-color="#426871"><img class="size-full rounded-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23426871'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23f3bde0'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%2379cdb1'/%3E%3C/svg%3E" alt=""></span><span>Stranger Face reuse · size-9</span></div><div class="activity-face-row"><span class="block shrink-0 overflow-hidden rounded-full size-7" data-fixture-activity-fallback data-fixture-pixel-color="#3d2d57"><span class="flex size-full items-center justify-center rounded-full" style="background:#3d2d57"></span></span><span>Fallback circle-reset probe · size-7</span></div>
+      </div>
+    </section>
+    <section class="favorite-fixture" aria-label="Synthetic favorite friend row">
+      <h2>FavoriteCardView friend row · square status lamp</h2>
+      <div class="object-row" data-fixture-favorite-row>
+        <div data-slot="hover-card-trigger"><div class="relative ml-2 flex shrink-0 items-center justify-center overflow-visible fixture-favorite-outer"><span class="flex size-full items-center justify-center overflow-hidden bg-muted rounded-full border" data-fixture-favorite-face data-fixture-pixel-color="#516a87"><img class="size-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23516a87'/%3E%3Ccircle cx='24' cy='18' r='10' fill='%23ffb8e6'/%3E%3Cpath d='M5 46c2-12 10-17 19-17s17 5 19 17' fill='%2381b5d2'/%3E%3C/svg%3E" alt=""></span><span class="user-status-indicator online fixture-favorite-lamp" data-fixture-favorite-lamp style="background-color:var(--status-online)"></span></div></div>
+        <span>Demo Favorite Friend</span>
+      </div>
+    </section>
+    <div class="graph" data-fixture-relation-network aria-label="Relationship graph circles"><svg width="180" height="120" viewBox="0 0 180 120"><line x1="40" y1="50" x2="130" y2="68" stroke="#8f7fe0"/><circle cx="40" cy="50" r="18"/><circle cx="130" cy="68" r="18"/></svg></div>
+  </main>
+  <footer class="fixture-status">● 服务器状态　● 实时连接　VRChat</footer>
+</div>
+<p style="position:fixed;right:8px;bottom:26px;color:#b9add9;font-size:10px">NOT WINDOWS · synthetic people and inline SVGs · no friend screenshot or external image</p>
+<div hidden data-fixture-residual-probes>
+  <div class="vrcx-0-data-table"><img data-fixture-friend-list-avatar class="size-6 rounded-full object-cover" alt="synthetic user"><div data-fixture-friend-list-fallback class="bg-muted flex size-6 items-center justify-center rounded-full"></div></div>
+  <div class="vrcx-0-main-content"><span data-fixture-settings-user-avatar class="bg-muted flex size-6 shrink-0 items-center justify-center overflow-hidden rounded-full"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="synthetic user"></span></div>
+  <div class="entity-dialog" data-slot="dialog-content"><img data-fixture-group-member-user class="size-9 shrink-0 rounded-full object-cover"><div data-fixture-group-member-fallback class="bg-muted flex size-9 shrink-0 items-center justify-center rounded-full"></div><span data-fixture-picker-user class="bg-muted mr-2.5 flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full border"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="synthetic user"></span></div>
+  <img data-fixture-avatar-owner class="mr-2.5 size-9 shrink-0 rounded-full object-cover"><div data-fixture-avatar-owner-fallback class="bg-muted mr-2.5 flex size-9 shrink-0 items-center justify-center rounded-full"></div>
+  <div data-slot="dialog-content"><div class="bg-card/40 flex gap-3 rounded-lg border p-3"><button data-fixture-note-export class="bg-muted size-11 shrink-0 overflow-hidden rounded-full border p-0"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="synthetic user"></button><span data-fixture-note-export-fallback class="bg-muted block size-11 rounded-full"></span></div></div>
+  <div data-slot="combobox-chip"><span data-fixture-multiselect-user class="bg-muted flex size-3.5 shrink-0 items-center justify-center overflow-hidden rounded-full"><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="synthetic user"></span></div>
+  <div data-fixture-avatar-skeleton-large data-slot="skeleton" class="size-16 rounded-full border-2 shadow-sm"></div><div data-fixture-avatar-skeleton-small data-slot="skeleton" class="size-8 rounded-full"></div>
+  <div class="vrcx-0-main-content">
+    <span data-fixture-dashboard-dot data-dashboard-feed-status-dot class="size-2.5 rounded-full"></span>
+    <span data-fixture-instance-dot data-slot="tooltip-trigger" class="size-2.5 rounded-full border"></span>
+    <span data-fixture-unread-dot class="bg-primary size-2 rounded-full"><span class="sr-only">Unread</span></span>
+  </div>
+  <div class="vrcx-0-sidebar-surface"><span class="relative inline-flex size-4"><span data-fixture-nav-dot class="bg-destructive absolute size-1.5 rounded-full" aria-hidden="true"></span></span></div>
+  <div data-fixture-mutual-friends-card class="absolute right-3 bottom-3 z-10 w-72 p-3"><span data-fixture-semantic-graph-avatar class="bg-muted flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-full border"></span></div>
+  <div class="group/avatar-group" data-slot="avatar-group"><span data-slot="avatar" data-fixture-avatar-group-face class="relative flex size-5 rounded-full ring-2 ring-background"></span></div>
+  <span data-slot="avatar-badge" data-fixture-avatar-badge class="absolute size-2.5 rounded-full"></span><div data-slot="avatar-group-count" data-fixture-avatar-group-count class="size-8 rounded-full ring-2 ring-background">+2</div>
+</div>
+</body>
+</html>

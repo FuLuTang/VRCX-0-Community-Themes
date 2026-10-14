@@ -1,0 +1,183 @@
+{
+  "scope": "cap3 vs softened notch-side cap cells (4,0)/(6,0). X = existing S, Y = O/P midpoint. Previews + this report only; no assets rewritten.",
+  "matrices": {
+    "original": [
+      "..OOO.OOO..",
+      ".OPPO.OHPO.",
+      "OHPPPOPHPPO",
+      "OPPPPPPPPSO",
+      "OPPPPPPPSSO",
+      ".OPPPPPPSO.",
+      "..OPPPPSO..",
+      "...OPPSO...",
+      "....OSO....",
+      ".....O....."
+    ],
+    "X": [
+      "..OOS.SOO..",
+      ".OPPO.OHPO.",
+      "OHPPPOPHPPO",
+      "OPPPPPPPPSO",
+      "OPPPPPPPSSO",
+      ".OPPPPPPSO.",
+      "..OPPPPSO..",
+      "...OPPSO...",
+      "....OSO....",
+      ".....O....."
+    ],
+    "Y": [
+      "..OOT.TOO..",
+      ".OPPO.OHPO.",
+      "OHPPPOPHPPO",
+      "OPPPPPPPPSO",
+      "OPPPPPPPSSO",
+      ".OPPPPPPSO.",
+      "..OPPPPSO..",
+      "...OPPSO...",
+      "....OSO....",
+      ".....O....."
+    ]
+  },
+  "legend": {
+    ".": "transparent",
+    "O": "#ae387d",
+    "H": "#ffcced",
+    "P": "#ff87c6",
+    "S": "#cc5282",
+    "T": "#d760a2"
+  },
+  "transitionColor": {
+    "hex": "#d760a2",
+    "rule": "per-channel average of O #ae387d and P #ff87c6, rounded half-up (214.5/95.5/161.5 -> 215/96/162); the brief quoted ~#d85fa1, which is within +-1 per channel",
+    "exactMean": [
+      214.5,
+      95.5,
+      161.5
+    ]
+  },
+  "changedCells": {
+    "X": [
+      {
+        "x": 4,
+        "y": 0,
+        "from": "O",
+        "to": "S"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "from": "O",
+        "to": "S"
+      }
+    ],
+    "Y": [
+      {
+        "x": 4,
+        "y": 0,
+        "from": "O",
+        "to": "T"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "from": "O",
+        "to": "T"
+      }
+    ]
+  },
+  "counts": {
+    "original": {
+      "H": 3,
+      "O": 26,
+      "P": 36,
+      "S": 7
+    },
+    "X": {
+      "H": 3,
+      "O": 24,
+      "P": 36,
+      "S": 9
+    },
+    "Y": {
+      "H": 3,
+      "O": 24,
+      "P": 36,
+      "S": 7,
+      "T": 2
+    }
+  },
+  "outlineComponents8": {
+    "original": 1,
+    "X": 1,
+    "Y": 1
+  },
+  "contrast": {
+    "O": {
+      "hex": "#ae387d",
+      "onPink": 2.13,
+      "onDark": 2.92,
+      "vsBodyP": 2.6
+    },
+    "H": {
+      "hex": "#ffcced",
+      "onPink": 1.94,
+      "onDark": 12.05,
+      "vsBodyP": 1.59
+    },
+    "P": {
+      "hex": "#ff87c6",
+      "onPink": 1.22,
+      "onDark": 7.6,
+      "vsBodyP": 1
+    },
+    "S": {
+      "hex": "#cc5282",
+      "onPink": 1.53,
+      "onDark": 4.07,
+      "vsBodyP": 1.87
+    },
+    "T": {
+      "hex": "#d760a2",
+      "onPink": 1.28,
+      "onDark": 4.85,
+      "vsBodyP": 1.57
+    }
+  },
+  "formalHeart11x10Currently": "Y",
+  "files": {
+    "original": {
+      "file": "heart-11x10-cap3-original.svg",
+      "sha256": "052a58d39ed24859f42d5e3c3f169c9a9a889d221d70bf87dfc59bfd1cba6d28",
+      "bytes": 3339
+    },
+    "X": {
+      "file": "heart-11x10-soft-X.svg",
+      "sha256": "dd22991984b4a3fa4ff3f2ab8a823e4f8bdbde2242afde6f6c2dea6fb91ee650",
+      "bytes": 3399
+    },
+    "Y": {
+      "file": "heart-11x10-soft-Y.svg",
+      "sha256": "3de64f510df5224f6ed9350a617c3ec0440e4bb51eae95309c5cf498bc18a609",
+      "bytes": 3450
+    }
+  },
+  "outputs": {
+    "comparisonPink": {
+      "file": "comparison-pink.png",
+      "width": 500,
+      "height": 276
+    },
+    "comparisonDark": {
+      "file": "comparison-dark.png",
+      "width": 500,
+      "height": 276
+    },
+    "titlebarSlot4x": {
+      "file": "titlebar-slot-4x.png",
+      "width": 624,
+      "height": 300,
+      "nativeSlotCssPx": "14x14",
+      "mag": 4
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "result": "PASS",
+  "fontLoaded": true,
+  "fontFamily": "WD Pixel CJK (actual embedded theme font)",
+  "badge": {
+    "height": 20,
+    "minWidth": 32,
+    "fontSize": 10
+  },
+  "contrast": [
+    {
+      "name": "01 · 黑莓亮粉",
+      "contrast": 13.02
+    },
+    {
+      "name": "02 · 樱粉靛蓝",
+      "contrast": 6.25
+    },
+    {
+      "name": "03 · 电紫冰蓝",
+      "contrast": 7.67
+    },
+    {
+      "name": "04 · 蜜桃撞紫",
+      "contrast": 6.63
+    },
+    {
+      "name": "05 · 紫夜蜜金",
+      "contrast": 10.35
+    }
+  ],
+  "palettes": [
+    {
+      "name": "01 · 黑莓亮粉",
+      "source": "粉黑心形蕾丝",
+      "border": "#ff7fcf",
+      "bg": "#211a33",
+      "ink": "#ffd9ee",
+      "small": "#fff1f8",
+      "strip": "#ff7fcf"
+    },
+    {
+      "name": "02 · 樱粉靛蓝",
+      "source": "Windose 标题栏 / 像素手柄",
+      "border": "#6c5ce0",
+      "bg": "#ffb8e6",
+      "ink": "#361dc3",
+      "small": "#6fe3d3",
+      "strip": "#361dc3"
+    },
+    {
+      "name": "03 · 电紫冰蓝",
+      "source": "NSO 粉蓝双心",
+      "border": "#ffb8e6",
+      "bg": "#4d23cf",
+      "ink": "#baffff",
+      "small": "#ff7fcf",
+      "strip": "#5bb4e2"
+    },
+    {
+      "name": "04 · 蜜桃撞紫",
+      "source": "蜜金创可贴 × 靛蓝轮廓",
+      "border": "#d97fc6",
+      "bg": "#f8cc96",
+      "ink": "#361dc3",
+      "small": "#ff7fcf",
+      "strip": "#6c5ce0"
+    },
+    {
+      "name": "05 · 紫夜蜜金",
+      "source": "紫夜月亮 / 蜜金高光",
+      "border": "#f8cc96",
+      "bg": "#412b67",
+      "ink": "#fbeed4",
+      "small": "#ff7fcf",
+      "strip": "#e6a463"
+    }
+  ],
+  "fictitiousData": true,
+  "runtimeUnchanged": true
+}

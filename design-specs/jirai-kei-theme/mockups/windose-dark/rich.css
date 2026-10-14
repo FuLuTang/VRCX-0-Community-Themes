@@ -1,0 +1,47 @@
+/* v4 richness: NSO "same frame, different interiors" + more reused motifs.
+   Contrast of every texture against its own surface is kept <= 1.25:1 so text is unaffected. */
+
+/* --- 1. three interiors ------------------------------------------------- */
+/* start (sidebar): indigo with a 1px diamond lattice — Kenney/Pattern-pack construction, redrawn in CSS */
+.nav-win { --wd-window: #1e1a3e; background-color: #1e1a3e; }
+.nav-win > .wb { background-image:
+  repeating-linear-gradient(45deg, rgb(140 120 255 / .07) 0 1px, transparent 1px 12px),
+  repeating-linear-gradient(-45deg, rgb(140 120 255 / .07) 0 1px, transparent 1px 12px); }
+/* friends (side panel): JINE-like magenta interior, clouds float in the empty tail */
+.side { background: linear-gradient(#251a3c, #2c1b40 70%, #34204a); }
+.side .list::before { content: ""; display: block; height: 0; }
+/* vrcx-0 (main): neutral, but the toolbar becomes a Poketter-style brand band */
+.win.active .toolbar { background: linear-gradient(90deg, #2c2152, #33245c 60%, #2c2152); border-bottom: 1px solid var(--wd-frame); }
+.table tbody tr:nth-child(even) td { background-image: radial-gradient(circle, rgb(255 255 255 / .025) 0 .7px, transparent 1px); background-size: 4px 4px; }
+
+/* --- 2. title strips: dither fade + checker band (comic SNS window bars) -- */
+.win > .wt { background-image:
+  linear-gradient(90deg, transparent 55%, rgb(255 255 255 / .06) 55% 56%, transparent 56% 70%, rgb(255 255 255 / .06) 70% 71%, transparent 71%),
+  radial-gradient(circle, rgb(255 255 255 / .08) 0 .6px, transparent .8px); background-size: auto, 4px 4px; }
+.win:not(.active) > .wt::after { content: ""; position: absolute; right: 44px; top: 6px; width: 40px; height: 12px; pointer-events: none;
+  background: conic-gradient(var(--wd-frame-inner) 25%, transparent 0 50%, var(--wd-frame-inner) 0 75%, transparent 0) 0 0 / 8px 8px; opacity: .9; }
+
+/* --- 3. desktop: synthwave horizon behind the bottom of the windows (NSO night) */
+.app { background-image:
+  radial-gradient(circle, var(--wd-dot) 0 2px, transparent 2.5px),
+  linear-gradient(transparent 82%, rgb(255 110 199 / .10) 82% 83%, transparent 83% 86%, rgb(255 110 199 / .14) 86% 87%, transparent 87% 90%, rgb(255 110 199 / .18) 90% 91.5%, transparent 91.5%);
+  background-size: 24px 24px, 100% 100%; background-position: 6px 6px, 0 0; }
+
+/* --- 4. scrollbar: pixel-heart thumb, mint track ticks ------------------- */
+.wb::-webkit-scrollbar { width: 12px; }
+.wb::-webkit-scrollbar-track { background: repeating-linear-gradient(var(--wd-raised) 0 6px, #241c42 6px 12px); }
+.wb::-webkit-scrollbar-thumb { border: 2px solid var(--wd-raised);
+  background: var(--jk-bg-thumb, linear-gradient(var(--wd-pink) 0 50%, var(--wd-frame) 50%)); }
+
+/* --- 5. text selection + focus ring as pixel marching ants -------------- */
+::selection { background: var(--wd-pink); color: var(--wd-ink); }
+.btn.focus, .btn:focus-visible { outline: 2px dashed var(--wd-pink); outline-offset: 2px; }
+
+/* --- 6. side panel group headers keep comic capsules; room header gets a pixel pin ----- */
+.ghead.room { background: linear-gradient(90deg, rgb(111 227 211 / .10), transparent 70%); }
+
+/* --- 7. statusbar: NSO "start" style logo before the first segment (real app: first status segment) */
+.statusbar > :first-child::before { content: ""; width: 12px; height: 12px; margin-right: 2px;
+  background: conic-gradient(#ff7fcf 0 25%, #6fe3d3 0 50%, #ffd36f 0 75%, #8f7fe0 0) 0 0 / 12px 12px;
+  -webkit-mask: linear-gradient(#000 0 0) 0 0/5px 5px no-repeat, linear-gradient(#000 0 0) 7px 0/5px 5px no-repeat, linear-gradient(#000 0 0) 0 7px/5px 5px no-repeat, linear-gradient(#000 0 0) 7px 7px/5px 5px no-repeat;
+          mask: linear-gradient(#000 0 0) 0 0/5px 5px no-repeat, linear-gradient(#000 0 0) 7px 0/5px 5px no-repeat, linear-gradient(#000 0 0) 0 7px/5px 5px no-repeat, linear-gradient(#000 0 0) 7px 7px/5px 5px no-repeat; }

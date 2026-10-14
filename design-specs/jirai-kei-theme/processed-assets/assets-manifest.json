@@ -1,0 +1,632 @@
+{
+  "title": "Kenney Pattern Pack candidate processing",
+  "status": "Unapproved experimental assets; not a theme or palette approval",
+  "generatedAt": "2026-10-10T03:58:13.704Z",
+  "license": {
+    "packs": "Kenney Pattern Pack / Pattern Pack 2",
+    "author": "Kenney",
+    "license": "CC0 1.0",
+    "credit": "Attribution is not required; courtesy credit Kenney / kenney.nl.",
+    "licenseFiles": [
+      "licenses/kenney-pattern-pack-License.txt",
+      "licenses/kenney-pattern-pack2-License.txt"
+    ],
+    "sha256": {
+      "licenses/kenney-pattern-pack-License.txt": "9d708bd1a0100e6ba6bc6cf2f9cdc5384750b66cc2e4dd740f0705dc18b09326",
+      "licenses/kenney-pattern-pack2-License.txt": "cce3770714756e2e5bf8cfeb7e74bc498052d6a5a50635b46ad4fac0f884dfa4"
+    }
+  },
+  "processing": {
+    "method": "Source grayscale intensity becomes alpha on opaque white RGB: alpha=gray (white motif remains opaque; black source background becomes transparent). Candidate colors are then composited from this alpha mask onto explicit solid bases.",
+    "webp": "Lossless WebP, alpha preserved.",
+    "noExternalAssets": true,
+    "checkedOutputs": [
+      {
+        "file": "tiles/heart/alpha-white.png",
+        "bytes": 11919
+      },
+      {
+        "file": "tiles/heart/alpha-white.webp",
+        "bytes": 4612
+      },
+      {
+        "file": "tiles/heart/pink-black.png",
+        "bytes": 12902
+      },
+      {
+        "file": "tiles/heart/pink-black.webp",
+        "bytes": 4622
+      },
+      {
+        "file": "tiles/heart/pink-gray.png",
+        "bytes": 12865
+      },
+      {
+        "file": "tiles/heart/pink-gray.webp",
+        "bytes": 4624
+      },
+      {
+        "file": "tiles/dots/alpha-white.png",
+        "bytes": 11953
+      },
+      {
+        "file": "tiles/dots/alpha-white.webp",
+        "bytes": 4236
+      },
+      {
+        "file": "tiles/dots/pink-black.png",
+        "bytes": 12966
+      },
+      {
+        "file": "tiles/dots/pink-black.webp",
+        "bytes": 4246
+      },
+      {
+        "file": "tiles/dots/pink-gray.png",
+        "bytes": 12929
+      },
+      {
+        "file": "tiles/dots/pink-gray.webp",
+        "bytes": 4248
+      },
+      {
+        "file": "tiles/checker/alpha-white.png",
+        "bytes": 5275
+      },
+      {
+        "file": "tiles/checker/alpha-white.webp",
+        "bytes": 64
+      },
+      {
+        "file": "tiles/checker/pink-black.png",
+        "bytes": 7639
+      },
+      {
+        "file": "tiles/checker/pink-black.webp",
+        "bytes": 72
+      },
+      {
+        "file": "tiles/checker/pink-gray.png",
+        "bytes": 7638
+      },
+      {
+        "file": "tiles/checker/pink-gray.webp",
+        "bytes": 66
+      },
+      {
+        "file": "tiles/lines-square/alpha-white.png",
+        "bytes": 11235
+      },
+      {
+        "file": "tiles/lines-square/alpha-white.webp",
+        "bytes": 650
+      },
+      {
+        "file": "tiles/lines-square/pink-black.png",
+        "bytes": 10013
+      },
+      {
+        "file": "tiles/lines-square/pink-black.webp",
+        "bytes": 658
+      },
+      {
+        "file": "tiles/lines-square/pink-gray.png",
+        "bytes": 10012
+      },
+      {
+        "file": "tiles/lines-square/pink-gray.webp",
+        "bytes": 654
+      },
+      {
+        "file": "tiles/lines-diamond/alpha-white.png",
+        "bytes": 10492
+      },
+      {
+        "file": "tiles/lines-diamond/alpha-white.webp",
+        "bytes": 1102
+      },
+      {
+        "file": "tiles/lines-diamond/pink-black.png",
+        "bytes": 10653
+      },
+      {
+        "file": "tiles/lines-diamond/pink-black.webp",
+        "bytes": 1110
+      },
+      {
+        "file": "tiles/lines-diamond/pink-gray.png",
+        "bytes": 10653
+      },
+      {
+        "file": "tiles/lines-diamond/pink-gray.webp",
+        "bytes": 1104
+      }
+    ],
+    "sourceToAlphaSeamDiagnostics": {
+      "heart": {
+        "horizontal": {
+          "edgeMeanAbs": 1.652,
+          "maxEdgeDelta": 192,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 1.496,
+          "maxEdgeDelta": 128,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "dots": {
+        "horizontal": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "checker": {
+        "horizontal": {
+          "edgeMeanAbs": 255,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 255,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          0,
+          255,
+          255,
+          0
+        ]
+      },
+      "lines-square": {
+        "horizontal": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "lines-diamond": {
+        "horizontal": {
+          "edgeMeanAbs": 5.977,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 5.977,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "seamInterpretation": "For every tile, wrap edge mean/max alpha delta is compared with the maximum normal one-pixel delta anywhere inside the tile; a boundary may naturally cross a hard motif edge (e.g. checker) and need not have equal opposite edge pixels. seamNoSharperThanExistingEdges means the wrap discontinuity is no sharper than a motif edge already present inside the repeated period. The single specimen also visually tiles each pattern."
+  },
+  "tiles": [
+    {
+      "id": "heart",
+      "source": "raw/kenney-patternpack1/kenney-patternpack1-75-512.png",
+      "pack": "Pattern Pack",
+      "selection": "75; individually inspected white repeating hearts on opaque black field",
+      "dimensions": [
+        512,
+        512
+      ],
+      "derived": true,
+      "transparency": {
+        "method": "grayscale-to-alpha (source luminance becomes alpha; white RGB retained)",
+        "opaquePixels": 72419,
+        "transparentPixels": 186657,
+        "partialAlphaPixels": 3068,
+        "actualAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "alphaFiles": [
+        "tiles/heart/alpha-white.png",
+        "tiles/heart/alpha-white.webp"
+      ],
+      "variants": [
+        {
+          "id": "pink-black",
+          "files": [
+            "tiles/heart/pink-black.png",
+            "tiles/heart/pink-black.webp"
+          ],
+          "background": "#171319",
+          "motif": "#30212b",
+          "patternContrastRatio": 1.205,
+          "description": "Very low-contrast blush-on-ink experiment; foreground #30212b on #171319."
+        },
+        {
+          "id": "pink-gray",
+          "files": [
+            "tiles/heart/pink-gray.png",
+            "tiles/heart/pink-gray.webp"
+          ],
+          "background": "#302a31",
+          "motif": "#44363f",
+          "patternContrastRatio": 1.229,
+          "description": "Very low-contrast dusty-pink-on-charcoal-gray experiment; foreground #44363f on #302a31."
+        }
+      ],
+      "seamTest": {
+        "horizontal": {
+          "edgeMeanAbs": 1.652,
+          "maxEdgeDelta": 192,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 1.496,
+          "maxEdgeDelta": 128,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "sourceBytes": 6153,
+      "sourceSha256": "57db64d3d66cdf95fff15e79b1f1f41f84cdaa6e3c60732b9c9d4434ac812528"
+    },
+    {
+      "id": "dots",
+      "source": "raw/kenney-patternpack1/kenney-patternpack1-70-512.png",
+      "pack": "Pattern Pack",
+      "selection": "70; individually inspected white polka dots on opaque black field",
+      "dimensions": [
+        512,
+        512
+      ],
+      "derived": true,
+      "transparency": {
+        "method": "grayscale-to-alpha (source luminance becomes alpha; white RGB retained)",
+        "opaquePixels": 90083,
+        "transparentPixels": 168991,
+        "partialAlphaPixels": 3070,
+        "actualAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "alphaFiles": [
+        "tiles/dots/alpha-white.png",
+        "tiles/dots/alpha-white.webp"
+      ],
+      "variants": [
+        {
+          "id": "pink-black",
+          "files": [
+            "tiles/dots/pink-black.png",
+            "tiles/dots/pink-black.webp"
+          ],
+          "background": "#171319",
+          "motif": "#30212b",
+          "patternContrastRatio": 1.205,
+          "description": "Very low-contrast blush-on-ink experiment; foreground #30212b on #171319."
+        },
+        {
+          "id": "pink-gray",
+          "files": [
+            "tiles/dots/pink-gray.png",
+            "tiles/dots/pink-gray.webp"
+          ],
+          "background": "#302a31",
+          "motif": "#44363f",
+          "patternContrastRatio": 1.229,
+          "description": "Very low-contrast dusty-pink-on-charcoal-gray experiment; foreground #44363f on #302a31."
+        }
+      ],
+      "seamTest": {
+        "horizontal": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "sourceBytes": 6301,
+      "sourceSha256": "03087be79b8f3acf7d3fbca65354e75f3e8793982df0a6d0aef1d243a1aed44f"
+    },
+    {
+      "id": "checker",
+      "source": "raw/kenney-patternpack1/kenney-patternpack1-15-512.png",
+      "pack": "Pattern Pack",
+      "selection": "15; individually inspected black/white 2x2 checker motif",
+      "dimensions": [
+        512,
+        512
+      ],
+      "derived": true,
+      "transparency": {
+        "method": "grayscale-to-alpha (source luminance becomes alpha; white RGB retained)",
+        "opaquePixels": 131072,
+        "transparentPixels": 131072,
+        "partialAlphaPixels": 0,
+        "actualAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "alphaFiles": [
+        "tiles/checker/alpha-white.png",
+        "tiles/checker/alpha-white.webp"
+      ],
+      "variants": [
+        {
+          "id": "pink-black",
+          "files": [
+            "tiles/checker/pink-black.png",
+            "tiles/checker/pink-black.webp"
+          ],
+          "background": "#171319",
+          "motif": "#30212b",
+          "patternContrastRatio": 1.205,
+          "description": "Very low-contrast blush-on-ink experiment; foreground #30212b on #171319."
+        },
+        {
+          "id": "pink-gray",
+          "files": [
+            "tiles/checker/pink-gray.png",
+            "tiles/checker/pink-gray.webp"
+          ],
+          "background": "#302a31",
+          "motif": "#44363f",
+          "patternContrastRatio": 1.229,
+          "description": "Very low-contrast dusty-pink-on-charcoal-gray experiment; foreground #44363f on #302a31."
+        }
+      ],
+      "seamTest": {
+        "horizontal": {
+          "edgeMeanAbs": 255,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 255,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          0,
+          255,
+          255,
+          0
+        ]
+      },
+      "sourceBytes": 237,
+      "sourceSha256": "fba987397d1e0be22759f5438ac159d6c373ce3320b10055f81be8bef01efd58"
+    },
+    {
+      "id": "lines-square",
+      "source": "raw/kenney-patternpack2/kenney-patternpack2-thin-0000-512.png",
+      "sourceSvg": "raw/kenney-patternpack2/kenney-patternpack2-thin-0000.svg",
+      "pack": "Pattern Pack 2",
+      "selection": "0000; selected after visual inspection: thin square-frame lattice with fine diagonals, useful as compact panel edging",
+      "dimensions": [
+        512,
+        512
+      ],
+      "derived": true,
+      "transparency": {
+        "method": "grayscale-to-alpha (source luminance becomes alpha; white RGB retained)",
+        "opaquePixels": 44160,
+        "transparentPixels": 217984,
+        "partialAlphaPixels": 0,
+        "actualAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "alphaFiles": [
+        "tiles/lines-square/alpha-white.png",
+        "tiles/lines-square/alpha-white.webp"
+      ],
+      "variants": [
+        {
+          "id": "pink-black",
+          "files": [
+            "tiles/lines-square/pink-black.png",
+            "tiles/lines-square/pink-black.webp"
+          ],
+          "background": "#171319",
+          "motif": "#30212b",
+          "patternContrastRatio": 1.205,
+          "description": "Very low-contrast blush-on-ink experiment; foreground #30212b on #171319."
+        },
+        {
+          "id": "pink-gray",
+          "files": [
+            "tiles/lines-square/pink-gray.png",
+            "tiles/lines-square/pink-gray.webp"
+          ],
+          "background": "#302a31",
+          "motif": "#44363f",
+          "patternContrastRatio": 1.229,
+          "description": "Very low-contrast dusty-pink-on-charcoal-gray experiment; foreground #44363f on #302a31."
+        }
+      ],
+      "seamTest": {
+        "horizontal": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 0,
+          "maxEdgeDelta": 0,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "sourceBytes": 3092,
+      "sourceSha256": "c63d48ba65af7ae48529f03dacf6518869e49da3524abb015a38f8095e8e35a8",
+      "sourceSvgSha256": "fb7b8bdc7e6f2493bde1b6a25c45fd4cb1c0087d7b42c2033af78a8973f5eecd"
+    },
+    {
+      "id": "lines-diamond",
+      "source": "raw/kenney-patternpack2/kenney-patternpack2-thin-0004-512.png",
+      "sourceSvg": "raw/kenney-patternpack2/kenney-patternpack2-thin-0004.svg",
+      "pack": "Pattern Pack 2",
+      "selection": "0004; selected after visual inspection: airy diagonal diamond lattice, suitable for restrained trim",
+      "dimensions": [
+        512,
+        512
+      ],
+      "derived": true,
+      "transparency": {
+        "method": "grayscale-to-alpha (source luminance becomes alpha; white RGB retained)",
+        "opaquePixels": 38568,
+        "transparentPixels": 223576,
+        "partialAlphaPixels": 0,
+        "actualAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "alphaFiles": [
+        "tiles/lines-diamond/alpha-white.png",
+        "tiles/lines-diamond/alpha-white.webp"
+      ],
+      "variants": [
+        {
+          "id": "pink-black",
+          "files": [
+            "tiles/lines-diamond/pink-black.png",
+            "tiles/lines-diamond/pink-black.webp"
+          ],
+          "background": "#171319",
+          "motif": "#30212b",
+          "patternContrastRatio": 1.205,
+          "description": "Very low-contrast blush-on-ink experiment; foreground #30212b on #171319."
+        },
+        {
+          "id": "pink-gray",
+          "files": [
+            "tiles/lines-diamond/pink-gray.png",
+            "tiles/lines-diamond/pink-gray.webp"
+          ],
+          "background": "#302a31",
+          "motif": "#44363f",
+          "patternContrastRatio": 1.229,
+          "description": "Very low-contrast dusty-pink-on-charcoal-gray experiment; foreground #44363f on #302a31."
+        }
+      ],
+      "seamTest": {
+        "horizontal": {
+          "edgeMeanAbs": 5.977,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "vertical": {
+          "edgeMeanAbs": 5.977,
+          "maxEdgeDelta": 255,
+          "maxIntraTileDelta": 255,
+          "seamNoSharperThanExistingEdges": true
+        },
+        "cornerAlpha": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "sourceBytes": 3901,
+      "sourceSha256": "89d8cc88fcf14fdb83b3bd7412923ce166e354a72292f762341a328ffd6439e8",
+      "sourceSvgSha256": "ffc95af60fafb0a82bbd983c7cfc0411ebedcb72779d7724ef1ca47b1d85ca2c"
+    }
+  ],
+  "sampleSheet": {
+    "file": "pattern-candidate-specimen.webp",
+    "purpose": "single material specimen sheet only; tile repeat preview, not a UI/theme proposal",
+    "width": 1280,
+    "height": 1000,
+    "bytes": 93740,
+    "views": [
+      "white RGBA alpha over checker background",
+      "pink-black low contrast tile",
+      "pink-gray low contrast tile"
+    ]
+  },
+  "validation": {
+    "library": "sharp",
+    "patternTiles": 5,
+    "pngWebpPairs": 15,
+    "outputFiles": 30,
+    "dimensions": "all 512x512",
+    "pixelComparison": "PNG and lossless WebP alpha channels and visible RGB values match exactly; transparent RGB is ignored because WebP may canonicalize hidden transparent color channels",
+    "manifestByteCountsMatch": true,
+    "allPass": true
+  }
+}

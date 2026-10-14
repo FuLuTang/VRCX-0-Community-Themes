@@ -1,0 +1,19 @@
+{
+  "id": "jirai-kei-theme",
+  "name": "Jirai Kei · Noir Ribbon",
+  "version": "1.1.0",
+  "author": {
+    "name": "FuLuTang",
+    "github": "FuLuTang"
+  },
+  "description": "Noir Ribbon: original openwork lace, tailored collar edges, satin stitches, portrait bezels and tactile BaseUI controls. Draft; no remote assets.",
+  "tags": [
+    "dark",
+    "jirai-kei",
+    "local"
+  ],
+  "testedWith": "0.0.0-unverified",
+  "remoteAssets": false,
+  "darkMode": true,
+  "accentMode": false
+}

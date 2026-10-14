@@ -1,0 +1,973 @@
+{
+ "total": 88,
+ "all": [
+  {
+   "loc": "components/dialogs/AvatarDetailsDialog.tsx:277",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/AvatarOwnerEditDialogs.tsx:307",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/BoopEmojiDialog.tsx:380",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.boop_dialog.header')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/FriendListUserLoadDialog.tsx:39",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/InstanceInviteDialog.tsx:340",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.invite.invite')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/InviteMessageDialog.tsx:92",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/InviteMessageDialog.tsx:149",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/PreviousInstancesTableDialog.tsx:235",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{dialogTitle}</DialogTitle>",
+    "<DialogDescription>{dialogDescription}</DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/WorldOwnerEditDialogs.tsx:265",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/WorldOwnerEditDialogs.tsx:454",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/WorldOwnerEditDialogs.tsx:697",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx:175",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/group-dialog/GroupModerationLogsExportDialog.tsx:68",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/group-dialog/GroupPostEditorDialog.tsx:144",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/group-dialog/GroupProfileEditDialog.tsx:91",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>{group.name}</DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx:100",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx:426",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx:124",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/dialogs/user-dialog/components/UserNoteMemoDialog.tsx:50",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "{targetLabel ? ("
+   ],
+   "nonTD": [
+    "{targetLabel ? ("
+   ]
+  },
+  {
+   "loc": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:349",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/DialogHost.tsx:100",
+   "tag": "DialogHeader",
+   "cls": "sr-only",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/LaunchDialogHost.tsx:405",
+   "tag": "DialogHeader",
+   "cls": "min-w-0",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.launch.header')}</DialogTitle>",
+    "<DialogDescription className=\"min-w-0 break-words whitespace"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/LinuxRenderingTrialHost.tsx:72",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/ModalHost.tsx:141",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{renderedAlertDialog.title}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/ModalHost.tsx:195",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{promptDialog.title}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/ModalHost.tsx:263",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{otpDialog.title}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/ProfileRestoreResultHost.tsx:124",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogTitle>",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/ChangelogDialog.tsx:229",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.change_log.header')}</DialogTitle>",
+    "<div className=\"text-muted-foreground text-sm\">"
+   ],
+   "nonTD": [
+    "<div className=\"text-muted-foreground text-sm\">"
+   ]
+  },
+  {
+   "loc": "components/hosts/system-dialogs/DataDirMigrationDialog.tsx:144",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogTitle className=\"text-balance\">",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/DatabaseMaintenanceDialog.tsx:22",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:230",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle",
+    "<DialogDescription"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/LaunchOptionsDialog.tsx:161",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx:162",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.open_source.header')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/ProfileBackupDialogs.tsx:249",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogMedia className=\"bg-destructive/10 text-destruct",
+    "<AlertDialogTitle>{title}</AlertDialogTitle>",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": [
+    "<AlertDialogMedia className=\"bg-destructive/10 text-destruct"
+   ]
+  },
+  {
+   "loc": "components/hosts/system-dialogs/RegistryBackupDialog.tsx:281",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/UpdaterDialog.tsx:232",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/UpdaterDialog.tsx:264",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/system-dialogs/VRChatConfigDialog.tsx:461",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.config_json.header')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/AppLauncherDialog.tsx:448",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.app_launcher.header')}</DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/ExportListDialogs.tsx:71",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/ExportListDialogs.tsx:153",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/ExportListDialogs.tsx:246",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/GroupCalendarDialog.tsx:502",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:388",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{dialogTitle()}</DialogTitle>",
+    "{view === 'list' ? ("
+   ],
+   "nonTD": [
+    "{view === 'list' ? ("
+   ]
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/NoteExportDialog.tsx:335",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.note_export.header')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx:248",
+   "tag": "DialogHeader",
+   "cls": "border-b px-6 py-5",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('profile_backup.header')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/presence-automation/PresenceAutomationDialog.tsx:146",
+   "tag": "DialogHeader",
+   "cls": "px-4 pt-4 pr-12 pb-3",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/presence-automation/PresenceAutomationDialog.tsx:246",
+   "tag": "DialogHeader",
+   "cls": "px-4 pt-4 pr-12 pb-3",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/hosts/tools-dialogs/presence-automation/PresenceAutomationDialog.tsx:346",
+   "tag": "DialogHeader",
+   "cls": "px-4 pt-4 pr-12 pb-3",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/keyboard/KeyboardShortcutsDialog.tsx:38",
+   "tag": "SheetHeader",
+   "cls": "shrink-0 px-5 py-5 pr-12",
+   "flexRow": false,
+   "kids": [
+    "<SheetTitle>{t('shortcuts.title')}</SheetTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/layout/CustomNavDialog.tsx:662",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/media/ImageCropDialog.tsx:480",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{resolvedTitle}</DialogTitle>",
+    "<DialogDescription>{resolvedDescription}</DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/proxy/ProxySettingsDialog.tsx:99",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/search/AvatarProviderSettingsDialog.tsx:128",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/sidebar/QuickSearchDialog.tsx:157",
+   "tag": "DialogHeader",
+   "cls": "sr-only",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:430",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx:36",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/assistant/AssistantDialog.tsx:313",
+   "tag": "DialogHeader",
+   "cls": "border-border/40 flex-row items-center justify-between space-y-0 border-b py-3 pr-3 pl-4",
+   "flexRow": true,
+   "kids": [
+    "<DialogTitle",
+    "<div className=\"flex items-center gap-1.5\">"
+   ],
+   "nonTD": [
+    "<div className=\"flex items-center gap-1.5\">"
+   ]
+  },
+  {
+   "loc": "features/auth/components/DeleteSavedAccountDialog.tsx:38",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogTitle>",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/auth/components/LoginProxySettingsDialog.tsx:44",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('view.login.proxy_settings')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/charts/components/mutual-friends/MutualFriendsManagementSheets.tsx:69",
+   "tag": "SheetHeader",
+   "cls": "border-border/60 shrink-0 border-b",
+   "flexRow": false,
+   "kids": [
+    "<SheetTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/charts/components/mutual-friends/MutualFriendsManagementSheets.tsx:110",
+   "tag": "SheetHeader",
+   "cls": "border-border/60 shrink-0 border-b",
+   "flexRow": false,
+   "kids": [
+    "<SheetTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx:95",
+   "tag": "SheetHeader",
+   "cls": "border-border/60 shrink-0 border-b",
+   "flexRow": false,
+   "kids": [
+    "<SheetTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/dashboard/components/DashboardViewParts.tsx:273",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/favorites/SavedGroupFavoritesPage.tsx:423",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogTitle>",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/favorites/components/FavoriteExportDialog.tsx:118",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/favorites/components/FavoriteShareCollectionDialog.tsx:428",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{dialogTitle}</DialogTitle>",
+    "<DialogDescription>{dialogDescription}</DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/feed/columns/FeedColumnsManagerDialog.tsx:234",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('view.feed.columns.manage')}</DialogTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/feed/columns/FeedColumnsManagerDialog.tsx:648",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogTitle>",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/feed/columns/FeedColumnsMode.tsx:366",
+   "tag": "AlertDialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<AlertDialogTitle>",
+    "<AlertDialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/my-avatars/ManageAvatarTagsDialog.tsx:138",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>{avatarName}</DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/notifications/VrcNotificationCenterHost.tsx:150",
+   "tag": "SheetHeader",
+   "cls": "border-b px-4 py-3",
+   "flexRow": false,
+   "kids": [
+    "<div className=\"flex items-center justify-between gap-3\">",
+    "{detail ? ("
+   ],
+   "nonTD": [
+    "<div className=\"flex items-center justify-between gap-3\">",
+    "{detail ? ("
+   ]
+  },
+  {
+   "loc": "features/privacy-lock/PrivacyLockPasswordDialog.tsx:242",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t(copy.title)}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/SettingsViewParts.tsx:186",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/TrayShortcutSetting.tsx:283",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('shortcuts.tray.configure')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/AvatarProviderDialog.tsx:52",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/CustomFontDialog.tsx:206",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/GameLogImportDialog.tsx:157",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t(`${keyPrefix}.dialog_title`)}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/PurgeConfirmDialog.tsx:62",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/TableLimitsDialog.tsx:63",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/TranslationApiDialog.tsx:125",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx:376",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t(titleKey)}</DialogTitle>",
+    "<DialogDescription>{t(descriptionKey)}</DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-dialogs/YoutubeApiDialog.tsx:44",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>{t('dialog.youtube_api.header')}</DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-tabs/IntegrationApiSettingsGroup.tsx:65",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/settings/components/settings-tabs/WebhookSettingsGroup.tsx:474",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "features/workflows/SyncWorkflowDialog.tsx:172",
+   "tag": "DialogHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<DialogTitle>",
+    "<DialogDescription>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "services/sidebarAutoHideOverlays.test.tsx:95",
+   "tag": "SheetHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<SheetTitle>Notifications</SheetTitle>"
+   ],
+   "nonTD": []
+  },
+  {
+   "loc": "services/sidebarAutoHideOverlays.test.tsx:114",
+   "tag": "SheetHeader",
+   "cls": "",
+   "flexRow": false,
+   "kids": [
+    "<SheetTitle>Notifications</SheetTitle>"
+   ],
+   "nonTD": []
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+  "revision": "R9.1",
+  "date": "2026-10-12",
+  "target": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "previousRevision": "R9.0",
+  "files": [
+    {
+      "Name": "preview.webp",
+      "Bytes": 45218,
+      "Hash": "2722D94E95C2BD9CF895B505BEE2D1218B81B6A406556846CA708FDA1DFAD0D2"
+    },
+    {
+      "Name": "README.md",
+      "Bytes": 1545,
+      "Hash": "C21A79B1522DC1BCFC6CC4ED14105C0749F854860034410A80BADD2C607DCC24"
+    },
+    {
+      "Name": "theme.css",
+      "Bytes": 849062,
+      "Hash": "0B06EAA13BEBCACB34B9CA7FF2816795911B963F91837C6DB6432B2B462E5190"
+    },
+    {
+      "Name": "theme.json",
+      "Bytes": 620,
+      "Hash": "9C29484F7A3981CA5A9C2FB13DE08089406A4C1195438A4BE79E1EDBCE931461"
+    }
+  ],
+  "fileCount": 4,
+  "atomicFileReplacement": true,
+  "previousHashesVerified": true,
+  "uploadAndFinalHashesVerified": true,
+  "reloadNote": "Local preview file watch was off on Windows; reloaded via Themes > 本地主题预览 > 重新加载 (UIA). Preview label confirmed 'Local Preview R9'.",
+  "windowsObserved": {
+    "loadedCssChars": 848450,
+    "loadedVerified": "Themes page shows Local Preview R9 with CSS length 848450 == local theme.css char length",
+    "reload": "Cua MCP disconnected; restarted cua-driver daemon (Session 1) and drove UIA via cua-driver CLI over SSH named pipe; clicked 重新加载 and 开始监视文件变更 (watch now ON)",
+    "notificationBadge": "pass: small square at bell top-right, bell visible",
+    "segmentedSelected": "pass: device pixel sample tabs=toggle=(255,184,230)",
+    "activityCard": "pass: 1px #6c5ce0 soft bevel, opaque",
+    "friendLocationsToolbar": "pass",
+    "themesPageTabs": "pass",
+    "themesCurrentThemeButtons": "present (moved right on wide window)",
+    "fromR90": {
+      "popupsMyAvatarsMenu": "pass",
+      "statusMenuSquareLamps": "pass",
+      "accountMenuPixelAvatar": "pass",
+      "roomHistoryPopoverAvatars": "pass",
+      "gameLogTableLayoutMenu": "pass",
+      "userDialogBannerAvatarCorners": "pass"
+    }
+  },
+  "windowsVisualValidated": true,
+  "history": [
+    {
+      "revision": "R9.0",
+      "files": [
+        {
+          "Name": "preview.webp",
+          "Bytes": 45218,
+          "Hash": "2722D94E95C2BD9CF895B505BEE2D1218B81B6A406556846CA708FDA1DFAD0D2"
+        },
+        {
+          "Name": "README.md",
+          "Bytes": 1545,
+          "Hash": "C21A79B1522DC1BCFC6CC4ED14105C0749F854860034410A80BADD2C607DCC24"
+        },
+        {
+          "Name": "theme.css",
+          "Bytes": 848645,
+          "Hash": "CBE20602FBCB70D681244CD4B22E5F0E258AD223BC09A559EE5DBF3F1EDD7E97"
+        },
+        {
+          "Name": "theme.json",
+          "Bytes": 620,
+          "Hash": "9C29484F7A3981CA5A9C2FB13DE08089406A4C1195438A4BE79E1EDBCE931461"
+        }
+      ],
+      "windowsObserved": {
+        "popupsMyAvatarsMenu": "pass",
+        "statusMenuSquareLamps": "pass",
+        "accountMenuPixelAvatar": "pass",
+        "roomHistoryPopoverAvatars": "pass",
+        "gameLogTableLayoutMenu": "pass",
+        "userDialogBannerAvatarCorners": "pass (no dark corners)",
+        "bannerPattern": "tier C visible; pending user judgement",
+        "friendLocationsTabs": "pass",
+        "notificationBadge": "FAIL: covers bell icon -> rework",
+        "segmentedSelectedColor": "FAIL: tabs vs toggle selected colors differ -> rework",
+        "activityCardBorder": "FAIL: white bevel too loud -> rework",
+        "themesPageTabs": "FAIL: not covered -> rework"
+      }
+    }
+  ],
+  "localChecks": "12/12 PASS (r9-popups,r9-controls,r9-badge,r9-user-dialog,r8-login,r8-user-dialog,r8-bio-diff,r8-chrome lace2+verify,r7-backgrounds,r7-motion,r8-motion); package assert PASS",
+  "userAcceptedOnWindows": null
+}

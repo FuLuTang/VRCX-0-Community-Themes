@@ -1,0 +1,381 @@
+/* Jirai Kei · Noir Ribbon — original VRCX-0 adaptation; GPL-3.0-only.
+   Plain CSS, no remote assets. Internal surface tokens are compatibility helpers.
+   Deliberately preserve VRChat status colors and the app layout. */
+:root,
+:root.dark,
+.dark {
+  --background: #161219;
+  --foreground: #f7eef4;
+  --card: #211b25;
+  --card-foreground: #f7eef4;
+  --popover: #2b2230;
+  --popover-foreground: #f7eef4;
+  --primary: #f0a8c8;
+  --primary-foreground: #271722;
+  --secondary: #2b2230;
+  --secondary-foreground: #f7eef4;
+  --muted: #2b2230;
+  --muted-foreground: #c4aab9;
+  --accent: #392a38;
+  --accent-foreground: #f7eef4;
+  --destructive: #ff8899;
+  --destructive-foreground: #161219;
+  --border: #564151;
+  --input: #bdb3c2;
+  --ring: #f0a8c8;
+  --radius: 0.5rem;
+  --sidebar: #211b25;
+  --sidebar-foreground: #f7eef4;
+  --sidebar-primary: #f0a8c8;
+  --sidebar-primary-foreground: #271722;
+  --sidebar-accent: #4a293d;
+  --sidebar-accent-foreground: #f7eef4;
+  --sidebar-border: #564151;
+  --sidebar-ring: #f0a8c8;
+  --surface-canvas: #161219;
+  --surface-shell: #211b25;
+  --surface-panel: #211b25;
+  --surface-raised: #2b2230;
+  --surface-overlay: #2b2230;
+  --surface-interactive: #2b2230;
+  --surface-interactive-hover: #392a38;
+  --content-primary: #f7eef4;
+  --content-secondary: #c4aab9;
+  --content-tertiary: #c4aab9;
+  --content-disabled: #c4aab9;
+  --stroke-subtle: #564151;
+  --stroke-default: #564151;
+  --stroke-strong: #bdb3c2;
+  --border-subtle: #564151;
+  --border-hover: #bdb3c2;
+  --state-hover-surface: #392a38;
+  --state-pressed-surface: #4a293d;
+  --state-selected-surface: #4a293d;
+  --state-selected-hover-surface: #392a38;
+  --vrcx-0-app-surface: #211b25;
+  --vrcx-0-titlebar-surface: #211b25;
+  --vrcx-0-main-surface: #211b25;
+  --vrcx-0-main-content-surface: #161219;
+  --vrcx-0-sidebar-surface: #211b25;
+  --vrcx-0-sidebar-inset-surface: #211b25;
+  --vrcx-0-side-panel-surface: #211b25;
+  --vrcx-0-statusbar-surface: #211b25;
+  --vrcx-0-table-surface: #211b25;
+  --vrcx-0-table-header-surface: #2b2230;
+  --vrcx-0-table-header-foreground: #f7eef4;
+  --vrcx-0-table-row-hover-surface: #392a38;
+  --vrcx-0-table-row-selected-surface: #4a293d;
+  --vrcx-0-table-row-selected-hover-surface: #392a38;
+  --vrcx-0-table-row-expanded-surface: #2b2230;
+  --vrcx-0-table-border: #564151;
+  --vrcx-0-table-divider: #564151;
+  --vrcx-0-table-sticky-edge: #bdb3c2;
+  --vrcx-0-toolbar-control-surface: #2b2230;
+  --vrcx-0-toolbar-control-hover-surface: #392a38;
+  --vrcx-0-toolbar-control-border: #564151;
+  --vrcx-0-toolbar-group-surface: #211b25;
+  --vrcx-0-toolbar-group-border: #564151;
+  --vrcx-0-main-content-radius: 0.5rem;
+  --vrcx-0-main-content-edge: #564151;
+  --vrcx-0-main-content-highlight: transparent;
+  --vrcx-0-main-content-lift: none;
+  --vrcx-0-resize-accent-active: #f0a8c8;
+  --chart-1: #f0a8c8;
+  --chart-2: #b9cfa9;
+  --chart-3: #e0b97f;
+  --chart-4: #ad80d7;
+  --chart-5: #ff8899;
+}
+
+/* Small component polish, never hide recovery or destructive controls. */
+.vrcx-0-titlebar {
+  border-bottom: 1px solid var(--border);
+}
+.vrcx-0-statusbar {
+  border-top: 1px solid var(--border);
+  color: var(--muted-foreground);
+}
+.vrcx-0-sidebar-surface {
+  border-right: 1px solid var(--border);
+}
+.vrcx-0-side-panel {
+  border-left: 1px solid var(--border);
+}
+[data-slot="card"] {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+[data-slot="input"],
+[data-slot="textarea"],
+[data-slot="select-trigger"] {
+  background: var(--background);
+  color: var(--foreground);
+  border-color: var(--input);
+  border-radius: var(--radius);
+}
+[data-slot="input"][aria-invalid="true"],
+[data-slot="textarea"][aria-invalid="true"],
+[data-slot="select-trigger"][aria-invalid="true"] {
+  border-color: var(--destructive);
+}
+[data-slot="input"]::placeholder,
+[data-slot="textarea"]::placeholder {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+[data-slot="button"] {
+  border-radius: var(--radius);
+}
+[data-slot="button"][data-variant="default"]:not(:disabled) {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+[data-slot="button"][data-variant="outline"],
+[data-slot="button"][data-variant="secondary"] {
+  border-color: var(--input);
+}
+[data-slot="button"][data-variant="destructive"] {
+  background: color-mix(in srgb, var(--destructive) 12%, var(--background));
+  color: var(--destructive);
+  border: 1px solid var(--destructive);
+}
+/* Focus also applies to portaled dialogs and dropdown menus outside app-root. */
+:where(button, a, input, textarea, select, [tabindex], [role="checkbox"], [role="switch"]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"]:hover:not(:disabled):not([data-disabled]):not([aria-disabled="true"]) {
+  background: var(--sidebar-accent);
+}
+.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"][data-active="true"] {
+  background: var(--sidebar-accent);
+  color: var(--sidebar-foreground);
+  box-shadow: inset 3px 0 var(--ring);
+}
+[data-slot="tabs-tab"][data-active] {
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: inset 0 2px var(--ring);
+}
+[data-slot="dialog-content"],
+[data-slot="alert-dialog-content"],
+[data-slot="dropdown-menu-content"],
+[data-slot="popover-content"],
+[data-slot="tooltip-content"] {
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 32px #00000066;
+}
+[data-slot="dropdown-menu-item"][data-highlighted] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+.vrcx-0-data-table {
+  background: var(--vrcx-0-table-surface);
+  border-color: var(--vrcx-0-table-border);
+}
+.vrcx-0-data-table [data-slot="table-head"] {
+  background: var(--vrcx-0-table-header-surface);
+  color: var(--vrcx-0-table-header-foreground);
+}
+.vrcx-0-data-table :is([data-slot="table-row"], [data-vrcx-0-table-row]):hover {
+  background: var(--vrcx-0-table-row-hover-surface);
+}
+.vrcx-0-data-table :is([data-slot="table-row"], [data-vrcx-0-table-row])[data-state="selected"] {
+  background: var(--vrcx-0-table-row-selected-surface);
+  box-shadow: inset 3px 0 var(--ring);
+}
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+
+/* 1.1.0 / D0 data, D1 wearable edges, D2 one collar-and-bow focal point.
+   All artwork is decorative CSS background (absent from the accessibility tree).
+   No new pseudo-elements; no interaction layers, layout, avatar-image or status edits.
+   Set --jirai-decoration: 0 on :root AFTER this stylesheet to remove ornament.
+   Focus, checked/error/disabled affordances remain even with ornament disabled. */
+:root {
+  --jirai-decoration: 1;
+  --jirai-lace: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2212%22%20viewBox%3D%220%200%2048%2012%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23eadce5%22%20stroke-opacity%3D%22.58%22%20stroke-width%3D%22.7%22%3E%3Cpath%20d%3D%22M0%201H48M0%203H48M0%204Q6%2016%2012%204Q18%2016%2024%204Q30%2016%2036%204Q42%2016%2048%204%22%2F%3E%3Cpath%20d%3D%22M3%204L6%207L9%204M15%204L18%207L21%204M27%204L30%207L33%204M39%204L42%207L45%204%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224%22%20r%3D%221.2%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%224%22%20r%3D%221.2%22%2F%3E%3Ccircle%20cx%3D%2236%22%20cy%3D%224%22%20r%3D%221.2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --jirai-collar: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%2214%22%20viewBox%3D%220%200%20160%2014%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23eadce5%22%20stroke-opacity%3D%22.7%22%20stroke-width%3D%22.8%22%3E%3Cpath%20d%3D%22M0%201L64%201L80%2012L96%201H160M0%204L63%204L80%2014L97%204H160%22%2F%3E%3Cpath%20stroke-dasharray%3D%222%203%22%20d%3D%22M0%207H60M100%207H160%22%2F%3E%3Cpath%20d%3D%22M77%203L80%206L83%203L80%200Z%22%20fill%3D%22%23f0a8c8%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --jirai-bow: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2280%22%20height%3D%2244%22%20viewBox%3D%220%200%2080%2044%22%3E%3Cg%20opacity%3D%22.55%22%20stroke%3D%22%23e5aac9%22%20stroke-width%3D%221.2%22%20fill%3D%22%2357354c%22%3E%3Cpath%20d%3D%22M37%2019C27%204%209%204%209%2011L13%2026Q27%2031%2037%2023M43%2019C53%204%2071%204%2071%2011L67%2026Q53%2031%2043%2023%22%2F%3E%3Cpath%20d%3D%22M35%2023L27%2040L36%2037L40%2042L43%2025M45%2023L53%2040L44%2037L40%2042%22%2F%3E%3Cpath%20d%3D%22M40%2015L46%2021L40%2027L34%2021Z%22%20fill%3D%22%23f5eaf0%22%2F%3E%3Cpath%20d%3D%22M40%2018L43%2021L40%2024L37%2021Z%22%20fill%3D%22%23e5aac9%22%2F%3E%3Cpath%20d%3D%22M16%2014L33%2020M64%2014L47%2020%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --jirai-scrollbar-width: thin;
+}
+/* D2 openwork is confined to native sheet/dialog padding below.
+   The real main-content has NO padding: do not pattern its reading surface. */
+/* D1: satin weave and a dashed sewn edge on active navigation only. */
+.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"][data-active="true"] {
+  background-color: var(--sidebar-accent);
+  background-image: repeating-linear-gradient(90deg, #eadce580 0 3px, transparent 3px 7px),
+    repeating-linear-gradient(0deg, #ffffff06 0 1px, transparent 1px 3px),
+    linear-gradient(105deg, #684157, #4a293d 75%);
+  background-size: 100% calc(1px * var(--jirai-decoration)),
+    100% calc(100% * var(--jirai-decoration)), 100% calc(100% * var(--jirai-decoration));
+  background-position: left bottom 3px, center, center;
+  background-repeat: no-repeat;
+  box-shadow: inset 3px 0 var(--ring);
+}
+/* D1: inset tailoring seams, without widening the card or reducing its content. */
+[data-slot="card"] {
+  box-shadow: inset 0 0 0 3px var(--card),
+    inset 0 0 0 4px rgb(189 179 194 / calc(.3 * var(--jirai-decoration))),
+    0 4px 14px #00000022;
+}
+/* D2: localized collar title; inherited body font, slightly deliberate title tracking. */
+:is([data-slot="dialog-title"], [data-slot="alert-dialog-title"], [data-slot="sheet-title"]) {
+  letter-spacing: .025em;
+  text-wrap: pretty;
+}
+/* SheetHeader has native p-6; pb-3 with sheet-panel and pb-4 on narrow screens.
+   10px lace fits even that minimum 12px bottom padding. */
+[data-slot="sheet-header"] {
+  background-image: var(--jirai-collar), var(--jirai-lace);
+  background-size: 160px calc(14px * var(--jirai-decoration)), 48px calc(10px * var(--jirai-decoration));
+  background-repeat: no-repeat, repeat-x;
+  background-position: center top, left bottom;
+}
+/* DialogContent has native p-4 (16px): art stays inside that actual safe strip. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]) {
+  background-image: var(--jirai-bow), var(--jirai-collar), var(--jirai-lace);
+  background-size: calc(24px * var(--jirai-decoration)) calc(12px * var(--jirai-decoration)),
+    160px calc(12px * var(--jirai-decoration)), 48px calc(10px * var(--jirai-decoration));
+  background-position: center top 1px, center bottom 2px, left bottom;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+}
+/* Native footer uses negative margins: move bottom art to its own p-4 strip. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):has(:is([data-slot="dialog-footer"], [data-slot="alert-dialog-footer"])) {
+  background-image: var(--jirai-bow);
+  background-size: calc(24px * var(--jirai-decoration)) calc(12px * var(--jirai-decoration));
+  background-position: center top 1px;
+  background-repeat: no-repeat;
+}
+:is([data-slot="dialog-footer"], [data-slot="alert-dialog-footer"]) {
+  background-image: var(--jirai-collar), var(--jirai-lace);
+  background-size: 160px calc(12px * var(--jirai-decoration)), 48px calc(10px * var(--jirai-decoration));
+  background-position: center bottom 2px, left bottom;
+  background-repeat: no-repeat, repeat-x;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"], [data-slot="sheet-popup"]) {
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border-color: var(--border);
+  box-shadow: inset 0 0 0 3px var(--popover),
+    inset 0 0 0 4px rgb(189 179 194 / calc(.35 * var(--jirai-decoration))), 0 10px 32px #00000066;
+}
+/* TitleBar is only h-8 in the real app: no bow can safely occupy its text strip.
+   Keep its native border; the single bow focal point now lives in dialog padding. */
+/* D1: external double bezel only on portrait/card avatars, never data-row avatars.
+   Original image geometry, image colors and BaseUI's own after border are intact. */
+:is([data-slot="card"], [data-slot="sheet-header"], [data-slot="dialog-header"], [data-slot="alert-dialog-header"]) [data-slot="avatar"]:not(:where(.vrcx-0-data-table *, [data-slot="table-row"] *, [data-vrcx-0-table-row] *, [data-slot="command-list"] *)) {
+  box-shadow: 0 0 0 calc(2px * var(--jirai-decoration)) var(--card),
+    0 0 0 calc(3px * var(--jirai-decoration)) #bdb3c2,
+    0 0 0 calc(5px * var(--jirai-decoration)) #564151;
+}
+/* D1: enamel-like neutral badges, NOT destructive or app status badges. */
+[data-slot="badge"][data-variant="secondary"]:not(:where(.vrcx-0-data-table *, [data-slot="table-row"] *, [data-vrcx-0-table-row] *, [data-slot="command-list"] *)) {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border-color: var(--border);
+  background-image: linear-gradient(160deg, #ffffff18, transparent 45%, #00000018);
+  background-size: 100% calc(100% * var(--jirai-decoration));
+  background-repeat: no-repeat;
+  box-shadow: inset 0 1px rgb(234 220 229 / calc(.25 * var(--jirai-decoration)));
+}
+/* BaseUI controls: retain the existing check SVG and thumb transform/hit area. */
+[data-slot="checkbox"] {
+  background-color: var(--background);
+  border-color: var(--input);
+  box-shadow: inset 0 0 0 2px rgb(189 179 194 / calc(.12 * var(--jirai-decoration)));
+}
+[data-slot="checkbox"]:is([data-checked], [data-indeterminate]) {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background-image: linear-gradient(135deg, #ffffff35, transparent 60%);
+  background-size: 100% calc(100% * var(--jirai-decoration));
+  background-repeat: no-repeat;
+}
+[data-slot="switch"] {
+  background-color: var(--muted);
+  border-color: var(--input);
+  box-shadow: inset 0 1px 3px #00000050;
+}
+[data-slot="switch"][data-checked] {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+[data-slot="switch-thumb"] {
+  background-color: var(--foreground);
+  background-image: linear-gradient(145deg, #fff, #bdb3c2);
+  background-size: 100% calc(100% * var(--jirai-decoration));
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 2px #00000060;
+}
+/* Checked thumb is a dark faceted bead: its gradient must not erase the
+   >=3:1 shape boundary against the pink track. Unchecked remains pearl. */
+[data-slot="switch-thumb"][data-checked] {
+  background-color: var(--primary-foreground);
+  background-image: linear-gradient(145deg, #5b3c50, #271722);
+}
+/* Tabs really are tabs-tab/data-active (not Radix tabs-trigger/data-state). */
+[data-slot="tabs-tab"][data-active] {
+  background-color: var(--background);
+  color: var(--foreground);
+  box-shadow: inset 0 -2px var(--ring);
+  background-image: repeating-linear-gradient(90deg, #eadce570 0 3px, transparent 3px 7px);
+  background-size: 100% calc(1px * var(--jirai-decoration));
+  background-position: left top 2px;
+  background-repeat: no-repeat;
+}
+[data-slot="tabs-tab"][data-orientation="vertical"][data-active] {
+  box-shadow: inset 2px 0 var(--ring);
+}
+/* Error beats checked styling; no status icon replacement, no pink error masking. */
+:is([data-slot="checkbox"], [data-slot="switch"], [data-slot="input"], [data-slot="textarea"], [data-slot="select-trigger"])[aria-invalid="true"] {
+  border-color: var(--destructive);
+}
+/* An outer error rail stays legible even against the pink checked fill. */
+:is([data-slot="checkbox"], [data-slot="switch"])[aria-invalid="true"] {
+  box-shadow: 0 0 0 2px var(--destructive);
+}
+[data-slot="field-error"] { color: var(--destructive); }
+[data-slot="toast-viewport"] > [data-type] {
+  border-color: var(--border);
+  box-shadow: inset 3px 0 var(--ring), 0 4px 14px #00000022;
+}
+[data-slot="toast-viewport"] > [data-type="error"] { box-shadow: inset 3px 0 var(--destructive), 0 4px 14px #00000022; }
+/* D0: no pattern in any dense table surface, including decorated controls. */
+:is(.vrcx-0-data-table, [data-slot="table-row"], [data-vrcx-0-table-row], [data-slot="command-list"]) :is([data-slot="badge"], [data-slot="checkbox"], [data-slot="switch-thumb"], [data-slot="tabs-tab"]) {
+  background-image: none;
+}
+/* Tactile double focus rail: outside the hit target, stays on when ornaments are off. */
+:where(button, a, input, textarea, select, [tabindex], [role="checkbox"], [role="switch"]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  /* Do not replace BaseUI's box-shadow-based focus/error rings. */
+}
+/* Native scrollbar semantics remain; OS overlay scrollbars may ignore this. */
+* { scrollbar-width: var(--jirai-scrollbar-width); scrollbar-color: #bdb3c2 #211b25; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: #211b25; }
+*::-webkit-scrollbar-thumb { background: #bdb3c2; border: 2px solid #211b25; border-radius: 8px; }
+[data-slot="button"][data-variant="default"]:hover:not(:disabled):not([data-disabled]) { background-color: #f7c2da; }
+:is([data-slot="button"], [data-slot="input"], [data-slot="sidebar-menu-button"], [data-slot="checkbox"], [data-slot="switch"], [data-slot="tabs-tab"]) {
+  transition: background-color 120ms ease-out, border-color 120ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is([data-slot="button"], [data-slot="input"], [data-slot="sidebar-menu-button"], [data-slot="checkbox"], [data-slot="switch"], [data-slot="switch-thumb"], [data-slot="tabs-tab"], [data-slot="tab-indicator"]) { transition: none; }
+}
+.reduce-effects :is([data-slot="button"], [data-slot="input"], [data-slot="sidebar-menu-button"], [data-slot="checkbox"], [data-slot="switch"], [data-slot="switch-thumb"], [data-slot="tabs-tab"], [data-slot="tab-indicator"]) { transition: none; }
+@media (forced-colors: active) {
+  /* Image backgrounds survive forced colors; suppress ornaments, not semantics. */
+  :root { --jirai-decoration: 0 !important; }
+  :is([data-slot="checkbox"], [data-slot="switch"], [data-slot="input"]) { border-color: ButtonText; }
+  :where(button, a, input, textarea, select, [tabindex]):focus-visible { outline-color: Highlight; }
+}

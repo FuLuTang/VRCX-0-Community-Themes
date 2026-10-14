@@ -1,0 +1,119 @@
+{
+  "result": "PASS",
+  "fixture": "NOT WINDOWS / fictional data / emulated source utilities; not live acceptance",
+  "packageCss": "/tmp/jirai-r9-out-popups/jirai-kei-theme/theme.css",
+  "packageBytes": 903642,
+  "cssBytes": 13592,
+  "baseline": "current compiled CSS minus SECTION popups-r9",
+  "afterPackage": "current isolated compiled CSS unchanged",
+  "captureGeometry": {
+    "before": {
+      "width": 892,
+      "height": 955,
+      "layout": {
+        "body": 954.703125,
+        "mainGrid": 520.5625,
+        "newGrid": 248.359375,
+        "scrollWidth": 892,
+        "scrollHeight": 955
+      }
+    },
+    "after": {
+      "width": 892,
+      "height": 957,
+      "layout": {
+        "body": 956.703125,
+        "mainGrid": 521.5625,
+        "newGrid": 249.359375,
+        "scrollWidth": 892,
+        "scrollHeight": 957
+      }
+    },
+    "comparison": "native screenshots on max-height canvas; no pixel resampling"
+  },
+  "statusTooltipArrowsHidden": true,
+  "ordinaryTooltipArrowUnchanged": true,
+  "statusPopupOpenMarkerPositiveAndNegativeTest": true,
+  "contrastWCAG": {
+    "panel": 14.36,
+    "label": 11.32,
+    "destructive": 7.06,
+    "disabled": 7.97,
+    "highlight": 11.55,
+    "destructiveHover": 11.55
+  },
+  "opaquePanels": [
+    "account",
+    "context",
+    "status",
+    "select",
+    "combo",
+    "room",
+    "submenu",
+    "context-sub",
+    "help-menu",
+    "tools-categories",
+    "server-tooltip",
+    "ws-tooltip"
+  ],
+  "newSurfaceCoverage": {
+    "helpMenubar": "menubar-* source slots styled",
+    "genericComboboxProbe": "synthetic slot contract only; Tools is ToolbarSearch + vertical TabsList owned by independent tools-ui-r9 layer",
+    "serverStatusTooltip": "inner stack; visible dark panel only for data-popup-open trigger",
+    "webSocketTooltip": "Popup itself carries flex/flex-col/gap-1/text-xs; Arrow hidden",
+    "ordinaryTooltip": "concurrently mounted plain tooltip and Arrow unchanged"
+  },
+  "hoverEqualsKeyboard": true,
+  "disabledUnselectedAndReadable": true,
+  "statusColorsMasksAndGeometryPreserved": true,
+  "avatarCornersTransparent": {
+    "account-row": {
+      "corner": [
+        255,
+        184,
+        230
+      ],
+      "center": [
+        217,
+        127,
+        198
+      ]
+    },
+    "picker": {
+      "corner": [
+        255,
+        184,
+        230
+      ],
+      "center": [
+        217,
+        127,
+        198
+      ]
+    }
+  },
+  "protectedRGBUnchanged": true,
+  "decoysUnchanged": [
+    "tooltip",
+    "sidebar hover-card",
+    "entity-dialog internal menu",
+    "avatar outside popup",
+    "member avatar/frame"
+  ],
+  "rowGeometryUnchanged": true,
+  "checksAndArrowsVisible": true,
+  "reducedMotionAndReduceEffectsStatic": true,
+  "images": [
+    "before.png",
+    "after.png",
+    "comparison.png",
+    "comparison-4x.png"
+  ],
+  "requiresLiveConfirmation": [
+    "BaseUI render= merged actual slots",
+    "long/wrapped submenu clipping and portal edge placement",
+    "RGB border enabled in app",
+    "actual member frames and accessible status mode",
+    "popover virtual list scroll/selection"
+  ]
+}

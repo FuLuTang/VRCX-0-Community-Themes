@@ -1,0 +1,328 @@
+{
+  "revision": "R9.3",
+  "date": "2026-10-12",
+  "target": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "sourceAuthority": {
+    "windowsHead": "7074357143f3391232a0c7e5ffa3f75be96cc6a6",
+    "windowsStatus": "clean",
+    "mirror": "/tmp/vrcx-win-src-r9 (snapshot of 10002415)",
+    "targetFileHashes": "AppMenuBar, status-bar/StatusBarFooter, ToolsPageContent, ThemesPageParts, MutualFriendsLegend, MutualFriendsNodeCard, UserStatusAvatar, UserStatusDot, FriendLocationCard, ActivityPeopleExhibit, PageScaffold, spinner, avatar: MATCH",
+    "differences": "3 test files + RelationshipTimelinePageImpl.tsx (debounced filter, committed upstream) changed since mirror; platform/tauri/bindings.ts differs by line endings only. None are styling targets."
+  },
+  "files": [
+    {
+      "Name": "preview.webp",
+      "Bytes": 45218,
+      "Hash": "2722D94E95C2BD9CF895B505BEE2D1218B81B6A406556846CA708FDA1DFAD0D2"
+    },
+    {
+      "Name": "README.md",
+      "Bytes": 1545,
+      "Hash": "C21A79B1522DC1BCFC6CC4ED14105C0749F854860034410A80BADD2C607DCC24"
+    },
+    {
+      "Name": "theme.css",
+      "Bytes": 904137,
+      "Hash": "311FDCAF8BE0C0DE9D771C7372F4FF31E24D7A701B18F1F0EFA526B9F4407132"
+    },
+    {
+      "Name": "theme.json",
+      "Bytes": 620,
+      "Hash": "9C29484F7A3981CA5A9C2FB13DE08089406A4C1195438A4BE79E1EDBCE931461"
+    }
+  ],
+  "fileCount": 4,
+  "atomicFileReplacement": true,
+  "previousHashesVerified": true,
+  "uploadAndFinalHashesVerified": true,
+  "newSections": [
+    "tools-ui-r9",
+    "avatars-status-r9",
+    "brand-heart-r9",
+    "loader-r9"
+  ],
+  "history": [
+    {
+      "revision": "R9.2",
+      "themeCss": {
+        "Bytes": 903642,
+        "Hash": "79E55BA7EC4FB4441762743FD7EDCB591BB3DCDD7906552071A5B8322FDEC197"
+      },
+      "loadedVerified": "Themes > 本地主题预览 > 重新加载; CSS 字节数 903030 == local char length",
+      "windowsObserved": {
+        "brandHeartThreeFrames": "pass: heart steps visibly, +4px right padding, Help not crowded",
+        "notificationBadgeC": "PARTIAL: larger digit readable but ClearType colour fringes and off-centre glyph -> R9.3 opacity:.999 grayscale AA + integer top + centred text",
+        "helpMenubar": "pass: opaque mini-window, slanted pink highlight, dotted separators, title marker",
+        "statusbarTooltip": "not captured: CUA agent cursor cannot trigger real hover; needs user hover",
+        "themeCatalogCards": "pass: framed cards, pink 启用主题 buttons, square badges",
+        "toolsPage": "pass: pixel filter input + framed vertical rail with pink active; Settings vertical tabs unaffected",
+        "relationshipGraphInfoCard": "pass: opaque dark legend, square community swatches, graph node circles preserved",
+        "selfAvatarStatus": "pass: square cut face, VRChat frame preserved, square lamp",
+        "userDialogBannerHemCleanAvatar": "pass: inset flesh-pink zigzag clearly visible on a banner without neon avatar effect",
+        "pageLoader": "FAIL: selector missed real DOM (Empty > EmptyContent > row) -> fixed in R9.3"
+      }
+    }
+  ],
+  "r93WindowsObserved": "user reloaded: dancer loader now matches real DOM but was cut into fragments by jirai-icons pixel-ring mask (svg.lucide-loader-circle --px); user also rejected square avatar cut (wants original --wd-avatar-cut pixel circle; earlier complaint was black corners outside the circle)",
+  "r94": {
+    "themeCss": {
+      "Bytes": 904025,
+      "Hash": "E3707A5ADE4EA6B528641DB2AB1DBBB2F474EE01C525207605E4B76A6E34F816",
+      "chars": 903413
+    },
+    "changes": [
+      "loader-r9: background-color transparent + mask none on the page loader spinner",
+      "avatars-status-r9: three user-face rules use var(--wd-avatar-cut) pixel circle, transparent backing corners; square status lamps unchanged"
+    ],
+    "deployHashesVerified": true,
+    "windowsObserved": "user: avatar pixel circle not round enough, no avatar border wanted; banner frame lace request (task-44)"
+  },
+  "r95": {
+    "date": "2026-10-12T16:2xZ",
+    "themeCss": {
+      "Bytes": 969404,
+      "Hash": "9749E04B429E611C109CB0EDD60E37D356C0D5AC02914CAAEEEACE14C16FA465"
+    },
+    "readme": {
+      "Bytes": 2040,
+      "Hash": "874CA743480215823FE2F4AEDF086C47DA76054191E5C0F888CE9F387326621C"
+    },
+    "themeJson": {
+      "Bytes": 657,
+      "Hash": "7ADCA521AEA8945241276C6ADC40C8DC7078701F1E37E51996EB52C0F8ECD8C4"
+    },
+    "previewWebp": {
+      "Bytes": 45218,
+      "Hash": "2722D94E95C2BD9CF895B505BEE2D1218B81B6A406556846CA708FDA1DFAD0D2",
+      "note": "unchanged R9 fixture preview"
+    },
+    "newSections": [
+      "form-controls-r9",
+      "dialogs-r9",
+      "fields-toolbar-r10",
+      "overlays-r10",
+      "favorites-r9",
+      "buttons-badges-r10"
+    ],
+    "changes": [
+      "task-37 32/16-grid pixel-circle avatars, theme avatar rings/borders removed",
+      "brand heart 2.5s 10/10/12/14/12"
+    ],
+    "notIncluded": [
+      "browse-history-r9 (refactor in progress)",
+      "data-surfaces-r10 (in progress)",
+      "task-42 group-square avatar fix (in progress)",
+      "task-44 banner frame (candidates only)"
+    ],
+    "leadIntegrationCheck": "/tmp/jirai-lead-integ/check.mjs: every integrated section renders identically when moved last; buttons-badges-r10 changes 0 elements in 13 other fixtures",
+    "deployHashesVerified": true,
+    "windowsObserved": "pending user reload"
+  },
+  "privacy": "Live screenshots kept only under /tmp/jirai-r92-live (contain real friend data); none copied into repo or package.",
+  "userAcceptedOnWindows": null,
+  "r96a": {
+    "deployedAt": "2026-10-13 (Asia/Shanghai)",
+    "name": "Local Preview R9.6a",
+    "version": "1.3.0-preview.3",
+    "files": {
+      "theme.css": {
+        "bytes": 1010279,
+        "sha256": "60D8B3713C70D26B9FF878FA30D3499F9303A3830C513D9278E54794DA2F5E2C"
+      },
+      "README.md": {
+        "bytes": 2503,
+        "sha256": "89F80A63933D7544DF7660B8C91542B2585DE10A85B237232BA8609DCF520869"
+      },
+      "theme.json": {
+        "bytes": 658,
+        "sha256": "CA808D381285C2DC4F18A69FFCEE65A37F29E115CF2031FE125F715BFD759393"
+      },
+      "preview.webp": {
+        "bytes": 45278,
+        "sha256": "BBC3922168E5F3963C6228000F890A6C92DFCEE713C784647FB556488F859569"
+      }
+    },
+    "previousVerified": "R9.5 hashes matched before replace",
+    "windowsHead": "7074357143f3391232a0c7e5ffa3f75be96cc6a6",
+    "windowsDirty": "docs/jirai-port/待手测清单.md only (not styling)",
+    "newSinceR95": [
+      "user-dialog-r8 avatar border removal",
+      "browse-history-r9 nested refactor",
+      "data-surfaces-r10 (task-41)",
+      "avatars-status-r9 residuals (task-42)",
+      "banner-frame-r96 (task-45, #06 Tier1)"
+    ],
+    "notIncluded": [
+      "task-46 mascot restore",
+      "task-47 lace hollow mask",
+      "task-48 settings gear",
+      "task-49 brand heart 9/7/5",
+      "task-50 privacy lock"
+    ],
+    "leadChecks": "cross-check integratedVsMovedLast=0 on 16 fixtures per section; legacy regression 14 PASS/3 SKIP/0 FAIL",
+    "deployHashesVerified": true,
+    "userReloadPending": false,
+    "userObserved": {
+      "2026-10-13": "用户重新加载并复核：banner 相框、好友列表头像等其余项“没问题”；浏览历史页截图正常（群组方形缩略图）。群组方形头像具体位置待用户按 Lead 指引查看。"
+    }
+  },
+  "r96b": {
+    "status": "superseded-before-deploy by r96c",
+    "reason": "2026-10-13 08:3x Windows pc114514 offline (tailscale last seen 5h ago, ssh timeout)",
+    "name": "Local Preview R9.6b",
+    "version": "1.3.0-preview.4",
+    "stagedLocal": "/tmp/jirai-deploy/r96b/",
+    "deployScript": "/tmp/jirai-deploy/deploy-r96b.ps1 (expects R9.6a hashes as Old)",
+    "files": {
+      "theme.css": {
+        "bytes": 1012169,
+        "sha256": "4C17EA6807AD118CD2EBE75D3BAF8F29990FA68BED81D0728ABF246E456B4661"
+      },
+      "README.md": {
+        "bytes": 2790,
+        "sha256": "21ADB1550E0C643F774654291B5CB27C0A92FF16F94F26747C319962F542417A"
+      },
+      "theme.json": {
+        "bytes": 658,
+        "sha256": "92B059486B2A8FDF7A8C7D06C362022694D90271E67451496136A4E406A3D01B"
+      },
+      "preview.webp": {
+        "bytes": 45278,
+        "sha256": "BBC3922168E5F3963C6228000F890A6C92DFCEE713C784647FB556488F859569"
+      }
+    },
+    "newSinceR96a": [
+      "task-46 Steam 18x18 mascot (assets-r5 79337B, mascot decl 824B)",
+      "task-48 settings gear (icons -37B)",
+      "task-49/brand-heart-r96 (3033B, 5/7/9 grids at 2x, frames 10/10/14/18/14)",
+      "task-50/privacy-lock-r96 (2679B)"
+    ],
+    "notIncluded": [
+      "task-47 lace hollow mask (in progress)"
+    ],
+    "leadChecks": "privacy-lock verify PASS 6/6 (fixture ID-specific OTP shim fixed); brand heart frame probe 10/10/14/18/14 + zoom reviewed; check.mjs 22 cases integratedVsMovedLast=0, non-owner off=0; legacy regression 14 PASS/3 SKIP/0 FAIL"
+  },
+  "r96c": {
+    "status": "deployed",
+    "reason": "Windows pc114514 offline (tailscale last seen 5h)",
+    "name": "Local Preview R9.6c",
+    "version": "1.3.0-preview.5",
+    "stagedLocal": "/tmp/jirai-deploy/r96c/",
+    "deployScript": "/tmp/jirai-deploy/deploy-r96c.ps1 (Old = R9.6a hashes; upload dir C:\\Users\\tangh\\jirai-upload-r96c)",
+    "files": {
+      "theme.css": {
+        "bytes": 1011097,
+        "sha256": "E4B26CB52B8FD552E6BF3A69D4BA26E3F56DC566E543248E05F166A9FB35C9CF"
+      },
+      "README.md": {
+        "bytes": 2914,
+        "sha256": "9D2EB0E014F9BD99206BCDE5835EBB4D750FC1B94662AF4BE2544E0A4DF6B881"
+      },
+      "theme.json": {
+        "bytes": 658,
+        "sha256": "5EDD2E30E8F4A34BF69ED0FB53B1F1682E3AFDBA7522139FCD2B40F848A14E3D"
+      },
+      "preview.webp": {
+        "bytes": 45314,
+        "sha256": "6425C4F0317FCDF98E787411626A3ECCAEBF36B58BBF8C5FBD4184557BF3B6AB"
+      }
+    },
+    "newSinceR96a": [
+      "task-46 Steam 18x18 mascot (assets-r5 79337B, mascot decl 824B)",
+      "task-48 settings gear (icons -37B)",
+      "task-49/brand-heart-r96 (3033B, 5/7/9 grids at 2x, frames 10/10/14/18/14)",
+      "task-50/privacy-lock-r96 (2679B)",
+      "task-47 lace3 tile A (hollow eyelets, inward #d97fc6 stroke, no seams; chrome-r8.css -1072B)"
+    ],
+    "leadChecks": "lace3-verify OVERALL PASS (baseline now archived lace3-current.svg); r8-chrome verify PASS (ratio heuristic replaced, documented); lace2-verify marked superseded; chrome-r8 cross-check 11 fixtures moved=0; legacy regression 14 PASS/0 FAIL; tile in chrome-r8.css == lace3-tile-A.svg",
+    "previewNote": "preview.webp re-rendered from checks/r3-source-fixture.html with R9.6c CSS (Steam mascot, lace3)",
+    "deployedAt": "2026-10-13 (Asia/Shanghai), after user woke Windows",
+    "previousVerified": "R9.6a hashes matched before atomic replace; final 4 files hash-verified",
+    "windowsHead": "7074357143f3391232a0c7e5ffa3f75be96cc6a6",
+    "windowsDirty": "user dev working tree: backend crates + some src (UserDialogInfoTab/DataTabs, TrackedNonfriendsSidebar, charts, localization, services); none touch R9.6c targets (privacy-lock, statusbar lace, titlebar brand, icons, OTP, mascot)",
+    "userReloadPending": true,
+    "userObserved": {
+      "2026-10-13": "用户实机反馈：1 跳动红心整体缩小 30%；2 两处猫猫头动效太慢、幅度小、不明显"
+    }
+  },
+  "r96d": {
+    "status": "deployed",
+    "name": "Local Preview R9.6d",
+    "version": "1.3.0-preview.6",
+    "windowsHead": "7074357143f3391232a0c7e5ffa3f75be96cc6a6",
+    "previousVerified": "R9.6c hashes matched before atomic replace; final 4 files hash-verified",
+    "files": {
+      "theme.css": {
+        "bytes": 1012647,
+        "sha256": "3497A4170683F8AF3053AF206440D8C6F570F0DF42540B1ADADA5B9D950D961A"
+      },
+      "preview.webp": {
+        "bytes": 45310,
+        "sha256": "0603E7BA90AA8D95FBDC88C14CC5D3ED52D7713022A52947D5CD35591943D7C1"
+      },
+      "README.md": {
+        "bytes": 3151,
+        "sha256": "E37649AA7FED69AD531A1B9AB25E43A5FCB92A288AFA2B3CFBBB21CFC4C54139"
+      },
+      "theme.json": {
+        "bytes": 658,
+        "sha256": "825F93CC6B6A81F67F185A9457D4A5972AB5BDD4F5AD09138D5E07A1E1DC7612"
+      }
+    },
+    "newSinceR96c": [
+      "brand-heart-r96: 30% smaller, 7/7/10/13/10px, box 13x13 right:-14px (1.4x non-integer, pixelated)",
+      "cat-motion-r96 (1472B, subagent e87f0d29): nav cat 2s step-end hops -4/-8/-4 + sideways -2/-6/-2, opacity 1; SOCIAL cat 2s (-1s offset) hops 4px via background-position, box top:0 h22 (rest position unchanged), opacity 1; reduced-motion/reduce-effects static"
+    ],
+    "leadChecks": "nav/social frame strips + heart 5-frame zoom reviewed; check.mjs 21 cases moved=0, non-owner off=0; legacy regression 14 PASS/0 FAIL",
+    "userReloadPending": true
+  },
+  "r97": {
+    "status": "deployed; R9.7 confirmed live on the real machine; page-level visual acceptance pending for settings/tools/AI-assistant/splitter surfaces",
+    "name": "Local Preview R9.7",
+    "version": "1.3.0-preview.7",
+    "deployedAt": "2026-10-13T10:30:06+08:00",
+    "redeployedAt": "2026-10-13T10:5x+08:00",
+    "redeployReason": "Lead self-review fix before user acceptance: AssistantDialog health dot (HEALTH_DOT_CLASS .size-2.rounded-full, source bg-muted-foreground/50) was nearly invisible on the new pink header bar. Appended one rule to runtime/dialog-header-r97.css giving it a square 1px ink ring (border-radius:1px + box-shadow 0 0 0 1px var(--r9-dialog-ink)); source health colours untouched and this matches the theme's existing square status lamps. Only theme.css changed; the other three files were re-verified byte-identical.",
+    "target": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+    "stagedLocal": "/tmp/jirai-deploy/r97b/jirai-kei-theme",
+    "deployScript": "/tmp/jirai-deploy/deploy-r97b.ps1",
+    "previouslyStaged": "/tmp/jirai-deploy/r97/jirai-kei-theme (superseded by r97b before any user reload)",
+    "windowsHead": "1fc71ba4aafadcbba830bf8ccf846e83fb1ce4ac",
+    "windowsSrcStatus": "clean",
+    "sourceSnapshotCrossCheck": "Compared all 22 src files changed since 7074357143f3391232a0c7e5ffa3f75be96cc6a6 to /tmp/vrcx-win-src-r97; mismatches=0",
+    "previousVerified": "R9.6d destination four-file hashes matched before the first replace; the R9.7 first-deploy hashes matched before this second replace",
+    "fileCount": 4,
+    "atomicFileReplacement": true,
+    "uploadAndFinalHashesVerified": true,
+    "vrcxRunningGuard": "deploy-r97b.ps1 refuses to swap files while any VRCX process is running. THIS GUARD WAS INEFFECTIVE: the real process name is vrcx-0.exe (Tauri VRCX-0), so Get-Process VRCX always returned 0. Corrected 2026-10-13 11:0x: the real machine VRCX-0 (PID 34732) was running throughout both deployments; the data directory is %APPDATA%\\VRCX-0, not %APPDATA%\\VRCX (the latter was last used 2026-10-08). File replacement used per-file atomic [IO.File]::Replace, so no torn file was ever written; only a user reload is needed to pick up the new CSS.",
+    "files": {
+      "theme.css": {
+        "bytes": 1024259,
+        "sha256": "C8FAB4A5694D6A9D6E13190BBB3A0A49FF8A2ACC861C8CF41B904F3D45088F89"
+      },
+      "README.md": {
+        "bytes": 3469,
+        "sha256": "B73DEB4F1D53105FDBA590DF397912498AC289EEB644C8DE3F24BDE6150BB4B8"
+      },
+      "theme.json": {
+        "bytes": 688,
+        "sha256": "9814DA99C47959B37FEE895DB4479BDBBE3362E872874F1AEFE835ED214A7502"
+      },
+      "preview.webp": {
+        "bytes": 45310,
+        "sha256": "0603E7BA90AA8D95FBDC88C14CC5D3ED52D7713022A52947D5CD35591943D7C1"
+      }
+    },
+    "newSections": [
+      "brand-heart-r97",
+      "dialog-header-r97",
+      "loader-r97",
+      "cards-r97",
+      "splitter-r97"
+    ],
+    "leadChecks": "Build: CSS 1,024,259/1,048,576 bytes, four files, no @import/remote url(), preview 45,310 B. Cross-check fixture cases: integratedVsMovedLast=0 throughout; expected OFF diffs only dialog block loader (4), splitter handles (r9-favorites 4, r10-data-surfaces 2); all pass. Legacy regression re-run after the dot fix: 14 PASS/3 SKIP/0 FAIL. dialog-header verify re-run after the dot fix: 9/9 asserts true, decoy diff 0, bytes 2570; 4x zoom of after.png confirms both the unconfigured and connected dots are legible on the pink bar. Q3b visual/pixel checks PASS; Q2/Q6/Q7 checks PASS. Real-machine evidence (2026-10-13 11:2x, Lead-captured): the live VRCX-0 is in fact running R9.7. Ten titlebar frames captured via window-level PrintWindow, heart outline measured at physical widths 13/12/12/11/11/11/12/12/13/12 px and heights 11/10/10/9/9/9/10/10/11/10 px. Divided by the machine scale of 1.25 that is CSS 8.8x7.2 / 9.6x8 / 10.4x8.8, i.e. exactly the r97 9x7 / 10x8 / 11x9 grids. Exclusive against R9.6d: no frame comes anywhere near the old large frame (13 source px x 1.4 = 18.2 CSS = 22.75 physical px), the measured aspect is wider-than-tall whereas R9.6d hearts were square, and every frame carries the top-left white highlight of the r97 artwork. Evidence image /tmp/jirai-live/heart-live-10f.png. Real-machine visual acceptance (2026-10-13 11:3x, user authorised Lead to drive the nav): all seven items verified on the live app via window-level PrintWindow plus UI Automation navigation. Q1 AI assistant header is a single pink row with both status dots square, outlined and legible on pink. Q2 opening Relationship Timeline and burst-capturing 10 frames shows the pixel-mascot dance animation plus the loading label from frame 5 onward. Q3 tools page and settings page cards are now identical. Q4 lace hangs outside the card with its top against the header bottom border and the scalloped tail pointing down, no extra border behind the tail. Q5 the charm is the pink+white two-tone pill. Q6 the group-favorites splitter scans as a constant 1px line at x=644 with colour rgb(108,92,224)=#6c5ce0, widening to 5px at the grip where three pink 2x2 dots sit inside a square frame. Q7 the brand heart measures only three physical size classes, 11/12/13 by 9/10/11 px. Only real-machine state change made: the window had been minimised, so it was restored with ShowWindow(SW_RESTORE); every click was gated on VRCX being the foreground window, and no setting or text input was touched.",
+    "windowsVrcxRunningAtDeploy": true,
+    "userReloadPending": false,
+    "userObserved": "Lead-side real-machine acceptance complete and passing for Q1-Q7; awaiting the user closing word on this batch of captures."
+  }
+}

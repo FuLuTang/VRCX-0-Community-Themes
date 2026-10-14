@@ -1,0 +1,971 @@
+{
+  "fixture": "NOT WINDOWS; fictional BrowseHistoryPage source-shaped fixture; no real data, CUA, builder, or app source edits",
+  "source": {
+    "page": "/tmp/vrcx-win-src-r9/src/features/browse-history/BrowseHistoryPage.tsx:336-510",
+    "card": "/tmp/vrcx-win-src-r9/src/features/browse-history/BrowseHistoryCard.tsx:72-159",
+    "objectRow": "/tmp/vrcx-win-src-r9/src/styles/object-row.css:2-116",
+    "browseCss": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/browse-history-r9.css",
+    "legacyCssBaseline": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r9-browse-history/legacy-browse-history-r9.css",
+    "isolatedBuiltTheme": "/tmp/jirai-r9-loader-isolated-out-20261012/jirai-kei-theme/theme.css",
+    "controlsSectionMatchesCurrentSource": true,
+    "appCssBundles": [
+      "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+      "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/App-C2mIqNXI.css"
+    ]
+  },
+  "scope": {
+    "uniquePageRootHits": 1,
+    "pageGateDeclaredOnce": true,
+    "cssBytes": 7624,
+    "cssom": {
+      "topLevelRuleCount": 1,
+      "rootRuleCount": 1,
+      "rootChildRuleCount": 7,
+      "nestedStyleRuleCount": 37,
+      "declaredProperties": [
+        "align-items",
+        "background-attachment",
+        "background-clip",
+        "background-color",
+        "background-image",
+        "background-origin",
+        "background-position-x",
+        "background-position-y",
+        "background-repeat",
+        "background-size",
+        "border-bottom-color",
+        "border-bottom-left-radius",
+        "border-bottom-right-radius",
+        "border-bottom-style",
+        "border-bottom-width",
+        "border-image-outset",
+        "border-image-repeat",
+        "border-image-slice",
+        "border-image-source",
+        "border-image-width",
+        "border-left-color",
+        "border-left-style",
+        "border-left-width",
+        "border-right-color",
+        "border-right-style",
+        "border-right-width",
+        "border-top-color",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-top-style",
+        "border-top-width",
+        "box-shadow",
+        "caret-color",
+        "color",
+        "column-gap",
+        "content",
+        "display",
+        "flex-basis",
+        "flex-grow",
+        "flex-shrink",
+        "font-variant-numeric",
+        "font-weight",
+        "height",
+        "letter-spacing",
+        "opacity",
+        "outline-color",
+        "outline-offset",
+        "outline-style",
+        "outline-width",
+        "pointer-events",
+        "row-gap",
+        "text-wrap-mode",
+        "transform",
+        "transition-behavior",
+        "transition-delay",
+        "transition-duration",
+        "transition-property",
+        "transition-timing-function",
+        "white-space-collapse",
+        "width",
+        "z-index"
+      ],
+      "legacyDeclaredProperties": [
+        "align-items",
+        "background-attachment",
+        "background-clip",
+        "background-color",
+        "background-image",
+        "background-origin",
+        "background-position-x",
+        "background-position-y",
+        "background-repeat",
+        "background-size",
+        "border-bottom-color",
+        "border-bottom-left-radius",
+        "border-bottom-right-radius",
+        "border-bottom-style",
+        "border-bottom-width",
+        "border-image-outset",
+        "border-image-repeat",
+        "border-image-slice",
+        "border-image-source",
+        "border-image-width",
+        "border-left-color",
+        "border-left-style",
+        "border-left-width",
+        "border-right-color",
+        "border-right-style",
+        "border-right-width",
+        "border-top-color",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-top-style",
+        "border-top-width",
+        "box-shadow",
+        "caret-color",
+        "color",
+        "column-gap",
+        "content",
+        "display",
+        "flex-basis",
+        "flex-grow",
+        "flex-shrink",
+        "font-variant-numeric",
+        "font-weight",
+        "height",
+        "letter-spacing",
+        "opacity",
+        "outline-color",
+        "outline-offset",
+        "outline-style",
+        "outline-width",
+        "pointer-events",
+        "row-gap",
+        "text-wrap-mode",
+        "transform",
+        "transition-behavior",
+        "transition-delay",
+        "transition-duration",
+        "transition-property",
+        "transition-timing-function",
+        "white-space-collapse",
+        "width",
+        "z-index"
+      ],
+      "rootSelectorText": ".vrcx-0-main-content > .vrcx-0-page-scaffold:has(> [data-slot=\"tabs\"] > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"][data-slot=\"input-group\"] [data-align=\"inline-end\"] svg.lucide-calendar-range):has(> [data-slot=\"tabs\"] > .vrcx-0-page-toolbar [data-slot=\"tabs-list\"] > [data-slot=\"tabs-tab\"]:nth-of-type(5)):has(> [data-slot=\"tabs\"] > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"] svg.lucide-refresh-cw):has(> [data-slot=\"tabs\"] > .vrcx-0-page-toolbar [data-vrcx-0-control=\"toolbar\"] svg.lucide-ellipsis):has(> [data-slot=\"tabs\"] > [data-slot=\"tabs-content\"] .object-row__context-action)"
+    },
+    "hitCounts": {
+      "search": 1,
+      "tabs": 5,
+      "cards": 6,
+      "media": 6,
+      "actions": 6,
+      "dateRows": 2,
+      "separators": 2,
+      "refresh": 1,
+      "calendar": 1,
+      "overflow": 1
+    },
+    "miss": {
+      "unrelatedPageMatchesGate": false,
+      "unrelatedObjectRowComputedStyleUnchanged": true
+    }
+  },
+  "refactorEquivalence": {
+    "statesCompared": [
+      {
+        "state": "default",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": []
+      },
+      {
+        "state": "history-hover",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": []
+      },
+      {
+        "state": "near-miss-hover",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": [
+          {
+            "key": "#miss-card",
+            "property": "background-color",
+            "category": "background-color",
+            "legacy": "rgb(42, 33, 71)",
+            "nested": "rgb(51, 38, 80)"
+          },
+          {
+            "key": "#miss-card",
+            "property": "border-bottom-color",
+            "category": "border-color",
+            "legacy": "rgb(255, 184, 230)",
+            "nested": "rgb(108, 92, 224)"
+          },
+          {
+            "key": "#miss-card",
+            "property": "border-left-color",
+            "category": "border-color",
+            "legacy": "rgb(255, 184, 230)",
+            "nested": "rgb(108, 92, 224)"
+          },
+          {
+            "key": "#miss-card",
+            "property": "border-right-color",
+            "category": "border-color",
+            "legacy": "rgb(255, 184, 230)",
+            "nested": "rgb(108, 92, 224)"
+          },
+          {
+            "key": "#miss-card",
+            "property": "border-top-color",
+            "category": "border-color",
+            "legacy": "rgb(255, 184, 230)",
+            "nested": "rgb(108, 92, 224)"
+          },
+          {
+            "key": "#miss-card",
+            "property": "box-shadow",
+            "category": "box-shadow",
+            "legacy": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset, rgb(16, 11, 30) 2px 2px 0px 0px",
+            "nested": "none"
+          },
+          {
+            "key": "#miss-card",
+            "property": "transform",
+            "category": "transform",
+            "legacy": "matrix(1, 0, 0, 1, 0, -1)",
+            "nested": "none"
+          }
+        ]
+      },
+      {
+        "state": "search-keyboard-focus",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": []
+      },
+      {
+        "state": "delete-keyboard-focus",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": []
+      },
+      {
+        "state": "prefers-reduced-motion-hover",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": []
+      },
+      {
+        "state": "html-reduce-effects-hover",
+        "elementCount": 165,
+        "computedValuesCompared": 40260,
+        "expectedGateDifferences": []
+      }
+    ],
+    "nearMissGate": {
+      "tabs": 4,
+      "legacyGateHit": true,
+      "nestedGateHit": false
+    },
+    "expectedDifferenceProperties": [
+      "background-color",
+      "border-color",
+      "box-shadow",
+      "transform"
+    ]
+  },
+  "geometry": {
+    "maxWidthOrHeightDeltaPx": 2,
+    "maxAllowedPx": 2,
+    "deltas": [
+      {
+        "target": "page[0]",
+        "dimension": "width",
+        "before": 976,
+        "after": 976,
+        "delta": 0
+      },
+      {
+        "target": "page[0]",
+        "dimension": "height",
+        "before": 536,
+        "after": 536,
+        "delta": 0
+      },
+      {
+        "target": "tabsList[0]",
+        "dimension": "width",
+        "before": 232,
+        "after": 232,
+        "delta": 0
+      },
+      {
+        "target": "tabsList[0]",
+        "dimension": "height",
+        "before": 34,
+        "after": 34,
+        "delta": 0
+      },
+      {
+        "target": "search[0]",
+        "dimension": "width",
+        "before": 256,
+        "after": 256,
+        "delta": 0
+      },
+      {
+        "target": "search[0]",
+        "dimension": "height",
+        "before": 32,
+        "after": 32,
+        "delta": 0
+      },
+      {
+        "target": "searchInput[0]",
+        "dimension": "width",
+        "before": 198,
+        "after": 198,
+        "delta": 0
+      },
+      {
+        "target": "searchInput[0]",
+        "dimension": "height",
+        "before": 24,
+        "after": 24,
+        "delta": 0
+      },
+      {
+        "target": "calendarButton[0]",
+        "dimension": "width",
+        "before": 24,
+        "after": 24,
+        "delta": 0
+      },
+      {
+        "target": "calendarButton[0]",
+        "dimension": "height",
+        "before": 24,
+        "after": 24,
+        "delta": 0
+      },
+      {
+        "target": "tabs[0]",
+        "dimension": "width",
+        "before": 44,
+        "after": 44,
+        "delta": 0
+      },
+      {
+        "target": "tabs[0]",
+        "dimension": "height",
+        "before": 30,
+        "after": 30,
+        "delta": 0
+      },
+      {
+        "target": "tabs[1]",
+        "dimension": "width",
+        "before": 44,
+        "after": 44,
+        "delta": 0
+      },
+      {
+        "target": "tabs[1]",
+        "dimension": "height",
+        "before": 30,
+        "after": 30,
+        "delta": 0
+      },
+      {
+        "target": "tabs[2]",
+        "dimension": "width",
+        "before": 44,
+        "after": 44,
+        "delta": 0
+      },
+      {
+        "target": "tabs[2]",
+        "dimension": "height",
+        "before": 30,
+        "after": 30,
+        "delta": 0
+      },
+      {
+        "target": "tabs[3]",
+        "dimension": "width",
+        "before": 44,
+        "after": 44,
+        "delta": 0
+      },
+      {
+        "target": "tabs[3]",
+        "dimension": "height",
+        "before": 30,
+        "after": 30,
+        "delta": 0
+      },
+      {
+        "target": "tabs[4]",
+        "dimension": "width",
+        "before": 44,
+        "after": 44,
+        "delta": 0
+      },
+      {
+        "target": "tabs[4]",
+        "dimension": "height",
+        "before": 30,
+        "after": 30,
+        "delta": 0
+      },
+      {
+        "target": "cards[0]",
+        "dimension": "width",
+        "before": 308,
+        "after": 308,
+        "delta": 0
+      },
+      {
+        "target": "cards[0]",
+        "dimension": "height",
+        "before": 64,
+        "after": 64,
+        "delta": 0
+      },
+      {
+        "target": "cards[1]",
+        "dimension": "width",
+        "before": 308,
+        "after": 308,
+        "delta": 0
+      },
+      {
+        "target": "cards[1]",
+        "dimension": "height",
+        "before": 64,
+        "after": 64,
+        "delta": 0
+      },
+      {
+        "target": "cards[2]",
+        "dimension": "width",
+        "before": 308,
+        "after": 308,
+        "delta": 0
+      },
+      {
+        "target": "cards[2]",
+        "dimension": "height",
+        "before": 64,
+        "after": 64,
+        "delta": 0
+      },
+      {
+        "target": "cards[3]",
+        "dimension": "width",
+        "before": 308,
+        "after": 308,
+        "delta": 0
+      },
+      {
+        "target": "cards[3]",
+        "dimension": "height",
+        "before": 64,
+        "after": 64,
+        "delta": 0
+      },
+      {
+        "target": "cards[4]",
+        "dimension": "width",
+        "before": 308,
+        "after": 308,
+        "delta": 0
+      },
+      {
+        "target": "cards[4]",
+        "dimension": "height",
+        "before": 64,
+        "after": 64,
+        "delta": 0
+      },
+      {
+        "target": "cards[5]",
+        "dimension": "width",
+        "before": 308,
+        "after": 308,
+        "delta": 0
+      },
+      {
+        "target": "cards[5]",
+        "dimension": "height",
+        "before": 64,
+        "after": 64,
+        "delta": 0
+      },
+      {
+        "target": "media[0]",
+        "dimension": "width",
+        "before": 64,
+        "after": 62,
+        "delta": 2
+      },
+      {
+        "target": "media[0]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "media[1]",
+        "dimension": "width",
+        "before": 64,
+        "after": 62,
+        "delta": 2
+      },
+      {
+        "target": "media[1]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "media[2]",
+        "dimension": "width",
+        "before": 64,
+        "after": 62,
+        "delta": 2
+      },
+      {
+        "target": "media[2]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "media[3]",
+        "dimension": "width",
+        "before": 64,
+        "after": 62,
+        "delta": 2
+      },
+      {
+        "target": "media[3]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "media[4]",
+        "dimension": "width",
+        "before": 64,
+        "after": 62,
+        "delta": 2
+      },
+      {
+        "target": "media[4]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "media[5]",
+        "dimension": "width",
+        "before": 64,
+        "after": 62,
+        "delta": 2
+      },
+      {
+        "target": "media[5]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[0]",
+        "dimension": "width",
+        "before": 306,
+        "after": 306,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[0]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[1]",
+        "dimension": "width",
+        "before": 306,
+        "after": 306,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[1]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[2]",
+        "dimension": "width",
+        "before": 306,
+        "after": 306,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[2]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[3]",
+        "dimension": "width",
+        "before": 306,
+        "after": 306,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[3]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[4]",
+        "dimension": "width",
+        "before": 306,
+        "after": 306,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[4]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[5]",
+        "dimension": "width",
+        "before": 306,
+        "after": 306,
+        "delta": 0
+      },
+      {
+        "target": "openButtons[5]",
+        "dimension": "height",
+        "before": 62,
+        "after": 62,
+        "delta": 0
+      },
+      {
+        "target": "actions[0]",
+        "dimension": "width",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[0]",
+        "dimension": "height",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[1]",
+        "dimension": "width",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[1]",
+        "dimension": "height",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[2]",
+        "dimension": "width",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[2]",
+        "dimension": "height",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[3]",
+        "dimension": "width",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[3]",
+        "dimension": "height",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[4]",
+        "dimension": "width",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[4]",
+        "dimension": "height",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[5]",
+        "dimension": "width",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "actions[5]",
+        "dimension": "height",
+        "before": 28,
+        "after": 28,
+        "delta": 0
+      },
+      {
+        "target": "dateRows[0]",
+        "dimension": "width",
+        "before": 940,
+        "after": 940,
+        "delta": 0
+      },
+      {
+        "target": "dateRows[0]",
+        "dimension": "height",
+        "before": 32,
+        "after": 32,
+        "delta": 0
+      },
+      {
+        "target": "dateRows[1]",
+        "dimension": "width",
+        "before": 940,
+        "after": 940,
+        "delta": 0
+      },
+      {
+        "target": "dateRows[1]",
+        "dimension": "height",
+        "before": 32,
+        "after": 32,
+        "delta": 0
+      },
+      {
+        "target": "separator[0]",
+        "dimension": "height",
+        "before": 1,
+        "after": 1,
+        "delta": 0
+      },
+      {
+        "target": "separator[1]",
+        "dimension": "height",
+        "before": 1,
+        "after": 1,
+        "delta": 0
+      }
+    ],
+    "cardHeightPx": 64,
+    "sourceThumbWidthPx": 64,
+    "afterThumb": {
+      "x": 29,
+      "y": 102,
+      "width": 62,
+      "height": 62
+    },
+    "thumbsSquare": true,
+    "columns": 3,
+    "narrowViewport": {
+      "viewport": 760,
+      "mainClientWidth": 760,
+      "mainScrollWidth": 760,
+      "toolbarWidth": 704,
+      "gridWidth": 700,
+      "gridColumns": "228px 228px 228px"
+    }
+  },
+  "controlsR9": {
+    "fiveFilterTabs": 5,
+    "tabsStyleUnchangedByBrowseCss": true,
+    "tabsList": {
+      "color": "rgb(227, 210, 245)",
+      "backgroundColor": "rgb(32, 25, 54)",
+      "borderColor": "rgb(108, 92, 224)",
+      "borderRadius": "0px",
+      "borderWidth": "1px",
+      "boxShadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "opacity": "1",
+      "pointerEvents": "auto",
+      "transform": "none",
+      "transitionDuration": "0s",
+      "animationName": "none",
+      "display": "flex",
+      "width": "232px",
+      "height": "34px",
+      "backgroundImage": "none"
+    },
+    "activeTab": {
+      "color": "rgb(22, 17, 42)",
+      "backgroundColor": "rgb(255, 184, 230)",
+      "borderColor": "rgb(108, 92, 224)",
+      "borderRadius": "0px",
+      "borderWidth": "1px",
+      "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "opacity": "1",
+      "pointerEvents": "auto",
+      "transform": "none",
+      "transitionDuration": "0s",
+      "animationName": "none",
+      "display": "flex",
+      "width": "44px",
+      "height": "30px",
+      "backgroundImage": "none"
+    }
+  },
+  "design": {
+    "search": {
+      "color": "rgb(227, 210, 245)",
+      "backgroundColor": "rgb(32, 25, 54)",
+      "borderColor": "rgb(108, 92, 224)",
+      "borderRadius": "0px",
+      "borderWidth": "1px",
+      "boxShadow": "rgba(253, 244, 255, 0.18) 1px 1px 0px 0px inset, rgb(22, 17, 42) -1px -1px 0px 0px inset",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "opacity": "1",
+      "pointerEvents": "auto",
+      "transform": "none",
+      "transitionDuration": "0s",
+      "animationName": "none",
+      "display": "flex",
+      "width": "256px",
+      "height": "32px",
+      "backgroundImage": "none"
+    },
+    "cardsAreSquareWindowFrames": true,
+    "dateDashes": "repeating-linear-gradient(to right, rgb(140, 113, 176) 0px, rgb(140, 113, 176) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 4px)",
+    "dateMarker": {
+      "display": "block",
+      "width": "6px",
+      "height": "6px",
+      "backgroundColor": "rgb(255, 184, 230)"
+    },
+    "hoveredRemoveAction": {
+      "rowTransform": "matrix(1, 0, 0, 1, 0, -1)",
+      "actionOpacity": "1",
+      "actionPointerEvents": "auto",
+      "actionBackground": "rgb(255, 184, 230)",
+      "actionColor": "rgb(22, 17, 42)",
+      "hoverAvailable": true
+    },
+    "keyboard": {
+      "search": {
+        "active": true,
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)"
+      },
+      "delete": {
+        "active": true,
+        "focusVisible": true,
+        "opacity": "1",
+        "pointerEvents": "auto",
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "parentOutline": "solid",
+        "parentOutlineWidth": "2px",
+        "parentOutlineColor": "rgb(255, 127, 207)",
+        "backgroundColor": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "focusTrail": [
+        {
+          "id": "filter-all",
+          "label": "",
+          "tag": "BUTTON"
+        },
+        {
+          "id": "browse-search",
+          "label": "搜索浏览记录",
+          "tag": "INPUT"
+        }
+      ]
+    },
+    "reducedMotion": {
+      "transform": "none",
+      "duration": "0s"
+    },
+    "reduceEffects": {
+      "transform": "none",
+      "duration": "0s"
+    },
+    "noContinuousAnimation": true
+  },
+  "contrastRatios": {
+    "cardTitle": 14.439100000000002,
+    "cardMeta": 9.5409,
+    "dateHeading": 14.439100000000002,
+    "searchPlaceholder": 8.0099,
+    "activeFilter": 11.5453,
+    "removeHover": 11.5453
+  },
+  "screenshots": {
+    "before.png": {
+      "bytes": 30181
+    },
+    "after.png": {
+      "bytes": 30779
+    },
+    "before-after.png": {
+      "bytes": 72017
+    },
+    "comparison.png": {
+      "bytes": 13592
+    },
+    "focus-visible.png": {
+      "bytes": 30746
+    }
+  },
+  "pageErrors": []
+}

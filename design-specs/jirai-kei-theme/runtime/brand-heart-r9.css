@@ -1,0 +1,5 @@
+/* R9 retains the right-side trigger clearance for the titlebar mark.
+   brand-heart-r97.css owns the heart pseudo's only art/geometry/motion rules. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger']:has(> .vrcx-0-brand) {
+  padding-right: 21px;
+}

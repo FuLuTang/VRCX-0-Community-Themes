@@ -1,0 +1,26 @@
+{
+  "base": {
+    "fill": 79,
+    "avgRun": 2.93,
+    "maxRun": 7,
+    "path": "M12 0h1v1h-1m-1 0h4v1h-4m-2 0h3v2h-3m4-2h2v1h-2m1 0h2v1h-2m-6 0h7v1h-7m-1 0h2v1h-2m4-1h3v2h-3m-5-1h2v1h-2m-1 0h2v1h-2m5-1h2v1h-2m-6 0h2v1h-2m5-1h2v1h-2m-6 0h2v1h-2m5-1h2v1h-2m-6 0h2v1h-2m5-1h2v1h-2m-6 0h2v2h-2m5-2h2v1h-2m-1 0h2v1h-2m-4 0h5v1h-5m7-1h7v2h-7m-7-1h4v1h-4"
+  },
+  "h": {
+    "fill": 105,
+    "avgRun": 4.04,
+    "maxRun": 8,
+    "path": "M12 0h2v1h-2m-1 0h5v1h-5m-2 0h7v1h-7m0 0h4v1h-4m5-1h2v1h-2m-6 0h8v1h-8m-1 0h3v1h-3m4-1h4v2h-4m-5-1h3v1h-3m-1 0h3v1h-3m5-1h3v1h-3m-6 0h3v1h-3m5-1h3v1h-3m-6 0h3v1h-3m5-1h3v1h-3m-6 0h3v1h-3m5-1h3v1h-3m-6 0h3v2h-3m5-2h3v1h-3m-1 0h3v1h-3m-4 0h6v1h-6m7-1h8v2h-8m-7-1h5v1h-5"
+  },
+  "h2": {
+    "fill": 125,
+    "avgRun": 5.68,
+    "maxRun": 15,
+    "path": "M12 0h3v1h-3m-1 0h5v1h-5m-2 0h7v2h-7m-1 0h8v1h-8m-1 0h9v1h-9m-1 0h4v1h-4m5-1h5v1h-5m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-5 0h8v1h-8m0 0h15v1h-15m0 0h6v1h-6m7-1h8v1h-8"
+  },
+  "hv": {
+    "fill": 136,
+    "avgRun": 5.44,
+    "maxRun": 15,
+    "path": "M12 0h2v1h-2m-1 0h5v1h-5m-2 0h7v2h-7m-1 0h8v1h-8m-1 0h9v1h-9m-1 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h5v1h-5m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-6 0h4v1h-4m5-1h4v1h-4m-5 0h3v1h-3m4-1h4v1h-4m-4 0h15v1h-15m0 0h6v1h-6m7-1h8v2h-8m-7-1h5v1h-5"
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NOT WINDOWS · login-r8 fixture</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#100b1e;color:#f2ebff;font-family:Inter,system-ui,sans-serif}*{box-sizing:border-box}
+    .fixture-window{display:flex;width:100%;height:100%;flex-direction:column;background:#201936}
+    .fixture-titlebar{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;padding-left:12px;background:#2f2552;border-bottom:1px solid #6c5ce0;color:#f2ebff;font:12px/1 "WD Pixel CJK",system-ui,sans-serif}
+    .fixture-controls{display:flex;height:100%}.fixture-controls span{display:grid;width:36px;place-items:center;border-left:1px solid #6c5ce0;color:#21132d;background:#d97fc6}
+    .vrcx-0-app-root{height:calc(100% - 32px);min-height:0;flex:1;background:#16112a}
+    /* Source-accurate fallbacks for shadcn/Card's Tailwind v4 spacing tokens.
+       These are in utilities so the loaded app bundle wins when it has the class. */
+    @layer properties,theme,base,components,utilities;
+    @layer utilities{
+      [data-slot="card"]{--card-spacing:1rem}
+      [data-slot="card"][data-size="sm"]{--card-spacing:.75rem}
+      .px-\(--card-spacing\){padding-inline:var(--card-spacing)}
+      .py-\(--card-spacing\){padding-block:var(--card-spacing)}
+      .gap-\(--card-spacing\){gap:var(--card-spacing)}
+    }
+    [data-vrcx-0-surface="login-page"] [data-fixture="saved"], [data-vrcx-0-surface="login-page"] [data-fixture="form"]{display:none}
+    [data-vrcx-0-surface="login-page"][data-state="saved"] [data-fixture="saved"]{display:flex}
+    [data-vrcx-0-surface="login-page"]:not([data-state="saved"]) [data-fixture="form"]{display:flex}
+    [data-vrcx-0-surface="login-page"] [data-fixture="field-error"]{display:none}
+    [data-vrcx-0-surface="login-page"][data-state="invalid"] [data-fixture="field-error"]{display:block}
+    .fixture-footnote{position:fixed;left:8px;bottom:4px;z-index:10;color:#b9add9;font:10px/1.2 monospace;pointer-events:none}
+  </style>
+</head>
+<body>
+<div class="fixture-window">
+  <div class="fixture-titlebar"><span>VRCX-0-jirai · NOT WINDOWS</span><span class="fixture-controls"><span>_</span><span>□</span><span>×</span></span></div>
+  <div class="vrcx-0-app-root">
+    <div data-vrcx-0-surface="login-page" class="vrcx-0-main-shell relative flex min-h-full w-full flex-col overflow-y-auto p-6" data-state="saved">
+      <div class="flex flex-1 items-center justify-center">
+        <div class="flex w-full max-w-lg flex-col gap-4" data-fixture-container>
+          <div class="flex flex-wrap items-center justify-between gap-3" data-fixture-header>
+            <div class="min-w-0 truncate text-lg font-semibold">VRCX-0-jirai</div>
+            <button type="button" data-slot="select-trigger" data-size="sm" class="flex w-36 items-center justify-between gap-1.5 h-7 border border-input rounded-lg bg-transparent py-2 pr-2 pl-2.5 text-sm" aria-label="Language">中文（简体） <span aria-hidden="true">⌄</span></button>
+          </div>
+          <div data-slot="card" data-size="default" data-fixture="saved" class="group/card bg-card text-card-foreground ring-foreground/10 flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl py-(--card-spacing) text-sm ring-1 [--card-spacing:--spacing(4)] max-h-[60vh] min-h-0 flex-col">
+            <div data-slot="card-header" class="group/card-header @container/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-(--card-spacing) shrink-0"><div data-slot="card-title" class="font-heading text-base leading-snug font-medium text-center">已保存的账号</div></div>
+            <div data-slot="card-content" class="flex min-h-0 flex-1 flex-col gap-4 px-(--card-spacing)">
+              <div class="flex min-h-0 flex-col gap-2 overflow-y-auto p-1" data-saved-list>
+                <div class="flex items-center gap-2"><button type="button" data-slot="button" data-variant="ghost" data-size="default" class="inline-flex shrink-0 items-center bg-muted/40 hover:bg-muted h-auto min-w-0 flex-1 justify-start gap-3 p-2 text-left font-normal disabled:pointer-events-none disabled:opacity-50"><span data-slot="avatar" data-size="lg" class="group/avatar after:border-border relative flex size-8 shrink-0 rounded-full select-none after:absolute after:inset-0 after:rounded-full after:border data-[size=lg]:size-10"><img data-slot="avatar-image" class="animate-in fade-in-0 aspect-square size-full rounded-full object-cover duration-200 ease-out motion-reduce:animate-none" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23d97fc6'/%3E%3C/svg%3E"></span><span class="min-w-0 flex-1"><span class="truncate text-sm font-medium">Demo Account 01</span><span class="text-muted-foreground truncate text-xs">demo_user_01</span></span></button><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="inline-flex size-7 shrink-0 items-center justify-center disabled:pointer-events-none disabled:opacity-50" aria-label="Remove Demo Account 01"><svg data-icon="inline-start" class="lucide lucide-trash-2" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6m4 4v6m6-6v6"/></svg></button></div>
+                <div class="flex items-center gap-2"><button type="button" data-slot="button" data-variant="ghost" data-size="default" class="inline-flex shrink-0 items-center bg-muted/40 hover:bg-muted h-auto min-w-0 flex-1 justify-start gap-3 p-2 text-left font-normal disabled:pointer-events-none disabled:opacity-50"><span data-slot="avatar" data-size="lg" class="group/avatar after:border-border relative flex size-8 shrink-0 rounded-full select-none after:absolute after:inset-0 after:rounded-full after:border data-[size=lg]:size-10"><img data-slot="avatar-image" class="animate-in fade-in-0 aspect-square size-full rounded-full object-cover duration-200 ease-out motion-reduce:animate-none" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%238c71b0'/%3E%3C/svg%3E"></span><span class="min-w-0 flex-1"><span class="truncate text-sm font-medium">Demo Account 02</span><span class="text-muted-foreground truncate text-xs">demo_user_02</span></span></button><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="inline-flex size-7 shrink-0 items-center justify-center disabled:pointer-events-none disabled:opacity-50" aria-label="Remove Demo Account 02"><svg data-icon="inline-start" class="lucide lucide-trash-2" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6m4 4v6m6-6v6"/></svg></button></div>
+                <div class="flex items-center gap-2"><button type="button" data-slot="button" data-variant="ghost" data-size="default" class="inline-flex shrink-0 items-center bg-muted/40 hover:bg-muted h-auto min-w-0 flex-1 justify-start gap-3 p-2 text-left font-normal disabled:pointer-events-none disabled:opacity-50"><span data-slot="avatar" data-size="lg" class="group/avatar after:border-border relative flex size-8 shrink-0 rounded-full select-none after:absolute after:inset-0 after:rounded-full after:border data-[size=lg]:size-10"><img data-slot="avatar-image" class="animate-in fade-in-0 aspect-square size-full rounded-full object-cover duration-200 ease-out motion-reduce:animate-none" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23ffb8e6'/%3E%3C/svg%3E"></span><span class="min-w-0 flex-1"><span class="truncate text-sm font-medium">Demo Account 03</span><span class="text-muted-foreground truncate text-xs">demo_user_03</span></span></button><button type="button" data-slot="button" data-variant="ghost" data-size="icon-sm" class="inline-flex size-7 shrink-0 items-center justify-center disabled:pointer-events-none disabled:opacity-50" aria-label="Remove Demo Account 03"><svg data-icon="inline-start" class="lucide lucide-trash-2" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6m4 4v6m6-6v6"/></svg></button></div>
+              </div>
+              <button type="button" data-slot="button" data-variant="secondary" data-size="default" class="inline-flex h-8 w-full items-center justify-center gap-1.5 px-2.5 text-sm font-medium disabled:pointer-events-none disabled:opacity-50">使用其他账号登录</button>
+            </div>
+          </div>
+          <div data-slot="card" data-size="default" data-fixture="form" class="group/card bg-card text-card-foreground ring-foreground/10 flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl py-(--card-spacing) text-sm ring-1 [--card-spacing:--spacing(4)] flex-1 gap-3 pt-2">
+            <div data-slot="card-header" class="group/card-header @container/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-(--card-spacing)">
+              <button type="button" data-slot="button" data-variant="link" data-size="default" class="inline-flex items-center gap-1.5 text-muted-foreground h-auto w-fit p-0 text-xs"><svg data-icon="inline-start" class="lucide lucide-arrow-left" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 19-7-7 7-7M5 12h14"/></svg>返回账号列表</button>
+              <div data-slot="card-title" class="font-heading text-base leading-snug font-medium text-center">登录</div>
+            </div>
+            <div data-slot="card-content" class="flex flex-1 flex-col gap-4 px-(--card-spacing)">
+              <form class="flex flex-1 flex-col gap-4">
+                <div data-slot="field-group" class="group/field-group flex w-full flex-col gap-3">
+                  <div data-slot="field" role="group" data-orientation="vertical" data-invalid="false" class="group/field data-[invalid=true]:text-destructive flex w-full gap-2 flex-col">
+                    <label for="react-login-username" data-slot="field-label" class="group/field-label flex w-fit gap-2 leading-snug">用户名或邮箱地址</label>
+                    <input id="react-login-username" data-slot="input" type="text" autocomplete="username" placeholder="VRChat 账号" class="border-input placeholder:text-muted-foreground h-8 w-full min-w-0 rounded-lg border bg-transparent px-2.5 py-1 text-base outline-none md:text-sm disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">
+                    <div data-slot="field-error" data-fixture="field-error" role="alert" class="text-destructive text-sm font-normal">示例错误：账号格式不正确。</div>
+                  </div>
+                  <div data-slot="field" role="group" data-orientation="vertical" data-invalid="false" class="group/field data-[invalid=true]:text-destructive flex w-full gap-2 flex-col">
+                    <label for="react-login-password" data-slot="field-label" class="group/field-label flex w-fit gap-2 leading-snug">密码</label>
+                    <input id="react-login-password" data-slot="input" type="password" autocomplete="current-password" placeholder="VRChat 密码" class="border-input placeholder:text-muted-foreground h-8 w-full min-w-0 rounded-lg border bg-transparent px-2.5 py-1 text-base outline-none md:text-sm disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">
+                    <div data-slot="field-error" data-fixture="field-error" role="alert" class="text-destructive text-sm font-normal">示例错误：密码不能为空。</div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-end gap-4">
+                  <div data-slot="field" role="group" data-orientation="horizontal" class="group/field flex w-auto gap-2 flex-row items-center"><button type="button" id="react-login-save-credentials" data-slot="checkbox" role="checkbox" aria-checked="true" data-checked="" class="peer data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground relative flex size-4 shrink-0 items-center justify-center rounded-[4px] border"><svg data-slot="checkbox-indicator" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4 4L19 6"/></svg></button><label for="react-login-save-credentials" data-slot="field-label" class="group/field-label flex w-fit gap-2 leading-snug">保存登录数据</label></div>
+                </div>
+                <button type="submit" data-slot="button" data-variant="default" data-size="lg" class="inline-flex items-center justify-center text-sm font-medium mt-auto w-full h-9 gap-1.5 px-2.5 disabled:pointer-events-none disabled:opacity-50">登录</button>
+              </form>
+              <div class="text-muted-foreground flex items-center justify-center gap-2 text-xs"><button type="button" data-slot="button" data-variant="link" class="inline-flex items-center justify-center gap-1 text-muted-foreground h-auto p-0 text-xs">注册</button><span aria-hidden="true">·</span><button type="button" data-slot="button" data-variant="link" class="inline-flex items-center justify-center gap-1 text-muted-foreground h-auto p-0 text-xs">忘记密码？</button></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-2 sm:grid-cols-2" data-fixture-utilities>
+            <button type="button" data-slot="button" data-variant="outline" data-size="default" class="inline-flex h-8 shrink-0 items-center justify-center gap-1.5 px-2.5 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"><svg data-icon="inline-start" class="lucide lucide-network" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v6m0-6 4 3m-4-3-4 3M5 18h3v3H5zm11-10h3v3h-3zM10 3h4v4h-4zm7 15h3v3h-3z"/></svg>代理设置</button>
+            <button type="button" data-slot="button" data-variant="outline" data-size="default" class="inline-flex h-8 shrink-0 items-center justify-center gap-1.5 px-2.5 text-sm font-medium disabled:pointer-events-none disabled:opacity-50" data-fixture-restore><svg data-icon="inline-start" class="lucide lucide-archive-restore" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h18v4H3zM5 8v12h14V8M9 12l3-3 3 3M12 9v7"/></svg>从备份恢复</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-muted-foreground/65 mt-4 grid shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-x-2 gap-y-1 text-center text-[0.7rem]" data-fixture-footer><div class="flex justify-end"><button type="button" data-slot="button" data-variant="link" class="inline-flex items-center justify-center text-muted-foreground/75 h-auto p-0 text-[0.7rem]">GitHub</button></div><span aria-hidden="true">|</span><div class="flex justify-start"><button type="button" data-slot="button" data-variant="link" class="inline-flex items-center justify-center text-muted-foreground/75 h-auto p-0 text-[0.7rem]">Discord</button></div></div>
+    </div>
+  </div>
+</div>
+<p class="fixture-footnote">NOT WINDOWS · fiction/demo users · flat-color data URI avatars only · source DOM/classes mirrored from Windows read-only source</p>
+</body></html>

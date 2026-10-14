@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NOT WINDOWS · square group-avatar regression</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#201936;color:#f2ebff;font:14px system-ui,sans-serif}
+    body{display:grid;place-items:center;padding:24px}
+    .proof-card{width:420px;padding:18px;border:1px solid #6c5ce0;background:#302449}
+    h1{margin:0 0 6px;color:#ffd9ee;font-size:16px}
+    p{margin:0 0 16px;color:#b9add9;font-size:12px}
+    .group-row{display:flex;align-items:center;gap:18px;padding:18px;background:#ffd36f;color:#16112a}
+    .group-sample{display:grid;justify-items:center;gap:8px}
+    .avatar-backplane{display:grid;place-items:center;background:#ffb8e6}
+    [data-slot="avatar"]{position:relative;flex:none}
+    [data-slot="avatar-image"]{display:block;width:100%;height:100%;object-fit:cover}
+    .sample-small{width:36px;height:36px}
+    .sample-large{width:56px;height:56px}
+    .mark{font-size:11px;font-weight:600}
+    .notice{margin-top:14px;font-size:11px;color:#302449}
+  </style>
+</head>
+<body>
+  <main class="proof-card">
+    <h1>群组图标 · 形状回归（合成 fixture）</h1>
+    <p>4× 像素截图；亮黄色 / 粉色背板用于显露角落，图片为合成群组标记。</p>
+    <div class="group-row" data-fixture-group-avatar-host>
+      <div class="group-sample">
+        <span class="avatar-backplane sample-large">
+          <span data-slot="avatar" data-size="default" data-fixture-group-avatar="large" class="group/avatar after:border-border relative flex size-14 shrink-0 rounded-lg select-none after:absolute after:inset-0 after:rounded-lg after:border">
+            <img data-slot="avatar-image" class="animate-in fade-in-0 aspect-square size-full rounded-lg object-cover duration-200 ease-out motion-reduce:animate-none" alt="synthetic group square" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56' shape-rendering='crispEdges'%3E%3Crect width='56' height='56' fill='%23516a87'/%3E%3Cpath d='M20 20h16v16H20z' fill='%23ffd36f'/%3E%3Cpath d='M9 30h38v6H9z' fill='%23ffb8e6'/%3E%3C/svg%3E">
+          </span>
+        </span>
+        <span class="mark">GroupCard · rounded-lg</span>
+      </div>
+      <div class="group-sample">
+        <span class="avatar-backplane sample-small">
+          <span data-slot="avatar" data-size="default" data-fixture-group-avatar="small" class="group/avatar after:border-border relative flex size-9 shrink-0 rounded-md select-none after:absolute after:inset-0 after:rounded-md after:border">
+            <img data-slot="avatar-image" class="animate-in fade-in-0 aspect-square size-full rounded-md object-cover duration-200 ease-out motion-reduce:animate-none" alt="synthetic group square" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36' shape-rendering='crispEdges'%3E%3Crect width='36' height='36' fill='%23426871'/%3E%3Cpath d='M13 13h10v10H13z' fill='%23ffd36f'/%3E%3Cpath d='M5 18h26v3H5z' fill='%23ffb8e6'/%3E%3C/svg%3E">
+          </span>
+        </span>
+        <span class="mark">GroupSelector · rounded-md</span>
+      </div>
+    </div>
+    <div class="notice">NOT WINDOWS · no production screenshot, remote art, or external assets</div>
+  </main>
+  <div hidden data-slot="popover-content">
+    <span data-slot="avatar" data-size="default" data-fixture-popup-group-avatar class="group/avatar relative flex size-9 shrink-0 rounded-lg select-none after:absolute after:inset-0 after:rounded-lg after:border">
+      <img data-slot="avatar-image" class="size-full rounded-lg object-cover" alt="synthetic popup group square" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' fill='%23426871'/%3E%3C/svg%3E">
+    </span>
+  </div>
+</body>
+</html>

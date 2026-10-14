@@ -1,0 +1,433 @@
+{
+  "scope": "Task-58 design candidates only. Existing 7x6, 9x8, current 11x9 V2, V1 report, and CSS/runtime are read-only. Internal preview; source license unclear.",
+  "palette": {
+    "O": "#ae387d",
+    "H": "#ffcced",
+    "P": "#ff87c6",
+    "S": "#cc5282"
+  },
+  "construction": {
+    "sampling": "Cell centers x=column-(width-1)/2, y=row. Include a cell when it lies inside the union of the recorded upper-lobe ellipse(s) and lower-body ellipse equation(s).",
+    "outline": "One-cell four-neighbor boundary in O; H spots near both upper ellipse centers; S on lower inner shoulders; P fills remaining interior.",
+    "rasterization": "Each candidate is drawn on its own native integer grid; no SVG is copied/scaled from another size."
+  },
+  "sourceReferences": {
+    "originalV1": {
+      "rows": [
+        ".OOOO.OOOO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "width": 11,
+      "height": 9,
+      "source": "pixel-report.json comparisonDrafts.previous11x9V1"
+    },
+    "currentV2": {
+      "rows": [
+        "...OO.OO...",
+        "..OHPOPHO..",
+        ".OPPPPPPPO.",
+        "OPPPPPPPPPO",
+        ".OPSPPPSPO.",
+        "..OPSPSPO..",
+        "...OPSPO...",
+        "....OPO....",
+        ".....O....."
+      ],
+      "width": 11,
+      "height": 9,
+      "source": "heart-11x9.svg, byte-derived and checked against pixel-report.json"
+    }
+  },
+  "candidates": [
+    {
+      "id": "A",
+      "key": "A-wide-round-13x11",
+      "label": "A · wide round lobes",
+      "description": "Broad round twin lobes, shallow-to-medium cleft, broad shoulders, short oval taper.",
+      "width": 13,
+      "height": 11,
+      "equation": "Union of ((x+3.5)/3.0)^2+((y-1.4)/2.4)^2≤1, ((x-3.5)/3.0)^2+((y-1.4)/2.4)^2≤1, and y≥2 with (x/6.2)^2+((y-2)/8)^2≤1.",
+      "parameters": {
+        "lobes": {
+          "offset": 3.5,
+          "centerY": 1.4,
+          "rx": 3,
+          "ry": 2.4
+        },
+        "body": {
+          "startY": 2,
+          "rx": 6.2,
+          "ry": 8
+        },
+        "cap": null
+      },
+      "rowSpanWidths": [
+        11,
+        13,
+        13,
+        13,
+        13,
+        11,
+        11,
+        9,
+        9,
+        7,
+        1
+      ],
+      "rowInkCounts": [
+        8,
+        12,
+        13,
+        13,
+        13,
+        11,
+        11,
+        9,
+        9,
+        7,
+        1
+      ],
+      "filledCells": 107,
+      "colorCounts": {
+        "O": 34,
+        "H": 8,
+        "P": 55,
+        "S": 10
+      },
+      "horizontallySymmetric": true,
+      "matrixRows": [
+        ".OOOO...OOOO.",
+        "OPHHPO.OPHHPO",
+        "OPHHPPOPPHHPO",
+        "OPPPPPPPPPPPO",
+        "OPPPPPPPPPPPO",
+        ".OPPPPPPPPPO.",
+        ".OSSPPPPPSSO.",
+        "..OSPPPPPSO..",
+        "..OSSPPPSSO..",
+        "...OOOPOOO...",
+        "......O......"
+      ]
+    },
+    {
+      "id": "B",
+      "key": "B-tall-classic-13x13",
+      "label": "B · tall classic waist",
+      "description": "Taller classic heart, deeper cleft, narrower lobes and a longer controlled taper.",
+      "width": 13,
+      "height": 13,
+      "equation": "Union of ((x+2.9)/2.8)^2+((y-1.4)/2.6)^2≤1, ((x-2.9)/2.8)^2+((y-1.4)/2.6)^2≤1, and y≥3 with (x/6.2)^2+((y-3)/9)^2≤1.",
+      "parameters": {
+        "lobes": {
+          "offset": 2.9,
+          "centerY": 1.4,
+          "rx": 2.8,
+          "ry": 2.6
+        },
+        "body": {
+          "startY": 3,
+          "rx": 6.2,
+          "ry": 9
+        },
+        "cap": null
+      },
+      "rowSpanWidths": [
+        11,
+        11,
+        11,
+        13,
+        13,
+        13,
+        11,
+        11,
+        11,
+        9,
+        7,
+        5,
+        1
+      ],
+      "rowInkCounts": [
+        10,
+        10,
+        10,
+        13,
+        13,
+        13,
+        11,
+        11,
+        11,
+        9,
+        7,
+        5,
+        1
+      ],
+      "filledCells": 124,
+      "colorCounts": {
+        "O": 40,
+        "H": 10,
+        "P": 62,
+        "S": 12
+      },
+      "horizontallySymmetric": true,
+      "matrixRows": [
+        ".OOOOO.OOOOO.",
+        ".OPHHO.OHHPO.",
+        ".OHHHO.OHHHO.",
+        "OPPPPPOPPPPPO",
+        "OPPPPPPPPPPPO",
+        "OPPPPPPPPPPPO",
+        ".OPPPPPPPPPO.",
+        ".OSSPPPPPSSO.",
+        ".OSSPPPPPSSO.",
+        "..OSPPPPPSO..",
+        "...OSPPPSO...",
+        "....OOPOO....",
+        "......O......"
+      ]
+    },
+    {
+      "id": "C",
+      "key": "C-shallow-soft-15x13",
+      "label": "C · shallow cleft / soft base",
+      "description": "Very shallow cleft, broad open crown, then a smoother 5/5/3/1 rounded lower cap.",
+      "width": 15,
+      "height": 13,
+      "equation": "Union of ((x+3.2)/3.5)^2+((y-1.2)/2.2)^2≤1, ((x-3.2)/3.5)^2+((y-1.2)/2.2)^2≤1, body ellipse y∈[1.5,8] with (x/7.2)^2+((y-1.5)/7.2)^2≤1, and lower cap y≥8 with (x/2.5)^2+((y-9)/3)^2≤1.",
+      "parameters": {
+        "lobes": {
+          "offset": 3.2,
+          "centerY": 1.2,
+          "rx": 3.5,
+          "ry": 2.2
+        },
+        "body": {
+          "startY": 1.5,
+          "rx": 7.2,
+          "ry": 7.2,
+          "stopY": 8
+        },
+        "cap": {
+          "centerY": 9,
+          "rx": 2.5,
+          "ry": 3,
+          "startY": 8
+        }
+      },
+      "rowSpanWidths": [
+        13,
+        13,
+        15,
+        15,
+        13,
+        13,
+        11,
+        9,
+        7,
+        5,
+        5,
+        3,
+        1
+      ],
+      "rowInkCounts": [
+        12,
+        13,
+        15,
+        15,
+        13,
+        13,
+        11,
+        9,
+        7,
+        5,
+        5,
+        3,
+        1
+      ],
+      "filledCells": 122,
+      "colorCounts": {
+        "O": 36,
+        "H": 8,
+        "P": 74,
+        "S": 4
+      },
+      "horizontallySymmetric": true,
+      "matrixRows": [
+        ".OOOOOO.OOOOOO.",
+        ".OPHHPPOPPHHPO.",
+        "OPPHHPPPPPHHPPO",
+        "OPPPPPPPPPPPPPO",
+        ".OPPPPPPPPPPPO.",
+        ".OPPPPPPPPPPPO.",
+        "..OPPPPPPPPPO..",
+        "...OSPPPPPSO...",
+        "....OSPPPSO....",
+        ".....OPPPO.....",
+        ".....OPPPO.....",
+        "......OPO......",
+        ".......O......."
+      ]
+    }
+  ],
+  "titlebarContext": {
+    "file": "titlebar-occupancy.png",
+    "width": 1640,
+    "height": 1720,
+    "titlebarHeightPx": 32,
+    "slotPx": 14,
+    "previewMagnification": 4,
+    "cellSizeCssPx": 1,
+    "sourceEvidence": {
+      "titlebar": "VRCX-0-jirai/src/components/layout/AppTitleBar.tsx:96 class h-8 (32px)",
+      "slot": "Existing 14px slot in runtime/checks/r10-heart-reference/display-5-7-9.png and verify.mjs display study"
+    },
+    "occupancy": [
+      {
+        "id": "V1",
+        "logicalSize": "11x9",
+        "overflowWidthPx": 0,
+        "overflowHeightPx": 0,
+        "placementRule": "fits within the 14px slot at native size"
+      },
+      {
+        "id": "V2",
+        "logicalSize": "11x9",
+        "overflowWidthPx": 0,
+        "overflowHeightPx": 0,
+        "placementRule": "fits within the 14px slot at native size"
+      },
+      {
+        "id": "A",
+        "logicalSize": "13x11",
+        "overflowWidthPx": 0,
+        "overflowHeightPx": 0,
+        "placementRule": "fits within the 14px slot at native size"
+      },
+      {
+        "id": "B",
+        "logicalSize": "13x13",
+        "overflowWidthPx": 0,
+        "overflowHeightPx": 0,
+        "placementRule": "fits within the 14px slot at native size"
+      },
+      {
+        "id": "C",
+        "logicalSize": "15x13",
+        "overflowWidthPx": 1,
+        "overflowHeightPx": 0,
+        "placementRule": "overflows the 14px slot by 1px at native size"
+      }
+    ]
+  },
+  "previews": {
+    "pink": {
+      "file": "comparison-pink.png",
+      "width": 876,
+      "height": 305,
+      "background": "#d97fc6",
+      "scales": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "method": "native grids at integer nearest-neighbor scale; no candidate is a scaled copy"
+    },
+    "dark": {
+      "file": "comparison-dark.png",
+      "width": 876,
+      "height": 305,
+      "background": "#201936",
+      "scales": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "method": "native grids at integer nearest-neighbor scale; no candidate is a scaled copy"
+    },
+    "titlebar": {
+      "file": "titlebar-occupancy.png",
+      "width": 1640,
+      "height": 1720,
+      "titlebarHeightPx": 32,
+      "slotPx": 14,
+      "previewMagnification": 4,
+      "cellSizeCssPx": 1,
+      "sourceEvidence": {
+        "titlebar": "VRCX-0-jirai/src/components/layout/AppTitleBar.tsx:96 class h-8 (32px)",
+        "slot": "Existing 14px slot in runtime/checks/r10-heart-reference/display-5-7-9.png and verify.mjs display study"
+      },
+      "occupancy": [
+        {
+          "id": "V1",
+          "logicalSize": "11x9",
+          "overflowWidthPx": 0,
+          "overflowHeightPx": 0,
+          "placementRule": "fits within the 14px slot at native size"
+        },
+        {
+          "id": "V2",
+          "logicalSize": "11x9",
+          "overflowWidthPx": 0,
+          "overflowHeightPx": 0,
+          "placementRule": "fits within the 14px slot at native size"
+        },
+        {
+          "id": "A",
+          "logicalSize": "13x11",
+          "overflowWidthPx": 0,
+          "overflowHeightPx": 0,
+          "placementRule": "fits within the 14px slot at native size"
+        },
+        {
+          "id": "B",
+          "logicalSize": "13x13",
+          "overflowWidthPx": 0,
+          "overflowHeightPx": 0,
+          "placementRule": "fits within the 14px slot at native size"
+        },
+        {
+          "id": "C",
+          "logicalSize": "15x13",
+          "overflowWidthPx": 1,
+          "overflowHeightPx": 0,
+          "placementRule": "overflows the 14px slot by 1px at native size"
+        }
+      ]
+    },
+    "scales": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "comparisonOrder": [
+      "V1 original 11x9",
+      "V2 current 11x9",
+      "A 13x11",
+      "B 13x13",
+      "C 15x13"
+    ],
+    "backgrounds": {
+      "pink": "#d97fc6",
+      "dark": "#201936"
+    }
+  },
+  "verification": {
+    "currentV2AssetMatchesReport": true,
+    "candidateSvgsMatchMatrices": true,
+    "allCandidateMatricesSymmetric": true,
+    "allCandidates8Connected": true,
+    "allColorsUsed": true,
+    "equationProfilesMatchAssertions": true,
+    "allCandidateSvgCellsNative1x1": true,
+    "allPreviewEdgesAtMost2000": true
+  }
+}

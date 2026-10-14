@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R9 notification badge — size & legibility options</title>
+<style>
+@font-face{font-family:"WD Pixel Fixture";font-style:normal;font-weight:400;font-display:block;src:url("data:font/woff2;base64,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")}
+:root{color-scheme:dark;--bg:#16112a;--panel:#201936;--panel2:#261d3c;--line:#6c5ce0;--pink:#ffb8e6;--pale:#ffe4f2;--ink:#21132d;--text:#f2ebff;--muted:#bfb2d7}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-width:1480px;background:var(--bg);color:var(--text);font:14px/1.35 "WD Pixel Fixture",monospace}
+body{padding:20px 24px 28px}
+h1{font-size:24px;margin:0 0 5px;color:var(--pale)}
+.subtitle{font-size:13px;color:var(--muted);margin:0 0 14px}
+.callout{border:1px solid var(--line);background:#201936;padding:10px 12px;margin-bottom:16px;max-width:1440px}
+.callout b{color:var(--pink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:1440px}
+.option{background:var(--panel);border:1px solid var(--line);padding:12px 13px 14px;min-height:500px}
+.option.recommended{border:2px solid var(--pink);box-shadow:inset 0 0 0 1px #ffe4f2}
+.option h2{margin:0 0 5px;font-size:18px;color:var(--pink)}
+.option .desc{height:42px;color:var(--muted);font-size:12px}
+.metrics{font:12px/1.45 "WD Pixel Fixture",monospace;color:var(--text);border-top:1px dotted #6c5ce0;padding-top:7px;margin:5px 0 9px}
+.metrics .good{color:#ffcfed}
+.sample{border-top:1px dotted #514281;padding:9px 0 10px}
+.sample:first-of-type{border-top:0}
+.sample-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:7px}
+.sample-head strong{font-size:14px;color:var(--pale)}
+.sample-head span{font-size:11px;color:var(--muted)}
+.mini-titlebar{width:100%;height:32px;display:flex;align-items:center;gap:4px;padding:0 6px;background:#d981c8;border:1px solid #6c5ce0;overflow:visible}
+.search{flex:0 0 224px;height:24px;display:flex;align-items:center;padding:0 7px;background:#f4c5e4;color:#352346;border:1px solid #775b9d;font:11px/1 monospace;white-space:nowrap;overflow:hidden}
+.actions{height:28px;display:flex;align-items:center;gap:4px;overflow:visible}
+.action{width:28px;height:28px;flex:0 0 28px;position:relative;display:flex;align-items:center;justify-content:center;background:#f8c6e3;border:1px solid #21132d;color:#21132d;padding:0;overflow:visible}
+.action svg{width:16px;height:16px;display:block;flex:none}
+.badge{position:absolute;right:-3px;top:-2px;z-index:2;box-sizing:border-box;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;border:1px solid #16112a;box-shadow:inset 0 0 0 1px #ffe4f2;background:#21132d;color:#ffd9ee;font-family:"WD Pixel Fixture",monospace;font-weight:400;font-synthesis:none;letter-spacing:0;line-height:1;padding:0}
+.option-a .badge{font-size:8px}
+.option-b .badge{font-size:9px}
+.option-c .badge{font-size:12px;line-height:9px;letter-spacing:-1px}
+.assistant svg{width:15px;height:15px}
+.caption{color:var(--muted);font-size:11px;margin-top:5px}
+.recommend{margin-top:9px;border-top:1px solid #514281;padding-top:8px;font-size:12px;color:var(--text)}
+.recommend b{color:var(--pink)}
+.footer{margin-top:14px;color:var(--muted);font:11px/1.45 monospace}
+@media print{body{background:#16112a}}
+</style>
+</head>
+<body>
+<h1>通知角标 · 可读性与构图对照</h1>
+<p class="subtitle">独立合成静态样例 · NOT WINDOWS · 100% 原尺寸（每个动作按钮 28×28 CSS px，动作间距 4px，左侧快速搜索 224px）· 无真实截图或账号数据</p>
+<div class="callout"><b>黄金比例只作构图参考：</b>这里把“铃铛外框仍可见的面积”作为大区、角标覆盖铃铛外框的面积作为小区。φ⁻¹≈61.8% 为可见主区的参考下限，38.2% 为遮挡上限。角标固定贴在按钮右上角（top −2 / right −3），并保留 1px 到相邻按钮的间隔；越清晰优先，不为比例牺牲数字。</div>
+<div class="grid" id="comparison">
+<section class="option option-a">
+<h2>A · 紧凑像素字</h2><div class="desc">WD Pixel 8px / 400；最接近当前字感。角标单字 12×12，双字和 99+ 按字宽增长。</div>
+<div class="metrics">5：12×12 · 遮铃 7.8%<br>42：16×12 · 遮铃 15.6%<br>99+：21×12 · 遮铃 25.4%<br><span class="good">铃铛框可见 74.6%（99+）</span></div>
+<div class="sample"><div class="sample-head"><strong>5 · 单字</strong><span>外框 12×12</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:12px;height:12px">5</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Bell visible; the 5 is deliberately shown at native size.</div></div>
+<div class="sample"><div class="sample-head"><strong>42 · 双字</strong><span>外框 16×12</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：42"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:16px;height:12px">42</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Two digits retain the same 8px glyph size.</div></div>
+<div class="sample"><div class="sample-head"><strong>99+ · 上限</strong><span>外框 21×12</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：99+"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:21px;height:12px">99+</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">99+ remains compact; still legible only when enlarged.</div></div>
+<div class="recommend">Tradeoff: most compact, but does <b>not</b> answer “native-size unreadable”.</div>
+</section>
+<section class="option option-b">
+<h2>B · 中间档 / 黄金构图参考</h2><div class="desc">WD Pixel 9px / 400；比当前字大一档，单字 13×13；留出呼吸位，字宽自动扩展。</div>
+<div class="metrics">5：13×13 · 遮铃 11.7%<br>42：18×13 · 遮铃 23.4%<br>99+：23×13 · 遮铃 35.2%<br><span class="good">铃铛框可见 64.8%（99+）</span></div>
+<div class="sample"><div class="sample-head"><strong>5 · 单字</strong><span>外框 13×13</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:13px;height:13px">5</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Single digit gains one pixel in both axes.</div></div>
+<div class="sample"><div class="sample-head"><strong>42 · 双字</strong><span>外框 18×13</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：42"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:18px;height:13px">42</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Slightly wider; assistant button remains 4px away.</div></div>
+<div class="sample"><div class="sample-head"><strong>99+ · 上限</strong><span>外框 23×13</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：99+"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:23px;height:13px">99+</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Keeps 1px clearance before the neighboring assistant button.</div></div>
+<div class="recommend">Tradeoff: B preserves more of the bell, but its 9px digits may still feel small at native scale.</div>
+</section>
+<section class="option option-c recommended">
+<h2>C · 更醒目</h2><div class="desc">WD Pixel 12px / 400；数字明显放大，99+ 只用 −1px 字距以装入 24px 宽度；占铃铛上角较多但仍保留其主轮廓。</div>
+<div class="metrics">5：14×13 · 遮铃 14.1%<br>42：18×13 · 遮铃 23.4%<br>99+：24×13 · 遮铃 37.5%<br><span class="good">铃铛框可见 62.5%（99+）</span></div>
+<div class="sample"><div class="sample-head"><strong>5 · 单字</strong><span>外框 14×13</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:14px;height:13px">5</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Single digit clearest at 100%; still a corner tag.</div></div>
+<div class="sample"><div class="sample-head"><strong>42 · 双字</strong><span>外框 18×13</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：42"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:18px;height:13px">42</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Two digits retain clear spacing without tracking tricks.</div></div>
+<div class="sample"><div class="sample-head"><strong>99+ · 上限</strong><span>外框 24×13</span></div><div class="mini-titlebar"><div class="search">⌕　快速搜索　Ctrl K</div><div class="actions"><button class="action" aria-label="通知：99+"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><span class="badge" style="width:24px;height:13px">99+</span></button><button class="action assistant" aria-label="助手"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"></path><path d="M19 14v4m2-2h-4"></path></svg></button></div></div><div class="caption">Most readable; the tag is visually more assertive.</div></div>
+<div class="recommend"><b>Recommended for legibility:</b> 12px WD Pixel (−1px tracking only for the 99+ fit), 14×13 / 18×13 / 24×13 outer sizes. At 99+, badge overlap is 37.5% of the 16×16 bell box, leaving 62.5% visible; major/minor ≈1.67:1, close to φ≈1.618, with 2px clearance to the next button.</div>
+</section>
+</div>
+<div class="footer">All badges are static. Outer size includes the 1px dark border and 1px inset pale rim. Overlap is computed against a synthetic centered 16×16 bell SVG box; it is not an estimate from any Windows screenshot. Every 99+ sample ends at x=31 in a 28px button; the next 28px action starts at x=32 (4px flex gap), so there is ≥1px clearance. <b>Suggested starting point: C / 12px WD Pixel.</b></div>
+</body>
+</html>

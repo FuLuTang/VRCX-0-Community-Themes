@@ -1,0 +1,14 @@
+/* Jirai Kei · 分组头下方间距（R3）——只调真实 collapsible 根的下内边距，不动行坐标。
+   问题：胶囊按钮 28px + 3px 硬阴影，其盒底与下一虚拟行的行盒顶零距离；下一行头像的
+        ProfileAvatarFrame(-inset-[18.75%] → 36px 上溢 6.75px) 还越出行盒顶，于是"紧贴"。
+   做法：间距加在 collapsible 根上。它是虚拟行 wrapper(absolute + getRowRef) 的唯一子内容，
+        padding 计入 wrapper.offsetHeight → ResizeObserver 测得更高行 → measuredSizes/offsets
+        重算 → 后续行 translateY 真实下移。不改 spacer、不改绝对行坐标、不靠 transform 推下一行。
+   范围：仅侧面板内、直接子是 ghost/sm 按钮、且按钮内含 chevron-down 的 collapsible 根。
+        FriendsSidebar 分组头与 GroupsSidebar 群组头同构，都命中（有计数/无计数一致）；
+        SettingsCard、DevKit 等普通折叠卡片（子元素是 section 或非 ghost 按钮）不命中。
+   值：10px ≈ 硬阴影 3px + frame 上溢 6.75px，取整后正好不落进阴影带。
+   注意：不要写成 :has(button:has(svg)) 的嵌套 :has()，Chromium 会把整条选择器判为无效并丢弃。 */
+.vrcx-0-side-panel [data-slot="collapsible"]:has(> button[data-variant="ghost"][data-size="sm"] > svg.lucide-chevron-down) {
+    padding-bottom: 10px;
+}

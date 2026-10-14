@@ -1,0 +1,21 @@
+{
+  "revision": "R8.5 (preview.11; flat centered login header, current DOM preview, R8.4 detail/lace/corner fixes)",
+  "directory": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "files": [
+    {"Name":"preview.webp","Bytes":45218,"Hash":"2722D94E95C2BD9CF895B505BEE2D1218B81B6A406556846CA708FDA1DFAD0D2"},
+    {"Name":"README.md","Bytes":1259,"Hash":"3542ED02DDD976356A7DC21DDFE3447F8FD5D32DB0C20C025832CFC018C26D8F"},
+    {"Name":"theme.css","Bytes":830101,"Hash":"BBF4569694607CDB358203B5DEC40071AA0B15DC0D4F30ECE005C3C337366F3A"},
+    {"Name":"theme.json","Bytes":573,"Hash":"75F6502E1EB26928D7EB03B33DA58A0FD6CF71E2C3A340FBFFDAA0AB92DE232C"}
+  ],
+  "atomicFileReplacement": true,
+  "previousHashesVerified": true,
+  "uploadAndFinalHashesVerified": true,
+  "fileCount": 4,
+  "windowsVisualValidated": true,
+  "userAcceptedOnWindows": {"date": "2026-10-12", "verdict": "整体没问题；快速搜索保留 R8（R7/R8 未决项按默认 R8 关闭）"},
+  "windowsObserved": ["R8.3 fan-lace three colors without baseline or dark holes", "R8.4 user-dialog square status and biography diff", "R8.4 world-dialog notched avatar and square lamp", "R8.4 feed both corners fully visible", "R8.5 saved-account header flat and centered", "R8.5 form header single row centered", "R8.5 empty-submit invalid borders and readable errors", "R8.5 saved-account re-login restored feed"],
+  "historySliderWindowsVerified": {"keyboardValues": [1, 0, 1], "dateBubbleVisibleAtBothEndpoints": true, "squareThumbAndFocusRingVisible": true, "diffUpdated": true, "restoredLatest": true},
+  "remainingAcceptance": [],
+  "privacy": "Real screenshots remain in /tmp/jirai-live-review only; public preview uses fictional fixture data.",
+  "localRegression": "Eight checks PASS; login verifier uses sectionless baseline and current exported theme after."
+}

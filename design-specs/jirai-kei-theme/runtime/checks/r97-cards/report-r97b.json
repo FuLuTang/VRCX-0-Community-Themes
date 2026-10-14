@@ -1,0 +1,647 @@
+{
+ "pass": true,
+ "fails": [],
+ "bytes": 4912,
+ "railHeight": {
+  "before": 171,
+  "after": 162
+ },
+ "rail": {
+  "settings": {
+   "x": 16,
+   "y": 80,
+   "w": 176,
+   "h": 162,
+   "bottom": 242,
+   "pad": "3px",
+   "innerGapBelowLastTab": 4,
+   "laceTop": 242,
+   "laceLeft": 18,
+   "laceW": 172,
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http",
+   "lineColor": "rgb(108, 92, 224)"
+  },
+  "tools": {
+   "x": 38,
+   "y": 592,
+   "w": 176,
+   "h": 98,
+   "bottom": 690,
+   "pad": "1px",
+   "innerGapBelowLastTab": 2,
+   "laceTop": 690,
+   "laceLeft": 40,
+   "laceW": 172,
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http",
+   "lineColor": "rgb(108, 92, 224)"
+  }
+ },
+ "geometry": {
+  "settings": {
+   "vsPrev": [
+    {
+     "el": "DIV[tabs-list]#5",
+     "from": "16,80,176,171",
+     "to": "16,80,176,162"
+    }
+   ],
+   "vsBase": [
+    {
+     "el": "DIV[tabs-list]#5",
+     "from": "16,80,176,171",
+     "to": "16,80,176,162"
+    }
+   ]
+  },
+  "tools": {
+   "vsPrev": [],
+   "vsBase": []
+  },
+  "other": {
+   "vsPrev": [],
+   "vsBase": []
+  },
+  "decoy": {
+   "vsPrev": [],
+   "vsBase": []
+  }
+ },
+ "charm": [
+  {
+   "page": "settings",
+   "card": 0,
+   "layoutBoxAbs": [
+    217,
+    96
+   ],
+   "computedTop": "11px",
+   "renderedPillAbs": [
+    221,
+    100
+   ],
+   "bbox": [
+    16,
+    8
+   ],
+   "colours": [
+    "#16112a",
+    "#cdb0e8",
+    "#d97fc6",
+    "#fdf4ff",
+    "#ff7fcf"
+   ],
+   "nonPalette": [],
+   "mismatches": 0,
+   "offsetInBox": [
+    4,
+    4
+   ]
+  },
+  {
+   "page": "settings",
+   "card": 1,
+   "layoutBoxAbs": [
+    217,
+    306.25
+   ],
+   "computedTop": "22px",
+   "renderedPillAbs": [
+    221,
+    310
+   ],
+   "bbox": [
+    16,
+    8
+   ],
+   "colours": [
+    "#16112a",
+    "#cdb0e8",
+    "#d97fc6",
+    "#fdf4ff",
+    "#ff7fcf"
+   ],
+   "nonPalette": [],
+   "mismatches": 0,
+   "offsetInBox": [
+    4,
+    4
+   ]
+  },
+  {
+   "page": "tools",
+   "card": 2,
+   "layoutBoxAbs": [
+    245,
+    603
+   ],
+   "computedTop": "11px",
+   "renderedPillAbs": [
+    249,
+    607
+   ],
+   "bbox": [
+    16,
+    8
+   ],
+   "colours": [
+    "#16112a",
+    "#cdb0e8",
+    "#d97fc6",
+    "#fdf4ff",
+    "#ff7fcf"
+   ],
+   "nonPalette": [],
+   "mismatches": 0,
+   "offsetInBox": [
+    4,
+    4
+   ]
+  },
+  {
+   "page": "tools",
+   "card": 3,
+   "layoutBoxAbs": [
+    245,
+    733.25
+   ],
+   "computedTop": "11px",
+   "renderedPillAbs": [
+    249,
+    737
+   ],
+   "bbox": [
+    16,
+    8
+   ],
+   "colours": [
+    "#16112a",
+    "#cdb0e8",
+    "#d97fc6",
+    "#fdf4ff",
+    "#ff7fcf"
+   ],
+   "nonPalette": [],
+   "mismatches": 0,
+   "offsetInBox": [
+    4,
+    4
+   ]
+  },
+  {
+   "page": "tools",
+   "card": 4,
+   "layoutBoxAbs": [
+    245,
+    928.5
+   ],
+   "computedTop": "11px",
+   "renderedPillAbs": [
+    249,
+    933
+   ],
+   "bbox": [
+    16,
+    8
+   ],
+   "colours": [
+    "#16112a",
+    "#cdb0e8",
+    "#d97fc6",
+    "#fdf4ff",
+    "#ff7fcf"
+   ],
+   "nonPalette": [],
+   "mismatches": 0,
+   "offsetInBox": [
+    4,
+    4
+   ]
+  }
+ ],
+ "laces": [
+  {
+   "name": "settings-rail",
+   "layoutTop": 242,
+   "renderedTop": 242,
+   "renderedLineRowColour": "#6c5ce0",
+   "expectedLineColour": "#6c5ce0",
+   "height": 8,
+   "phase": 0,
+   "expectedPhase": 0,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    ".##############..##############..##############.",
+    ".######..######..######..######..######..######.",
+    "..#####..#####....#####..#####....#####..#####..",
+    "...##########......##########......##########...",
+    ".....######..........######..........######.....",
+    "................................................",
+    "................................................"
+   ]
+  },
+  {
+   "name": "tools-rail",
+   "layoutTop": 690,
+   "renderedTop": 690,
+   "renderedLineRowColour": "#6c5ce0",
+   "expectedLineColour": "#6c5ce0",
+   "height": 8,
+   "phase": 0,
+   "expectedPhase": 0,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    ".##############..##############..##############.",
+    ".######..######..######..######..######..######.",
+    "..#####..#####....#####..#####....#####..#####..",
+    "...##########......##########......##########...",
+    ".....######..........######..........######.....",
+    "................................................",
+    "................................................"
+   ]
+  },
+  {
+   "name": "settings-card0",
+   "layoutTop": 125.25,
+   "renderedTop": 125,
+   "renderedLineRowColour": "#16112a",
+   "expectedLineColour": "#16112a",
+   "height": 8,
+   "phase": 0,
+   "expectedPhase": 0,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    ".##############..##############..##############.",
+    ".######..######..######..######..######..######.",
+    "..#####..#####....#####..#####....#####..#####..",
+    "...##########......##########......##########...",
+    ".....######..........######..........######.....",
+    "................................................",
+    "................................................"
+   ]
+  },
+  {
+   "name": "settings-card1",
+   "layoutTop": 346.5,
+   "renderedTop": 347,
+   "renderedLineRowColour": "#16112a",
+   "expectedLineColour": "#16112a",
+   "height": 8,
+   "phase": 0,
+   "expectedPhase": 0,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    ".##############..##############..##############.",
+    ".######..######..######..######..######..######.",
+    "..#####..#####....#####..#####....#####..#####..",
+    "...##########......##########......##########...",
+    ".....######..........######..........######.....",
+    "................................................",
+    "................................................"
+   ]
+  },
+  {
+   "name": "tools-card2",
+   "layoutTop": 632.25,
+   "renderedTop": 632,
+   "renderedLineRowColour": "#16112a",
+   "expectedLineColour": "#16112a",
+   "height": 8,
+   "phase": 1,
+   "expectedPhase": 1,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    "##############..##############..##############..",
+    "######..######..######..######..######..######..",
+    ".#####..#####....#####..#####....#####..#####...",
+    "..##########......##########......##########....",
+    "....######..........######..........######......",
+    "................................................",
+    "................................................"
+   ]
+  },
+  {
+   "name": "tools-card3",
+   "layoutTop": 762.5,
+   "renderedTop": 763,
+   "renderedLineRowColour": "#16112a",
+   "expectedLineColour": "#16112a",
+   "height": 8,
+   "phase": 1,
+   "expectedPhase": 1,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    "##############..##############..##############..",
+    "######..######..######..######..######..######..",
+    ".#####..#####....#####..#####....#####..#####...",
+    "..##########......##########......##########....",
+    "....######..........######..........######......",
+    "................................................",
+    "................................................"
+   ]
+  },
+  {
+   "name": "tools-card4",
+   "layoutTop": 957.75,
+   "renderedTop": 958,
+   "renderedLineRowColour": "#16112a",
+   "expectedLineColour": "#16112a",
+   "height": 8,
+   "phase": 1,
+   "expectedPhase": 1,
+   "nonBinaryAlpha": 0,
+   "badSamples": [],
+   "realColourMismatch": 0,
+   "rowsAfterTailsSameAsHostHidden": true,
+   "ascii": [
+    "................................................",
+    "################################################",
+    "################################################",
+    "################################################",
+    "##############..##############..##############..",
+    "######..######..######..######..######..######..",
+    ".#####..#####....#####..#####....#####..#####...",
+    "..##########......##########......##########....",
+    "....######..........######..........######......",
+    "................................................",
+    "................................................"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "page": "settings",
+   "card": {
+    "x": 209,
+    "y": 84,
+    "width": 818,
+    "height": 171.25,
+    "top": 84,
+    "right": 1027,
+    "bottom": 255.25,
+    "left": 209
+   },
+   "trig": {
+    "x": 210,
+    "y": 85,
+    "width": 816,
+    "height": 39.25,
+    "top": 85,
+    "right": 1026,
+    "bottom": 124.25,
+    "left": 210
+   },
+   "charm": {
+    "top": "11px",
+    "left": "7px",
+    "w": "24px",
+    "h": "16px",
+    "bgImage": "url(\"data:image/svg+xml,<svg x",
+    "bgSize": "16px 8px",
+    "bgPos": "50% 50%",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "mask": "none",
+    "ir": "pixelated"
+   },
+   "charmBoxAbs": [
+    217,
+    96
+   ],
+   "laceTop": 125.25,
+   "lineBottom": 125.25,
+   "laceLeft": 210,
+   "laceW": 816,
+   "lineColor": "rgb(22, 17, 42)",
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http"
+  },
+  {
+   "page": "settings",
+   "card": {
+    "x": 209,
+    "y": 283.25,
+    "width": 818,
+    "height": 139.25,
+    "top": 283.25,
+    "right": 1027,
+    "bottom": 422.5,
+    "left": 209
+   },
+   "trig": {
+    "x": 210,
+    "y": 284.25,
+    "width": 750,
+    "height": 61.25,
+    "top": 284.25,
+    "right": 960,
+    "bottom": 345.5,
+    "left": 210
+   },
+   "charm": {
+    "top": "22px",
+    "left": "7px",
+    "w": "24px",
+    "h": "16px",
+    "bgImage": "url(\"data:image/svg+xml,<svg x",
+    "bgSize": "16px 8px",
+    "bgPos": "50% 50%",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "mask": "none",
+    "ir": "pixelated"
+   },
+   "charmBoxAbs": [
+    217,
+    306.25
+   ],
+   "laceTop": 346.5,
+   "lineBottom": 346.5,
+   "laceLeft": 210,
+   "laceW": 816,
+   "lineColor": "rgb(22, 17, 42)",
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http"
+  },
+  {
+   "page": "tools",
+   "card": {
+    "x": 238,
+    "y": 592,
+    "width": 824,
+    "height": 114.25,
+    "top": 592,
+    "right": 1062,
+    "bottom": 706.25,
+    "left": 238
+   },
+   "trig": {
+    "x": 238,
+    "y": 592,
+    "width": 824,
+    "height": 39.25,
+    "top": 592,
+    "right": 1062,
+    "bottom": 631.25,
+    "left": 238
+   },
+   "charm": {
+    "top": "11px",
+    "left": "7px",
+    "w": "24px",
+    "h": "16px",
+    "bgImage": "url(\"data:image/svg+xml,<svg x",
+    "bgSize": "16px 8px",
+    "bgPos": "50% 50%",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "mask": "none",
+    "ir": "pixelated"
+   },
+   "charmBoxAbs": [
+    245,
+    603
+   ],
+   "laceTop": 632.25,
+   "lineBottom": 632.25,
+   "laceLeft": 238,
+   "laceW": 824,
+   "lineColor": "rgb(22, 17, 42)",
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http"
+  },
+  {
+   "page": "tools",
+   "card": {
+    "x": 238,
+    "y": 722.25,
+    "width": 824,
+    "height": 179.25,
+    "top": 722.25,
+    "right": 1062,
+    "bottom": 901.5,
+    "left": 238
+   },
+   "trig": {
+    "x": 238,
+    "y": 722.25,
+    "width": 824,
+    "height": 39.25,
+    "top": 722.25,
+    "right": 1062,
+    "bottom": 761.5,
+    "left": 238
+   },
+   "charm": {
+    "top": "11px",
+    "left": "7px",
+    "w": "24px",
+    "h": "16px",
+    "bgImage": "url(\"data:image/svg+xml,<svg x",
+    "bgSize": "16px 8px",
+    "bgPos": "50% 50%",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "mask": "none",
+    "ir": "pixelated"
+   },
+   "charmBoxAbs": [
+    245,
+    733.25
+   ],
+   "laceTop": 762.5,
+   "lineBottom": 762.5,
+   "laceLeft": 238,
+   "laceW": 824,
+   "lineColor": "rgb(22, 17, 42)",
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http"
+  },
+  {
+   "page": "tools",
+   "card": {
+    "x": 238,
+    "y": 917.5,
+    "width": 824,
+    "height": 151.25,
+    "top": 917.5,
+    "right": 1062,
+    "bottom": 1068.75,
+    "left": 238
+   },
+   "trig": {
+    "x": 238,
+    "y": 917.5,
+    "width": 824,
+    "height": 39.25,
+    "top": 917.5,
+    "right": 1062,
+    "bottom": 956.75,
+    "left": 238
+   },
+   "charm": {
+    "top": "11px",
+    "left": "7px",
+    "w": "24px",
+    "h": "16px",
+    "bgImage": "url(\"data:image/svg+xml,<svg x",
+    "bgSize": "16px 8px",
+    "bgPos": "50% 50%",
+    "bgColor": "rgba(0, 0, 0, 0)",
+    "mask": "none",
+    "ir": "pixelated"
+   },
+   "charmBoxAbs": [
+    245,
+    928.5
+   ],
+   "laceTop": 957.75,
+   "lineBottom": 957.75,
+   "laceLeft": 238,
+   "laceW": 824,
+   "lineColor": "rgb(22, 17, 42)",
+   "mask": "url(\"data:image/svg+xml,<svg xmlns='http"
+  }
+ ],
+ "shots": {
+  "settings": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/settings-r97b.png",
+  "tools": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/tools-r97b.png",
+  "zoom4-r97b-settings-card-head": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-r97b-settings-card-head.png",
+  "zoom4-r97b-tools-card-head": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-r97b-tools-card-head.png",
+  "zoom4-r97b-settings-rail-bottom": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-r97b-settings-rail-bottom.png",
+  "zoom4-r97b-tools-rail-bottom": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/r97-cards/zoom4-r97b-tools-rail-bottom.png"
+ }
+}

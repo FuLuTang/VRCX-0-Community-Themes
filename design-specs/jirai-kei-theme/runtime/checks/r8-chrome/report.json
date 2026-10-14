@@ -1,0 +1,225 @@
+{
+  "fixture": "NOT WINDOWS · source-shaped R8 UI only",
+  "cssBytes": 6872,
+  "header": {
+    "brand": {
+      "background": "rgb(248, 198, 227)",
+      "border": "rgb(33, 19, 45)",
+      "borderWidth": "1px",
+      "radius": "0px"
+    },
+    "close": {
+      "background": "rgb(248, 198, 227)",
+      "border": "rgb(33, 19, 45)",
+      "borderWidth": "1px",
+      "radius": "0px"
+    },
+    "middleRadius": "0px",
+    "outerCornersSymmetric": true
+  },
+  "statusbar": {
+    "before": {
+      "outer": "rgb(217, 127, 198)",
+      "inner": "rgba(0, 0, 0, 0)",
+      "leftText": "rgb(98, 84, 169)",
+      "rightText": "rgb(98, 84, 169)",
+      "leftLabel": "服务器状态",
+      "rightLabel": "增强型信息抓取",
+      "dots": [
+        "rgb(46, 211, 25)",
+        "rgb(46, 211, 25)",
+        "rgb(46, 211, 25)",
+        "rgb(162, 148, 200)",
+        "rgb(46, 211, 25)"
+      ],
+      "height": 25
+    },
+    "after": {
+      "outer": "rgb(249, 209, 231)",
+      "inner": "rgb(249, 209, 231)",
+      "leftText": "rgb(33, 19, 45)",
+      "rightText": "rgb(33, 19, 45)",
+      "leftLabel": "服务器状态",
+      "rightLabel": "增强型信息抓取",
+      "dots": [
+        "rgb(46, 211, 25)",
+        "rgb(46, 211, 25)",
+        "rgb(46, 211, 25)",
+        "rgb(162, 148, 200)",
+        "rgb(46, 211, 25)"
+      ],
+      "height": 25
+    },
+    "contrastBefore": {
+      "left": 2.322,
+      "right": 2.322
+    },
+    "contrastAfter": {
+      "left": 12.797,
+      "right": 12.797
+    },
+    "pseudoBefore": {
+      "before": {
+        "content": "\"\"",
+        "position": "absolute",
+        "top": "-8px",
+        "right": "0px",
+        "bottom": "24px",
+        "left": "0px",
+        "width": "1280px",
+        "height": "8px",
+        "transform": "matrix(1, 0, 0, -1, 0, 0)",
+        "pointerEvents": "none",
+        "animationName": "r8-lace-flow",
+        "animationDuration": "4.8s",
+        "animationTimingFunction": "steps(2)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backgroundRepeat": "repeat",
+        "backgroundPosition": "0px 50%",
+        "backgroundSize": "auto",
+        "maskImage": "none"
+      },
+      "after": {
+        "content": "\"\"",
+        "position": "absolute",
+        "top": "1px",
+        "right": "0px",
+        "bottom": "7px",
+        "left": "1278px",
+        "width": "2px",
+        "height": "16px",
+        "transform": "none",
+        "pointerEvents": "none",
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationTimingFunction": "ease",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(rgb(255, 59, 212), rgb(59, 226, 255), rgb(255, 211, 52))",
+        "backgroundRepeat": "repeat",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "maskImage": "none"
+      }
+    },
+    "pseudoAfter": {
+      "before": {
+        "content": "\"\"",
+        "position": "absolute",
+        "top": "-8px",
+        "right": "0px",
+        "bottom": "24px",
+        "left": "0px",
+        "width": "1280px",
+        "height": "8px",
+        "transform": "matrix(1, 0, 0, -1, 0, 0)",
+        "pointerEvents": "none",
+        "animationName": "r8-lace-flow",
+        "animationDuration": "4.8s",
+        "animationTimingFunction": "steps(2)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxwYXRoIGZpbGw9IiNmOWQxZTciIGQ9Ik0wIDBoMjB2MmgtMjB6TTAgMmg1djFoLTV6TTcgMmg2djFoLTZ6TTE1IDJoNXYxaC01ek0xIDNoM3YxaC0zek04IDNoMXYxaC0xek0xMSAzaDF2MWgtMXpNMTYgM2gzdjFoLTN6TTMgNGgxdjFoLTF6TTE2IDRoMXYxaC0xek00IDVoMXYxaC0xek03IDVoMXYxaC0xek0xMiA1aDF2MWgtMXpNMTUgNWgxdjFoLTF6TTggNmgxdjFoLTF6TTExIDZoMXYxaC0xeiIvPjxwYXRoIGZpbGw9IiNkOTdmYzYiIGQ9Ik01IDJoMnYxaC0yek0xMyAyaDJ2MWgtMnpNMCAzaDF2MWgtMXpNNCAzaDF2MmgtMXpNNyAzaDF2MmgtMXpNOSAzaDJ2MWgtMnpNMTIgM2gxdjJoLTF6TTE1IDNoMXYyaC0xek0xOSAzaDF2MWgtMXpNMSA0aDJ2MWgtMnpNOCA0aDF2MmgtMXpNMTEgNGgxdjJoLTF6TTE3IDRoMnYxaC0yek0zIDVoMXYyaC0xek01IDVoMnYyaC0yek0xMyA1aDJ2MmgtMnpNMTYgNWgxdjJoLTF6TTQgNmgxdjFoLTF6TTcgNmgxdjFoLTF6TTkgNmgydjJoLTJ6TTEyIDZoMXYxaC0xek0xNSA2aDF2MWgtMXpNOCA3aDF2MWgtMXpNMTEgN2gxdjFoLTF6Ii8+PC9zdmc+\")",
+        "backgroundRepeat": "repeat-x",
+        "backgroundPosition": "0px 50%",
+        "backgroundSize": "20px 8px",
+        "maskImage": "none"
+      },
+      "after": {
+        "content": "\"\"",
+        "position": "absolute",
+        "top": "1px",
+        "right": "0px",
+        "bottom": "7px",
+        "left": "1278px",
+        "width": "2px",
+        "height": "16px",
+        "transform": "none",
+        "pointerEvents": "none",
+        "animationName": "none",
+        "animationDuration": "0s",
+        "animationTimingFunction": "ease",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "linear-gradient(rgb(255, 59, 212), rgb(59, 226, 255), rgb(255, 211, 52))",
+        "backgroundRepeat": "repeat",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "maskImage": "none"
+      }
+    }
+  },
+  "lace": {
+    "paint": "data: SVG tile; 16x8 repeat-x; 1px meat-pink outline; pale-pink fill; transparent eyelet",
+    "fill": "#ffe4f2",
+    "outline": "#d97fc6",
+    "pixelsBefore": {
+      "width": 1280,
+      "height": 8,
+      "totalPixels": 10240,
+      "meatPinkPixels": 0,
+      "percent": 0,
+      "toleranceRgb": 36
+    },
+    "pixelsAfter": {
+      "width": 1280,
+      "height": 8,
+      "totalPixels": 10240,
+      "meatPinkPixels": 2944,
+      "percent": 28.75,
+      "toleranceRgb": 36
+    },
+    "meatPinkPixelRatioAfterBefore": 2944,
+    "percentageReduction": -294300
+  },
+  "middleInteraction": {
+    "pressed": {
+      "background": "rgb(255, 227, 242)",
+      "border": "rgb(33, 19, 45)"
+    },
+    "middleHover": "rgb(255, 227, 242)",
+    "windowHover": {
+      "background": "rgb(255, 227, 242)",
+      "color": "rgb(33, 19, 45)"
+    },
+    "closeHover": {
+      "background": "rgb(176, 48, 95)",
+      "color": "rgb(255, 241, 248)"
+    },
+    "closeHoverContrast": 5.588
+  },
+  "footerFits": {
+    "580": {
+      "bottom": 547,
+      "sidebarBottom": 547,
+      "height": 116,
+      "paddingInlineEnd": "32px",
+      "fitsViewport": true,
+      "fitsSidebar": true,
+      "scrollOverflow": false
+    },
+    "720": {
+      "bottom": 687,
+      "sidebarBottom": 687,
+      "height": 116,
+      "paddingInlineEnd": "32px",
+      "fitsViewport": true,
+      "fitsSidebar": true,
+      "scrollOverflow": false
+    },
+    "900": {
+      "bottom": 867,
+      "sidebarBottom": 867,
+      "height": 120,
+      "paddingInlineEnd": "32px",
+      "fitsViewport": true,
+      "fitsSidebar": true,
+      "scrollOverflow": false
+    }
+  },
+  "reducedMotion": {
+    "laceAnimation": "none",
+    "lacePointerEvents": "none",
+    "heartAnimation": "none",
+    "heartPointerEvents": "none"
+  },
+  "protectedSelectorsAbsent": true
+}

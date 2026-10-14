@@ -1,0 +1,1772 @@
+{
+  "status": "PASS",
+  "fixture": "NOT WINDOWS; fictional data only; CSS-only visual verification",
+  "build": {
+    "path": "/tmp/vscode-luna/jirai-kei-theme/theme.css",
+    "cssBytes": 896268,
+    "includesExistingR5Motion": true,
+    "newDialogsSectionIntegratedByBuilder": false,
+    "note": "Builder remains untouched; dialogs-r9.css is appended directly by this check until Lead adds its section to build-runtime.mjs."
+  },
+  "scope": {
+    "hitSlots": 3,
+    "expected": 3,
+    "selectors": "dialog-content + alert-dialog-content with visible direct header; excludes .entity-dialog/.owner-dialog, nested entity portals, nested login-page surfaces, and sr-only-header command/quick-search surfaces; login uses card rather than DialogContent",
+    "decoys": [
+      "entity detail dialog",
+      "login nested dialog",
+      "login card",
+      "sr-only-title command/quick-search dialog"
+    ]
+  },
+  "contrast": {
+    "title": {
+      "foreground": "rgb(22, 17, 42)",
+      "background": "rgb(242, 198, 232)",
+      "ratio": 12.21
+    },
+    "body": {
+      "foreground": "rgb(242, 235, 255)",
+      "background": "rgb(33, 26, 51)",
+      "ratio": 14.36
+    },
+    "description": {
+      "foreground": "rgb(199, 184, 220)",
+      "background": "rgb(33, 26, 51)",
+      "ratio": 8.98
+    },
+    "minimum": 4.5
+  },
+  "appearance": {
+    "titlePink": "rgb(242, 198, 232)",
+    "marker": {
+      "color": "rgb(58, 34, 200)",
+      "width": "8px",
+      "height": "8px"
+    },
+    "closeButton": {
+      "rect": {
+        "x": 723.22,
+        "y": 61.39,
+        "width": 22,
+        "height": 22
+      },
+      "border": "1px solid rgb(22, 17, 42)",
+      "radius": "0px",
+      "focus": {
+        "active": true,
+        "visible": true,
+        "outline": "solid",
+        "width": "2px",
+        "color": "rgb(142, 230, 221)"
+      }
+    },
+    "frame": "1px solid rgb(108, 92, 224)",
+    "innerBevel": "rgb(242, 235, 255) 0px 0px 0px 1px inset, rgb(16, 11, 30) 4px 4px 0px 0px",
+    "footerLace": "url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiB2aWV3Q",
+    "bottomStrips": "linear-gradient(rgb(255, 127, 207), rgb(255, 127, 207)), linear-gradient(rgb(142, 230, 221), rgb(142, 230, 221))"
+  },
+  "geometry": {
+    "before": {
+      "info-dialog": {
+        "rect": {
+          "x": 22,
+          "y": 56.39,
+          "width": 728.22,
+          "height": 324.88
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(32, 25, 54)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "2px",
+          "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "r5-dialog-step-in",
+          "animationDuration": "0.12s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "728.219px",
+          "height": "324.875px"
+        }
+      },
+      "launch-dialog": {
+        "rect": {
+          "x": 772.22,
+          "y": 56.39,
+          "width": 645.77,
+          "height": 384.44
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(32, 25, 54)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "2px",
+          "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "r5-dialog-step-in",
+          "animationDuration": "0.12s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "645.766px",
+          "height": "384.438px"
+        }
+      },
+      "alert-dialog": {
+        "rect": {
+          "x": 22,
+          "y": 462.83,
+          "width": 640,
+          "height": 173.3
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(48, 36, 73)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "12px",
+          "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "640px",
+          "height": "173.297px"
+        }
+      },
+      "info-header": {
+        "rect": {
+          "x": 39,
+          "y": 73.39,
+          "width": 694.22,
+          "height": 46
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "46px"
+        }
+      },
+      "launch-header": {
+        "rect": {
+          "x": 789.22,
+          "y": 73.39,
+          "width": 611.77,
+          "height": 46
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "46px"
+        }
+      },
+      "info-title": {
+        "rect": {
+          "x": 39,
+          "y": 73.39,
+          "width": 694.22,
+          "height": 20
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "20px"
+        }
+      },
+      "launch-title": {
+        "rect": {
+          "x": 789.22,
+          "y": 73.39,
+          "width": 611.77,
+          "height": 20
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "20px"
+        }
+      },
+      "alert-title": {
+        "rect": {
+          "x": 39,
+          "y": 479.83,
+          "width": 606,
+          "height": 20
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "606px",
+          "height": "20px"
+        }
+      },
+      "info-description": {
+        "rect": {
+          "x": 39,
+          "y": 101.39,
+          "width": 694.22,
+          "height": 18
+        },
+        "style": {
+          "color": "rgb(199, 184, 220)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(199, 184, 220)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(199, 184, 220)",
+          "width": "694.219px",
+          "height": "18px"
+        }
+      },
+      "launch-description": {
+        "rect": {
+          "x": 789.22,
+          "y": 101.39,
+          "width": 611.77,
+          "height": 18
+        },
+        "style": {
+          "color": "rgb(199, 184, 220)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(199, 184, 220)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(199, 184, 220)",
+          "width": "611.766px",
+          "height": "18px"
+        }
+      },
+      "info-body": {
+        "rect": {
+          "x": 39,
+          "y": 119.39,
+          "width": 694.22,
+          "height": 199.88
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "199.875px"
+        }
+      },
+      "launch-body": {
+        "rect": {
+          "x": 789.22,
+          "y": 119.39,
+          "width": 611.77,
+          "height": 259.44
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "259.438px"
+        }
+      },
+      "info-footer": {
+        "rect": {
+          "x": 39,
+          "y": 319.27,
+          "width": 694.22,
+          "height": 45
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "45px"
+        }
+      },
+      "launch-footer": {
+        "rect": {
+          "x": 789.22,
+          "y": 378.83,
+          "width": 611.77,
+          "height": 45
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "45px"
+        }
+      },
+      "stats-grid": {
+        "rect": {
+          "x": 39,
+          "y": 161.23,
+          "width": 694.22,
+          "height": 62.14
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "62.1406px"
+        }
+      },
+      "progress-card": {
+        "rect": {
+          "x": 39,
+          "y": 236.38,
+          "width": 694.22,
+          "height": 55.39
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(42, 33, 64)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(81, 67, 109)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "55.3906px"
+        }
+      },
+      "launch-code": {
+        "rect": {
+          "x": 789.22,
+          "y": 119.39,
+          "width": 611.77,
+          "height": 81.56
+        },
+        "style": {
+          "color": "rgb(234, 223, 255)",
+          "background": "rgb(25, 20, 40)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(81, 67, 109)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "ui-monospace, monospace",
+          "fontSize": "12px",
+          "lineHeight": "19.2px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(234, 223, 255)",
+          "width": "611.766px",
+          "height": "81.5625px"
+        }
+      },
+      "launch-args": {
+        "rect": {
+          "x": 789.22,
+          "y": 234.89,
+          "width": 611.77,
+          "height": 74
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(25, 20, 40)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(117, 101, 156)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "16.8px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "auto",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "74px"
+        }
+      },
+      "launch-path": {
+        "rect": {
+          "x": 789.22,
+          "y": 342.83,
+          "width": 551.36,
+          "height": 36
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(25, 20, 40)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(117, 101, 156)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "16.8px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "clip",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "551.359px",
+          "height": "36px"
+        }
+      },
+      "info-refresh": {
+        "rect": {
+          "x": 541.22,
+          "y": 332.27,
+          "width": 66,
+          "height": 32
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(184, 107, 164)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(217, 127, 198)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "11px",
+          "lineHeight": "12.1px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "66px",
+          "height": "32px"
+        }
+      },
+      "launch-save": {
+        "rect": {
+          "x": 1356.98,
+          "y": 391.83,
+          "width": 44,
+          "height": 32
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(184, 107, 164)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(217, 127, 198)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "11px",
+          "lineHeight": "12.1px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "44px",
+          "height": "32px"
+        }
+      },
+      "info-close": {
+        "rect": {
+          "x": 721.22,
+          "y": 63.39,
+          "width": 22,
+          "height": 22
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(48, 36, 73)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(117, 101, 156)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "11px",
+          "lineHeight": "12.1px",
+          "position": "absolute",
+          "top": "6px",
+          "left": "698.219px",
+          "right": "6px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "22px",
+          "height": "22px"
+        }
+      }
+    },
+    "after": {
+      "info-dialog": {
+        "rect": {
+          "x": 22,
+          "y": 56.39,
+          "width": 728.22,
+          "height": 319.88
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(33, 26, 51)",
+          "backgroundImage": "linear-gradient(rgb(255, 127, 207), rgb(255, 127, 207)), linear-gradient(rgb(142, 230, 221), rgb(142, 230, 221))",
+          "backgroundRepeat": "no-repeat, no-repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "0px",
+          "boxShadow": "rgb(242, 235, 255) 0px 0px 0px 1px inset, rgb(16, 11, 30) 4px 4px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "r5-dialog-step-in",
+          "animationDuration": "0.12s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "728.219px",
+          "height": "319.875px"
+        }
+      },
+      "launch-dialog": {
+        "rect": {
+          "x": 772.22,
+          "y": 56.39,
+          "width": 645.77,
+          "height": 379.44
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(33, 26, 51)",
+          "backgroundImage": "linear-gradient(rgb(255, 127, 207), rgb(255, 127, 207)), linear-gradient(rgb(142, 230, 221), rgb(142, 230, 221))",
+          "backgroundRepeat": "no-repeat, no-repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "0px",
+          "boxShadow": "rgb(242, 235, 255) 0px 0px 0px 1px inset, rgb(16, 11, 30) 4px 4px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "r5-dialog-step-in",
+          "animationDuration": "0.12s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "645.766px",
+          "height": "379.438px"
+        }
+      },
+      "alert-dialog": {
+        "rect": {
+          "x": 22,
+          "y": 457.83,
+          "width": 640,
+          "height": 168.3
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(33, 26, 51)",
+          "backgroundImage": "linear-gradient(rgb(255, 127, 207), rgb(255, 127, 207)), linear-gradient(rgb(142, 230, 221), rgb(142, 230, 221))",
+          "backgroundRepeat": "no-repeat, no-repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "0px",
+          "boxShadow": "rgb(242, 235, 255) 0px 0px 0px 1px inset, rgb(16, 11, 30) 4px 4px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "640px",
+          "height": "168.297px"
+        }
+      },
+      "info-header": {
+        "rect": {
+          "x": 25,
+          "y": 59.39,
+          "width": 722.22,
+          "height": 55
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "722.219px",
+          "height": "55px"
+        }
+      },
+      "launch-header": {
+        "rect": {
+          "x": 775.22,
+          "y": 59.39,
+          "width": 639.77,
+          "height": 55
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "639.766px",
+          "height": "55px"
+        }
+      },
+      "info-title": {
+        "rect": {
+          "x": 25,
+          "y": 59.39,
+          "width": 722.22,
+          "height": 30
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(242, 198, 232)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+          "fontSize": "12.25px",
+          "lineHeight": "15.3125px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "722.219px",
+          "height": "30px"
+        }
+      },
+      "launch-title": {
+        "rect": {
+          "x": 775.22,
+          "y": 59.39,
+          "width": 639.77,
+          "height": 30
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(242, 198, 232)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+          "fontSize": "12.25px",
+          "lineHeight": "15.3125px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "639.766px",
+          "height": "30px"
+        }
+      },
+      "alert-title": {
+        "rect": {
+          "x": 25,
+          "y": 460.83,
+          "width": 634,
+          "height": 30
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(242, 198, 232)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "\"WD Pixel CJK\", system-ui, sans-serif",
+          "fontSize": "12.25px",
+          "lineHeight": "15.3125px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "634px",
+          "height": "30px"
+        }
+      },
+      "info-description": {
+        "rect": {
+          "x": 39,
+          "y": 96.39,
+          "width": 694.22,
+          "height": 18
+        },
+        "style": {
+          "color": "rgb(199, 184, 220)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(199, 184, 220)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(199, 184, 220)",
+          "width": "694.219px",
+          "height": "18px"
+        }
+      },
+      "launch-description": {
+        "rect": {
+          "x": 789.22,
+          "y": 96.39,
+          "width": 611.77,
+          "height": 18
+        },
+        "style": {
+          "color": "rgb(199, 184, 220)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(199, 184, 220)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(199, 184, 220)",
+          "width": "611.766px",
+          "height": "18px"
+        }
+      },
+      "info-body": {
+        "rect": {
+          "x": 39,
+          "y": 114.39,
+          "width": 694.22,
+          "height": 199.88
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "199.875px"
+        }
+      },
+      "launch-body": {
+        "rect": {
+          "x": 789.22,
+          "y": 114.39,
+          "width": 611.77,
+          "height": 259.44
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "259.438px"
+        }
+      },
+      "info-footer": {
+        "rect": {
+          "x": 39,
+          "y": 314.27,
+          "width": 694.22,
+          "height": 45
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "45px"
+        }
+      },
+      "launch-footer": {
+        "rect": {
+          "x": 789.22,
+          "y": 373.83,
+          "width": 611.77,
+          "height": 45
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "0px",
+          "left": "0px",
+          "right": "0px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "45px"
+        }
+      },
+      "stats-grid": {
+        "rect": {
+          "x": 39,
+          "y": 156.23,
+          "width": 694.22,
+          "height": 62.14
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(242, 235, 255)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "62.1406px"
+        }
+      },
+      "progress-card": {
+        "rect": {
+          "x": 39,
+          "y": 231.38,
+          "width": 694.22,
+          "height": 55.39
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(42, 33, 64)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(81, 67, 109)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "694.219px",
+          "height": "55.3906px"
+        }
+      },
+      "launch-code": {
+        "rect": {
+          "x": 789.22,
+          "y": 114.39,
+          "width": 611.77,
+          "height": 81.56
+        },
+        "style": {
+          "color": "rgb(234, 223, 255)",
+          "background": "rgb(25, 20, 40)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(81, 67, 109)",
+          "borderRadius": "0px",
+          "boxShadow": "none",
+          "fontFamily": "ui-monospace, monospace",
+          "fontSize": "12px",
+          "lineHeight": "19.2px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(234, 223, 255)",
+          "width": "611.766px",
+          "height": "81.5625px"
+        }
+      },
+      "launch-args": {
+        "rect": {
+          "x": 789.22,
+          "y": 229.89,
+          "width": 611.77,
+          "height": 74
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(25, 20, 40)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(117, 101, 156)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "16.8px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "auto",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "611.766px",
+          "height": "74px"
+        }
+      },
+      "launch-path": {
+        "rect": {
+          "x": 789.22,
+          "y": 337.83,
+          "width": 551.36,
+          "height": 36
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(25, 20, 40)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(117, 101, 156)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "16.8px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "clip",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "551.359px",
+          "height": "36px"
+        }
+      },
+      "info-refresh": {
+        "rect": {
+          "x": 541.22,
+          "y": 327.27,
+          "width": 66,
+          "height": 32
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(184, 107, 164)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(217, 127, 198)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "11px",
+          "lineHeight": "12.1px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "66px",
+          "height": "32px"
+        }
+      },
+      "launch-save": {
+        "rect": {
+          "x": 1356.98,
+          "y": 386.83,
+          "width": 44,
+          "height": 32
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(184, 107, 164)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(217, 127, 198)",
+          "borderRadius": "4px",
+          "boxShadow": "none",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "11px",
+          "lineHeight": "12.1px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "44px",
+          "height": "32px"
+        }
+      },
+      "info-close": {
+        "rect": {
+          "x": 723.22,
+          "y": 61.39,
+          "width": 22,
+          "height": 22
+        },
+        "style": {
+          "color": "rgb(22, 17, 42)",
+          "background": "rgb(248, 216, 237)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(22, 17, 42)",
+          "borderRadius": "0px",
+          "boxShadow": "rgb(255, 241, 248) 1px 1px 0px 0px inset, rgb(184, 107, 164) -1px -1px 0px 0px inset",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "11px",
+          "lineHeight": "12.1px",
+          "position": "absolute",
+          "top": "4px",
+          "left": "700.219px",
+          "right": "4px",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(22, 17, 42)",
+          "width": "22px",
+          "height": "22px"
+        }
+      }
+    },
+    "nonHeaderSizeDiffs": {
+      "info-body": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-body": {
+        "width": 0,
+        "height": 0
+      },
+      "info-footer": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-footer": {
+        "width": 0,
+        "height": 0
+      },
+      "info-description": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-description": {
+        "width": 0,
+        "height": 0
+      },
+      "stats-grid": {
+        "width": 0,
+        "height": 0
+      },
+      "progress-card": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-code": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-args": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-path": {
+        "width": 0,
+        "height": 0
+      },
+      "info-refresh": {
+        "width": 0,
+        "height": 0
+      },
+      "launch-save": {
+        "width": 0,
+        "height": 0
+      }
+    },
+    "rootPositioningUnchanged": true,
+    "titleHeightDelta": {
+      "info": 10,
+      "launch": 10
+    },
+    "headerHeightDelta": {
+      "info": 9,
+      "launch": 9
+    },
+    "rootHeightDelta": {
+      "info": -5,
+      "launch": -5
+    },
+    "titlebarNote": "Title row grows 10px (header +9px); its top edge reclaims the existing 16px dialog inset using a negative top margin, so the total fixture panel height shrinks 5px instead of adding that inset again. Non-header content, footer, controls, descriptions, and inputs have 0px width/height change; titles/descriptions remain in normal flow and wrap normally."
+  },
+  "exclusions": {
+    "decoysUnchanged": true,
+    "values": {
+      "entity-decoy": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(32, 25, 54)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "2px",
+          "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "auto",
+          "height": "auto"
+        },
+        "titleBackground": "rgba(0, 0, 0, 0)"
+      },
+      "login-nested-dialog": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(32, 25, 54)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "2px",
+          "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "auto",
+          "height": "auto"
+        },
+        "titleBackground": "rgba(0, 0, 0, 0)"
+      },
+      "login-card": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(32, 25, 54)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "0px none rgb(108, 92, 224)",
+          "borderRadius": "2px",
+          "boxShadow": "rgb(108, 92, 224) 0px 0px 0px 1px, rgb(16, 11, 30) 4px 4px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "relative",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "auto",
+          "height": "auto"
+        },
+        "titleBackground": null
+      },
+      "command-search-dialog": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "style": {
+          "color": "rgb(242, 235, 255)",
+          "background": "rgb(32, 25, 54)",
+          "backgroundImage": "none",
+          "backgroundRepeat": "repeat",
+          "border": "1px solid rgb(108, 92, 224)",
+          "borderRadius": "2px",
+          "boxShadow": "rgb(61, 48, 94) 0px 0px 0px 1px, rgba(11, 7, 24, 0.55) 5px 5px 0px 0px",
+          "fontFamily": "system-ui, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20.3px",
+          "position": "static",
+          "top": "auto",
+          "left": "auto",
+          "right": "auto",
+          "transform": "none",
+          "overflow": "visible",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(242, 235, 255)",
+          "width": "auto",
+          "height": "auto"
+        },
+        "titleBackground": null
+      }
+    }
+  },
+  "motion": {
+    "existingAnimation": {
+      "name": "r5-dialog-step-in",
+      "duration": "0.12s"
+    },
+    "noSecondAnimation": true,
+    "htmlReduceEffects": "none",
+    "prefersReducedMotion": "none"
+  },
+  "narrowViewport": {
+    "viewport": 760,
+    "scrollWidth": 760,
+    "clientWidth": 760,
+    "titleWidth": 730,
+    "titleScrollWidth": 730,
+    "closeRight": 743
+  },
+  "screenshots": [
+    "before.png",
+    "after.png",
+    "comparison.png"
+  ],
+  "visualSelfCheck": {
+    "status": "PASS",
+    "inspected": [
+      "before.png",
+      "after.png",
+      "comparison.png"
+    ],
+    "notes": "Title strip spans popup width with indigo square and square close; content remains legible; lace stays in footer padding; mint bottom rule and left pink pixel block both visible."
+  },
+  "needsLiveConfirmation": [
+    "Base UI merged real dialog trees and actual translations at runtime",
+    "screen-reader flow for wrapped localised titles",
+    "portaled dialogs visually remain inside viewport on 125%/200% OS scaling"
+  ]
+}

@@ -1,0 +1,1081 @@
+{
+  "result": "PASS",
+  "fixture": "NOT WINDOWS · invented theme metadata, names, counts and timestamps; synthetic graph/card shapes only; no real friend/avatar image or private screenshot copied",
+  "focusedTargetComposite": "controls-r9-targets-comparison.png",
+  "source": {
+    "authority": "/tmp/vrcx-win-src-r9/src",
+    "fixtureMirrors": [
+      "ToolbarTabs/ToolbarSegmented",
+      "bare CommunityThemesSection/GalleryTabs/InventoryPage horizontal TabsList",
+      "TabsList + independent tab-indicator",
+      "CommunityThemesSection browse/installed Tabs with ThemeCatalogCard sm Card, CardContent preview frame, badges and default enable actions",
+      "Relationship PageScaffold id=chart with MutualFriendsSurface legend w-64 and MutualFriendsNodeCard w-72; node portrait and community swatches; graph degree circles preserved",
+      "TooltipTrigger-wrapped aria-pressed toggle item with source dark:data-pressed utility classes",
+      "section.activity-card under .activity-skin",
+      "TileShell MyAvatarGridCard + check/menu",
+      "virtualized rows with inline height/transform"
+    ],
+    "windowsCheckoutNote": "Windows checkout has one uncommitted RelationshipTimelinePageImpl.tsx debounced-filters change; this task did not edit or overwrite any app source.",
+    "builtTheme": "/tmp/jirai-r9-out-controls/jirai-kei-theme/theme.css",
+    "builtControlsSectionMatchesSource": false,
+    "baseline": "Existing JIRAI_OUT theme.css with only SECTION controls-r9 removed; current controls-r9.css is injected for the after-state",
+    "verificationMode": "No build-runtime run. The current controls-r9.css is overlaid in memory on the same existing theme baseline; if the stored section is stale, a package build and Windows reload remain unverified.",
+    "appCss": [
+      "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/index-Cckb3vVG.css",
+      "/home/fulutang/Documents/Github/VRCX-0-jirai/dist/assets/App-C2mIqNXI.css"
+    ],
+    "privateScreenshotAssetsCopied": false
+  },
+  "css": {
+    "bytes": 12396,
+    "audit": {
+      "ruleCount": 35,
+      "allSelectorsMainContentScoped": true,
+      "selectors": [
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"])",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) [data-slot=\"tab-indicator\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) > [data-slot=\"tabs-tab\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) > [data-slot=\"tabs-tab\"]:hover:not([data-disabled]):not([aria-disabled=\"true\"])",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) > [data-slot=\"tabs-tab\"]:is([data-active], [aria-selected=\"true\"])",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) > [data-slot=\"tabs-tab\"] > span:last-child",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) > [data-slot=\"tabs-tab\"]:is([data-active], [aria-selected=\"true\"]) > span:last-child",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs-list\"]:not([data-orientation=\"vertical\"]) > [data-slot=\"tabs-tab\"]:focus-visible",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"]",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > :is([data-slot=\"toggle\"], [data-slot=\"tooltip-trigger\"][aria-pressed])",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > :is([data-slot=\"toggle\"], [data-slot=\"tooltip-trigger\"][aria-pressed]):hover:not([data-disabled]):not([aria-disabled=\"true\"])",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > :is([data-slot=\"toggle\"], [data-slot=\"tooltip-trigger\"][aria-pressed]):is([aria-pressed=\"true\"], [data-pressed])",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > :is([data-slot=\"toggle\"], [data-slot=\"tooltip-trigger\"][aria-pressed]):is([aria-pressed=\"true\"], [data-pressed])::before",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > [data-slot=\"separator\"]",
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > :is([data-slot=\"toggle\"], [data-slot=\"tooltip-trigger\"][aria-pressed]):focus-visible",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold:has(.activity-skin) .activity-skin section.activity-card",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot=\"tooltip-trigger\"][aria-pressed] > svg.lucide-list) [data-slot=\"context-menu-trigger\"][class~=\"group/card\"] > [data-slot=\"button\"][class~=\"rounded-object\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot=\"tooltip-trigger\"][aria-pressed] > svg.lucide-list) [data-slot=\"context-menu-trigger\"][class~=\"group/card\"] > [data-slot=\"button\"][class~=\"rounded-object\"][class~=\"ring-2\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot=\"tooltip-trigger\"][aria-pressed] > svg.lucide-list) [data-slot=\"context-menu-trigger\"][class~=\"group/card\"] > [data-slot=\"button\"][class~=\"rounded-object\"] [class~=\"left-1\"] > span[class~=\"size-5\"][class~=\"rounded-full\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot=\"tooltip-trigger\"][aria-pressed] > svg.lucide-list) [data-slot=\"context-menu-trigger\"][class~=\"group/card\"] > button[data-slot=\"dropdown-menu-trigger\"][data-size=\"icon-xs\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot=\"tooltip-trigger\"][aria-pressed] > svg.lucide-list) [data-slot=\"context-menu-trigger\"][class~=\"group/card\"] > button[data-slot=\"dropdown-menu-trigger\"][data-size=\"icon-xs\"]:focus-visible",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] > [data-slot=\"card-content\"] > .bg-muted.overflow-hidden.border",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"badge\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"button\"][data-variant=\"default\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"button\"][data-variant=\"default\"]:hover:not(:disabled):not([aria-disabled=\"true\"])",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"button\"][data-variant=\"default\"]:focus-visible",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"1\"] [data-slot=\"button\"][data-variant=\"default\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"1\"] [data-slot=\"button\"][data-variant=\"default\"]:hover:not(:disabled):not([aria-disabled=\"true\"])",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold [data-slot=\"tabs\"]:has([data-slot=\"tabs-content\"][data-index=\"0\"] [data-slot=\"card\"][data-size=\"sm\"] [data-slot=\"card-content\"] .bg-muted.overflow-hidden.border > img[loading=\"lazy\"]) [data-slot=\"tabs-content\"][data-index=\"1\"] [data-slot=\"button\"][data-variant=\"default\"]:focus-visible",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64, .w-72)",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64, .w-72)::before",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > .absolute.w-64 > .mt-2.flex.flex-col > button > span[class~=\"size-2.5\"][class~=\"rounded-full\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > .absolute.w-72 > button.mt-3 > span[class~=\"size-2.5\"][class~=\"rounded-full\"]",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > .absolute.w-72 > .flex.items-center > span.bg-muted[class~=\"size-11\"][class~=\"rounded-full\"]"
+      ],
+      "markerCount": 0,
+      "pseudoRules": [
+        ".vrcx-0-main-content .vrcx-0-page-toolbar [data-slot=\"toggle-group\"][data-variant=\"outline\"] > :is([data-slot=\"toggle\"], [data-slot=\"tooltip-trigger\"][aria-pressed]):is([aria-pressed=\"true\"], [data-pressed])::before",
+        ".vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64, .w-72)::before"
+      ]
+    },
+    "checks": {
+      "externalUrls": false,
+      "imports": false,
+      "activeToggleOverlaySuppressed": true,
+      "relationshipGraphSurfaceBlurSuppressed": true,
+      "rootScoped": true
+    }
+  },
+  "targetCounts": {
+    "pageScaffoldTabLists": 6,
+    "bareTabsLists": 3,
+    "settingsVerticalTabsUnderScaffold": 1,
+    "toolbarOutlineGroups": 6,
+    "myAvatarCardTargets": 5,
+    "myAvatarChecks": 1,
+    "myAvatarMenus": 5,
+    "communityThemeRoots": 1,
+    "communityBrowseCards": 3,
+    "communityBrowsePrimaryActions": 2,
+    "communityInstalledPrimaryActions": 1,
+    "communityOutsideCardMatched": 0,
+    "relationshipGraphSurfaces": 2,
+    "relationshipGraphAvatars": 1,
+    "relationshipLegendSwatches": 2,
+    "relationshipNodeSwatches": 1,
+    "relationshipDegreeMarkers": 2,
+    "relationshipUnknownMarkers": 1,
+    "relationshipEdgeLegendItems": 3,
+    "relationshipLegendInfoRows": 3,
+    "relationshipMinimumDegreeSliders": 1,
+    "relationshipSvgNodes": 3,
+    "unrelatedGraphSurfacesMatched": 0,
+    "myGroupTileMatchesAvatarScope": 0
+  },
+  "exclusions": {
+    "bareHorizontalMainContentTabsStyled": 3,
+    "settingsVerticalTabsUnderPageScaffoldUnchanged": true,
+    "settingsOutlineToggleGroupUnchanged": true,
+    "sideRailTabsUnchanged": true,
+    "entityDialogTabsUnchanged": true,
+    "defaultVariantMultiselectChipsUnchanged": true,
+    "myGroupsTileUnchanged": true,
+    "activityCardOutsideSkinUnchanged": true,
+    "communityCardOutsideCommunityTabsUnchanged": true,
+    "unrelatedGraphSurfaceOutsideChartUnchanged": true,
+    "relationshipGraphDegreeAndUnknownCircleMarkersPreserved": true,
+    "svgGraphDataCirclesPreserved": true,
+    "myGroupsTileMatchedByAvatarScope": false
+  },
+  "controls": {
+    "selectedColors": {
+      "activity": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "activity-density": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "friends": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "game-log": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "my-avatars": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "themes": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "gallery": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      },
+      "inventory": {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)"
+      }
+    },
+    "activeTabIndicatorHidden": true,
+    "screenshotPixelSamples": {
+      "before": {
+        "tab": {
+          "point": {
+            "x": 216,
+            "y": 72
+          },
+          "rgb": [
+            255,
+            127,
+            207
+          ]
+        },
+        "rangeToggle": {
+          "point": {
+            "x": 377,
+            "y": 72
+          },
+          "rgb": [
+            255,
+            184,
+            230
+          ]
+        },
+        "iconOnlyToggle": {
+          "point": {
+            "x": 215,
+            "y": 72
+          },
+          "rgb": [
+            255,
+            184,
+            230
+          ]
+        }
+      },
+      "after": {
+        "tab": {
+          "point": {
+            "x": 216,
+            "y": 72
+          },
+          "rgb": [
+            255,
+            184,
+            230
+          ]
+        },
+        "rangeToggle": {
+          "point": {
+            "x": 377,
+            "y": 72
+          },
+          "rgb": [
+            255,
+            184,
+            230
+          ]
+        },
+        "iconOnlyToggle": {
+          "point": {
+            "x": 215,
+            "y": 72
+          },
+          "rgb": [
+            255,
+            184,
+            230
+          ]
+        }
+      },
+      "pairwiseDeltaE76": {
+        "tabVsRangeToggle": 0,
+        "tabVsIconOnlyToggle": 0,
+        "rangeVsIconOnlyToggle": 0
+      },
+      "maxDeltaE76": 0,
+      "targetRgb": [
+        255,
+        184,
+        230
+      ],
+      "maxTargetChannelDelta": 0
+    },
+    "countBadgeContrast": 8.8377,
+    "contrastRatios": {
+      "activity · 概览": 11.5453,
+      "activity · 旅程": 11.8074,
+      "activity · 全部": 11.8074,
+      "activity · 近30天": 11.5453,
+      "activity · 近90天": 11.8074,
+      "activity · 近180天": 11.8074,
+      "activity · 近365天": 11.8074,
+      "activity-density · 概览": 11.8074,
+      "activity-density · 旅程": 11.5453,
+      "activity-density · 标准": 11.8074,
+      "activity-density · 紧凑": 11.5453,
+      "activity-density · 密集": 11.8074,
+      "friends · 网格": 11.5453,
+      "friends · 世界": 11.8074,
+      "friends · 在线 14": 11.5453,
+      "friends · 好友收藏 1": 11.8074,
+      "friends · 同一房间 0": 11.8074,
+      "friends · 活跃中 6": 11.8074,
+      "friends · 离线 67": 11.8074,
+      "friends · count 14": 8.8377,
+      "friends · count 1": 11.8074,
+      "friends · count 0": 11.8074,
+      "friends · count 6": 11.8074,
+      "friends · count 67": 11.8074,
+      "game-log · 会话": 11.5453,
+      "game-log · 表格": 11.8074,
+      "my-avatars · 模型网格": 11.5453,
+      "my-avatars · 模型列表": 11.8074,
+      "themes · 浏览": 11.5453,
+      "themes · 已安装": 11.8074,
+      "gallery · 图库 12": 11.5453,
+      "gallery · 图标 4": 11.8074,
+      "gallery · 截图": 11.8074,
+      "gallery · count 12": 8.8377,
+      "gallery · count 4": 11.8074,
+      "inventory · 所有物品": 11.5453,
+      "inventory · 服饰": 11.8074,
+      "inventory · 头像框": 11.8074,
+      "activity card · 总时长": 10.7632,
+      "activity card · 298.5小时": 14.439100000000002,
+      "activity card · 298.5": 14.439100000000002,
+      "activity card · 小时": 8.0099,
+      "activity card · 9.7": 14.439100000000002,
+      "activity card · 每天平均": 8.0099,
+      "activity card · 83": 14.439100000000002,
+      "activity card · 次上线": 8.0099,
+      "activity card · text": 14.439100000000002,
+      "activity card · 活跃时段": 10.7632,
+      "activity card · 05:00": 14.439100000000002,
+      "activity card · 38% · 凌晨 0 点到 6 点": 8.0099,
+      "activity card · 待最久的世界": 10.7632,
+      "activity card · 共 187 个世界": 8.0099,
+      "activity card · 虚构场景": 8.0099,
+      "avatar check marker": 11.5453,
+      "avatar menu action": 11.5453,
+      "activity active item": 11.5453,
+      "activity-density active item": 11.5453,
+      "friends active item": 11.5453,
+      "game-log active item": 11.5453,
+      "my-avatars active item": 11.5453,
+      "themes active item": 11.5453,
+      "gallery active item": 11.5453,
+      "inventory active item": 11.5453,
+      "friends active count": 8.8377,
+      "Community Theme primary action 1": 11.5453,
+      "Community Theme primary action 2": 11.5453,
+      "Community Theme primary action 3": 11.5453
+    },
+    "focusVisibleByKeyboard": {
+      "activity": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-2px"
+      },
+      "activity-density": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-2px"
+      },
+      "friends": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-3px"
+      },
+      "game-log": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-3px"
+      },
+      "my-avatars": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-3px"
+      },
+      "themes": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-2px"
+      },
+      "gallery": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-2px"
+      },
+      "inventory": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineOffset": "-2px"
+      },
+      "communityThemePrimaryAction": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(255, 127, 207)",
+        "focusedViaTab": true
+      },
+      "relationshipGraphCommunityFilter": {
+        "active": true,
+        "visible": true,
+        "outlineStyle": "auto",
+        "outlineWidth": "1px",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)"
+      },
+      "relationshipGraphMinimumDegreeSlider": {
+        "active": true,
+        "visible": true,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.765878 0.172198 -0.0498766 / 0.088033) 0px 0px 0px 0.528198px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "outlineStyle": "none"
+      }
+    },
+    "geometryDeltas": {
+      "activity": [
+        {
+          "name": "activity-control-1",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "活动范围",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "activity-density": [
+        {
+          "name": "activity-density-control-1",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "旅程密度",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "friends": [
+        {
+          "name": "好友位置视图",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        },
+        {
+          "name": "friends-control-2",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "game-log": [
+        {
+          "name": "游戏日志视图",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "my-avatars": [
+        {
+          "name": "我的模型视图",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "themes": [
+        {
+          "name": "themes-control-1",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "name": "gallery-control-1",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ],
+      "inventory": [
+        {
+          "name": "inventory-control-1",
+          "rootDelta": {
+            "width": 0,
+            "height": 0
+          },
+          "itemDeltas": [
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            },
+            {
+              "width": 0,
+              "height": 0
+            }
+          ]
+        }
+      ]
+    },
+    "allControlDimensionsWithin2px": true
+  },
+  "activity": {
+    "cardCount": 3,
+    "style": {
+      "border": "1px solid #6c5ce0",
+      "radius": "0px",
+      "opaqueBackground": "#201936",
+      "backdrops": "none",
+      "innerHighlight": "inset 1px 1px rgb(253 244 255 / .18)",
+      "innerShade": "inset -1px -1px #16112a"
+    },
+    "enlargedBorderComparison": "activity-card-zoom-comparison.png",
+    "beforeAfterCardGeometryDeltas": [
+      {
+        "width": 0,
+        "height": 2
+      },
+      {
+        "width": 0,
+        "height": 2
+      },
+      {
+        "width": 0,
+        "height": 2
+      }
+    ],
+    "chartColorsPreserved": true,
+    "heatTokens": {
+      "before0": "rgb(255 127 207/.14)",
+      "after0": "rgb(255 127 207/.14)",
+      "before4": "#ff7fcf",
+      "after4": "#ff7fcf"
+    }
+  },
+  "myAvatars": {
+    "virtualGeometry": {
+      "scrollHeightDelta": 0,
+      "clientHeightDelta": 0,
+      "gridHeightDelta": 0,
+      "rowHeightDeltas": [
+        0,
+        0,
+        0
+      ],
+      "rowTransformsUnchanged": true
+    },
+    "renderedTileCount": 5,
+    "selectedRingColor": "#ffb8e6",
+    "selectedShellRadius": "0px",
+    "check": {
+      "radius": "0px",
+      "clipPath": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))",
+      "ringColor": "#16112a"
+    },
+    "menu": {
+      "width": 28,
+      "height": 28,
+      "x": 536.66,
+      "y": 128,
+      "color": "rgb(22, 17, 42)",
+      "background": "rgb(255, 184, 230)",
+      "borderColor": "rgb(108, 92, 224)",
+      "borderWidth": "1px",
+      "borderRadius": "0px",
+      "boxShadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset, rgb(16, 11, 30) 2px 2px 0px 0px",
+      "backdropFilter": "none",
+      "clipPath": "none",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "outlineOffset": "0px",
+      "opacity": "1",
+      "display": "block",
+      "overflowX": "visible",
+      "scrollWidth": 51,
+      "clientWidth": 26
+    },
+    "menuFocusVisibleByKeyboard": {
+      "active": true,
+      "visible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(255, 127, 207)",
+      "opacity": "1"
+    }
+  },
+  "communityThemes": {
+    "catalogCards": 3,
+    "gridDensity": {
+      "display": "grid",
+      "columns": 4,
+      "gridTemplateColumns": "256px 256px 256px 256px",
+      "columnGap": "8px",
+      "width": 1126
+    },
+    "activeThemeButton": {
+      "variant": "outline",
+      "disabled": true,
+      "cardOpacity": "0.7",
+      "buttonOpacity": "0.5"
+    },
+    "primaryActions": {
+      "browse": 2,
+      "installed": 1
+    },
+    "cardGeometryDeltas": [
+      {
+        "width": 0,
+        "height": 0.87
+      },
+      {
+        "width": 0,
+        "height": 0.87
+      },
+      {
+        "width": 0,
+        "height": 0.87
+      }
+    ],
+    "catalogCardStyle": {
+      "border": "1px solid #6c5ce0",
+      "radius": "0px",
+      "background": "#201936",
+      "subtlePixelBevel": true
+    },
+    "previewFramesSquared": true,
+    "badgesPixelFramed": true,
+    "highContrastPrimaryActions": [
+      {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "contrast": 11.5453
+      },
+      {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "contrast": 11.5453
+      },
+      {
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "contrast": 11.5453
+      }
+    ],
+    "hoverFace": {
+      "browse": "rgb(255, 217, 238)",
+      "installed": "rgb(255, 217, 238)",
+      "loadingDisabled": {
+        "disabled": true,
+        "background": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "opacity": "0.5",
+        "pointerEvents": "none"
+      }
+    },
+    "primaryActionKeyboardFocus": {
+      "active": true,
+      "visible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "outlineColor": "rgb(255, 127, 207)",
+      "focusedViaTab": true
+    },
+    "installedActionAlsoStyled": true
+  },
+  "relationshipGraph": {
+    "surfaces": 2,
+    "geometryDeltas": [
+      {
+        "width": 0,
+        "height": 2
+      },
+      {
+        "width": 0,
+        "height": 2
+      }
+    ],
+    "opaqueSquarePanels": true,
+    "blurPseudoDisabled": [
+      "none",
+      "none"
+    ],
+    "detailAvatar": {
+      "width": 44,
+      "height": 44,
+      "radius": "0px",
+      "clipPath": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0px calc(100% - 2px))"
+    },
+    "squareCommunitySwatches": true,
+    "legendCoverage": {
+      "edgeRows": 3,
+      "infoRows": 3,
+      "labels": [
+        "圈子",
+        "节点大小代表连接数",
+        "空心节点表示未知",
+        "仅跨圈连线",
+        "API",
+        "手动",
+        "历史",
+        "已获取",
+        "更新于",
+        "最少连接数"
+      ],
+      "visibleWithoutScroll": true
+    },
+    "minimumDegreeSlider": {
+      "state": {
+        "width": 12,
+        "height": 12,
+        "x": 263.5,
+        "y": 826.46,
+        "color": "rgb(242, 235, 255)",
+        "background": "rgb(253, 244, 255)",
+        "borderColor": "rgb(255, 127, 207)",
+        "borderWidth": "1px",
+        "borderRadius": "999px",
+        "boxShadow": "none",
+        "backdropFilter": "none",
+        "clipPath": "none",
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "display": "block",
+        "overflowX": "visible",
+        "scrollWidth": 18,
+        "clientWidth": 10,
+        "role": "slider",
+        "min": "0",
+        "max": "20",
+        "value": "3"
+      },
+      "focusVisibleByKeyboard": {
+        "active": true,
+        "visible": true,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.765878 0.172198 -0.0498766 / 0.088033) 0px 0px 0px 0.528198px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "outlineStyle": "none"
+      }
+    },
+    "hoverFeedback": {
+      "legendCommunityRow": {
+        "before": "rgba(0, 0, 0, 0)",
+        "after": {
+          "background": "rgb(51, 38, 80)",
+          "hovered": true
+        }
+      },
+      "detailCardCommunityRow": {
+        "before": "rgba(0, 0, 0, 0)",
+        "after": {
+          "background": "rgb(51, 38, 80)",
+          "hovered": true
+        }
+      }
+    },
+    "nodeRefreshDisabled": {
+      "width": 28,
+      "height": 28,
+      "x": 1164,
+      "y": 806.46,
+      "color": "rgb(242, 235, 255)",
+      "background": "rgb(22, 17, 42)",
+      "borderColor": "rgb(108, 92, 224)",
+      "borderWidth": "1px",
+      "borderRadius": "2px",
+      "boxShadow": "none",
+      "backdropFilter": "none",
+      "clipPath": "none",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+      "outlineOffset": "0px",
+      "opacity": "0.5",
+      "display": "flex",
+      "overflowX": "visible",
+      "scrollWidth": 26,
+      "clientWidth": 26,
+      "disabled": true,
+      "pointerEvents": "none"
+    },
+    "svgDataCircles": [
+      {
+        "id": "a",
+        "cx": "520",
+        "cy": "410",
+        "r": "18",
+        "width": 34.21,
+        "height": 34.21,
+        "fill": "rgb(115, 192, 222)",
+        "stroke": "rgb(22, 17, 42)",
+        "strokeWidth": "3px",
+        "clipPath": "none",
+        "mask": "none"
+      },
+      {
+        "id": "b",
+        "cx": "640",
+        "cy": "330",
+        "r": "12",
+        "width": 22.81,
+        "height": 22.81,
+        "fill": "rgb(145, 204, 117)",
+        "stroke": "rgb(22, 17, 42)",
+        "strokeWidth": "3px",
+        "clipPath": "none",
+        "mask": "none"
+      },
+      {
+        "id": "c",
+        "cx": "760",
+        "cy": "430",
+        "r": "22",
+        "width": 41.81,
+        "height": 41.81,
+        "fill": "rgb(255, 184, 230)",
+        "stroke": "rgb(22, 17, 42)",
+        "strokeWidth": "3px",
+        "clipPath": "none",
+        "mask": "none"
+      }
+    ],
+    "semanticGraphCirclesPreserved": true,
+    "screenshots": [
+      "before-relationship-graph.png",
+      "after-relationship-graph.png"
+    ]
+  },
+  "files": {
+    "comparison.png": {
+      "bytes": 780540
+    },
+    "controls-r9-targets-comparison.png": {
+      "bytes": 102961
+    },
+    "activity-card-zoom-comparison.png": {
+      "bytes": 22853
+    },
+    "before-activity-card-zoom.png": {
+      "bytes": 5690
+    },
+    "after-activity-card-zoom.png": {
+      "bytes": 6079
+    },
+    "before-activity.png": {
+      "bytes": 83109
+    },
+    "after-activity.png": {
+      "bytes": 84826
+    },
+    "before-activity-density.png": {
+      "bytes": 40984
+    },
+    "after-activity-density.png": {
+      "bytes": 40110
+    },
+    "before-friends.png": {
+      "bytes": 41978
+    },
+    "after-friends.png": {
+      "bytes": 41457
+    },
+    "before-game-log.png": {
+      "bytes": 46956
+    },
+    "after-game-log.png": {
+      "bytes": 46919
+    },
+    "before-my-avatars.png": {
+      "bytes": 193705
+    },
+    "after-my-avatars.png": {
+      "bytes": 190678
+    },
+    "before-themes.png": {
+      "bytes": 50277
+    },
+    "after-themes.png": {
+      "bytes": 49070
+    },
+    "before-gallery.png": {
+      "bytes": 35807
+    },
+    "after-gallery.png": {
+      "bytes": 35401
+    },
+    "before-inventory.png": {
+      "bytes": 35834
+    },
+    "after-inventory.png": {
+      "bytes": 35417
+    },
+    "before-relationship-graph.png": {
+      "bytes": 46979
+    },
+    "after-relationship-graph.png": {
+      "bytes": 47351
+    }
+  }
+}

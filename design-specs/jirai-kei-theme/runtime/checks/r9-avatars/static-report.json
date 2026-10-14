@@ -1,0 +1,1333 @@
+{
+  "result": "PASS_STATIC",
+  "note": "PostCSS/JSDOM audits source selectors, 32/16-grid user-avatar and skeleton masks, rounded-md/lg group-mask exclusions, status/unread pixels and paint preservation; Chromium verifier samples contours and group-square corners at 4×.",
+  "ruleCount": 37,
+  "sourceAvatarCut": "polygon(37.5% 0,62.5% 0,62.5% 3.125%,71.875% 3.125%,71.875% 6.25%,78.125% 6.25%,78.125% 9.375%,81.25% 9.375%,81.25% 12.5%,84.375% 12.5%,84.375% 15.625%,87.5% 15.625%,87.5% 18.75%,90.625% 18.75%,90.625% 21.875%,93.75% 21.875%,93.75% 28.125%,96.875% 28.125%,96.875% 37.5%,100% 37.5%,100% 62.5%,96.875% 62.5%,96.875% 71.875%,93.75% 71.875%,93.75% 78.125%,90.625% 78.125%,90.625% 81.25%,87.5% 81.25%,87.5% 84.375%,84.375% 84.375%,84.375% 87.5%,81.25% 87.5%,81.25% 90.625%,78.125% 90.625%,78.125% 93.75%,71.875% 93.75%,71.875% 96.875%,62.5% 96.875%,62.5% 100%,37.5% 100%,37.5% 96.875%,28.125% 96.875%,28.125% 93.75%,21.875% 93.75%,21.875% 90.625%,18.75% 90.625%,18.75% 87.5%,15.625% 87.5%,15.625% 84.375%,12.5% 84.375%,12.5% 81.25%,9.375% 81.25%,9.375% 78.125%,6.25% 78.125%,6.25% 71.875%,3.125% 71.875%,3.125% 62.5%,0 62.5%,0 37.5%,3.125% 37.5%,3.125% 28.125%,6.25% 28.125%,6.25% 21.875%,9.375% 21.875%,9.375% 18.75%,12.5% 18.75%,12.5% 15.625%,15.625% 15.625%,15.625% 12.5%,18.75% 12.5%,18.75% 9.375%,21.875% 9.375%,21.875% 6.25%,28.125% 6.25%,28.125% 3.125%,37.5% 3.125%)",
+  "sourceAvatarCutSm": "polygon(31.25% 0%,68.75% 0%,68.75% 6.25%,81.25% 6.25%,81.25% 12.5%,87.5% 12.5%,87.5% 18.75%,93.75% 18.75%,93.75% 25%,93.75% 31.25%,100% 31.25%,100% 37.5%,100% 43.75%,100% 50%,100% 56.25%,100% 62.5%,100% 68.75%,93.75% 68.75%,93.75% 75%,93.75% 81.25%,87.5% 81.25%,87.5% 87.5%,81.25% 87.5%,81.25% 93.75%,68.75% 93.75%,68.75% 100%,31.25% 100%,31.25% 93.75%,18.75% 93.75%,18.75% 87.5%,12.5% 87.5%,12.5% 81.25%,6.25% 81.25%,6.25% 75%,6.25% 68.75%,0 68.75%,0 62.5%,0 56.25%,0 50%,0 43.75%,0 37.5%,0 31.25%,6.25% 31.25%,6.25% 25%,6.25% 18.75%,12.5% 18.75%,12.5% 12.5%,18.75% 12.5%,18.75% 6.25%,31.25% 6.25%)",
+  "sourceSelectors": {
+    "userStatusAvatar": "button:has(> span[class~=\"overflow-visible\"][class~=\"items-center\"][class~=\"justify-center\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]) > span[class~=\"overflow-visible\"][class~=\"items-center\"][class~=\"justify-center\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+    "userHoverCard": "[data-slot=\"hover-card-content\"] > div[class~=\"relative\"][class~=\"isolate\"][class~=\"w-full\"] > div[class~=\"space-y-2.5\"] > div[class~=\"relative\"][class~=\"isolate\"] > button[class~=\"size-10\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"rounded-full\"]",
+    "userDialogIcon": "[data-slot=\"dialog-content\"] [class~=\"bottom-3\"][class~=\"left-3\"][class~=\"z-30\"][class~=\"size-16\"]:not(:has([data-profile-decoration-asset])) > [data-slot=\"button\"][class~=\"rounded-full\"]",
+    "activityPageFaces": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~=\"size-16\"],[class~=\"size-7\"],[class~=\"size-9\"]):not([data-fixture-activity-fallback])",
+    "activityFallback": ".activity-skin [data-fixture-activity-fallback]",
+    "favoriteFriendFace": ".object-row > [data-slot=\"hover-card-trigger\"] > div[class~=\"relative\"][class~=\"ml-2\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"rounded-full\"][class~=\"border\"]",
+    "conditionalLampFace": ".vrcx-0-side-panel span:has(>span[class~=\"size-3.75\"]) > span.overflow-hidden",
+    "groupAvatarException": "[data-slot=\"avatar\"][class~=\"rounded-md\"|\"rounded-lg\"] > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"])",
+    "friendListAvatar": ".vrcx-0-data-table :is(img.size-6.rounded-full.object-cover, div.bg-muted.size-6.rounded-full)",
+    "noteExportAvatar": "[data-slot=\"dialog-content\"] > div.bg-card/40.rounded-lg.p-3 size-11 face only",
+    "mutualFriendsGraphAvatarExcluded": "MutualFriendsNodeCard size-11 graph circle remains unchanged",
+    "avatarSkeletons": "[data-slot=\"skeleton\"].rounded-full at avatar sizes 7/8/9/14/16"
+  },
+  "matchedSourceProfileFaces": {
+    "userStatusAvatar": 2,
+    "userHoverCard": 1,
+    "userDialogIcon": 1
+  },
+  "matchedAdditionalFaces": {
+    "noLampUserAvatar": 1,
+    "conditionalLampFace": 1,
+    "activityPageFaces": 3,
+    "syntheticActivityFallback": 1,
+    "favoritesFriendRow": 1
+  },
+  "residualMatches": {
+    "friendListAvatar": 1,
+    "friendListFallback": 1,
+    "settingsUserAvatar": 1,
+    "groupMemberUser": 1,
+    "groupMemberFallback": 1,
+    "pickerUser": 1,
+    "avatarOwner": 1,
+    "noteExport": 1,
+    "multiselectUser": 1,
+    "avatarSkeletonLarge": 1,
+    "avatarSkeletonSmall": 1,
+    "dashboardDot": 1,
+    "instanceDot": 1,
+    "unreadDot": 1,
+    "navDot": 1,
+    "avatarGroupFace": 1,
+    "avatarBadge": 1,
+    "avatarGroupCount": 1,
+    "semanticGraphAvatar": 1
+  },
+  "groupAvatarTargets": [
+    {
+      "className": "group/avatar after:border-border relative flex size-14 shrink-0 rounded-lg select-none after:absolute after:inset-0 after:rounded-lg after:border",
+      "id": "large"
+    },
+    {
+      "className": "group/avatar after:border-border relative flex size-9 shrink-0 rounded-md select-none after:absolute after:inset-0 after:rounded-md after:border",
+      "id": "small"
+    },
+    {
+      "className": "group/avatar relative flex size-9 shrink-0 rounded-lg select-none after:absolute after:inset-0 after:rounded-lg after:border",
+      "id": null
+    }
+  ],
+  "groupMaskReset": true,
+  "popupGroupMaskReset": true,
+  "popupGroupRadius": {
+    "root": "var(--radius-lg,var(--radius))",
+    "image": "var(--radius-lg,var(--radius))"
+  },
+  "groupComputed": [
+    {
+      "rootClip": "none",
+      "rootRadius": "var(--radius-lg,var(--radius))",
+      "imageClip": "none"
+    },
+    {
+      "rootClip": "none",
+      "rootRadius": "var(--radius-md,calc(var(--radius) - 2px))",
+      "imageClip": "none"
+    },
+    {
+      "rootClip": "none",
+      "rootRadius": "var(--radius-lg,var(--radius))",
+      "imageClip": "none"
+    }
+  ],
+  "residualComputed": {
+    "friendList": {
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0px"
+    },
+    "friendFallback": {
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0px"
+    },
+    "groupMember": {
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0px"
+    },
+    "avatarSkeletonLarge": {
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0px"
+    },
+    "avatarSkeletonSmall": {
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0px"
+    },
+    "dashboardDot": {
+      "clipPath": "none",
+      "borderRadius": "0px"
+    },
+    "instanceDot": {
+      "clipPath": "none",
+      "borderRadius": "0px"
+    },
+    "unreadDot": {
+      "clipPath": "none",
+      "borderRadius": "0px"
+    },
+    "navDot": {
+      "clipPath": "none",
+      "borderRadius": "0px"
+    },
+    "avatarBadge": {
+      "clipPath": "none",
+      "borderRadius": "0px"
+    },
+    "avatarGroupCount": {
+      "clipPath": "none",
+      "borderRadius": "0px"
+    }
+  },
+  "avatarCutRuleAudit": [
+    {
+      "selector": "button:has(> span[class~=\"size-10\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]) > span[class~=\"size-10\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": "button:has(> span[class~=\"size-9\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]) > span[class~=\"size-9\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"hover-card-content\"] > div[class~=\"relative\"][class~=\"isolate\"][class~=\"w-full\"] > div[class~=\"space-y-2.5\"] > div[class~=\"relative\"][class~=\"isolate\"] > button[class~=\"size-10\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] [class~=\"bottom-3\"][class~=\"left-3\"][class~=\"z-30\"][class~=\"size-16\"]:not(:has([data-profile-decoration-asset])) > [data-slot=\"button\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "clip-path": "var(--wd-avatar-cut)",
+        "background-color": "transparent",
+        "box-shadow": "none",
+        "border-color": "transparent",
+        "border-width": "0",
+        "outline": "none"
+      }
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] [class~=\"bottom-3\"][class~=\"left-3\"][class~=\"z-30\"][class~=\"size-16\"]:not(:has([data-profile-decoration-asset])) > [data-slot=\"button\"][class~=\"rounded-full\"] > img",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full[class~=\"size-16\"]",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~=\"size-7\"],[class~=\"size-9\"])",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~=\"size-16\"],[class~=\"size-7\"],[class~=\"size-9\"]) > :is(img,span[class~=\"rounded-full\"])",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none"
+      }
+    },
+    {
+      "selector": ".object-row > [data-slot=\"hover-card-trigger\"] > div[class~=\"relative\"][class~=\"ml-2\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"rounded-full\"][class~=\"border\"]",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": ".vrcx-0-data-table :is(\n  img[class~=\"size-6\"][class~=\"rounded-full\"][class~=\"object-cover\"],\n  div[class~=\"bg-muted\"][class~=\"size-6\"][class~=\"rounded-full\"]\n)",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": ".vrcx-0-main-content span[class~=\"bg-muted\"][class~=\"size-6\"][class~=\"shrink-0\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": ":is(.entity-dialog,[data-slot=\"dialog-content\"]) :is(\n  img[class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"][class~=\"object-cover\"],\n  div[class~=\"bg-muted\"][class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"]\n)",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": "img[class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"][class~=\"object-cover\"],\ndiv[class~=\"bg-muted\"][class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": ":is([data-slot=\"dialog-content\"],.entity-dialog) span[class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"rounded-full\"][class~=\"border\"]",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": ":is([data-slot=\"dialog-content\"],.entity-dialog) span[class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"rounded-full\"][class~=\"border\"] > img",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] div[class~=\"bg-card/40\"][class~=\"rounded-lg\"][class~=\"p-3\"] > button[class~=\"size-11\"][class~=\"rounded-full\"][class~=\"border\"],\n[data-slot=\"dialog-content\"] div[class~=\"bg-card/40\"][class~=\"rounded-lg\"][class~=\"p-3\"] span[class~=\"bg-muted\"][class~=\"size-11\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] div[class~=\"bg-card/40\"][class~=\"rounded-lg\"][class~=\"p-3\"] > button[class~=\"size-11\"][class~=\"rounded-full\"][class~=\"border\"] > img",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"combobox-chip\"] span[class~=\"bg-muted\"][class~=\"size-3.5\"][class~=\"rounded-full\"]",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"combobox-chip\"] span[class~=\"bg-muted\"][class~=\"size-3.5\"][class~=\"rounded-full\"] > img",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-md\"]",
+      "clipPath": "none",
+      "borderRadius": "var(--radius-md,calc(var(--radius) - 2px))",
+      "declarations": {
+        "border-radius": "var(--radius-md,calc(var(--radius) - 2px))",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-lg\"]",
+      "clipPath": "none",
+      "borderRadius": "var(--radius-lg,var(--radius))",
+      "declarations": {
+        "border-radius": "var(--radius-lg,var(--radius))",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-md\"] > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"]),\n[data-slot=\"avatar\"][class~=\"rounded-lg\"] > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"])",
+      "clipPath": "none",
+      "borderRadius": "inherit",
+      "declarations": {
+        "border-radius": "inherit",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-md\"]::after,\n[data-slot=\"avatar\"][class~=\"rounded-lg\"]::after",
+      "clipPath": "none",
+      "borderRadius": "inherit",
+      "declarations": {
+        "border-radius": "inherit",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": ":is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-md\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset]))",
+      "clipPath": "none",
+      "borderRadius": "var(--radius-md,calc(var(--radius) - 2px))",
+      "declarations": {
+        "border-radius": "var(--radius-md,calc(var(--radius) - 2px))",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": ":is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-lg\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset]))",
+      "clipPath": "none",
+      "borderRadius": "var(--radius-lg,var(--radius))",
+      "declarations": {
+        "border-radius": "var(--radius-lg,var(--radius))",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": ":is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-md\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset])) > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"]),\n:is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-lg\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset])) > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"])",
+      "clipPath": "none",
+      "borderRadius": "inherit",
+      "declarations": {
+        "border-radius": "inherit",
+        "clip-path": "none"
+      }
+    },
+    {
+      "selector": "[data-slot=\"avatar-group\"] [data-slot=\"avatar\"]:not([class~=\"rounded-md\"]):not([class~=\"rounded-lg\"]),\n[data-slot=\"avatar-group-count\"]",
+      "declarations": {
+        "box-shadow": "0 0 0 1px var(--background)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"avatar-badge\"],\n[data-slot=\"avatar-group-count\"]",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0"
+      }
+    },
+    {
+      "selector": "[data-slot=\"skeleton\"][class~=\"rounded-full\"]:is([class~=\"size-14\"],[class~=\"size-16\"])",
+      "clipPath": "var(--wd-avatar-cut)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut)"
+      }
+    },
+    {
+      "selector": "[data-slot=\"skeleton\"][class~=\"rounded-full\"]:is([class~=\"size-7\"],[class~=\"size-8\"],[class~=\"size-9\"])",
+      "clipPath": "var(--wd-avatar-cut-sm)",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0",
+        "border-width": "0",
+        "box-shadow": "none",
+        "outline": "none",
+        "clip-path": "var(--wd-avatar-cut-sm)"
+      }
+    },
+    {
+      "selector": "[data-dashboard-feed-status-dot]",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0"
+      }
+    },
+    {
+      "selector": ".vrcx-0-main-content [data-slot=\"tooltip-trigger\"][class~=\"size-2.5\"][class~=\"rounded-full\"][class~=\"border\"]",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0"
+      }
+    },
+    {
+      "selector": ".vrcx-0-main-content [class~=\"bg-primary\"][class~=\"size-2\"][class~=\"rounded-full\"]:has(> span[class~=\"sr-only\"])",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0"
+      }
+    },
+    {
+      "selector": ".vrcx-0-sidebar-surface span[class~=\"relative\"][class~=\"inline-flex\"][class~=\"size-4\"] > span[class~=\"bg-destructive\"][class~=\"size-1.5\"][class~=\"rounded-full\"][aria-hidden=\"true\"]",
+      "borderRadius": "0",
+      "declarations": {
+        "border-radius": "0"
+      }
+    },
+    {
+      "selector": ".vrcx-0-side-panel button[class~=\"focus-visible:ring-2\"][class~=\"rounded-full\"]:has(> span.user-status-avatar):focus-visible",
+      "declarations": {
+        "outline": "1px dashed var(--wd-square)",
+        "outline-offset": "2px",
+        "box-shadow": "none"
+      }
+    }
+  ],
+  "excludedSyntheticSlots": {
+    "mixedSearchAvatar": 1,
+    "worldThumbnail": 1,
+    "groupThumbnail": 1,
+    "relationNetworkCircles": 2,
+    "mutualFriendsGraphAvatar": 1,
+    "genericStatusIcon": 2
+  },
+  "statusElementCounts": {
+    "componentDots": 9,
+    "legacyUserDots": 2,
+    "genericStatusIcons": 2
+  },
+  "paintPreservationPolicy": [
+    {
+      "selector": "button:has(> span[class~=\"size-10\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]) > span[class~=\"size-10\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "button:has(> span[class~=\"size-9\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]) > span[class~=\"size-9\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"hover-card-content\"] > div[class~=\"relative\"][class~=\"isolate\"][class~=\"w-full\"] > div[class~=\"space-y-2.5\"] > div[class~=\"relative\"][class~=\"isolate\"] > button[class~=\"size-10\"] > span[class~=\"bg-muted\"][class~=\"size-full\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] [class~=\"bottom-3\"][class~=\"left-3\"][class~=\"z-30\"][class~=\"size-16\"]:not(:has([data-profile-decoration-asset])) > [data-slot=\"button\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        },
+        {
+          "prop": "background-color",
+          "value": "transparent"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "border-color",
+          "value": "transparent"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] [class~=\"bottom-3\"][class~=\"left-3\"][class~=\"z-30\"][class~=\"size-16\"]:not(:has([data-profile-decoration-asset])) > [data-slot=\"button\"][class~=\"rounded-full\"] > img",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full[class~=\"size-16\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~=\"size-7\"],[class~=\"size-9\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".activity-skin span.block.shrink-0.overflow-hidden.rounded-full:is([class~=\"size-16\"],[class~=\"size-7\"],[class~=\"size-9\"]) > :is(img,span[class~=\"rounded-full\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".object-row > [data-slot=\"hover-card-trigger\"] > div[class~=\"relative\"][class~=\"ml-2\"][class~=\"overflow-visible\"] > span[class~=\"bg-muted\"][class~=\"rounded-full\"][class~=\"border\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".user-status-indicator,\ni.x-user-status",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "span[class~=\"border-background\"][class~=\"bg-background\"][class~=\"rounded-full\"][class~=\"border-3\"]:has(> .user-status-indicator)",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".vrcx-0-data-table :is(\n  img[class~=\"size-6\"][class~=\"rounded-full\"][class~=\"object-cover\"],\n  div[class~=\"bg-muted\"][class~=\"size-6\"][class~=\"rounded-full\"]\n)",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".vrcx-0-main-content span[class~=\"bg-muted\"][class~=\"size-6\"][class~=\"shrink-0\"][class~=\"overflow-hidden\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ":is(.entity-dialog,[data-slot=\"dialog-content\"]) :is(\n  img[class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"][class~=\"object-cover\"],\n  div[class~=\"bg-muted\"][class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"]\n)",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "img[class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"][class~=\"object-cover\"],\ndiv[class~=\"bg-muted\"][class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"shrink-0\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ":is([data-slot=\"dialog-content\"],.entity-dialog) span[class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"rounded-full\"][class~=\"border\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ":is([data-slot=\"dialog-content\"],.entity-dialog) span[class~=\"mr-2.5\"][class~=\"size-9\"][class~=\"rounded-full\"][class~=\"border\"] > img",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] div[class~=\"bg-card/40\"][class~=\"rounded-lg\"][class~=\"p-3\"] > button[class~=\"size-11\"][class~=\"rounded-full\"][class~=\"border\"],\n[data-slot=\"dialog-content\"] div[class~=\"bg-card/40\"][class~=\"rounded-lg\"][class~=\"p-3\"] span[class~=\"bg-muted\"][class~=\"size-11\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"dialog-content\"] div[class~=\"bg-card/40\"][class~=\"rounded-lg\"][class~=\"p-3\"] > button[class~=\"size-11\"][class~=\"rounded-full\"][class~=\"border\"] > img",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"combobox-chip\"] span[class~=\"bg-muted\"][class~=\"size-3.5\"][class~=\"rounded-full\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"combobox-chip\"] span[class~=\"bg-muted\"][class~=\"size-3.5\"][class~=\"rounded-full\"] > img",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-md\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "var(--radius-md,calc(var(--radius) - 2px))"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-lg\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "var(--radius-lg,var(--radius))"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-md\"] > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"]),\n[data-slot=\"avatar\"][class~=\"rounded-lg\"] > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "inherit"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"avatar\"][class~=\"rounded-md\"]::after,\n[data-slot=\"avatar\"][class~=\"rounded-lg\"]::after",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "inherit"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ":is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-md\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset]))",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "var(--radius-md,calc(var(--radius) - 2px))"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ":is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-lg\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset]))",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "var(--radius-lg,var(--radius))"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ":is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-md\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset])) > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"]),\n:is([data-slot$=\"menu-content\"],[data-slot$=\"menu-sub-content\"],[data-slot=\"popover-content\"],[data-slot=\"select-content\"],[data-slot=\"combobox-content\"]):not(.entity-dialog *) [data-slot=\"avatar\"][class~=\"rounded-lg\"]:not(:has([class~=\"-inset-[18.75%]\"],[data-profile-decoration-asset])) > :is([data-slot=\"avatar-image\"],[data-slot=\"avatar-fallback\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "inherit"
+        },
+        {
+          "prop": "clip-path",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"avatar-group\"] [data-slot=\"avatar\"]:not([class~=\"rounded-md\"]):not([class~=\"rounded-lg\"]),\n[data-slot=\"avatar-group-count\"]",
+      "declarations": [
+        {
+          "prop": "box-shadow",
+          "value": "0 0 0 1px var(--background)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"avatar-badge\"],\n[data-slot=\"avatar-group-count\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"skeleton\"][class~=\"rounded-full\"]:is([class~=\"size-14\"],[class~=\"size-16\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-slot=\"skeleton\"][class~=\"rounded-full\"]:is([class~=\"size-7\"],[class~=\"size-8\"],[class~=\"size-9\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        },
+        {
+          "prop": "border-width",
+          "value": "0"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        },
+        {
+          "prop": "outline",
+          "value": "none"
+        },
+        {
+          "prop": "clip-path",
+          "value": "var(--wd-avatar-cut-sm)"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": "[data-dashboard-feed-status-dot]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".vrcx-0-main-content [data-slot=\"tooltip-trigger\"][class~=\"size-2.5\"][class~=\"rounded-full\"][class~=\"border\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".vrcx-0-main-content [class~=\"bg-primary\"][class~=\"size-2\"][class~=\"rounded-full\"]:has(> span[class~=\"sr-only\"])",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".vrcx-0-sidebar-surface span[class~=\"relative\"][class~=\"inline-flex\"][class~=\"size-4\"] > span[class~=\"bg-destructive\"][class~=\"size-1.5\"][class~=\"rounded-full\"][aria-hidden=\"true\"]",
+      "declarations": [
+        {
+          "prop": "border-radius",
+          "value": "0"
+        }
+      ],
+      "allowed": true
+    },
+    {
+      "selector": ".vrcx-0-side-panel button[class~=\"focus-visible:ring-2\"][class~=\"rounded-full\"]:has(> span.user-status-avatar):focus-visible",
+      "declarations": [
+        {
+          "prop": "outline",
+          "value": "1px dashed var(--wd-square)"
+        },
+        {
+          "prop": "outline-offset",
+          "value": "2px"
+        },
+        {
+          "prop": "box-shadow",
+          "value": "none"
+        }
+      ],
+      "allowed": true
+    }
+  ],
+  "computedRadius": {
+    "componentLamp": "0px",
+    "legacyUserLamp": "0px",
+    "activeLampRing": "0px",
+    "residualComputed": {
+      "friendList": {
+        "clipPath": "var(--wd-avatar-cut-sm)",
+        "borderRadius": "0px"
+      },
+      "friendFallback": {
+        "clipPath": "var(--wd-avatar-cut-sm)",
+        "borderRadius": "0px"
+      },
+      "groupMember": {
+        "clipPath": "var(--wd-avatar-cut-sm)",
+        "borderRadius": "0px"
+      },
+      "avatarSkeletonLarge": {
+        "clipPath": "var(--wd-avatar-cut)",
+        "borderRadius": "0px"
+      },
+      "avatarSkeletonSmall": {
+        "clipPath": "var(--wd-avatar-cut-sm)",
+        "borderRadius": "0px"
+      },
+      "dashboardDot": {
+        "clipPath": "none",
+        "borderRadius": "0px"
+      },
+      "instanceDot": {
+        "clipPath": "none",
+        "borderRadius": "0px"
+      },
+      "unreadDot": {
+        "clipPath": "none",
+        "borderRadius": "0px"
+      },
+      "navDot": {
+        "clipPath": "none",
+        "borderRadius": "0px"
+      },
+      "avatarBadge": {
+        "clipPath": "none",
+        "borderRadius": "0px"
+      },
+      "avatarGroupCount": {
+        "clipPath": "none",
+        "borderRadius": "0px"
+      }
+    },
+    "groupComputed": [
+      {
+        "rootClip": "none",
+        "rootRadius": "var(--radius-lg,var(--radius))",
+        "imageClip": "none"
+      },
+      {
+        "rootClip": "none",
+        "rootRadius": "var(--radius-md,calc(var(--radius) - 2px))",
+        "imageClip": "none"
+      },
+      {
+        "rootClip": "none",
+        "rootRadius": "var(--radius-lg,var(--radius))",
+        "imageClip": "none"
+      }
+    ]
+  },
+  "externalImportsOrAssets": false
+}

@@ -1,0 +1,218 @@
+{
+  "result": "PASS",
+  "fixture": "NOT WINDOWS · fictional Demo Account labels, flat-color inline SVG images only; source Card spacing utilities mirrored",
+  "source": {
+    "baseline": "Current exported theme.css with final SECTION login-r8 removed",
+    "root": "[data-vrcx-0-surface=\"login-page\"].vrcx-0-main-shell",
+    "componentDOM": "Windows mirror LoginPage/SavedAccountsCard/LoginFormCard/LoginPageHeader/LoginPageUtilities/Footer + shadcn slots",
+    "cardSpacing": "Card.tsx --card-spacing:16px; CardContent/CardHeader inline padding:16px; LoginFormCard pt-2:8px",
+    "referenceScreenshotsReadOnly": true
+  },
+  "css": {
+    "bytes": 9691,
+    "selectors": 39,
+    "allSelectorsRootScoped": true,
+    "stepsAnimations": 0,
+    "externalUrls": false
+  },
+  "tokens": {
+    "wallpaper": true,
+    "r7CornerArt": true,
+    "pixelMascot": true
+  },
+  "layout": {
+    "maxWidthBefore": "512px",
+    "maxWidthAfter": "512px",
+    "cardSpacingToken": "calc(.25rem * 4)",
+    "formCardPadding": "8px 0px 16px",
+    "formCardGap": "12px",
+    "formCardContentPadding": "0px 16px",
+    "savedCardPadding": "16px 0px",
+    "savedCardContentPadding": "0px 16px",
+    "formCardBefore": {
+      "x": 424,
+      "y": 283.21875,
+      "width": 512,
+      "height": 328.75
+    },
+    "formCardAfter": {
+      "x": 424,
+      "y": 283.21875,
+      "width": 512,
+      "height": 328.75
+    },
+    "formCardHeightDeltaPx": 0,
+    "inputBefore": {
+      "x": 440,
+      "y": 373.46875,
+      "width": 480,
+      "height": 32
+    },
+    "inputAfter": {
+      "x": 440,
+      "y": 373.46875,
+      "width": 480,
+      "height": 32
+    },
+    "inputPositionUnchanged": true,
+    "formHeaderBefore": {
+      "x": 424,
+      "y": 291.21875,
+      "width": 512,
+      "height": 43,
+      "padding": "0px 16px",
+      "gridRows": "16px 22px"
+    },
+    "formHeaderAfter": {
+      "x": 408,
+      "y": 283.21875,
+      "width": 544,
+      "height": 51,
+      "padding": "0px 32px",
+      "gridColumns": "224px 32px 224px",
+      "gridRows": "50px",
+      "backgroundImage": "none"
+    },
+    "formTitleCenterOffsetBeforePx": 9.5,
+    "formTitleCenterOffsetAfterPx": -0.5,
+    "formBackLinkCenterOffsetAfterPx": -0.5,
+    "savedCardBefore": {
+      "x": 424,
+      "y": 292.09375,
+      "width": 512,
+      "height": 311
+    },
+    "savedCardAfter": {
+      "x": 424,
+      "y": 289.09375,
+      "width": 512,
+      "height": 317
+    },
+    "savedTitleCenterOffsetBeforePx": -0.5,
+    "savedTitleCenterOffsetAfterPx": -0.5,
+    "savedCardHeightDeltaFromSectionlessBaselinePx": 6,
+    "savedCardCurrentHeightPinnedPx": 317,
+    "wideUtilityGrid": "252px 252px",
+    "narrowUtilityGrid": "512px",
+    "scrollProbe": {
+      "clientHeight": 431,
+      "scrollHeight": 1386,
+      "maxHeight": "540px",
+      "cardHeight": 540
+    }
+  },
+  "savedAvatar": {
+    "shellRadius": "0px",
+    "imageRadius": "0px",
+    "imageClipPath": "polygon(37.5% 0px, 62.5% 0px, 62.5% 3.125%, 71.875% 3.125%, 71.875% 6.25%, 78.125% 6.25%, 78.125% 9.375%, 81.25% 9.375%, 81.25% 12.5%, 84.375% 12.5%, 84.375% 15.625%, 87.5% 15.625%, 87.5% 18.75%, 90.625% 18.75%, 90.625% 21.875%, 93.75% 21.875%, 93.75% 28.125%, 96.875% 28.125%, 96.875% 37.5%, 100% 37.5%, 100% 62.5%, 96.875% 62.5%, 96.875% 71.875%, 93.75% 71.875%, 93.75% 78.125%, 90.625% 78.125%, 90.625% 81.25%, 87.5% 81.25%, 87.5% 84.375%, 84.375% 84.375%, 84.375% 87.5%, 81.25% 87.5%, 81.25% 90.625%, 78.125% 90.625%, 78.125% 93.75%, 71.875% 93.75%, 71.875% 96.875%, 62.5% 96.875%, 62.5% 100%, 37.5% 100%, 37.5% 96.875%, 28.125% 96.875%, 28.125% 93.75%, 21.875% 93.75%, 21.875% 90.625%, 18.75% 90.625%, 18.75% 87.5%, 15.625% 87.5%, 15.625% 84.375%, 12.5% 84.375%, 12.5% 81.25%, 9.375% 81.25%, 9.375% 78.125%, 6.25% 78.125%, 6.25% 71.875%, 3.125% 71.875%, 3.125% 62.5%, 0px 62.5%, 0px 37.5%, 3.125% 37.5%, 3.125% 28.125%, 6.25% 28.125%, 6.25% 21.875%, 9.375% 21.875%, 9.375% 18.75%, 12.5% 18.75%, 12.5% 15.625%, 15.625% 15.625%, 15.625% 12.5%, 18.75% 12.5%, 18.75% 9.375%, 21.875% 9.375%, 21.875% 6.25%, 28.125% 6.25%, 28.125% 3.125%, 37.5% 3.125%)",
+    "imageLoad": {
+      "complete": true,
+      "naturalWidth": 40,
+      "naturalHeight": 40,
+      "opacity": "1",
+      "visibility": "visible"
+    },
+    "imageUnchangedFromGlobalRoundPhoto": false,
+    "themeFrameBackground": "rgba(0, 0, 0, 0)"
+  },
+  "savedHover": {
+    "row": {
+      "bg": "rgb(59, 44, 85)",
+      "border": "rgb(217, 127, 198)",
+      "shadow": "rgb(16, 11, 30) 2px 2px 0px 0px"
+    },
+    "delete": {
+      "bg": "rgb(75, 28, 58)",
+      "border": "rgb(255, 127, 207)",
+      "color": "rgb(255, 217, 238)",
+      "shadow": "rgb(16, 11, 30) 2px 2px 0px 0px"
+    }
+  },
+  "backToSavedWorks": true,
+  "invalidState": {
+    "username": "true",
+    "password": "true",
+    "errors": [
+      {
+        "display": "block",
+        "role": "alert",
+        "text": "示例错误：账号格式不正确。"
+      },
+      {
+        "display": "block",
+        "role": "alert",
+        "text": "示例错误：密码不能为空。"
+      }
+    ]
+  },
+  "focusState": {
+    "visible": true,
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "outlineColor": "rgb(255, 127, 207)",
+    "outlineOffset": "1px",
+    "borderColor": "rgb(255, 127, 207)",
+    "borderRadius": "0px"
+  },
+  "buttonFocusVisible": {
+    "visible": true,
+    "outlineStyle": "dashed",
+    "outlineWidth": "2px",
+    "active": true
+  },
+  "reducedMotionAndBusyState": {
+    "before": "none",
+    "after": "none",
+    "spinDisplay": "block",
+    "spinWidth": 16,
+    "spinAnimation": "none",
+    "submitTransitionDuration": "0s",
+    "buttonDisabled": true,
+    "buttonOpacity": "0.5",
+    "buttonPointerEvents": "none",
+    "inputDisabled": true
+  },
+  "contrastRatiosWCAG": {
+    "product title": 14.44,
+    "language selector": 14.44,
+    "card title": 6.52,
+    "field label": 14.44,
+    "back to accounts link": 6.52,
+    "register/forgot links": 9.54,
+    "saved accounts secondary button": 10.79,
+    "utility buttons": 10.79,
+    "saved account name": 12.87,
+    "saved account subline": 7.14,
+    "input placeholder": 9.65,
+    "input value": 15.77,
+    "field error": 8.62,
+    "primary login button": 7.68,
+    "footer links": 9.54
+  },
+  "files": {
+    "before.png": {
+      "bytes": 32146
+    },
+    "after.png": {
+      "bytes": 42729
+    },
+    "comparison.png": {
+      "bytes": 108255
+    },
+    "saved.png": {
+      "bytes": 42436
+    },
+    "form.png": {
+      "bytes": 42732
+    },
+    "invalid.png": {
+      "bytes": 49684
+    },
+    "focus.png": {
+      "bytes": 40760
+    },
+    "reduced-motion.png": {
+      "bytes": 41220
+    }
+  }
+}

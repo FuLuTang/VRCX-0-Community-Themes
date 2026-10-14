@@ -1,0 +1,167 @@
+{
+  "audit": "SSR lucide class -> jirai-icons.css :is() union",
+  "identifiers": 257,
+  "ssrRendered": 257,
+  "unresolvable": [],
+  "coveredSelectors": 243,
+  "declaredVars": 243,
+  "missingCount": 1,
+  "missing": [
+    {
+      "id": "GridIcon",
+      "cls": "lucide lucide-grid-3x3 lucide-grid lucide-grid-3-x-3",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [],
+      "cssVars": [],
+      "hit": false,
+      "files": [
+        "src/components/layout/ToolbarControls.test.tsx"
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "id": "MapPinIcon",
+      "cls": "lucide lucide-map-pin",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "map-pin"
+      ],
+      "cssVars": [
+        "map-pin"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/feed/FeedTypeIndicator.tsx",
+        "src/components/layout/navIconRegistry.ts",
+        "src/components/sidebar/friends-sidebar/FriendsSidebarHeaders.tsx"
+      ]
+    },
+    {
+      "id": "LogInIcon",
+      "cls": "lucide lucide-log-in",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "log-in"
+      ],
+      "cssVars": [
+        "log-in"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/dialogs/group-dialog/GroupDialogHeaderSection.tsx",
+        "src/components/feed/FeedTypeIndicator.tsx",
+        "src/components/instances/InstanceActionBar.tsx"
+      ]
+    },
+    {
+      "id": "LogOutIcon",
+      "cls": "lucide lucide-log-out",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "log-out"
+      ],
+      "cssVars": [
+        "log-out"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/dialogs/group-dialog/GroupDialogHeaderSection.tsx",
+        "src/components/feed/FeedTypeIndicator.tsx",
+        "src/features/dashboard/components/widgets/DashboardGameLogWidget.tsx"
+      ]
+    },
+    {
+      "id": "PencilLineIcon",
+      "cls": "lucide lucide-pencil-line",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "pencil-line"
+      ],
+      "cssVars": [
+        "pencil-line"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/feed/FeedTypeIndicator.tsx"
+      ]
+    },
+    {
+      "id": "PersonStandingIcon",
+      "cls": "lucide lucide-person-standing",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "person-standing"
+      ],
+      "cssVars": [
+        "person-standing"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/dialogs/AvatarDialogTabbedView.tsx",
+        "src/components/dialogs/AvatarOwnerEditDialogs.tsx",
+        "src/components/dialogs/avatar-dialog/components/AvatarDialogHeaderActions.tsx"
+      ]
+    },
+    {
+      "id": "FileTextIcon",
+      "cls": "lucide lucide-file-text",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "file-text"
+      ],
+      "cssVars": [
+        "file-text"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/feed/FeedTypeIndicator.tsx",
+        "src/components/layout/navIconRegistry.ts",
+        "src/features/devkit/DevKitPanel.tsx"
+      ]
+    },
+    {
+      "id": "LockIcon",
+      "cls": "lucide lucide-lock",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "lock"
+      ],
+      "cssVars": [
+        "lock"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/dialogs/user-dialog/components/UserDialogEntityList.tsx",
+        "src/components/dialogs/world-dialog/WorldDialogHeaderSection.tsx",
+        "src/components/feed/FeedAvatarInfoLine.tsx"
+      ]
+    },
+    {
+      "id": "ArrowRightIcon",
+      "cls": "lucide lucide-arrow-right",
+      "vb": "0 0 24 24",
+      "children": true,
+      "covered": [
+        "arrow-right"
+      ],
+      "cssVars": [
+        "arrow-right"
+      ],
+      "hit": true,
+      "files": [
+        "src/components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+        "src/components/feed/FeedDetailCell.tsx",
+        "src/components/search/SearchPagination.tsx"
+      ]
+    }
+  ]
+}

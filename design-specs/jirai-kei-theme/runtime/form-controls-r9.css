@@ -1,0 +1,133 @@
+/* R9.5 shared native and Base UI form controls. Preserve control boxes/hit targets;
+   excluded surfaces already have deliberate control treatments. */
+:where(:is([data-slot="checkbox"],input[type="checkbox"])){
+  appearance:none;
+  -webkit-appearance:none;
+  position:relative;
+  width:14px;
+  height:14px;
+  min-width:14px;
+  min-height:14px;
+  flex:none;
+  border:1px solid #8c71b0;
+  border-radius:0;
+  background:#211a33;
+  color:#16112a;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+  accent-color:#ffb8e6;
+}
+:where(:is([data-slot="checkbox"],input[type="checkbox"]):is([data-checked],[aria-checked="true"],:checked)){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}
+:where([data-slot="checkbox"][data-checked])::after,:where(input[type="checkbox"]:checked)::after{
+  content:"";
+  position:absolute;
+  left:4px;top:2px;width:4px;height:7px;
+  border:solid #16112a;border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+:where([data-slot="checkbox"] > [data-slot="checkbox-indicator"]){display:none}
+/* Radio: Base UI Radio.Root is a span[role=radio] with a Radio.Indicator child (DataDirMigrationDialog.tsx:222); a native
+   input[type=radio] gets the same square pixel box. Sizes are not set for [role=radio] (the app's size-4 / size-1.5 stay). */
+:where([role="radio"],input[type="radio"]){
+  appearance:none;
+  -webkit-appearance:none;
+  border:1px solid #8c71b0;
+  border-radius:0;
+  background-color:#211a33;
+  color:#16112a;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+  accent-color:#ffb8e6;
+}
+:where(input[type="radio"]){width:15px;height:15px}
+:where(:is([role="radio"],input[type="radio"]):is([data-checked],[aria-checked="true"],:checked)){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}
+:where([role="radio"] > span){border-radius:0;background-color:#16112a}
+:where(input[type="radio"]:checked){background-image:linear-gradient(#16112a,#16112a);background-size:6px 6px;background-position:center;background-repeat:no-repeat}
+:where(input[type="range"]:not(.entity-dialog *)){
+  appearance:none;-webkit-appearance:none;
+  height:18px;
+  margin:0;
+  background:transparent;
+  accent-color:#ffb8e6;
+  cursor:pointer;
+}
+:where(input[type="range"]:not(.entity-dialog *))::-webkit-slider-runnable-track{
+  height:6px;border:1px solid #6c5ce0;border-radius:0;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+  box-shadow:inset 1px 1px #16112a;
+}
+:where(input[type="range"]:not(.entity-dialog *))::-webkit-slider-thumb{
+  appearance:none;-webkit-appearance:none;
+  width:12px;height:12px;margin-top:-3px;
+  border:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+}
+:where(input[type="range"])::-moz-range-track{
+  height:4px;border:1px solid #6c5ce0;border-radius:0;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+}
+:where(input[type="range"])::-moz-range-thumb{
+  width:10px;height:10px;border:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+}
+/* Base UI sliders expose a live Indicator, so its pink fill follows the actual value. */
+:where([data-slot="slider-track"]){
+  height:6px!important;border:1px solid #6c5ce0;border-radius:0!important;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px)!important;
+  box-shadow:inset 1px 1px #16112a;
+}
+:where([data-slot="slider-range"]){
+  background:repeating-linear-gradient(90deg,#ffb8e6 0 3px,#f37fc4 3px 5px)!important;
+}
+:where([data-slot="slider-thumb"]){
+  width:12px!important;height:12px!important;border:1px solid #6c5ce0!important;border-radius:0!important;
+  background:#ffb8e6!important;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c!important;
+}
+/* Shared keyboard focus treatment for the four pixel-native control families.
+   Selects/text fields keep their 1px-offset variant below. */
+:where(
+  :is([data-slot="checkbox"],input[type="checkbox"]):focus-visible,
+  :is([role="radio"],input[type="radio"]):focus-visible,
+  input[type="range"]:not(.entity-dialog *):focus-visible,
+  [data-slot="slider"]:focus-visible [data-slot="slider-thumb"]
+){
+  outline:2px solid #ff7fcf;
+  outline-offset:2px;
+}
+
+:where(select,[data-slot="select-trigger"],[data-slot="combobox-trigger"]){
+  border-radius:0!important;
+  border-color:var(--jk-field-edge)!important;
+  background-color:#211a33!important;
+  color:#f2ebff!important;
+  box-shadow:var(--jk-field-inset)!important;
+}
+:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):focus-visible){
+  outline:2px solid #ff7fcf;outline-offset:1px;
+}
+:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]) > svg:is(.lucide-chevron-down,.lucide-chevrons-up-down)){
+  width:12px;height:12px;
+}
+/* The two-person chart uses native select elements rather than the shared Select primitive. */
+:where(select){
+  appearance:none;-webkit-appearance:none;
+  background-image:var(--wd-native-chevron);
+  background-repeat:no-repeat;background-position:right 8px center;background-size:12px 12px;
+  padding-right:28px;
+}
+:where(select:focus-visible){outline:2px solid #ff7fcf;outline-offset:1px}
+/* Ordinary inline spinner: existing pixel mask glyph, small and stepped (not the page loader). */
+:where([data-slot="spinner"]:is(.size-4,.size-3\.5)){
+  animation:r5-spinner-step 1s steps(8,end) infinite;
+  transform-origin:center;
+}
+@media(prefers-reduced-motion:reduce){
+  :where([data-slot="spinner"]){animation:none!important}
+}

@@ -1,0 +1,169 @@
+{
+  "source": {
+    "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/art-references/nso-fandom-desktop-icons-sheet.png",
+    "width": 1120,
+    "height": 700,
+    "backgroundRgb": [
+      248,
+      240,
+      250
+    ],
+    "license": "Not established by the local reference; internal preview only, no integration or public distribution without user authorization."
+  },
+  "selection": {
+    "row": "second-to-last icon row",
+    "cellGrid": "120×120 cells on a 140px horizontal cadence",
+    "bounds": [
+      {
+        "index": 1,
+        "left": 290,
+        "top": 430,
+        "width": 120,
+        "height": 120
+      },
+      {
+        "index": 2,
+        "left": 430,
+        "top": 430,
+        "width": 120,
+        "height": 120
+      },
+      {
+        "index": 3,
+        "left": 570,
+        "top": 430,
+        "width": 120,
+        "height": 120
+      },
+      {
+        "index": 4,
+        "left": 710,
+        "top": 430,
+        "width": 120,
+        "height": 120
+      }
+    ],
+    "order": "left-to-right as found in the sheet",
+    "visualEvidence": "All four cells contain the same laptop-cat silhouette and share an aligned 96×80 non-background content bounding box; the adjacent hand/prop and reaction glyphs differ. This supports a same-character four-state sample, but the source does not establish that these are animation frames or reveal their intended timing."
+  },
+  "backgroundRemoval": {
+    "method": "Only exact #f8f0fa pixels 4-connected to each 120×120 crop edge are made transparent; enclosed equal-color pixels are retained as possible art highlights.",
+    "frames": [
+      {
+        "index": 1,
+        "removed": 8512,
+        "retainedEnclosed": 0
+      },
+      {
+        "index": 2,
+        "removed": 9104,
+        "retainedEnclosed": 0
+      },
+      {
+        "index": 3,
+        "removed": 9104,
+        "retainedEnclosed": 0
+      },
+      {
+        "index": 4,
+        "removed": 9152,
+        "retainedEnclosed": 0
+      }
+    ]
+  },
+  "alignment": {
+    "frameContentBounds": [
+      {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      }
+    ],
+    "opaqueSilhouetteIntersectionOverUnion": 0.7863,
+    "pairwisePixelEqualityToFrame1": [
+      1,
+      0.8844,
+      0.8922,
+      0.8111
+    ],
+    "allFramesPixelAgreement": 0.7922
+  },
+  "frameFiles": [
+    {
+      "index": 1,
+      "framePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/frame-1.png",
+      "contentBounds": {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      "opaquePixels": 5888,
+      "uniqueRgbaColors": 18,
+      "pngBytes": 598
+    },
+    {
+      "index": 2,
+      "framePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/frame-2.png",
+      "contentBounds": {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      "opaquePixels": 5296,
+      "uniqueRgbaColors": 17,
+      "pngBytes": 624
+    },
+    {
+      "index": 3,
+      "framePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/frame-3.png",
+      "contentBounds": {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      "opaquePixels": 5296,
+      "uniqueRgbaColors": 18,
+      "pngBytes": 621
+    },
+    {
+      "index": 4,
+      "framePath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/frame-4.png",
+      "contentBounds": {
+        "left": 12,
+        "top": 20,
+        "width": 96,
+        "height": 80
+      },
+      "opaquePixels": 5248,
+      "uniqueRgbaColors": 14,
+      "pngBytes": 561
+    }
+  ],
+  "contactPath": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/nso-emote-animation-options/frame-contact-4x.png",
+  "contactDimensions": [
+    1920,
+    504
+  ]
+}

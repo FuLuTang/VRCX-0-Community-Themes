@@ -1,0 +1,89 @@
+/*
+ * R8 motion layer; load AFTER motion-r5.css, motion-r7.css and chrome-r8.css.
+ * It owns the 36px nav-content pocket, statusbar lace timing, and active-tab motion;
+ * cat-motion-r96.css is the sole owner of the SOCIAL ::after cat loop.
+ * Title-heart art/motion belongs exclusively to brand-heart-r97.css.
+ * This module does not touch app-owned status colors,
+ * statusbar::after RGB, main-content::before wallpaper, or the main-content::after
+ * 2px resize accent. All movement is on decoration only.
+ */
+@keyframes r8-lace-flow {
+  from { background-position: 0 center; }
+  to { background-position: 20px center; }
+}
+@keyframes r8-nav-cursor {
+  0%, 28%, 58%, 100% { opacity: .62; }
+  14%, 42%, 78% { opacity: 1; }
+}
+@keyframes r8-window-press {
+  0%, 30%, 100% { transform: translateY(0); opacity: .62; }
+  50%, 70% { transform: translateY(1px); opacity: .96; }
+}
+@keyframes r8-cat-hop {
+  0%, 34%, 72%, 100% { transform: translateY(0); opacity: .78; }
+  42%, 52% { transform: translateY(-1px); opacity: 1; }
+}
+
+/* R9.7 is the sole title-heart art and animation owner. */
+/* 2 · Existing scallop lace ::before; half-tile (8px) shift is visible, RGB ::after untouched. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before {
+  animation: r8-lace-flow 4.8s steps(2, end) infinite;
+}
+
+/* 3 · Pixel cursor at the active nav item's left inset. Only the free pseudo-element blinks. */
+.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active] {
+  position: relative;
+}
+.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: 4px;
+  top: 50%;
+  margin-top: -7px;
+  width: 3px;
+  height: 14px;
+  background: linear-gradient(#fff1f8, #fff1f8);
+  pointer-events: none;
+  animation: r8-nav-cursor 3s steps(4, end) infinite;
+}
+
+/* 4 · On hover only, a 3px corner pixel presses down by one integer px.
+   Confirmed free on AppTitleBar's window-button selector; button hit geometry is unchanged. */
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'] {
+  position: relative;
+}
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0']::after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 3px;
+  height: 3px;
+  background: linear-gradient(var(--r8-ink, #21132d), var(--r8-ink, #21132d));
+  opacity: .62;
+  pointer-events: none;
+}
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0']:hover::after {
+  animation: r8-window-press 2.8s steps(2, end) infinite;
+}
+
+/* SOCIAL ::after is intentionally untouched: the user asked to retain the R7 star+cat as-is. */
+/* R7's 2px tab-edge glint is too faint; leave the tab border static in R8. */
+[data-slot='tabs']:not(.vrcx-0-side-panel-rail) [data-slot='tabs-tab'][data-active]::after {
+  animation: none !important;
+}
+
+/* 5 · User-selected nav pocket. Only its 36px cat pseudo bobs by one integer px. */
+.vrcx-0-sidebar-surface [data-sidebar='content']::after {
+  animation: r8-cat-hop 3.6s steps(4, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before,
+  .vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before,
+  .vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0']::after,
+  .vrcx-0-sidebar-surface [data-sidebar='content']::after { 
+    animation: none !important;
+  }
+}

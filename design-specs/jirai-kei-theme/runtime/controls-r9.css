@@ -1,0 +1,213 @@
+/* R9-B: page-scaffold horizontal tabs, toolbar segments, Activity exhibits and My Avatars tiles.
+   Excludes vertical tabs, rail/dialog controls and default multi-select chips; only the active
+   outline item's decorative ::before is suppressed so it cannot wash out the shared face. */
+
+/* One pixel-segment language for horizontal page tabs and outline view toggles.
+   Keep existing item dimensions; the toggle frame adds at most 2px total. */
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]){
+  gap:2px;
+  padding:1px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background-color:#201936;
+  color:#e3d2f5;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) [data-slot="tab-indicator"]{
+  display:none;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) > [data-slot="tabs-tab"]{
+  border-radius:0;
+  border-color:transparent;
+  background-color:transparent;
+  color:#e3d2f5;
+  box-shadow:none;
+  transition:none;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) > [data-slot="tabs-tab"]:hover:not([data-disabled]):not([aria-disabled="true"]){
+  background-color:#3b2c55;
+  color:#f2ebff;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6 !important;
+  color:#16112a !important;
+  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d !important;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) > [data-slot="tabs-tab"] > span:last-child{
+  color:#e3d2f5;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]) > span:last-child{
+  color:#2a1d6e;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]) > [data-slot="tabs-tab"]:focus-visible{
+  z-index:2;
+  outline:2px solid #ff7fcf;
+  outline-offset:-2px;
+}
+
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"]{
+  gap:0;
+  padding:0;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background-color:#201936;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]){
+  border-color:#6c5ce0;
+  border-radius:0;
+  background-color:#201936;
+  color:#e3d2f5;
+  box-shadow:none;
+  transition:none;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):hover:not([data-disabled]):not([aria-disabled="true"]){
+  background-color:#3b2c55;
+  color:#f2ebff;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):is([aria-pressed="true"],[data-pressed]){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6 !important;
+  color:#16112a !important;
+  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d !important;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):is([aria-pressed="true"],[data-pressed])::before{
+  content:none !important;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > [data-slot="separator"]{
+  background-color:#6c5ce0;
+}
+.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):focus-visible{
+  z-index:2;
+  outline:2px solid #ff7fcf;
+  outline-offset:-3px;
+}
+
+/* Activity exhibits: opaque pixel window; leave --act-* chart palette intact. */
+.vrcx-0-main-content .vrcx-0-page-scaffold:has(.activity-skin) .activity-skin section.activity-card{
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#201936 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  box-shadow:inset 1px 1px rgb(253 244 255/.18),inset -1px -1px #16112a,2px 2px 0 #100b1e;
+}
+
+/* My Avatars tile styling is gated by its grid/list icon-only toolbar pair.
+   This avoids styling other TileShell consumers such as My Groups/Favorites. */
+.vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot="tooltip-trigger"][aria-pressed] > svg.lucide-list) [data-slot="context-menu-trigger"][class~="group/card"] > [data-slot="button"][class~="rounded-object"]{
+  border-radius:0;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot="tooltip-trigger"][aria-pressed] > svg.lucide-list) [data-slot="context-menu-trigger"][class~="group/card"] > [data-slot="button"][class~="rounded-object"][class~="ring-2"]{
+  --tw-ring-color:#ffb8e6;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot="tooltip-trigger"][aria-pressed] > svg.lucide-list) [data-slot="context-menu-trigger"][class~="group/card"] > [data-slot="button"][class~="rounded-object"] [class~="left-1"] > span[class~="size-5"][class~="rounded-full"]{
+  border-radius:0;
+  clip-path:var(--jk-px-cut,polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px)));
+  background-color:#ffb8e6;
+  color:#16112a;
+  --tw-ring-color:#16112a;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot="tooltip-trigger"][aria-pressed] > svg.lucide-list) [data-slot="context-menu-trigger"][class~="group/card"] > button[data-slot="dropdown-menu-trigger"][data-size="icon-xs"]{
+  border-radius:0;
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  color:#16112a;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold:has(.vrcx-0-page-toolbar [data-slot="tooltip-trigger"][aria-pressed] > svg.lucide-list) [data-slot="context-menu-trigger"][class~="group/card"] > button[data-slot="dropdown-menu-trigger"][data-size="icon-xs"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+}
+
+/* R9+ Community Themes catalog: identify the Base UI Tabs root by its first panel's
+   ThemeCatalogCard preview structure (Base UI exposes panel data-index, not the value prop). */
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"]{
+  overflow:hidden;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#201936;
+  color:#f2ebff;
+  box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a,2px 2px 0 #100b1e;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] > [data-slot="card-content"] > .bg-muted.overflow-hidden.border{
+  border-color:#6c5ce0;
+  border-radius:0;
+  background:#16112a;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="badge"]{
+  border:1px solid #6c5ce0;
+  border-radius:0;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]{
+  min-height:28px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#ffb8e6;
+  color:#16112a;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
+  transition:none;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){
+  background:#ffd9ee;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+}
+/* Installed entries use custom bordered rows, but their primary enable buttons are still theme actions. */
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]{
+  min-height:28px;
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#ffb8e6;
+  color:#16112a;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
+  transition:none;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){
+  background:#ffd9ee;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]:focus-visible{
+  outline:2px solid #ff7fcf;
+  outline-offset:1px;
+}
+
+/* Mutual Friends Graph surfaces are the source PageScaffold id=chart overlays w-64/w-72.
+   Keep the SVG graph's circle encoding intact; square only the legend swatches and detail-card avatar. */
+.vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64,.w-72){
+  border:1px solid;
+  border-color:var(--jk-panel-edge);
+  border-radius:0;
+  background:#201936;
+  color:#f2ebff;
+  box-shadow:var(--jk-panel-raised);
+  --tw-ring-color:transparent;
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64,.w-72)::before{
+  display:none;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > .absolute.w-64 > .mt-2.flex.flex-col > button > span[class~="size-2.5"][class~="rounded-full"]{
+  border-radius:0;
+}
+.vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > .absolute.w-72 > button.mt-3 > span[class~="size-2.5"][class~="rounded-full"]{
+  border-radius:0;
+}
+/* Reuse one square, opaque raised face for every MutualFriendsSurface floating panel.
+   Keep semantic data-slot popups separate; these surfaces have no slot and use bg-popover/70. */
+:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])){
+  border:1px solid;border-color:var(--jk-panel-edge);border-radius:0;
+  background:#201936;color:#f2ebff;box-shadow:var(--jk-panel-raised);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot]))::before{display:none}
+
+.vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > .absolute.w-72 > .flex.items-center > span.bg-muted[class~="size-11"][class~="rounded-full"]{
+  border:1px solid #6c5ce0;
+  border-radius:0;
+  background:#ffb8e6;
+  clip-path:var(--jk-px-cut,polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px)));
+}

@@ -1,0 +1,5631 @@
+[
+  {
+    "id": "B054",
+    "file": "components/dialogs/AvatarDialogTabbedView.tsx",
+    "galleryLine": 226,
+    "line": 226,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!imageClickable} onClick={onImageClick} className={cn( 'bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 disabled:pointer-events-none', imageClickable ? 'cursor-pointer' : 'cursor-default' )} >",
+    "body": " {imageUrl ? ( <FadeInImage src={imageUrl} alt={ avatar.name || avatar.id || avatarFallbackLabel } className=\"size-full object-cover\" /> ) : ( <span className=\"flex size-full items-center justify-center\"> <PersonStandingIcon className=\"text-muted-foreground size-10\" /> </span> )} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/AvatarDialogTabbedView.tsx",
+    "galleryLine": 263,
+    "line": 263,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!avatar.name} className=\"h-auto min-w-0 justify-start overflow-hidden p-0 text-left text-lg leading-tight font-semibold whitespace-normal hover:bg-transparent disabled:pointer-events-none disabled:opacity-100\" onClick={avatar.name ? onTitleClick : undefined} >",
+    "body": " <span className=\"line-clamp-2 min-w-0 break-words\"> {avatar.name || avatarFallbackLabel} </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/AvatarDialogTabbedView.tsx",
+    "galleryLine": 279,
+    "line": 279,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!avatar.authorId} className=\"text-muted-foreground hover:text-foreground h-auto max-w-full min-w-0 justify-start overflow-hidden p-0 text-left text-sm hover:bg-transparent disabled:pointer-events-none disabled:opacity-100\" onClick={avatar.authorId ? onAuthorClick : undefined} >",
+    "body": " <span className=\"truncate\">{avatar.authorName}</span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupDialogHeaderSection.tsx",
+    "galleryLine": 232,
+    "line": 232,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!iconUrl || !onPreviewIcon} onClick={iconUrl ? onPreviewIcon : undefined} className=\"bg-muted mx-auto aspect-square h-auto w-full max-w-64 overflow-hidden rounded-lg border p-0 disabled:pointer-events-none disabled:opacity-100\" >",
+    "body": " <Avatar className=\"size-full rounded-lg after:rounded-lg\"> {iconUrl ? ( <AvatarImage src={iconUrl} alt={group.name || 'Group'} className=\"rounded-lg object-cover\" /> ) : null} <AvatarFallback className=\"rounded-lg [&>svg]:size-10\"> <UsersRoundIcon /> </AvatarFallback> </Avatar> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupDialogHeaderSection.tsx",
+    "galleryLine": 261,
+    "line": 261,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div",
+      "div",
+      "CardTitle",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto min-w-0 flex-1 justify-start overflow-hidden p-0 text-left text-lg leading-tight font-semibold whitespace-normal hover:bg-transparent\" onClick={onCopyGroupName} >",
+    "body": " <span className=\"line-clamp-2 min-w-0 break-words\"> {groupTitle} </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupDialogHeaderSection.tsx",
+    "galleryLine": 300,
+    "line": 300,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"text-muted-foreground hover:text-foreground h-auto max-w-full justify-start gap-1 p-0 text-xs font-normal hover:bg-transparent\" onClick={onOpenOwner} >",
+    "body": " <UserIcon data-icon=\"inline-start\" /> <span className=\"truncate\"> {t('dialog.group.label.owner')}{' '} {ownerLinkLabel} </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupDialogTabPanels.tsx",
+    "galleryLine": 96,
+    "line": 96,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto shrink-0 p-0\" aria-label={t('accessibility.preview_image', { item: announcement.title || t('accessibility.announcement') })} onClick={() => onPreviewImage( convertFileUrlToImageUrl( announcement.imageUrl, 1024 ), announcement.title || t('dialog.group.info.announcement') ) } >",
+    "body": " <FadeInImage src={convertFileUrlToImageUrl( announcement.imageUrl, 128 )} alt=\"\" className=\"size-16 rounded-md object-cover\" /> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupDialogTabPanels.tsx",
+    "galleryLine": 272,
+    "line": 272,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabs",
+      "EntityDialogTabContent"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"bg-muted h-auto w-full overflow-hidden rounded-md p-0\" aria-label={t('dialog.group.overview.preview_banner', { value: groupTitle })} onClick={() => onPreviewImage(bannerUrl, groupTitle)} >",
+    "body": " <FadeInImage src={bannerUrl} alt={group.name || 'Group banner'} className=\"aspect-[6/1] w-full object-cover\" onError={() => setBannerFailed(true)} /> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupMembersPanel.tsx",
+    "galleryLine": 162,
+    "line": 162,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"box-border h-auto w-full min-w-0 justify-start gap-2.5 p-1.5 text-left text-sm font-normal\" onClick={() => { if (userId) { openUserDialog({ userId, title: user?.displayName || undefined, seedData: user }); } }} >",
+    "body": " {image ? ( <FadeInImage src={image} alt=\"\" className=\"size-9 shrink-0 rounded-full object-cover\" /> ) : ( <div className=\"bg-muted flex size-9 shrink-0 items-center justify-center rounded-full\"> <UserIcon className=\"text-muted-foreground\" /> </div> )} <span className=\"min-w-0 flex-1 overflow-hidden\"> <span className=\"flex min-w-0 items-center gap-1 leading-5 font-medium\"> <span className=\"truncate\">{label}</span> {row.isRepresenting ? ( <Tooltip> <TooltipTrigger render={ <span className=\"inline-flex shrink-0\" /> } > <TagIcon className=\"text-muted-foreground size-3.5\" /> </TooltipTrigger> <Too"
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupModerationLogsPanel.tsx",
+    "galleryLine": 304,
+    "line": 304,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto w-full min-w-0 justify-start truncate p-0 text-left font-medium hover:bg-transparent\" onClick={() => openGroupAuditLogActor(row.original)} >",
+    "body": " {actorArgs.title} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupRowList.tsx",
+    "galleryLine": 107,
+    "line": 107,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto max-w-full justify-start gap-1 p-0 text-left text-xs hover:bg-transparent\" onClick={() => openUserDialog({ userId, title: displayName, seedData: queriedUser || knownUser || null }) } >",
+    "body": " {label} <span className=\"text-foreground truncate font-medium\"> {displayName} </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupRowList.tsx",
+    "galleryLine": 160,
+    "line": 160,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"mr-1.5 h-auto p-0 align-top\" aria-label={t( 'accessibility.preview_image', { item: title } )} onClick={() => onPreviewImage?.(image, title) } >",
+    "body": " <FadeInImage src={convertFileUrlToImageUrl( image, 128 )} alt=\"\" className=\"size-16 rounded-md object-cover\" /> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/GroupRowList.tsx",
+    "galleryLine": 331,
+    "line": 331,
+    "drift": 0,
+    "ancestors": [
+      "Tabs",
+      "TabsContent",
+      "div"
+    ],
+    "opening": "<Button key={`${getGroupRowLabel(row)}:${index}`} type=\"button\" variant=\"ghost\" className=\"h-auto w-full flex-col items-stretch overflow-hidden rounded-md border p-0 text-left text-sm\" onClick={() => onPreviewImage?.( getGroupRowRawImage(row), getGroupRowLabel(row) ) } >",
+    "body": " {image ? ( <FadeInImage src={image} alt={getGroupRowLabel(row)} className=\"max-h-52 w-full object-contain\" /> ) : ( <div className=\"bg-muted flex h-52 w-full items-center justify-center\"> <ImageIcon className=\"text-muted-foreground\" /> </div> )} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/group-dialog/useGroupModerationColumns.tsx",
+    "galleryLine": 173,
+    "line": 173,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto w-full min-w-0 justify-start truncate p-0 text-left font-medium hover:bg-transparent\" onClick={() => onOpenUser(row.original)} >",
+    "body": " {label} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogEntityList.tsx",
+    "galleryLine": 243,
+    "line": 243,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button key={rowKey} type=\"button\" variant=\"ghost\" className=\"h-auto min-w-0 justify-start gap-2 px-1.5 py-1.5 text-left font-normal active:not-aria-[haspopup]:translate-y-0\" onClick={() => openRow(row, kind)} >",
+    "body": " {content} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupCard.tsx",
+    "galleryLine": 78,
+    "line": 78,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"box-border h-auto w-full min-w-0 justify-start gap-2.5 p-1.5 text-left text-sm font-normal\" onClick={() => openRow(group, 'group')} >",
+    "body": " <Avatar className=\"size-9 rounded-md after:rounded-md\"> {image ? ( <AvatarImage src={image} alt=\"\" className=\"rounded-md\" /> ) : null} <AvatarFallback className=\"rounded-md [&>svg]:size-4\"> <UsersRoundIcon aria-hidden=\"true\" /> </AvatarFallback> </Avatar> <span className=\"min-w-0 flex-1 overflow-hidden\"> <span className=\"flex min-w-0 items-center gap-1 leading-5 font-medium\"> <span className=\"truncate\">{label || '—'}</span> {isOwner ? ( <MarkerIcon icon={CrownIcon} label={t('dialog.group.label.owner_2')} className=\"text-amber-400\" /> ) : null} {isMutual ? ( <MarkerIcon icon={Link2Icon} label="
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderMedia.tsx",
+    "galleryLine": 55,
+    "line": 55,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" aria-label={bannerAlt} disabled={!displayedBannerUrl || !onBannerClick} onClick={onBannerClick} className={cn( 'bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 disabled:pointer-events-none disabled:opacity-100', displayedBannerUrl ? 'cursor-pointer' : 'cursor-default' )} >",
+    "body": " {bannerUrl ? ( <span className=\"relative size-full\"> {[previousBannerUrl, bannerUrl] .filter(Boolean) .map((url) => ( <FadeInImage key={url} src={url} alt={url === bannerUrl ? bannerAlt : ''} className=\"absolute inset-0 size-full object-cover\" fallback={ url === bannerUrl ? fallbackImage : null } onLoad={() => setLoadedBannerUrl(url)} /> ))} </span> ) : ( fallbackImage )} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderMedia.tsx",
+    "galleryLine": 89,
+    "line": 89,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" aria-label={userIconLabel} title={userIconLabel} className={cn( 'bg-background/90 relative z-0 size-full overflow-hidden rounded-full p-0 shadow-md', hasIconFrame ? 'border-0' : 'border-2 border-white' )} onClick={onOpenUserIcon} >",
+    "body": " <FadeInImage src={userIconUrl} alt=\"\" className=\"size-full object-cover\" /> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderSection.tsx",
+    "galleryLine": 740,
+    "line": 740,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div",
+      "div",
+      "div",
+      "CardTitle",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto min-w-0 flex-1 shrink justify-start overflow-hidden p-0 text-left text-lg leading-tight font-semibold shadow-none hover:bg-transparent hover:text-inherit hover:shadow-none dark:hover:bg-transparent\" onClick={() => onCopyDisplayName( copyableDisplayName ) } >",
+    "body": " <AutoFitDisplayName text={profileTitle} /> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderSection.tsx",
+    "galleryLine": 911,
+    "line": 911,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"text-muted-foreground hover:text-foreground h-auto max-h-24 w-full min-w-0 justify-start overflow-auto p-0 text-left text-sm whitespace-pre-wrap hover:bg-transparent\" title={t('dialog.user.actions.edit_status')} onClick={onEditSelfStatus} >",
+    "body": " <span className=\"flex min-w-0 items-start gap-2\"> <HeaderRowIcon icon={<PencilIcon />} className=\"mt-0.5\" /> <span className=\"min-w-0\"> {typeof profile.statusDescription === 'string' ? profile.statusDescription : ''} </span> </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 241,
+    "line": 241,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"group/info-stat h-auto w-full justify-start px-2 py-1.5 text-left\" onClick={onClick} >",
+    "body": " {body} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 567,
+    "line": 567,
+    "drift": 0,
+    "ancestors": [
+      "InfoPanel",
+      "InfoStat"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"hover:text-foreground h-auto max-w-full justify-start gap-2 p-0 text-left text-xs font-normal whitespace-normal text-inherit hover:bg-transparent\" onClick={() => openGroupDialog({ groupId: representedGroup.groupId, title: representedGroup.name || undefined, seedData: buildRepresentedGroupSeedData( representedGroup ) }) } >",
+    "body": " {representedGroup.iconUrl ? ( <FadeInImage src={convertFileUrlToImageUrl( representedGroup.iconUrl, 128 )} alt=\"\" className=\"size-10 shrink-0 rounded-md object-cover\" /> ) : null} <span className=\"min-w-0\"> <span className=\"block truncate\"> {representedGroup.ownerId === profile.id ? 'Owner - ' : ''} {representedGroup.name || 'Group'} </span> <span className=\"text-muted-foreground block truncate\"> {representedGroup.memberCount ? `${representedGroup.memberCount} members` : ''} </span> </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 984,
+    "line": 984,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverTrigger"
+    ],
+    "opening": "<Button variant=\"ghost\" className=\"group/info-stat h-auto w-full justify-start p-0 text-left\" />",
+    "body": ""
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/world-dialog/WorldDialogHeaderSection.tsx",
+    "galleryLine": 493,
+    "line": 493,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!imageUrl || !onOpenImage} onClick={onOpenImage} className={cn( 'bg-muted aspect-[4/3] h-auto w-full overflow-hidden rounded-lg border p-0 disabled:pointer-events-none', imageUrl && onOpenImage ? 'cursor-pointer' : 'cursor-default' )} >",
+    "body": " {imageUrl ? ( <FadeInImage src={imageUrl} alt={world.name || world.id || 'World'} className=\"size-full object-cover\" /> ) : ( <span className=\"flex size-full items-center justify-center\"> <GlobeIcon className=\"text-muted-foreground size-10\" /> </span> )} "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/world-dialog/WorldDialogHeaderSection.tsx",
+    "galleryLine": 548,
+    "line": 548,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!world.name} className=\"h-auto min-w-0 flex-1 justify-start overflow-hidden p-0 text-left text-lg leading-tight font-semibold whitespace-normal hover:bg-transparent disabled:pointer-events-none disabled:opacity-100\" onClick={ world.name ? onCopyWorldName : undefined } >",
+    "body": " <span className=\"line-clamp-2 min-w-0 break-all\"> {world.name || 'World'} </span> "
+  },
+  {
+    "id": "B054",
+    "file": "components/dialogs/world-dialog/WorldDialogHeaderSection.tsx",
+    "galleryLine": 569,
+    "line": 569,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" disabled={!world.authorId} className=\"text-muted-foreground hover:text-foreground h-auto max-w-full min-w-0 justify-start overflow-hidden p-0 text-left text-sm hover:bg-transparent disabled:pointer-events-none disabled:opacity-100\" onClick={world.authorId ? onOpenAuthor : undefined} >",
+    "body": " <span className=\"truncate\">{world.authorName}</span> "
+  },
+  {
+    "id": "B055",
+    "file": "components/dialogs/EntityDialogScaffold.tsx",
+    "galleryLine": 278,
+    "line": 278,
+    "drift": 0,
+    "ancestors": [
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-lg\" variant={dangerous ? 'destructive' : 'outline'} aria-label={'Open entity actions'} className=\"relative\" >",
+    "body": " {busy ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <MoreHorizontalIcon data-icon=\"inline-start\" /> )} {indicator ? ( <span className=\"bg-primary absolute top-1.5 right-1.5 size-2 rounded-full\" /> ) : null} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/EntityDialogScaffold.tsx",
+    "galleryLine": 405,
+    "line": 405,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={async () => { await copyTextToClipboard( JSON.stringify(rawValue, null, 2) ); }} >",
+    "body": " <CopyIcon data-icon=\"inline-start\" /> {t('common.actions.copy')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/WorldDialogContentWorkflow.tsx",
+    "galleryLine": 321,
+    "line": 321,
+    "drift": 0,
+    "ancestors": [
+      "WorldDialogEmptyState"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={() => { worldActions.copyUnavailableWorldId(); }} >",
+    "body": " <CopyIcon data-icon=\"inline-start\" /> {t('dialog.world.info.copy_id')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogGalleryTab.tsx",
+    "galleryLine": 52,
+    "line": 52,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabContent",
+      "EntityInfoGrid",
+      "EntityInfoBlock",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={ actionStatus === 'gallery-upload' || galleryStatus === 'idle' || galleryStatus === 'running' } onClick={onUploadGallery} >",
+    "body": " <UploadIcon data-icon=\"inline-start\" /> {t('dialog.screenshot_metadata.upload')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogGalleryTab.tsx",
+    "galleryLine": 94,
+    "line": 94,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabContent",
+      "EntityInfoGrid",
+      "EntityInfoBlock",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={galleryImages.length <= 1} onClick={() => onGalleryIndexChange( (currentIndex) => (currentIndex + galleryImages.length - 1) % galleryImages.length ) } >",
+    "body": " {t('table.pagination.previous')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogGalleryTab.tsx",
+    "galleryLine": 115,
+    "line": 115,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabContent",
+      "EntityInfoGrid",
+      "EntityInfoBlock",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={galleryImages.length <= 1} onClick={() => onGalleryIndexChange( (currentIndex) => (currentIndex + 1) % galleryImages.length ) } >",
+    "body": " {t('table.pagination.next')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupDialogEvents.tsx",
+    "galleryLine": 219,
+    "line": 219,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={loading} onClick={onRefresh} >",
+    "body": " {loading ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <RefreshCwIcon data-icon=\"inline-start\" /> )} {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 164,
+    "line": 164,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={busy || !canAssignRoles} className=\"w-fit\" >",
+    "body": " {selectedRoleIds.length ? t( 'dialog.group_member_moderation.roles_count', { count: selectedRoleIds.length } ) : t( 'dialog.group_member_moderation.choose_roles_placeholder' )} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 224,
+    "line": 224,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={ busy || !selectedRoleIds.length || !canAssignRoles } onClick={() => onAddRoles?.(selectedRoleIds)} >",
+    "body": " {t('dialog.group_member_moderation.add_roles')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 250,
+    "line": 250,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={busy || !canManageMembers} onClick={() => onSaveNote?.(note)} >",
+    "body": " {t('dialog.group_member_moderation.save_note')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 259,
+    "line": 259,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={busy || !canRemoveMembers} onClick={onKick} >",
+    "body": " {t('dialog.group_member_moderation.kick')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 268,
+    "line": 268,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={busy || !canManageBans} onClick={onBan} >",
+    "body": " {t('dialog.group_member_moderation.ban')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 279,
+    "line": 279,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={busy || !canManageBans} onClick={onUnban} >",
+    "body": " {t('dialog.group_member_moderation.unban')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationLogsPanel.tsx",
+    "galleryLine": 416,
+    "line": 416,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={loading} onClick={onReload} >",
+    "body": " <RefreshCwIcon data-icon=\"inline-start\" /> {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationLogsPanel.tsx",
+    "galleryLine": 426,
+    "line": 426,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={!rows.length} onClick={() => downloadJsonFile(`${group.id}_logs.json`, rows) } >",
+    "body": " <DownloadIcon data-icon=\"inline-start\" /> JSON "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationLogsPanel.tsx",
+    "galleryLine": 438,
+    "line": 438,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={!rows.length} onClick={onExport} >",
+    "body": " <DownloadIcon data-icon=\"inline-start\" /> {t('dialog.group_member_moderation.export_logs')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationLogsPanel.tsx",
+    "galleryLine": 452,
+    "line": 452,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={loading} >",
+    "body": " <ListFilterIcon data-icon=\"inline-start\" /> {filterLabel} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationTabPanel.tsx",
+    "galleryLine": 177,
+    "line": 177,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={loading} onClick={onReload} >",
+    "body": " <RefreshCwIcon data-icon=\"inline-start\" /> {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationTabPanel.tsx",
+    "galleryLine": 187,
+    "line": 187,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={!rows.length} onClick={() => downloadJsonFile( `${group.id}_${tab.value}.json`, rows ) } >",
+    "body": " <DownloadIcon data-icon=\"inline-start\" /> JSON "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationTabPanel.tsx",
+    "galleryLine": 390,
+    "line": 390,
+    "drift": 0,
+    "ancestors": [
+      "TabsContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={!server.hasMore || server.loadingMore} onClick={server.onLoadMore} >",
+    "body": " {server.loadingMore ? ( <Loader2Icon data-icon=\"inline-start\" className=\"animate-spin\" /> ) : null} {t('common.load_more')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/group-dialog/GroupModerationWorkspace.tsx",
+    "galleryLine": 293,
+    "line": 293,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "Tabs",
+      "GroupModerationTabPanel"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => setBanImportOpen(true)} >",
+    "body": " <UploadIcon data-icon=\"inline-start\" /> {t( 'dialog.group_member_moderation.import_bans' )} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 171,
+    "line": 171,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button size=\"sm\" variant=\"outline\" onClick={onRetry}>",
+    "body": " {retryLabel} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupsTab.tsx",
+    "galleryLine": 121,
+    "line": 121,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabContent",
+      "UserDialogSearchHeader"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => { closeDialog(); navigate('/tools/my-groups'); }} >",
+    "body": " {t('dialog.user.groups.manage')} "
+  },
+  {
+    "id": "B056",
+    "file": "components/dialogs/world-dialog/WorldDialogTabPanels.tsx",
+    "galleryLine": 398,
+    "line": 398,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabs",
+      "EntityDialogTabContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={screenshotsRefreshDisabled} onClick={onRefreshScreenshots} >",
+    "body": " {screenshotsRefreshDisabled ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <RefreshCwIcon data-icon=\"inline-start\" /> )} {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B057",
+    "file": "components/dialogs/EntityDialogScaffold.tsx",
+    "galleryLine": 511,
+    "line": 511,
+    "drift": 0,
+    "ancestors": [
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" aria-label={label} size=\"icon-xs\" variant=\"ghost\" onClick={onClick} >",
+    "body": " <Icon /> "
+  },
+  {
+    "id": "B057",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 816,
+    "line": 816,
+    "drift": 0,
+    "ancestors": [
+      "TranslatableText",
+      "InfoPanel",
+      "div"
+    ],
+    "opening": "<Button key={link} type=\"button\" variant=\"ghost\" size=\"icon-xs\" aria-label={t( 'dialog.user.info.open_bio_link', { link } )} title={link} onClick={() => openExternalLink(link)} >",
+    "body": " <BioLinkFavicon link={link} fallback={ <ExternalLinkIcon data-icon=\"inline-start\" /> } /> "
+  },
+  {
+    "id": "B057",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 906,
+    "line": 906,
+    "drift": 0,
+    "ancestors": [
+      "InfoPanel"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-xs\" disabled={!currentUserId || !profile.id || loading} aria-label={t( 'dialog.user.info.refresh_status_distribution' )} title={t('dialog.user.info.refresh_status_distribution')} onClick={load} >",
+    "body": " {loading ? ( <Spinner className=\"size-3\" /> ) : ( <RefreshCwIcon /> )} "
+  },
+  {
+    "id": "B058",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogGalleryTab.tsx",
+    "galleryLine": 74,
+    "line": 74,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabContent",
+      "EntityInfoGrid",
+      "EntityInfoBlock",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" disabled={!currentGalleryImage} variant=\"outline\" className=\"bg-muted/20 h-52 w-full overflow-hidden p-0\" onClick={onOpenGalleryPreview} >",
+    "body": " {currentGalleryImage ? ( <FadeInImage src={currentGalleryImage} alt=\"\" className=\"size-full object-contain\" /> ) : ( <span className=\"text-muted-foreground flex size-full items-center justify-center [&>svg]:size-8\"> <ImageIcon /> </span> )} "
+  },
+  {
+    "id": "B058",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 202,
+    "line": 202,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={busy} onClick={onCancel} >",
+    "body": " {cancelLabel} "
+  },
+  {
+    "id": "B058",
+    "file": "components/hosts/LaunchDialogHost.tsx",
+    "galleryLine": 160,
+    "line": 160,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={disabled} onClick={onClick} className=\"h-auto flex-col gap-1.5 px-2 py-3 whitespace-normal\" >",
+    "body": " {pending ? ( <Spinner className=\"size-5\" /> ) : ( <Icon className=\"size-5\" /> )} <span className=\"text-sm leading-none font-medium\">{label}</span> {hint ? ( <span className=\"text-muted-foreground text-[10px] leading-tight\"> {hint} </span> ) : null} "
+  },
+  {
+    "id": "B059",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogHeaderActions.tsx",
+    "galleryLine": 99,
+    "line": 99,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant={canSelectAvatar ? 'default' : 'outline'} className=\"min-w-0 flex-1\" aria-label={selectLabel} disabled={!canSelectAvatar || actionStatus === 'selecting'} onClick={onSelect} >",
+    "body": " <SelectIcon data-icon=\"inline-start\" /> <span className=\"truncate\">{selectLabel}</span> "
+  },
+  {
+    "id": "B059",
+    "file": "components/dialogs/group-dialog/GroupDialogHeaderSection.tsx",
+    "galleryLine": 576,
+    "line": 576,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard"
+    ],
+    "opening": "<Button type=\"button\" className=\"w-full\" variant={primaryAction.variant} disabled={primaryAction.disabled} onClick={primaryAction.onClick} >",
+    "body": " <PrimaryIcon data-icon=\"inline-start\" /> <span className=\"truncate\">{primaryAction.label}</span> "
+  },
+  {
+    "id": "B059",
+    "file": "components/dialogs/world-dialog/WorldDialogHeaderSection.tsx",
+    "galleryLine": 256,
+    "line": 256,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" className=\"min-w-0 flex-1\" disabled={actionStatus === 'new-instance'} onClick={onNewInstance} >",
+    "body": " <FlagIcon data-icon=\"inline-start\" /> <span className=\"truncate\"> {t('dialog.world.actions.new_instance')} </span> "
+  },
+  {
+    "id": "B060",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogPerformanceTab.tsx",
+    "galleryLine": 229,
+    "line": 229,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"xs\" onClick={onRefresh}>",
+    "body": " <RefreshCwIcon data-icon=\"inline-start\" /> {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B060",
+    "file": "components/dialogs/group-dialog/GroupDialogTabPanels.tsx",
+    "galleryLine": 373,
+    "line": 373,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabs",
+      "EntityDialogTabContent",
+      "GroupOverviewSection"
+    ],
+    "opening": "<Button type=\"button\" size=\"xs\" variant=\"outline\" onClick={() => onChangeTab('events')} >",
+    "body": " {t('dialog.group.overview.open_events')} "
+  },
+  {
+    "id": "B060",
+    "file": "components/dialogs/world-dialog/WorldDialogHeaderSection.tsx",
+    "galleryLine": 605,
+    "line": 605,
+    "drift": 0,
+    "ancestors": [
+      "EntityOverviewCard",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"xs\" variant=\"outline\" className=\"rounded-full\" onClick={() => onChangeTab('info')} >",
+    "body": " {t('dialog.world.tags.restrictions_count', { count: restrictions.length })} "
+  },
+  {
+    "id": "B060",
+    "file": "components/dialogs/world-dialog/WorldSidebarPinButton.tsx",
+    "galleryLine": 54,
+    "line": 54,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"xs\" className=\"ml-auto\" disabled={!worldId || !hydrated} onClick={toggle} >",
+    "body": " {pinned ? ( <PinOffIcon data-icon=\"inline-start\" /> ) : ( <PinIcon data-icon=\"inline-start\" /> )} {pinned ? t('dialog.world.instances.unpin_from_sidebar') : t('dialog.world.instances.pin_to_sidebar')} "
+  },
+  {
+    "id": "B061",
+    "file": "components/dialogs/avatar-dialog/components/AvatarDialogPerformanceTab.tsx",
+    "galleryLine": 341,
+    "line": 341,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabContent",
+      "div",
+      "Tabs",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" size=\"xs\" className=\"text-muted-foreground hover:text-foreground ml-auto h-auto p-0\" onClick={() => { void openExternalLink( performanceDocsUrl( activePlatform.key ) ); }} >",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> {t( activePlatform.key === 'pc' ? 'dialog.avatar.performance.pc_rules' : 'dialog.avatar.performance.mobile_rules' )} "
+  },
+  {
+    "id": "B061",
+    "file": "components/dialogs/group-dialog/GroupDialogTabPanels.tsx",
+    "galleryLine": 453,
+    "line": 453,
+    "drift": 0,
+    "ancestors": [
+      "EntityDialogTabs",
+      "EntityDialogTabContent",
+      "GroupOverviewSection",
+      "EntityInfoGrid",
+      "EntityInfoBlock",
+      "div"
+    ],
+    "opening": "<Button key={link} type=\"button\" variant=\"link\" size=\"xs\" className=\"h-auto max-w-full min-w-0 justify-start p-0 text-left break-all whitespace-normal\" onClick={() => onOpenLink(link)} >",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> <span className=\"min-w-0 break-all\"> {link} </span> "
+  },
+  {
+    "id": "B062",
+    "file": "components/dialogs/group-dialog/GroupMembersPanel.tsx",
+    "galleryLine": 421,
+    "line": 421,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"ghost\" aria-label={t('accessibility.more')} />",
+    "body": ""
+  },
+  {
+    "id": "B062",
+    "file": "components/dialogs/group-dialog/GroupRowList.tsx",
+    "galleryLine": 204,
+    "line": 204,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"ghost\" aria-label={t('common.actions.edit')} onClick={() => onEditPost?.(post)} >",
+    "body": " <PencilIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B062",
+    "file": "components/dialogs/group-dialog/GroupRowList.tsx",
+    "galleryLine": 213,
+    "line": 213,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"ghost\" className=\"text-destructive\" aria-label={t('common.actions.delete')} onClick={() => onDeletePost?.(post)} >",
+    "body": " <MessageSquareIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B062",
+    "file": "components/dialogs/user-dialog/components/UserDialogMutualGraphImpl.tsx",
+    "galleryLine": 128,
+    "line": 128,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Popover",
+      "PopoverTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" className=\"absolute top-2 right-2 z-10\" aria-label={t( 'view.charts.mutual_friend.settings.title' )} >",
+    "body": " <Settings2Icon /> "
+  },
+  {
+    "id": "B062",
+    "file": "components/hosts/DialogHost.tsx",
+    "galleryLine": 110,
+    "line": 110,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t('common.actions.back')} onClick={() => popToBreadcrumb(currentBreadcrumbIndex - 1) } >",
+    "body": " <ArrowLeftIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B063",
+    "file": "components/dialogs/group-dialog/GroupMembersPanel.tsx",
+    "galleryLine": 529,
+    "line": 529,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"ghost\" disabled={members.isLoadingMore} onClick={onLoadMore} >",
+    "body": " {t('common.load_more')} "
+  },
+  {
+    "id": "B063",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderSection.tsx",
+    "galleryLine": 327,
+    "line": 327,
+    "drift": 0,
+    "ancestors": [
+      "EntityFactRow"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" aria-pressed={checked} disabled={disabled} onClick={onToggle} className=\"text-muted-foreground hover:text-foreground h-auto min-w-0 px-1 py-0 text-xs\" >",
+    "body": " <span className=\"min-w-0 truncate text-right\">{value}</span> "
+  },
+  {
+    "id": "B064",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 124,
+    "line": 124,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"outline\" className=\"rounded-full\" disabled={busy} onClick={onClear} aria-label={t('common.actions.delete')} >",
+    "body": " <Trash2Icon /> "
+  },
+  {
+    "id": "B064",
+    "file": "components/dialogs/user-dialog/components/UserDialogFeedTab.tsx",
+    "galleryLine": 117,
+    "line": 117,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon-sm\" className=\"ml-auto\" aria-label={openFeedLabel} onClick={onOpenFullFeed} >",
+    "body": " <ArrowUpRightIcon className=\"size-4\" /> "
+  },
+  {
+    "id": "B064",
+    "file": "components/dialogs/user-dialog/components/UserDialogSearchHeader.tsx",
+    "galleryLine": 46,
+    "line": 46,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"outline\" disabled={running} aria-label={t('common.actions.refresh')} onClick={() => { loadTab(tab, { force: true }); }} >",
+    "body": " {running ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <RefreshCwIcon data-icon=\"inline-start\" /> )} <span className=\"sr-only\"> {t('common.actions.refresh')} </span> "
+  },
+  {
+    "id": "B065",
+    "file": "components/dialogs/group-dialog/GroupModerationBulkPanel.tsx",
+    "galleryLine": 237,
+    "line": 237,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"secondary\" disabled={ busy || !selectedRoleIds.length || !canAssignRoles } onClick={() => onRemoveRoles?.(selectedRoleIds)} >",
+    "body": " {t('dialog.group_member_moderation.remove_roles')} "
+  },
+  {
+    "id": "B066",
+    "file": "components/dialogs/group-dialog/SavedGroupFavoriteButton.tsx",
+    "galleryLine": 97,
+    "line": 97,
+    "drift": 0,
+    "ancestors": [
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-lg\" variant={favoriteCollection ? 'secondary' : 'outline'} disabled={busy} aria-label={t('saved_group_favorites.toggle', { defaultValue: '群组收藏' })} >",
+    "body": " <StarIcon className={favoriteCollection ? 'fill-current' : ''} /> "
+  },
+  {
+    "id": "B067",
+    "file": "components/dialogs/group-dialog/useGroupModerationColumns.tsx",
+    "galleryLine": 305,
+    "line": 305,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button key={action.key} type=\"button\" size=\"sm\" variant={ DANGER_ACTION_KEYS.has(action.key) ? 'destructive' : action.destructive ? 'outline' : 'secondary' } className=\"transition-transform duration-[140ms] ease-out active:scale-[0.97]\" disabled={Boolean(actionKey)} onClick={() => onRunAction(action, row.original) } >",
+    "body": " {isRunning ? '...' : action.label} "
+  },
+  {
+    "id": "B068",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 193,
+    "line": 193,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" disabled={busy} onClick={onConfirm} >",
+    "body": " {busy ? <LoaderCircleIcon className=\"animate-spin\" /> : null} {confirmLabel} "
+  },
+  {
+    "id": "B069",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderBadges.tsx",
+    "galleryLine": 325,
+    "line": 325,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size={badgeImageUrl ? 'icon' : 'sm'} aria-label={badgeTitle} title={badgeTitle} className={cn( 'transition-transform duration-150 ease-out active:scale-[0.97] [@media(hover:hover)]:hover:scale-110', badgeImageUrl ? 'size-8 rounded-sm p-0' : 'h-8 max-w-full rounded-sm px-2 text-xs', !isBadgeVisible && 'opacity-60' )} onClick={(event) => event.stopPropagation()} >",
+    "body": " {badgeImageUrl ? ( <FadeInImage src={badgeImageUrl} alt={badge.badgeName || ''} className={cn( 'size-8 rounded-sm object-cover', !isBadgeVisible && 'grayscale' )} /> ) : ( <span className=\"max-w-32 truncate\"> {badgeName || badge.badgeId} </span> )} "
+  },
+  {
+    "id": "B070",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 710,
+    "line": 710,
+    "drift": 0,
+    "ancestors": [
+      "TranslatableText",
+      "InfoPanel",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant={showHistory ? 'secondary' : 'ghost'} size=\"icon-xs\" aria-label={t('dialog.user.info.bio_history')} title={t('dialog.user.info.bio_history')} onClick={() => setShowHistory((value) => !value) } >",
+    "body": " <HistoryIcon /> "
+  },
+  {
+    "id": "B071",
+    "file": "components/dialogs/user-dialog/components/UserDialogInfoTab.tsx",
+    "galleryLine": 727,
+    "line": 727,
+    "drift": 0,
+    "ancestors": [
+      "TranslatableText",
+      "InfoPanel",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant=\"outline\" aria-label={editLabel} onClick={onEditBio} >",
+    "body": " <PencilIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B072",
+    "file": "components/dialogs/user-dialog/components/UserDialogProfileBackgroundPicker.tsx",
+    "galleryLine": 115,
+    "line": 115,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" className=\"ms-auto\" disabled={pending || !gradientChanged} onClick={() => onUpdateBackground( 'gradient', buildGradientBackgroundUpdate( gradientTop, gradientBottom ) ) } >",
+    "body": " {t('dialog.inventory.apply_gradient')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/about/AboutDialog.tsx",
+    "galleryLine": 268,
+    "line": 268,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button key={key} type=\"button\" variant=\"outline\" size=\"sm\" className=\"text-muted-foreground hover:text-foreground\" onClick={() => { openExternalLink(href); }} >",
+    "body": " <Icon data-icon=\"inline-start\" /> {label} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/AvatarOwnerEditDialogs.tsx",
+    "galleryLine": 368,
+    "line": 368,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={toggleAllAvatars} >",
+    "body": " {ownAvatars.length === selectedAvatarIds.length ? 'Select None' : 'Select All'} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/InstanceInviteDialog.tsx",
+    "galleryLine": 358,
+    "line": 358,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={!currentUserId || sending} onClick={() => { if (currentUserId) { addUserIds([currentUserId]); } }} >",
+    "body": " <UserIcon data-icon=\"inline-start\" /> {t('dialog.invite.add_self')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/InstanceInviteDialog.tsx",
+    "galleryLine": 372,
+    "line": 372,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={ !friendsInCurrentInstanceIds.length || sending } onClick={() => addUserIds(friendsInCurrentInstanceIds) } >",
+    "body": " <UsersIcon data-icon=\"inline-start\" /> {t('dialog.invite.add_friends_in_instance')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/InstanceInviteDialog.tsx",
+    "galleryLine": 389,
+    "line": 389,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={ sending || (!favoriteGroupItems.remote .length && !favoriteGroupItems.local .length) } >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t( 'dialog.invite.add_favorite_friends' )} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/ProfileMediaPanel.tsx",
+    "galleryLine": 164,
+    "line": 164,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button variant=\"outline\" size=\"sm\" className=\"shrink-0 self-start\" disabled={!currentFileId || busy} onClick={() => onClear(section.fieldName)} >",
+    "body": " <XIcon data-icon=\"inline-start\" /> {t(section.clearKey)} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/WorldOwnerEditDialogs.tsx",
+    "galleryLine": 750,
+    "line": 750,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={saving} onClick={() => setUrlList((current) => [...current, '']) } >",
+    "body": " {t('dialog.world.action.add_domain')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/group-dialog/GroupModerationLogsExportDialog.tsx",
+    "galleryLine": 95,
+    "line": 95,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" className=\"mt-2 self-start\" disabled={!content} onClick={() => copyTextToClipboard(content, { successMessage: t( 'dialog.group_member_moderation.export_logs_copied' ), errorMessage: (error) => error instanceof Error ? error.message : t('dialog.group.toast.value_failed', { value: t( 'dialog.group_member_moderation.export_logs' ) }) }) } >",
+    "body": " <CopyIcon data-icon=\"inline-start\" /> {t('common.actions.copy')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 360,
+    "line": 360,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={sending} onClick={() => { setImageData(''); setImageName(''); }} >",
+    "body": " <ImageIcon data-icon=\"inline-start\" /> {t( 'dialog.invite_message.clear_selected_image' )}{' '} {imageName} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 484,
+    "line": 484,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Table",
+      "TableBody",
+      "DataTableRow",
+      "DataTableCell",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={sending} onClick={( event: MouseEvent<HTMLButtonElement> ) => { event.stopPropagation(); applyRow(row); }} >",
+    "body": " {actionLabel} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 501,
+    "line": 501,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Table",
+      "TableBody",
+      "DataTableRow",
+      "DataTableCell",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={sending} onClick={() => { setEditingRow( null ); setConfirmRow( row ); }} >",
+    "body": " {actionLabel} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 558,
+    "line": 558,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={sending} onClick={() => setEditingRow(null)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 611,
+    "line": 611,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={sending} onClick={() => setConfirmRow(null)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx",
+    "galleryLine": 335,
+    "line": 335,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Table",
+      "TableBody",
+      "DataTableRow",
+      "DataTableCell",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => onOpenDetails(row) } >",
+    "body": " {t( 'dialog.previous_instances.description.details' )} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx",
+    "galleryLine": 347,
+    "line": 347,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Table",
+      "TableBody",
+      "DataTableRow",
+      "DataTableCell",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={!location} aria-label={t( 'common.actions.delete' )} onClick={() => { onDeleteRow(row); }} >",
+    "body": " <Trash2Icon data-icon=\"inline-start\" /> {t('common.actions.delete')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx",
+    "galleryLine": 389,
+    "line": 389,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={currentPageIndex <= 0} onClick={onPreviousPage} >",
+    "body": " {t('table.pagination.previous')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx",
+    "galleryLine": 398,
+    "line": 398,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={currentPageIndex >= totalPages - 1} onClick={onNextPage} >",
+    "body": " {t('table.pagination.next')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx",
+    "galleryLine": 408,
+    "line": 408,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={onClose} >",
+    "body": " {t('common.actions.close')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx",
+    "galleryLine": 142,
+    "line": 142,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "Alert",
+      "AlertAction"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={loading || sending} onClick={() => { setSelectedGroupId(''); reload(); }} >",
+    "body": " {t('common.action.retry')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 169,
+    "line": 169,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => { void openDatabaseUpgradeFailureLogFolder(); }} >",
+    "body": " {t('message.database.open_failure_log_folder')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 179,
+    "line": 179,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => { void createDatabaseUpgradeGitHubIssue(); }} >",
+    "body": " {t('message.database.create_github_issue')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx",
+    "galleryLine": 248,
+    "line": 248,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Card",
+      "CardContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => { openExternalLink( selectedEntry.projectUrl ); }} >",
+    "body": " {t( 'dialog.open_source.open_project' )} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx",
+    "galleryLine": 264,
+    "line": 264,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Card",
+      "CardContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => { openExternalLink( selectedEntry.licenseUrl ); }} >",
+    "body": " {t( 'dialog.open_source.open_license_url' )} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/system-dialogs/VRChatConfigDialog.tsx",
+    "galleryLine": 576,
+    "line": 576,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "FieldGroup",
+      "FieldSet",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={loading} onClick={() => { handleSweepCache(); }} >",
+    "body": " <SparklesIcon data-icon=\"inline-start\" /> {t('dialog.config_json.sweep_cache')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/tools-dialogs/AppLauncherDialog.tsx",
+    "galleryLine": 465,
+    "line": 465,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" className=\"ml-auto\" variant=\"outline\" size=\"sm\" disabled={saving} onClick={addApp} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t('dialog.app_launcher.add_app')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/tools-dialogs/GroupCalendarDialog.tsx",
+    "galleryLine": 551,
+    "line": 551,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={() => selectDateKey(selectedDateKey(new Date())) } >",
+    "body": " {t('dialog.group_calendar.today')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 413,
+    "line": 413,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" className=\"justify-self-start\" onClick={openAddView} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t('view.tools.llm_endpoints.add')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 576,
+    "line": 576,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={loading || !baseUrlValid} onClick={detectForDraft} >",
+    "body": " <RefreshCwIcon data-icon=\"inline-start\" /> {t( 'view.tools.llm_endpoints.detect_models' )} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 427,
+    "line": 427,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "Alert",
+      "AlertAction"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => setErrors('')} >",
+    "body": " {t('dialog.note_export.clear_errors')} "
+  },
+  {
+    "id": "B073",
+    "file": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx",
+    "galleryLine": 338,
+    "line": 338,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "Alert",
+      "AlertDescription",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" disabled={ statusActionRunning } onClick={() => { void runStatusAction( 'discard' ); }} >",
+    "body": " {t( 'profile_backup.discard_backup' )} "
+  },
+  {
+    "id": "B073",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 841,
+    "line": 841,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B073",
+    "file": "features/my-avatars/ManageAvatarTagsDialog.tsx",
+    "galleryLine": 203,
+    "line": 203,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={() => removeTag(entry.tag) } disabled={saving} >",
+    "body": " <XIcon data-icon=\"inline-start\" /> {t('common.actions.remove')} "
+  },
+  {
+    "id": "B073",
+    "file": "features/settings/components/settings-dialogs/AvatarProviderDialog.tsx",
+    "galleryLine": 125,
+    "line": 125,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "Field"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"outline\" onClick={addAvatarProvider} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t('dialog.avatar_database_provider.add_provider')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/about/AboutDialog.tsx",
+    "galleryLine": 287,
+    "line": 287,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" data-ui-role=\"text-link\" className=\"text-muted-foreground/70 hover:text-foreground h-7 px-2 text-[11.5px] font-medium\" onClick={() => { openExternalLink(links.license); }} >",
+    "body": " {t('view.about.license_line')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/about/AboutDialog.tsx",
+    "galleryLine": 299,
+    "line": 299,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" data-ui-role=\"text-link\" className=\"text-muted-foreground/70 hover:text-foreground h-7 px-2 text-[11.5px] font-medium\" onClick={onOpenLicenses} >",
+    "body": " {t('app_menu.open_source_licenses')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/hosts/LaunchDialogHost.tsx",
+    "galleryLine": 459,
+    "line": 459,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" disabled={inviteDisabled} onClick={() => setInviteOpen(true)} >",
+    "body": " <UserPlusIcon data-icon=\"inline-start\" /> {t('dialog.launch.invite')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/hosts/LaunchDialogHost.tsx",
+    "galleryLine": 469,
+    "line": 469,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" disabled={actionDisabled} onClick={() => { runAction('self-invite', () => selfInviteToInstance( actionTag, actionLaunchToken ) ); }} >",
+    "body": " {busy === 'self-invite' ? ( <Spinner data-icon=\"inline-start\" className=\"size-3.5\" /> ) : ( <MailIcon data-icon=\"inline-start\" /> )} {t('dialog.launch.label.self_invite')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/hosts/LaunchDialogHost.tsx",
+    "galleryLine": 498,
+    "line": 498,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" disabled={!vrcxInstanceUrl} onClick={() => { void copyField( t( 'dialog.world.info.vrcx_share_text', { name: `${subtitle} #${instanceName}`, url: vrcxInstanceUrl } ), t( 'dialog.world.info.vrcx_url' ) ); }} >",
+    "body": " <Share2Icon data-icon=\"inline-start\" /> {t('dialog.launch.share')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/hosts/system-dialogs/VRChatConfigDialog.tsx",
+    "galleryLine": 777,
+    "line": 777,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground sm:mr-auto\" onClick={() => { openExternalLink(links.vrchatDocsConfigurationFile); }} >",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> {t('dialog.config_json.vrchat_docs')} "
+  },
+  {
+    "id": "B074",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 744,
+    "line": 744,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "DndContext",
+      "SortableContext",
+      "div",
+      "SortableTabRow",
+      "div",
+      "Collapsible",
+      "div",
+      "CollapsibleTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" className=\"group h-auto w-full justify-between px-1.5 py-1\" >",
+    "body": " <span className=\"text-muted-foreground flex min-w-0 items-center gap-2 text-xs\"> <FolderHeartIcon data-icon=\"inline-start\" /> <span className=\"truncate\"> {t( 'side_panel.settings.custom_tabs.favorite_groups_summary' )} </span> <Badge variant={ selectedCount ? 'secondary' : 'outline' } className={cn( 'shrink-0', !selectedCount && 'border-amber-500/40 text-amber-600 dark:text-amber-500' )} > { selectedCount } </Badge> </span> <ChevronDownIcon data-icon=\"inline-end\" className=\"text-muted-foreground transition-transform group-aria-[expanded=true]:rotate-180\" /> "
+  },
+  {
+    "id": "B074",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 826,
+    "line": 826,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" className=\"mr-auto\" onClick={() => { setDraftLayout( normalizeSidebarTabLayout( DEFAULT_SIDEBAR_TAB_LAYOUT ) ); }} >",
+    "body": " {t('common.actions.reset')} "
+  },
+  {
+    "id": "B074",
+    "file": "features/assistant/AssistantDialog.tsx",
+    "galleryLine": 330,
+    "line": 330,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogHeader",
+      "div",
+      "Popover",
+      "PopoverTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"ghost\" className=\"h-8 gap-1.5 px-2 text-xs\" >",
+    "body": " <Settings2Icon data-icon=\"inline-start\" className=\"size-4\" /> <span className=\"hidden max-w-40 truncate sm:inline\"> {selectedEndpoint?.name || t( 'assistant.runtime.connection_unset' )} </span> "
+  },
+  {
+    "id": "B074",
+    "file": "features/assistant/AssistantDialog.tsx",
+    "galleryLine": 682,
+    "line": 682,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"ghost\" className=\"h-auto px-1.5 py-1 text-xs\" onClick={onOpenSettings} >",
+    "body": " {t('assistant.open_settings')} "
+  },
+  {
+    "id": "B074",
+    "file": "features/settings/components/settings-dialogs/GameLogImportDialog.tsx",
+    "galleryLine": 166,
+    "line": 166,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" className=\"text-muted-foreground shrink-0\" disabled={running} onClick={openBackup} >",
+    "body": " {t(`${keyPrefix}.open_backup`)} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/AvatarDetailsDialog.tsx",
+    "galleryLine": 435,
+    "line": 435,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={saving} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/AvatarOwnerEditDialogs.tsx",
+    "galleryLine": 406,
+    "line": 406,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={saving} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/BoopEmojiDialog.tsx",
+    "galleryLine": 499,
+    "line": 499,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={sending} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/FriendListUserLoadDialog.tsx",
+    "galleryLine": 71,
+    "line": 71,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={progress.cancelled} onClick={onCancel} >",
+    "body": " {progress.cancelled ? t('view.friend_list.description.cancelling') : t('view.friend_list.load_cancel')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/WorldOwnerEditDialogs.tsx",
+    "galleryLine": 639,
+    "line": 639,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={saving} onClick={() => onOpenChange?.(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/group-dialog/GroupPostEditorDialog.tsx",
+    "galleryLine": 384,
+    "line": 384,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={submitting} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 650,
+    "line": 650,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" disabled={sending} onClick={onClose ?? undefined} >",
+    "body": " {t('common.actions.close')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 931,
+    "line": 931,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant={isGameRunning ? 'secondary' : 'default'} disabled={submitting} onClick={() => onLaunch(legacyCreated)} >",
+    "body": " {t('dialog.world.action.launch')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/hosts/system-dialogs/ChangelogDialog.tsx",
+    "galleryLine": 306,
+    "line": 306,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" onClick={() => { openExternalLink(links.githubSponsors); }} >",
+    "body": " <HeartIcon data-icon=\"inline-start\" /> {t('dialog.change_log.support_development')} "
+  },
+  {
+    "id": "B075",
+    "file": "components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx",
+    "galleryLine": 193,
+    "line": 193,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button key={entry.id} type=\"button\" variant={ entry.id === selectedEntry?.id ? 'secondary' : 'outline' } className=\"h-auto w-full flex-col items-start justify-start p-3 text-left font-normal\" onClick={() => setSelectedEntryId(entry.id || '') } >",
+    "body": " <span className=\"block truncate font-medium\"> {entry.name} </span> <span className=\"text-muted-foreground block truncate text-xs\"> {entry.version || t( 'dialog.open_source.no_version' )} {' \\u00b7 '} {entry.license} </span> "
+  },
+  {
+    "id": "B075",
+    "file": "features/dashboard/components/DashboardViewParts.tsx",
+    "galleryLine": 300,
+    "line": 300,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button key={option.value} type=\"button\" variant={selected ? 'secondary' : 'outline'} className=\"h-auto flex-col items-start justify-start p-3 text-left font-normal whitespace-normal\" onClick={() => onSelect(option.value)} >",
+    "body": " <div className=\"truncate text-sm font-medium\"> {label} </div> <div className=\"text-muted-foreground line-clamp-2 text-xs\"> {description} </div> "
+  },
+  {
+    "id": "B075",
+    "file": "features/feed/columns/FeedColumnsManagerDialog.tsx",
+    "galleryLine": 262,
+    "line": 262,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant={ column.id === selectedColumn?.id ? 'secondary' : 'ghost' } className=\"h-auto min-w-0 flex-1 justify-start px-2 py-1.5 text-left\" onClick={() => setDraftSelectedColumnId(column.id) } >",
+    "body": " <span className=\"min-w-0\"> <span className=\"block truncate text-sm\"> {column.title} </span> <span className=\"text-muted-foreground block truncate text-xs\"> {describeColumn(column)} </span> </span> "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/AvatarDetailsDialog.tsx",
+    "galleryLine": 443,
+    "line": 443,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={controlsDisabled} onClick={() => { save(); }} >",
+    "body": " {controlsDisabled ? ( <Spinner data-icon=\"inline-start\" /> ) : null} {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/AvatarOwnerEditDialogs.tsx",
+    "galleryLine": 414,
+    "line": 414,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={ saving || loading || !selectedAvatarIds.length } onClick={() => { save(); }} >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/BoopEmojiDialog.tsx",
+    "galleryLine": 507,
+    "line": 507,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={sending || sendDisabled || !choice} onClick={handleSend} >",
+    "body": " {sending ? <Spinner data-icon=\"inline-start\" /> : null} {t('dialog.boop_dialog.send')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/InstanceInviteDialog.tsx",
+    "galleryLine": 477,
+    "line": 477,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={sending || !selectedUserIds.length} onClick={() => { sendInvites(); }} >",
+    "body": " {sending ? <Spinner data-icon=\"inline-start\" /> : null} {t('dialog.invite.invite')} {selectedUserIds.length ? ` (${selectedUserIds.length})` : null} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/WorldOwnerEditDialogs.tsx",
+    "galleryLine": 397,
+    "line": 397,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saving} onClick={() => onSave?.(draft)} >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/WorldOwnerEditDialogs.tsx",
+    "galleryLine": 647,
+    "line": 647,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saving} onClick={() => onSave?.({ tags: buildWorldTags(draft, world?.tags), disabledPropAbilities: buildDisabledPropAbilities( draft.propMovementEnabled, world?.disabledPropAbilities ) }) } >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/WorldOwnerEditDialogs.tsx",
+    "galleryLine": 763,
+    "line": 763,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saving} onClick={() => onSave?.( urlList .map((value) => value.trim()) .filter(Boolean) ) } >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/group-dialog/GroupPostEditorDialog.tsx",
+    "galleryLine": 392,
+    "line": 392,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={submitting} onClick={() => onSubmit(form)} >",
+    "body": " {isEdit ? 'Edit Post' : 'Create Post'} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/group-dialog/GroupProfileEditDialog.tsx",
+    "galleryLine": 264,
+    "line": 264,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saving || !nameValid || !shortCodeValid} onClick={() => onSave({ ...draft, name: draft.name.trim(), description: draft.description.trim(), rules: draft.rules.trim(), links: draft.links .map((link) => link.trim()) .filter(Boolean) }) } >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 359,
+    "line": 359,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={busy} onClick={onSave}>",
+    "body": " {t('dialog.user.action.update')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 535,
+    "line": 535,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={busy} onClick={onSave}>",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx",
+    "galleryLine": 236,
+    "line": 236,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={!selectedGroupId || loading || sending} onClick={invite} >",
+    "body": " {sending ? ( <LoaderCircleIcon className=\"animate-spin\" /> ) : null} {t('dialog.user.actions.invite')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/user-dialog/components/UserNoteMemoDialog.tsx",
+    "galleryLine": 101,
+    "line": 101,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saving} onClick={onSave}>",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 940,
+    "line": 940,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={submitting} onClick={() => onOpenInGame(legacyCreated)} >",
+    "body": " {t('dialog.world.action.open_in_game')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 959,
+    "line": 959,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={ submitting || form.selectedTab === 'Legacy' } onClick={() => { const displayName = commitDisplayNamePreset(); onSubmit( displayName ? { ...form, displayName } : form ); }} >",
+    "body": " {request?.selfInvite ? t('dialog.new_instance.create_and_invite') : t('dialog.new_instance.create_instance')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/LinuxRenderingTrialHost.tsx",
+    "galleryLine": 95,
+    "line": 95,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button disabled={busy} onClick={() => { void resolve(true); }} >",
+    "body": " {t('linux_rendering.keep')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 231,
+    "line": 231,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={!promptValueIsValid} onClick={() => handlePromptOk(promptDialog.value)} >",
+    "body": " {promptDialog.confirmText || t('dialog.alertdialog.confirm')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 326,
+    "line": 326,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" onClick={() => handleOtpOk(otpDialog.value)} >",
+    "body": " {otpDialog.confirmText || t('dialog.alertdialog.confirm')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/ProfileRestoreResultHost.tsx",
+    "galleryLine": 141,
+    "line": 141,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "AlertDialogFooter"
+    ],
+    "opening": "<Button type=\"button\" onClick={clearRestoreResult}>",
+    "body": " {t('common.actions.close')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/ChangelogDialog.tsx",
+    "galleryLine": 316,
+    "line": 316,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" onClick={() => { openExternalLink(links.github); }} >",
+    "body": " <StarIcon data-icon=\"inline-start\" /> {t('dialog.change_log.star_on_github')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/DataDirMigrationDialog.tsx",
+    "galleryLine": 339,
+    "line": 339,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "AlertDialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={!completed && !canStart} onClick={() => void (completed ? restart() : startMigration()) } >",
+    "body": " {t( completed ? 'data_dir_migration.restart_now' : START_LABEL_KEYS[mode] )} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 275,
+    "line": 275,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={legacyChoicePending} onClick={() => { setLegacyChoicePending(true); void confirmLegacyDatabaseMigration().finally( () => { setLegacyChoicePending(false); } ); }} >",
+    "body": " {t('dialog.system.action.migrate_and_restart')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 304,
+    "line": 304,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" onClick={() => { void retryDatabaseUpgrade(); }} >",
+    "body": " {t('common.action.retry')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 315,
+    "line": 315,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" onClick={() => { void restartApplication(); }} >",
+    "body": " {t('message.database.restart_app')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/LaunchOptionsDialog.tsx",
+    "galleryLine": 246,
+    "line": 246,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={loading} onClick={() => { handleSave(); }} >",
+    "body": " <SaveIcon data-icon=\"inline-start\" /> {t('dialog.launch_options.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 439,
+    "line": 439,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={loading || !selectedBackup} onClick={() => { handleRestoreBackup(); }} >",
+    "body": " {t('dialog.registry_backup.restore')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/UpdaterDialog.tsx",
+    "galleryLine": 385,
+    "line": 385,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={ !latestRelease || (!hasNewerRelease && !isChangingChannel) || loading || showDownloadProgress } onClick={() => { handleInstallUpdate(); }} >",
+    "body": " {t('dialog.system.action.install_and_restart')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/UpdaterDialog.tsx",
+    "galleryLine": 400,
+    "line": 400,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={loading || !latestRelease} onClick={() => { handleOpenReleasePage(); }} >",
+    "body": " {t( isChangingChannel ? `dialog.vrcx_updater.channel.download_${selectedChannel}` : 'nav_menu.update' )} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/system-dialogs/VRChatConfigDialog.tsx",
+    "galleryLine": 796,
+    "line": 796,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={loading} onClick={() => { handleSave(); }} >",
+    "body": " <SaveIcon data-icon=\"inline-start\" /> {t('dialog.config_json.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 662,
+    "line": 662,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={loading || saving || !baseUrlValid} onClick={saveDraft} >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 370,
+    "line": 370,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" disabled={loading || includedCount === 0} onClick={() => { exportNotes(); }} >",
+    "body": " {t('dialog.note_export.export')} {includedCount > 0 ? ( <span className=\"bg-primary-foreground/20 ml-1.5 rounded-full px-1.5 text-xs tabular-nums\"> {includedCount} </span> ) : null} "
+  },
+  {
+    "id": "B076",
+    "file": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx",
+    "galleryLine": 538,
+    "line": 538,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" disabled={disabled || startingManualBackup} onClick={() => { void startManualBackup(); }} >",
+    "body": " <SaveIcon data-icon=\"inline-start\" /> {t('profile_backup.backup_now')} "
+  },
+  {
+    "id": "B076",
+    "file": "components/media/ImageCropDialog.tsx",
+    "galleryLine": 805,
+    "line": 805,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button disabled={isConfirming || !file} onClick={() => { confirmCrop(); }} >",
+    "body": " {isConfirming ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <Upload data-icon=\"inline-start\" /> )} {t('message.image.action.upload')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/charts/components/mutual-friends/ManualRelationsControl.tsx",
+    "galleryLine": 120,
+    "line": 120,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" disabled={!canAdd} onClick={addRelation} >",
+    "body": " Add "
+  },
+  {
+    "id": "B076",
+    "file": "features/favorites/components/FavoriteExportDialog.tsx",
+    "galleryLine": 262,
+    "line": 262,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" disabled={ remoteDetailsLoading || !items.length || !selectedFields.length } onClick={() => { copyExportContent(); }} >",
+    "body": " {t('common.actions.copy')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/favorites/components/FavoriteShareCollectionDialog.tsx",
+    "galleryLine": 190,
+    "line": 190,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" onClick={onCopy}>",
+    "body": " <CopyIcon data-icon=\"inline-start\" /> {t('view.favorite.share_collection.action.copy_share_url')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/favorites/components/FavoriteShareCollectionDialog.tsx",
+    "galleryLine": 288,
+    "line": 288,
+    "drift": 0,
+    "ancestors": [
+      "FieldGroup",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" disabled={ sharing || worldDetailsLoading || !title.trim() || !worldCount } onClick={onCreate} >",
+    "body": " {sharing || worldDetailsLoading ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <Share2Icon data-icon=\"inline-start\" /> )} <span> {t('view.favorite.share_collection.action.share')} </span> "
+  },
+  {
+    "id": "B076",
+    "file": "features/feed/columns/FeedColumnsManagerDialog.tsx",
+    "galleryLine": 636,
+    "line": 636,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "DialogClose"
+    ],
+    "opening": "<Button type=\"button\">",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/my-avatars/ManageAvatarTagsDialog.tsx",
+    "galleryLine": 299,
+    "line": 299,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saving || !avatarId} onClick={() => onSave({ avatarId, tags: tagEntries })} >",
+    "body": " <SaveIcon data-icon=\"inline-start\" /> {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/SettingsViewParts.tsx",
+    "galleryLine": 300,
+    "line": 300,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" onClick={() => { save(); }} >",
+    "body": " {t('dialog.alertdialog.ok')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/TrayShortcutSetting.tsx",
+    "galleryLine": 346,
+    "line": 346,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button disabled={ pending || !recordingReady || recordingFailed || !binding || checking || Boolean(error) } onClick={() => { if (binding) void onSave(binding); }} >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/CustomFontDialog.tsx",
+    "galleryLine": 392,
+    "line": 392,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={saveDisabled} onClick={handleSave} >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/GameLogImportDialog.tsx",
+    "galleryLine": 231,
+    "line": 231,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" onClick={() => onOpenChange(false)} >",
+    "body": " {t(`${keyPrefix}.done`)} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/GameLogImportDialog.tsx",
+    "galleryLine": 247,
+    "line": 247,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={running || !importable} onClick={() => void runImport()} >",
+    "body": " {t(`${keyPrefix}.import`)} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/TableLimitsDialog.tsx",
+    "galleryLine": 184,
+    "line": 184,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={tableLimitsSaveDisabled} onClick={() => { saveTableLimitsDialog(); }} >",
+    "body": " {t('prompt.table_entries_settings.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/TranslationApiDialog.tsx",
+    "galleryLine": 547,
+    "line": 547,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={integrationStatus.translation === 'running'} onClick={() => { saveTranslationApiConfig(); }} >",
+    "body": " {t('dialog.translation_api.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx",
+    "galleryLine": 654,
+    "line": 654,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" onClick={saveDraft} disabled={!definitionsLoaded} >",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "features/settings/components/settings-dialogs/YoutubeApiDialog.tsx",
+    "galleryLine": 80,
+    "line": 80,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" disabled={integrationStatus.youtube === 'running'} onClick={() => { saveYoutubeApiKey(); }} >",
+    "body": " {t('dialog.youtube_api.save')} "
+  },
+  {
+    "id": "B076",
+    "file": "ui/shadcn/alert-dialog.tsx",
+    "galleryLine": 174,
+    "line": 174,
+    "drift": 0,
+    "ancestors": [
+      null
+    ],
+    "opening": "<Button variant={variant} size={size} />",
+    "body": ""
+  },
+  {
+    "id": "B076",
+    "file": "ui/shadcn/alert-dialog.tsx",
+    "galleryLine": 191,
+    "line": 191,
+    "drift": 0,
+    "ancestors": [
+      null
+    ],
+    "opening": "<Button variant={variant} size={size} />",
+    "body": ""
+  },
+  {
+    "id": "B077",
+    "file": "components/dialogs/AvatarOwnerEditDialogs.tsx",
+    "galleryLine": 89,
+    "line": 89,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto min-w-0 flex-1 justify-start p-1.5 text-left\" aria-pressed={selected} onClick={onToggle} >",
+    "body": " {imageUrl ? ( <FadeInImage src={imageUrl} alt=\"\" className=\"mr-2.5 size-9 shrink-0 rounded-full object-cover\" /> ) : ( <div className=\"bg-muted mr-2.5 flex size-9 shrink-0 items-center justify-center rounded-full\"> <PersonStandingIcon data-icon=\"inline-start\" className=\"text-muted-foreground\" /> </div> )} <span className=\"min-w-0 flex-1 overflow-hidden\"> <span className=\"block truncate leading-5 font-medium\"> {avatar.name || avatar.id} </span> <span className=\"text-muted-foreground block truncate text-xs\"> {avatar.releaseStatus || 'unknown'} </span> <span className=\"text-muted-foreground bloc"
+  },
+  {
+    "id": "B077",
+    "file": "components/dialogs/ProfileMediaPanel.tsx",
+    "galleryLine": 100,
+    "line": 100,
+    "drift": 0,
+    "ancestors": [
+      "TileShell"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" title={`${t(section.useKey)}: ${displayName || file.id}`} disabled={disabled || isMutating || isCurrent} onClick={() => onUse(section.fieldName, file.id)} />",
+    "body": ""
+  },
+  {
+    "id": "B077",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx",
+    "galleryLine": 281,
+    "line": 281,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Table",
+      "TableBody",
+      "DataTableRow",
+      "DataTableCell"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"absolute inset-0 h-full w-full rounded-none p-0 hover:bg-(--state-hover-surface)\" onClick={() => onOpenDetails(row) } >",
+    "body": " <span className=\"sr-only\"> {t( 'dialog.previous_instances.description.open_instance_details' )} </span> "
+  },
+  {
+    "id": "B077",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx",
+    "galleryLine": 273,
+    "line": 273,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto max-w-full justify-start p-0 text-left text-xs hover:bg-transparent\" onClick={() => openUserDialog({ userId, title: displayName || undefined, seedData: queriedUser || knownUser || null }) } >",
+    "body": " <span className=\"truncate\">{displayName || userId}</span> "
+  },
+  {
+    "id": "B077",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx",
+    "galleryLine": 308,
+    "line": 308,
+    "drift": 0,
+    "ancestors": [],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto max-w-full justify-start p-0 text-left text-xs hover:bg-transparent\" onClick={() => openGroupDialog({ groupId, title: displayName || undefined }) } >",
+    "body": " <span className=\"truncate\">{displayName}</span> "
+  },
+  {
+    "id": "B077",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx",
+    "galleryLine": 377,
+    "line": 377,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto max-w-full min-w-0 justify-start p-0 text-left hover:bg-transparent\" onClick={() => { if (userId) { openUserDialog({ userId, title: displayName || undefined, seedData: knownUser || null }); return; } openGameLogUser({ ...player, displayName }, t); }} >",
+    "body": " <span className=\"truncate\">{displayName || userId}</span> "
+  },
+  {
+    "id": "B077",
+    "file": "components/hosts/tools-dialogs/GroupCalendarDialog.tsx",
+    "galleryLine": 742,
+    "line": 742,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "ScrollArea",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" data-ui-role=\"disclosure\" aria-expanded={ !collapsedGroups[group.groupId] } className=\"justify-start gap-2 px-1\" onClick={() => setCollapsedGroups( (current) => ({ ...current, [group.groupId]: !current[ group.groupId ] }) ) } >",
+    "body": " <ChevronDownIcon data-icon=\"inline-start\" className={cn( 'transition-transform', collapsedGroups[ group.groupId ] && '-rotate-90' )} /> {groupIconUrl(group.groupId) ? ( <FadeInImage src={groupIconUrl( group.groupId )} alt=\"\" loading=\"lazy\" className=\"size-5 rounded-sm object-cover\" /> ) : null} <span className=\"truncate\"> {group.groupName} </span> "
+  },
+  {
+    "id": "B077",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 491,
+    "line": 491,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"h-auto min-w-0 justify-start truncate p-0 font-medium hover:bg-transparent\" onClick={() => openUserDialog({ userId: row.id, title: row.name }) } >",
+    "body": " {row.name} "
+  },
+  {
+    "id": "B077",
+    "file": "features/favorites/components/FavoriteShareCollectionDialog.tsx",
+    "galleryLine": 196,
+    "line": 196,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" onClick={onOpenManage}>",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> {t('view.favorite.share_collection.action.open_manage')} "
+  },
+  {
+    "id": "B078",
+    "file": "components/dialogs/BoopEmojiDialog.tsx",
+    "galleryLine": 428,
+    "line": 428,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "Tabs",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon-sm\" aria-label={t('common.actions.refresh')} title={t('common.actions.refresh')} disabled={refreshable.loading || sending} onClick={refreshable.load} >",
+    "body": " <RefreshCcwIcon /> "
+  },
+  {
+    "id": "B078",
+    "file": "components/dialogs/previous-instances-table/InstanceHistoryListPanel.tsx",
+    "galleryLine": 361,
+    "line": 361,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon-sm\" className=\"ml-auto\" aria-label={openFullLabel} onClick={() => onOpenFullHistory(query)} >",
+    "body": " <ArrowUpRightIcon className=\"size-4\" /> "
+  },
+  {
+    "id": "B078",
+    "file": "components/hosts/tools-dialogs/AppLauncherDialog.tsx",
+    "galleryLine": 767,
+    "line": 767,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "ScrollArea",
+      "FieldGroup",
+      "Field",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon-sm\" disabled={saving} aria-label={t( 'dialog.app_launcher.choose_target' )} onClick={onBrowseTarget} >",
+    "body": " <FolderOpenIcon /> "
+  },
+  {
+    "id": "B078",
+    "file": "features/feed/columns/FeedColumnsManagerDialog.tsx",
+    "galleryLine": 243,
+    "line": 243,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon-sm\" aria-label={t('view.feed.columns.add')} disabled={ draftColumns.length >= MAX_FEED_COLUMNS } onClick={addColumn} >",
+    "body": " <PlusIcon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B078",
+    "file": "features/my-avatars/ManageAvatarTagsDialog.tsx",
+    "galleryLine": 230,
+    "line": 230,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"outline\" className={ selected ? 'ring-ring size-6 p-0 ring-2 ring-offset-2' : 'size-6 p-0' } data-ui-role=\"color-swatch\" style={{ backgroundColor: color.bg.replace( '/ 0.2)', '/ 1)' ) }} aria-label={ color.label } aria-pressed={ selected } disabled={ saving } data-selected={ selected ? 'true' : undefined } onClick={() => setTagColor( entry.tag, color ) } />",
+    "body": ""
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/BoopEmojiDialog.tsx",
+    "galleryLine": 487,
+    "line": 487,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" className=\"sm:mr-auto\" disabled={sending} onClick={() => { onOpenChange(false); navigate('/tools/inventory'); }} >",
+    "body": " {t('dialog.boop_dialog.emoji_manager')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/FriendListUserLoadDialog.tsx",
+    "galleryLine": 64,
+    "line": 64,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={onMinimize} >",
+    "body": " {t('nativeShell.menu.window.minimize')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/InstanceInviteDialog.tsx",
+    "galleryLine": 469,
+    "line": 469,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={sending} onClick={() => onOpenChange?.(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/WorldOwnerEditDialogs.tsx",
+    "galleryLine": 389,
+    "line": 389,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={saving} onClick={() => onOpenChange?.(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/group-dialog/GroupPostEditorDialog.tsx",
+    "galleryLine": 332,
+    "line": 332,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "Field",
+      "div"
+    ],
+    "opening": "<Button key={option.id} type=\"button\" variant=\"outline\" disabled={submitting} className={cn( 'h-auto w-full min-w-0 justify-start gap-2 p-2 text-left text-sm', form.imageId === option.id && 'border-primary' )} onClick={() => updateForm({ imageId: option.id }) } >",
+    "body": " {option.image ? ( <FadeInImage src={option.image} alt=\"\" className=\"size-12 shrink-0 rounded object-cover\" /> ) : ( <span className=\"text-muted-foreground flex size-12 shrink-0 items-center justify-center rounded border\"> <ImageIcon /> </span> )} <span className=\"min-w-0\"> <span className=\"block truncate font-medium\"> {option.label} </span> <span className=\"text-muted-foreground block truncate font-mono text-xs\"> {option.id} </span> </span> "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/group-dialog/GroupProfileEditDialog.tsx",
+    "galleryLine": 256,
+    "line": 256,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={saving} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 639,
+    "line": 639,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading || sending} onClick={() => { loadRows(); }} >",
+    "body": " <RefreshCcwIcon data-icon=\"inline-start\" /> {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 351,
+    "line": 351,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={busy} onClick={onCancel} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 527,
+    "line": 527,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={busy} onClick={onCancel} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx",
+    "galleryLine": 228,
+    "line": 228,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={sending} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 378,
+    "line": 378,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => moderation.setPendingKickGroupId( group.groupId ) } >",
+    "body": " {t( 'dialog.group_member_moderation.kick' )} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 532,
+    "line": 532,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={!detailedGroupId} onClick={openDetailedManagement} >",
+    "body": " {t('dialog.user.group_moderation.detailed')} <ArrowRightIcon data-icon=\"inline-end\" /> "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/user-dialog/components/UserNoteMemoDialog.tsx",
+    "galleryLine": 93,
+    "line": 93,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={saving} onClick={onCancel} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 907,
+    "line": 907,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={submitting} onClick={() => onCopy(legacyCreated)} >",
+    "body": " {t('dialog.world.info.copy_url')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 915,
+    "line": 915,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={submitting} onClick={() => onSelfInvite(legacyCreated)} >",
+    "body": " {t('dialog.world.label.self_invite')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 923,
+    "line": 923,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={submitting || inviteDisabled} onClick={() => onInvite(legacyCreated)} >",
+    "body": " {t('dialog.world.action.invite')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 951,
+    "line": 951,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={submitting} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/LinuxRenderingTrialHost.tsx",
+    "galleryLine": 86,
+    "line": 86,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button variant=\"outline\" disabled={busy} onClick={() => { void resolve(false); }} >",
+    "body": " {t('linux_rendering.restore')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 149,
+    "line": 149,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={handleCancel} >",
+    "body": " {renderedAlertDialog.cancelText || t('dialog.alertdialog.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 159,
+    "line": 159,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={handleAlternative} >",
+    "body": " {renderedAlertDialog.alternativeText} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 221,
+    "line": 221,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => handlePromptCancel(promptDialog.value) } >",
+    "body": " {promptDialog.cancelText || t('dialog.alertdialog.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 318,
+    "line": 318,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => handleOtpCancel(otpDialog.value)} >",
+    "body": " {otpDialog.cancelText || t('dialog.alertdialog.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/ChangelogDialog.tsx",
+    "galleryLine": 327,
+    "line": 327,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div",
+      "DialogClose"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\">",
+    "body": " {t('common.actions.close')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/DataDirMigrationDialog.tsx",
+    "galleryLine": 314,
+    "line": 314,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "AlertDialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={!copying || cancelling} onClick={() => void cancelMigration()} >",
+    "body": " {t( cancelling ? 'data_dir_migration.cancelling' : 'common.actions.cancel' )} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/DataDirMigrationDialog.tsx",
+    "galleryLine": 328,
+    "line": 328,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "AlertDialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={closeDialog} >",
+    "body": " {t( completed ? 'data_dir_migration.restart_later' : 'common.actions.cancel' )} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 264,
+    "line": 264,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={legacyChoicePending} onClick={() => { setLegacyChoicePending(true); void skipLegacyDatabaseMigration(); }} >",
+    "body": " {t('message.database.migration_skip')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 326,
+    "line": 326,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={isBusy} onClick={() => setDatabaseUpgradeState({ open: false }) } >",
+    "body": " {t('common.actions.close')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/LaunchOptionsDialog.tsx",
+    "galleryLine": 224,
+    "line": 224,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { openExternalLink(links.vrchatDocsLaunchOptions); }} >",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> {t('dialog.launch_options.vrchat_docs')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/LaunchOptionsDialog.tsx",
+    "galleryLine": 234,
+    "line": 234,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { openExternalLink( 'https://docs.unity3d.com/Manual/CommandLineArguments.html' ); }} >",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> {t('dialog.launch_options.unity_manual')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/ProfileBackupDialogs.tsx",
+    "galleryLine": 268,
+    "line": 268,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "AlertDialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { void cancelRestore(); }} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 379,
+    "line": 379,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading} onClick={() => { refreshBackups(); }} >",
+    "body": " {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 389,
+    "line": 389,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading} onClick={() => { handleCreateBackup(); }} >",
+    "body": " {t('dialog.registry_backup.backup')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 399,
+    "line": 399,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading || !selectedBackup} onClick={() => { handleDeleteBackup(); }} >",
+    "body": " {t('dialog.registry_backup.delete')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 409,
+    "line": 409,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading || !selectedBackup} onClick={() => { handleSaveBackupToFile(); }} >",
+    "body": " {t('dialog.registry_backup.save_to_file')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 419,
+    "line": 419,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading} onClick={() => { handleRestoreFromFile(); }} >",
+    "body": " {t('dialog.registry_backup.restore_from_file')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/system-dialogs/VRChatConfigDialog.tsx",
+    "galleryLine": 789,
+    "line": 789,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => onOpenChange(false)} >",
+    "body": " {t('dialog.config_json.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/GroupCalendarDialog.tsx",
+    "galleryLine": 575,
+    "line": 575,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading} onClick={() => { loadCalendar(true); }} >",
+    "body": " <RefreshCwIcon data-icon=\"inline-start\" /> {t('common.actions.refresh')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 655,
+    "line": 655,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => setView('list')} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 384,
+    "line": 384,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={loading} onClick={() => { refreshRows(); }} >",
+    "body": " <RefreshCwIcon data-icon=\"inline-start\" /> {t('dialog.note_export.refresh')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 397,
+    "line": 397,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { void cancelExport(); }} >",
+    "body": " {t('dialog.note_export.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx",
+    "galleryLine": 95,
+    "line": 95,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={cleanupRunning || !state.cleanupAllowed} onClick={onClear} >",
+    "body": " {t('profile_backup.clear_rollback')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx",
+    "galleryLine": 564,
+    "line": 564,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={disabled || validatingRestore} onClick={() => { void selectBackupToRestore(); }} >",
+    "body": " <RotateCcwIcon data-icon=\"inline-start\" /> {t('profile_backup.restore_from_backup')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/SyncWorkflowDialog.tsx",
+    "galleryLine": 204,
+    "line": 204,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={runWorkflow} disabled={snapshot.running || !hasCurrentAccount} >",
+    "body": " {snapshot.running ? t('workflow.running') : t('workflow.run')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/hosts/tools-dialogs/presence-automation/FriendMultiSelect.tsx",
+    "galleryLine": 68,
+    "line": 68,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" className=\"w-full justify-between font-normal\" disabled={disabled} aria-label={t('common.affinity.friend')} >",
+    "body": " <span className=\"truncate\">{triggerLabel}</span> <ChevronsUpDownIcon className=\"text-muted-foreground size-4\" /> "
+  },
+  {
+    "id": "B079",
+    "file": "components/media/ImageCropDialog.tsx",
+    "galleryLine": 798,
+    "line": 798,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button variant=\"outline\" disabled={isConfirming} onClick={() => onOpenChange?.(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 812,
+    "line": 812,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" className=\"border-dashed\" onClick={addFavoriteCollection} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t( 'side_panel.settings.custom_tabs.add_favorite_tab' )} "
+  },
+  {
+    "id": "B079",
+    "file": "features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx",
+    "galleryLine": 168,
+    "line": 168,
+    "drift": 0,
+    "ancestors": [
+      "Sheet",
+      "SheetContent",
+      "SheetFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={onResetLayoutAndHidden} >",
+    "body": " <RotateCcwIcon data-icon=\"inline-start\" /> {t('view.charts.mutual_friend.settings.reset_defaults')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/dashboard/components/DashboardViewParts.tsx",
+    "galleryLine": 280,
+    "line": 280,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" className=\"text-muted-foreground h-auto justify-start border-dashed p-3 text-left font-normal whitespace-normal\" onClick={() => onSelect('__none__')} >",
+    "body": " {t('view.dashboard.label.not_configured')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/favorites/components/FavoriteExportDialog.tsx",
+    "galleryLine": 255,
+    "line": 255,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.close')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/favorites/components/FavoriteShareCollectionDialog.tsx",
+    "galleryLine": 180,
+    "line": 180,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { void openExternalLink(url); }} >",
+    "body": " <ExternalLinkIcon data-icon=\"inline-start\" /> {t('view.favorite.share_collection.action.open_share_page')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/favorites/components/FavoriteShareCollectionDialog.tsx",
+    "galleryLine": 200,
+    "line": 200,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={onDone}>",
+    "body": " {t('view.favorite.share_collection.action.done')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/feed/columns/FeedColumnsManagerDialog.tsx",
+    "galleryLine": 626,
+    "line": 626,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={restorePresetColumns} >",
+    "body": " <RotateCcwIcon data-icon=\"inline-start\" /> {t('view.feed.columns.restore_preset')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/my-avatars/ManageAvatarTagsDialog.tsx",
+    "galleryLine": 169,
+    "line": 169,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "FieldGroup",
+      "Field",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={addTag} disabled={saving} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t('view.my_avatars.action.add')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/my-avatars/ManageAvatarTagsDialog.tsx",
+    "galleryLine": 291,
+    "line": 291,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={saving} onClick={() => onOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/privacy-lock/PrivacyLockPasswordDialog.tsx",
+    "galleryLine": 349,
+    "line": 349,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "form",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={submitting} onClick={() => handleOpenChange(false)} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/TrayShortcutSetting.tsx",
+    "galleryLine": 339,
+    "line": 339,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button variant=\"outline\" disabled={pending} onClick={onClose} >",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/AvatarProviderDialog.tsx",
+    "galleryLine": 137,
+    "line": 137,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => setAvatarProviderDialogOpen(false)} >",
+    "body": " {t('dialog.alertdialog.ok')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/CustomFontDialog.tsx",
+    "galleryLine": 385,
+    "line": 385,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => onOpenChange(false)} >",
+    "body": " {t('dialog.alertdialog.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/GameLogImportDialog.tsx",
+    "galleryLine": 239,
+    "line": 239,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={running} onClick={() => onOpenChange(false)} >",
+    "body": " {t('confirm.cancel_button')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/PurgeConfirmDialog.tsx",
+    "galleryLine": 132,
+    "line": 132,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={purgeInProgress} onClick={() => setPurgeDialogOpen(false)} >",
+    "body": " {t('confirm.cancel_button')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/TableLimitsDialog.tsx",
+    "galleryLine": 177,
+    "line": 177,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => setTableLimitsDialogOpen(false)} >",
+    "body": " {t('prompt.table_entries_settings.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/TranslationApiDialog.tsx",
+    "galleryLine": 495,
+    "line": 495,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { setTranslationApiDialogOpen(false); openLlmEndpointsManager(); }} >",
+    "body": " {t('assistant.runtime.manage_endpoints')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/TranslationApiDialog.tsx",
+    "galleryLine": 507,
+    "line": 507,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { openExternalLink( 'https://translatepress.com/docs/automatic-translation/generate-google-api-key/' ); }} >",
+    "body": " {t('dialog.translation_api.guide')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/TranslationApiDialog.tsx",
+    "galleryLine": 520,
+    "line": 520,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { openExternalLink( 'https://www.deepl.com/pro-api' ); }} >",
+    "body": " {t('dialog.translation_api.guide')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/TranslationApiDialog.tsx",
+    "galleryLine": 534,
+    "line": 534,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={ integrationStatus.translation === 'running' } onClick={() => { testTranslationApiConfig(); }} >",
+    "body": " {t('dialog.translation_api.test')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx",
+    "galleryLine": 637,
+    "line": 637,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={resetRecommended} disabled={!definitionsLoaded} >",
+    "body": " <RotateCcwIcon data-icon=\"inline-start\" /> {t('common.actions.reset')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx",
+    "galleryLine": 649,
+    "line": 649,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div",
+      "DialogClose"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\">",
+    "body": " {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx",
+    "galleryLine": 695,
+    "line": 695,
+    "drift": 0,
+    "ancestors": [
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" className=\"justify-between\" disabled={disabled} >",
+    "body": " <span className=\"min-w-0 truncate\">{summary}</span> <ChevronDownIcon data-icon=\"inline-end\" /> "
+  },
+  {
+    "id": "B079",
+    "file": "features/settings/components/settings-dialogs/YoutubeApiDialog.tsx",
+    "galleryLine": 69,
+    "line": 69,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={() => { openExternalLink( 'https://smashballoon.com/doc/youtube-api-key/' ); }} >",
+    "body": " {t('dialog.youtube_api.guide')} "
+  },
+  {
+    "id": "B079",
+    "file": "ui/shadcn/dialog.tsx",
+    "galleryLine": 133,
+    "line": 133,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      null
+    ],
+    "opening": "<Button variant=\"outline\" />",
+    "body": ""
+  },
+  {
+    "id": "B080",
+    "file": "components/dialogs/ProfileDetailsFields.tsx",
+    "galleryLine": 166,
+    "line": 166,
+    "drift": 0,
+    "ancestors": [
+      "Field",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"xs\" disabled={busy} onClick={() => onChange([...rows, ''])} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {addLabel} "
+  },
+  {
+    "id": "B080",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 268,
+    "line": 268,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "Field",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"xs\" disabled={busy} onClick={onSavePreset} >",
+    "body": " <BookmarkIcon data-icon=\"inline-start\" /> {t('dialog.user.action.save_preset')} "
+  },
+  {
+    "id": "B080",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 296,
+    "line": 296,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "Field",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"xs\" className=\"min-w-0 justify-start rounded-r-none border-r-0\" disabled={busy} aria-label={t( 'accessibility.apply_status_preset', { preset: label } )} onClick={() => { setDraft({ status: presetStatus, statusDescription: presetDescription }); }} >",
+    "body": " <i className={userStatusIndicatorClassName( presetStatus, { showOffline: true, className: 'shrink-0' } )} /> <span className=\"min-w-0 truncate\"> {label} </span> "
+  },
+  {
+    "id": "B080",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 752,
+    "line": 752,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"xs\" variant=\"outline\" disabled={disabled} onClick={onDetect} >",
+    "body": " {t('view.tools.llm_endpoints.detect_models')} "
+  },
+  {
+    "id": "B080",
+    "file": "features/assistant/AssistantDialog.tsx",
+    "galleryLine": 492,
+    "line": 492,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "ResizablePanelGroup",
+      "ResizablePanel",
+      "div",
+      "AssistantTranscript",
+      "Empty",
+      "EmptyContent"
+    ],
+    "opening": "<Button key={prompt} type=\"button\" size=\"xs\" variant=\"outline\" disabled={notConfigured} onClick={() => sendMessage(prompt) } className=\"h-auto max-w-full whitespace-normal\" >",
+    "body": " {prompt} "
+  },
+  {
+    "id": "B080",
+    "file": "features/assistant/AssistantDialog.tsx",
+    "galleryLine": 515,
+    "line": 515,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "ResizablePanelGroup",
+      "ResizablePanel",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"xs\" variant=\"outline\" onClick={openAssistantSettings} >",
+    "body": " {t('assistant.open_settings')} "
+  },
+  {
+    "id": "B081",
+    "file": "components/dialogs/UserActivityPanelImpl.tsx",
+    "galleryLine": 186,
+    "line": 186,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" className=\"rounded-full\" disabled={loading} aria-label={'Refresh activity data'} onClick={() => { refreshData({ forceRefresh: true }); }} >",
+    "body": " {loading ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <RefreshCwIcon data-icon=\"inline-start\" /> )} "
+  },
+  {
+    "id": "B081",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 286,
+    "line": 286,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-sm\" variant=\"ghost\" onClick={() => onOpenChange(false)} >",
+    "body": " <XIcon /> <span className=\"sr-only\"> {t('common.actions.close')} </span> "
+  },
+  {
+    "id": "B081",
+    "file": "components/hosts/LaunchDialogHost.tsx",
+    "galleryLine": 530,
+    "line": 530,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'dialog.launch.more_copy_options' )} >",
+    "body": " <MoreHorizontalIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "components/hosts/tools-dialogs/GroupCalendarDialog.tsx",
+    "galleryLine": 515,
+    "line": 515,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'dialog.group_calendar.previous_month' )} onClick={() => handleCalendarMonthChange( subMonths(visibleMonthDate, 1) ) } >",
+    "body": " <ChevronLeftIcon /> "
+  },
+  {
+    "id": "B081",
+    "file": "components/hosts/tools-dialogs/GroupCalendarDialog.tsx",
+    "galleryLine": 536,
+    "line": 536,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'dialog.group_calendar.next_month' )} onClick={() => handleCalendarMonthChange( addMonths(visibleMonthDate, 1) ) } >",
+    "body": " <ChevronRightIcon /> "
+  },
+  {
+    "id": "B081",
+    "file": "components/media/ImageCropToolbar.tsx",
+    "galleryLine": 62,
+    "line": 62,
+    "drift": 0,
+    "ancestors": [
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" onClick={onClick} disabled={model.disabled} aria-label={label} aria-pressed={active} className={cn( 'text-muted-foreground hover:text-foreground', active && 'bg-muted text-foreground' )} >",
+    "body": " {icon} "
+  },
+  {
+    "id": "B081",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 502,
+    "line": 502,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "DndContext",
+      "SortableContext",
+      "div",
+      "SortableTabRow",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" className=\"text-muted-foreground shrink-0 cursor-grab touch-none active:cursor-grabbing\" aria-label={tabActionLabel( t, 'drag_value', label )} {...dragHandleProps} >",
+    "body": " <GripVerticalIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 663,
+    "line": 663,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "DndContext",
+      "SortableContext",
+      "div",
+      "SortableTabRow",
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" className=\"text-muted-foreground shrink-0\" aria-label={ label } >",
+    "body": " <MoreVerticalIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx",
+    "galleryLine": 50,
+    "line": 50,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t('accessibility.move_item_up', { item: group.label })} disabled={index === 0} onClick={() => onMove(index, -1)} >",
+    "body": " <ArrowUpIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx",
+    "galleryLine": 62,
+    "line": 62,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t('accessibility.move_item_down', { item: group.label })} disabled={ index === favoriteGroupOrderDraft.length - 1 } onClick={() => onMove(index, 1)} >",
+    "body": " <ArrowDownIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx",
+    "galleryLine": 77,
+    "line": 77,
+    "drift": 0,
+    "ancestors": [
+      "Sheet",
+      "SheetTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'view.charts.mutual_friend.settings.title' )} >",
+    "body": " <Settings2Icon /> "
+  },
+  {
+    "id": "B081",
+    "file": "features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx",
+    "galleryLine": 180,
+    "line": 180,
+    "drift": 0,
+    "ancestors": [
+      "Sheet",
+      "SheetContent",
+      "SheetClose"
+    ],
+    "opening": "<Button variant=\"ghost\" className=\"absolute top-3 right-3\" size=\"icon-sm\" />",
+    "body": ""
+  },
+  {
+    "id": "B081",
+    "file": "features/feed/columns/FeedColumnsManagerDialog.tsx",
+    "galleryLine": 283,
+    "line": 283,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t('common.actions.delete')} onClick={() => deleteColumn(column.id)} >",
+    "body": " <Trash2Icon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "features/notifications/VrcNotificationCenterHost.tsx",
+    "galleryLine": 168,
+    "line": 168,
+    "drift": 0,
+    "ancestors": [
+      "Sheet",
+      "SheetContent",
+      "SheetHeader",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'side_panel.notification_center.mark_all_read' )} disabled={!canMarkAllSeen} onClick={markAllRead} >",
+    "body": " <CheckCheckIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B081",
+    "file": "features/notifications/VrcNotificationCenterHost.tsx",
+    "galleryLine": 191,
+    "line": 191,
+    "drift": 0,
+    "ancestors": [
+      "Sheet",
+      "SheetContent",
+      "SheetHeader",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'view.notification.refresh_tooltip' )} disabled={ loadStatus === 'running' } onClick={() => { refreshForCurrentUser().catch( (error: unknown) => { toast.add({ type: 'error', title: userFacingErrorMessage( error, t( 'host.vrc_notification_center.toast.failed_to_refresh_notifications' ) ) }); } ); }} >",
+    "body": " {loadStatus === 'running' ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <RefreshCcwIcon data-icon=\"inline-start\" /> )} "
+  },
+  {
+    "id": "B081",
+    "file": "features/notifications/VrcNotificationCenterHost.tsx",
+    "galleryLine": 231,
+    "line": 231,
+    "drift": 0,
+    "ancestors": [
+      "Sheet",
+      "SheetContent",
+      "SheetHeader",
+      "div",
+      "div",
+      "SheetClose"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'common.actions.close' )} />",
+    "body": ""
+  },
+  {
+    "id": "B081",
+    "file": "ui/shadcn/dialog.tsx",
+    "galleryLine": 84,
+    "line": 84,
+    "drift": 0,
+    "ancestors": [
+      "DialogPortal",
+      null,
+      null
+    ],
+    "opening": "<Button variant=\"ghost\" className=\"absolute top-2 right-2\" size=\"icon-sm\" />",
+    "body": ""
+  },
+  {
+    "id": "B082",
+    "file": "components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx",
+    "galleryLine": 203,
+    "line": 203,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={!input.trim() || importing} onClick={startImport} >",
+    "body": " {t('dialog.group_member_moderation.import_bans_start')} "
+  },
+  {
+    "id": "B082",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 567,
+    "line": 567,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={ sending || (resolvedMode === 'respond' && !editMessage.trim()) } onClick={() => { if (resolvedMode === 'respond') { applyRow( editingRow, editMessage.trim() ); return; } saveEdit(); }} >",
+    "body": " {sending ? ( <Spinner data-icon=\"inline-start\" /> ) : resolvedMode === 'respond' ? ( <SendIcon data-icon=\"inline-start\" /> ) : null} {resolvedMode === 'respond' ? t('dialog.edit_send_invite_message.send') : t('dialog.edit_invite_message.save')} "
+  },
+  {
+    "id": "B082",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 620,
+    "line": 620,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={sending} onClick={() => { applyRow(confirmRow); }} >",
+    "body": " {sending ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <SendIcon data-icon=\"inline-start\" /> )} {t('common.actions.confirm')} "
+  },
+  {
+    "id": "B082",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 431,
+    "line": 431,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={openAddView} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t('view.tools.llm_endpoints.add')} "
+  },
+  {
+    "id": "B082",
+    "file": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx",
+    "galleryLine": 355,
+    "line": 355,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "Alert",
+      "AlertDescription",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={ statusActionRunning } onClick={() => { void runStatusAction( 'retry' ); }} >",
+    "body": " {t( 'profile_backup.retry_save' )} "
+  },
+  {
+    "id": "B082",
+    "file": "components/hosts/tools-dialogs/ProfileBackupDialog.tsx",
+    "galleryLine": 373,
+    "line": 373,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "Alert",
+      "AlertDescription",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={ statusActionRunning } onClick={() => { void runStatusAction( 'dismiss' ); }} >",
+    "body": " {t( 'profile_backup.dismiss_error' )} "
+  },
+  {
+    "id": "B082",
+    "file": "components/hosts/tools-dialogs/presence-automation/AutomationRuleLayout.tsx",
+    "galleryLine": 82,
+    "line": 82,
+    "drift": 0,
+    "ancestors": [
+      "section",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={disabled} onClick={onAdd} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {addLabel} "
+  },
+  {
+    "id": "B082",
+    "file": "components/hosts/tools-dialogs/presence-automation/AutomationRuleLayout.tsx",
+    "galleryLine": 105,
+    "line": 105,
+    "drift": 0,
+    "ancestors": [
+      "section",
+      "ScrollArea",
+      "div",
+      "Empty",
+      "EmptyContent"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={disabled} onClick={onAdd} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {addLabel} "
+  },
+  {
+    "id": "B082",
+    "file": "components/search/AvatarProviderSettingsDialog.tsx",
+    "galleryLine": 181,
+    "line": 181,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" disabled={isSaving} onClick={addProvider} >",
+    "body": " <PlusIcon data-icon=\"inline-start\" /> {t('dialog.avatar_database_provider.add_provider')} "
+  },
+  {
+    "id": "B082",
+    "file": "components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx",
+    "galleryLine": 849,
+    "line": 849,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={save}>",
+    "body": " {t('common.actions.save')} "
+  },
+  {
+    "id": "B082",
+    "file": "components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx",
+    "galleryLine": 88,
+    "line": 88,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={onConfirm}>",
+    "body": " {t('common.actions.confirm')} "
+  },
+  {
+    "id": "B082",
+    "file": "features/assistant/AssistantDialog.tsx",
+    "galleryLine": 479,
+    "line": 479,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "ResizablePanelGroup",
+      "ResizablePanel",
+      "div",
+      "AssistantTranscript",
+      "Empty",
+      "EmptyContent"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={ openAssistantSettings } >",
+    "body": " {t( 'assistant.open_settings' )} "
+  },
+  {
+    "id": "B083",
+    "file": "components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx",
+    "galleryLine": 212,
+    "line": 212,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"destructive\" onClick={cancelImport} >",
+    "body": " <Spinner /> {t('common.actions.cancel')} "
+  },
+  {
+    "id": "B083",
+    "file": "components/hosts/system-dialogs/VRChatConfigDialog.tsx",
+    "galleryLine": 588,
+    "line": 588,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "FieldGroup",
+      "FieldSet",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" size=\"sm\" disabled={loading} onClick={() => { handleDeleteAllCache(); }} >",
+    "body": " <Trash2Icon data-icon=\"inline-start\" /> {t('dialog.config_json.delete_cache')} "
+  },
+  {
+    "id": "B083",
+    "file": "components/hosts/tools-dialogs/AppLauncherDialog.tsx",
+    "galleryLine": 902,
+    "line": 902,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "ScrollArea",
+      "FieldGroup"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" size=\"sm\" disabled={saving} className=\"self-start\" onClick={() => onRemove(entry)} >",
+    "body": " <Trash2Icon data-icon=\"inline-start\" /> {t('dialog.app_launcher.remove_app')} "
+  },
+  {
+    "id": "B084",
+    "file": "components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx",
+    "galleryLine": 238,
+    "line": 238,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" variant=\"secondary\" className=\"mt-2 self-start\" onClick={() => setErrors('')} >",
+    "body": " {t( 'dialog.group_member_moderation.import_bans_clear_errors' )} "
+  },
+  {
+    "id": "B084",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 529,
+    "line": 529,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" aria-pressed={draft.clearKey} variant={ draft.clearKey ? 'secondary' : 'outline' } onClick={() => setDraft((current) => ({ ...current, clearKey: !current.clearKey })) } >",
+    "body": " {t( 'view.tools.llm_endpoints.clear_key' )} "
+  },
+  {
+    "id": "B084",
+    "file": "components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx",
+    "galleryLine": 80,
+    "line": 80,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" size=\"sm\" onClick={onReset} >",
+    "body": " {t('common.actions.reset')} "
+  },
+  {
+    "id": "B085",
+    "file": "components/dialogs/invite-message/InviteMessagePanel.tsx",
+    "galleryLine": 458,
+    "line": 458,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Table",
+      "TableBody",
+      "DataTableRow",
+      "DataTableCell",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-xs\" aria-label={t( 'dialog.invite_message.dynamic.edit_slot_value', { value: row.slot } )} disabled={ sending || editDisabled } onClick={( event: MouseEvent<HTMLButtonElement> ) => { event.stopPropagation(); beginEdit(row); }} >",
+    "body": " <PencilIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B085",
+    "file": "components/dialogs/previous-instances-table/InstanceHistoryListPanel.tsx",
+    "galleryLine": 153,
+    "line": 153,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant=\"ghost\" aria-label={t( 'dialog.previous_instances.action.more_actions' )} >",
+    "body": " <MoreHorizontalIcon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B085",
+    "file": "components/hosts/system-dialogs/VRChatConfigDialog.tsx",
+    "galleryLine": 548,
+    "line": 548,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "FieldGroup",
+      "FieldSet",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-xs\" disabled={loading} aria-label={t( 'dialog.config_json.refresh' )} onClick={() => { handleRefreshCacheSize(); }} >",
+    "body": " <RefreshCwIcon data-icon=\"icon\" className={cn( loading && 'animate-spin' )} /> "
+  },
+  {
+    "id": "B085",
+    "file": "components/hosts/tools-dialogs/LlmEndpointsDialog.tsx",
+    "galleryLine": 779,
+    "line": 779,
+    "drift": 0,
+    "ancestors": [
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant=\"ghost\" aria-label={label} disabled={disabled} onClick={onClick} />",
+    "body": ""
+  },
+  {
+    "id": "B085",
+    "file": "components/hosts/tools-dialogs/presence-automation/AutomationRuleLayout.tsx",
+    "galleryLine": 181,
+    "line": 181,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-xs\" aria-label={removeLabel} disabled={disabled} onClick={onRemove} >",
+    "body": " <Trash2Icon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B085",
+    "file": "features/settings/components/SettingsViewParts.tsx",
+    "galleryLine": 207,
+    "line": 207,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "div",
+      "Badge"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-xs\" aria-label={t( 'accessibility.remove_value', { value: size } )} onClick={() => removePageSize(size)} >",
+    "body": " <XIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B086",
+    "file": "components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx",
+    "galleryLine": 637,
+    "line": 637,
+    "drift": 0,
+    "ancestors": [
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant={variant} className=\"shrink-0\" aria-label={`${label}: ${normalizedWorldName}`} onClick={() => { void copyTextToClipboard(normalizedWorldName, { successMessage: t( 'dialog.world.dynamic.value_copied', { value: t('dialog.world.info.name') } ) }); }} >",
+    "body": " <CopyIcon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B087",
+    "file": "components/dialogs/user-dialog/UserSelfEditDialogs.tsx",
+    "galleryLine": 328,
+    "line": 328,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "FieldGroup",
+      "Field",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon-xs\" className=\"shrink-0 rounded-l-none\" disabled={busy} aria-label={t( 'accessibility.remove_status_preset' )} onClick={() => onRemovePreset(index) } >",
+    "body": " <XIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B088",
+    "file": "components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx",
+    "galleryLine": 511,
+    "line": 511,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "section",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" onClick={() => moderation.setPendingBanGroupId( moderation.selectedBanGroupId ) } >",
+    "body": " {t( 'dialog.group_member_moderation.ban' )} "
+  },
+  {
+    "id": "B088",
+    "file": "components/hosts/ModalHost.tsx",
+    "galleryLine": 167,
+    "line": 167,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant={ renderedAlertDialog.destructive ? 'destructive' : 'default' } onClick={handleOk} >",
+    "body": " {renderedAlertDialog.confirmText || t( renderedAlertDialog.mode === 'alert' ? 'dialog.alertdialog.ok' : 'dialog.alertdialog.confirm' )} "
+  },
+  {
+    "id": "B088",
+    "file": "components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx",
+    "galleryLine": 293,
+    "line": 293,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" onClick={() => { void startFreshDatabaseAfterUpgradeFailure(); }} >",
+    "body": " {t('message.database.use_new_database')} "
+  },
+  {
+    "id": "B088",
+    "file": "components/hosts/system-dialogs/ProfileBackupDialogs.tsx",
+    "galleryLine": 277,
+    "line": 277,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "AlertDialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" onClick={() => { void confirmRestore(); }} >",
+    "body": " <ArchiveRestoreIcon data-icon=\"inline-start\" /> {t('profile_backup.restore_and_restart')} "
+  },
+  {
+    "id": "B088",
+    "file": "components/hosts/system-dialogs/RegistryBackupDialog.tsx",
+    "galleryLine": 429,
+    "line": 429,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" disabled={loading} onClick={() => { handleDeleteRegistryFolder(); }} >",
+    "body": " {t('dialog.registry_backup.reset')} "
+  },
+  {
+    "id": "B088",
+    "file": "components/hosts/tools-dialogs/SyncWorkflowDialog.tsx",
+    "galleryLine": 215,
+    "line": 215,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" onClick={() => runner.cancelCurrent()} >",
+    "body": " {t('workflow.cancel_current')} "
+  },
+  {
+    "id": "B088",
+    "file": "features/privacy-lock/PrivacyLockPasswordDialog.tsx",
+    "galleryLine": 357,
+    "line": 357,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "form",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"submit\" variant={ activeView === 'clear' ? 'destructive' : 'default' } disabled={submitting} >",
+    "body": " {submitting ? ( <Spinner data-icon=\"inline-start\" /> ) : null} {t(copy.submit)} "
+  },
+  {
+    "id": "B088",
+    "file": "features/settings/components/settings-dialogs/PurgeConfirmDialog.tsx",
+    "galleryLine": 140,
+    "line": 140,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogFooter"
+    ],
+    "opening": "<Button type=\"button\" variant=\"destructive\" disabled={purgeInProgress} onClick={() => { purgeAvatarFeedData(); }} >",
+    "body": " <Trash2Icon data-icon=\"inline-start\" /> {t( 'view.settings.advanced.advanced.database_cleanup.purge_confirm_button' )} "
+  },
+  {
+    "id": "B089",
+    "file": "components/hosts/system-dialogs/DataDirMigrationDialog.tsx",
+    "galleryLine": 297,
+    "line": 297,
+    "drift": 0,
+    "ancestors": [
+      "AlertDialog",
+      "AlertDialogContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" size=\"sm\" className=\"text-muted-foreground h-auto p-0\" onClick={() => { closeDialog(); setSystemHostOpen('profileBackupOpen', true); }} >",
+    "body": " {t('data_dir_migration.create_backup_first')} "
+  },
+  {
+    "id": "B090",
+    "file": "components/hosts/tools-dialogs/AppLauncherDialog.tsx",
+    "galleryLine": 506,
+    "line": 506,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "ScrollArea",
+      "Empty",
+      "EmptyContent"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" onClick={addApp} >",
+    "body": " {t( 'dialog.app_launcher.add_app' )} "
+  },
+  {
+    "id": "B090",
+    "file": "features/privacy-lock/PrivacyLockPasswordDialog.tsx",
+    "galleryLine": 327,
+    "line": 327,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "form"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground mx-auto h-auto w-fit p-0 text-xs\" disabled={submitting} onClick={() => resetForm('clear')} >",
+    "body": " {t('privacy_lock.action.clear_link')} "
+  },
+  {
+    "id": "B090",
+    "file": "features/privacy-lock/PrivacyLockPasswordDialog.tsx",
+    "galleryLine": 338,
+    "line": 338,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "form"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground mx-auto h-auto w-fit p-0 text-xs\" disabled={submitting} onClick={() => resetForm('change')} >",
+    "body": " {t('privacy_lock.action.back')} "
+  },
+  {
+    "id": "B091",
+    "file": "components/hosts/tools-dialogs/GroupEventRow.tsx",
+    "galleryLine": 249,
+    "line": 249,
+    "drift": 0,
+    "ancestors": [
+      "GroupEventHoverCard",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant=\"secondary\" aria-label={ isFollowing ? t('dialog.tools.label.unfollow_event') : t('dialog.tools.label.follow_event') } aria-pressed={isFollowing} onClick={() => onToggleFollow(event)} >",
+    "body": " <StarIcon className={cn( isFollowing && 'fill-current text-[var(--status-askme)]' )} /> "
+  },
+  {
+    "id": "B091",
+    "file": "components/hosts/tools-dialogs/GroupEventRow.tsx",
+    "galleryLine": 271,
+    "line": 271,
+    "drift": 0,
+    "ancestors": [
+      "GroupEventHoverCard",
+      "div",
+      "div",
+      "DropdownMenu",
+      "DropdownMenuTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant=\"secondary\" aria-label={t('accessibility.more')} >",
+    "body": " <EllipsisIcon /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 461,
+    "line": 461,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" className=\"bg-muted size-11 shrink-0 overflow-hidden rounded-full border p-0\" aria-label={row.name} onClick={() => { if (fullImageUrl) { openImagePreview({ url: fullImageUrl, title: row.name }); } }} >",
+    "body": " <FadeInImage src={thumbUrl} alt=\"\" className=\"size-full object-cover\" loading=\"lazy\" fallback={ <span className=\"bg-muted block size-11 rounded-full\" /> } /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/hosts/tools-dialogs/NoteExportDialog.tsx",
+    "galleryLine": 507,
+    "line": 507,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon\" variant=\"ghost\" disabled={loading} aria-label={t( skipped ? 'dialog.note_export.include' : 'table.import.skip_export' )} className={cn( 'shrink-0', skipped ? 'text-primary' : 'text-muted-foreground hover:text-destructive' )} onClick={() => toggleSkip( row.id ) } >",
+    "body": " {skipped ? ( <RotateCcwIcon data-icon=\"inline-start\" /> ) : ( <XIcon data-icon=\"inline-start\" /> )} "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 234,
+    "line": 234,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" disabled={ copying || (!url && !sourcePath) } aria-label={t('message.image.copy')} onClick={() => { copyImage(); }} >",
+    "body": " {copying ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <CopyIcon data-icon=\"inline-start\" /> )} "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 261,
+    "line": 261,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" disabled={ downloading || (!url && !sourcePath) } aria-label={t('message.image.download')} onClick={() => { downloadImage(); }} >",
+    "body": " {downloading ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <DownloadIcon data-icon=\"inline-start\" /> )} "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 292,
+    "line": 292,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" aria-label={t('message.image.zoom_out')} onClick={zoomOut} >",
+    "body": " <ZoomOutIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 310,
+    "line": 310,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" aria-label={t('message.image.zoom_in')} onClick={zoomIn} >",
+    "body": " <ZoomInIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 328,
+    "line": 328,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" aria-label={t( 'message.image.rotate_clockwise' )} onClick={rotateClockwise} >",
+    "body": " <RotateCwIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 348,
+    "line": 348,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" aria-label={t( 'message.image.rotate_counterclockwise' )} onClick={rotateCounterClockwise} >",
+    "body": " <RotateCcwIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 368,
+    "line": 368,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" aria-label={t('message.image.reset')} onClick={resetTransform} >",
+    "body": " <RefreshCcwIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B092",
+    "file": "components/media/FullscreenImageViewer.tsx",
+    "galleryLine": 390,
+    "line": 390,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "div",
+      "Tooltip",
+      "TooltipTrigger"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon\" aria-label={t('message.image.close')} onClick={onClose} >",
+    "body": " <XIcon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B092",
+    "file": "ui/shadcn/sheet.tsx",
+    "galleryLine": 131,
+    "line": 131,
+    "drift": 0,
+    "ancestors": [
+      "SheetPortal",
+      "SheetViewport",
+      null,
+      null
+    ],
+    "opening": "<Button size=\"icon\" variant=\"ghost\" />",
+    "body": ""
+  },
+  {
+    "id": "B093",
+    "file": "features/charts/components/mutual-friends/ManualRelationsControl.tsx",
+    "galleryLine": 159,
+    "line": 159,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "div",
+      "ul",
+      "li"
+    ],
+    "opening": "<Button type=\"button\" size=\"icon-xs\" variant=\"destructive\" aria-label={`Remove relationship between ${relation.userIdA} and ${relation.userIdB}`} disabled={isSaving} onClick={() => removeRelation(relation)} >",
+    "body": " <Trash2Icon /> "
+  },
+  {
+    "id": "B094",
+    "file": "components/date-range-filter/DateRangeFilter.tsx",
+    "galleryLine": 102,
+    "line": 102,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={onClearDateFilter} >",
+    "body": " {t('common.actions.clear')} "
+  },
+  {
+    "id": "B094",
+    "file": "components/date-time-range-picker/DateTimeRangePicker.tsx",
+    "galleryLine": 241,
+    "line": 241,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={clear} >",
+    "body": " {clearLabel} "
+  },
+  {
+    "id": "B094",
+    "file": "components/dialogs/user-dialog/components/UserDialogMutualGraphImpl.tsx",
+    "galleryLine": 154,
+    "line": 154,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div",
+      "Popover",
+      "PopoverContent"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" className=\"self-start\" onClick={resetLayoutSettings} >",
+    "body": " <RotateCcwIcon data-icon=\"inline-start\" /> {t( 'view.charts.mutual_friend.settings.reset_defaults' )} "
+  },
+  {
+    "id": "B094",
+    "file": "components/sidebar/side-panel/SidePanelSettingsPopover.tsx",
+    "galleryLine": 186,
+    "line": 186,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" className=\"w-full justify-start\" aria-label={t('side_panel.refresh_tooltip')} disabled={isRefreshing} onClick={() => { onOpenChange(false); onRefreshFriends(); }} >",
+    "body": " {isRefreshing ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <RefreshCwIcon data-icon=\"inline-start\" /> )} {t('side_panel.refresh_tooltip')} "
+  },
+  {
+    "id": "B094",
+    "file": "components/sidebar/side-panel/SidePanelSettingsPopover.tsx",
+    "galleryLine": 390,
+    "line": 390,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={!orderedFavoriteGroupItemsLength} onClick={onOpenFavoriteGroupOrderDialog} >",
+    "body": " {t('side_panel.settings.edit_group_order')} "
+  },
+  {
+    "id": "B094",
+    "file": "components/sidebar/side-panel/SidePanelSettingsPopover.tsx",
+    "galleryLine": 403,
+    "line": 403,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" className=\"w-full justify-start\" onClick={() => { onOpenChange(false); onOpenCustomTabsDialog(); }} >",
+    "body": " <SlidersHorizontalIcon data-icon=\"inline-start\" /> {t('side_panel.settings.custom_tabs.configure')} "
+  },
+  {
+    "id": "B094",
+    "file": "features/my-avatars/components/MyAvatarsViewParts.tsx",
+    "galleryLine": 485,
+    "line": 485,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" onClick={onClearFilters} >",
+    "body": " {t('view.my_avatars.action.clear_filters')} "
+  },
+  {
+    "id": "B095",
+    "file": "components/date-range-filter/DateRangeFilter.tsx",
+    "galleryLine": 110,
+    "line": 110,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={onApplyDateFilter} >",
+    "body": " {t('common.actions.confirm')} "
+  },
+  {
+    "id": "B095",
+    "file": "components/date-time-range-picker/DateTimeRangePicker.tsx",
+    "galleryLine": 249,
+    "line": 249,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={apply}>",
+    "body": " {confirmLabel} "
+  },
+  {
+    "id": "B095",
+    "file": "features/assistant/AssistantDialog.tsx",
+    "galleryLine": 361,
+    "line": 361,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "DialogHeader",
+      "div",
+      "Popover",
+      "PopoverContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={openAssistantSettings} >",
+    "body": " {t('assistant.open_settings')} "
+  },
+  {
+    "id": "B095",
+    "file": "features/favorites/components/FavoritesPanels.tsx",
+    "galleryLine": 186,
+    "line": 186,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" size=\"sm\" onClick={onDismissCoachmark} >",
+    "body": " {t('view.favorite.share_collection.coachmark.dismiss')} "
+  },
+  {
+    "id": "B096",
+    "file": "components/dialogs/user-dialog/components/UserDialogHeaderBadges.tsx",
+    "galleryLine": 362,
+    "line": 362,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"bg-muted/20 hover:bg-muted/30 h-auto w-full rounded-none p-3\" onClick={() => onOpenImagePreview?.({ url: badgeImageUrl, title: badgeName }) } >",
+    "body": " <FadeInImage src={badgeImageUrl} alt={badge.badgeName || ''} className={cn( 'max-h-52 w-full rounded-md object-contain', !isBadgeVisible && 'grayscale' )} /> "
+  },
+  {
+    "id": "B096",
+    "file": "components/dialogs/user-dialog/components/UserDialogIdentityParts.tsx",
+    "galleryLine": 74,
+    "line": 74,
+    "drift": 0,
+    "ancestors": [
+      "HoverCard",
+      "HoverCardContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button key={`${entry.displayName}:${entry.updated_at || index}`} type=\"button\" variant=\"ghost\" className=\"h-auto w-full min-w-0 justify-start gap-3 rounded-md px-2 py-1.5 text-left\" aria-label={`${t('common.actions.copy')}: ${entry.displayName}`} title={t('common.actions.copy')} onClick={() => onCopyName(entry.displayName)} >",
+    "body": " <span className=\"min-w-0 flex-1 truncate font-medium\"> {entry.displayName} </span> {entry.updated_at ? ( <span className=\"text-muted-foreground shrink-0 text-xs\"> {formatStatsDate(entry.updated_at)} </span> ) : null} <CopyIcon aria-hidden=\"true\" className=\"text-muted-foreground size-3.5 shrink-0\" /> "
+  },
+  {
+    "id": "B096",
+    "file": "components/dialogs/world-dialog/WorldNewInstanceDialog.tsx",
+    "galleryLine": 652,
+    "line": 652,
+    "drift": 0,
+    "ancestors": [
+      "Dialog",
+      "DialogContent",
+      "Tabs",
+      "TabsContent",
+      "FieldGroup",
+      "Field",
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button key={name} type=\"button\" variant=\"ghost\" className=\"h-auto w-full justify-start p-1.5 text-left font-normal\" onClick={() => selectDisplayNamePreset( name ) } >",
+    "body": " <span className=\"truncate\"> {name} </span> "
+  },
+  {
+    "id": "B096",
+    "file": "components/layout/custom-nav-dialog/CustomNavDialogLayoutEditor.tsx",
+    "galleryLine": 409,
+    "line": 409,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent"
+    ],
+    "opening": "<Button key={candidate.key} type=\"button\" variant=\"ghost\" className=\"h-auto w-full justify-start px-2 py-1.5 font-normal\" onClick={() => { onAdd(candidate.key); setOpen(false); }} >",
+    "body": " <CandidateIcon data-icon=\"inline-start\" /> <span className=\"min-w-0 flex-1 truncate text-left\"> {candidate.label} </span> "
+  },
+  {
+    "id": "B096",
+    "file": "components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx",
+    "galleryLine": 134,
+    "line": 134,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent"
+    ],
+    "opening": "<Button key={userId || index} type=\"button\" variant=\"ghost\" disabled={!isCurrent && !canSwitch} aria-current={isCurrent} className=\"aria-[current=true]:bg-accent/60 h-auto w-full min-w-0 justify-start gap-2.5 p-1.5 text-left font-normal\" onClick={ canSwitch ? () => handleSwitch(entry) : undefined } >",
+    "body": " <Avatar size=\"sm\"> {avatarUrl ? ( <AvatarImage src={avatarUrl} alt=\"\" /> ) : null} <AvatarFallback> {accountFallback(entry.user)} </AvatarFallback> </Avatar> <div className=\"min-w-0 flex-1\"> <div className=\"truncate text-sm\"> {accountDisplayName(entry.user)} </div> <div className=\"text-muted-foreground truncate text-xs\"> {entry.user.username || userId} </div> </div> {isCurrent ? ( <CheckIcon className=\"text-foreground shrink-0 opacity-70\" /> ) : null} "
+  },
+  {
+    "id": "B096",
+    "file": "components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx",
+    "galleryLine": 171,
+    "line": 171,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"w-full justify-start font-normal\" onClick={handleUseOtherAccount} >",
+    "body": " {t('view.login.useOtherAccount')} "
+  },
+  {
+    "id": "B096",
+    "file": "features/instance-history/InstanceHistoryPage.tsx",
+    "galleryLine": 646,
+    "line": 646,
+    "drift": 0,
+    "ancestors": [
+      "PageScaffold",
+      "Tabs",
+      "PageToolbar",
+      "PageToolbarRow",
+      "ToolbarViews",
+      "Popover",
+      "PopoverContent",
+      "div",
+      "ScrollArea",
+      "div"
+    ],
+    "opening": "<Button key={option.value} type=\"button\" variant=\"ghost\" className=\"h-auto justify-start p-0\" onClick={() => { applyTarget( option.value ); setTargetPickerOpen( false ); }} >",
+    "body": " <UserPickerRow option={option} selected={ option.value === activeUserId } /> "
+  },
+  {
+    "id": "B096",
+    "file": "features/settings/components/settings-tabs/SettingsSocialTab.tsx",
+    "galleryLine": 291,
+    "line": 291,
+    "drift": 0,
+    "ancestors": [
+      "SettingsTabContent",
+      "SettingsCard",
+      "Field",
+      "div",
+      "Popover",
+      "PopoverContent",
+      "div",
+      "ScrollArea",
+      "div"
+    ],
+    "opening": "<Button key={option.value} type=\"button\" variant=\"ghost\" className=\"h-auto justify-start p-0\" onClick={() => { void onAddFeedHiddenUser( option.value ); setHiddenUserPickerOpen( false ); setHiddenUserSearch(''); }} >",
+    "body": " <UserPickerRow option={option} showSelection={false} /> "
+  },
+  {
+    "id": "B097",
+    "file": "components/layout/custom-nav-dialog/NavIconPicker.tsx",
+    "galleryLine": 62,
+    "line": 62,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent"
+    ],
+    "opening": "<Button key={option.key} type=\"button\" variant={selected ? 'secondary' : 'ghost'} size=\"icon-sm\" title={option.label} aria-label={option.label} aria-pressed={selected} className={cn(selected && 'text-primary')} onClick={() => { onValueChange(option.key); setOpen(false); }} >",
+    "body": " <OptionIcon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B098",
+    "file": "components/layout/status-bar/StatusBarFooter.tsx",
+    "galleryLine": 801,
+    "line": 801,
+    "drift": 0,
+    "ancestors": [
+      "footer",
+      "div",
+      "div",
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon\" aria-label={t('app_menu.zoom_out')} className=\"size-10 shrink-0\" disabled={ zoomLevel <= MIN_ZOOM_LEVEL } onClick={() => onStepZoomLevel(-ZOOM_STEP) } >",
+    "body": " <MinusIcon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B098",
+    "file": "components/layout/status-bar/StatusBarFooter.tsx",
+    "galleryLine": 836,
+    "line": 836,
+    "drift": 0,
+    "ancestors": [
+      "footer",
+      "div",
+      "div",
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"icon\" aria-label={t('app_menu.zoom_in')} className=\"size-10 shrink-0\" disabled={ zoomLevel >= MAX_ZOOM_LEVEL } onClick={() => onStepZoomLevel(ZOOM_STEP) } >",
+    "body": " <PlusIcon data-icon=\"icon\" /> "
+  },
+  {
+    "id": "B099",
+    "file": "components/layout/status-bar/StatusBarFooter.tsx",
+    "galleryLine": 816,
+    "line": 816,
+    "drift": 0,
+    "ancestors": [
+      "footer",
+      "div",
+      "div",
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" aria-label={t( 'app_menu.reset_zoom' )} className=\"h-10 min-w-0 flex-1 gap-2 px-3\" onClick={() => onSetZoomLevel( DEFAULT_ZOOM_LEVEL ) } >",
+    "body": " <span className=\"text-sm font-medium tabular-nums\"> {zoomLabel} </span> <span className=\"text-muted-foreground truncate text-xs font-normal\"> {t('app_menu.reset_zoom')} </span> "
+  },
+  {
+    "id": "B100",
+    "file": "components/sidebar/side-panel/SidePanelSettingsPopover.tsx",
+    "galleryLine": 276,
+    "line": 276,
+    "drift": 0,
+    "ancestors": [
+      "Popover",
+      "PopoverContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"sm\" data-ui-role=\"disclosure\" aria-expanded={isAdvancedOpen} className=\"text-muted-foreground hover:text-foreground h-auto w-full justify-between px-0 py-0.5 text-xs font-medium tracking-wide uppercase\" onClick={() => onAdvancedOpenChange(!isAdvancedOpen)} >",
+    "body": " {t('side_panel.settings.advanced')} <ChevronDownIcon data-icon=\"inline-end\" className={cn( 'transition-transform', isAdvancedOpen && 'rotate-180' )} /> "
+  },
+  {
+    "id": "B102",
+    "file": "features/auth/components/LoginFormCard.tsx",
+    "galleryLine": 58,
+    "line": 58,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardHeader"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground h-auto w-fit p-0 text-xs\" onClick={onBackToSavedAccounts} >",
+    "body": " <ArrowLeftIcon data-icon=\"inline-start\" /> {t('view.login.backToSavedAccounts')} "
+  },
+  {
+    "id": "B102",
+    "file": "features/auth/components/LoginFormCard.tsx",
+    "galleryLine": 180,
+    "line": 180,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground h-auto p-0 text-xs\" onClick={onOpenRegister} >",
+    "body": " {t('view.login.register')} "
+  },
+  {
+    "id": "B102",
+    "file": "features/auth/components/LoginFormCard.tsx",
+    "galleryLine": 189,
+    "line": 189,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardContent",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground h-auto p-0 text-xs\" onClick={onOpenForgotPassword} >",
+    "body": " {t('view.login.forgotPassword')} "
+  },
+  {
+    "id": "B102",
+    "file": "features/auth/components/LoginPageFooter.tsx",
+    "galleryLine": 17,
+    "line": 17,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground/75 h-auto p-0 text-[0.7rem]\" onClick={onOpenGithub} >",
+    "body": " GitHub "
+  },
+  {
+    "id": "B102",
+    "file": "features/auth/components/LoginPageFooter.tsx",
+    "galleryLine": 28,
+    "line": 28,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground/75 h-auto p-0 text-[0.7rem]\" onClick={onOpenDiscord} >",
+    "body": " Discord "
+  },
+  {
+    "id": "B103",
+    "file": "features/auth/components/LoginFormCard.tsx",
+    "galleryLine": 163,
+    "line": 163,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardContent",
+      "form"
+    ],
+    "opening": "<Button type=\"submit\" size=\"lg\" className=\"mt-auto w-full\" disabled={busy} >",
+    "body": " {submitting ? ( <> <Spinner data-icon=\"inline-start\" /> {t('view.login.signingIn')} </> ) : ( t('view.login.login') )} "
+  },
+  {
+    "id": "B104",
+    "file": "features/auth/components/LoginPageUtilities.tsx",
+    "galleryLine": 28,
+    "line": 28,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" onClick={onOpenProxyDialog}>",
+    "body": " <NetworkIcon data-icon=\"inline-start\" /> {t('view.login.proxy_settings')} "
+  },
+  {
+    "id": "B104",
+    "file": "features/auth/components/LoginPageUtilities.tsx",
+    "galleryLine": 32,
+    "line": 32,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" disabled={disabled || isValidatingRestore} onClick={onRestoreProfileBackup} >",
+    "body": " {isValidatingRestore ? ( <Spinner data-icon=\"inline-start\" /> ) : ( <ArchiveRestoreIcon data-icon=\"inline-start\" /> )} {t('profile_backup.restore_from_backup')} "
+  },
+  {
+    "id": "B104",
+    "file": "features/auth/components/LoginPageUtilities.tsx",
+    "galleryLine": 46,
+    "line": 46,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" className=\"sm:col-span-2\" disabled={disabled} onClick={onMigrateLegacyVrcxData} >",
+    "body": " <DatabaseIcon data-icon=\"inline-start\" /> {t( 'view.settings.advanced.advanced.database_cleanup.legacy_migration' )} "
+  },
+  {
+    "id": "B105",
+    "file": "features/auth/components/LoginServerStatusAlert.tsx",
+    "galleryLine": 38,
+    "line": 38,
+    "drift": 0,
+    "ancestors": [
+      "Alert",
+      "AlertDescription"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" size=\"xs\" onClick={onOpenStatusPage} >",
+    "body": " {t('status_bar.view_status')} <ExternalLinkIcon data-icon=\"inline-end\" /> "
+  },
+  {
+    "id": "B106",
+    "file": "features/auth/components/SavedAccountsCard.tsx",
+    "galleryLine": 68,
+    "line": 68,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" className=\"bg-muted/40 hover:bg-muted h-auto min-w-0 flex-1 justify-start gap-3 p-2 text-left font-normal\" disabled={isAuthBusy || isDeleting} onClick={() => { if (canUseSavedCredentials) { onLogin(entry); } else { onUseOtherAccount(entry); } }} >",
+    "body": " <Avatar size=\"lg\"> {avatarUrl ? ( <AvatarImage src={avatarUrl} alt=\"\" /> ) : null} <AvatarFallback> {getSavedAccountFallback( entry.user )} </AvatarFallback> </Avatar> <div className=\"min-w-0 flex-1\"> <div className=\"truncate text-sm font-medium\"> {getUserDisplayName(entry.user)} </div> <div className=\"text-muted-foreground truncate text-xs\"> {entry.user.username || userId} </div> </div> {isRelogging ? ( <Spinner data-icon=\"inline-end\" className=\"text-muted-foreground shrink-0\" /> ) : null} "
+  },
+  {
+    "id": "B107",
+    "file": "features/auth/components/SavedAccountsCard.tsx",
+    "galleryLine": 109,
+    "line": 109,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardContent",
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"ghost\" size=\"icon-sm\" aria-label={t( 'view.login.saved_account_remove.description', { name: getUserDisplayName(entry.user) } )} disabled={isDeleting || isAuthBusy} onClick={() => { onCancelAutoLogin(); onDeleteStart(entry); }} >",
+    "body": " <Trash2Icon data-icon=\"inline-start\" /> "
+  },
+  {
+    "id": "B108",
+    "file": "features/auth/components/SavedAccountsCard.tsx",
+    "galleryLine": 131,
+    "line": 131,
+    "drift": 0,
+    "ancestors": [
+      "Card",
+      "CardContent"
+    ],
+    "opening": "<Button type=\"button\" variant=\"secondary\" className=\"w-full\" disabled={isAuthBusy || isDeleting} onClick={() => { onUseOtherAccount(); }} >",
+    "body": " {t('view.login.useOtherAccount')} "
+  },
+  {
+    "id": "B109",
+    "file": "features/privacy-lock/PrivacyLockOverlay.tsx",
+    "galleryLine": 121,
+    "line": 121,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={pendingAction !== null} onClick={() => void runAction( 'background', startBackgroundModeForCurrentSession ) } >",
+    "body": " {pendingAction === 'background' ? ( <Spinner data-icon=\"inline-start\" /> ) : null} {t('privacy_lock.action.background_mode')} "
+  },
+  {
+    "id": "B109",
+    "file": "features/privacy-lock/PrivacyLockOverlay.tsx",
+    "galleryLine": 138,
+    "line": 138,
+    "drift": 0,
+    "ancestors": [
+      "div",
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"outline\" size=\"sm\" disabled={pendingAction !== null} onClick={() => void runAction('logout', logoutWithoutConfirmation) } >",
+    "body": " {pendingAction === 'logout' ? ( <Spinner data-icon=\"inline-start\" /> ) : null} {t('privacy_lock.action.logout')} "
+  },
+  {
+    "id": "B110",
+    "file": "features/privacy-lock/PrivacyLockOverlay.tsx",
+    "galleryLine": 227,
+    "line": 227,
+    "drift": 0,
+    "ancestors": [
+      "div"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground h-auto p-0 text-xs\" onClick={onForgot} >",
+    "body": " {t('privacy_lock.action.forgot')} "
+  },
+  {
+    "id": "B110",
+    "file": "features/privacy-lock/PrivacyLockOverlay.tsx",
+    "galleryLine": 291,
+    "line": 291,
+    "drift": 0,
+    "ancestors": [
+      "form"
+    ],
+    "opening": "<Button type=\"button\" variant=\"link\" className=\"text-muted-foreground h-auto p-0 text-xs\" onClick={onBack} >",
+    "body": " {t('privacy_lock.action.back')} "
+  },
+  {
+    "id": "B111",
+    "file": "features/privacy-lock/PrivacyLockOverlay.tsx",
+    "galleryLine": 283,
+    "line": 283,
+    "drift": 0,
+    "ancestors": [
+      "form"
+    ],
+    "opening": "<Button type=\"submit\" className=\"w-full\" disabled={submitting || !password} >",
+    "body": " {submitting ? <Spinner data-icon=\"inline-start\" /> : null} {t('privacy_lock.action.clear_and_unlock')} "
+  }
+]

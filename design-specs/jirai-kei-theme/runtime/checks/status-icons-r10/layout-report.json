@@ -1,0 +1,4703 @@
+{
+  "result": "PASS",
+  "cssBytes": 3443,
+  "dataUris": {
+    "embeddedPngs": 2,
+    "embeddedSvgs": 0
+  },
+  "selectors": [
+    "[data-slot=\"toast-viewport\"] [data-type=\"success\"] [data-slot=\"toast-icon\"]",
+    "[data-slot=\"toast-viewport\"] [data-type=\"error\"] [data-slot=\"toast-icon\"]"
+  ],
+  "toastMotion": "static; no icon animation declarations",
+  "iconSlot": "28×24 CSS px (1 logical grid cell = 1 CSS px)",
+  "textMove": "12px (icon width 16px → 28px; existing gap retained)",
+  "untouchedTypes": [
+    {
+      "type": "info",
+      "width": 16,
+      "height": 24,
+      "backgroundImage": "none",
+      "imageRendering": "auto",
+      "svgOpacity": "1",
+      "svgAnimation": "none"
+    },
+    {
+      "type": "warning",
+      "width": 16,
+      "height": 24,
+      "backgroundImage": "none",
+      "imageRendering": "auto",
+      "svgOpacity": "1",
+      "svgAnimation": "none"
+    },
+    {
+      "type": "loading",
+      "width": 16,
+      "height": 24,
+      "backgroundImage": "none",
+      "imageRendering": "auto",
+      "svgOpacity": "0.8",
+      "svgAnimation": "spin"
+    }
+  ],
+  "focusTest": {
+    "active": true,
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "outlineColor": "rgb(255, 228, 242)",
+    "rect": {
+      "x": 1061,
+      "y": 186,
+      "width": 24,
+      "height": 24
+    }
+  },
+  "layoutChanges": {
+    "320-360-normal": {
+      "toastStackGap": 12,
+      "cards": {
+        "success": {
+          "baselineHeight": 68,
+          "finalHeight": 68,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 1,
+          "finalDescriptionLines": 1,
+          "expectedTextWrapDelta": 0
+        },
+        "error": {
+          "baselineHeight": 108,
+          "finalHeight": 108,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 3,
+          "finalDescriptionLines": 3,
+          "expectedTextWrapDelta": 0,
+          "closeButtonDelta": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      }
+    },
+    "320-360-reduced": {
+      "toastStackGap": 12,
+      "cards": {
+        "success": {
+          "baselineHeight": 68,
+          "finalHeight": 68,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 1,
+          "finalDescriptionLines": 1,
+          "expectedTextWrapDelta": 0
+        },
+        "error": {
+          "baselineHeight": 108,
+          "finalHeight": 108,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 3,
+          "finalDescriptionLines": 3,
+          "expectedTextWrapDelta": 0,
+          "closeButtonDelta": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      }
+    },
+    "240-360-normal": {
+      "toastStackGap": 12,
+      "cards": {
+        "success": {
+          "baselineHeight": 68,
+          "finalHeight": 68,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 1,
+          "finalDescriptionLines": 1,
+          "expectedTextWrapDelta": 0
+        },
+        "error": {
+          "baselineHeight": 108,
+          "finalHeight": 108,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 3,
+          "finalDescriptionLines": 3,
+          "expectedTextWrapDelta": 0,
+          "closeButtonDelta": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      }
+    },
+    "240-360-reduced": {
+      "toastStackGap": 12,
+      "cards": {
+        "success": {
+          "baselineHeight": 68,
+          "finalHeight": 68,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 1,
+          "finalDescriptionLines": 1,
+          "expectedTextWrapDelta": 0
+        },
+        "error": {
+          "baselineHeight": 108,
+          "finalHeight": 108,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 3,
+          "finalDescriptionLines": 3,
+          "expectedTextWrapDelta": 0,
+          "closeButtonDelta": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      }
+    },
+    "320-288-normal": {
+      "toastStackGap": 12,
+      "cards": {
+        "success": {
+          "baselineHeight": 68,
+          "finalHeight": 68,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 1,
+          "finalDescriptionLines": 1,
+          "expectedTextWrapDelta": 0
+        },
+        "error": {
+          "baselineHeight": 128,
+          "finalHeight": 148,
+          "heightDelta": 20,
+          "baselineDescriptionLines": 4,
+          "finalDescriptionLines": 5,
+          "expectedTextWrapDelta": 20
+        }
+      }
+    },
+    "240-288-normal": {
+      "toastStackGap": 12,
+      "cards": {
+        "success": {
+          "baselineHeight": 68,
+          "finalHeight": 68,
+          "heightDelta": 0,
+          "baselineDescriptionLines": 1,
+          "finalDescriptionLines": 1,
+          "expectedTextWrapDelta": 0
+        },
+        "error": {
+          "baselineHeight": 128,
+          "finalHeight": 148,
+          "heightDelta": 20,
+          "baselineDescriptionLines": 4,
+          "finalDescriptionLines": 5,
+          "expectedTextWrapDelta": 20
+        }
+      }
+    }
+  },
+  "layoutResults": {
+    "320-360-normal": {
+      "panel": {
+        "rect": {
+          "x": 1120,
+          "y": 32,
+          "width": 320,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 189,
+          "backgroundImageLayers": 2,
+          "backgroundPositionLayerCount": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "backgroundSize": "16px 16px, 18px 18px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "toastViewport": {
+        "x": 740,
+        "y": 64,
+        "width": 360,
+        "height": 188,
+        "right": 1100,
+        "bottom": 252
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 740,
+            "y": 64,
+            "width": 360,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 65,
+            "width": 355,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 75,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 99
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 75,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 95
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 878,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 794,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 740,
+            "y": 144,
+            "width": 360,
+            "height": 108,
+            "right": 1100,
+            "bottom": 252
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 145,
+            "width": 355,
+            "height": 106,
+            "right": 1099,
+            "bottom": 251
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 155,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 179
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 155,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 175
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 794,
+              "y": 157,
+              "width": 261,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 850,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 794,
+              "y": 179,
+              "width": 261,
+              "height": 60,
+              "right": 1055,
+              "bottom": 239
+            },
+            "lineCount": 3,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 60,
+            "clientHeight": 60
+          },
+          "close": {
+            "x": 1061,
+            "y": 186,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 210
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "320-360-reduced": {
+      "panel": {
+        "rect": {
+          "x": 1120,
+          "y": 32,
+          "width": 320,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 189,
+          "backgroundImageLayers": 2,
+          "backgroundPositionLayerCount": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "backgroundSize": "16px 16px, 18px 18px",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationDelay": "0s",
+          "animationTimingFunction": "ease",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "toastViewport": {
+        "x": 740,
+        "y": 64,
+        "width": 360,
+        "height": 188,
+        "right": 1100,
+        "bottom": 252
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 740,
+            "y": 64,
+            "width": 360,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 65,
+            "width": 355,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 75,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 99
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 75,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 95
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 878,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 794,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 740,
+            "y": 144,
+            "width": 360,
+            "height": 108,
+            "right": 1100,
+            "bottom": 252
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 145,
+            "width": 355,
+            "height": 106,
+            "right": 1099,
+            "bottom": 251
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 155,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 179
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 155,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 175
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 794,
+              "y": 157,
+              "width": 261,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 850,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 794,
+              "y": 179,
+              "width": 261,
+              "height": 60,
+              "right": 1055,
+              "bottom": 239
+            },
+            "lineCount": 3,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 60,
+            "clientHeight": 60
+          },
+          "close": {
+            "x": 1061,
+            "y": 186,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 210
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "240-360-normal": {
+      "panel": {
+        "rect": {
+          "x": 1200,
+          "y": 32,
+          "width": 240,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 109,
+          "backgroundImageLayers": 2,
+          "backgroundPositionLayerCount": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "backgroundSize": "16px 16px, 18px 18px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "toastViewport": {
+        "x": 740,
+        "y": 64,
+        "width": 360,
+        "height": 188,
+        "right": 1100,
+        "bottom": 252
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 740,
+            "y": 64,
+            "width": 360,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 65,
+            "width": 355,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 75,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 99
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 75,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 95
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 878,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 794,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 740,
+            "y": 144,
+            "width": 360,
+            "height": 108,
+            "right": 1100,
+            "bottom": 252
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 145,
+            "width": 355,
+            "height": 106,
+            "right": 1099,
+            "bottom": 251
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 155,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 179
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 155,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 175
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 794,
+              "y": 157,
+              "width": 261,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 850,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 794,
+              "y": 179,
+              "width": 261,
+              "height": 60,
+              "right": 1055,
+              "bottom": 239
+            },
+            "lineCount": 3,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 60,
+            "clientHeight": 60
+          },
+          "close": {
+            "x": 1061,
+            "y": 186,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 210
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "240-360-reduced": {
+      "panel": {
+        "rect": {
+          "x": 1200,
+          "y": 32,
+          "width": 240,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 109,
+          "backgroundImageLayers": 2,
+          "backgroundPositionLayerCount": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "backgroundSize": "16px 16px, 18px 18px",
+          "animationName": "none",
+          "animationDuration": "0s",
+          "animationDelay": "0s",
+          "animationTimingFunction": "ease",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "toastViewport": {
+        "x": 740,
+        "y": 64,
+        "width": 360,
+        "height": 188,
+        "right": 1100,
+        "bottom": 252
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 740,
+            "y": 64,
+            "width": 360,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 65,
+            "width": 355,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 75,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 99
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 75,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 95
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 878,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 794,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 878,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 740,
+            "y": 144,
+            "width": 360,
+            "height": 108,
+            "right": 1100,
+            "bottom": 252
+          },
+          "rootOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 744,
+            "y": 145,
+            "width": 355,
+            "height": 106,
+            "right": 1099,
+            "bottom": 251
+          },
+          "contentOverflow": {
+            "scrollWidth": 355,
+            "clientWidth": 355,
+            "scrollHeight": 106,
+            "clientHeight": 106,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 758,
+              "y": 155,
+              "width": 28,
+              "height": 24,
+              "right": 786,
+              "bottom": 179
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 758,
+              "y": 155,
+              "width": 16,
+              "height": 20,
+              "right": 774,
+              "bottom": 175
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 794,
+              "y": 157,
+              "width": 261,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 794,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 850,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 794,
+              "y": 179,
+              "width": 261,
+              "height": 60,
+              "right": 1055,
+              "bottom": 239
+            },
+            "lineCount": 3,
+            "lineHeight": "20px",
+            "scrollWidth": 261,
+            "clientWidth": 261,
+            "scrollHeight": 60,
+            "clientHeight": 60
+          },
+          "close": {
+            "x": 1061,
+            "y": 186,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 210
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "320-288-normal": {
+      "panel": {
+        "rect": {
+          "x": 1120,
+          "y": 32,
+          "width": 320,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 189,
+          "backgroundImageLayers": 2,
+          "backgroundPositionLayerCount": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "backgroundSize": "16px 16px, 18px 18px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "toastViewport": {
+        "x": 812,
+        "y": 64,
+        "width": 288,
+        "height": 228,
+        "right": 1100,
+        "bottom": 292
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 812,
+            "y": 64,
+            "width": 288,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 65,
+            "width": 283,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 75,
+              "width": 28,
+              "height": 24,
+              "right": 858,
+              "bottom": 99
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 830,
+              "y": 75,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 95
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 866,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 950,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 866,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 950,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 866,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 950,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 812,
+            "y": 144,
+            "width": 288,
+            "height": 148,
+            "right": 1100,
+            "bottom": 292
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 146,
+            "clientHeight": 146,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 145,
+            "width": 283,
+            "height": 146,
+            "right": 1099,
+            "bottom": 291
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 146,
+            "clientHeight": 146,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 155,
+              "width": 28,
+              "height": 24,
+              "right": 858,
+              "bottom": 179
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 830,
+              "y": 155,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 175
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 866,
+              "y": 157,
+              "width": 189,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 866,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 922,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 189,
+            "clientWidth": 189,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 866,
+              "y": 179,
+              "width": 189,
+              "height": 100,
+              "right": 1055,
+              "bottom": 279
+            },
+            "lineCount": 5,
+            "lineHeight": "20px",
+            "scrollWidth": 189,
+            "clientWidth": 189,
+            "scrollHeight": 100,
+            "clientHeight": 100
+          },
+          "close": {
+            "x": 1061,
+            "y": 206,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 230
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    },
+    "240-288-normal": {
+      "panel": {
+        "rect": {
+          "x": 1200,
+          "y": 32,
+          "width": 240,
+          "height": 868,
+          "right": 1440,
+          "bottom": 900
+        },
+        "beforeContent": "\"SOCIAL\"",
+        "beforeHeight": "25px",
+        "after": {
+          "content": "\"\"",
+          "position": "absolute",
+          "width": "42px",
+          "height": "22px",
+          "right": "88px",
+          "left": 109,
+          "backgroundImageLayers": 2,
+          "backgroundPositionLayerCount": 2,
+          "backgroundPosition": "0px 5px, 24px 4px",
+          "backgroundSize": "16px 16px, 18px 18px",
+          "animationName": "r96-social-cat",
+          "animationDuration": "2s",
+          "animationDelay": "-1s",
+          "animationTimingFunction": "steps(1)",
+          "pointerEvents": "none"
+        },
+        "rail": {
+          "x": 1403,
+          "y": 128,
+          "width": 36,
+          "height": 771,
+          "right": 1439,
+          "bottom": 899
+        },
+        "decorationRailGap": 52,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "toastViewport": {
+        "x": 812,
+        "y": 64,
+        "width": 288,
+        "height": 228,
+        "right": 1100,
+        "bottom": 292
+      },
+      "toastStackGap": 12,
+      "cards": [
+        {
+          "type": "success",
+          "root": {
+            "x": 812,
+            "y": 64,
+            "width": 288,
+            "height": 68,
+            "right": 1100,
+            "bottom": 132
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 65,
+            "width": 283,
+            "height": 66,
+            "right": 1099,
+            "bottom": 131
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 66,
+            "clientHeight": 66,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 75,
+              "width": 28,
+              "height": 24,
+              "right": 858,
+              "bottom": 99
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 830,
+              "y": 75,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 95
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "已保存到收藏",
+            "rect": {
+              "x": 866,
+              "y": 77,
+              "width": 84,
+              "height": 20,
+              "right": 950,
+              "bottom": 97
+            },
+            "firstLine": {
+              "x": 866,
+              "y": 77,
+              "width": 84,
+              "height": 19,
+              "right": 950,
+              "bottom": 96
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "更改已同步。",
+            "rect": {
+              "x": 866,
+              "y": 99,
+              "width": 84,
+              "height": 20,
+              "right": 950,
+              "bottom": 119
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 84,
+            "clientWidth": 84,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "close": null
+        },
+        {
+          "type": "error",
+          "root": {
+            "x": 812,
+            "y": 144,
+            "width": 288,
+            "height": 148,
+            "right": 1100,
+            "bottom": 292
+          },
+          "rootOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 146,
+            "clientHeight": 146,
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "content": {
+            "x": 816,
+            "y": 145,
+            "width": 283,
+            "height": 146,
+            "right": 1099,
+            "bottom": 291
+          },
+          "contentOverflow": {
+            "scrollWidth": 283,
+            "clientWidth": 283,
+            "scrollHeight": 146,
+            "clientHeight": 146,
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "icon": {
+            "rect": {
+              "x": 830,
+              "y": 155,
+              "width": 28,
+              "height": 24,
+              "right": 858,
+              "bottom": 179
+            },
+            "backgroundImage": "image",
+            "backgroundImageLayers": 1,
+            "backgroundSize": "28px 24px",
+            "backgroundPosition": "50% 50%",
+            "imageRendering": "pixelated",
+            "display": "flex",
+            "flexBasis": "28px",
+            "alignSelf": "flex-start",
+            "lineHeight": "20px",
+            "top": "-2px",
+            "animationName": "none",
+            "svgOpacity": "0",
+            "svgRect": {
+              "x": 830,
+              "y": 155,
+              "width": 16,
+              "height": 20,
+              "right": 846,
+              "bottom": 175
+            },
+            "svgAriaHidden": "true"
+          },
+          "title": {
+            "text": "同步失败",
+            "rect": {
+              "x": 866,
+              "y": 157,
+              "width": 189,
+              "height": 20,
+              "right": 1055,
+              "bottom": 177
+            },
+            "firstLine": {
+              "x": 866,
+              "y": 157,
+              "width": 56,
+              "height": 19,
+              "right": 922,
+              "bottom": 176
+            },
+            "lineCount": 1,
+            "lineHeight": "20px",
+            "scrollWidth": 189,
+            "clientWidth": 189,
+            "scrollHeight": 20,
+            "clientHeight": 20
+          },
+          "description": {
+            "text": "同步未完成：网络连接不稳定。请检查代理与本地连接后重试；其他页面仍可继续使用，已保存的本地内容不会丢失。",
+            "rect": {
+              "x": 866,
+              "y": 179,
+              "width": 189,
+              "height": 100,
+              "right": 1055,
+              "bottom": 279
+            },
+            "lineCount": 5,
+            "lineHeight": "20px",
+            "scrollWidth": 189,
+            "clientWidth": 189,
+            "scrollHeight": 100,
+            "clientHeight": 100
+          },
+          "close": {
+            "x": 1061,
+            "y": 206,
+            "width": 24,
+            "height": 24,
+            "right": 1085,
+            "bottom": 230
+          }
+        }
+      ],
+      "tooltip": {
+        "rect": {
+          "x": -10000,
+          "y": 0,
+          "width": 115,
+          "height": 38,
+          "right": -9885,
+          "bottom": 38
+        },
+        "display": "block",
+        "visibility": "hidden",
+        "background": "rgb(33, 26, 51)",
+        "borderColor": "rgb(108, 92, 224)",
+        "borderWidth": "1px",
+        "padding": "6px 12px",
+        "opacity": "1"
+      },
+      "pageOverflow": {
+        "documentWidth": 1440,
+        "viewportWidth": 1440,
+        "documentHeight": 900,
+        "viewportHeight": 900
+      }
+    }
+  },
+  "scaleReports": [
+    {
+      "dpr": 1,
+      "screenshot": "preview.png",
+      "screenshotPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "expectedCssLogicalCellDevicePixels": 1,
+      "observedLogicalCellDeviceWidths": [
+        1
+      ],
+      "unevenGridExpected": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "imageRendering": [
+        "pixelated",
+        "pixelated"
+      ],
+      "colorAudit": [
+        {
+          "type": "success",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 28,
+            "height": 24
+          },
+          "observedColorCount": 19,
+          "fractionalDprMixedColors": [],
+          "mixedColorPixelCount": 0
+        },
+        {
+          "type": "error",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 28,
+            "height": 24
+          },
+          "observedColorCount": 16,
+          "fractionalDprMixedColors": [],
+          "mixedColorPixelCount": 0
+        }
+      ]
+    },
+    {
+      "dpr": 1.25,
+      "screenshot": "scale-dpr-1-25.png",
+      "screenshotPixels": {
+        "width": 1800,
+        "height": 1125
+      },
+      "expectedCssLogicalCellDevicePixels": 1.25,
+      "observedLogicalCellDeviceWidths": [
+        1,
+        2
+      ],
+      "unevenGridExpected": true,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "imageRendering": [
+        "pixelated",
+        "pixelated"
+      ],
+      "colorAudit": [
+        {
+          "type": "success",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 36,
+            "height": 31
+          },
+          "observedColorCount": 22,
+          "fractionalDprMixedColors": [
+            "#24482c",
+            "#277725",
+            "#2aa51f"
+          ],
+          "mixedColorPixelCount": 50
+        },
+        {
+          "type": "error",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 36,
+            "height": 31
+          },
+          "observedColorCount": 19,
+          "fractionalDprMixedColors": [
+            "#592e49",
+            "#90425e",
+            "#c85774"
+          ],
+          "mixedColorPixelCount": 55
+        }
+      ]
+    },
+    {
+      "dpr": 1.5,
+      "screenshot": "scale-dpr-1-5.png",
+      "screenshotPixels": {
+        "width": 2160,
+        "height": 1350
+      },
+      "expectedCssLogicalCellDevicePixels": 1.5,
+      "observedLogicalCellDeviceWidths": [
+        1,
+        2
+      ],
+      "unevenGridExpected": true,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "imageRendering": [
+        "pixelated",
+        "pixelated"
+      ],
+      "colorAudit": [
+        {
+          "type": "success",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 42,
+            "height": 37
+          },
+          "observedColorCount": 20,
+          "fractionalDprMixedColors": [
+            "#277725"
+          ],
+          "mixedColorPixelCount": 32
+        },
+        {
+          "type": "error",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 42,
+            "height": 37
+          },
+          "observedColorCount": 17,
+          "fractionalDprMixedColors": [
+            "#90425e"
+          ],
+          "mixedColorPixelCount": 32
+        }
+      ]
+    },
+    {
+      "dpr": 2,
+      "screenshot": "scale-dpr-2.png",
+      "screenshotPixels": {
+        "width": 2880,
+        "height": 1800
+      },
+      "expectedCssLogicalCellDevicePixels": 2,
+      "observedLogicalCellDeviceWidths": [
+        2
+      ],
+      "unevenGridExpected": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "imageRendering": [
+        "pixelated",
+        "pixelated"
+      ],
+      "colorAudit": [
+        {
+          "type": "success",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 56,
+            "height": 48
+          },
+          "observedColorCount": 19,
+          "fractionalDprMixedColors": [],
+          "mixedColorPixelCount": 0
+        },
+        {
+          "type": "error",
+          "boxCss": {
+            "width": 28,
+            "height": 24
+          },
+          "cropDevicePixels": {
+            "width": 56,
+            "height": 48
+          },
+          "observedColorCount": 16,
+          "fractionalDprMixedColors": [],
+          "mixedColorPixelCount": 0
+        }
+      ]
+    }
+  ],
+  "phoneFramework": {
+    "fixtureOnly": true,
+    "builderIntegrated": false,
+    "sourceManifest": "original-assets/r10-phone-layers/manifest.json",
+    "layerOrder": "char-back (back) < glow-dim/bright (middle) < phone-front (front)",
+    "canvas": {
+      "widthCssPx": 68,
+      "heightCssPx": 22,
+      "minimumForTappedPhoneLogicalCells": 25,
+      "spareLogicalCells": 43
+    },
+    "panelGeometry": [
+      {
+        "panelWidth": 320,
+        "canvasLeft": 163,
+        "railClearance": 52
+      },
+      {
+        "panelWidth": 240,
+        "canvasLeft": 83,
+        "railClearance": 52
+      }
+    ],
+    "embeddedLayers": {
+      "pngBytes": {
+        "char-back": 315,
+        "phone-front": 183,
+        "glow-dim": 211,
+        "glow-bright": 211
+      },
+      "totalPngBytes": 920,
+      "base64PayloadBytes": 1232,
+      "dataUriDeclarationBytes": 1348,
+      "fixtureCssBytes": 9505
+    },
+    "currentManifestLayers": [
+      {
+        "name": "char-back",
+        "size": "20px 20px",
+        "position": "0px 0px"
+      },
+      {
+        "name": "phone-front",
+        "size": "7px 12px",
+        "restPosition": "17px 8px",
+        "tapPosition": "18px 8px"
+      },
+      {
+        "name": "glow-dim",
+        "size": "14px 13px",
+        "position": "3px 7px",
+        "alphaValues": [
+          0,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          56,
+          64,
+          128
+        ]
+      },
+      {
+        "name": "glow-bright",
+        "size": "14px 13px",
+        "position": "3px 7px",
+        "alphaValues": [
+          0,
+          16,
+          32,
+          48,
+          64,
+          80,
+          96,
+          112,
+          128,
+          255
+        ]
+      }
+    ],
+    "imageVariableStatus": [
+      "manifest-png",
+      "manifest-png",
+      "manifest-png",
+      "manifest-png"
+    ],
+    "animation": {
+      "name": "r10-social-phone-layers",
+      "duration": "4s",
+      "timingFunction": "steps(17)",
+      "delay": "-2s",
+      "backgroundLayers": 6,
+      "keyframes": 1,
+      "frameCount": 17,
+      "frameIntervalMs": 235.2941176470588,
+      "phaseSplit": "8+9 frames approximates the existing 2s SOCIAL wave"
+    },
+    "frameStates": {
+      "phoneTap": [
+        3,
+        5
+      ],
+      "glowDim": [
+        9,
+        10,
+        12,
+        14,
+        15
+      ],
+      "glowBright": [
+        11
+      ],
+      "sampledFrames": [
+        {
+          "frame": 1,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 2,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 2px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 3,
+          "positions": [
+            "18px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 0px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 4,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 1px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 5,
+          "positions": [
+            "18px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 2px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 6,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 7,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "27px 6px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "14px 14px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 8,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "51px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 9,
+          "positions": [
+            "17px 8px",
+            "3px 7px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 10,
+          "positions": [
+            "17px 8px",
+            "3px 7px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 2px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 11,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "3px 7px",
+            "0px 0px",
+            "26px 5px",
+            "50px 0px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 12,
+          "positions": [
+            "17px 8px",
+            "3px 7px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 1px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 13,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 2px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 14,
+          "positions": [
+            "17px 8px",
+            "3px 7px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 15,
+          "positions": [
+            "17px 8px",
+            "3px 7px",
+            "-14px -13px",
+            "0px 0px",
+            "27px 6px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "14px 14px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 16,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "51px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        },
+        {
+          "frame": 17,
+          "positions": [
+            "17px 8px",
+            "-14px -13px",
+            "-14px -13px",
+            "0px 0px",
+            "26px 5px",
+            "50px 4px"
+          ],
+          "sizes": [
+            "7px 12px",
+            "14px 13px",
+            "14px 13px",
+            "20px 20px",
+            "16px 16px",
+            "18px 18px"
+          ]
+        }
+      ]
+    },
+    "reducedMotion": {
+      "animationName": "none",
+      "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+      "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px"
+    },
+    "screenshots": [
+      "social-phone-w320-dpr1-normal.png",
+      "social-phone-frames-w320-dpr1.png",
+      "social-phone-glow-1x-compare-8x.png",
+      "social-phone-frame-f03-tap-8x.png",
+      "social-phone-frame-f05-tap-8x.png",
+      "social-phone-frame-f09-dim-8x.png",
+      "social-phone-frame-f11-bright-8x.png",
+      "social-phone-frame-f13-rest-8x.png",
+      "social-phone-f03-vs-f01-8x.png",
+      "social-phone-f11-bright-vs-f09-dim-8x.png",
+      "social-phone-w320-dpr1-reduced.png",
+      "social-phone-w320-dpr1-html-reduce-effects.png",
+      "social-phone-w320-dpr2-normal.png",
+      "social-phone-frames-w320-dpr2.png",
+      "social-phone-w320-dpr2-reduced.png",
+      "social-phone-w320-dpr2-html-reduce-effects.png",
+      "social-phone-w240-dpr1-normal.png",
+      "social-phone-frames-w240-dpr1.png",
+      "social-phone-w240-dpr1-reduced.png",
+      "social-phone-w240-dpr1-html-reduce-effects.png",
+      "social-phone-w240-dpr2-normal.png",
+      "social-phone-frames-w240-dpr2.png",
+      "social-phone-w240-dpr2-reduced.png",
+      "social-phone-w240-dpr2-html-reduce-effects.png"
+    ],
+    "contactSheets": [
+      {
+        "file": "social-phone-frames-w320-dpr1.png",
+        "width": 1600,
+        "height": 184,
+        "frames": 17,
+        "columns": 5,
+        "rows": 4
+      },
+      {
+        "file": "social-phone-glow-1x-compare-8x.png",
+        "width": 600,
+        "height": 184,
+        "source": "real 1x browser captures enlarged 8x with nearest-neighbour for inspection"
+      },
+      {
+        "file": "social-phone-frames-w320-dpr2.png",
+        "width": 3200,
+        "height": 368,
+        "frames": 17,
+        "columns": 5,
+        "rows": 4
+      },
+      {
+        "file": "social-phone-frames-w240-dpr1.png",
+        "width": 1200,
+        "height": 184,
+        "frames": 17,
+        "columns": 5,
+        "rows": 4
+      },
+      {
+        "file": "social-phone-frames-w240-dpr2.png",
+        "width": 2400,
+        "height": 368,
+        "frames": 17,
+        "columns": 5,
+        "rows": 4
+      }
+    ],
+    "reviewImages": [
+      {
+        "file": "social-phone-frame-f03-tap-8x.png",
+        "width": 200,
+        "height": 184,
+        "frame": 3,
+        "scale": 8,
+        "source": "single real DPR1 browser frame; nearest-neighbour enlargement"
+      },
+      {
+        "file": "social-phone-frame-f05-tap-8x.png",
+        "width": 200,
+        "height": 184,
+        "frame": 5,
+        "scale": 8,
+        "source": "single real DPR1 browser frame; nearest-neighbour enlargement"
+      },
+      {
+        "file": "social-phone-frame-f09-dim-8x.png",
+        "width": 200,
+        "height": 184,
+        "frame": 9,
+        "scale": 8,
+        "source": "single real DPR1 browser frame; nearest-neighbour enlargement"
+      },
+      {
+        "file": "social-phone-frame-f11-bright-8x.png",
+        "width": 200,
+        "height": 184,
+        "frame": 11,
+        "scale": 8,
+        "source": "single real DPR1 browser frame; nearest-neighbour enlargement"
+      },
+      {
+        "file": "social-phone-frame-f13-rest-8x.png",
+        "width": 200,
+        "height": 184,
+        "frame": 13,
+        "scale": 8,
+        "source": "single real DPR1 browser frame; nearest-neighbour enlargement"
+      },
+      {
+        "file": "social-phone-f03-vs-f01-8x.png",
+        "width": 416,
+        "height": 184,
+        "frames": [
+          3,
+          1
+        ],
+        "scale": 8,
+        "source": "real DPR1 browser frames; nearest-neighbour enlargement"
+      },
+      {
+        "file": "social-phone-f11-bright-vs-f09-dim-8x.png",
+        "width": 416,
+        "height": 184,
+        "frames": [
+          11,
+          9
+        ],
+        "scale": 8,
+        "source": "real DPR1 browser frames; nearest-neighbour enlargement"
+      }
+    ],
+    "framePixelAudits": [
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 1,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 48,
+        "withinTwoLsbPixels": 48,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 87,
+        "withinTwoLsbPixels": 87,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 1,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 464,
+        "withinTwoLsbPixels": 464,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 516,
+        "withinTwoLsbPixels": 516,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 2,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 1,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 48,
+        "withinTwoLsbPixels": 48,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 87,
+        "withinTwoLsbPixels": 87,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 1,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 464,
+        "withinTwoLsbPixels": 464,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 516,
+        "withinTwoLsbPixels": 516,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 2,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      }
+    ],
+    "tapFramePixelAudits": [
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 3,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 5,
+        "tapped": true,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": {
+          "cells": [
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ],
+          "rgba": [
+            123,
+            95,
+            128,
+            255
+          ],
+          "exact": true
+        },
+        "leftEdgeAudit": "no old-bezel residue; exact char-back/phone-front composite"
+      }
+    ],
+    "glowFramePixelAudits": [
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 48,
+        "withinTwoLsbPixels": 48,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 87,
+        "withinTwoLsbPixels": 87,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 464,
+        "withinTwoLsbPixels": 464,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 516,
+        "withinTwoLsbPixels": 516,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 2,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 48,
+        "withinTwoLsbPixels": 48,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 87,
+        "withinTwoLsbPixels": 87,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "25x20",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 8,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 9,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 464,
+        "withinTwoLsbPixels": 464,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 1,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 11,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 516,
+        "withinTwoLsbPixels": 516,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 2,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "frame": 13,
+        "tapped": false,
+        "canvasCells": "25x20",
+        "screenshotPixels": "50x40",
+        "differingPixels": 0,
+        "withinTwoLsbPixels": 0,
+        "outsideGlowPixels": 0,
+        "maxChannelDelta": 0,
+        "leftEarAudit": null,
+        "leftEdgeAudit": "rest composite matches manifest"
+      }
+    ],
+    "adjacentFramePixelDiffs": [
+      {
+        "panelWidth": 320,
+        "dpr": 1,
+        "canvasCells": "25x20",
+        "transitions": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 5,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 5,
+            "toFrame": 6,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 6,
+            "toFrame": 7,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 7,
+            "toFrame": 8,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 8,
+            "toFrame": 9,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 9,
+            "toFrame": 10,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 11,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 11,
+            "toFrame": 12,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 15,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 15,
+            "toFrame": 16,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 16,
+            "toFrame": 17,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          }
+        ]
+      },
+      {
+        "panelWidth": 320,
+        "dpr": 2,
+        "canvasCells": "25x20",
+        "transitions": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 5,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 5,
+            "toFrame": 6,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 6,
+            "toFrame": 7,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 7,
+            "toFrame": 8,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 8,
+            "toFrame": 9,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 9,
+            "toFrame": 10,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 11,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 11,
+            "toFrame": 12,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 15,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 15,
+            "toFrame": 16,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 16,
+            "toFrame": 17,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          }
+        ]
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 1,
+        "canvasCells": "25x20",
+        "transitions": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 5,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 5,
+            "toFrame": 6,
+            "changedPixels": 51,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 6,
+            "toFrame": 7,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 7,
+            "toFrame": 8,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 8,
+            "toFrame": 9,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 9,
+            "toFrame": 10,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 11,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 11,
+            "toFrame": 12,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 15,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 15,
+            "toFrame": 16,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 16,
+            "toFrame": 17,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          }
+        ]
+      },
+      {
+        "panelWidth": 240,
+        "dpr": 2,
+        "canvasCells": "25x20",
+        "transitions": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 5,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 5,
+            "toFrame": 6,
+            "changedPixels": 204,
+            "meanAbsRgbDelta": 6.103,
+            "maxChannelDelta": 132,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 6,
+            "toFrame": 7,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 7,
+            "toFrame": 8,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 8,
+            "toFrame": 9,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 9,
+            "toFrame": 10,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 11,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 11,
+            "toFrame": 12,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 15,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 15,
+            "toFrame": 16,
+            "changedPixels": 568,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "50x40"
+          },
+          {
+            "fromFrame": 16,
+            "toFrame": 17,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "50x40"
+          }
+        ]
+      }
+    ],
+    "adjacentGlowPixelDiffsAt1x": [
+      {
+        "panelWidth": 320,
+        "transitions": [
+          {
+            "fromFrame": 8,
+            "toFrame": 9,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 9,
+            "toFrame": 10,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 11,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 11,
+            "toFrame": 12,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 15,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 15,
+            "toFrame": 16,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          }
+        ]
+      },
+      {
+        "panelWidth": 240,
+        "transitions": [
+          {
+            "fromFrame": 8,
+            "toFrame": 9,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 9,
+            "toFrame": 10,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 11,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 11,
+            "toFrame": 12,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.569,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 15,
+            "changedPixels": 0,
+            "meanAbsRgbDelta": 0,
+            "maxChannelDelta": 0,
+            "cropPixels": "25x20"
+          },
+          {
+            "fromFrame": 15,
+            "toFrame": 16,
+            "changedPixels": 142,
+            "meanAbsRgbDelta": 1.546,
+            "maxChannelDelta": 73,
+            "cropPixels": "25x20"
+          }
+        ]
+      }
+    ],
+    "motionModeAudits": [
+      {
+        "mode": "prefers-reduced-motion",
+        "panelWidth": 320,
+        "dpr": 1,
+        "filename": "social-phone-w320-dpr1-reduced.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "320x28"
+      },
+      {
+        "mode": "html.reduce-effects",
+        "panelWidth": 320,
+        "dpr": 1,
+        "filename": "social-phone-w320-dpr1-html-reduce-effects.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "320x28"
+      },
+      {
+        "mode": "prefers-reduced-motion",
+        "panelWidth": 320,
+        "dpr": 2,
+        "filename": "social-phone-w320-dpr2-reduced.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "640x56"
+      },
+      {
+        "mode": "html.reduce-effects",
+        "panelWidth": 320,
+        "dpr": 2,
+        "filename": "social-phone-w320-dpr2-html-reduce-effects.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "640x56"
+      },
+      {
+        "mode": "prefers-reduced-motion",
+        "panelWidth": 240,
+        "dpr": 1,
+        "filename": "social-phone-w240-dpr1-reduced.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "240x28"
+      },
+      {
+        "mode": "html.reduce-effects",
+        "panelWidth": 240,
+        "dpr": 1,
+        "filename": "social-phone-w240-dpr1-html-reduce-effects.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "240x28"
+      },
+      {
+        "mode": "prefers-reduced-motion",
+        "panelWidth": 240,
+        "dpr": 2,
+        "filename": "social-phone-w240-dpr2-reduced.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "480x56"
+      },
+      {
+        "mode": "html.reduce-effects",
+        "panelWidth": 240,
+        "dpr": 2,
+        "filename": "social-phone-w240-dpr2-html-reduce-effects.png",
+        "animationName": "none",
+        "backgroundPosition": "17px 8px, -14px -13px, -14px -13px, 0px 0px, 26px 5px, 50px 4px",
+        "backgroundSize": "7px 12px, 14px 13px, 14px 13px, 20px 20px, 16px 16px, 18px 18px",
+        "screenshotPixels": "480x56"
+      }
+    ],
+    "glowVisibilityAt1CssPx": {
+      "assessment": "dim is weak but discernible; bright is visible yet restrained (not a strong bloom)",
+      "measurement": "W320, DPR1, 25x20 CSS-pixel canvas; 1 CSS px per logical cell; screenshot comparisons are unscaled",
+      "adjacentTransitions": [
+        {
+          "fromFrame": 8,
+          "toFrame": 9,
+          "changedPixels": 142,
+          "meanAbsRgbDelta": 1.546,
+          "maxChannelDelta": 73,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 9,
+          "toFrame": 10,
+          "changedPixels": 0,
+          "meanAbsRgbDelta": 0,
+          "maxChannelDelta": 0,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 10,
+          "toFrame": 11,
+          "changedPixels": 142,
+          "meanAbsRgbDelta": 1.569,
+          "maxChannelDelta": 73,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 11,
+          "toFrame": 12,
+          "changedPixels": 142,
+          "meanAbsRgbDelta": 1.569,
+          "maxChannelDelta": 73,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 12,
+          "toFrame": 13,
+          "changedPixels": 142,
+          "meanAbsRgbDelta": 1.546,
+          "maxChannelDelta": 73,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 13,
+          "toFrame": 14,
+          "changedPixels": 142,
+          "meanAbsRgbDelta": 1.546,
+          "maxChannelDelta": 73,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 14,
+          "toFrame": 15,
+          "changedPixels": 0,
+          "meanAbsRgbDelta": 0,
+          "maxChannelDelta": 0,
+          "cropPixels": "25x20"
+        },
+        {
+          "fromFrame": 15,
+          "toFrame": 16,
+          "changedPixels": 142,
+          "meanAbsRgbDelta": 1.546,
+          "maxChannelDelta": 73,
+          "cropPixels": "25x20"
+        }
+      ]
+    },
+    "productionRuntimeCssIncrementBytes": 0
+  },
+  "build": null,
+  "images": [
+    "preview.png",
+    "preview-reduced.png",
+    "preview-240.png",
+    "preview-reduced-240.png",
+    "preview-compact-288.png",
+    "preview-compact-288-panel240.png",
+    "social-phone-w320-dpr1-normal.png",
+    "social-phone-frames-w320-dpr1.png",
+    "social-phone-glow-1x-compare-8x.png",
+    "social-phone-frame-f03-tap-8x.png",
+    "social-phone-frame-f05-tap-8x.png",
+    "social-phone-frame-f09-dim-8x.png",
+    "social-phone-frame-f11-bright-8x.png",
+    "social-phone-frame-f13-rest-8x.png",
+    "social-phone-f03-vs-f01-8x.png",
+    "social-phone-f11-bright-vs-f09-dim-8x.png",
+    "social-phone-w320-dpr1-reduced.png",
+    "social-phone-w320-dpr1-html-reduce-effects.png",
+    "social-phone-w320-dpr2-normal.png",
+    "social-phone-frames-w320-dpr2.png",
+    "social-phone-w320-dpr2-reduced.png",
+    "social-phone-w320-dpr2-html-reduce-effects.png",
+    "social-phone-w240-dpr1-normal.png",
+    "social-phone-frames-w240-dpr1.png",
+    "social-phone-w240-dpr1-reduced.png",
+    "social-phone-w240-dpr1-html-reduce-effects.png",
+    "social-phone-w240-dpr2-normal.png",
+    "social-phone-frames-w240-dpr2.png",
+    "social-phone-w240-dpr2-reduced.png",
+    "social-phone-w240-dpr2-html-reduce-effects.png",
+    "preview-html-reduce.png",
+    "scale-dpr-1-25.png",
+    "scale-dpr-1-5.png",
+    "scale-dpr-2.png"
+  ],
+  "phone": "fixture-only: all four manifest PNG layers are embedded and captured; glow uses translucent alpha with off-canvas position toggles; no phone CSS is integrated in runtime/builder",
+  "notes": [
+    "Toast PNG sources have only alpha 0/255; image-rendering:pixelated is set. DPR 1 and 2 map each logical cell to a uniform integer device-pixel width and retain only source/surface palette colors.",
+    "DPR 1.25 and 1.5 have the expected uneven 1/2-device-pixel logical-cell widths and subpixel mixed-color pixels; counts are reported, not hidden. Phone audit images are fixture-only and excluded from the builder."
+  ]
+}

@@ -1,0 +1,764 @@
+{
+  "scope": "V1 + domed caps. Comparison/design only; V1/V2/A/B/C/7x6/9x8/heart-11x9.svg/CSS untouched.",
+  "palette": {
+    "O": "#ae387d",
+    "H": "#ffcced",
+    "P": "#ff87c6",
+    "S": "#cc5282"
+  },
+  "v1": [
+    ".OOOO.OOOO.",
+    "OHPPPOPHPPO",
+    "OPPPPPPPPSO",
+    "OPPPPPPPSSO",
+    ".OPPPPPPSO.",
+    "..OPPPPSO..",
+    "...OPPSO...",
+    "....OSO....",
+    ".....O....."
+  ],
+  "variants": [
+    {
+      "id": "cap2",
+      "capWidth": 2,
+      "left": [
+        2,
+        3
+      ],
+      "right": [
+        7,
+        8
+      ],
+      "rows": [
+        "..OO...OO..",
+        ".OPPO.OHPO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "colorCounts": {
+        "O": 24,
+        "H": 3,
+        "P": 36,
+        "S": 7
+      },
+      "added": [
+        {
+          "x": 2,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        }
+      ],
+      "converted": [
+        {
+          "x": 2,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "from": "O",
+          "to": "H"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        }
+      ],
+      "diff": [
+        {
+          "x": 2,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "from": "O",
+          "to": "H"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        }
+      ],
+      "checks": {
+        "size11x10": true,
+        "outlineExactlyOneCell": true,
+        "noEnclosedHoles": true,
+        "outline8Connected": true,
+        "noIsolatedPixels": true,
+        "shapeOutlineFillMasksSymmetric": true,
+        "allFourColoursUsed": true,
+        "restMatchesV1ShiftedDown1": true,
+        "diff": [
+          {
+            "x": 2,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          },
+          {
+            "x": 7,
+            "y": 1,
+            "from": "O",
+            "to": "H"
+          },
+          {
+            "x": 8,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cap3",
+      "capWidth": 3,
+      "left": [
+        2,
+        4
+      ],
+      "right": [
+        6,
+        8
+      ],
+      "rows": [
+        "..OOO.OOO..",
+        ".OPPO.OHPO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "colorCounts": {
+        "O": 26,
+        "H": 3,
+        "P": 36,
+        "S": 7
+      },
+      "added": [
+        {
+          "x": 2,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        }
+      ],
+      "converted": [
+        {
+          "x": 2,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "from": "O",
+          "to": "H"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        }
+      ],
+      "diff": [
+        {
+          "x": 2,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "from": "O",
+          "to": "H"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        }
+      ],
+      "checks": {
+        "size11x10": true,
+        "outlineExactlyOneCell": true,
+        "noEnclosedHoles": true,
+        "outline8Connected": true,
+        "noIsolatedPixels": true,
+        "shapeOutlineFillMasksSymmetric": true,
+        "allFourColoursUsed": true,
+        "restMatchesV1ShiftedDown1": true,
+        "diff": [
+          {
+            "x": 2,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          },
+          {
+            "x": 7,
+            "y": 1,
+            "from": "O",
+            "to": "H"
+          },
+          {
+            "x": 8,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cap4",
+      "capWidth": 4,
+      "left": [
+        1,
+        4
+      ],
+      "right": [
+        6,
+        9
+      ],
+      "rows": [
+        ".OOOO.OOOO.",
+        ".OPPO.OHPO.",
+        "OHPPPOPHPPO",
+        "OPPPPPPPPSO",
+        "OPPPPPPPSSO",
+        ".OPPPPPPSO.",
+        "..OPPPPSO..",
+        "...OPPSO...",
+        "....OSO....",
+        ".....O....."
+      ],
+      "colorCounts": {
+        "O": 28,
+        "H": 3,
+        "P": 36,
+        "S": 7
+      },
+      "added": [
+        {
+          "x": 1,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        }
+      ],
+      "converted": [
+        {
+          "x": 2,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "from": "O",
+          "to": "H"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        }
+      ],
+      "diff": [
+        {
+          "x": 1,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 8,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 9,
+          "y": 0,
+          "from": ".",
+          "to": "O"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        },
+        {
+          "x": 7,
+          "y": 1,
+          "from": "O",
+          "to": "H"
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "from": "O",
+          "to": "P"
+        }
+      ],
+      "checks": {
+        "size11x10": true,
+        "outlineExactlyOneCell": true,
+        "noEnclosedHoles": true,
+        "outline8Connected": true,
+        "noIsolatedPixels": true,
+        "shapeOutlineFillMasksSymmetric": true,
+        "allFourColoursUsed": true,
+        "restMatchesV1ShiftedDown1": true,
+        "diff": [
+          {
+            "x": 1,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 9,
+            "y": 0,
+            "from": ".",
+            "to": "O"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          },
+          {
+            "x": 7,
+            "y": 1,
+            "from": "O",
+            "to": "H"
+          },
+          {
+            "x": 8,
+            "y": 1,
+            "from": "O",
+            "to": "P"
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "pink": {
+      "file": "comparison-pink.png",
+      "width": 462,
+      "height": 266,
+      "background": "#d97fc6",
+      "scales": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    "dark": {
+      "file": "comparison-dark.png",
+      "width": 462,
+      "height": 266,
+      "background": "#201936",
+      "scales": [
+        1,
+        2,
+        4,
+        6
+      ]
+    },
+    "titlebar": {
+      "file": "titlebar-occupancy.png",
+      "width": 1640,
+      "height": 1416,
+      "titlebarHeightPx": 32,
+      "slotPx": 14,
+      "previewMagnification": 4,
+      "cellSizeCssPx": 1,
+      "occupancy": [
+        {
+          "id": "V1",
+          "logicalSize": "11x9",
+          "fitsSlot": true
+        },
+        {
+          "id": "cap2",
+          "logicalSize": "11x10",
+          "fitsSlot": true
+        },
+        {
+          "id": "cap3",
+          "logicalSize": "11x10",
+          "fitsSlot": true
+        },
+        {
+          "id": "cap4",
+          "logicalSize": "11x10",
+          "fitsSlot": true
+        }
+      ]
+    },
+    "allEdgesAtMost2000": true
+  }
+}

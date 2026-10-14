@@ -1,0 +1,883 @@
+# B073–B100 逐源码职责清单
+
+原图库行号映射至当前源码；每一项独立列出，不以 B 聚类代替职责。源码静态结构不等于线上运行状态。
+
+- B073 components/about/AboutDialog.tsx:268 — ordinary outline action
+  - <Button key={key} type="button" variant="outline" size="sm" className="text-muted-foreground hover:text-foreground" onClick={() => { openExternalLink(href); }} >
+  - children:  <Icon data-icon="inline-start" /> {label} 
+- B073 components/dialogs/AvatarOwnerEditDialogs.tsx:368 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={toggleAllAvatars} >
+  - children:  {ownAvatars.length === selectedAvatarIds.length ? 'Select None' : 'Select All'} 
+- B073 components/dialogs/InstanceInviteDialog.tsx:358 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={!currentUserId || sending} onClick={() => { if (currentUserId) { addUserIds([currentUserId]); } }} >
+  - children:  <UserIcon data-icon="inline-start" /> {t('dialog.invite.add_self')} 
+- B073 components/dialogs/InstanceInviteDialog.tsx:372 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={ !friendsInCurrentInstanceIds.length || sending } onClick={() => addUserIds(friendsInCurrentInstanceIds) } >
+  - children:  <UsersIcon data-icon="inline-start" /> {t('dialog.invite.add_friends_in_instance')} 
+- B073 components/dialogs/InstanceInviteDialog.tsx:389 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={ sending || (!favoriteGroupItems.remote .length && !favoriteGroupItems.local .length) } >
+  - children:  <PlusIcon data-icon="inline-start" /> {t( 'dialog.invite.add_favorite_friends' )} 
+- B073 components/dialogs/ProfileMediaPanel.tsx:164 — ordinary outline action
+  - <Button variant="outline" size="sm" className="shrink-0 self-start" disabled={!currentFileId || busy} onClick={() => onClear(section.fieldName)} >
+  - children:  <XIcon data-icon="inline-start" /> {t(section.clearKey)} 
+- B073 components/dialogs/WorldOwnerEditDialogs.tsx:750 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={saving} onClick={() => setUrlList((current) => [...current, '']) } >
+  - children:  {t('dialog.world.action.add_domain')} 
+- B073 components/dialogs/group-dialog/GroupModerationLogsExportDialog.tsx:95 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" className="mt-2 self-start" disabled={!content} onClick={() => copyTextToClipboard(content, { successMessage: t( 'dialog.group_member_moderation.export_logs_copied' ), errorMessage: (error) => error instanceof Error ? error.message : t('dialog.group.toast.value_failed', { value: t( 'dialog.group_member_moderation.export_logs' ) }) }) } >
+  - children:  <CopyIcon data-icon="inline-start" /> {t('common.actions.copy')} 
+- B073 components/dialogs/invite-message/InviteMessagePanel.tsx:360 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={sending} onClick={() => { setImageData(''); setImageName(''); }} >
+  - children:  <ImageIcon data-icon="inline-start" /> {t( 'dialog.invite_message.clear_selected_image' )}{' '} {imageName} 
+- B073 components/dialogs/invite-message/InviteMessagePanel.tsx:484 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={sending} onClick={( event: MouseEvent<HTMLButtonElement> ) => { event.stopPropagation(); applyRow(row); }} >
+  - children:  {actionLabel} 
+- B073 components/dialogs/invite-message/InviteMessagePanel.tsx:501 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={sending} onClick={() => { setEditingRow( null ); setConfirmRow( row ); }} >
+  - children:  {actionLabel} 
+- B073 components/dialogs/invite-message/InviteMessagePanel.tsx:558 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={sending} onClick={() => setEditingRow(null)} >
+  - children:  {t('common.actions.cancel')} 
+- B073 components/dialogs/invite-message/InviteMessagePanel.tsx:611 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={sending} onClick={() => setConfirmRow(null)} >
+  - children:  {t('common.actions.cancel')} 
+- B073 components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx:335 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => onOpenDetails(row) } >
+  - children:  {t( 'dialog.previous_instances.description.details' )} 
+- B073 components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx:347 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={!location} aria-label={t( 'common.actions.delete' )} onClick={() => { onDeleteRow(row); }} >
+  - children:  <Trash2Icon data-icon="inline-start" /> {t('common.actions.delete')} 
+- B073 components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx:389 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={currentPageIndex <= 0} onClick={onPreviousPage} >
+  - children:  {t('table.pagination.previous')} 
+- B073 components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx:398 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={currentPageIndex >= totalPages - 1} onClick={onNextPage} >
+  - children:  {t('table.pagination.next')} 
+- B073 components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx:408 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" onClick={onClose} >
+  - children:  {t('common.actions.close')} 
+- B073 components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx:142 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={loading || sending} onClick={() => { setSelectedGroupId(''); reload(); }} >
+  - children:  {t('common.action.retry')} 
+- B073 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:169 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => { void openDatabaseUpgradeFailureLogFolder(); }} >
+  - children:  {t('message.database.open_failure_log_folder')} 
+- B073 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:179 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => { void createDatabaseUpgradeGitHubIssue(); }} >
+  - children:  {t('message.database.create_github_issue')} 
+- B073 components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx:248 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => { openExternalLink( selectedEntry.projectUrl ); }} >
+  - children:  {t( 'dialog.open_source.open_project' )} 
+- B073 components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx:264 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => { openExternalLink( selectedEntry.licenseUrl ); }} >
+  - children:  {t( 'dialog.open_source.open_license_url' )} 
+- B073 components/hosts/system-dialogs/VRChatConfigDialog.tsx:576 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={loading} onClick={() => { handleSweepCache(); }} >
+  - children:  <SparklesIcon data-icon="inline-start" /> {t('dialog.config_json.sweep_cache')} 
+- B073 components/hosts/tools-dialogs/AppLauncherDialog.tsx:465 — ordinary outline action
+  - <Button type="button" className="ml-auto" variant="outline" size="sm" disabled={saving} onClick={addApp} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t('dialog.app_launcher.add_app')} 
+- B073 components/hosts/tools-dialogs/GroupCalendarDialog.tsx:551 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" onClick={() => selectDateKey(selectedDateKey(new Date())) } >
+  - children:  {t('dialog.group_calendar.today')} 
+- B073 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:413 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" className="justify-self-start" onClick={openAddView} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t('view.tools.llm_endpoints.add')} 
+- B073 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:576 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={loading || !baseUrlValid} onClick={detectForDraft} >
+  - children:  <RefreshCwIcon data-icon="inline-start" /> {t( 'view.tools.llm_endpoints.detect_models' )} 
+- B073 components/hosts/tools-dialogs/NoteExportDialog.tsx:427 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => setErrors('')} >
+  - children:  {t('dialog.note_export.clear_errors')} 
+- B073 components/hosts/tools-dialogs/ProfileBackupDialog.tsx:338 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" disabled={ statusActionRunning } onClick={() => { void runStatusAction( 'discard' ); }} >
+  - children:  {t( 'profile_backup.discard_backup' )} 
+- B073 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:841 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B073 features/my-avatars/ManageAvatarTagsDialog.tsx:203 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={() => removeTag(entry.tag) } disabled={saving} >
+  - children:  <XIcon data-icon="inline-start" /> {t('common.actions.remove')} 
+- B073 features/settings/components/settings-dialogs/AvatarProviderDialog.tsx:125 — ordinary outline action
+  - <Button type="button" size="sm" variant="outline" onClick={addAvatarProvider} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t('dialog.avatar_database_provider.add_provider')} 
+- B074 components/about/AboutDialog.tsx:287 — protected text link
+  - <Button type="button" variant="ghost" size="sm" data-ui-role="text-link" className="text-muted-foreground/70 hover:text-foreground h-7 px-2 text-[11.5px] font-medium" onClick={() => { openExternalLink(links.license); }} >
+  - children:  {t('view.about.license_line')} 
+- B074 components/about/AboutDialog.tsx:299 — protected text link
+  - <Button type="button" variant="ghost" size="sm" data-ui-role="text-link" className="text-muted-foreground/70 hover:text-foreground h-7 px-2 text-[11.5px] font-medium" onClick={onOpenLicenses} >
+  - children:  {t('app_menu.open_source_licenses')} 
+- B074 components/hosts/LaunchDialogHost.tsx:459 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="sm" disabled={inviteDisabled} onClick={() => setInviteOpen(true)} >
+  - children:  <UserPlusIcon data-icon="inline-start" /> {t('dialog.launch.invite')} 
+- B074 components/hosts/LaunchDialogHost.tsx:469 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="sm" disabled={actionDisabled} onClick={() => { runAction('self-invite', () => selfInviteToInstance( actionTag, actionLaunchToken ) ); }} >
+  - children:  {busy === 'self-invite' ? ( <Spinner data-icon="inline-start" className="size-3.5" /> ) : ( <MailIcon data-icon="inline-start" /> )} {t('dialog.launch.label.self_invite')} 
+- B074 components/hosts/LaunchDialogHost.tsx:498 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="sm" disabled={!vrcxInstanceUrl} onClick={() => { void copyField( t( 'dialog.world.info.vrcx_share_text', { name: `${subtitle} #${instanceName}`, url: vrcxInstanceUrl } ), t( 'dialog.world.info.vrcx_url' ) ); }} >
+  - children:  <Share2Icon data-icon="inline-start" /> {t('dialog.launch.share')} 
+- B074 components/hosts/system-dialogs/VRChatConfigDialog.tsx:777 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="sm" className="text-muted-foreground sm:mr-auto" onClick={() => { openExternalLink(links.vrchatDocsConfigurationFile); }} >
+  - children:  <ExternalLinkIcon data-icon="inline-start" /> {t('dialog.config_json.vrchat_docs')} 
+- B074 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:744 — protected disclosure/title row
+  - <Button type="button" variant="ghost" size="sm" className="group h-auto w-full justify-between px-1.5 py-1" >
+  - children:  <span className="text-muted-foreground flex min-w-0 items-center gap-2 text-xs"> <FolderHeartIcon data-icon="inline-start" /> <span className="truncate"> {t( 'side_panel.settings.custom_tabs.favorite_groups_summary' )} </span> <B
+- B074 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:826 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="sm" className="mr-auto" onClick={() => { setDraftLayout( normalizeSidebarTabLayout( DEFAULT_SIDEBAR_TAB_LAYOUT ) ); }} >
+  - children:  {t('common.actions.reset')} 
+- B074 features/assistant/AssistantDialog.tsx:330 — protected title-bar action
+  - <Button type="button" size="sm" variant="ghost" className="h-8 gap-1.5 px-2 text-xs" >
+  - children:  <Settings2Icon data-icon="inline-start" className="size-4" /> <span className="hidden max-w-40 truncate sm:inline"> {selectedEndpoint?.name || t( 'assistant.runtime.connection_unset' )} </span> 
+- B074 features/assistant/AssistantDialog.tsx:682 — ordinary ghost action
+  - <Button type="button" size="sm" variant="ghost" className="h-auto px-1.5 py-1 text-xs" onClick={onOpenSettings} >
+  - children:  {t('assistant.open_settings')} 
+- B074 features/settings/components/settings-dialogs/GameLogImportDialog.tsx:166 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="sm" className="text-muted-foreground shrink-0" disabled={running} onClick={openBackup} >
+  - children:  {t(`${keyPrefix}.open_backup`)} 
+- B075 components/dialogs/AvatarDetailsDialog.tsx:435 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={saving} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B075 components/dialogs/AvatarOwnerEditDialogs.tsx:406 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={saving} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B075 components/dialogs/BoopEmojiDialog.tsx:499 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={sending} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B075 components/dialogs/FriendListUserLoadDialog.tsx:71 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={progress.cancelled} onClick={onCancel} >
+  - children:  {progress.cancelled ? t('view.friend_list.description.cancelling') : t('view.friend_list.load_cancel')} 
+- B075 components/dialogs/WorldOwnerEditDialogs.tsx:639 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={saving} onClick={() => onOpenChange?.(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B075 components/dialogs/group-dialog/GroupPostEditorDialog.tsx:384 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={submitting} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B075 components/dialogs/invite-message/InviteMessagePanel.tsx:650 — ordinary secondary action
+  - <Button type="button" variant="secondary" disabled={sending} onClick={onClose ?? undefined} >
+  - children:  {t('common.actions.close')} 
+- B075 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:931 — ordinary {isGameRunning ? 'secondary' : 'default'} action
+  - <Button type="button" variant={isGameRunning ? 'secondary' : 'default'} disabled={submitting} onClick={() => onLaunch(legacyCreated)} >
+  - children:  {t('dialog.world.action.launch')} 
+- B075 components/hosts/system-dialogs/ChangelogDialog.tsx:306 — ordinary secondary action
+  - <Button type="button" variant="secondary" onClick={() => { openExternalLink(links.githubSponsors); }} >
+  - children:  <HeartIcon data-icon="inline-start" /> {t('dialog.change_log.support_development')} 
+- B075 components/hosts/system-dialogs/OpenSourceNoticeDialog.tsx:193 — protected choice/entity row (selected paint source-owned)
+  - <Button key={entry.id} type="button" variant={ entry.id === selectedEntry?.id ? 'secondary' : 'outline' } className="h-auto w-full flex-col items-start justify-start p-3 text-left font-normal" onClick={() => setSelectedEntryId(entry.id || '') } >
+  - children:  <span className="block truncate font-medium"> {entry.name} </span> <span className="text-muted-foreground block truncate text-xs"> {entry.version || t( 'dialog.open_source.no_version' )} {' \u00b7 '} {entry.license} </span> 
+- B075 features/dashboard/components/DashboardViewParts.tsx:300 — protected choice/entity row (selected paint source-owned)
+  - <Button key={option.value} type="button" variant={selected ? 'secondary' : 'outline'} className="h-auto flex-col items-start justify-start p-3 text-left font-normal whitespace-normal" onClick={() => onSelect(option.value)} >
+  - children:  <div className="truncate text-sm font-medium"> {label} </div> <div className="text-muted-foreground line-clamp-2 text-xs"> {description} </div> 
+- B075 features/feed/columns/FeedColumnsManagerDialog.tsx:262 — protected choice/entity row (selected paint source-owned)
+  - <Button type="button" variant={ column.id === selectedColumn?.id ? 'secondary' : 'ghost' } className="h-auto min-w-0 flex-1 justify-start px-2 py-1.5 text-left" onClick={() => setDraftSelectedColumnId(column.id) } >
+  - children:  <span className="min-w-0"> <span className="block truncate text-sm"> {column.title} </span> <span className="text-muted-foreground block truncate text-xs"> {describeColumn(column)} </span> </span> 
+- B076 components/dialogs/AvatarDetailsDialog.tsx:443 — ordinary default action
+  - <Button type="button" disabled={controlsDisabled} onClick={() => { save(); }} >
+  - children:  {controlsDisabled ? ( <Spinner data-icon="inline-start" /> ) : null} {t('common.actions.save')} 
+- B076 components/dialogs/AvatarOwnerEditDialogs.tsx:414 — ordinary default action
+  - <Button type="button" disabled={ saving || loading || !selectedAvatarIds.length } onClick={() => { save(); }} >
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/BoopEmojiDialog.tsx:507 — ordinary default action
+  - <Button type="button" disabled={sending || sendDisabled || !choice} onClick={handleSend} >
+  - children:  {sending ? <Spinner data-icon="inline-start" /> : null} {t('dialog.boop_dialog.send')} 
+- B076 components/dialogs/InstanceInviteDialog.tsx:477 — ordinary default action
+  - <Button type="button" disabled={sending || !selectedUserIds.length} onClick={() => { sendInvites(); }} >
+  - children:  {sending ? <Spinner data-icon="inline-start" /> : null} {t('dialog.invite.invite')} {selectedUserIds.length ? ` (${selectedUserIds.length})` : null} 
+- B076 components/dialogs/WorldOwnerEditDialogs.tsx:397 — ordinary default action
+  - <Button type="button" disabled={saving} onClick={() => onSave?.(draft)} >
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/WorldOwnerEditDialogs.tsx:647 — ordinary default action
+  - <Button type="button" disabled={saving} onClick={() => onSave?.({ tags: buildWorldTags(draft, world?.tags), disabledPropAbilities: buildDisabledPropAbilities( draft.propMovementEnabled, world?.disabledPropAbilities ) }) } >
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/WorldOwnerEditDialogs.tsx:763 — ordinary default action
+  - <Button type="button" disabled={saving} onClick={() => onSave?.( urlList .map((value) => value.trim()) .filter(Boolean) ) } >
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/group-dialog/GroupPostEditorDialog.tsx:392 — ordinary default action
+  - <Button type="button" disabled={submitting} onClick={() => onSubmit(form)} >
+  - children:  {isEdit ? 'Edit Post' : 'Create Post'} 
+- B076 components/dialogs/group-dialog/GroupProfileEditDialog.tsx:264 — ordinary default action
+  - <Button type="button" disabled={saving || !nameValid || !shortCodeValid} onClick={() => onSave({ ...draft, name: draft.name.trim(), description: draft.description.trim(), rules: draft.rules.trim(), links: draft.links .map((link) => link.trim()) .filter(Boolean) }) } >
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:359 — ordinary default action
+  - <Button type="button" disabled={busy} onClick={onSave}>
+  - children:  {t('dialog.user.action.update')} 
+- B076 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:535 — ordinary default action
+  - <Button type="button" disabled={busy} onClick={onSave}>
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx:236 — ordinary default action
+  - <Button type="button" disabled={!selectedGroupId || loading || sending} onClick={invite} >
+  - children:  {sending ? ( <LoaderCircleIcon className="animate-spin" /> ) : null} {t('dialog.user.actions.invite')} 
+- B076 components/dialogs/user-dialog/components/UserNoteMemoDialog.tsx:101 — ordinary default action
+  - <Button type="button" disabled={saving} onClick={onSave}>
+  - children:  {t('common.actions.save')} 
+- B076 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:940 — ordinary default action
+  - <Button type="button" disabled={submitting} onClick={() => onOpenInGame(legacyCreated)} >
+  - children:  {t('dialog.world.action.open_in_game')} 
+- B076 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:959 — ordinary default action
+  - <Button type="button" disabled={ submitting || form.selectedTab === 'Legacy' } onClick={() => { const displayName = commitDisplayNamePreset(); onSubmit( displayName ? { ...form, displayName } : form ); }} >
+  - children:  {request?.selfInvite ? t('dialog.new_instance.create_and_invite') : t('dialog.new_instance.create_instance')} 
+- B076 components/hosts/LinuxRenderingTrialHost.tsx:95 — ordinary default action
+  - <Button disabled={busy} onClick={() => { void resolve(true); }} >
+  - children:  {t('linux_rendering.keep')} 
+- B076 components/hosts/ModalHost.tsx:231 — ordinary default action
+  - <Button type="button" disabled={!promptValueIsValid} onClick={() => handlePromptOk(promptDialog.value)} >
+  - children:  {promptDialog.confirmText || t('dialog.alertdialog.confirm')} 
+- B076 components/hosts/ModalHost.tsx:326 — ordinary default action
+  - <Button type="button" onClick={() => handleOtpOk(otpDialog.value)} >
+  - children:  {otpDialog.confirmText || t('dialog.alertdialog.confirm')} 
+- B076 components/hosts/ProfileRestoreResultHost.tsx:141 — ordinary default action
+  - <Button type="button" onClick={clearRestoreResult}>
+  - children:  {t('common.actions.close')} 
+- B076 components/hosts/system-dialogs/ChangelogDialog.tsx:316 — ordinary default action
+  - <Button type="button" onClick={() => { openExternalLink(links.github); }} >
+  - children:  <StarIcon data-icon="inline-start" /> {t('dialog.change_log.star_on_github')} 
+- B076 components/hosts/system-dialogs/DataDirMigrationDialog.tsx:339 — ordinary default action
+  - <Button type="button" disabled={!completed && !canStart} onClick={() => void (completed ? restart() : startMigration()) } >
+  - children:  {t( completed ? 'data_dir_migration.restart_now' : START_LABEL_KEYS[mode] )} 
+- B076 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:275 — ordinary default action
+  - <Button type="button" disabled={legacyChoicePending} onClick={() => { setLegacyChoicePending(true); void confirmLegacyDatabaseMigration().finally( () => { setLegacyChoicePending(false); } ); }} >
+  - children:  {t('dialog.system.action.migrate_and_restart')} 
+- B076 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:304 — ordinary default action
+  - <Button type="button" onClick={() => { void retryDatabaseUpgrade(); }} >
+  - children:  {t('common.action.retry')} 
+- B076 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:315 — ordinary default action
+  - <Button type="button" onClick={() => { void restartApplication(); }} >
+  - children:  {t('message.database.restart_app')} 
+- B076 components/hosts/system-dialogs/LaunchOptionsDialog.tsx:246 — ordinary default action
+  - <Button type="button" disabled={loading} onClick={() => { handleSave(); }} >
+  - children:  <SaveIcon data-icon="inline-start" /> {t('dialog.launch_options.save')} 
+- B076 components/hosts/system-dialogs/RegistryBackupDialog.tsx:439 — ordinary default action
+  - <Button type="button" disabled={loading || !selectedBackup} onClick={() => { handleRestoreBackup(); }} >
+  - children:  {t('dialog.registry_backup.restore')} 
+- B076 components/hosts/system-dialogs/UpdaterDialog.tsx:385 — ordinary default action
+  - <Button type="button" disabled={ !latestRelease || (!hasNewerRelease && !isChangingChannel) || loading || showDownloadProgress } onClick={() => { handleInstallUpdate(); }} >
+  - children:  {t('dialog.system.action.install_and_restart')} 
+- B076 components/hosts/system-dialogs/UpdaterDialog.tsx:400 — ordinary default action
+  - <Button type="button" disabled={loading || !latestRelease} onClick={() => { handleOpenReleasePage(); }} >
+  - children:  {t( isChangingChannel ? `dialog.vrcx_updater.channel.download_${selectedChannel}` : 'nav_menu.update' )} 
+- B076 components/hosts/system-dialogs/VRChatConfigDialog.tsx:796 — ordinary default action
+  - <Button type="button" disabled={loading} onClick={() => { handleSave(); }} >
+  - children:  <SaveIcon data-icon="inline-start" /> {t('dialog.config_json.save')} 
+- B076 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:662 — ordinary default action
+  - <Button type="button" disabled={loading || saving || !baseUrlValid} onClick={saveDraft} >
+  - children:  {t('common.actions.save')} 
+- B076 components/hosts/tools-dialogs/NoteExportDialog.tsx:370 — ordinary default action
+  - <Button type="button" disabled={loading || includedCount === 0} onClick={() => { exportNotes(); }} >
+  - children:  {t('dialog.note_export.export')} {includedCount > 0 ? ( <span className="bg-primary-foreground/20 ml-1.5 rounded-full px-1.5 text-xs tabular-nums"> {includedCount} </span> ) : null} 
+- B076 components/hosts/tools-dialogs/ProfileBackupDialog.tsx:538 — ordinary default action
+  - <Button type="button" disabled={disabled || startingManualBackup} onClick={() => { void startManualBackup(); }} >
+  - children:  <SaveIcon data-icon="inline-start" /> {t('profile_backup.backup_now')} 
+- B076 components/media/ImageCropDialog.tsx:805 — ordinary default action
+  - <Button disabled={isConfirming || !file} onClick={() => { confirmCrop(); }} >
+  - children:  {isConfirming ? ( <Spinner data-icon="inline-start" /> ) : ( <Upload data-icon="inline-start" /> )} {t('message.image.action.upload')} 
+- B076 features/charts/components/mutual-friends/ManualRelationsControl.tsx:120 — ordinary default action
+  - <Button type="button" disabled={!canAdd} onClick={addRelation} >
+  - children:  Add 
+- B076 features/favorites/components/FavoriteExportDialog.tsx:262 — ordinary default action
+  - <Button type="button" disabled={ remoteDetailsLoading || !items.length || !selectedFields.length } onClick={() => { copyExportContent(); }} >
+  - children:  {t('common.actions.copy')} 
+- B076 features/favorites/components/FavoriteShareCollectionDialog.tsx:190 — ordinary default action
+  - <Button type="button" onClick={onCopy}>
+  - children:  <CopyIcon data-icon="inline-start" /> {t('view.favorite.share_collection.action.copy_share_url')} 
+- B076 features/favorites/components/FavoriteShareCollectionDialog.tsx:288 — ordinary default action
+  - <Button type="button" disabled={ sharing || worldDetailsLoading || !title.trim() || !worldCount } onClick={onCreate} >
+  - children:  {sharing || worldDetailsLoading ? ( <Spinner data-icon="inline-start" /> ) : ( <Share2Icon data-icon="inline-start" /> )} <span> {t('view.favorite.share_collection.action.share')} </span> 
+- B076 features/feed/columns/FeedColumnsManagerDialog.tsx:636 — ordinary default action
+  - <Button type="button">
+  - children:  {t('common.actions.save')} 
+- B076 features/my-avatars/ManageAvatarTagsDialog.tsx:299 — ordinary default action
+  - <Button type="button" disabled={saving || !avatarId} onClick={() => onSave({ avatarId, tags: tagEntries })} >
+  - children:  <SaveIcon data-icon="inline-start" /> {t('common.actions.save')} 
+- B076 features/settings/components/SettingsViewParts.tsx:300 — ordinary default action
+  - <Button type="button" onClick={() => { save(); }} >
+  - children:  {t('dialog.alertdialog.ok')} 
+- B076 features/settings/components/TrayShortcutSetting.tsx:346 — ordinary default action
+  - <Button disabled={ pending || !recordingReady || recordingFailed || !binding || checking || Boolean(error) } onClick={() => { if (binding) void onSave(binding); }} >
+  - children:  {t('common.actions.save')} 
+- B076 features/settings/components/settings-dialogs/CustomFontDialog.tsx:392 — ordinary default action
+  - <Button type="button" disabled={saveDisabled} onClick={handleSave} >
+  - children:  {t('common.actions.save')} 
+- B076 features/settings/components/settings-dialogs/GameLogImportDialog.tsx:231 — ordinary default action
+  - <Button type="button" onClick={() => onOpenChange(false)} >
+  - children:  {t(`${keyPrefix}.done`)} 
+- B076 features/settings/components/settings-dialogs/GameLogImportDialog.tsx:247 — ordinary default action
+  - <Button type="button" disabled={running || !importable} onClick={() => void runImport()} >
+  - children:  {t(`${keyPrefix}.import`)} 
+- B076 features/settings/components/settings-dialogs/TableLimitsDialog.tsx:184 — ordinary default action
+  - <Button type="button" disabled={tableLimitsSaveDisabled} onClick={() => { saveTableLimitsDialog(); }} >
+  - children:  {t('prompt.table_entries_settings.save')} 
+- B076 features/settings/components/settings-dialogs/TranslationApiDialog.tsx:547 — ordinary default action
+  - <Button type="button" disabled={integrationStatus.translation === 'running'} onClick={() => { saveTranslationApiConfig(); }} >
+  - children:  {t('dialog.translation_api.save')} 
+- B076 features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx:654 — ordinary default action
+  - <Button type="button" onClick={saveDraft} disabled={!definitionsLoaded} >
+  - children:  {t('common.actions.save')} 
+- B076 features/settings/components/settings-dialogs/YoutubeApiDialog.tsx:80 — ordinary default action
+  - <Button type="button" disabled={integrationStatus.youtube === 'running'} onClick={() => { saveYoutubeApiKey(); }} >
+  - children:  {t('dialog.youtube_api.save')} 
+- B076 ui/shadcn/alert-dialog.tsx:174 — ordinary {variant} action
+  - <Button variant={variant} size={size} />
+  - children: 
+- B076 ui/shadcn/alert-dialog.tsx:191 — ordinary {variant} action
+  - <Button variant={variant} size={size} />
+  - children: 
+- B077 components/dialogs/AvatarOwnerEditDialogs.tsx:89 — protected avatar choice row (parent selected fill + aria-pressed)
+  - <Button type="button" variant="ghost" className="h-auto min-w-0 flex-1 justify-start p-1.5 text-left" aria-pressed={selected} onClick={onToggle} >
+  - children:  {imageUrl ? ( <FadeInImage src={imageUrl} alt="" className="mr-2.5 size-9 shrink-0 rounded-full object-cover" /> ) : ( <div className="bg-muted mr-2.5 flex size-9 shrink-0 items-center justify-center rounded-full"> <PersonStandin
+- B077 components/dialogs/ProfileMediaPanel.tsx:100 — protected image/avatar Tile
+  - <Button type="button" variant="ghost" title={`${t(section.useKey)}: ${displayName || file.id}`} disabled={disabled || isMutating || isCurrent} onClick={() => onUse(section.fieldName, file.id)} />
+  - children: 
+- B077 components/dialogs/previous-instances-table/PreviousInstancesListTable.tsx:281 — protected table-cell overlay
+  - <Button type="button" variant="ghost" className="absolute inset-0 h-full w-full rounded-none p-0 hover:bg-(--state-hover-surface)" onClick={() => onOpenDetails(row) } >
+  - children:  <span className="sr-only"> {t( 'dialog.previous_instances.description.open_instance_details' )} </span> 
+- B077 components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx:273 — protected text/entity row or UserPickerRow
+  - <Button type="button" variant="ghost" className="h-auto max-w-full justify-start p-0 text-left text-xs hover:bg-transparent" onClick={() => openUserDialog({ userId, title: displayName || undefined, seedData: queriedUser || knownUser || null }) } >
+  - children:  <span className="truncate">{displayName || userId}</span> 
+- B077 components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx:308 — protected text/entity row or UserPickerRow
+  - <Button type="button" variant="ghost" className="h-auto max-w-full justify-start p-0 text-left text-xs hover:bg-transparent" onClick={() => openGroupDialog({ groupId, title: displayName || undefined }) } >
+  - children:  <span className="truncate">{displayName}</span> 
+- B077 components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx:377 — protected text/entity row or UserPickerRow
+  - <Button type="button" variant="ghost" className="h-auto max-w-full min-w-0 justify-start p-0 text-left hover:bg-transparent" onClick={() => { if (userId) { openUserDialog({ userId, title: displayName || undefined, seedData: knownUser || null }); return; } openGameLogUser({ ...player, displayName }, t); }} >
+  - children:  <span className="truncate">{displayName || userId}</span> 
+- B077 components/hosts/tools-dialogs/GroupCalendarDialog.tsx:742 — protected disclosure/title row
+  - <Button type="button" variant="ghost" data-ui-role="disclosure" aria-expanded={ !collapsedGroups[group.groupId] } className="justify-start gap-2 px-1" onClick={() => setCollapsedGroups( (current) => ({ ...current, [group.groupId]: !current[ group.groupId ] }) ) } >
+  - children:  <ChevronDownIcon data-icon="inline-start" className={cn( 'transition-transform', collapsedGroups[ group.groupId ] && '-rotate-90' )} /> {groupIconUrl(group.groupId) ? ( <FadeInImage src={groupIconUrl( group.groupId )} alt="" load
+- B077 components/hosts/tools-dialogs/NoteExportDialog.tsx:491 — protected text/entity row or UserPickerRow
+  - <Button type="button" variant="ghost" className="h-auto min-w-0 justify-start truncate p-0 font-medium hover:bg-transparent" onClick={() => openUserDialog({ userId: row.id, title: row.name }) } >
+  - children:  {row.name} 
+- B077 features/favorites/components/FavoriteShareCollectionDialog.tsx:196 — ordinary ghost action
+  - <Button type="button" variant="ghost" onClick={onOpenManage}>
+  - children:  <ExternalLinkIcon data-icon="inline-start" /> {t('view.favorite.share_collection.action.open_manage')} 
+- B078 components/dialogs/BoopEmojiDialog.tsx:428 — ordinary outline action
+  - <Button type="button" variant="outline" size="icon-sm" aria-label={t('common.actions.refresh')} title={t('common.actions.refresh')} disabled={refreshable.loading || sending} onClick={refreshable.load} >
+  - children:  <RefreshCcwIcon /> 
+- B078 components/dialogs/previous-instances-table/InstanceHistoryListPanel.tsx:361 — ordinary outline action
+  - <Button type="button" variant="outline" size="icon-sm" className="ml-auto" aria-label={openFullLabel} onClick={() => onOpenFullHistory(query)} >
+  - children:  <ArrowUpRightIcon className="size-4" /> 
+- B078 components/hosts/tools-dialogs/AppLauncherDialog.tsx:767 — ordinary outline action
+  - <Button type="button" variant="outline" size="icon-sm" disabled={saving} aria-label={t( 'dialog.app_launcher.choose_target' )} onClick={onBrowseTarget} >
+  - children:  <FolderOpenIcon /> 
+- B078 features/feed/columns/FeedColumnsManagerDialog.tsx:243 — ordinary outline action
+  - <Button type="button" variant="outline" size="icon-sm" aria-label={t('view.feed.columns.add')} disabled={ draftColumns.length >= MAX_FEED_COLUMNS } onClick={addColumn} >
+  - children:  <PlusIcon data-icon="icon" /> 
+- B078 features/my-avatars/ManageAvatarTagsDialog.tsx:230 — protected color swatch (inline color + selected ring)
+  - <Button type="button" size="icon-sm" variant="outline" className={ selected ? 'ring-ring size-6 p-0 ring-2 ring-offset-2' : 'size-6 p-0' } data-ui-role="color-swatch" style={{ backgroundColor: color.bg.replace( '/ 0.2)', '/ 1)' ) }} aria-label={ color.label } aria-pressed={ selected } disabled={ saving } data-selected={ selected ? 'true' : undefined } onClick={() => setTagColor( entry.tag, color ) } />
+  - children: 
+- B079 components/dialogs/BoopEmojiDialog.tsx:487 — ordinary outline action
+  - <Button type="button" variant="outline" className="sm:mr-auto" disabled={sending} onClick={() => { onOpenChange(false); navigate('/tools/inventory'); }} >
+  - children:  {t('dialog.boop_dialog.emoji_manager')} 
+- B079 components/dialogs/FriendListUserLoadDialog.tsx:64 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={onMinimize} >
+  - children:  {t('nativeShell.menu.window.minimize')} 
+- B079 components/dialogs/InstanceInviteDialog.tsx:469 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={sending} onClick={() => onOpenChange?.(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/WorldOwnerEditDialogs.tsx:389 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={saving} onClick={() => onOpenChange?.(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/group-dialog/GroupPostEditorDialog.tsx:332 — protected image choice row (border-primary selection)
+  - <Button key={option.id} type="button" variant="outline" disabled={submitting} className={cn( 'h-auto w-full min-w-0 justify-start gap-2 p-2 text-left text-sm', form.imageId === option.id && 'border-primary' )} onClick={() => updateForm({ imageId: option.id }) } >
+  - children:  {option.image ? ( <FadeInImage src={option.image} alt="" className="size-12 shrink-0 rounded object-cover" /> ) : ( <span className="text-muted-foreground flex size-12 shrink-0 items-center justify-center rounded border"> <ImageI
+- B079 components/dialogs/group-dialog/GroupProfileEditDialog.tsx:256 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={saving} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/invite-message/InviteMessagePanel.tsx:639 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading || sending} onClick={() => { loadRows(); }} >
+  - children:  <RefreshCcwIcon data-icon="inline-start" /> {t('common.actions.refresh')} 
+- B079 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:351 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={busy} onClick={onCancel} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:527 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={busy} onClick={onCancel} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/user-dialog/components/UserDialogGroupInviteDialog.tsx:228 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={sending} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx:378 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => moderation.setPendingKickGroupId( group.groupId ) } >
+  - children:  {t( 'dialog.group_member_moderation.kick' )} 
+- B079 components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx:532 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={!detailedGroupId} onClick={openDetailedManagement} >
+  - children:  {t('dialog.user.group_moderation.detailed')} <ArrowRightIcon data-icon="inline-end" /> 
+- B079 components/dialogs/user-dialog/components/UserNoteMemoDialog.tsx:93 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={saving} onClick={onCancel} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:907 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={submitting} onClick={() => onCopy(legacyCreated)} >
+  - children:  {t('dialog.world.info.copy_url')} 
+- B079 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:915 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={submitting} onClick={() => onSelfInvite(legacyCreated)} >
+  - children:  {t('dialog.world.label.self_invite')} 
+- B079 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:923 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={submitting || inviteDisabled} onClick={() => onInvite(legacyCreated)} >
+  - children:  {t('dialog.world.action.invite')} 
+- B079 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:951 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={submitting} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/hosts/LinuxRenderingTrialHost.tsx:86 — ordinary outline action
+  - <Button variant="outline" disabled={busy} onClick={() => { void resolve(false); }} >
+  - children:  {t('linux_rendering.restore')} 
+- B079 components/hosts/ModalHost.tsx:149 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={handleCancel} >
+  - children:  {renderedAlertDialog.cancelText || t('dialog.alertdialog.cancel')} 
+- B079 components/hosts/ModalHost.tsx:159 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={handleAlternative} >
+  - children:  {renderedAlertDialog.alternativeText} 
+- B079 components/hosts/ModalHost.tsx:221 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => handlePromptCancel(promptDialog.value) } >
+  - children:  {promptDialog.cancelText || t('dialog.alertdialog.cancel')} 
+- B079 components/hosts/ModalHost.tsx:318 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => handleOtpCancel(otpDialog.value)} >
+  - children:  {otpDialog.cancelText || t('dialog.alertdialog.cancel')} 
+- B079 components/hosts/system-dialogs/ChangelogDialog.tsx:327 — ordinary outline action
+  - <Button type="button" variant="outline">
+  - children:  {t('common.actions.close')} 
+- B079 components/hosts/system-dialogs/DataDirMigrationDialog.tsx:314 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={!copying || cancelling} onClick={() => void cancelMigration()} >
+  - children:  {t( cancelling ? 'data_dir_migration.cancelling' : 'common.actions.cancel' )} 
+- B079 components/hosts/system-dialogs/DataDirMigrationDialog.tsx:328 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={closeDialog} >
+  - children:  {t( completed ? 'data_dir_migration.restart_later' : 'common.actions.cancel' )} 
+- B079 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:264 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={legacyChoicePending} onClick={() => { setLegacyChoicePending(true); void skipLegacyDatabaseMigration(); }} >
+  - children:  {t('message.database.migration_skip')} 
+- B079 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:326 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={isBusy} onClick={() => setDatabaseUpgradeState({ open: false }) } >
+  - children:  {t('common.actions.close')} 
+- B079 components/hosts/system-dialogs/LaunchOptionsDialog.tsx:224 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { openExternalLink(links.vrchatDocsLaunchOptions); }} >
+  - children:  <ExternalLinkIcon data-icon="inline-start" /> {t('dialog.launch_options.vrchat_docs')} 
+- B079 components/hosts/system-dialogs/LaunchOptionsDialog.tsx:234 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { openExternalLink( 'https://docs.unity3d.com/Manual/CommandLineArguments.html' ); }} >
+  - children:  <ExternalLinkIcon data-icon="inline-start" /> {t('dialog.launch_options.unity_manual')} 
+- B079 components/hosts/system-dialogs/ProfileBackupDialogs.tsx:268 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { void cancelRestore(); }} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/hosts/system-dialogs/RegistryBackupDialog.tsx:379 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading} onClick={() => { refreshBackups(); }} >
+  - children:  {t('common.actions.refresh')} 
+- B079 components/hosts/system-dialogs/RegistryBackupDialog.tsx:389 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading} onClick={() => { handleCreateBackup(); }} >
+  - children:  {t('dialog.registry_backup.backup')} 
+- B079 components/hosts/system-dialogs/RegistryBackupDialog.tsx:399 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading || !selectedBackup} onClick={() => { handleDeleteBackup(); }} >
+  - children:  {t('dialog.registry_backup.delete')} 
+- B079 components/hosts/system-dialogs/RegistryBackupDialog.tsx:409 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading || !selectedBackup} onClick={() => { handleSaveBackupToFile(); }} >
+  - children:  {t('dialog.registry_backup.save_to_file')} 
+- B079 components/hosts/system-dialogs/RegistryBackupDialog.tsx:419 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading} onClick={() => { handleRestoreFromFile(); }} >
+  - children:  {t('dialog.registry_backup.restore_from_file')} 
+- B079 components/hosts/system-dialogs/VRChatConfigDialog.tsx:789 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => onOpenChange(false)} >
+  - children:  {t('dialog.config_json.cancel')} 
+- B079 components/hosts/tools-dialogs/GroupCalendarDialog.tsx:575 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading} onClick={() => { loadCalendar(true); }} >
+  - children:  <RefreshCwIcon data-icon="inline-start" /> {t('common.actions.refresh')} 
+- B079 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:655 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => setView('list')} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/hosts/tools-dialogs/NoteExportDialog.tsx:384 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={loading} onClick={() => { refreshRows(); }} >
+  - children:  <RefreshCwIcon data-icon="inline-start" /> {t('dialog.note_export.refresh')} 
+- B079 components/hosts/tools-dialogs/NoteExportDialog.tsx:397 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { void cancelExport(); }} >
+  - children:  {t('dialog.note_export.cancel')} 
+- B079 components/hosts/tools-dialogs/ProfileBackupDialog.tsx:95 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={cleanupRunning || !state.cleanupAllowed} onClick={onClear} >
+  - children:  {t('profile_backup.clear_rollback')} 
+- B079 components/hosts/tools-dialogs/ProfileBackupDialog.tsx:564 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={disabled || validatingRestore} onClick={() => { void selectBackupToRestore(); }} >
+  - children:  <RotateCcwIcon data-icon="inline-start" /> {t('profile_backup.restore_from_backup')} 
+- B079 components/hosts/tools-dialogs/SyncWorkflowDialog.tsx:204 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={runWorkflow} disabled={snapshot.running || !hasCurrentAccount} >
+  - children:  {snapshot.running ? t('workflow.running') : t('workflow.run')} 
+- B079 components/hosts/tools-dialogs/presence-automation/FriendMultiSelect.tsx:68 — ordinary outline action
+  - <Button type="button" variant="outline" className="w-full justify-between font-normal" disabled={disabled} aria-label={t('common.affinity.friend')} >
+  - children:  <span className="truncate">{triggerLabel}</span> <ChevronsUpDownIcon className="text-muted-foreground size-4" /> 
+- B079 components/media/ImageCropDialog.tsx:798 — ordinary outline action
+  - <Button variant="outline" disabled={isConfirming} onClick={() => onOpenChange?.(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:812 — ordinary outline action
+  - <Button type="button" variant="outline" className="border-dashed" onClick={addFavoriteCollection} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t( 'side_panel.settings.custom_tabs.add_favorite_tab' )} 
+- B079 features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx:168 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={onResetLayoutAndHidden} >
+  - children:  <RotateCcwIcon data-icon="inline-start" /> {t('view.charts.mutual_friend.settings.reset_defaults')} 
+- B079 features/dashboard/components/DashboardViewParts.tsx:280 — protected choice/entity row (selected paint source-owned)
+  - <Button type="button" variant="outline" className="text-muted-foreground h-auto justify-start border-dashed p-3 text-left font-normal whitespace-normal" onClick={() => onSelect('__none__')} >
+  - children:  {t('view.dashboard.label.not_configured')} 
+- B079 features/favorites/components/FavoriteExportDialog.tsx:255 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.close')} 
+- B079 features/favorites/components/FavoriteShareCollectionDialog.tsx:180 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { void openExternalLink(url); }} >
+  - children:  <ExternalLinkIcon data-icon="inline-start" /> {t('view.favorite.share_collection.action.open_share_page')} 
+- B079 features/favorites/components/FavoriteShareCollectionDialog.tsx:200 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={onDone}>
+  - children:  {t('view.favorite.share_collection.action.done')} 
+- B079 features/feed/columns/FeedColumnsManagerDialog.tsx:626 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={restorePresetColumns} >
+  - children:  <RotateCcwIcon data-icon="inline-start" /> {t('view.feed.columns.restore_preset')} 
+- B079 features/my-avatars/ManageAvatarTagsDialog.tsx:169 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={addTag} disabled={saving} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t('view.my_avatars.action.add')} 
+- B079 features/my-avatars/ManageAvatarTagsDialog.tsx:291 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={saving} onClick={() => onOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 features/privacy-lock/PrivacyLockPasswordDialog.tsx:349 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={submitting} onClick={() => handleOpenChange(false)} >
+  - children:  {t('common.actions.cancel')} 
+- B079 features/settings/components/TrayShortcutSetting.tsx:339 — ordinary outline action
+  - <Button variant="outline" disabled={pending} onClick={onClose} >
+  - children:  {t('common.actions.cancel')} 
+- B079 features/settings/components/settings-dialogs/AvatarProviderDialog.tsx:137 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => setAvatarProviderDialogOpen(false)} >
+  - children:  {t('dialog.alertdialog.ok')} 
+- B079 features/settings/components/settings-dialogs/CustomFontDialog.tsx:385 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => onOpenChange(false)} >
+  - children:  {t('dialog.alertdialog.cancel')} 
+- B079 features/settings/components/settings-dialogs/GameLogImportDialog.tsx:239 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={running} onClick={() => onOpenChange(false)} >
+  - children:  {t('confirm.cancel_button')} 
+- B079 features/settings/components/settings-dialogs/PurgeConfirmDialog.tsx:132 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={purgeInProgress} onClick={() => setPurgeDialogOpen(false)} >
+  - children:  {t('confirm.cancel_button')} 
+- B079 features/settings/components/settings-dialogs/TableLimitsDialog.tsx:177 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => setTableLimitsDialogOpen(false)} >
+  - children:  {t('prompt.table_entries_settings.cancel')} 
+- B079 features/settings/components/settings-dialogs/TranslationApiDialog.tsx:495 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { setTranslationApiDialogOpen(false); openLlmEndpointsManager(); }} >
+  - children:  {t('assistant.runtime.manage_endpoints')} 
+- B079 features/settings/components/settings-dialogs/TranslationApiDialog.tsx:507 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { openExternalLink( 'https://translatepress.com/docs/automatic-translation/generate-google-api-key/' ); }} >
+  - children:  {t('dialog.translation_api.guide')} 
+- B079 features/settings/components/settings-dialogs/TranslationApiDialog.tsx:520 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { openExternalLink( 'https://www.deepl.com/pro-api' ); }} >
+  - children:  {t('dialog.translation_api.guide')} 
+- B079 features/settings/components/settings-dialogs/TranslationApiDialog.tsx:534 — ordinary outline action
+  - <Button type="button" variant="outline" disabled={ integrationStatus.translation === 'running' } onClick={() => { testTranslationApiConfig(); }} >
+  - children:  {t('dialog.translation_api.test')} 
+- B079 features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx:637 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={resetRecommended} disabled={!definitionsLoaded} >
+  - children:  <RotateCcwIcon data-icon="inline-start" /> {t('common.actions.reset')} 
+- B079 features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx:649 — ordinary outline action
+  - <Button type="button" variant="outline">
+  - children:  {t('common.actions.cancel')} 
+- B079 features/settings/components/settings-dialogs/WristFeedNotificationsDialog.tsx:695 — ordinary outline action
+  - <Button type="button" variant="outline" className="justify-between" disabled={disabled} >
+  - children:  <span className="min-w-0 truncate">{summary}</span> <ChevronDownIcon data-icon="inline-end" /> 
+- B079 features/settings/components/settings-dialogs/YoutubeApiDialog.tsx:69 — ordinary outline action
+  - <Button type="button" variant="outline" onClick={() => { openExternalLink( 'https://smashballoon.com/doc/youtube-api-key/' ); }} >
+  - children:  {t('dialog.youtube_api.guide')} 
+- B079 ui/shadcn/dialog.tsx:133 — ordinary outline action
+  - <Button variant="outline" />
+  - children: 
+- B080 components/dialogs/ProfileDetailsFields.tsx:166 — ordinary outline action
+  - <Button type="button" variant="outline" size="xs" disabled={busy} onClick={() => onChange([...rows, ''])} >
+  - children:  <PlusIcon data-icon="inline-start" /> {addLabel} 
+- B080 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:268 — ordinary outline action
+  - <Button type="button" variant="outline" size="xs" disabled={busy} onClick={onSavePreset} >
+  - children:  <BookmarkIcon data-icon="inline-start" /> {t('dialog.user.action.save_preset')} 
+- B080 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:296 — ordinary outline action; joined border geometry retained
+  - <Button type="button" variant="outline" size="xs" className="min-w-0 justify-start rounded-r-none border-r-0" disabled={busy} aria-label={t( 'accessibility.apply_status_preset', { preset: label } )} onClick={() => { setDraft({ status: presetStatus, statusDescription: presetDescription }); }} >
+  - children:  <i className={userStatusIndicatorClassName( presetStatus, { showOffline: true, className: 'shrink-0' } )} /> <span className="min-w-0 truncate"> {label} </span> 
+- B080 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:752 — ordinary outline action
+  - <Button type="button" size="xs" variant="outline" disabled={disabled} onClick={onDetect} >
+  - children:  {t('view.tools.llm_endpoints.detect_models')} 
+- B080 features/assistant/AssistantDialog.tsx:492 — ordinary outline action
+  - <Button key={prompt} type="button" size="xs" variant="outline" disabled={notConfigured} onClick={() => sendMessage(prompt) } className="h-auto max-w-full whitespace-normal" >
+  - children:  {prompt} 
+- B080 features/assistant/AssistantDialog.tsx:515 — ordinary outline action
+  - <Button type="button" size="xs" variant="outline" onClick={openAssistantSettings} >
+  - children:  {t('assistant.open_settings')} 
+- B081 components/dialogs/UserActivityPanelImpl.tsx:186 — protected dedicated circular icon
+  - <Button type="button" variant="ghost" size="icon-sm" className="rounded-full" disabled={loading} aria-label={'Refresh activity data'} onClick={() => { refreshData({ forceRefresh: true }); }} >
+  - children:  {loading ? ( <Spinner data-icon="inline-start" /> ) : ( <RefreshCwIcon data-icon="inline-start" /> )} 
+- B081 components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx:286 — ordinary ghost action
+  - <Button type="button" size="icon-sm" variant="ghost" onClick={() => onOpenChange(false)} >
+  - children:  <XIcon /> <span className="sr-only"> {t('common.actions.close')} </span> 
+- B081 components/hosts/LaunchDialogHost.tsx:530 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'dialog.launch.more_copy_options' )} >
+  - children:  <MoreHorizontalIcon data-icon="inline-start" /> 
+- B081 components/hosts/tools-dialogs/GroupCalendarDialog.tsx:515 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'dialog.group_calendar.previous_month' )} onClick={() => handleCalendarMonthChange( subMonths(visibleMonthDate, 1) ) } >
+  - children:  <ChevronLeftIcon /> 
+- B081 components/hosts/tools-dialogs/GroupCalendarDialog.tsx:536 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'dialog.group_calendar.next_month' )} onClick={() => handleCalendarMonthChange( addMonths(visibleMonthDate, 1) ) } >
+  - children:  <ChevronRightIcon /> 
+- B081 components/media/ImageCropToolbar.tsx:62 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" onClick={onClick} disabled={model.disabled} aria-label={label} aria-pressed={active} className={cn( 'text-muted-foreground hover:text-foreground', active && 'bg-muted text-foreground' )} >
+  - children:  {icon} 
+- B081 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:502 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" className="text-muted-foreground shrink-0 cursor-grab touch-none active:cursor-grabbing" aria-label={tabActionLabel( t, 'drag_value', label )} {...dragHandleProps} >
+  - children:  <GripVerticalIcon data-icon="inline-start" /> 
+- B081 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:663 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" className="text-muted-foreground shrink-0" aria-label={ label } >
+  - children:  <MoreVerticalIcon data-icon="inline-start" /> 
+- B081 components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx:50 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t('accessibility.move_item_up', { item: group.label })} disabled={index === 0} onClick={() => onMove(index, -1)} >
+  - children:  <ArrowUpIcon data-icon="inline-start" /> 
+- B081 components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx:62 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t('accessibility.move_item_down', { item: group.label })} disabled={ index === favoriteGroupOrderDraft.length - 1 } onClick={() => onMove(index, 1)} >
+  - children:  <ArrowDownIcon data-icon="inline-start" /> 
+- B081 features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx:77 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'view.charts.mutual_friend.settings.title' )} >
+  - children:  <Settings2Icon /> 
+- B081 features/charts/components/mutual-friends/MutualFriendsSettingsSheet.tsx:180 — ordinary ghost action
+  - <Button variant="ghost" className="absolute top-3 right-3" size="icon-sm" />
+  - children: 
+- B081 features/feed/columns/FeedColumnsManagerDialog.tsx:283 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t('common.actions.delete')} onClick={() => deleteColumn(column.id)} >
+  - children:  <Trash2Icon data-icon="icon" /> 
+- B081 features/notifications/VrcNotificationCenterHost.tsx:168 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'side_panel.notification_center.mark_all_read' )} disabled={!canMarkAllSeen} onClick={markAllRead} >
+  - children:  <CheckCheckIcon data-icon="inline-start" /> 
+- B081 features/notifications/VrcNotificationCenterHost.tsx:191 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'view.notification.refresh_tooltip' )} disabled={ loadStatus === 'running' } onClick={() => { refreshForCurrentUser().catch( (error: unknown) => { toast.add({ type: 'error', title: userFacingErrorMessage( error, t( 'host.vrc_notification_center.toast.failed_to_refresh_notifications' ) ) }); } ); }} >
+  - children:  {loadStatus === 'running' ? ( <Spinner data-icon="inline-start" /> ) : ( <RefreshCcwIcon data-icon="inline-start" /> )} 
+- B081 features/notifications/VrcNotificationCenterHost.tsx:231 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-sm" aria-label={t( 'common.actions.close' )} />
+  - children: 
+- B081 ui/shadcn/dialog.tsx:84 — protected dedicated dialog close
+  - <Button variant="ghost" className="absolute top-2 right-2" size="icon-sm" />
+  - children: 
+- B082 components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx:203 — ordinary default action
+  - <Button type="button" size="sm" disabled={!input.trim() || importing} onClick={startImport} >
+  - children:  {t('dialog.group_member_moderation.import_bans_start')} 
+- B082 components/dialogs/invite-message/InviteMessagePanel.tsx:567 — ordinary default action
+  - <Button type="button" size="sm" disabled={ sending || (resolvedMode === 'respond' && !editMessage.trim()) } onClick={() => { if (resolvedMode === 'respond') { applyRow( editingRow, editMessage.trim() ); return; } saveEdit(); }} >
+  - children:  {sending ? ( <Spinner data-icon="inline-start" /> ) : resolvedMode === 'respond' ? ( <SendIcon data-icon="inline-start" /> ) : null} {resolvedMode === 'respond' ? t('dialog.edit_send_invite_message.send') : t('dialog.edit_invite_
+- B082 components/dialogs/invite-message/InviteMessagePanel.tsx:620 — ordinary default action
+  - <Button type="button" size="sm" disabled={sending} onClick={() => { applyRow(confirmRow); }} >
+  - children:  {sending ? ( <Spinner data-icon="inline-start" /> ) : ( <SendIcon data-icon="inline-start" /> )} {t('common.actions.confirm')} 
+- B082 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:431 — ordinary default action
+  - <Button type="button" size="sm" onClick={openAddView} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t('view.tools.llm_endpoints.add')} 
+- B082 components/hosts/tools-dialogs/ProfileBackupDialog.tsx:355 — ordinary default action
+  - <Button type="button" size="sm" disabled={ statusActionRunning } onClick={() => { void runStatusAction( 'retry' ); }} >
+  - children:  {t( 'profile_backup.retry_save' )} 
+- B082 components/hosts/tools-dialogs/ProfileBackupDialog.tsx:373 — ordinary default action
+  - <Button type="button" size="sm" disabled={ statusActionRunning } onClick={() => { void runStatusAction( 'dismiss' ); }} >
+  - children:  {t( 'profile_backup.dismiss_error' )} 
+- B082 components/hosts/tools-dialogs/presence-automation/AutomationRuleLayout.tsx:82 — ordinary default action
+  - <Button type="button" size="sm" disabled={disabled} onClick={onAdd} >
+  - children:  <PlusIcon data-icon="inline-start" /> {addLabel} 
+- B082 components/hosts/tools-dialogs/presence-automation/AutomationRuleLayout.tsx:105 — ordinary default action
+  - <Button type="button" size="sm" disabled={disabled} onClick={onAdd} >
+  - children:  <PlusIcon data-icon="inline-start" /> {addLabel} 
+- B082 components/search/AvatarProviderSettingsDialog.tsx:181 — ordinary default action
+  - <Button type="button" size="sm" disabled={isSaving} onClick={addProvider} >
+  - children:  <PlusIcon data-icon="inline-start" /> {t('dialog.avatar_database_provider.add_provider')} 
+- B082 components/sidebar/side-panel/SidePanelCustomTabsDialog.tsx:849 — ordinary default action
+  - <Button type="button" size="sm" onClick={save}>
+  - children:  {t('common.actions.save')} 
+- B082 components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx:88 — ordinary default action
+  - <Button type="button" size="sm" onClick={onConfirm}>
+  - children:  {t('common.actions.confirm')} 
+- B082 features/assistant/AssistantDialog.tsx:479 — ordinary default action
+  - <Button type="button" size="sm" onClick={ openAssistantSettings } >
+  - children:  {t( 'assistant.open_settings' )} 
+- B083 components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx:212 — ordinary destructive action
+  - <Button type="button" size="sm" variant="destructive" onClick={cancelImport} >
+  - children:  <Spinner /> {t('common.actions.cancel')} 
+- B083 components/hosts/system-dialogs/VRChatConfigDialog.tsx:588 — ordinary destructive action
+  - <Button type="button" variant="destructive" size="sm" disabled={loading} onClick={() => { handleDeleteAllCache(); }} >
+  - children:  <Trash2Icon data-icon="inline-start" /> {t('dialog.config_json.delete_cache')} 
+- B083 components/hosts/tools-dialogs/AppLauncherDialog.tsx:902 — ordinary destructive action
+  - <Button type="button" variant="destructive" size="sm" disabled={saving} className="self-start" onClick={() => onRemove(entry)} >
+  - children:  <Trash2Icon data-icon="inline-start" /> {t('dialog.app_launcher.remove_app')} 
+- B084 components/dialogs/group-dialog/GroupModerationBanImportDialog.tsx:238 — ordinary secondary action
+  - <Button type="button" size="sm" variant="secondary" className="mt-2 self-start" onClick={() => setErrors('')} >
+  - children:  {t( 'dialog.group_member_moderation.import_bans_clear_errors' )} 
+- B084 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:529 — ordinary {
+                                            draft.clearKey
+                                                ? 'secondary'
+                                                : 'outline'
+                                        } action
+  - <Button type="button" size="sm" aria-pressed={draft.clearKey} variant={ draft.clearKey ? 'secondary' : 'outline' } onClick={() => setDraft((current) => ({ ...current, clearKey: !current.clearKey })) } >
+  - children:  {t( 'view.tools.llm_endpoints.clear_key' )} 
+- B084 components/sidebar/side-panel/SidePanelFavoriteGroupOrderDialog.tsx:80 — ordinary secondary action
+  - <Button type="button" variant="secondary" size="sm" onClick={onReset} >
+  - children:  {t('common.actions.reset')} 
+- B085 components/dialogs/invite-message/InviteMessagePanel.tsx:458 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-xs" aria-label={t( 'dialog.invite_message.dynamic.edit_slot_value', { value: row.slot } )} disabled={ sending || editDisabled } onClick={( event: MouseEvent<HTMLButtonElement> ) => { event.stopPropagation(); beginEdit(row); }} >
+  - children:  <PencilIcon data-icon="inline-start" /> 
+- B085 components/dialogs/previous-instances-table/InstanceHistoryListPanel.tsx:153 — ordinary ghost action
+  - <Button type="button" size="icon-xs" variant="ghost" aria-label={t( 'dialog.previous_instances.action.more_actions' )} >
+  - children:  <MoreHorizontalIcon data-icon="icon" /> 
+- B085 components/hosts/system-dialogs/VRChatConfigDialog.tsx:548 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-xs" disabled={loading} aria-label={t( 'dialog.config_json.refresh' )} onClick={() => { handleRefreshCacheSize(); }} >
+  - children:  <RefreshCwIcon data-icon="icon" className={cn( loading && 'animate-spin' )} /> 
+- B085 components/hosts/tools-dialogs/LlmEndpointsDialog.tsx:779 — ordinary ghost action
+  - <Button type="button" size="icon-xs" variant="ghost" aria-label={label} disabled={disabled} onClick={onClick} />
+  - children: 
+- B085 components/hosts/tools-dialogs/presence-automation/AutomationRuleLayout.tsx:181 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-xs" aria-label={removeLabel} disabled={disabled} onClick={onRemove} >
+  - children:  <Trash2Icon data-icon="inline-start" /> 
+- B085 features/settings/components/SettingsViewParts.tsx:207 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon-xs" aria-label={t( 'accessibility.remove_value', { value: size } )} onClick={() => removePageSize(size)} >
+  - children:  <XIcon data-icon="inline-start" /> 
+- B086 components/dialogs/previous-instances-table/PreviousInstancesViewParts.tsx:637 — ordinary ghost|outline icon-xs copy (runtime prop; gallery default is heuristic)
+  - <Button type="button" size="icon-xs" variant={variant} className="shrink-0" aria-label={`${label}: ${normalizedWorldName}`} onClick={() => { void copyTextToClipboard(normalizedWorldName, { successMessage: t( 'dialog.world.dynamic.value_copied', { value: t('dialog.world.info.name') } ) }); }} >
+  - children:  <CopyIcon data-icon="icon" /> 
+- B087 components/dialogs/user-dialog/UserSelfEditDialogs.tsx:328 — ordinary outline action; joined border geometry retained
+  - <Button type="button" variant="outline" size="icon-xs" className="shrink-0 rounded-l-none" disabled={busy} aria-label={t( 'accessibility.remove_status_preset' )} onClick={() => onRemovePreset(index) } >
+  - children:  <XIcon data-icon="inline-start" /> 
+- B088 components/dialogs/user-dialog/components/UserDialogGroupQuickModerationDialog.tsx:511 — ordinary destructive action
+  - <Button type="button" variant="destructive" onClick={() => moderation.setPendingBanGroupId( moderation.selectedBanGroupId ) } >
+  - children:  {t( 'dialog.group_member_moderation.ban' )} 
+- B088 components/hosts/ModalHost.tsx:167 — ordinary {
+                                renderedAlertDialog.destructive
+                                    ? 'destructive'
+                                    : 'default'
+                            } action
+  - <Button type="button" variant={ renderedAlertDialog.destructive ? 'destructive' : 'default' } onClick={handleOk} >
+  - children:  {renderedAlertDialog.confirmText || t( renderedAlertDialog.mode === 'alert' ? 'dialog.alertdialog.ok' : 'dialog.alertdialog.confirm' )} 
+- B088 components/hosts/system-dialogs/DatabaseUpgradeDialog.tsx:293 — ordinary destructive action
+  - <Button type="button" variant="destructive" onClick={() => { void startFreshDatabaseAfterUpgradeFailure(); }} >
+  - children:  {t('message.database.use_new_database')} 
+- B088 components/hosts/system-dialogs/ProfileBackupDialogs.tsx:277 — ordinary destructive action
+  - <Button type="button" variant="destructive" onClick={() => { void confirmRestore(); }} >
+  - children:  <ArchiveRestoreIcon data-icon="inline-start" /> {t('profile_backup.restore_and_restart')} 
+- B088 components/hosts/system-dialogs/RegistryBackupDialog.tsx:429 — ordinary destructive action
+  - <Button type="button" variant="destructive" disabled={loading} onClick={() => { handleDeleteRegistryFolder(); }} >
+  - children:  {t('dialog.registry_backup.reset')} 
+- B088 components/hosts/tools-dialogs/SyncWorkflowDialog.tsx:215 — ordinary destructive action
+  - <Button type="button" variant="destructive" onClick={() => runner.cancelCurrent()} >
+  - children:  {t('workflow.cancel_current')} 
+- B088 features/privacy-lock/PrivacyLockPasswordDialog.tsx:357 — ordinary {
+                                activeView === 'clear'
+                                    ? 'destructive'
+                                    : 'default'
+                            } action
+  - <Button type="submit" variant={ activeView === 'clear' ? 'destructive' : 'default' } disabled={submitting} >
+  - children:  {submitting ? ( <Spinner data-icon="inline-start" /> ) : null} {t(copy.submit)} 
+- B088 features/settings/components/settings-dialogs/PurgeConfirmDialog.tsx:140 — ordinary destructive action
+  - <Button type="button" variant="destructive" disabled={purgeInProgress} onClick={() => { purgeAvatarFeedData(); }} >
+  - children:  <Trash2Icon data-icon="inline-start" /> {t( 'view.settings.advanced.advanced.database_cleanup.purge_confirm_button' )} 
+- B089 components/hosts/system-dialogs/DataDirMigrationDialog.tsx:297 — protected text link
+  - <Button type="button" variant="link" size="sm" className="text-muted-foreground h-auto p-0" onClick={() => { closeDialog(); setSystemHostOpen('profileBackupOpen', true); }} >
+  - children:  {t('data_dir_migration.create_backup_first')} 
+- B090 components/hosts/tools-dialogs/AppLauncherDialog.tsx:506 — protected text link
+  - <Button type="button" variant="link" onClick={addApp} >
+  - children:  {t( 'dialog.app_launcher.add_app' )} 
+- B090 features/privacy-lock/PrivacyLockPasswordDialog.tsx:327 — protected text link
+  - <Button type="button" variant="link" className="text-muted-foreground mx-auto h-auto w-fit p-0 text-xs" disabled={submitting} onClick={() => resetForm('clear')} >
+  - children:  {t('privacy_lock.action.clear_link')} 
+- B090 features/privacy-lock/PrivacyLockPasswordDialog.tsx:338 — protected text link
+  - <Button type="button" variant="link" className="text-muted-foreground mx-auto h-auto w-fit p-0 text-xs" disabled={submitting} onClick={() => resetForm('change')} >
+  - children:  {t('privacy_lock.action.back')} 
+- B091 components/hosts/tools-dialogs/GroupEventRow.tsx:249 — ordinary secondary action; ancestor hover/focus reveal retained
+  - <Button type="button" size="icon-xs" variant="secondary" aria-label={ isFollowing ? t('dialog.tools.label.unfollow_event') : t('dialog.tools.label.follow_event') } aria-pressed={isFollowing} onClick={() => onToggleFollow(event)} >
+  - children:  <StarIcon className={cn( isFollowing && 'fill-current text-[var(--status-askme)]' )} /> 
+- B091 components/hosts/tools-dialogs/GroupEventRow.tsx:271 — ordinary secondary action; ancestor hover/focus reveal retained
+  - <Button type="button" size="icon-xs" variant="secondary" aria-label={t('accessibility.more')} >
+  - children:  <EllipsisIcon /> 
+- B092 components/hosts/tools-dialogs/NoteExportDialog.tsx:461 — protected image/avatar Tile
+  - <Button type="button" variant="ghost" size="icon" className="bg-muted size-11 shrink-0 overflow-hidden rounded-full border p-0" aria-label={row.name} onClick={() => { if (fullImageUrl) { openImagePreview({ url: fullImageUrl, title: row.name }); } }} >
+  - children:  <FadeInImage src={thumbUrl} alt="" className="size-full object-cover" loading="lazy" fallback={ <span className="bg-muted block size-11 rounded-full" /> } /> 
+- B092 components/hosts/tools-dialogs/NoteExportDialog.tsx:507 — ordinary ghost action
+  - <Button type="button" size="icon" variant="ghost" disabled={loading} aria-label={t( skipped ? 'dialog.note_export.include' : 'table.import.skip_export' )} className={cn( 'shrink-0', skipped ? 'text-primary' : 'text-muted-foreground hover:text-destructive' )} onClick={() => toggleSkip( row.id ) } >
+  - children:  {skipped ? ( <RotateCcwIcon data-icon="inline-start" /> ) : ( <XIcon data-icon="inline-start" /> )} 
+- B092 components/media/FullscreenImageViewer.tsx:234 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" disabled={ copying || (!url && !sourcePath) } aria-label={t('message.image.copy')} onClick={() => { copyImage(); }} >
+  - children:  {copying ? ( <Spinner data-icon="inline-start" /> ) : ( <CopyIcon data-icon="inline-start" /> )} 
+- B092 components/media/FullscreenImageViewer.tsx:261 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" disabled={ downloading || (!url && !sourcePath) } aria-label={t('message.image.download')} onClick={() => { downloadImage(); }} >
+  - children:  {downloading ? ( <Spinner data-icon="inline-start" /> ) : ( <DownloadIcon data-icon="inline-start" /> )} 
+- B092 components/media/FullscreenImageViewer.tsx:292 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" aria-label={t('message.image.zoom_out')} onClick={zoomOut} >
+  - children:  <ZoomOutIcon data-icon="inline-start" /> 
+- B092 components/media/FullscreenImageViewer.tsx:310 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" aria-label={t('message.image.zoom_in')} onClick={zoomIn} >
+  - children:  <ZoomInIcon data-icon="inline-start" /> 
+- B092 components/media/FullscreenImageViewer.tsx:328 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" aria-label={t( 'message.image.rotate_clockwise' )} onClick={rotateClockwise} >
+  - children:  <RotateCwIcon data-icon="inline-start" /> 
+- B092 components/media/FullscreenImageViewer.tsx:348 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" aria-label={t( 'message.image.rotate_counterclockwise' )} onClick={rotateCounterClockwise} >
+  - children:  <RotateCcwIcon data-icon="inline-start" /> 
+- B092 components/media/FullscreenImageViewer.tsx:368 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" aria-label={t('message.image.reset')} onClick={resetTransform} >
+  - children:  <RefreshCcwIcon data-icon="inline-start" /> 
+- B092 components/media/FullscreenImageViewer.tsx:390 — ordinary ghost action
+  - <Button type="button" variant="ghost" size="icon" aria-label={t('message.image.close')} onClick={onClose} >
+  - children:  <XIcon data-icon="inline-start" /> 
+- B092 ui/shadcn/sheet.tsx:131 — ordinary ghost action
+  - <Button size="icon" variant="ghost" />
+  - children: 
+- B093 features/charts/components/mutual-friends/ManualRelationsControl.tsx:159 — ordinary destructive action
+  - <Button type="button" size="icon-xs" variant="destructive" aria-label={`Remove relationship between ${relation.userIdA} and ${relation.userIdB}`} disabled={isSaving} onClick={() => removeRelation(relation)} >
+  - children:  <Trash2Icon /> 
+- B094 components/date-range-filter/DateRangeFilter.tsx:102 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" onClick={onClearDateFilter} >
+  - children:  {t('common.actions.clear')} 
+- B094 components/date-time-range-picker/DateTimeRangePicker.tsx:241 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" onClick={clear} >
+  - children:  {clearLabel} 
+- B094 components/dialogs/user-dialog/components/UserDialogMutualGraphImpl.tsx:154 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" className="self-start" onClick={resetLayoutSettings} >
+  - children:  <RotateCcwIcon data-icon="inline-start" /> {t( 'view.charts.mutual_friend.settings.reset_defaults' )} 
+- B094 components/sidebar/side-panel/SidePanelSettingsPopover.tsx:186 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" className="w-full justify-start" aria-label={t('side_panel.refresh_tooltip')} disabled={isRefreshing} onClick={() => { onOpenChange(false); onRefreshFriends(); }} >
+  - children:  {isRefreshing ? ( <Spinner data-icon="inline-start" /> ) : ( <RefreshCwIcon data-icon="inline-start" /> )} {t('side_panel.refresh_tooltip')} 
+- B094 components/sidebar/side-panel/SidePanelSettingsPopover.tsx:390 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" disabled={!orderedFavoriteGroupItemsLength} onClick={onOpenFavoriteGroupOrderDialog} >
+  - children:  {t('side_panel.settings.edit_group_order')} 
+- B094 components/sidebar/side-panel/SidePanelSettingsPopover.tsx:403 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" className="w-full justify-start" onClick={() => { onOpenChange(false); onOpenCustomTabsDialog(); }} >
+  - children:  <SlidersHorizontalIcon data-icon="inline-start" /> {t('side_panel.settings.custom_tabs.configure')} 
+- B094 features/my-avatars/components/MyAvatarsViewParts.tsx:485 — ordinary outline action
+  - <Button type="button" variant="outline" size="sm" onClick={onClearFilters} >
+  - children:  {t('view.my_avatars.action.clear_filters')} 
+- B095 components/date-range-filter/DateRangeFilter.tsx:110 — ordinary default action
+  - <Button type="button" size="sm" onClick={onApplyDateFilter} >
+  - children:  {t('common.actions.confirm')} 
+- B095 components/date-time-range-picker/DateTimeRangePicker.tsx:249 — ordinary default action
+  - <Button type="button" size="sm" onClick={apply}>
+  - children:  {confirmLabel} 
+- B095 features/assistant/AssistantDialog.tsx:361 — ordinary default action
+  - <Button type="button" size="sm" onClick={openAssistantSettings} >
+  - children:  {t('assistant.open_settings')} 
+- B095 features/favorites/components/FavoritesPanels.tsx:186 — ordinary default action
+  - <Button type="button" size="sm" onClick={onDismissCoachmark} >
+  - children:  {t('view.favorite.share_collection.coachmark.dismiss')} 
+- B096 components/dialogs/user-dialog/components/UserDialogHeaderBadges.tsx:362 — protected image/avatar Tile
+  - <Button type="button" variant="ghost" className="bg-muted/20 hover:bg-muted/30 h-auto w-full rounded-none p-3" onClick={() => onOpenImagePreview?.({ url: badgeImageUrl, title: badgeName }) } >
+  - children:  <FadeInImage src={badgeImageUrl} alt={badge.badgeName || ''} className={cn( 'max-h-52 w-full rounded-md object-contain', !isBadgeVisible && 'grayscale' )} /> 
+- B096 components/dialogs/user-dialog/components/UserDialogIdentityParts.tsx:74 — protected choice/entity row (selected paint source-owned)
+  - <Button key={`${entry.displayName}:${entry.updated_at || index}`} type="button" variant="ghost" className="h-auto w-full min-w-0 justify-start gap-3 rounded-md px-2 py-1.5 text-left" aria-label={`${t('common.actions.copy')}: ${entry.displayName}`} title={t('common.actions.copy')} onClick={() => onCopyName(entry.displayName)} >
+  - children:  <span className="min-w-0 flex-1 truncate font-medium"> {entry.displayName} </span> {entry.updated_at ? ( <span className="text-muted-foreground shrink-0 text-xs"> {formatStatsDate(entry.updated_at)} </span> ) : null} <CopyIcon ar
+- B096 components/dialogs/world-dialog/WorldNewInstanceDialog.tsx:652 — protected choice/entity row (selected paint source-owned)
+  - <Button key={name} type="button" variant="ghost" className="h-auto w-full justify-start p-1.5 text-left font-normal" onClick={() => selectDisplayNamePreset( name ) } >
+  - children:  <span className="truncate"> {name} </span> 
+- B096 components/layout/custom-nav-dialog/CustomNavDialogLayoutEditor.tsx:409 — protected choice/entity row (selected paint source-owned)
+  - <Button key={candidate.key} type="button" variant="ghost" className="h-auto w-full justify-start px-2 py-1.5 font-normal" onClick={() => { onAdd(candidate.key); setOpen(false); }} >
+  - children:  <CandidateIcon data-icon="inline-start" /> <span className="min-w-0 flex-1 truncate text-left"> {candidate.label} </span> 
+- B096 components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx:134 — protected choice/entity row (selected paint source-owned)
+  - <Button key={userId || index} type="button" variant="ghost" disabled={!isCurrent && !canSwitch} aria-current={isCurrent} className="aria-[current=true]:bg-accent/60 h-auto w-full min-w-0 justify-start gap-2.5 p-1.5 text-left font-normal" onClick={ canSwitch ? () => handleSwitch(entry) : undefined } >
+  - children:  <Avatar size="sm"> {avatarUrl ? ( <AvatarImage src={avatarUrl} alt="" /> ) : null} <AvatarFallback> {accountFallback(entry.user)} </AvatarFallback> </Avatar> <div className="min-w-0 flex-1"> <div className="truncate text-sm"> {ac
+- B096 components/sidebar/friends-sidebar/AccountSwitcherPopover.tsx:171 — protected account choice-list row
+  - <Button type="button" variant="ghost" className="w-full justify-start font-normal" onClick={handleUseOtherAccount} >
+  - children:  {t('view.login.useOtherAccount')} 
+- B096 features/instance-history/InstanceHistoryPage.tsx:646 — protected text/entity row or UserPickerRow
+  - <Button key={option.value} type="button" variant="ghost" className="h-auto justify-start p-0" onClick={() => { applyTarget( option.value ); setTargetPickerOpen( false ); }} >
+  - children:  <UserPickerRow option={option} selected={ option.value === activeUserId } /> 
+- B096 features/settings/components/settings-tabs/SettingsSocialTab.tsx:291 — protected text/entity row or UserPickerRow
+  - <Button key={option.value} type="button" variant="ghost" className="h-auto justify-start p-0" onClick={() => { void onAddFeedHiddenUser( option.value ); setHiddenUserPickerOpen( false ); setHiddenUserSearch(''); }} >
+  - children:  <UserPickerRow option={option} showSelection={false} /> 
+- B097 components/layout/custom-nav-dialog/NavIconPicker.tsx:62 — protected dense icon grid (secondary selected vs ghost)
+  - <Button key={option.key} type="button" variant={selected ? 'secondary' : 'ghost'} size="icon-sm" title={option.label} aria-label={option.label} aria-pressed={selected} className={cn(selected && 'text-primary')} onClick={() => { onValueChange(option.key); setOpen(false); }} >
+  - children:  <OptionIcon data-icon="icon" /> 
+- B098 components/layout/status-bar/StatusBarFooter.tsx:801 — ordinary outline action
+  - <Button type="button" variant="outline" size="icon" aria-label={t('app_menu.zoom_out')} className="size-10 shrink-0" disabled={ zoomLevel <= MIN_ZOOM_LEVEL } onClick={() => onStepZoomLevel(-ZOOM_STEP) } >
+  - children:  <MinusIcon data-icon="icon" /> 
+- B098 components/layout/status-bar/StatusBarFooter.tsx:836 — ordinary outline action
+  - <Button type="button" variant="outline" size="icon" aria-label={t('app_menu.zoom_in')} className="size-10 shrink-0" disabled={ zoomLevel >= MAX_ZOOM_LEVEL } onClick={() => onStepZoomLevel(ZOOM_STEP) } >
+  - children:  <PlusIcon data-icon="icon" /> 
+- B099 components/layout/status-bar/StatusBarFooter.tsx:816 — ordinary outline action
+  - <Button type="button" variant="outline" aria-label={t( 'app_menu.reset_zoom' )} className="h-10 min-w-0 flex-1 gap-2 px-3" onClick={() => onSetZoomLevel( DEFAULT_ZOOM_LEVEL ) } >
+  - children:  <span className="text-sm font-medium tabular-nums"> {zoomLabel} </span> <span className="text-muted-foreground truncate text-xs font-normal"> {t('app_menu.reset_zoom')} </span> 
+- B100 components/sidebar/side-panel/SidePanelSettingsPopover.tsx:276 — protected disclosure/title row
+  - <Button type="button" variant="ghost" size="sm" data-ui-role="disclosure" aria-expanded={isAdvancedOpen} className="text-muted-foreground hover:text-foreground h-auto w-full justify-between px-0 py-0.5 text-xs font-medium tracking-wide uppercase" onClick={() => onAdvancedOpenChange(!isAdvancedOpen)} >
+  - children:  {t('side_panel.settings.advanced')} <ChevronDownIcon data-icon="inline-end" className={cn( 'transition-transform', isAdvancedOpen && 'rotate-180' )} /> 

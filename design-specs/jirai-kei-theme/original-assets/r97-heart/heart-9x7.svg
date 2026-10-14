@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" shape-rendering="crispEdges"><title>R9.7 9x7 pixel heart</title><desc>Independent 9 by 7 native pixel grid: one-pixel #34316a outline, #ffb8e6 body, upper-left #fdf4ff highlight.</desc>
+<path fill="#34316a" d="M1 0h3v1h-3zM5 0h3v1h-3zM0 1h1v2h-1zM4 1h1v1h-1zM8 1h1v2h-1zM1 3h1v1h-1zM7 3h1v1h-1zM2 4h1v1h-1zM6 4h1v1h-1zM3 5h1v1h-1zM5 5h1v1h-1zM4 6h1v1h-1z"/>
+<path fill="#ffb8e6" d="M1 1h3v1h-3zM5 1h3v1h-3zM1 2h7v1h-7zM2 3h5v1h-5zM3 4h3v1h-3zM4 5h1v1h-1z"/>
+<path fill="#fdf4ff" d="M1 1h1v2h-1z"/>
+</svg>

@@ -1,0 +1,140 @@
+/* r10: SOCIAL-panel phone loop, relocated to the navigation title bar (right-aligned).
+   Six independent layers (char-back / two glows / two gaze overlays / phone-front) on ONE stepped
+   153-frame animation (180ms/frame, 27.54s); a separate slow transform float moves the whole stack.
+   Geometry/offsets come from original-assets/r10-phone-layers/manifest.json.
+   Layers paint front-to-back: phone-front > gaze patches > glow > char-back.
+   Leaving the SOCIAL ::after untouched restores its original cross+cat rhythm (r96-social-cat). */
+:root {
+  --r10-phone-gaze-mid-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPElEQVQImWOojm/4n1a8Coy/bL8JxshiDI+ePvjfvvQmGP9//QuOYWJgBbvv/gdjZAUwMYa/f/+iSKBjAFkPbfLX39LgAAAAAElFTkSuQmCC");
+  --r10-phone-gaze-forward-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVQImWOojm/4n1a86n9kyuT/X7bfBGNkMYZHTx/8b1968395z6H//1//gmOYGFjB7rv/wRhZAUyM4e/fvygS6BgABRFtDO096wwAAAAASUVORK5CYII=");
+  --r10-phone-char-back-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAOVBMVEX48PpbtOJmc6p7X4CHpdmlfua73f/Eo+/ZTLTdv+7i5eDqUnbtzKHu3O7x7eD0t9n9/f3/e6//6/qEwD3sAAAAAXRSTlMAQObYZgAAALBJREFUeNpVkY0OwiAMhI/S6eI0e//HNG46x2i1hQ09khK+/kCOgKJoIddDqGiwba48NOSac4GxogfGO25G6WACbACGaJWx9ULIJ/Avwxv9Amt3pR2vFthIB0lCEGIIY3Uoya8p79ZOHZp6LJ4J9oQdTsDVAjFSJogVyFk1xlHVyym/yjiiEgSt/bR5BloNiZa/uHfIT8KW2dyiw8uJgL/bm9iLuLlOWy7foL4Kk2/2A6G2RQ0tdWSWAAAAAElFTkSuQmCC");
+  --r10-phone-front-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAMAAACZS1ciAAAAOVBMVEX48PpbtOJmc6p7X4CHpdmlfua73f/Eo+/ZTLTdv+7i5eDqUnbtzKHu3O7x7eD0t9n9/f3/e6//6/qEwD3sAAAAAXRSTlMAQObYZgAAACxJREFUeNpjYGBmBiEmBgYOZg4GBkZmBjBgYeADUZ9YGBh+gRhMEGGiaZg5AI2eAjg3jxg8AAAAAElFTkSuQmCC");
+  --r10-phone-glow-dim-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAiElEQVQoka2SMQ6AIAxFexvP4Ak8ADszKzPH8l6MxMEEA6FN/aG4OLzlt48vBsql0oTNQHYsYTeQA1DihcNADrAkl0v1gNMyim2gvyIMdNZllLiJrrueudSo4Kw3o+ihISk48ysxgpRGFn4RaXJHljUta3tyR2z9egDyV3UrD2fP8FViDVZi5wEUSjRIvXPXfgAAAABJRU5ErkJggg==");
+  --r10-phone-glow-bright-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAiUlEQVQoka2SwQ2AIAxFO5ZrOIMjsAELsAALsBwXE+LBBAOhTf2hePHwLr99fDFQLpUmbAayYwm7gRyAEi8cBnKAJblcqgecllFsA/0VYaCzLqPETXTd9cylRgVnvRlFDw1JwZlfiRGkNLLwi0iTO7KsaVnbkzti69cDkL+qW3k4e4avEmuwEjsP/y1DgjLYhIEAAAAASUVORK5CYII=");
+  /* Trial scale 2.7x relative to the 1x logical sprite; fractional raster cells are expected. Glow remapped to perceptual light levels; eye highlight capped at 90%. */
+  --r10-phone-canvas-width: 64.8px;
+  --r10-phone-canvas-height: 59.4px;
+  --r10-phone-char-back-size: 54px 54px;
+  --r10-phone-char-back-position: 0px 0px;
+  --r10-phone-front-size: 18.9px 32.4px;
+  --r10-phone-front-rest: 45.9px 21.6px;
+  --r10-phone-front-tap: 48.6px 21.6px;
+  --r10-phone-glow-dim-size: 37.8px 35.1px;
+  --r10-phone-glow-dim-visible: 8.1px 18.9px;
+  --r10-phone-glow-bright-size: 37.8px 35.1px;
+  --r10-phone-glow-bright-visible: 8.1px 18.9px;
+  --r10-phone-glow-off: -37.8px -35.1px;
+  /* Both gaze overlays share an 8x4 eye canvas at logical (7,11), matching the rest-eye ASCII alignment. */
+  --r10-phone-gaze-mid-size: 21.6px 10.8px;
+  --r10-phone-gaze-mid-on: 18.9px 29.7px;
+  --r10-phone-gaze-mid-off: -21.6px -10.8px;
+  --r10-phone-gaze-forward-size: 21.6px 10.8px;
+  --r10-phone-gaze-forward-on: 18.9px 29.7px;
+  --r10-phone-gaze-forward-off: -21.6px -10.8px;
+  --r10-phone-nav-size: var(--r10-phone-front-size), var(--r10-phone-gaze-forward-size), var(--r10-phone-gaze-mid-size), var(--r10-phone-glow-dim-size), var(--r10-phone-glow-bright-size), var(--r10-phone-char-back-size);
+  --r10-phone-nav-state-stop: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-tap: 48.6px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-dim: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), 8.1px 18.9px, var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-bright: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+  --r10-phone-nav-state-up: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-on), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-look: 45.9px 21.6px, var(--r10-phone-gaze-forward-on), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-look-bright: 45.9px 21.6px, var(--r10-phone-gaze-forward-on), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+  --r10-phone-nav-state-dim-tap: 48.6px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), 8.1px 18.9px, var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-look-dim: 45.9px 21.6px, var(--r10-phone-gaze-forward-on), var(--r10-phone-gaze-mid-off), 8.1px 18.9px, var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-up-bright: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-on), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+  --r10-phone-nav-state-bright-tap: 48.6px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+}
+
+/* The navigation title bar is a ::before on sidebar-inner; ::after is free. sidebar-inner is a
+   flex column with no positioning context, so establish one and pin the canvas into the 32px bar. */
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"] { position: relative; }
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after {
+  content: "";
+  /* sidebar-inner also carries .vrcx-0-sidebar-surface, whose ::after is display:none
+     (navigation-r7 retires the R5 pendant there). Re-enable explicitly. */
+  display: block;
+  position: absolute;
+  /* Anchored to the top of the 32px title bar: the window tab bar above wins the stacking
+     contest, so no upward overhang. The 44px canvas now hangs 12px below the bar instead. */
+  top: 0;
+  right: 12px;
+  width: var(--r10-phone-canvas-width);
+  height: var(--r10-phone-canvas-height);
+  background-image: var(--r10-phone-front-image), var(--r10-phone-gaze-forward-image), var(--r10-phone-gaze-mid-image), var(--r10-phone-glow-dim-image), var(--r10-phone-glow-bright-image), var(--r10-phone-char-back-image);
+  background-size: var(--r10-phone-nav-size);
+  background-position: var(--r10-phone-nav-state-stop);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+  animation: r10-nav-phone-loop 27.54s steps(153, end) infinite,
+             r10-nav-phone-float 8.6s ease-in-out -2.3s infinite;
+}
+
+@keyframes r10-nav-phone-loop {
+  0% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  5.22875817% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  5.882352941% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  6.535947712% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  7.189542484% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  10.45751634% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  11.764705882% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  12.418300654% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  14.379084967% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  17.647058824% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  18.954248366% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  22.222222222% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  22.875816993% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  25.490196078% { background-position: var(--r10-phone-nav-state-up); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  26.14379085% { background-position: var(--r10-phone-nav-state-look); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  29.411764706% { background-position: var(--r10-phone-nav-state-look-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  30.065359477% { background-position: var(--r10-phone-nav-state-look); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  31.37254902% { background-position: var(--r10-phone-nav-state-up); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  32.026143791% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  35.294117647% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  35.947712418% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  38.562091503% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  39.869281046% { background-position: var(--r10-phone-nav-state-dim-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  40.522875817% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  41.830065359% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  42.483660131% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  46.405228758% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  47.058823529% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  47.712418301% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  48.366013072% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  52.941176471% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  54.248366013% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  56.862745098% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  60.784313725% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  64.052287582% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  68.62745098% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  69.281045752% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  69.934640523% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  70.588235294% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  75.816993464% { background-position: var(--r10-phone-nav-state-up); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  76.470588235% { background-position: var(--r10-phone-nav-state-look); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  81.045751634% { background-position: var(--r10-phone-nav-state-look-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  81.699346405% { background-position: var(--r10-phone-nav-state-look-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  82.352941176% { background-position: var(--r10-phone-nav-state-up-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  83.006535948% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  84.967320261% { background-position: var(--r10-phone-nav-state-dim-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  85.620915033% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  88.235294118% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  88.888888889% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  91.503267974% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  92.810457516% { background-position: var(--r10-phone-nav-state-dim-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  93.464052288% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  96.732026144% { background-position: var(--r10-phone-nav-state-bright-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  97.385620915% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  100% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+}
+
+/* Slow, phase-offset whole-stack drift; background-position/size remain on the 153-step timeline. */
+@keyframes r10-nav-phone-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
+}
+html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }

@@ -1,0 +1,25 @@
+{
+  "changed": [
+    "refresh-ccw",
+    "refresh-cw",
+    "rotate-ccw-clock",
+    "rotate-ccw",
+    "rotate-cw"
+  ],
+  "unchangedGlyphs": 238,
+  "canonicalGlyphs": 243,
+  "oldBytes": 110865,
+  "newBytes": 111168,
+  "deltaBytes": 303,
+  "checks": [
+    "Exactly five expected CSS mask rules changed; 238 other glyph rules byte identical",
+    "Licenses and selectors retained",
+    "Refresh CW/CCW contain two separate arc-arrow components",
+    "Rotation CW/CCW are horizontal mirrors; single connected arc",
+    "History outer arrow connected; separate 12-to-3 clock hands",
+    "16x16 integer grids; raster comparisons at16px and nearest-neighbor6x",
+    "Repeat inspected, left unchanged"
+  ],
+  "directionSemantics": "CW heads descend at upper-right and ascend at lower-left. CCW are horizontal mirrors.",
+  "runtimeLimit": "Local SVG/CSS build only; Windows GUI and runtime theme package rebuild owned by Lead"
+}

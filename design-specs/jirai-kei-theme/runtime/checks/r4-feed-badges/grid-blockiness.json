@@ -1,0 +1,252 @@
+{
+  "total": 243,
+  "feed": [
+    {
+      "name": "log-in",
+      "fill": 78,
+      "avgRun": 3.55,
+      "maxRun": 10,
+      "thinShare": 0
+    },
+    {
+      "name": "log-out",
+      "fill": 78,
+      "avgRun": 3.55,
+      "maxRun": 10,
+      "thinShare": 0
+    },
+    {
+      "name": "pencil-line",
+      "fill": 79,
+      "avgRun": 2.93,
+      "maxRun": 7,
+      "thinShare": 0.04
+    },
+    {
+      "name": "person-standing",
+      "fill": 44,
+      "avgRun": 3.14,
+      "maxRun": 10,
+      "thinShare": 0
+    },
+    {
+      "name": "map-pin",
+      "fill": 90,
+      "avgRun": 2.73,
+      "maxRun": 6,
+      "thinShare": 0
+    },
+    {
+      "name": "file-text",
+      "fill": 122,
+      "avgRun": 3.49,
+      "maxRun": 12,
+      "thinShare": 0
+    },
+    {
+      "name": "lock",
+      "fill": 96,
+      "avgRun": 3.84,
+      "maxRun": 14,
+      "thinShare": 0
+    },
+    {
+      "name": "arrow-right",
+      "fill": 38,
+      "avgRun": 3.8,
+      "maxRun": 11,
+      "thinShare": 0
+    },
+    {
+      "name": "chevron-right",
+      "fill": 28,
+      "avgRun": 2.8,
+      "maxRun": 3,
+      "thinShare": 0
+    }
+  ],
+  "thin25": [
+    {
+      "name": "code",
+      "fill": 36,
+      "avgRun": 1.8,
+      "maxRun": 2,
+      "thinShare": 0.2
+    },
+    {
+      "name": "circle-dashed",
+      "fill": 44,
+      "avgRun": 1.83,
+      "maxRun": 4,
+      "thinShare": 0.33
+    },
+    {
+      "name": "code-xml",
+      "fill": 44,
+      "avgRun": 1.83,
+      "maxRun": 2,
+      "thinShare": 0.17
+    },
+    {
+      "name": "check",
+      "fill": 24,
+      "avgRun": 2,
+      "maxRun": 4,
+      "thinShare": 0.17
+    },
+    {
+      "name": "grip-vertical",
+      "fill": 32,
+      "avgRun": 2,
+      "maxRun": 2,
+      "thinShare": 0
+    },
+    {
+      "name": "chevrons-up-down",
+      "fill": 32,
+      "avgRun": 2,
+      "maxRun": 4,
+      "thinShare": 0.25
+    },
+    {
+      "name": "ellipsis-vertical",
+      "fill": 16,
+      "avgRun": 2,
+      "maxRun": 2,
+      "thinShare": 0
+    },
+    {
+      "name": "sun",
+      "fill": 60,
+      "avgRun": 2,
+      "maxRun": 4,
+      "thinShare": 0.27
+    },
+    {
+      "name": "arrow-down",
+      "fill": 38,
+      "avgRun": 2.24,
+      "maxRun": 6,
+      "thinShare": 0.12
+    },
+    {
+      "name": "arrow-up",
+      "fill": 38,
+      "avgRun": 2.24,
+      "maxRun": 6,
+      "thinShare": 0.12
+    },
+    {
+      "name": "triangles-centerline-dashed-vertical",
+      "fill": 72,
+      "avgRun": 2.25,
+      "maxRun": 4,
+      "thinShare": 0
+    },
+    {
+      "name": "circle-check",
+      "fill": 80,
+      "avgRun": 2.35,
+      "maxRun": 8,
+      "thinShare": 0.18
+    },
+    {
+      "name": "circle-check-big",
+      "fill": 80,
+      "avgRun": 2.35,
+      "maxRun": 8,
+      "thinShare": 0.15
+    },
+    {
+      "name": "info",
+      "fill": 78,
+      "avgRun": 2.36,
+      "maxRun": 8,
+      "thinShare": 0.12
+    },
+    {
+      "name": "circle-alert",
+      "fill": 78,
+      "avgRun": 2.36,
+      "maxRun": 8,
+      "thinShare": 0.12
+    },
+    {
+      "name": "clock",
+      "fill": 84,
+      "avgRun": 2.4,
+      "maxRun": 8,
+      "thinShare": 0.11
+    },
+    {
+      "name": "volume-2",
+      "fill": 82,
+      "avgRun": 2.41,
+      "maxRun": 6,
+      "thinShare": 0.06
+    },
+    {
+      "name": "palette",
+      "fill": 87,
+      "avgRun": 2.42,
+      "maxRun": 8,
+      "thinShare": 0.14
+    },
+    {
+      "name": "check-check",
+      "fill": 46,
+      "avgRun": 2.42,
+      "maxRun": 4,
+      "thinShare": 0.16
+    },
+    {
+      "name": "circle",
+      "fill": 68,
+      "avgRun": 2.43,
+      "maxRun": 8,
+      "thinShare": 0.14
+    },
+    {
+      "name": "clock-3",
+      "fill": 84,
+      "avgRun": 2.47,
+      "maxRun": 8,
+      "thinShare": 0.12
+    },
+    {
+      "name": "tags",
+      "fill": 92,
+      "avgRun": 2.49,
+      "maxRun": 8,
+      "thinShare": 0.05
+    },
+    {
+      "name": "users-round",
+      "fill": 90,
+      "avgRun": 2.5,
+      "maxRun": 9,
+      "thinShare": 0.08
+    },
+    {
+      "name": "tag",
+      "fill": 75,
+      "avgRun": 2.5,
+      "maxRun": 8,
+      "thinShare": 0.03
+    },
+    {
+      "name": "key-round",
+      "fill": 75,
+      "avgRun": 2.5,
+      "maxRun": 6,
+      "thinShare": 0.07
+    }
+  ],
+  "median": {
+    "name": "bell-off",
+    "fill": 104,
+    "avgRun": 3.25,
+    "maxRun": 12,
+    "thinShare": 0.06
+  }
+}

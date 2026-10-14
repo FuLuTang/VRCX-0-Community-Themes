@@ -1,0 +1,28 @@
+{
+  "revision": "R7.3 (corner cat cleared from app buttons)",
+  "directory": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "files": [
+    {
+      "Name": "preview.webp",
+      "Bytes": 44738,
+      "Hash": "EFEADBD653A54368CC761F270D5A33198C3E9831CA1F75BD0938A65EFBF11CC1"
+    },
+    {
+      "Name": "README.md",
+      "Bytes": 1123,
+      "Hash": "45C0FFB858709D7662BA4A4887DA7BBF1DB49EF09BD828FED5D6AE56E3AFF4E0"
+    },
+    {
+      "Name": "theme.css",
+      "Bytes": 800838,
+      "Hash": "4BF61FD9A62704A727A638EA198A45AB33C30C138D6B93A74DDC0184A305CB15"
+    },
+    {
+      "Name": "theme.json",
+      "Bytes": 520,
+      "Hash": "9E0A821B6912E9899F80A48CEA8AFE4914AEFE8BACF83AAD0C3E94C341874F2D"
+    }
+  ],
+  "atomicFileReplacement": true,
+  "windowsVisualValidated": false
+}

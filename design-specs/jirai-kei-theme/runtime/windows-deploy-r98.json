@@ -1,0 +1,48 @@
+{
+  "revision": "R9.8",
+  "date": "2026-10-14",
+  "target": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme",
+  "change": "context-exclusion migration: generic control rules now apply globally with :where(); 306 brittle :not() clauses removed (233 vacuous), 5 individual blacklists kept with logged reasons; style-class hooks replaced by data-slot/:has structural hooks; gaps filled (Base UI checkbox in entity-dialog, radio entirely, login-page native slider fallback)",
+  "verification": "49 layered checks run twice (base vs migrated): PASS/FAIL sets identical, 37 pass / 12 pre-existing failures, zero regressions. Per-attribute computed-style fingerprints for login-page / entity-dialog / settings contexts.",
+  "source": "/tmp/exclusion-migration/out/jirai-kei-theme/theme.css built from a full JK copy with migration.diff applied",
+  "artifacts": "runtime/checks/exclusion-migration/{README.md,exclusions.md,exclusions.json,migration.diff}",
+  "backup": {
+    "dir": "C:\\Users\\tangh\\Documents\\GitHub\\theme-preview\\jirai-kei-theme-backup-20261014-0352",
+    "revision": "R9.7 (previously deployed)",
+    "themeCssBytes": 1024205,
+    "themeCssHash": "B8DA49072A9EFC6736607B7E92977FBF412A8B67FF6E511393B65FEF10F24A02"
+  },
+  "files": [
+    {
+      "Name": "theme.css",
+      "Bytes": 1027835,
+      "Hash": "035B2F6C887598B4166EF3B00B58FE907F01AA518E22467847453965DCA5AA11"
+    },
+    {
+      "Name": "theme.json",
+      "Bytes": 837,
+      "Hash": "2DCF02E77A38A3C562D480D9FD39CBBCB2767C5DA82C82230D6C30827DA80C11"
+    },
+    {
+      "Name": "README.md",
+      "Bytes": 4404,
+      "Hash": "5355C84173D962C7E7560BB3C78F7581A98A0A896D61E0BFCB22700B58D4F54C"
+    },
+    {
+      "Name": "preview.webp",
+      "Bytes": 24246,
+      "Hash": "DFE7341A13F4FA0863760F0472415D2749CBC95DB0C8EC449AE0F9BA99EA577D"
+    }
+  ],
+  "atomicFileReplacement": true,
+  "uploadAndFinalHashesVerified": true,
+  "excluded": [
+    "SOCIAL phone layers (assets verified, not yet wired into build-runtime.mjs)",
+    "11x10 titlebar heart tiers (brand-heart-r10 not yet integrated)"
+  ],
+  "included": [
+    "context-exclusion migration (R9.8)",
+    "r10 status-toast-icon sprites (already in the build baseline; success/error cards)",
+    "language-badges-r98"
+  ]
+}

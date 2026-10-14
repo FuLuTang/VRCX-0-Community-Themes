@@ -1,0 +1,58 @@
+/* v4: reuse the collected references. Every motif is re-drawn (original-assets S1–S13 or plain CSS);
+   the reference each one is learned from is noted per block. */
+:root { --wd-plaid-a: #3a2a5e; --wd-plaid-b: #120d20; --wd-dot: #2a3a4a; }
+
+/* R1 · comic background: mint polka dots on the desktop, under the star field */
+.app { background-image: radial-gradient(circle, var(--wd-dot) 0 2px, transparent 2.5px); background-size: 24px 24px; background-position: 6px 6px; }
+
+/* R2 · comic skirt: purple × black plaid ribbon segment on the active title strip, with a bow (S6) */
+.win.active > .wt { padding-right: 96px; }
+.win.active > .wt::after { content: ""; position: absolute; right: 40px; top: 0; width: 48px; height: 24px; pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / .12) 0 2px, transparent 2px 12px),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / .12) 0 2px, transparent 2px 12px),
+    linear-gradient(90deg, var(--wd-plaid-a) 0 50%, var(--wd-plaid-b) 50%) 0 0 / 12px 100%,
+    linear-gradient(var(--wd-plaid-a) 0 50%, var(--wd-plaid-b) 50%) 0 0 / 100% 12px;
+  background-blend-mode: normal, normal, screen, normal; border-left: 1px solid var(--wd-ink); border-right: 1px solid var(--wd-ink); }
+.win.active > .wt .dots { position: relative; z-index: 1; }
+
+/* R3 · jirai lace (S1): scallops hang under the titlebar */
+.titlebar { position: relative; }
+.titlebar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; pointer-events: none; z-index: 4;
+  background-color: var(--wd-frame); -webkit-mask: var(--jk-mask-s1-s) repeat-x 0 0 / 16px 8px; mask: var(--jk-mask-s1-s) repeat-x 0 0 / 16px 8px; }
+.body { padding-top: 18px; }
+
+/* R4 · comic capsule label with offset shadow: friends-panel group headers */
+.ghead:not(.room) { margin: 6px 10px 2px; height: 26px; padding: 0 10px; background: var(--wd-raised); border: 1px solid var(--wd-frame);
+  box-shadow: 3px 3px 0 var(--wd-title-active); border-radius: 13px; color: var(--wd-text); }
+.ghead:not(.room)::before { border-radius: 50%; background: var(--wd-title-active); }
+
+/* R5 · NSO rainbow achievement bar → only on the real loading-progress segment */
+.statusbar .seg-s.busy::after { height: 3px; background: repeating-linear-gradient(90deg, #ff7fcf 0 6px, #ffd36f 6px 12px, #6fe3d3 12px 18px, #8f7fe0 18px 24px); animation: wd-march-r 1.2s steps(4) infinite; }
+@keyframes wd-march-r { to { background-position: 24px 0; } }
+
+/* R6 · S11 symbol sprinkle in the main window's empty tail (below the last row only) */
+.foot-count + .tail { height: 200px; pointer-events: none; background-color: #2e2552;
+  -webkit-mask: var(--jk-mask-s11) repeat 0 0 / 144px 144px; mask: var(--jk-mask-s11) repeat 0 0 / 144px 144px; }
+
+/* R7 · dialog: fan lace (S2) at the banner foot, lacing columns (S4+S5) on the banner sides (ramuneya / sozaino) */
+.udlg .banner::after { height: 12px; background-color: var(--wd-info); opacity: 1;
+  -webkit-mask: var(--jk-mask-s2) repeat-x 0 0 / 20px 12px; mask: var(--jk-mask-s2) repeat-x 0 0 / 20px 12px; transform: scaleY(-1); }
+.udlg .banner { overflow: hidden; }
+.udlg .banner .lace { position: absolute; top: 10px; bottom: 18px; width: 16px; background-color: var(--wd-square); opacity: .85;
+  -webkit-mask: var(--jk-mask-s4) repeat-y 0 0 / 16px 16px; mask: var(--jk-mask-s4) repeat-y 0 0 / 16px 16px; }
+.udlg .banner .lace.l { left: 20px; } .udlg .banner .lace.r { right: 20px; }
+.udlg .banner .knot { position: absolute; bottom: 4px; width: 24px; height: 16px; background-color: var(--wd-square);
+  -webkit-mask: var(--jk-mask-s5) no-repeat 0 0 / 24px 16px; mask: var(--jk-mask-s5) no-repeat 0 0 / 24px 16px; }
+.udlg .banner .knot.l { left: 16px; } .udlg .banner .knot.r { right: 16px; }
+
+/* R8 · NSO JINE: note card becomes a pink chat bubble on a dither-cloud background */
+.ucard.jine .cb { background: #3b2350; position: relative; min-height: 84px; }
+.ucard.jine .cb::before { content: ""; position: absolute; right: 4px; bottom: 4px; width: 96px; height: 48px; opacity: .5; pointer-events: none;
+  background-color: #6a3f7e; -webkit-mask: var(--jk-mask-s10) no-repeat 0 0 / 96px 48px; mask: var(--jk-mask-s10) no-repeat 0 0 / 96px 48px; }
+.bubble { position: relative; display: inline-block; max-width: 85%; padding: 6px 10px; margin: 2px 0; background: #ffd6f2; color: var(--wd-ink); border-radius: 10px; }
+.bubble.me { background: #c3f5ec; float: right; clear: both; }
+.ucard.jine .k { color: #d9b6e6; }
+
+/* R9 · comic dotted underline: card titles get a dotted rule, like the comic's tagline lines */
+.ucard .ct { border-bottom: 2px dotted var(--wd-frame); }
