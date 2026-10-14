@@ -1,0 +1,46 @@
+state                                        elements B/C missing B/C identity style diffs result
+----------------------------------------------------------------------------------------------------------------
+activity                                       4136/4136         0/0        0           0 PASS
+browse-history-time-range-popover              1961/1961         0/0        0           0 PASS
+browse-history                                 1728/1728         0/0        0           0 PASS
+charts-mutual-settings-sheet                   1599/1599         0/0        0           0 PASS
+charts                                           469/469         0/0        0           0 PASS
+charts_mutual                                    469/469         0/0        0           0 PASS
+charts_timeline                                  789/789         0/0        0           0 PASS
+charts_two-person                                777/777         0/0        0           0 PASS
+community-themes                               1128/1128         0/0        0           0 PASS
+dashboard_usr_00000000-0000-0000-0000-000000000000     757/757         0/0        0           0 PASS
+favorites-worlds-select-listbox                1217/1217         0/0        0           0 PASS
+favorites_avatars                              1177/1177         0/0        0           0 PASS
+favorites_friends                              1259/1259         0/0        0           0 PASS
+favorites_groups                                 793/793         0/0        0           0 PASS
+favorites_import_friends                       1206/1206         0/0        0           0 PASS
+favorites_worlds                               1207/1207         0/0        0           0 PASS
+feed-account-menu                              1537/1537         0/0        0           0 PASS
+feed-avatar-hover-card                         1502/1502         0/0        0           0 PASS
+feed-notification-context-menu                 1498/1498         0/0        0           0 PASS
+feed-quick-search-tooltip                      1494/1494         0/0        0           0 PASS
+feed                                           1494/1494         0/0        0           0 PASS
+friends-locations                                817/817         0/0        0           0 PASS
+game-log                                       2003/2003         0/0        0           0 PASS
+instance-history                               1620/1620         0/0        0           0 PASS
+login                                          1494/1494         0/0        0           0 PASS
+my-avatars                                     1342/1342         0/0        0           0 PASS
+notification                                   1306/1306         0/0        0           0 PASS
+player-list                                      753/753         0/0        0           0 PASS
+search                                           769/769         0/0        0           0 PASS
+settings                                         975/975         0/0        0           0 PASS
+social_friend-list                             1484/1484         0/0        0           0 PASS
+social_friend-log                              1453/1453         0/0        0           0 PASS
+social_moderation                              1422/1422         0/0        0           0 PASS
+themes                                         1128/1128         0/0        0           0 PASS
+tools-actions-menu                             1549/1549         0/0        0           0 PASS
+tools                                          1528/1528         0/0        0           0 PASS
+tools_gallery                                  1084/1084         0/0        0           0 PASS
+tools_group-moderation                           812/812         0/0        0           0 PASS
+tools_inventory                                  914/914         0/0        0           0 PASS
+tools_my-groups                                1387/1387         0/0        0           0 PASS
+tools_screenshot-metadata                      1124/1124         0/0        0           0 PASS
+tools_vrchat-log                               1152/1152         0/0        0           0 PASS
+----------------------------------------------------------------------------------------------------------------
+42/42 states byte-comparable across the frozen property set; 0 style differences

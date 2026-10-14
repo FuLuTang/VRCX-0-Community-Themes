@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "policy": "Only open transient UI surfaces. Never click menu items, submit forms, toggle persistent preferences, change selected values, or invoke destructive/data-mutating actions. After capture, dispatch Escape and restore the original route.",
+  "states": [
+    {
+      "id": "feed-account-menu",
+      "route": "/feed",
+      "action": "click",
+      "selector": "button[data-slot=\"dropdown-menu-trigger\"][aria-label=\"账号菜单\"]",
+      "expected": "[role=\"menu\"]",
+      "description": "Common account dropdown; open only, do not select an item."
+    },
+    {
+      "id": "feed-quick-search-tooltip",
+      "route": "/feed",
+      "action": "hover",
+      "selector": "[data-slot=\"tooltip-trigger\"][aria-label^=\"快速搜索\"]",
+      "expected": "[data-slot=\"tooltip-content\"]",
+      "description": "Tooltip appearance on a shared shell control."
+    },
+    {
+      "id": "feed-avatar-hover-card",
+      "route": "/feed",
+      "action": "hover",
+      "selector": "[data-slot=\"hover-card-trigger\"]",
+      "expected": "[data-slot=\"hover-card-content\"]",
+      "description": "User/avatar hover card; open only, do not follow links or invoke actions."
+    },
+    {
+      "id": "feed-notification-context-menu",
+      "route": "/feed",
+      "action": "contextmenu",
+      "selector": "[data-slot=\"context-menu-trigger\"][aria-label=\"通知中心\"]",
+      "expected": "[data-slot=\"context-menu-content\"]",
+      "description": "Context menu on the notification control; open only."
+    },
+    {
+      "id": "browse-history-time-range-popover",
+      "route": "/browse-history",
+      "action": "click",
+      "selector": "button[data-slot=\"popover-trigger\"][aria-label=\"时间范围\"]",
+      "expected": "[data-slot=\"popover-content\"]",
+      "description": "Date-range popover; inspect without choosing a range."
+    },
+    {
+      "id": "favorites-worlds-select-listbox",
+      "route": "/favorites/worlds",
+      "action": "click",
+      "selector": "[data-slot=\"select-trigger\"]",
+      "expected": "[role=\"listbox\"]",
+      "description": "Select/combobox listbox; open without selecting an option."
+    },
+    {
+      "id": "charts-mutual-settings-sheet",
+      "route": "/charts/mutual",
+      "action": "click",
+      "selector": "button[data-slot=\"sheet-trigger\"][aria-label=\"关系图设置\"]",
+      "expected": "[data-slot=\"sheet-popup\"]",
+      "description": "Graph settings sheet; open only, never apply or save changes."
+    },
+    {
+      "id": "tools-actions-menu",
+      "route": "/tools",
+      "action": "click",
+      "selector": "button[data-slot=\"dropdown-menu-trigger\"][aria-label=\"工具操作\"]",
+      "expected": "[role=\"menu\"]",
+      "description": "Route-specific tools action menu; open only, do not choose an operation."
+    }
+  ]
+}
