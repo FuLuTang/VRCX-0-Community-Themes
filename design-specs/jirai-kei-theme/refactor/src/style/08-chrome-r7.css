@@ -1,0 +1,219 @@
+/* SECTION backgrounds-r7 */
+/* R7 main-content wallpaper. Ordering note: this layer loads AFTER windose-runtime.css
+   so it replaces that file's old right-bottom heart outline with the requested art.
+   ::before (app wallpaper) and ::after (nav-resize accent) stay untouched.
+   User layout: Ame-chan's Tweeter profile bottom-LEFT, Icon for the game bottom-RIGHT,
+   flush to the corners and now the SAME size. Assets are keyed, pre-scaled to 200px
+   with nearest, and drawn at 22% alpha because they are background material only. */
+.vrcx-0-main-content {
+ --r7-bg-size:200px;
+ background-color:#201936;
+ background-image:var(--r7-ame-tweeter,none),var(--r7-game-icon,none),var(--wd-bg-stars);
+ background-repeat:no-repeat,no-repeat,repeat;
+ background-position:left 0 bottom 0,right 0 bottom 0,0 0;
+ background-size:var(--r7-bg-size) var(--r7-bg-size),var(--r7-bg-size) var(--r7-bg-size),128px 128px;
+}
+@media(max-width:900px) {
+ .vrcx-0-main-content { --r7-bg-size:150px; }
+}
+@media(max-width:640px) {
+ .vrcx-0-main-content { --r7-bg-size:120px; }
+}
+
+/* SECTION chrome-r8 */
+/* R8 chrome pass. Append after window-chrome.css and navigation-r7.css.
+   Scope is paint only: preserve titlebar/statusbar dimensions, all app status fills,
+   statusbar ::before lace geometry/animation, and application-owned RGB ::after. */
+:root {
+    --r8-ink: #21132d;
+    --r8-frame: #d97fc6;
+    --r8-face: #f8c6e3;
+    --r8-face-hi: #fff1f8;
+    --r8-face-low: #b86ba4;
+    --r8-hover: #ffe3f2;
+    --r8-pressed: #f3add9;
+    --r8-status-face: #f9d1e7;
+    --r8-lace-fill: var(--r8-status-face);
+    --r8-lace-tile: var(--jk-asset-lace-tile);
+    --r8-close-face: #b0305f;
+    --r8-close-ink: #fff1f8;
+}
+
+/* Titlebar frame uses the same pink edge at both ends. The app owns the 32px geometry. */
+.vrcx-0-titlebar[data-app-titlebar] {
+    background-color: var(--r8-frame);
+    color: var(--r8-ink);
+}
+
+/* Square outer corners across brand/help, middle actions, and native window controls. */
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']) {
+    box-sizing: border-box;
+    border-radius: 0;
+    transition: none;
+}
+
+/* Left plate and right window buttons share one face, 1px ink frame, and Win95 bevel. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'],
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'],
+.vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'][class*='destructive'] {
+    background-color: var(--r8-face);
+    background-image: none;
+    border: 1px solid var(--r8-ink);
+    color: var(--r8-ink);
+    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
+        inset -1px -1px 0 var(--r8-face-low);
+}
+
+/* Keep the existing quick-search hit area; align its frame and face with the plates. */
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] {
+    background-color: var(--r8-face);
+    border-color: var(--r8-ink);
+    border-radius: 0;
+    color: var(--r8-ink);
+    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
+        inset -1px -1px 0 var(--r8-face-low);
+}
+
+/* Mid-bar icon actions stay flat at rest, but share the same square interaction language. */
+.vrcx-0-titlebar[data-app-titlebar] button:not([class~='w-9'][class~='rounded-none'][class~='border-0']) {
+    border-radius: 0;
+    transition: none;
+}
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):is(
+    :hover,
+    [aria-expanded='true'],
+    [aria-pressed='true'],
+    [data-popup-open]
+) {
+    background-color: var(--r8-hover) !important;
+    border-color: var(--r8-ink);
+    color: var(--r8-ink) !important;
+    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
+        inset -1px -1px 0 var(--r8-face-low);
+}
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):active {
+    background-color: var(--r8-pressed) !important;
+    box-shadow: inset 1px 1px 0 var(--r8-face-low),
+        inset -1px -1px 0 var(--r8-face-hi);
+}
+.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):focus-visible {
+    outline: 2px solid var(--r8-ink);
+    outline-offset: -3px;
+}
+/* Keep the destructive close action legible and semantically distinct on hover/press. */
+.vrcx-0-titlebar[data-app-titlebar] button[class*='destructive']:is(:hover, :active) {
+    background-color: var(--r8-close-face) !important;
+    border-color: var(--r8-ink);
+    color: var(--r8-close-ink) !important;
+    box-shadow: inset 1px 1px 0 rgb(255 241 248 / 0.55),
+        inset -1px -1px 0 rgb(72 12 39 / 0.5);
+}
+
+/* Footer becomes a recessed sibling of the R7 menu panel. Reserve right-side cat space;
+   no pseudo-element is claimed here, so a later task can own footer::after. */
+.vrcx-0-sidebar-surface [data-sidebar='footer'] {
+    background-color: #211a33;
+    border: 1px solid #4b3a63;
+    border-radius: 0;
+    padding-block: 7px;
+    box-shadow: inset 1px 1px 0 #120d20,
+        inset -1px -1px 0 #4b3a63,
+        inset 0 2px 0 #3f2c50;
+}
+[data-slot='sidebar'][data-state='expanded'] .vrcx-0-sidebar-surface [data-sidebar='footer'] {
+    box-sizing: border-box;
+    padding-inline-end: 32px;
+}
+
+/* Statusbar and lace share the measured R8.2 cloth color; keep its 1px border box. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] {
+    background-color: var(--r8-status-face);
+    border-top-color: var(--r8-status-face);
+    color: var(--r8-ink);
+}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] > div[class~='min-h-6'][class~='flex-col'] {
+    background-color: var(--r8-status-face);
+    box-shadow: none;
+}
+/* B · library s2 fan-lace pixels, flipped up and reduced to the existing 8px strip.
+   The pseudo box geometry is untouched; only its two-color repeat paint is replaced. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before {
+    background-color: transparent;
+    background-image: var(--r8-lace-tile);
+    background-repeat: repeat-x;
+    background-position: 0 center;
+    background-size: 20px 8px;
+    image-rendering: pixelated;
+    -webkit-mask: none;
+    mask: none;
+}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(
+    [class*='text-content-'],
+    [class*='text-muted-foreground']
+) {
+    color: var(--r8-ink);
+}
+/* Preserve each semantic lamp fill; the existing 1px square outline only gains ink. */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'] {
+    border-color: var(--r8-ink);
+}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button']):hover,
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button'])[aria-expanded='true'] {
+    background-color: var(--r8-hover);
+    color: var(--r8-ink);
+}
+
+/* No new motion or ornamental pseudo-elements are introduced by R8. */
+@media (prefers-reduced-motion: reduce) {
+    .vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']),
+    .vrcx-0-sidebar-surface [data-sidebar='footer'] {
+        transition: none !important;
+    }
+}
+
+/* SECTION bio-diff-r8 */
+/* R8: scoped to the confirmed feed main-content DOM and entity-dialog portal only. */
+
+/* Expanded feed signature history: recolor only the 2px rail wrapping the bio pre. */
+.vrcx-0-main-content div.ml-3.border-l-2.py-3.pl-4:has(> pre.max-w-prose.whitespace-pre-wrap) {
+  border-left-color: #d97fc6;
+}
+
+/* Word-level additions: reuse the former removal palette without a strike-through. */
+.vrcx-0-main-content pre.max-w-prose.whitespace-pre-wrap span.text-primary[class~="bg-primary/10"],
+.vrcx-0-main-content div.flex.max-w-2xl.items-center.gap-2 span.text-primary[class~="bg-primary/10"] {
+  background-color: #4b3a63;
+  color: #ffd9ee;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+/* Word-level removals: pale pink fill, dark ink, and a dark strike-through. */
+.vrcx-0-main-content pre.max-w-prose.whitespace-pre-wrap span.text-destructive[class~="bg-destructive/10"],
+.vrcx-0-main-content div.flex.max-w-2xl.items-center.gap-2 span.text-destructive[class~="bg-destructive/10"] {
+  background-color: #ffd9ee;
+  color: #21132d;
+  text-decoration-line: line-through;
+  text-decoration-color: #21132d;
+  text-decoration-thickness: 1px;
+}
+
+/* TextScroll renders an outer pre, then the supplied leading-5 diff pre.
+   Descendant lookup reaches that inner pre; direct span child keeps scope on
+   the user biography diff (GroupDialog/ordinary TextScroll have no such pre). */
+[data-slot="dialog-content"].entity-dialog .overflow-auto.h-52.min-w-0 pre.m-0.font-sans.text-xs.leading-5.whitespace-pre-wrap > span.rounded-sm[class~="bg-emerald-500/15"] {
+  background-color: #4b3a63;
+  color: #ffd9ee;
+  border-bottom: 0;
+  border-radius: 0;
+  text-decoration: none;
+}
+[data-slot="dialog-content"].entity-dialog .overflow-auto.h-52.min-w-0 pre.m-0.font-sans.text-xs.leading-5.whitespace-pre-wrap > span.rounded-sm[class~="bg-rose-500/15"] {
+  background-color: #ffd9ee;
+  color: #21132d;
+  border-radius: 0;
+  text-decoration-line: line-through;
+  text-decoration-color: #21132d;
+  text-decoration-thickness: 1px;
+}
+

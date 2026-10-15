@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jirai Kei · Popover 面板预览</title>
+<style>
+:root{color-scheme:dark;--ink:#f2ebff;--muted:#b9add9;--pink:#ffb8e6;--edge:#6c5ce0;--face:#211a33;--shadow:#100b1e;--inner-hi:#69557c;--inner-lo:#7a3f6d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:40px;background:radial-gradient(ellipse at 50% 38%,#302344 0,#1a1429 55%,#100b1e 100%);color:var(--ink);font:14px/1.5 "WD Pixel CJK","Geist Variable",Geist,"Noto Sans SC",system-ui,sans-serif}
+.scene{width:min(780px,100%);min-height:500px;position:relative;display:grid;place-items:center;border:1px solid #392a52;background:linear-gradient(135deg,rgba(255,184,230,.035),transparent 45%),#171224;box-shadow:inset 1px 1px #302344,inset -1px -1px #100b1e}
+.caption{position:absolute;left:24px;top:20px;color:#8c71b0;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.trigger{position:absolute;left:50%;top:87px;transform:translateX(-50%);border:1px solid var(--edge);border-radius:0;background:#392a52;color:var(--ink);padding:8px 14px;box-shadow:inset 1px 1px #69557c,inset -1px -1px #16112a;font:inherit}
+.trigger::after{content:"⌄";margin-left:12px;color:var(--pink)}
+.popover{width:min(360px,calc(100% - 36px));background:var(--face);color:var(--ink);border:1px solid var(--edge);border-radius:0;box-shadow:inset 1px 1px 0 var(--inner-hi),inset -1px -1px 0 var(--inner-lo),3px 3px 0 var(--shadow);padding:6px}
+.heading{display:flex;align-items:center;gap:9px;padding:9px 10px 11px;border-bottom:1px solid #6c5ce0;margin-bottom:5px;color:#ffd9ee;font-weight:650}
+.mark{width:8px;height:8px;background:var(--pink);box-shadow:2px 2px 0 #7a3f6d}
+.heading small{margin-left:auto;color:var(--muted);font-size:11px;font-weight:400}
+.item{display:flex;align-items:center;gap:10px;padding:8px 10px;color:var(--ink)}
+.item.active{background:var(--pink);color:#16112a;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);box-shadow:inset 0 1px #ffd9ee,inset 0 -1px #d97fc6}
+.icon{width:18px;text-align:center;color:#d6b8ef}.item.active .icon{color:#5c3473}
+.shortcut{margin-left:auto;color:#b9add9;font:11px ui-monospace,monospace}.item.active .shortcut{color:#2a1d6e}
+hr{border:0;height:1px;margin:5px 4px;background:repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px)}
+.footer{display:flex;gap:8px;justify-content:flex-end;padding:10px 4px 3px}
+button.action{font:inherit;border:1px solid #6c5ce0;border-radius:0;padding:6px 11px;color:#f2ebff;background:#332650;box-shadow:inset 1px 1px #69557c,inset -1px -1px #16112a}
+button.action.primary{background:#ffb8e6;color:#16112a;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}
+.note{position:absolute;bottom:20px;left:24px;right:24px;text-align:center;color:#8c71b0;font-size:12px}
+</style>
+</head>
+<body>
+<main class="scene" aria-label="Popover 样式预览">
+  <div class="caption">JIRAI KEI · PORTAL SURFACE</div>
+  <button class="trigger" type="button">浏览历史</button>
+  <section class="popover" aria-label="历史记录菜单">
+    <header class="heading"><span class="mark"></span><span>最近访问</span><small>ROOM HISTORY</small></header>
+    <div class="item active"><span class="icon">▣</span><span>月影咖啡馆 · 日落房间</span><span class="shortcut">⌘ 1</span></div>
+    <div class="item"><span class="icon">◇</span><span>雨夜的玻璃庭院</span><span class="shortcut">⌘ 2</span></div>
+    <div class="item"><span class="icon">✦</span><span>蓝色鲸鱼的秘密基地</span><span class="shortcut">⌘ 3</span></div>
+    <hr>
+    <div class="footer"><button class="action" type="button">清除记录</button><button class="action primary" type="button">查看全部</button></div>
+  </section>
+  <div class="note">1px 紫色边框 · 两道内凸高光 · 3px 硬投影 · 面板方角</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@keyframes r5-charm-swing { 0%,70%,100%{transform:translateY(0)} 78%{transform:translateY(-2px)} 86%{transform:translateY(0)} }
+@keyframes r5-dialog-step-in { from{opacity:0} to{opacity:1} }
+@keyframes r5-spinner-step { to { transform:rotate(360deg) } }
+@keyframes r5-progress-flow { to { background-position:10px 50% } }
+@keyframes r7-tab-edge {
+ 0%,60% { opacity:0; background-position:-24px 0; }
+ 68% { opacity:.65; background-position:0 0; }
+ 80% { opacity:.65; background-position:24px 0; }
+ 90% { opacity:.45; background-position:48px 0; }
+ 100% { opacity:0; background-position:72px 0; }
+}
+@keyframes r8-lace-flow {
+  from { background-position: 0 center; }
+  to { background-position: 20px center; }
+}
+@keyframes r8-nav-cursor {
+  0%, 28%, 58%, 100% { opacity: .62; }
+  14%, 42%, 78% { opacity: 1; }
+}
+@keyframes r8-window-press {
+  0%, 30%, 100% { transform: translateY(0); opacity: .62; }
+  50%, 70% { transform: translateY(1px); opacity: .96; }
+}
+@keyframes r8-cat-hop {
+  0%, 34%, 72%, 100% { transform: translateY(0); opacity: .78; }
+  42%, 52% { transform: translateY(-1px); opacity: 1; }
+}
+@keyframes r9-notification-badge-flash {
+  0%, 49.999% {
+    background-color: #21132d;
+    color: #ffd9ee;
+    border-color: #16112a;
+    box-shadow: inset 0 0 0 1px #ffe4f2;
+  }
+  50%, 100% {
+    background-color: #ffd9ee;
+    color: #21132d;
+    border-color: #16112a;
+    box-shadow: inset 0 0 0 1px #d97fc6;
+  }
+}
+@keyframes jk-loader-dance {
+  from { background-position: 0 0; }
+  to { background-position: -616px 0; }
+}
+@keyframes r97-brand-heart-pixels{
+  0%,20%,100%{background-image:var(--jk-r97-heart-s);background-size:9px 7px;background-position:1px 1px}
+  40%,80%{background-image:var(--jk-r97-heart-m);background-size:10px 8px;background-position:1px 1px}
+  60%{background-image:var(--jk-r97-heart-l);background-size:11px 9px;background-position:0 0}
+}
+@keyframes r96-nav-cat{
+0%,37%,76%,100%{transform:translate(0,0)}
+5%,15%{transform:translate(0,-4px)}
+10%{transform:translate(0,-8px)}
+20%{transform:translate(0,0)}
+24%{transform:translate(-2px,-4px)}
+28%{transform:translate(-2px,-6px)}
+33%{transform:translate(-2px,-2px)}
+68%{transform:translate(2px,0)}
+}
+@keyframes r96-social-cat{
+0%,30%,78%,100%{background-size:16px 16px,18px 18px;background-position:0 5px,24px 4px}
+6%,24%{background-position:0 5px,24px 2px}
+12%{background-position:0 5px,24px 0}
+18%{background-position:0 5px,24px 1px}
+60%,72%{background-size:14px 14px,18px 18px;background-position:1px 6px,24px 4px}
+66%{background-size:16px 16px,18px 18px;background-position:0 5px,25px 4px}
+}
+@keyframes r10-nav-phone-loop {
+  0% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  5.22875817% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  5.882352941% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  6.535947712% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  7.189542484% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  10.45751634% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  11.764705882% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  12.418300654% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  14.379084967% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  17.647058824% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  18.954248366% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  22.222222222% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  22.875816993% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  25.490196078% { background-position: var(--r10-phone-nav-state-up); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  26.14379085% { background-position: var(--r10-phone-nav-state-look); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  29.411764706% { background-position: var(--r10-phone-nav-state-look-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  30.065359477% { background-position: var(--r10-phone-nav-state-look); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  31.37254902% { background-position: var(--r10-phone-nav-state-up); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  32.026143791% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  35.294117647% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  35.947712418% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  38.562091503% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  39.869281046% { background-position: var(--r10-phone-nav-state-dim-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  40.522875817% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  41.830065359% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  42.483660131% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  46.405228758% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  47.058823529% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  47.712418301% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  48.366013072% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  52.941176471% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  54.248366013% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  56.862745098% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  60.784313725% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  64.052287582% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  68.62745098% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  69.281045752% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  69.934640523% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  70.588235294% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  75.816993464% { background-position: var(--r10-phone-nav-state-up); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  76.470588235% { background-position: var(--r10-phone-nav-state-look); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  81.045751634% { background-position: var(--r10-phone-nav-state-look-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  81.699346405% { background-position: var(--r10-phone-nav-state-look-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  82.352941176% { background-position: var(--r10-phone-nav-state-up-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  83.006535948% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  84.967320261% { background-position: var(--r10-phone-nav-state-dim-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  85.620915033% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  88.235294118% { background-position: var(--r10-phone-nav-state-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  88.888888889% { background-position: var(--r10-phone-nav-state-stop); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  91.503267974% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  92.810457516% { background-position: var(--r10-phone-nav-state-dim-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  93.464052288% { background-position: var(--r10-phone-nav-state-bright); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  96.732026144% { background-position: var(--r10-phone-nav-state-bright-tap); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  97.385620915% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+  100% { background-position: var(--r10-phone-nav-state-dim); background-size: var(--r10-phone-nav-size); animation-timing-function: steps(1, end); }
+}
+@keyframes r10-nav-phone-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}

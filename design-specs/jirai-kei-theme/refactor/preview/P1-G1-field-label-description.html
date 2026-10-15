@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1-G1 · Field label / description</title>
+<style>
+:root{color-scheme:dark;--ink:#f2ebff;--label:#e3d2f5;--muted:#b9add9;--pink:#ffb8e6;--violet:#6c5ce0;--panel:#201936;--rule:#725d91}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 18% 0%,#33234a 0,transparent 48%),#100c1b;color:var(--ink);font:14px/1.5 "WD Pixel CJK","Geist Variable",Geist,"Noto Sans SC",system-ui,sans-serif;display:grid;place-items:center;padding:36px 20px}
+main{width:min(980px,100%)}.eyebrow{color:var(--pink);font-size:11px;letter-spacing:.16em;text-transform:uppercase}.heading{margin:5px 0 26px;font-size:22px;font-weight:600;color:#f5eafa}.board{border:1px solid #655080;background:linear-gradient(135deg,#211a33,#181226);box-shadow:inset 2px 2px #ffffff18,inset -2px -2px #080610;padding:30px;display:grid;grid-template-columns:minmax(250px,1fr) minmax(290px,1fr);gap:42px;align-items:center}.field{display:grid;gap:9px}.field-label{font-size:14px;font-weight:500;color:var(--label);line-height:1.4}.required{color:var(--pink);padding-left:3px}.control{height:42px;border:1px solid var(--violet);border-radius:0;background:var(--panel);box-shadow:inset 1px 1px #16112a,inset -1px -1px #a294c8;color:var(--ink);padding:0 12px;display:flex;align-items:center}.placeholder{color:#9888b5}.description{margin:0;font-size:14px;font-weight:400;line-height:1.5;color:var(--muted)}
+.notes{display:grid;gap:14px}.note{position:relative;border-left:1px solid var(--rule);padding:3px 0 3px 18px}.note:before{content:"";position:absolute;left:-26px;top:13px;width:25px;border-top:1px solid var(--pink)}.note:after{content:"";position:absolute;left:-29px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--pink)}.note b{display:block;font-size:12px;color:#f7eaf7;font-weight:600}.note code{font:12px/1.6 ui-monospace,monospace;color:var(--pink)}.note small{display:block;color:#a99abb;font-size:11px;margin-top:2px}.legend{margin-top:16px;color:#9e90b3;font-size:11px}.legend span{color:var(--pink)}footer{margin-top:18px;color:#827690;font-size:11px}@media(max-width:700px){.board{grid-template-columns:1fr;gap:30px;padding:22px}.notes{padding-left:26px}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">JIRAI KEI · COMPONENT AUDIT / P1-G1</div>
+<h1 class="heading">Field · label / control / description</h1>
+<section class="board" aria-label="完整的竖排字段示意与样式标注">
+  <div class="field">
+    <label class="field-label" for="display-name">显示名称<span class="required" aria-label="必填">*</span></label>
+    <div class="control" id="display-name" role="textbox" aria-label="显示名称"><span class="placeholder">输入你的显示名称…</span></div>
+    <p class="description">此名称会显示在个人资料与相关列表中。最多 32 个字符。</p>
+  </div>
+  <aside class="notes" aria-label="实测样式对照标注">
+    <div class="note"><b>label · field-label</b><code>14px / 500 · #e3d2f5</code><small>普通 label 与 field-label 采样一致</small></div>
+    <div class="note"><b>control · 输入框</b><code>主题边框 #6c5ce0 · 底色 #201936</code><small>控件样式仅作字段结构参照</small></div>
+    <div class="note"><b>description · 辅助说明</b><code>14px / 400 · #b9add9</code><small>同字号、较轻字重与较暗颜色</small></div>
+  </aside>
+</section>
+<div class="legend"><span>*</span> 必填标记为语义示意；采样未记录星号规则。线标注显示 inventory computed 样式值。</div>
+<footer>颜色来自 refactor 样式层；字号/字重来自 inventory computed 值。间距为原型排版，不代表主题实测。</footer>
+</main></body></html>

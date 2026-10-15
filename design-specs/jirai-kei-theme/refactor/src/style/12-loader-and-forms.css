@@ -1,0 +1,369 @@
+/* SECTION loader-r9 */
+/* R9+ page-state loader: cropped 11-frame sprite, played by CSS only.
+   Geometry: sprite 616x72 CSS px (11 frames of 56x72),
+   rendered at 56x72 native CSS px (1x; Windows DPI scales the display).
+   Playback is CSS-owned so html.reduce-effects and prefers-reduced-motion can
+   freeze it on frame 1; an inlined GIF would autoplay regardless. */
+:root {
+  --jk-loader-sheet: var(--jk-asset-loader-pixel-sheet);
+  --jk-loader-frame-w: 56px;
+  --jk-loader-frame-h: 72px;
+  --jk-loader-frames: 11;
+  --jk-loader-duration: 1100ms;
+}
+
+
+
+/* Page-level LoadingState only: it sits under .vrcx-0-main-content and uses a
+   direct Spinner+label row. Dialog portals are outside main-content; table and
+   inline Empty variants carry min-h-24/min-h-0 and must retain their native UI.
+   Ordinary inline/button spinners also remain the original 16px glyph. */
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]){
+  flex-direction: column;
+  gap: 10px;
+}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+  display: block;
+  flex: none;
+  width: var(--jk-loader-frame-w);
+  height: var(--jk-loader-frame-h);
+  margin: 0;
+  padding: 0;
+  background-image: var(--jk-loader-sheet);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(var(--jk-loader-frame-w) * var(--jk-loader-frames)) var(--jk-loader-frame-h);
+  /* Native 1x: the source frame is rendered at 56x72 CSS px; pixelated keeps
+     discrete edges on 150% Windows scaling without changing its layout size. */
+  image-rendering: pixelated;
+  animation: jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames), end) infinite;
+  transform: none;
+  rotate: none;
+  /* Override lucide's size-4 / animate-spin and hide the ring glyph underneath. */
+  color: transparent;
+  /* jirai-icons.css paints every svg.lucide as currentColor through a pixel-glyph
+     mask (--px). On the loader that ring mask cut the dancer into fragments. */
+  background-color: transparent;
+  -webkit-mask: none;
+  mask: none;
+}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"] > * {
+  display: none;
+}
+/* A CSS-owned sprite can be frozen; an inlined GIF could not. Hold frame 1. */
+@media (prefers-reduced-motion: reduce){
+  .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+    animation: none !important;
+    background-position: 0 0 !important;
+  }
+}
+html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+  animation: none !important;
+  background-position: 0 0 !important;
+}
+
+/* SECTION form-controls-r9 */
+/* R9.5 shared native and Base UI form controls. Preserve control boxes/hit targets;
+   excluded surfaces already have deliberate control treatments. */
+:where(:is([data-slot="checkbox"],input[type="checkbox"])){
+  appearance:none;
+  -webkit-appearance:none;
+  position:relative;
+  width:14px;
+  height:14px;
+  min-width:14px;
+  min-height:14px;
+  flex:none;
+  border:1px solid #8c71b0;
+  border-radius:0;
+  background:#211a33;
+  color:#16112a;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+  accent-color:#ffb8e6;
+}
+:where(:is([data-slot="checkbox"],input[type="checkbox"]):is([data-checked],[aria-checked="true"],:checked)){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}
+:where([data-slot="checkbox"][data-checked])::after,:where(input[type="checkbox"]:checked)::after{
+  content:"";
+  position:absolute;
+  left:4px;top:2px;width:4px;height:7px;
+  border:solid #16112a;border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+:where([data-slot="checkbox"] > [data-slot="checkbox-indicator"]){display:none}
+/* Radio: Base UI Radio.Root is a span[role=radio] with a Radio.Indicator child (DataDirMigrationDialog.tsx:222); a native
+   input[type=radio] gets the same square pixel box. Sizes are not set for [role=radio] (the app's size-4 / size-1.5 stay). */
+:where([role="radio"],input[type="radio"]){
+  appearance:none;
+  -webkit-appearance:none;
+  border:1px solid #8c71b0;
+  border-radius:0;
+  background-color:#211a33;
+  color:#16112a;
+  box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a;
+  accent-color:#ffb8e6;
+}
+:where(input[type="radio"]){width:15px;height:15px}
+:where(:is([role="radio"],input[type="radio"]):is([data-checked],[aria-checked="true"],:checked)){
+  border-color:#6c5ce0;
+  background-color:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d;
+}
+:where([role="radio"] > span){border-radius:0;background-color:#16112a}
+:where(input[type="radio"]:checked){background-image:linear-gradient(#16112a,#16112a);background-size:6px 6px;background-position:center;background-repeat:no-repeat}
+:where(input[type="range"]:not(.entity-dialog *)){
+  appearance:none;-webkit-appearance:none;
+  height:18px;
+  margin:0;
+  background:transparent;
+  accent-color:#ffb8e6;
+  cursor:pointer;
+}
+:where(input[type="range"]:not(.entity-dialog *))::-webkit-slider-runnable-track{
+  height:6px;border:1px solid #6c5ce0;border-radius:0;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+  box-shadow:inset 1px 1px #16112a;
+}
+:where(input[type="range"]:not(.entity-dialog *))::-webkit-slider-thumb{
+  appearance:none;-webkit-appearance:none;
+  width:12px;height:12px;margin-top:-3px;
+  border:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+}
+:where(input[type="range"])::-moz-range-track{
+  height:4px;border:1px solid #6c5ce0;border-radius:0;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px);
+}
+:where(input[type="range"])::-moz-range-thumb{
+  width:10px;height:10px;border:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c;
+}
+/* Base UI sliders expose a live Indicator, so its pink fill follows the actual value. */
+:where([data-slot="slider-track"]){
+  height:6px!important;border:1px solid #6c5ce0;border-radius:0!important;
+  background:repeating-linear-gradient(90deg,#332650 0 3px,#211a33 3px 5px)!important;
+  box-shadow:inset 1px 1px #16112a;
+}
+:where([data-slot="slider-range"]){
+  background:repeating-linear-gradient(90deg,#ffb8e6 0 3px,#f37fc4 3px 5px)!important;
+}
+:where([data-slot="slider-thumb"]){
+  width:12px!important;height:12px!important;border:1px solid #6c5ce0!important;border-radius:0!important;
+  background:#ffb8e6!important;
+  box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #a44a8c!important;
+}
+/* Shared keyboard focus treatment for the four pixel-native control families.
+   Selects/text fields keep their 1px-offset variant below. */
+:where(
+  :is([data-slot="checkbox"],input[type="checkbox"]):focus-visible,
+  :is([role="radio"],input[type="radio"]):focus-visible,
+  input[type="range"]:not(.entity-dialog *):focus-visible,
+  [data-slot="slider"]:focus-visible [data-slot="slider-thumb"]
+){
+  outline:2px solid #ff7fcf;
+  outline-offset:2px;
+}
+
+:where(select,[data-slot="select-trigger"],[data-slot="combobox-trigger"]){
+  border-radius:0!important;
+  border-color:var(--jk-field-edge)!important;
+  background-color:#211a33!important;
+  color:#f2ebff!important;
+  box-shadow:var(--jk-field-inset)!important;
+}
+:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]) > svg:is(.lucide-chevron-down,.lucide-chevrons-up-down)){
+  width:12px;height:12px;
+}
+/* The two-person chart uses native select elements rather than the shared Select primitive. */
+:where(select){
+  appearance:none;-webkit-appearance:none;
+  background-image:var(--wd-native-chevron);
+  background-repeat:no-repeat;background-position:right 8px center;background-size:12px 12px;
+  padding-right:28px;
+}
+:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):focus-visible){
+  outline:2px solid #ff7fcf;outline-offset:1px;
+}
+:where(select:focus-visible){outline:2px solid #ff7fcf;outline-offset:1px}
+/* Ordinary inline spinner: existing pixel mask glyph, small and stepped (not the page loader). */
+:where([data-slot="spinner"]:is(.size-4,.size-3\.5)){
+  animation:r5-spinner-step 1s steps(8,end) infinite;
+  transform-origin:center;
+}
+@media(prefers-reduced-motion:reduce){
+  :where([data-slot="spinner"]){animation:none!important}
+}
+
+/* SECTION dialogs-r9 */
+/* R9.5 generic second-level dialogs: Win98/Windose chrome for ordinary dialogs only.
+   Paint/layout-safe: do not touch Popup/Positioner/Backdrop placement or dimensions.
+   Entity details (.entity-dialog/.owner-dialog), login surfaces, nested entity portals, and sr-only-header command/quick-search popups stay out. */
+:root {
+  --r9-dialog-face: #211a33;
+  --r9-dialog-ink: #16112a;
+  --r9-dialog-pink: #f2c6e8;
+  --r9-dialog-pink-edge: #d97fc6;
+  --r9-dialog-indigo: #3a22c8;
+  --r9-dialog-frame: #6c5ce0;
+  --r9-dialog-inner: #f2ebff;
+  --r9-dialog-mint: #8ee6dd;
+  --r9-dialog-lace: var(--r8-lace-tile);
+}
+
+/* Restrict the pass to real Base UI popup slots. Login uses card surfaces rather
+   than DialogContent; an explicitly nested login fixture is excluded as a guard. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only)) {
+  --r9-dialog-inset: 1rem;
+  color: var(--r9-dialog-inner);
+  background-color: var(--r9-dialog-face);
+  background-image:
+    linear-gradient(#ff7fcf, #ff7fcf),
+    linear-gradient(var(--r9-dialog-mint), var(--r9-dialog-mint));
+  background-repeat: no-repeat;
+  background-size: 18px 5px, 100% 5px;
+  background-position: bottom left, bottom center;
+  border: 1px solid var(--r9-dialog-frame);
+  border-radius: 0 !important;
+  box-shadow:
+    inset 0 0 0 1px var(--r9-dialog-inner),
+    4px 4px 0 #100b1e;
+}
+
+/* Preserve dialogs whose existing call site deliberately uses a flush frame. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-0"] {
+  --r9-dialog-inset: 0px;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-2"] {
+  --r9-dialog-inset: .5rem;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-3"] {
+  --r9-dialog-inset: .75rem;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[class~="p-5"] {
+  --r9-dialog-inset: 1.25rem;
+}
+
+/* The title itself is the title-bar row: it remains in flow (including wrapping),
+   while the existing description/content remain in the dark body below it. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .5rem;
+  margin-block-start: calc(-1 * var(--r9-dialog-inset, 1rem));
+  margin-inline: calc(-1 * var(--r9-dialog-inset, 1rem));
+  padding-inline: var(--r9-dialog-inset, 1rem);
+  min-width: 0;
+}
+
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]) > :is([data-slot="dialog-title"], [data-slot="alert-dialog-title"]) {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 8px;
+  margin-inline: calc(-1 * var(--r9-dialog-inset, 1rem));
+  margin-block: 0;
+  padding-block: 5px;
+  padding-inline: calc(var(--r9-dialog-inset, 1rem) + 9px) calc(var(--r9-dialog-inset, 1rem) + 48px);
+  border-bottom: 1px solid var(--r9-dialog-frame);
+  border-radius: 0;
+  background: var(--r9-dialog-pink);
+  color: var(--r9-dialog-ink);
+  font-family: var(--wd-body-font-family, system-ui, sans-serif);
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]) > :is([data-slot="dialog-title"], [data-slot="alert-dialog-title"])::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  background: var(--r9-dialog-indigo);
+  box-shadow: 1px 1px 0 #b86ba4;
+}
+
+/* The component's real DialogClose remains keyboard-operable and gets a Win95 face. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > [data-slot="dialog-close"] {
+  position: absolute !important;
+  top: 4px !important;
+  right: 4px !important;
+  z-index: 2;
+  display: inline-flex;
+  width: 22px !important;
+  min-width: 22px;
+  height: 22px !important;
+  min-height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: 1px solid var(--r9-dialog-ink) !important;
+  border-radius: 0 !important;
+  background: #f8d8ed !important;
+  color: var(--r9-dialog-ink) !important;
+  box-shadow: inset 1px 1px 0 #fff1f8, inset -1px -1px 0 #b86ba4;
+  opacity: 1;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > [data-slot="dialog-close"]:hover:not(:disabled) {
+  background: var(--r9-dialog-ink) !important;
+  color: var(--r9-dialog-pink) !important;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > [data-slot="dialog-close"]:focus-visible {
+  outline: 2px solid var(--r9-dialog-mint);
+  outline-offset: 1px;
+}
+
+/* Reuse --r8-lace-tile for a pixel-lace divider without adding footer height. */
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-footer"], [data-slot="alert-dialog-footer"]) {
+  position: relative;
+  border-top-color: transparent;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+:is([data-slot="dialog-content"], [data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog):has(> :is([data-slot="dialog-header"], [data-slot="alert-dialog-header"]):not(.sr-only))
+  > :is([data-slot="dialog-footer"], [data-slot="alert-dialog-footer"])::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  left: 0;
+  height: 8px;
+  background-color: transparent;
+  background-image: var(--r9-dialog-lace);
+  background-position: left center;
+  background-repeat: repeat-x;
+  background-size: 20px 8px;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+/* motion-r5.css already owns the single dialog step animation; do not add a second.
+   The effects preference and reduced-motion media query both force a static frame. */
+html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[data-open]:not(.entity-dialog):not(.owner-dialog) {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is([data-slot="dialog-content"], [data-slot="alert-dialog-content"])[data-open]:not(.entity-dialog):not(.owner-dialog) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P1-G1 Select Trigger · 样式对照</title>
+<style>
+:root{color-scheme:dark;--ink:#f2ebff;--face:#211a33;--edge:#69557c #fdf4ff #fdf4ff #69557c;--inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;--pink:#ff7fcf;--purple:#6c5ce0;--raised:#201936}
+*{box-sizing:border-box}body{margin:0;padding:34px;background:#100b1e;color:var(--ink);font:14px/1.6 system-ui,"Noto Sans SC",sans-serif}
+main{max-width:1050px;margin:auto}.eyebrow{color:#dba9d8;letter-spacing:.12em;text-transform:uppercase;font-size:11px}h1{font-size:27px;margin:4px 0 6px}p{color:#b9add9;margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{padding:18px;border:1px solid #58446d;background:#191329;box-shadow:inset 1px 1px #30213f,4px 4px #0b0718}.card h2{font-size:15px;margin:0 0 5px}.meta{font-size:12px;color:#a99bbf;min-height:38px;margin-bottom:20px}.row{display:flex;align-items:center;gap:12px;min-height:44px}.trigger{appearance:none;color:var(--ink);background:var(--face);border:1px solid;border-color:var(--edge);border-radius:0;padding:8px 10px;min-height:34px;min-width:154px;display:inline-flex;justify-content:space-between;align-items:center;gap:14px;box-shadow:var(--inset);font:inherit;text-align:left}.chev{font-size:12px;color:#d6b8ef}.focused{outline:2px solid var(--pink);outline-offset:1px}.current{border-color:var(--purple);background:var(--raised)}.open{background:var(--face);border-color:var(--edge);box-shadow:inset 1px 1px #a294c8,inset -1px -1px #16112a}.tiny{font-size:11px;color:#9384a8;margin-top:17px}.callout{margin-top:24px;padding:14px 16px;border-left:3px solid var(--pink);background:#191329;color:#d5c6e8}.callout strong{color:#ffe4f5}code{color:#f3c7eb;background:#241b36;padding:1px 4px;border-radius:2px}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">Jirai Kei · Component audit · G1</div>
+<h1>Select Trigger 样式对照</h1>
+<p>Inventory：3 组记录 / 14 次观察 / 1 个共同 fingerprint。下列均为可静态打开的 CSS 示意，方便辨认各状态职责。</p>
+<section class="grid">
+<article class="card"><h2>建议基线 · 默认</h2><div class="meta">inventory 四边斜面：暗紫边 / 亮色边交替；低亮度凹面阴影。</div><div class="row"><button class="trigger">选择项目 <span class="chev">⌄</span></button></div><div class="tiny">#211a33 · --jk-field-edge · --jk-field-inset</div></article>
+<article class="card"><h2>键盘焦点 · :focus-visible</h2><div class="meta">基线保留；粉色 outline 位于控件外，不改变其底色。</div><div class="row"><button class="trigger focused">选择项目 <span class="chev">⌄</span></button></div><div class="tiny">outline: 2px solid #ff7fcf; offset: 1px</div></article>
+<article class="card"><h2>当前 artifact · 非聚焦覆盖</h2><div class="meta">现有无状态限定规则的结果；默认时也呈紫边与更亮暗底。</div><div class="row"><button class="trigger current">选择项目 <span class="chev">⌄</span></button></div><div class="tiny">border #6c5ce0 · background #201936</div></article>
+<article class="card"><h2>展开语义 · aria-expanded=true</h2><div class="meta">建议的可选展开态示意；Inventory/CSS 当前没有专属展开皮肤证据。</div><div class="row"><button class="trigger open" aria-expanded="true">选择项目 <span class="chev">⌃</span></button></div><div class="tiny">展开态可先复用基线；不要用默认全局高亮代替状态表达。</div></article>
+</section>
+<div class="callout"><strong>收敛建议：</strong>一个基础皮肤 + 独立键盘焦点 ring。把紫色覆盖限定为明确的 <code>:focus-visible</code> 或 <code>[aria-expanded="true"]</code> 状态；不要让它匹配所有未聚焦 trigger。</div>
+</main></body></html>

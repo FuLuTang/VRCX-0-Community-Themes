@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P1-G4 Calendar · Jirai Kei pixel skin</title>
+<style>
+:root{color-scheme:dark;--wd-window:#201936;--wd-text:#f2ebff;--wd-frame:#6c5ce0;--wd-square:#fdc8eb;--wd-select:#493d70;--wd-pink:#f3a2d6;--wd-faint:#9487ac;--wd-raised:#302646;--wd-muted:#c2b5d8;--wd-shadow:#100b1e}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px;background:radial-gradient(ellipse at 50% 35%,#302449 0,#191326 62%,#100c19 100%);color:var(--wd-text);font:14px/1.4 "Courier New",monospace}
+.shell{width:min(100%,760px);padding:18px;background:#1b152c;border:1px solid #a294c8;box-shadow:inset 1px 1px #e3d2f5,inset -1px -1px #16112a,5px 5px 0 #100b1e}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#342849;border:1px solid #6c5ce0;margin-bottom:16px;font-weight:bold;letter-spacing:.04em}
+.dots{display:flex;gap:5px}.dots i{width:9px;height:9px;background:#f3a2d6;border:1px solid #fce8f6;display:block}
+.layout{display:grid;grid-template-columns:minmax(300px,1fr) 220px;gap:18px;align-items:start}
+.calendar{padding:14px;background:var(--wd-window);color:var(--wd-text);box-shadow:inset 0 0 0 1px var(--wd-frame)}
+.caption{display:flex;justify-content:space-between;align-items:center;margin:0 0 12px;font-size:16px;font-weight:bold}
+.nav{width:28px;height:28px;border:1px solid #a294c8;background:#302646;color:#f2ebff;font:inherit;cursor:default;box-shadow:inset 1px 1px #e3d2f5,inset -1px -1px #16112a}
+table{width:100%;border-collapse:collapse;table-layout:fixed}th{height:30px;color:#c2b5d8;font-size:11px;font-weight:normal;border-bottom:1px dotted #70518f}td{text-align:center;height:42px;padding:2px}
+.day{width:36px;height:36px;margin:auto;display:grid;place-items:center;border:1px solid transparent;border-radius:0;color:var(--wd-text);font:inherit;background:transparent}
+.outside{color:#786d8f}.selected,.range-start,.range-end{background:var(--wd-square);color:#16112a;border-color:#fff0fb;font-weight:bold}.range-mid{background:var(--wd-select);color:var(--wd-text)}
+.today{outline:1px dashed var(--wd-pink);outline-offset:-2px}.disabled{color:var(--wd-faint);opacity:.55;text-decoration:line-through}
+.focus{outline:2px dashed var(--wd-pink);outline-offset:-2px}
+.legend{padding:12px;background:#241b3c;border:1px solid #51436d}.legend h2{margin:0 0 10px;font-size:13px;color:#f3a2d6}.legend ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}.legend li{display:flex;align-items:center;gap:9px;color:#c2b5d8;font-size:12px}.swatch{width:20px;height:20px;display:grid;place-items:center;border:1px solid #6c5ce0;font-size:10px;color:#f2ebff}.swatch.pink{background:var(--wd-square);color:#16112a}.swatch.range{background:var(--wd-select)}.swatch.today{outline:1px dashed var(--wd-pink);outline-offset:-3px}.swatch.disabled{opacity:.55}.swatch.focus{outline:2px dashed var(--wd-pink);outline-offset:-3px}
+.note{margin:14px 2px 0;color:#a99abf;font-size:11px}
+@media(max-width:620px){.layout{grid-template-columns:1fr}.legend ul{grid-template-columns:1fr 1fr}.shell{padding:12px}body{padding:14px}.day{width:34px;height:34px}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <header class="topbar"><span>DATE RANGE · INSTANCE ACTIVITY</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></header>
+  <div class="layout">
+    <section class="calendar" aria-label="June 2025 calendar">
+      <h1 class="caption"><button class="nav" aria-label="Previous month">◀</button><span>2025 年 6 月</span><button class="nav" aria-label="Next month">▶</button></h1>
+      <table aria-label="June 2025 dates">
+        <thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead>
+        <tbody>
+          <tr><td><span class="day outside">1</span></td><td><span class="day">2</span></td><td><span class="day">3</span></td><td><span class="day">4</span></td><td><span class="day">5</span></td><td><span class="day">6</span></td><td><span class="day">7</span></td></tr>
+          <tr><td><span class="day range-start">8</span></td><td><span class="day range-mid">9</span></td><td><span class="day range-mid">10</span></td><td><span class="day range-end">11</span></td><td><span class="day">12</span></td><td><span class="day">13</span></td><td><span class="day">14</span></td></tr>
+          <tr><td><span class="day today">15</span></td><td><span class="day">16</span></td><td><span class="day">17</span></td><td><span class="day selected">18</span></td><td><span class="day">19</span></td><td><span class="day">20</span></td><td><span class="day">21</span></td></tr>
+          <tr><td><span class="day disabled">22</span></td><td><span class="day">23</span></td><td><span class="day">24</span></td><td><span class="day">25</span></td><td><span class="day">26</span></td><td><span class="day">27</span></td><td><span class="day">28</span></td></tr>
+          <tr><td><span class="day">29</span></td><td><span class="day">30</span></td><td><span class="day outside">1</span></td><td><span class="day outside">2</span></td><td><span class="day outside">3</span></td><td><span class="day outside">4</span></td><td><span class="day outside">5</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <aside class="legend"><h2>状态图例</h2><ul>
+      <li><span class="swatch">08</span>普通日期</li>
+      <li><span class="swatch pink">18</span>选中 / 范围端点</li>
+      <li><span class="swatch range">09</span>范围中段</li>
+      <li><span class="swatch today">15</span>今日（虚线框）</li>
+      <li><span class="swatch disabled">22</span>禁用日期</li>
+      <li><span class="swatch focus">23</span>键盘焦点</li>
+    </ul></aside>
+  </div>
+  <p class="note">静态结构示意 · 单月视图 · 状态互斥/叠加遵循实际交互规则；Inventory 仅记录到一个 popover 容器样本。</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jirai Kei · Combobox Chips B1 / B3</title>
+<style>
+:root{color-scheme:dark;--ink:#f2ebff;--muted:#b9add9;--pink:#ffb8e6;--purple:#8c71b0;--deep:#16112a;--field:#201936}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:48px 24px;background:radial-gradient(ellipse at 50% -10%,#392a52 0,#201936 40%,#16112a 100%);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,sans-serif}.page{max-width:1000px;margin:auto}h1{font-size:clamp(25px,4vw,38px);margin:0 0 8px;letter-spacing:.02em}.intro{color:#c6b9dc;margin:0 0 32px}.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.panel{padding:24px;background:rgb(22 17 42/.72);border:1px solid #574776;box-shadow:inset 1px 1px rgb(253 244 255/.08),inset -1px -1px #100c1f}.panel h2{margin:0 0 5px;font-size:18px}.panel .sub{margin:0 0 22px;color:var(--muted);font-size:13px}.tag{display:inline-block;margin-left:8px;padding:2px 7px;border:1px solid #8c71b0;color:#d6c8ee;font:11px monospace;vertical-align:2px}.search{display:flex;align-items:center;flex-wrap:wrap;gap:6px;min-height:54px;padding:8px 10px;color:#e3d2f5}.b1{background:var(--field);border:1px solid #6c5ce0;border-radius:0;box-shadow:inset 1px 1px #16112a,inset -1px -1px #a294c8}.b3{background:#2a2147;border:2px solid;border-color:#69557c #fdf4ff #fdf4ff #69557c;border-radius:0;box-shadow:inset 2px 2px #16112a,inset -2px -2px #a294c8}.chip{display:inline-flex;align-items:center;gap:7px;min-height:30px;padding:3px 5px 3px 7px;border:1px solid #8c71b0;border-radius:0;background:#332650;color:var(--ink);box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;font-size:13px;line-height:1;white-space:nowrap}.avatar{width:20px;height:20px;display:grid;place-items:center;overflow:hidden;border-radius:0;clip-path:polygon(0 0,100% 0,100% 80%,80% 100%,0 100%);font-size:10px;font-weight:700;color:#1b1530;background:linear-gradient(135deg,#ffd5ef,#a994d2)}.avatar.two{background:linear-gradient(135deg,#d8edff,#738ec6)}.avatar.three{background:linear-gradient(135deg,#ffe0bd,#cc829e)}.remove{width:22px;height:22px;display:grid;place-items:center;padding:0;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#ffb8e6;font-size:17px;line-height:1;cursor:pointer}.remove:hover{background:#392a52}.remove:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}.entry{flex:1 1 86px;min-width:75px;min-height:20px;padding:0;border:0;outline:0;background:transparent;box-shadow:none;color:var(--ink);font-family:inherit;font-size:14px}.entry::placeholder{color:var(--muted);opacity:1}.caption{margin:14px 0 0;color:#b9add9;font-size:12px}.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px;color:#c6b9dc;font-size:13px}.swatch{display:inline-block;width:13px;height:13px;margin-right:7px;vertical-align:-2px;background:#332650;border:1px solid #8c71b0}.note{margin-top:24px;padding:14px 16px;border-left:3px solid #ff7fcf;background:rgb(255 184 230/.07);color:#e6d9f2;font-size:13px}.note strong{color:var(--pink)}@media(max-width:720px){body{padding:28px 15px}.compare{grid-template-columns:1fr}.panel{padding:19px}}
+</style>
+</head>
+<body>
+<main class="page">
+<h1>多用户搜索 · Combobox Chips</h1>
+<p class="intro">相同的 chips 内容，只替换外层输入组边框：左为当前 B1 凹陷，右为建议的 B3 四边斜面。</p>
+<div class="compare">
+<section class="panel"><h2>当前 B1 凹陷<span class="tag">CURRENT</span></h2><p class="sub">#201936 底色 · 1px 紫蓝框 · inset 凹陷阴影</p>
+<div class="search b1" role="group" aria-label="当前 B1 多用户搜索">
+<span class="chip"><span class="avatar">M</span>Mika<button class="remove" aria-label="移除 Mika">×</button></span>
+<span class="chip"><span class="avatar two">R</span>Rin<button class="remove" aria-label="移除 Rin">×</button></span>
+<span class="chip"><span class="avatar three">Y</span>Yuki<button class="remove" aria-label="移除 Yuki">×</button></span>
+<input class="entry" aria-label="搜索更多用户" placeholder="添加用户…">
+</div><p class="caption">外框由 input-group 绘制；chips 容器与输入位透明无框，不重复画框。</p></section>
+<section class="panel"><h2>建议 B3 斜面<span class="tag">PROPOSED</span></h2><p class="sub">#2a2147 底色 · 2px 四边明暗斜面 · 双层 inset</p>
+<div class="search b3" role="group" aria-label="建议 B3 多用户搜索">
+<span class="chip"><span class="avatar">M</span>Mika<button class="remove" aria-label="移除 Mika">×</button></span>
+<span class="chip"><span class="avatar two">R</span>Rin<button class="remove" aria-label="移除 Rin">×</button></span>
+<span class="chip"><span class="avatar three">Y</span>Yuki<button class="remove" aria-label="移除 Yuki">×</button></span>
+<input class="entry" aria-label="搜索更多用户" placeholder="添加用户…">
+</div><p class="caption">B3 只替换唯一的父级外框；内部 chips 与输入仍保持无框。</p></section>
+</div>
+<div class="legend"><span><i class="swatch"></i>Chip：#332650 / #8c71b0 方角边框</span><span>头像与 × 可见；输入位可点击并键入</span></div>
+<div class="note"><strong>重构建议：</strong>升级外框到 B3，不要再给 combobox-chips 容器加一层斜面框，否则会形成双框。当前 CSS 仍是 B1；此页右侧只是对照稿。</div>
+</main>
+</body>
+</html>

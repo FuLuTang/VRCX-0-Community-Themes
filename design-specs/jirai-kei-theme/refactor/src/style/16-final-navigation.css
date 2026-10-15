@@ -1,0 +1,264 @@
+/* SECTION status-icons-r10 */
+/* R10 toast sprites only. Phone layer deferred until task-59 assets; static CSS, no SVG data. */
+:root {
+  --r10-toast-success-face-png: var(--jk-asset-toast-face);
+  --r10-toast-error-face-png: var(--jk-asset-toast-face-2);
+}
+:root {
+  --r10-toast-success-ring-png: var(--jk-asset-toast-face-3);
+  --r10-toast-error-ring-png: var(--jk-asset-toast-face-4);
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"],
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"] {
+  box-sizing:content-box;
+  /* NOTHING here may set a height: the app measures this box into --toast-height, so declaring
+     one inflates the toast and then traps the sticker inside it. Keep the app's natural height
+     (one line box) and let the sticker overhang the toast's edges.
+     Width opens to 56px so the sticker does not run under the message text. */
+  /* flex, not block: an inline svg inside a block box drags in the line-box descender and
+     inflates this box to ~26px, which then pushes the toast taller than the 48px sticker.
+     As a flex item the box is exactly the svg height (1lh = 20px), the toast lands at 46px,
+     and the sticker covers its top and bottom edges. */
+  display:flex; flex:0 0 75.6px; width:75.6px; min-width:75.6px;
+  position:relative;
+  background-image:none;
+}
+/* Sticker layer. Absolutely positioned, so it contributes ZERO to the measured height: the
+   toast keeps its original box while the 2x sprite covers its top and bottom borders. */
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::before,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::before {
+  content:""; position:absolute; left:50%; top:50%;
+  width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  background-repeat:no-repeat; background-position:center center;
+  background-size:75.6px 64.8px; image-rendering:pixelated; pointer-events:none;
+}
+/* The app clips Toast.Content with overflow-hidden, which is what kept the sticker from ever
+   covering the toast border. Nothing inside the toast needs that clip (the shell has the same
+   rounded corner), so release it and let the sticker cover the top and bottom edges. */
+[data-slot="toast-viewport"] [data-slot="toast-content"] {
+  overflow:visible;
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::before,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::before {
+  background-size:75.6px 64.8px; image-rendering:pixelated;
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::before { background-image:var(--r10-toast-success-ring-png); }
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::before { background-image:var(--r10-toast-error-ring-png); }
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::after,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::after {
+  content:""; position:absolute; left:50%; top:50%; width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  background-position:center; background-repeat:no-repeat; background-size:75.6px 64.8px; image-rendering:pixelated; pointer-events:none;
+}
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"]::after { background-image:var(--r10-toast-success-face-png); }
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"]::after { background-image:var(--r10-toast-error-face-png); }
+[data-slot="toast-viewport"] [data-type="success"] [data-slot="toast-icon"] > svg,
+[data-slot="toast-viewport"] [data-type="error"] [data-slot="toast-icon"] > svg { opacity:0 !important; }
+
+/* Info and warning share the original shocked-expression logical grid.
+   The generated face and colored rings are padded 28x24 one-times PNG layers. */
+:root {
+  --r10-toast-shock-png: var(--jk-asset-toast-shock);
+  --r10-toast-shock-ring-mask: var(--jk-asset-toast-shock-2);
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"],
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"] {
+  box-sizing:content-box;
+  display:flex; flex:0 0 75.6px; width:75.6px; min-width:75.6px;
+  position:relative; background-image:none;
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"]::before,
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"]::before {
+  content:""; position:absolute; left:50%; top:50%;
+  width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  
+  
+  
+  
+  pointer-events:none;
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"]::after,
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"]::after {
+  content:""; position:absolute; left:50%; top:50%;
+  width:75.6px; height:64.8px; margin:-32.4px 0 0 -37.8px;
+  /* The face includes the same two-cell padding as the 28x24 ring. */
+  background:var(--r10-toast-shock-png) center / 75.6px 64.8px no-repeat;
+  image-rendering:pixelated; pointer-events:none;
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"] > svg,
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"] > svg { opacity:0 !important; }
+
+/* Keep the face pixel-crisp; render its separate ring with four-sample coverage only on
+   the outside edge. The inner moat stays a hard transparent logical cell. */
+:root {
+  --r10-toast-info-ring-png: var(--jk-asset-toast-face-5);
+  --r10-toast-warning-ring-png: var(--jk-asset-toast-face-6);
+}
+[data-slot="toast-viewport"] [data-type="info"] [data-slot="toast-icon"]::before {
+  -webkit-mask:none; mask:none;
+  background-color:transparent;
+  background-image:var(--r10-toast-info-ring-png);
+  background-position:center; background-repeat:no-repeat; background-size:75.6px 64.8px;
+  image-rendering:pixelated;
+}
+[data-slot="toast-viewport"] [data-type="warning"] [data-slot="toast-icon"]::before {
+  -webkit-mask:none; mask:none;
+  background-color:transparent;
+  background-image:var(--r10-toast-warning-ring-png);
+  background-position:center; background-repeat:no-repeat; background-size:75.6px 64.8px;
+  image-rendering:pixelated;
+}
+
+/* SECTION nav-phone-r10 */
+/* r10: SOCIAL-panel phone loop, relocated to the navigation title bar (right-aligned).
+   Six independent layers (char-back / two glows / two gaze overlays / phone-front) on ONE stepped
+   153-frame animation (180ms/frame, 27.54s); a separate slow transform float moves the whole stack.
+   Geometry/offsets come from original-assets/r10-phone-layers/manifest.json.
+   Layers paint front-to-back: phone-front > gaze patches > glow > char-back.
+   Leaving the SOCIAL ::after untouched restores its original cross+cat rhythm (r96-social-cat). */
+:root {
+  --r10-phone-gaze-mid-image: var(--jk-asset-phone-pixel-art);
+  --r10-phone-gaze-forward-image: var(--jk-asset-phone-pixel-art-2);
+  --r10-phone-char-back-image: var(--jk-asset-phone-pixel-art-3);
+  --r10-phone-front-image: var(--jk-asset-phone-pixel-art-4);
+  --r10-phone-glow-dim-image: var(--jk-asset-phone-pixel-art-5);
+  --r10-phone-glow-bright-image: var(--jk-asset-phone-pixel-art-6);
+  /* Trial scale 2.7x relative to the 1x logical sprite; fractional raster cells are expected. Glow remapped to perceptual light levels; eye highlight capped at 90%. */
+  --r10-phone-canvas-width: 64.8px;
+  --r10-phone-canvas-height: 59.4px;
+  --r10-phone-char-back-size: 54px 54px;
+  --r10-phone-char-back-position: 0px 0px;
+  --r10-phone-front-size: 18.9px 32.4px;
+  --r10-phone-front-rest: 45.9px 21.6px;
+  --r10-phone-front-tap: 48.6px 21.6px;
+  --r10-phone-glow-dim-size: 37.8px 35.1px;
+  --r10-phone-glow-dim-visible: 8.1px 18.9px;
+  --r10-phone-glow-bright-size: 37.8px 35.1px;
+  --r10-phone-glow-bright-visible: 8.1px 18.9px;
+  --r10-phone-glow-off: -37.8px -35.1px;
+  /* Both gaze overlays share an 8x4 eye canvas at logical (7,11), matching the rest-eye ASCII alignment. */
+  --r10-phone-gaze-mid-size: 21.6px 10.8px;
+  --r10-phone-gaze-mid-on: 18.9px 29.7px;
+  --r10-phone-gaze-mid-off: -21.6px -10.8px;
+  --r10-phone-gaze-forward-size: 21.6px 10.8px;
+  --r10-phone-gaze-forward-on: 18.9px 29.7px;
+  --r10-phone-gaze-forward-off: -21.6px -10.8px;
+  --r10-phone-nav-size: var(--r10-phone-front-size), var(--r10-phone-gaze-forward-size), var(--r10-phone-gaze-mid-size), var(--r10-phone-glow-dim-size), var(--r10-phone-glow-bright-size), var(--r10-phone-char-back-size);
+  --r10-phone-nav-state-stop: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-tap: 48.6px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-dim: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), 8.1px 18.9px, var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-bright: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+  --r10-phone-nav-state-up: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-on), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-look: 45.9px 21.6px, var(--r10-phone-gaze-forward-on), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-look-bright: 45.9px 21.6px, var(--r10-phone-gaze-forward-on), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+  --r10-phone-nav-state-dim-tap: 48.6px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), 8.1px 18.9px, var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-look-dim: 45.9px 21.6px, var(--r10-phone-gaze-forward-on), var(--r10-phone-gaze-mid-off), 8.1px 18.9px, var(--r10-phone-glow-off), 0px 0px;
+  --r10-phone-nav-state-up-bright: 45.9px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-on), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+  --r10-phone-nav-state-bright-tap: 48.6px 21.6px, var(--r10-phone-gaze-forward-off), var(--r10-phone-gaze-mid-off), var(--r10-phone-glow-off), 8.1px 18.9px, 0px 0px;
+}
+
+/* The navigation title bar is a ::before on sidebar-inner; ::after is free. sidebar-inner is a
+   flex column with no positioning context, so establish one and pin the canvas into the 32px bar. */
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"] { position: relative; }
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after {
+  content: "";
+  /* sidebar-inner also carries .vrcx-0-sidebar-surface, whose ::after is display:none
+     (navigation-r7 retires the R5 pendant there). Re-enable explicitly. */
+  display: block;
+  position: absolute;
+  /* Anchored to the top of the 32px title bar: the window tab bar above wins the stacking
+     contest, so no upward overhang. The 44px canvas now hangs 12px below the bar instead. */
+  top: 0;
+  right: 12px;
+  width: var(--r10-phone-canvas-width);
+  height: var(--r10-phone-canvas-height);
+  background-image: var(--r10-phone-front-image), var(--r10-phone-gaze-forward-image), var(--r10-phone-gaze-mid-image), var(--r10-phone-glow-dim-image), var(--r10-phone-glow-bright-image), var(--r10-phone-char-back-image);
+  background-size: var(--r10-phone-nav-size);
+  background-position: var(--r10-phone-nav-state-stop);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+  animation: r10-nav-phone-loop 27.54s steps(153, end) infinite,
+             r10-nav-phone-float 8.6s ease-in-out -2.3s infinite;
+}
+
+
+
+/* Slow, phase-offset whole-stack drift; background-position/size remain on the 153-step timeline. */
+
+
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
+}
+html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
+
+/* SECTION portal-button-roles-b073-b100 */
+/* Real responsibilities, not B IDs: portals are ordinary surfaces too. Entity/owner
+   roots retain their paint; nested independent portals use their own root. Render
+   props may replace data-slot (tooltip/menu trigger), so route by button+variant.
+   Width/height/padding, reveal opacity, selected borders/rings and joined borders
+   remain source-owned. Native CSS nesting keeps this patch within the 1MiB cap. */
+/* SECTION entity-button-roles-b054-b072: explicit action roles share portal states. */
+:is(button[data-ui-role="action"],:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]) button[data-variant]:where(:not(.entity-dialog *,.owner-dialog *,[data-ui-role="tile"],[data-ui-role="color-swatch"],.rounded-object,.rounded-full,[data-ui-role="text-link"],[data-ui-role="disclosure"],[data-slot="dialog-close"],[data-slot="combobox-chip-remove"],[data-slot="dialog-header"] *,[data-slot="context-menu-content"] *,[data-slot="dropdown-menu-content"] *,[data-slot="context-menu-sub-content"] *,[data-slot="dropdown-menu-sub-content"] *,[data-ui-role="icon-grid"] *,[data-ui-role="choice-list"] *,[data-slot="collapsible-trigger"],.h-auto.justify-start,.h-auto:has(img),.absolute.inset-0.h-full.w-full))){
+    border-radius:0;appearance:none;box-shadow:var(--jk-button-bevel);
+    --jk-portal-open-face:var(--jk-button-hover-face);--jk-portal-open-text:var(--jk-button-hover-text);
+    transition:background-color 80ms steps(2,end),color 80ms steps(2,end),box-shadow 80ms steps(2,end),transform 80ms steps(2,end);
+    &[data-variant="default"]{border-color:var(--jk-button-edge);background:var(--jk-button-default-face);color:var(--jk-button-default-text);--jk-portal-open-face:var(--jk-button-default-hover);--jk-portal-open-text:var(--jk-button-default-text)}
+    &[data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:var(--jk-button-default-hover);color:var(--jk-button-default-text)}
+    &:is([data-variant="outline"],[data-variant="secondary"]){border-color:var(--jk-button-edge);background:var(--jk-button-face);color:var(--jk-button-text)}
+    &:is([data-variant="outline"],[data-variant="secondary"]):hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:var(--jk-button-hover-face);color:var(--jk-button-hover-text)}
+    &[data-variant="ghost"]{background:transparent;color:#e3d2f5;box-shadow:none;--jk-portal-open-face:#392a52;--jk-portal-open-text:#fff0fa}
+    &[data-variant="ghost"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:#392a52;color:#fff0fa;box-shadow:inset 1px 1px #6c5ce0,inset -1px -1px #16112a}
+    /* NoteExport's include/skip utility colours are semantic, not ghost exemption. */
+    &[data-variant="ghost"].text-primary{color:#ffb8e6}
+    &[data-variant="ghost"].text-destructive{color:var(--jk-button-danger-text)}
+    &[data-variant="ghost"].text-destructive:is(:hover,:focus-visible){color:#ff6b8a}
+    &[data-variant="ghost"][class~="hover:text-destructive"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){color:var(--jk-button-danger-text)}
+    &[data-variant="destructive"]{border-color:var(--jk-button-danger-edge);background:var(--jk-button-danger-face);color:var(--jk-button-danger-text);box-shadow:inset 1px 1px var(--jk-button-default-face),inset -1px -1px #16112a;--jk-portal-open-face:#ff6b8a;--jk-portal-open-text:#16112a}
+    &[data-variant="destructive"]:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:#ff6b8a;color:#16112a}
+    &[data-variant="link"]{border:0;background:transparent;color:#d6b8ef;box-shadow:none;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px}
+    &[data-variant="link"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){color:#ffb8e6;text-decoration-color:#ffb8e6}
+    /* State comes AFTER variant paint, including pointer hover. Open/latched != idle. */
+    &:not([data-variant="link"]):is([aria-expanded="true"],[aria-pressed="true"],[data-pressed],[data-popup-open]):not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:var(--jk-portal-open-face);color:var(--jk-portal-open-text);box-shadow:var(--jk-button-pressed)}
+    &:not([data-variant="link"]):active:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){box-shadow:var(--jk-button-pressed);translate:none;transform:translate(1px,1px)}
+    /* Joined preset halves depress in place: translating only one half opens a seam. */
+    &:is(.rounded-r-none.border-r-0,.rounded-l-none):active:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){transform:none;translate:none}
+    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
+    &:is(:disabled,[aria-disabled="true"],[data-disabled]){cursor:not-allowed;filter:grayscale(.65);opacity:.58;box-shadow:inset 1px 1px rgb(253 244 255/.24),inset -1px -1px #16112a;transform:none;translate:none}
+    &[data-variant="link"]:is(:disabled,[aria-disabled="true"],[data-disabled]){box-shadow:none}
+}
+:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]){
+  /* List/identity rows are flat, not entity keys. Do not repaint selected/current
+     state: variants, aria-current and UserPickerRow's selected child stay intact. */
+  & button[data-variant]:not(.entity-dialog *,.owner-dialog *):is(.h-auto.justify-start,[data-ui-role="choice-list"] button):not([data-ui-role="tile"],.rounded-object,.rounded-full):where(:not(.p-0):not(:has(img))){
+    border-radius:0;
+    &:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]):not([data-disabled]):not([aria-current="true"]):not([aria-pressed="true"]):not([data-variant="secondary"]):not(.border-primary){background:#392a52;color:#fff0fa;box-shadow:inset 2px 0 #ff7fcf}
+    &:active:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){outline:1px solid #8f7fe0;outline-offset:-1px}
+    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
+    &:is(:disabled,[aria-disabled="true"],[data-disabled]){filter:grayscale(.65);opacity:.58}
+  }
+  & button[data-ui-role="text-link"]:not(.entity-dialog *,.owner-dialog *){border:0;border-radius:0;background:transparent;color:#d6b8ef;box-shadow:none;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px;
+    &:hover:not(:disabled){color:#ffb8e6;text-decoration-color:#ffb8e6}
+    &:active:not(:disabled){color:#fdf4ff}
+    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
+    &:disabled{opacity:.58}
+  }
+  /* B096 p-0 UserPickerRow wrappers retain child-selected paint and existing list
+     rules. B097 keeps secondary vs ghost and its dense grid geometry. B100 and
+     collapsible/group headings remain flat disclosures; no bevel/translation. */
+  & button:not(.entity-dialog *,.owner-dialog *):is([data-ui-role="disclosure"],[data-slot="collapsible-trigger"],.h-auto.justify-between):not([data-size^="icon"]){
+    border-radius:0;box-shadow:none;
+    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+  }
+}
+
+/* SECTION auth-button-feedback: retain login-r8 / privacy-lock-r96 paint. */
+:where([data-vrcx-0-surface="login-page"],[data-vrcx-0-surface="privacy-lock"]) button[data-variant]{
+  &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
+  &:active:not(:disabled):not([aria-disabled="true"]):not([data-variant="link"]){translate:none;transform:translate(1px,1px);box-shadow:1px 1px #100b1e}
+  &:is(:disabled,[aria-disabled="true"],[data-disabled]){transform:none;translate:none}
+}
+[data-vrcx-0-surface="login-page"] form>button[type="submit"][data-variant="default"]:active:not(:disabled){translate:none}
+[data-vrcx-0-surface="privacy-lock"] button[data-variant="link"]{color:#d6b8ef;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px;
+  &:hover:not(:disabled){color:#ffb8e6;text-decoration-color:currentColor}
+  &:active:not(:disabled){color:#fdf4ff;transform:none;translate:none}
+}

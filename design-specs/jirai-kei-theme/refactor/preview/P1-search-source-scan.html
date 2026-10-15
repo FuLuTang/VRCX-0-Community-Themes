@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1 搜索组件源码扫描</title>
+<style>
+:root{color-scheme:dark;--bg:#16112a;--panel:#211a33;--field:#201936;--edge:#6c5ce0;--text:#f2ebff;--muted:#b9add9;--pink:#ffb8e6;--inset:inset 1px 1px #16112a,inset -1px -1px #a294c8}*{box-sizing:border-box}body{margin:0;padding:32px;background:var(--bg);color:var(--text);font:14px/1.55 system-ui,'Segoe UI',sans-serif}h1{font-size:24px;margin:0 0 8px}h2{margin:32px 0 14px;font-size:19px;border-bottom:1px solid #49395e;padding-bottom:8px}.notice{padding:13px 16px;background:#211a33;border-left:3px solid var(--pink);margin-bottom:24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}.card{background:#1c162e;border:1px solid #49395e;padding:15px;min-width:0}.num{color:var(--pink);font-weight:700}.name{font-size:16px;font-weight:650;margin:3px 0 8px}.src{font:12px/1.5 ui-monospace,monospace;color:#c8b8e3;overflow-wrap:anywhere}.kind{display:inline-block;margin-top:9px;padding:2px 7px;border:1px solid #8c71b0;color:#e3d2f5;font-size:11px}.group{display:flex;align-items:center;gap:8px;margin:12px 0;padding:7px 9px;background:var(--field);border:1px solid var(--edge);box-shadow:var(--inset);color:#e3d2f5}.icon{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7}.group input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:var(--text);font:inherit}.group input::placeholder{color:var(--muted)}.clear{border:1px solid #8c71b0;background:#332650;color:var(--pink);padding:1px 6px}.empty{padding:20px;border:1px dashed #685783;color:var(--muted)}.raw{margin:10px 0;padding:10px;background:#fff;border:2px inset #eee;color:#111}.raw input{font:13px Arial;color:#111}.caption{font-size:12px;color:var(--muted);margin-top:8px}.foot{margin-top:25px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header><h1>Jirai Kei · 搜索组件源码盘点</h1><div class="notice">按 app 源码穷举的搜索组件清单；B 区是从 CSS 侧搜不到、实际会露出默认外观的那些。此次源码扫描未能确认 B 类实例，故 B 区不将假设样本冒充成真实组件。</div></header>
+<h2>A · 已使用皮肤封装的搜索框（源码调用）</h2>
+<div class="grid" id="a"></div>
+<h2>B · 裸原生搜索框</h2><div class="empty">本轮在产品 JSX 中未确认裸原生搜索 input。以下仅为“若存在裸 input[type=search]”的浏览器默认白框示意，不是 app 源码样本，也不计入清单。</div>
+<div class="card" style="max-width:520px;margin-top:12px"><div class="name">示意 · 非清单样本</div><div class="src">未找到对应的产品源码文件:行号</div><div class="raw"><input type="search" placeholder="默认浏览器搜索外观"></div><span class="kind">假设示意 · 不属于 B 发现</span><div class="caption">主题通用输入规则以 [data-slot="input"] 为目标；无 slot 的裸 search 不会匹配该 selector。</div></div>
+<h2>扫描摘要</h2><p>已确认的封装搜索调用见 A 区；没有确认的 B 或 C 清单项。图标/清除控件只有在源码调用明确可判断时才画作示意，不据此断言各页面完全一致。</p>
+<script>
+const items=[
+['01','Browse History','src/features/browse-history/BrowseHistoryPage.tsx:352','ToolbarSearch'],
+['02','Favorites','src/features/favorites/components/FavoritesToolbar.tsx:157','ToolbarSearch'],
+['03','Saved Group Favorites','src/features/favorites/SavedGroupFavoritesPage.tsx:263','ToolbarSearch'],
+['04','Feed（多用户 chips）','src/features/feed/components/FeedSearchBox.tsx:108, 155','InputGroup + InputGroupInput'],
+['05','Friend List · compact','src/features/friends/components/FriendListToolbar.tsx:113','ToolbarSearch'],
+['06','Friend List','src/features/friends/components/FriendListToolbar.tsx:162','ToolbarSearch'],
+['07','Friend Log','src/features/friends/components/FriendLogPageToolbar.tsx:61','ToolbarSearch'],
+['08','Friends Locations','src/features/friends/components/FriendsLocationsToolbar.tsx:98','ToolbarSearch'],
+['09','Game Log','src/features/game-log/components/GameLogToolbar.tsx:276','ToolbarSearch'],
+['10','Instance History','src/features/instance-history/InstanceHistoryPage.tsx:709','ToolbarSearch'],
+['11','Moderation','src/features/moderation/components/ModerationPageToolbar.tsx:63','ToolbarSearch'],
+['12','My Avatars','src/features/my-avatars/components/MyAvatarsToolbar.tsx:107','ToolbarSearch'],
+['13','My Groups','src/features/my-groups/MyGroupsPage.tsx:228','ToolbarSearch'],
+['14','Notifications','src/features/notifications/components/NotificationPageToolbar.tsx:88','ToolbarSearch'],
+['15','Player List','src/features/player-list/components/PlayerListToolbar.tsx:68','ToolbarSearch'],
+['16','Search · user/world/avatar/group','src/features/search/components/SearchControlBand.tsx:250','ToolbarSearch'],
+['17','Avatar Provider','src/features/settings/components/settings-dialogs/AvatarProviderDialog.tsx:77–78','InputGroup + InputGroupInput'],
+['18','Custom Font picker','src/features/settings/components/settings-dialogs/CustomFontDialog.tsx:277','搜索 placeholder；封装类型待深入核对'],
+['19','Social hidden-feed','src/features/settings/components/settings-tabs/SettingsSocialTab.tsx:277–287','Input with search placeholder'],
+['20','Screenshot metadata','src/features/tools/components/ScreenshotMetadataSections.tsx:245','ToolbarSearch'],
+['21','Tools filter','src/features/tools/components/ToolsPageContent.tsx:791','ToolbarSearch'],
+['22','VRChat Log','src/features/tools/vrchat-log/components/VrchatLogToolbar.tsx:167','ToolbarSearch']
+];const icon='<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="4.4"/><path d="m10 10 4 4"/></svg>';
+document.querySelector('#a').innerHTML=items.map(([n,name,src,type])=>`<article class="card"><div class="num">A${n}</div><div class="name">${name}</div><div class="src">${src}</div><div class="group">${icon}<input placeholder="搜索…" aria-label="${name} 搜索"><button class="clear" type="button" aria-label="示意清除">×</button></div><span class="kind">${type}</span></article>`).join('');
+</script>
+<div class="foot">主题示意色依据 Jirai Kei 当前通用字段：#201936 底、#6c5ce0 边、浅色字与像素内阴影。此页是静态来源对照，不代表组件每个页面的精确尺寸或控件组合。</div>
+</body></html>

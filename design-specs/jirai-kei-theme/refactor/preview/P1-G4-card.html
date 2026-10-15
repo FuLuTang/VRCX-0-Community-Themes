@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1-G4 Card 收敛预览</title>
+<style>
+:root{color-scheme:dark;--window:#201936;--raised:#2f2547;--frame:#6c5ce0;--ink:#16112a;--pink:#ffb8e6;--text:#f2ebff;--muted:#b9add9;--bevel:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a,2px 2px 0 #100b1e;font:14px/1.5 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;padding:32px;background:#16112a;color:var(--text)}h1{margin:0 0 6px;font-size:22px}p.lead{margin:0 0 24px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;align-items:stretch}.sample{min-height:230px;padding:16px;background:var(--window);color:var(--text)}.sample h2{font-size:15px;margin:0 0 12px}.sample small{display:block;margin-top:12px;color:var(--muted)}
+/* 通用 raised 面板：取自 theme.css 的 card/tile/feed/dashboard 家族共享 paint。 */
+.raised{border:1px solid var(--frame);border-radius:0;background:var(--window);box-shadow:var(--bevel)}
+.raised .bar{margin:-16px -16px 14px;padding:8px 12px;background:var(--raised);border-bottom:1px dotted #70518f;color:var(--text)}
+/* settings/tools plain card：其卡根不自带 raised bevel，header 独立着色。 */
+.plain{border:1px solid var(--frame);border-radius:0;background:var(--window);box-shadow:none;clip-path:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px))}
+.plain .bar{margin:-16px -16px 14px;padding:9px 12px;background:#2f2552;border-bottom:1px solid var(--ink);box-shadow:inset 0 1px #fdf4ff}
+/* selectable tile: same raised tokens, visibly retains selected edge/state. */
+.tile{border:1px solid #8c71b0;border-radius:0;background:var(--window);box-shadow:var(--bevel);transition:none}.tile.selected{border-color:var(--pink);background:#332650;box-shadow:var(--bevel),0 0 0 2px #6c5ce0}
+/* dashboard/chart panel has an inset frame; keep semantic content and state separate. */
+.chart{border:1px solid var(--frame);border-radius:0;background:var(--window);box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px var(--ink)}.chart .plot{height:90px;margin-top:12px;border:1px dotted #70518f;background:linear-gradient(135deg,transparent 48%,#ff7fcf 49% 50%,transparent 51%),repeating-linear-gradient(0deg,#201936 0 17px,#34284d 18px)}
+/* login/dialog content card: same pixel vocabulary, but independent geometry/slot layout. */
+.login{border:1px solid var(--frame);border-radius:0;background:var(--window);box-shadow:0 0 0 1px #3d305e,5px 5px 0 rgb(11 7 24/.55)}.login .bar{padding:8px 12px;border-bottom:1px dotted #70518f;background:#2f2547}.login form{padding:12px 0 0}.field{padding:7px;border:1px solid #6c5ce0;background:#16112a;color:var(--muted)}
+.tag{display:inline-block;margin-top:8px;padding:2px 6px;border:1px solid #8c71b0;color:#d6b8ef;font-size:11px}
+@media(max-width:600px){body{padding:18px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<h1>G4 · Card 视觉收敛对照</h1>
+<p class="lead">两种基础表面（raised / plain）与必要语义例外。颜色、边线与硬阴影取自 theme.css；卡片内容、尺寸只作示意，非采样数据。</p>
+<main class="grid">
+<section class="sample raised"><div class="bar">通用 raised panel</div><strong>内容面板</strong><p>适用于常规面板、feed 列表的共同像素质感。</p><small>window + frame + inset bevel / hard shadow</small><span class="tag">共享基底</span></section>
+<section class="sample plain"><div class="bar">Settings / Tools</div><strong>折叠分组卡</strong><p>卡根保持平面，标题带由 card-header 单独负责。</p><small>无根阴影；像素裁角与标题装饰保留</small></section>
+<section class="sample tile selected"><h2>紧凑 TileShell · 已选中</h2><strong>Gallery / Inventory</strong><p>普通面板共享基底，selection 独立强调边与 ring。</p><small>selected / hover / focus 状态语义不得抹平</small></section>
+<section class="sample chart"><h2>Dashboard / Chart panel</h2><strong>图表容器</strong><div class="plot" aria-label="示意图表区域"></div><small>图表布局与数据状态仍由图表组件控制</small></section>
+<section class="sample login"><div class="bar">登录 / 对话框内容卡</div><strong>表单专用内容区</strong><form><div class="field">账号 / 表单区域</div></form><small>外层弹层 surface、表单几何与 card-header 是各自独立职责</small></section>
+</main>
+</body>
+</html>

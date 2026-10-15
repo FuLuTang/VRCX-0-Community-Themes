@@ -1,0 +1,193 @@
+/* SECTION motion */
+/* R5 motion layer: append after window-chrome.css and pixel-controls.css. */
+
+
+
+
+
+/* Title-heart and statusbar-lace motion are owned by brand-heart-r97.css and motion-r8.css. */
+/* Leader R5: sparkles live in the empty right end of the 24px SOCIAL title strip (::before),
+   never over friend rows. Full-colour art, twinkle via opacity steps. */
+.vrcx-0-side-panel { position:relative; }
+.vrcx-0-side-panel::after { content:""; position:absolute; z-index:1; background-repeat:no-repeat; pointer-events:none; }
+/* Leader R5: .vrcx-0-main-content::after is the app nav-resize accent line (globals.css:897-920); not used. */
+/* Leader R5: the static charm was removed from the sidebar background; this is the only pendant. Expanded nav only. */
+.vrcx-0-sidebar-surface { position:relative; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface::after { display:none; }
+.vrcx-0-sidebar-surface::after { content:""; position:absolute; right:8px; bottom:104px; width:48px; height:72px; background-image:var(--r5-ribbon-pendant); background-size:48px 72px; background-repeat:no-repeat; pointer-events:none; animation:r5-charm-swing 4.8s steps(3,end) infinite; }
+/* Main-tabs pseudo box only; motion-r7.css owns its current bottom-edge artwork. */
+[data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after { content:""; position:absolute; z-index:1; opacity:0; pointer-events:none; }
+[data-slot="progress-indicator"] { animation:r5-progress-flow 1.8s steps(5,end) infinite; }
+[data-slot="spinner"] { animation:r5-spinner-step 1s steps(8,end) infinite; }
+[data-slot="dialog-content"][data-open] { animation:r5-dialog-step-in 120ms steps(4,end) both; }
+
+@media (prefers-reduced-motion:reduce) {
+ 
+ 
+ .vrcx-0-sidebar-surface::after,
+ 
+ [data-slot="progress-indicator"],[data-slot="spinner"],[data-slot="dialog-content"][data-open] { animation:none !important; }
+}
+
+/* SECTION navigation-r7 */
+/* R7: real navigation surface, not wallpaper behind dim labels.
+   Grounding: sidebar.tsx data-sidebar survives TooltipTrigger slot merging;
+   AppNavMenuSections.tsx content/footer inherit /65 opacity unless overridden.
+   Do not change sidebar width or main/virtual-list geometry. */
+.vrcx-0-sidebar-surface {
+ background:#191329;
+ border-right:1px solid #8c71b0;
+ box-shadow:inset -2px 0 #100b1e;
+}
+/* Retire the busy R5 wallpaper and pendant. The cat is a quiet footer watermark. */
+.vrcx-0-sidebar-surface::after { display:none; }
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::before {
+ content:"导航";
+ /* Bar keeps its original 32px height. The 2x phone canvas is absolutely positioned and
+    overflows on purpose (sticker), so it must never inflate this bar. */
+ min-height:32px;
+ padding:6px 12px;
+ color:#ffe4f5;
+ font:16px/20px "WD Pixel CJK",sans-serif;
+ background:#30213f;
+ border-bottom:1px solid #a17cae;
+ box-shadow:inset 0 1px #513860;
+ letter-spacing:2px;
+}
+.vrcx-0-sidebar-surface [data-sidebar="content"] {
+ color:#f2ebff;
+ padding:8px 6px 4px;
+ gap:0;
+}
+.vrcx-0-sidebar-surface [data-sidebar="group"] { padding:0; }
+.vrcx-0-sidebar-surface [data-sidebar="menu"] { gap:2px; }
+.vrcx-0-sidebar-surface [data-sidebar="content"] > [data-sidebar="group"] > [data-sidebar="group-content"] > [data-sidebar="menu"] {
+ background:#211a33;
+ border:1px solid;
+ border-color:var(--jk-field-edge);
+ padding:4px;
+ box-shadow:var(--jk-field-inset);
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"] {
+ box-sizing:border-box;
+ min-width:0;
+ height:36px;
+ padding:7px 8px;
+ gap:10px;
+ border:1px solid transparent;
+ border-radius:0;
+ color:#f2ebff;
+ background:transparent;
+ font-family:"WD Pixel CJK",sans-serif;
+ font-size:16px;
+ line-height:20px;
+ font-weight:400;
+ font-synthesis:none;
+ text-shadow:none;
+ transition:none;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"] svg {
+ width:18px;
+ height:18px;
+ color:#ceb8e8;
+ opacity:1;
+ flex-shrink:0;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"] > span:has(> svg) { width:18px; height:18px; flex-shrink:0; }
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:hover {
+ color:#fff3fc;
+ background:#392949;
+ border-color:#735486;
+ box-shadow:inset 1px 1px #493458;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"][data-active] {
+ color:#21132d;
+ background:#f3add9;
+ border-color:#ffe2f3 #986b9e #986b9e #ffe2f3;
+ box-shadow:inset 3px 0 #6a366d,1px 1px #100b1e;
+ font-weight:400;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"][data-active] svg { color:#42214f; }
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:focus-visible {
+ outline:2px dashed #ffb8e6;
+ outline-offset:-3px;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:active {
+ box-shadow:inset 1px 1px #100b1e;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:disabled,
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"][aria-disabled="true"] {
+ opacity:.45;
+ pointer-events:none;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-sub"] {
+ border-left-color:#8e6eab;
+ margin-left:18px;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-sub-button"] {
+ color:#dfd0ef;
+ font:14px/20px "WD Pixel CJK",sans-serif;
+ border-radius:0;
+}
+.vrcx-0-sidebar-surface [data-sidebar="footer"] {
+ color:#f2ebff;
+ background:#241a35;
+ border-top:1px solid #74558c;
+ padding:8px 6px;
+ gap:6px;
+ box-shadow:inset 0 1px #3f2c50;
+}
+/* User: no large foreground cat in navigation. Tiny Steam cat lives in SOCIAL chrome. */
+.vrcx-0-sidebar-surface [data-sidebar="footer"] { position:relative; isolation:isolate; }
+.vrcx-0-sidebar-surface [data-sidebar="footer"] > [data-sidebar="menu"] { position:relative; z-index:1; }
+.vrcx-0-sidebar-surface [data-sidebar="footer"]::before { content:none; display:none; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="footer"]::before { display:none; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="content"] { padding:4px; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu"] { border:0; padding:0; background:transparent; box-shadow:none; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="footer"] { padding:8px 4px; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu-button"] { gap:0; justify-content:center; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu-button"] svg { width:16px; height:16px; }
+@media(max-height:760px) {
+ .vrcx-0-sidebar-surface [data-sidebar="menu-button"] { height:34px; padding-top:6px; padding-bottom:6px; }
+}
+@media(max-height:620px) {
+ [data-slot="sidebar"][data-state="expanded"] .vrcx-0-sidebar-surface [data-sidebar="footer"]::before { display:none; }
+}
+
+/* SECTION motion-r7 */
+/* R7: quiet chrome motion, never transform body/nav text or virtual rows.
+   Statusbar ::after belongs to the application's RGB accent, leave it alone.
+   Windows-acceptance finding: R5 parked this ornament at `right:10px`, but the app now
+   renders its own add/gear buttons at the SOCIAL panel's top-right corner, so the cat
+   was fully covered and never visible. Moved into the empty run of the panel header. */
+.vrcx-0-side-panel::after {
+ right:88px;
+ width:42px;
+ background-image:var(--r5-star),var(--r5-pixel-mascot);
+ background-size:16px 16px,18px 18px;
+ image-rendering:pixelated;
+ pointer-events:none;
+}
+/* Title-heart and statusbar-lace animations have dedicated owners in R9.7/R8. */
+/* Leader review: the inherited left-edge star can cover the tab label.
+   Put the glint in the 2px bottom border instead; no text transform/overpaint. */
+
+[data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after {
+ top:auto;
+ bottom:0;
+ left:0;
+ width:100%;
+ height:2px;
+ transform:none;
+ background-image:linear-gradient(#ffe4f5,#ffe4f5);
+ background-size:24px 2px;
+ background-repeat:no-repeat;
+ animation:r7-tab-edge 6s steps(4,end) infinite;
+}
+/* R7's tab glint owns the only reduced-motion override in this module. */
+@media(prefers-reduced-motion:reduce) {
+ [data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after {
+  animation:none !important;
+ }
+}
+

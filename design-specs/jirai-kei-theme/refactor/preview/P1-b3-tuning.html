@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jirai Kei · B3 斜面输入框调校</title>
+<style>
+:root{color-scheme:dark;--page:#161219;--ink:#f2ebff;--muted:#b9add9;--edge:#69557c #fdf4ff #fdf4ff #69557c;--dark-inset:#16112a;--light-inset:#a294c8}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:15px/1.6 "Segoe UI",system-ui,sans-serif;padding:36px clamp(18px,5vw,72px) 48px}main{max-width:1120px;margin:auto}h1{font-size:26px;margin:0 0 5px;letter-spacing:.03em}h2{font-size:18px;margin:30px 0 12px;color:#f2ebff}p{color:var(--muted);margin:0 0 18px}.eyebrow{color:#ffb8e6;text-transform:uppercase;letter-spacing:.16em;font:12px/1.5 ui-monospace,monospace}.reference{max-width:440px;padding:16px;background:#201936;border:1px solid #69557c}.caption{font-size:12px;color:var(--muted);margin-top:9px}.matrix{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.sample{padding:14px;background:#201936;border:1px solid #332650;min-width:0}.sample-head{font:12px ui-monospace,monospace;color:#d6c8ee;margin-bottom:10px}.field{display:block;width:100%;height:42px;padding:0 12px;border-style:solid;border-color:#69557c #fdf4ff #fdf4ff #69557c;color:#f2ebff;font:14px ui-monospace,monospace;outline:none;box-shadow:inset var(--inset) var(--inset) #16112a,inset calc(-1 * var(--inset)) calc(-1 * var(--inset)) #a294c8}.field::placeholder{color:#b9add9;opacity:1}.w1{--inset:1px}.w2{--inset:2px}.w3{--inset:3px}.b1{border-width:1px}.b2{border-width:2px}.b3{border-width:3px}.bg0{background:#211a33}.bg1{background:#2a2147}.bg2{background:#2f2552}.bg3{background:#332650}.recommend{padding:20px;border:1px solid #69557c;background:#201936;display:grid;grid-template-columns:140px minmax(220px,1fr);align-items:center;gap:14px}.recommend label{font-weight:600}.recommend input{height:42px;padding:0 12px;border:2px solid;border-color:#69557c #fdf4ff #fdf4ff #69557c;background:#2a2147;color:#f2ebff;box-shadow:inset 2px 2px #16112a,inset -2px -2px #a294c8;font:14px ui-monospace,monospace}.recommend small{grid-column:2;color:var(--muted)}.copy{margin-top:32px;padding:18px;border-top:1px solid #69557c;background:#201936}.copy code{color:#fdf4ff;background:#16112a;padding:2px 5px;white-space:nowrap} .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chips code{font-size:12px}@media(max-width:720px){.matrix{grid-template-columns:repeat(2,minmax(0,1fr))}.recommend{grid-template-columns:1fr}.recommend small{grid-column:1}}@media(max-width:460px){.matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">Jirai Kei · UI tuning / B3</div><h1>四边斜面输入框：背景 × 描边</h1><p>同一输入内容与尺寸，仅对比背景色和描边宽度。行＝背景档位；列＝描边宽度。斜面方向固定为上/左暗、下/右亮。</p>
+<h2>原样 B3 · 对照</h2><div class="reference"><input class="field bg0 b1 w1" placeholder="搜索…" value="Jirai Kei"><div class="caption">原样 B3：#211a33 / 1px</div></div>
+<h2>候选矩阵（4 行 × 3 列）</h2>
+<div class="matrix">
+<div class="sample"><div class="sample-head">背景 #211a33 · 描边 1px</div><input class="field bg0 b1 w1" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #211a33 / 描边 1px</div></div>
+<div class="sample"><div class="sample-head">背景 #211a33 · 描边 2px</div><input class="field bg0 b2 w2" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #211a33 / 描边 2px</div></div>
+<div class="sample"><div class="sample-head">背景 #211a33 · 描边 3px</div><input class="field bg0 b3 w3" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #211a33 / 描边 3px</div></div>
+<div class="sample"><div class="sample-head">背景 #2a2147 · 描边 1px</div><input class="field bg1 b1 w1" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #2a2147 / 描边 1px</div></div>
+<div class="sample"><div class="sample-head">背景 #2a2147 · 描边 2px</div><input class="field bg1 b2 w2" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #2a2147 / 描边 2px</div></div>
+<div class="sample"><div class="sample-head">背景 #2a2147 · 描边 3px</div><input class="field bg1 b3 w3" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #2a2147 / 描边 3px</div></div>
+<div class="sample"><div class="sample-head">背景 #2f2552 · 描边 1px</div><input class="field bg2 b1 w1" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #2f2552 / 描边 1px</div></div>
+<div class="sample"><div class="sample-head">背景 #2f2552 · 描边 2px</div><input class="field bg2 b2 w2" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #2f2552 / 描边 2px</div></div>
+<div class="sample"><div class="sample-head">背景 #2f2552 · 描边 3px</div><input class="field bg2 b3 w3" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #2f2552 / 描边 3px</div></div>
+<div class="sample"><div class="sample-head">背景 #332650 · 描边 1px</div><input class="field bg3 b1 w1" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #332650 / 描边 1px</div></div>
+<div class="sample"><div class="sample-head">背景 #332650 · 描边 2px</div><input class="field bg3 b2 w2" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #332650 / 描边 2px</div></div>
+<div class="sample"><div class="sample-head">背景 #332650 · 描边 3px</div><input class="field bg3 b3 w3" placeholder="搜索…" value="Jirai Kei"><div class="caption">背景 #332650 / 描边 3px</div></div>
+</div>
+<h2>整行输入框组 · 推荐组合</h2><div class="recommend"><label for="query">搜索内容</label><input id="query" placeholder="搜索…" value="Jirai Kei"><small>输入关键字以筛选项目；采用 #2a2147 背景与 2px 四边斜面描边。</small></div>
+<div class="copy"><strong>请回复你要的组合（例如「#2a2147 + 2px」）</strong><div class="chips"><code>背景：#211a33 / #2a2147 / #2f2552 / #332650</code><code>border-color: #69557c #fdf4ff #fdf4ff #69557c</code><code>描边：1px + inset 1px / 2px + inset 2px / 3px + inset 3px</code></div></div>
+</main></body></html>

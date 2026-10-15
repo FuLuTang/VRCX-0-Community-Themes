@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1-G1 原生 input：现状 vs 补皮肤</title>
+<style>
+:root{color-scheme:dark;--page:#16112a;--ink:#f2ebff;--muted:#b9add9;--field:#201936;--line:#6c5ce0;--edge:#a294c8;--pink:#ff7fcf;--bevel:inset 1px 1px #16112a,inset -1px -1px #a294c8;font:14px/1.5 system-ui,"Noto Sans SC",sans-serif}
+*{box-sizing:border-box}body{margin:0;padding:32px clamp(14px,4vw,54px) 48px;background:var(--page);color:var(--ink)}.wrap{max-width:1120px;margin:auto}h1{font-size:clamp(23px,3vw,34px);margin:0 0 8px}header p,.muted{color:var(--muted)}header p{margin:0 0 20px}.legend{padding:10px 13px;border-left:3px solid var(--pink);background:#211a33;color:#d6c8ee;margin:0 0 18px;font-size:13px}.panes{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pane{min-width:0;padding:17px;border:1px solid #44345c;background:#1b1530;box-shadow:0 10px 26px #0005}.pane h2{font-size:17px;margin:0}.pane .sub{font-size:12px;color:var(--muted);margin:3px 0 14px}.item{padding:11px 12px;margin:9px 0;background:var(--page);border:1px solid #392a52}.item-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.item h3{font-size:13px;margin:0 0 8px}.tag{font:11px ui-monospace,monospace;color:#d6b8ef}.control{display:block;width:100%;min-height:32px;font:inherit}.delta{font-size:11px;color:#c5b5e1;margin:7px 0 0}.special{color:#ffcfeb}.sample{max-width:100%}
+/* 左栏重建现状：只继承主题字体，不给裸 text/search/number/password 添加字段盒子。 */
+.before .ordinary{color:var(--ink);color-scheme:light}
+/* 主题现有字段真实值：fields-toolbar-r10, theme.css 3555-3560、3587-3595。 */
+.slot,.after .ordinary,.after .time{color:var(--ink);background:#201936;border:1px solid #6c5ce0;border-radius:0;box-shadow:var(--bevel);padding:5px 8px}
+.slot::placeholder,.after input::placeholder{color:#b9add9;opacity:1}
+.after .ordinary:focus-visible,.after .time:focus-visible{border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+/* 下列是 theme.css 已有的专属原生控件规则，在两栏保持一致，不套普通字段皮肤。 */
+input[type=file]::file-selector-button{appearance:none;-webkit-appearance:none;font:inherit;padding:3px 8px;margin-right:8px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}
+input[type=color]{border:1px solid #6c5ce0;border-radius:0;background:#211a33;padding:2px;height:34px}input[type=color]::-webkit-color-swatch-wrapper{padding:0}input[type=color]::-webkit-color-swatch{border:1px solid #8c71b0;border-radius:0}
+input[type=range]{accent-color:#ffb8e6}
+input[type=time]::-webkit-calendar-picker-indicator{opacity:1}
+.foot{margin-top:20px;padding:16px 18px;background:#211a33;border:1px solid #44345c}.foot h2{font-size:16px;margin:0 0 8px}.proscons{display:grid;grid-template-columns:1fr 1fr;gap:20px}.proscons h3{font-size:13px;color:#ffb8e6;margin:8px 0 4px}.proscons ul{padding-left:20px;margin:0;color:#d6c8ee;font-size:13px}.disclaimer{font-size:11px;color:var(--muted);margin:12px 0 0}
+@media(max-width:760px){.panes,.proscons{grid-template-columns:1fr}.pane{padding:13px}}
+</style>
+</head>
+<body><div class="wrap">
+<header><h1>原生 <code>&lt;input&gt;</code>：现状 vs 补上字段皮肤后</h1><p>暗色主题页面中的并排示意。左侧普通原生文本输入保留 UA 外观；右侧仅为文本字段类型补上字段框。两边的专属控件和 slot 参照都使用当前主题规则。</p></header>
+<div class="legend">页面暗底取自 theme.css tokens 的 <code>--background: #16112a</code>。注意：主题真实字段规则是 <code>#201936</code> 底、<code>1px solid #6c5ce0</code> 边、<code>var(--jk-field-inset)</code>（<code>inset 1px 1px #16112a, inset -1px -1px #a294c8</code>）；不是 #211a33/#8c71b0（后者用于其他控件/子部件）。为忠实展示现状，左侧文本类 input 强制采用 light UA 控件配色，避免浏览器暗色偏好掩盖常见的亮色输入框差异。</div>
+<main class="panes">
+<section class="pane before"><h2>现状（未覆盖的原生 input）</h2><p class="sub">仅有字体继承；不额外施加通用 input 外观。</p>
+<article class="item"><div class="item-head"><h3>type="text"</h3><span class="tag">普通文本</span></div><input class="control ordinary" type="text" value="输入文字" aria-label="现状 text"><p class="delta">背景：UA 亮色 →（现状保持）；右侧补为 #201936。</p></article>
+<article class="item"><div class="item-head"><h3>type="search"</h3><span class="tag">搜索</span></div><input class="control ordinary" type="search" value="查找项目" aria-label="现状 search"><p class="delta">边框：浏览器默认 → 右侧 1px solid #6c5ce0；独立搜索框才适用。</p></article>
+<article class="item"><div class="item-head"><h3>type="number"</h3><span class="tag">数值</span></div><input class="control ordinary" type="number" value="12" aria-label="现状 number"><p class="delta">背景/边框：浏览器默认；右侧加字段盒子，保留原生步进器。</p></article>
+<article class="item"><div class="item-head"><h3>type="password"</h3><span class="tag">密码</span></div><input class="control ordinary" type="password" value="jirai-kei" aria-label="现状 password"><p class="delta">背景：UA 亮色 → 右侧 #201936；字符仍由浏览器遮蔽。</p></article>
+<article class="item"><div class="item-head"><h3>type="time"</h3><span class="tag">已有字段规则</span></div><input class="control time" type="time" value="09:30" aria-label="现状 time"><p class="delta">已经共用主题字段底框及原生时钟图标；两栏一致。</p></article>
+<article class="item"><div class="item-head"><h3>type="file"</h3><span class="tag">保持专属处理</span></div><input class="control" type="file" aria-label="现状 file"><p class="delta special">仅文件选择按钮套现有样式；整行保持原生文件名区与选择行为。</p></article>
+<article class="item"><div class="item-head"><h3>type="color"</h3><span class="tag">保持专属处理</span></div><input class="control" type="color" value="#ff7fcf" aria-label="现状 color"><p class="delta special">保留原生色板交互与专属 swatch 边框，不套文本框尺寸/阴影。</p></article>
+<article class="item"><div class="item-head"><h3>type="range"</h3><span class="tag">保持专属处理</span></div><input class="control" type="range" min="0" max="100" value="65" aria-label="现状 range"><p class="delta special">轨道/滑块有独立样式；文本框背景边框会破坏 slider 语义和命中区域。</p></article>
+<article class="item"><div class="item-head"><h3>[data-slot="input"]</h3><span class="tag">皮肤参照</span></div><input class="control slot" type="text" value="已覆盖的组件输入框" aria-label="现状 slot input"><p class="delta">主题已有字段皮肤；与右栏参照相同。</p></article>
+</section>
+<section class="pane after"><h2>补上字段皮肤后</h2><p class="sub">普通文本字段使用主题已有 slot 字段声明作为视觉基线。</p>
+<article class="item"><div class="item-head"><h3>type="text"</h3><span class="tag">普通文本</span></div><input class="control ordinary" type="text" value="输入文字" aria-label="补皮肤 text"><p class="delta">背景：UA 亮色 → #201936；边框：默认 → 1px solid #6c5ce0。</p></article>
+<article class="item"><div class="item-head"><h3>type="search"</h3><span class="tag">搜索</span></div><input class="control ordinary" type="search" value="查找项目" aria-label="补皮肤 search"><p class="delta">加方角、内斜面阴影；置于 input-group 时应由外框负责。</p></article>
+<article class="item"><div class="item-head"><h3>type="number"</h3><span class="tag">数值</span></div><input class="control ordinary" type="number" value="12" aria-label="补皮肤 number"><p class="delta">字段底框统一；原生步进器及其交互仍保留。</p></article>
+<article class="item"><div class="item-head"><h3>type="password"</h3><span class="tag">密码</span></div><input class="control ordinary" type="password" value="jirai-kei" aria-label="补皮肤 password"><p class="delta">暗底、紫边与内阴影；占位符沿用 #b9add9。</p></article>
+<article class="item"><div class="item-head"><h3>type="time"</h3><span class="tag">已有字段规则</span></div><input class="control time" type="time" value="09:30" aria-label="补皮肤 time"><p class="delta">既有字段规则 + 浏览器时钟图标，两栏不产生新增差异。</p></article>
+<article class="item"><div class="item-head"><h3>type="file"</h3><span class="tag">保持专属处理</span></div><input class="control" type="file" aria-label="补皮肤 file"><p class="delta special">不应用整框皮肤；避免文件名区和原生按钮布局变形。</p></article>
+<article class="item"><div class="item-head"><h3>type="color"</h3><span class="tag">保持专属处理</span></div><input class="control" type="color" value="#ff7fcf" aria-label="补皮肤 color"><p class="delta special">保留 swatch 与原生调色器；文本框内阴影/填充会显得不合适。</p></article>
+<article class="item"><div class="item-head"><h3>type="range"</h3><span class="tag">保持专属处理</span></div><input class="control" type="range" min="0" max="100" value="65" aria-label="补皮肤 range"><p class="delta special">继续使用范围控件专属轨道/滑块，不套字段框。</p></article>
+<article class="item"><div class="item-head"><h3>[data-slot="input"]</h3><span class="tag">皮肤参照</span></div><input class="control slot" type="text" value="已覆盖的组件输入框" aria-label="补皮肤 slot input"><p class="delta">保持与左栏完全一致；该控件原本就有皮肤。</p></article>
+</section></main>
+<section class="foot"><h2>客观权衡</h2><div class="proscons"><div><h3>修补的好处</h3><ul><li>裸文本字段与组件字段视觉一致，减少同页混搭感。</li><li>暗色页面不再出现突兀的白色/亮色字段块。</li><li>焦点、占位符、边框和内阴影可统一到主题语言。</li></ul></div><div><h3>修补的代价</h3><ul><li>这是外观变化，不属于严格等价改写。</li><li>会新增相对当前基线的 CSS 差异和维护范围。</li><li>把规则扩展到不合适的控件可能令 file/color/range 更难看或损害可用性。</li></ul></div></div><p class="disclaimer">此为自包含示意页，UA 原生控件会受浏览器与操作系统影响；文本类左栏采用浅色原生控件配色以清楚展示常见差异。slot 与 time 对照依据 theme.css 当前字段声明，不代表提议必然应合并到所有原生 input。</p></section>
+</div></body></html>

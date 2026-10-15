@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1-G1 · Input Group Control B1 / B3 对照</title>
+<style>
+:root{color-scheme:dark;--ink:#f2ebff;--muted:#b9add9;--pink:#ffb8e6;--bevel:inset 2px 2px #16112a,inset -2px -2px #a294c8}
+*{box-sizing:border-box}body{margin:0;padding:34px;background:#171224;color:var(--ink);font:14px/1.5 "Segoe UI",system-ui,sans-serif}h1{font-size:22px;margin:0 0 6px}p{color:var(--muted);margin:0 0 24px}.legend{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px}.tag{padding:5px 9px;border:1px solid #56466a;background:#211a33;color:#d9c9ee;font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:14px}.grouping{margin-bottom:30px}.grouping h2{font-size:16px;margin:0 0 12px;color:#e3d2f5}.card{padding:14px;background:#211a33;border:1px solid #392a52}.card h3{font-size:13px;margin:0 0 14px;color:#d6b8ef;font-weight:600}.input-group{height:44px;display:flex;align-items:stretch;overflow:hidden;color:var(--ink)}.b1{background:#201936;border:1px solid #6c5ce0;box-shadow:inset 1px 1px #16112a,inset -1px -1px #a294c8}.b3{background:#2a2147;border:2px solid;border-color:#69557c #fdf4ff #fdf4ff #69557c;box-shadow:var(--bevel)}.addon,.button{display:flex;align-items:center;justify-content:center;flex:none}.addon{width:42px;color:#d6b8ef;font-size:18px}.control-wrap{position:relative;display:flex;align-items:center;flex:1;min-width:0}.control{width:100%;height:100%;min-width:0;padding:0 10px;border:0;border-radius:0;background:transparent;color:var(--ink);caret-color:var(--pink);outline:none;box-shadow:none;font:inherit}.control::placeholder{color:var(--muted);opacity:1}.button{width:44px;border:0;border-left:1px solid #6c5ce0;border-radius:0;background:#ffb8e6;color:#16112a;font:inherit;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}.b3 .button{border-left:2px solid #69557c}.transparent-note{position:absolute;inset:4px 6px;pointer-events:none;border:1px dashed rgb(255 184 230/.62);background:rgb(255 184 230/.075);display:flex;align-items:center;justify-content:center;color:#ffd5ee;font-size:10px;letter-spacing:.02em}.control-wrap:has(input:not(:placeholder-shown)) .transparent-note{display:none}.callout{font-size:11px;color:#c6b7d8;margin-top:9px}.swatch{display:inline-block;width:9px;height:9px;background:rgb(255 184 230/.3);border:1px dashed #ffb8e6;margin-right:5px}.foot{margin-top:24px;color:#978aaa;font-size:11px}@media(max-width:760px){body{padding:20px}.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<h1>Input Group Control：透明输入本体 × 两种外框</h1>
+<p>同一组内容分别置于当前 B1 凹陷框与拟议 B3 四边斜面框。内部 control 不绘制面板，背景由父 group 提供。</p>
+<div class="legend"><span class="tag">control：background transparent · border 0 · shadow none</span><span class="tag">粉色虚线遮罩：透明输入区域示意（非真实控件背景）</span><span class="tag">B1 当前：#201936 / 1px #6c5ce0</span><span class="tag">B3 对照：#2a2147 / 2px 四边斜面</span></div>
+<section class="grouping"><h2>B1 · 当前凹陷外框</h2><div class="grid">
+<article class="card"><h3>01 / 纯 control</h3><div class="input-group b1"><div class="control-wrap"><input class="control" placeholder="搜索…"><span class="transparent-note">透明 control 区域</span></div></div><div class="callout"><i class="swatch"></i>遮罩仅用于标注；实际 input 背景透明。</div></article>
+<article class="card"><h3>02 / control + 前置 addon 图标</h3><div class="input-group b1"><span class="addon" aria-hidden="true">⌕</span><div class="control-wrap"><input class="control" placeholder="按名称筛选"><span class="transparent-note">透明 control 区域</span></div></div><div class="callout">图标 addon 位于外框内，control 仍透出父框底色。</div></article>
+<article class="card"><h3>03 / control + 尾部按钮</h3><div class="input-group b1"><div class="control-wrap"><input class="control" placeholder="输入关键词"><span class="transparent-note">透明 control 区域</span></div><button class="button" type="button">查找</button></div><div class="callout">尾部按钮单独有粉色按钮皮肤，不属于 control。</div></article>
+</div></section>
+<section class="grouping"><h2>B3 · 四边斜面外框（对照）</h2><div class="grid">
+<article class="card"><h3>01 / 纯 control</h3><div class="input-group b3"><div class="control-wrap"><input class="control" placeholder="搜索…"><span class="transparent-note">透明 control 区域</span></div></div><div class="callout"><i class="swatch"></i>仅外框改变；control 本体规则不变。</div></article>
+<article class="card"><h3>02 / control + 前置 addon 图标</h3><div class="input-group b3"><span class="addon" aria-hidden="true">⌕</span><div class="control-wrap"><input class="control" placeholder="按名称筛选"><span class="transparent-note">透明 control 区域</span></div></div><div class="callout">control 透明，不会叠加第二层边框。</div></article>
+<article class="card"><h3>03 / control + 尾部按钮</h3><div class="input-group b3"><div class="control-wrap"><input class="control" placeholder="输入关键词"><span class="transparent-note">透明 control 区域</span></div><button class="button" type="button">查找</button></div><div class="callout">外框斜面变化与 control 样式解耦。</div></article>
+</div></section>
+<div class="foot">独立 HTML · CSS 内嵌 · 双击可在浏览器打开。预览仅示意组件组合，不是运行时截图。</div>
+</body></html>

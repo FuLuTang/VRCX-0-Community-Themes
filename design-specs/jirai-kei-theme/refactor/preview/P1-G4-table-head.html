@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1-G4 table-head · visual audit</title>
+<style>
+:root{color-scheme:dark;--canvas:#16112a;--panel:#201936;--raised:#2a2147;--text:#f2ebff;--muted:#b9add9;--header-rule:#70518f;--row-rule:#51436d;--pink:#ff7fcf}
+*{box-sizing:border-box}body{margin:0;padding:36px 24px;background:var(--canvas);color:var(--text);font:14px/1.6 system-ui,"Noto Sans SC",sans-serif}main{max-width:980px;margin:auto}h1{font-size:22px;margin:0 0 6px}h2{font-size:16px;margin:30px 0 10px}.sub{color:var(--muted);margin:0 0 24px}.panel{background:var(--panel);border:1px solid #6c5ce0;padding:20px;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}.table-wrap{overflow:auto;border:1px solid #51436d}table{width:100%;border-collapse:collapse;text-align:left}thead{background:var(--raised);color:var(--text)}thead tr{border-bottom:1px dotted var(--header-rule)}th{height:42px;padding:0 14px;font-size:12px;font-weight:500;white-space:nowrap;color:var(--text)}td{padding:13px 14px;border-bottom:.8px solid var(--row-rule);color:var(--text)}tbody tr:last-child td{border-bottom:0}.sort{display:inline-flex;align-items:center;gap:7px;color:inherit}.arrow{font-size:11px;color:var(--pink);line-height:1}.caption{font-size:12px;color:var(--muted);margin-top:10px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.chip{border:1px solid #6c5ce0;padding:4px 9px;color:#e3d2f5;font-size:12px}.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sample{background:var(--raised);padding:18px 16px 22px;border:1px solid #51436d}.sample label{display:block;font-size:12px;color:var(--muted);margin-bottom:14px}.line{height:0;border-bottom:1px dotted var(--header-rule)}.line.solid{border-bottom:.8px solid var(--row-rule)}.zoom{margin-top:20px;padding:18px;background:#120d22;border:1px solid #6c5ce0}.zoom .line{border-bottom-width:3px}.zoom .line.solid{border-bottom-width:3px}.zoom p{margin:7px 0 0;color:var(--muted);font-size:12px}.note{border-left:3px solid var(--pink);padding:8px 12px;margin-top:18px;color:#e3d2f5;background:#201936}@media(max-width:600px){body{padding:22px 14px}.compare{grid-template-columns:1fr}.panel{padding:14px}}
+</style>
+</head>
+<body><main>
+<h1>P1-G4 · table-head 表头视觉核对</h1><p class="sub">真实值预览：raised 表头 #2a2147 · 字体 12px / 500 · 表头下沿 dotted #70518f</p>
+<section class="panel">
+<div class="table-wrap"><table><thead><tr><th>时间</th><th><span class="sort">事件类型 <span class="arrow" aria-hidden="true">▲</span></span></th><th>用户</th><th>状态</th></tr></thead><tbody>
+<tr><td>10:42:18</td><td>加入实例</td><td>ExampleUser</td><td>在线</td></tr><tr><td>10:39:02</td><td>好友请求</td><td>AnotherUser</td><td>待处理</td></tr><tr><td>10:31:47</td><td>退出实例</td><td>SampleAccount</td><td>完成</td></tr>
+</tbody></table></div><p class="caption">表头颜色与字号来自 Inventory；表头背景和 dotted 下沿来自 data-surfaces-r10。排序箭头仅为演示组件可以附带的图标，不代表主题 CSS 已有 sortable 规则。</p>
+<div class="chips"><span class="chip">thead background: #2a2147</span><span class="chip">th: 12px / 500</span><span class="chip">thead &gt; tr: dotted #70518f</span><span class="chip">tbody row: solid #51436d</span></div>
+</section>
+<h2>线型放大对照</h2><div class="compare"><div class="sample"><label>表头下沿 · 1px dotted #70518f</label><div class="line"></div></div><div class="sample"><label>普通数据行 · 0.8px solid #51436d</label><div class="line solid"></div></div></div>
+<div class="zoom"><strong>局部放大（加粗显示线型差别）</strong><div style="margin-top:16px"><div class="line"></div><p>header &gt; tr — dotted #70518f</p></div><div style="margin-top:18px"><div class="line solid"></div><p>data row — solid #51436d</p></div></div>
+<div class="note">两条线属于不同选择器与不同职责：表头行 dotted；数据行 solid。#51436d 是 row divider 色，不是表头底边的覆盖结果。</div>
+</main></body></html>

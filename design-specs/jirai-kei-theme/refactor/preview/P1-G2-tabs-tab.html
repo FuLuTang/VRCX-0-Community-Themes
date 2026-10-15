@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P1-G2 tabs-tab 状态预览</title>
+<style>
+:root{color-scheme:dark;--bg:#16112a;--track:#201936;--frame:#6c5ce0;--pink:#ffb8e6;--text:#f2ebff;--muted:#b9add9;--hover:#4a3784;--bevel:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+*{box-sizing:border-box}body{margin:0;padding:36px;background:radial-gradient(ellipse at 50% 0,#32244d,var(--bg) 65%);color:var(--text);font:14px/1.5 system-ui,sans-serif}h1{font-size:22px;margin:0 0 8px}h2{font-size:17px;margin:0 0 18px}.intro{color:var(--muted);margin:0 0 28px}.board{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1080px}.panel{border:1px solid #514078;background:rgb(26 19 44/.92);padding:20px;box-shadow:5px 5px #100b1e}.samples{display:grid;grid-template-columns:repeat(2,minmax(140px,1fr));gap:14px}.sample{border:1px solid #392c57;padding:12px;background:#1b1530;min-height:112px}.caption{font-size:12px;color:#c9b8e6;margin-bottom:14px}.tabs{display:flex;gap:2px;padding:3px;border:1px solid var(--frame);background:var(--track);box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}.tab{font:500 12px/1.2 system-ui,sans-serif;color:#e3d2f5;background:transparent;border:1px solid transparent;border-radius:0;padding:11px 14px;white-space:nowrap}.tab.hover{background:#3b2c55;color:var(--text)}.tab.active{background:var(--pink);border-color:var(--frame);color:#16112a;box-shadow:var(--bevel)}.tab[aria-disabled=true]{opacity:.5;cursor:not-allowed}.indicator{height:4px;margin-top:8px;border-top:1px dashed #a294c8;color:#c8b3e9;font-size:10px;position:relative;padding-top:5px}.indicator:after{content:'indicator slot — display:none';position:absolute;right:4px;top:-7px;background:#1b1530;padding:0 4px}.rail{display:flex;flex-direction:column;gap:2px;width:100%;max-width:235px;padding:4px;border:1px solid var(--frame);background:var(--track);box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}.rail .tab{text-align:left;padding:10px 12px}.rail .tab.hover{background:var(--hover);border-color:var(--frame)}.rail .tab.active{background:var(--pink);border-color:#16112a;color:#16112a;box-shadow:var(--bevel)}.rail .tab.active:after{content:' ▌';color:#7a3f6d}.rail-wrap{display:flex;gap:14px;align-items:flex-start}.rail-note{font-size:12px;color:var(--muted);max-width:165px}.key{color:#ffb8e6}footer{margin-top:25px;color:#a294c8;font-size:12px}
+@media(max-width:760px){body{padding:20px}.board{grid-template-columns:1fr}.samples{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<h1>P1-G2 · tabs-tab 状态契约</h1><p class="intro">静态状态板：每个状态都由独立 tab 展示；indicator 标记其槽位，但像素皮肤中隐藏，避免双重选中提示。</p>
+<main class="board">
+<section class="panel"><h2>横向像素款</h2><div class="samples">
+<div class="sample"><div class="caption">01 · 未选中</div><div class="tabs"><button class="tab">活动</button></div><div class="indicator"></div></div>
+<div class="sample"><div class="caption">02 · hover</div><div class="tabs"><button class="tab hover">活动</button></div><div class="indicator"></div></div>
+<div class="sample"><div class="caption">03 · 选中</div><div class="tabs"><button class="tab active">活动</button></div><div class="indicator"></div></div>
+<div class="sample"><div class="caption">04 · 禁用 / indicator</div><div class="tabs"><button class="tab" aria-disabled="true">不可用</button></div><div class="indicator"></div></div>
+</div></section>
+<section class="panel"><h2>竖向 rail 款</h2><div class="samples">
+<div class="sample"><div class="caption">01 · 未选中</div><div class="rail"><button class="tab">系统</button></div><div class="indicator"></div></div>
+<div class="sample"><div class="caption">02 · hover</div><div class="rail"><button class="tab hover">界面</button></div><div class="indicator"></div></div>
+<div class="sample"><div class="caption">03 · 选中</div><div class="rail"><button class="tab active">社交</button></div><div class="indicator"></div></div>
+<div class="sample"><div class="caption">04 · indicator 位置</div><div class="rail-wrap"><div class="rail"><button class="tab">系统</button><button class="tab active">界面</button></div><div class="rail-note"><span class="key">滑动 indicator</span><br>该像素方案隐藏。active tab 自己绘制粉色选中面。</div></div><div class="indicator"></div></div>
+</div></section>
+</main>
+<footer>配色与结构用于展示职责，不代表 DOM 实际尺寸。indicator 虚线标注仅作位置提示；真实像素样式 display:none。</footer>
+</body></html>

@@ -1,0 +1,230 @@
+/* SECTION feed-badges */
+/* ==========================================================================
+   R4 · dynamic-list (feed) type icons & badges            feed-badges.css
+   Concatenate LAST in build-runtime.mjs (after body-typography). Main app is
+   read-only; every selector below is anchored on a class/attribute that the
+   application writes as a literal (evidence in ../research/feed-r4.md).
+   No DOM is invented, no text is replaced; row heights, spacer heights and the
+   virtual rows' translateY are never touched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   5a · type-column glyphs were reported as "not pixelated" while map-pin and
+   person-standing looked fine. The class audit shows the opposite of a missing
+   selector: all 257 lucide identifiers imported by src SSR-render a class that
+   IS inside jirai-icons.css' `svg.lucide:is(...)` union (only the jsdom-only
+   grid-3x3 is out). The real defect is the icon BOX: FeedTypeIndicator renders
+   its glyph with `size-3.5` (14px, FeedTypeIndicator.tsx:43), so a 16x16 pixel
+   mask is resampled by 0.875 and loses ~27% of its lit pixels
+   (checks/r4-feed-badges/sharpness.json: pencil-line 58 solid px at 14px vs 79
+   at 16px). Sparse 1px drawings degrade far more than solid ones, which is why
+   only the pencil read as "an ordinary lucide stroke". Put the glyph back on the
+   16px integer grid; the label span has min-w-0/truncate and the row height is
+   set by the table/grid, so nothing reflows vertically.
+   The anchor is the component's own wrapper span plus the aria-hidden svg it
+   renders (FeedTypeIndicator.tsx:39-45); FeedStatusBadge uses the same wrapper
+   classes but has no svg child, so it is not matched.
+   Scope note: `grep -rn "inline-flex min-w-0 items-center gap-1.5" src` returns
+   four more TypeIndicator twins that emit the identical
+   wrapper + `size-3.5 shrink-0` aria-hidden lucide glyph — GameLogType-
+   Indicator.tsx:40, FriendLogViewParts.tsx:100, ModerationViewParts.tsx:53,
+   MyAvatarsViewParts.tsx:169. They are the same widget family over the same
+   icon set, so they move to the same grid in one go; leaving them at 14px would
+   make the identical glyph two different sizes in one app. ------------------ */
+span.inline-flex.min-w-0.items-center.gap-1\.5:has(> svg.lucide[aria-hidden='true'])
+    > svg.lucide[aria-hidden='true'] {
+    width: 16px;
+    height: 16px;
+    /* mask-size:contain then blits 16x16 -> 16x16 with no resampling. */
+    -webkit-mask-size: 16px 16px;
+    mask-size: 16px 16px;
+}
+
+/* --------------------------------------------------------------------------
+   5b · the "status change" detail cell printed two round dots
+   (`size-2.5 shrink-0 rounded-full` in FeedStatusBadge.tsx:22-25) next to a
+   lucide arrow, while the friend avatars in the rail already show square pixel
+   status blocks (windose-runtime.css:105 zeroes the radius of the rail's
+   `size-3.75` status spans). Square the feed dots and give them the same 1px
+   dark keyline so both surfaces read as the same material. The status fill is
+   untouched: it still comes from the row's --status-* class
+   (feedRows.ts resolveFeedStatusMeta). box-shadow, not border/outline, because
+   it is the only way to draw the keyline without changing the 10px box. ------ */
+span.inline-flex.min-w-0.items-center.gap-1\.5:has(> span.size-2\.5.rounded-full)
+    > span.size-2\.5.rounded-full {
+    border-radius: 0;
+    box-shadow: 0 0 0 1px #16112a;
+}
+
+/* The expanded row (FeedExpandedRow.tsx:131-146) wraps the same component in a
+   plain `span.inline-flex.items-center.gap-1.5`, and the component emits the
+   min-w-0 wrapper itself, so the rule above already covers it. Intentional
+   non-targets, verified by class shape: the accent swatch in
+   themes/components/AccentColorPicker.tsx:82,101 and the community dots in
+   charts/components/mutual-friends/*.tsx sit directly under a Button, not under
+   an `inline-flex min-w-0 items-center gap-1.5` span. */
+
+/* --------------------------------------------------------------------------
+   5c · region chips ("JP" / "USE" / "USW" / "EU" / "US", RegionCodeBadge.tsx:
+   32-42) shipped as `rounded border bg-muted/70 text-muted-foreground font-mono
+   text-[10px]`: a 4px-radius translucent pill in low-contrast grey on grey.
+   Rebuild them as Windose chips: square corners, one hard --wd-frame keyline,
+   an opaque raised face and bright pixel-type label. The literal class list is
+   the component's own; h-4 (16px) is kept so no row can grow. -------------- */
+span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
+    border-radius: 0;
+    border: 1px solid var(--wd-frame);
+    background-color: var(--wd-raised);
+    color: var(--wd-square);
+    /* "WD Pixel CJK" (Fusion) — real lowercase + accents, unlike Silkscreen. */
+    font-family: var(--wd-body-font-family);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    /* 1px stair notch on the two outer corners; the keyline follows the cut. */
+    clip-path: polygon(
+        1px 0,
+        100% 0,
+        100% calc(100% - 1px),
+        calc(100% - 1px) 100%,
+        0 100%,
+        0 1px
+    );
+}
+
+/* Chips that sit on a hovered/selected feed row keep their own opaque face:
+   the row's translucent hover surface must not show through the label. */
+.feed-column-row-new span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\],
+[data-feed-list-summary]:hover
+    span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
+    background-color: var(--wd-title);
+}
+
+/* SECTION settings */
+/* ==========================================================================
+   R4 · settings-page pixel components (independent sub-task).
+   Scope: the settings rail and settings cards are limited to the settings page,
+   identified structurally as the vertical Tabs that is a DIRECT child of the page
+   scaffold (.vrcx-0-page-scaffold > [data-slot=tabs]) — SettingsPage.tsx:67-77;
+   ToolsPageContent.tsx:817 nests its Tabs in a grid div, SidePanel.tsx:389 is not
+   inside a scaffold. (Was: the style class w-44 on the TabsList.) Switch / segmented group / number
+   stepper are global control primitives by design (see research notes).
+   Evidence: SSR dump checks/r4-settings-pixel/ssr-probe.txt,
+   switch.tsx:19/26, toggle-group.tsx:34-42, number-field.tsx:50-102,
+   SettingsCard.tsx:50-97, card.tsx / collapsible.tsx / tabs.tsx data-slots.
+   Artwork: inline data: URIs plus the existing --jk-mask-* set (jirai-assets.css).
+   No imports, no remote URL, no fabricated DOM, no layout/virtual-row changes.
+   ========================================================================== */
+:root{
+ --jk-px-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 2px),0 calc(100% - 2px));
+}
+
+/* (7) Switch: removed by Leader — user chose concept C (heart / bandage-X knobs);
+   the single Switch implementation lives in runtime/pixel-controls.css. */
+
+/* --------------------------------------------------------------------------
+   (7) Number stepper ("− 60 +"): sunken pixel value slot + two bevel squares.
+   data-slot=number-field-group/-input/-decrement/-increment (number-field.tsx).
+   The lucide −/+ is replaced by an 8x8 native-size pixel glyph mask.
+   -------------------------------------------------------------------------- */
+[data-slot=number-field-group]{border:1px solid #16112a;border-radius:0;background-color:#120d22;box-shadow:inset 1px 1px rgb(0 0 0/.55),inset -1px -1px #8f7fe0;clip-path:var(--jk-px-cut)}
+[data-slot=number-field-group]:focus-within{outline:2px solid #ff7fcf;outline-offset:1px}
+[data-slot=number-field-decrement]:focus-visible,[data-slot=number-field-increment]:focus-visible{outline:2px solid #16112a;outline-offset:-2px}
+[data-slot=number-field-input]{height:20px;line-height:20px;padding:0 6px;background-color:transparent;color:#f2ebff;font-size:12px}
+[data-slot=number-field-decrement],[data-slot=number-field-increment]{width:20px;height:20px;padding:0;border:0;border-radius:0;background-color:#cdb0e8;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+[data-slot=number-field-decrement]:hover,[data-slot=number-field-increment]:hover{background-color:#e3cbf2}
+[data-slot=number-field-decrement]:active,[data-slot=number-field-increment]:active{box-shadow:inset 2px 2px #7a3f6d,inset -2px -2px #fdf4ff}
+[data-slot=number-field-decrement] > svg,[data-slot=number-field-increment] > svg{display:none}
+[data-slot=number-field-decrement]::before,[data-slot=number-field-increment]::before{content:"";position:absolute;width:8px;height:8px;background-color:#16112a;pointer-events:none;mask:var(--jk-asset-number-stepper-minus) 0 0/8px 8px no-repeat}
+[data-slot=number-field-increment]::before{mask-image:var(--jk-asset-number-stepper-plus)}
+
+/* --------------------------------------------------------------------------
+   (6)④ Segmented groups (SettingsField SegmentedPreference => ToggleGroup
+   variant="outline" size="sm", toggle-group.tsx:34-42, SettingsField.tsx:175-198).
+   Unselected = dark sunken face, selected = light pink face + 1px ink frame +
+   bevel + dark text, both with hover feedback. tooltip-trigger is included
+   because TooltipTrigger overrides data-slot (tooltip.tsx:27,
+   ToolbarControls.tsx:350 wraps a ToggleGroupItem).
+   -------------------------------------------------------------------------- */
+[data-slot=toggle-group][data-variant=outline]{border:1px solid #16112a;border-radius:0;background-color:#201936;gap:0;clip-path:var(--jk-px-cut)}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]){border:0;border-radius:0;background-color:#201936;color:#b9add9;box-shadow:inset 1px 1px rgb(0 0 0/.5),inset -1px -1px #8f7fe0}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])::before{border-radius:0}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):hover{background-color:#4a3784;color:#f2ebff;box-shadow:inset 1px 1px #8f7fe0,inset -1px -1px rgb(0 0 0/.5)}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])[data-pressed]{background-color:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d,inset 0 0 0 1px #16112a}
+[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]{width:2px;background-color:#16112a}
+[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]::before{display:none}
+
+/* --------------------------------------------------------------------------
+   (6)① Settings rail (系统/界面/社交…) as a pixel window list.
+   -------------------------------------------------------------------------- */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px 3px 12px;gap:1px;border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;clip-path:var(--jk-px-cut)}
+/* Lace fringe inside the rail's bottom padding. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]::after{content:"";position:absolute;left:3px;right:3px;bottom:2px;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
+/* The app's sliding indicator would double the selected face; the app already
+   hides it this way in SidePanel.tsx:502. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tab-indicator]{display:none}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]{border:1px solid transparent;border-radius:0;background-color:transparent;color:#b9add9;box-shadow:none}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab] .lucide{color:inherit;opacity:1}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:hover{background-color:#4a3784;border-color:#6c5ce0;color:#f2ebff}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]{background-color:#ffb8e6;border-color:#16112a;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]:focus-visible{outline-color:#16112a}
+
+/* --------------------------------------------------------------------------
+   (6)②③ Settings cards: pixel window title bar + bow charm + lace, and
+   stair-stepped corners instead of right angles. SettingsCard.tsx:50-97.
+   -------------------------------------------------------------------------- */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card]{border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-content]{border-radius:0}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
+/* 24x16 bow charm at its native 1:1 size. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);width:24px;height:16px;background-color:#ffb8e6;pointer-events:none;mask:var(--jk-mask-s6) 0 0/24px 16px no-repeat}
+/* Lace fringe hangs inside the title bar's 10px bottom padding, below the text. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
+
+/* SECTION pixel-controls */
+/* R4 pixel controls: Switch / scrollbars / Progress. Original pixel art, data: URIs only. Source-evidenced selectors (see research/pixel-controls-r4.md). */
+:root{--pc-up:var(--jk-asset-switch-knob-off-x);--pc-dn:var(--jk-asset-switch-knob-off-x-2);--pc-lt:var(--jk-asset-switch-knob-off-x-3);--pc-rt:var(--jk-asset-switch-knob-off-x-4)}
+/* Switch: Windose sunken slot + ON/OFF lamp, plaster-X knob (off) / heart knob (on) */
+[data-slot=switch]{width:46px;height:22px;border:1px solid #16112a;border-radius:0;background:#120d22;box-shadow:inset 1px 1px #000,inset -1px -1px #8f7fe0;transition:none}
+[data-slot=switch][data-size=sm]{width:44px;height:20px}
+[data-slot=switch]::before{content:"";position:absolute;top:7px;right:6px;width:12px;height:5px;background:var(--jk-asset-switch-knob-off-x-5) 0 0/12px 5px no-repeat;pointer-events:none}
+[data-slot=switch][data-checked]::before{right:auto;left:8px;width:9px;background:var(--jk-asset-switch-knob-on-heart) 0 0/9px 5px no-repeat}
+[data-slot=switch][data-size=sm]::before{top:6px;right:5px}
+[data-slot=switch][data-size=sm][data-checked]::before{right:auto;left:7px}
+[data-slot=switch-thumb]{width:18px;height:18px;margin-left:1px;border-radius:0;box-shadow:none;background:var(--jk-asset-switch-thumb-off) 0 0/18px 18px no-repeat;translate:0;transition:translate .16s steps(3,end)}
+[data-slot=switch-thumb][data-checked]{background-image:var(--jk-asset-switch-thumb-on-heart);translate:24px 0}
+[data-size=sm]>[data-slot=switch-thumb]{margin-left:0}
+[data-size=sm]>[data-slot=switch-thumb][data-checked]{translate:24px 0}
+[data-slot=switch][data-disabled]{opacity:.45;filter:saturate(.35)}
+[data-slot=switch]:focus-visible{outline:2px solid #ffb8e6;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){[data-slot=switch-thumb]{transition:none}}
+/* Native scrollbars: app sets scrollbar-width/color on *, which disables ::-webkit-scrollbar in Chromium 121+ */
+*:not(.no-scrollbar,.base-ui-disable-scrollbar){scrollbar-width:auto;scrollbar-color:auto}
+::-webkit-scrollbar{width:14px;height:14px;background:#2a2147}
+::-webkit-scrollbar-track{background:#2a2147;box-shadow:inset 0 0 0 1px #6c5ce0}
+::-webkit-scrollbar-thumb{background:#ff7fcf var(--jk-asset-scrollbar-thumb-vertical) 50% 50%/6px 8px no-repeat;border:1px solid #16112a;border-radius:0;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}
+::-webkit-scrollbar-thumb:horizontal{background-image:var(--jk-asset-scrollbar-thumb-horizontal);background-size:8px 6px}
+::-webkit-scrollbar-thumb:hover{background-color:#ffb8e6}
+::-webkit-scrollbar-corner{background:#201936}
+::-webkit-scrollbar-button{display:none}
+::-webkit-scrollbar-button:single-button{display:block;width:14px;height:14px;background:var(--pc-up) 0 0/14px 14px no-repeat}
+::-webkit-scrollbar-button:single-button:vertical:increment{background-image:var(--pc-dn)}
+::-webkit-scrollbar-button:single-button:horizontal:decrement{background-image:var(--pc-lt)}
+::-webkit-scrollbar-button:single-button:horizontal:increment{background-image:var(--pc-rt)}
+/* Base UI ScrollArea: padding reserves the arrow cells (Base UI subtracts scrollbar padding from thumb travel) */
+[data-slot=scroll-area-scrollbar]{border:0;border-radius:0;background:#2a2147;box-shadow:inset 0 0 0 1px #6c5ce0}
+[data-slot=scroll-area-scrollbar][data-orientation=vertical]{width:14px;padding:14px 0;background:var(--pc-up) 0 0/14px 14px no-repeat,var(--pc-dn) 0 100%/14px 14px no-repeat,#2a2147}
+[data-slot=scroll-area-scrollbar][data-orientation=horizontal]{height:14px;padding:0 14px;background:var(--pc-lt) 0 0/14px 14px no-repeat,var(--pc-rt) 100% 0/14px 14px no-repeat,#2a2147}
+[data-slot=scroll-area-thumb]{border-radius:0;background:#ff7fcf var(--jk-asset-scroll-area-thumb-vertical) 50% 50%/6px 8px no-repeat;border:1px solid #16112a;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}
+[data-orientation=horizontal]>[data-slot=scroll-area-thumb]{background-image:var(--jk-asset-scroll-area-thumb-horizontal);background-size:8px 6px}
+[data-slot=scroll-area-thumb]:hover{background-color:#ffb8e6}
+/* Progress: sunken slot + fixed-size pink cells (tile 10x8, no stretching) */
+[data-slot=progress-track]{box-sizing:content-box;height:12px;padding:0 2px;border:1px solid #16112a;border-radius:0;background:#120d22;box-shadow:inset 1px 1px #000,inset -1px -1px #8f7fe0}
+[data-slot=progress-indicator]{border-radius:0;background:var(--jk-asset-progress-pink-cells) 0 50%/10px 8px repeat-x}
+.indeterminate-progress [data-slot=progress-indicator]{animation-timing-function:steps(10,end)}
+[data-slot=skeleton]{animation-timing-function:steps(3,end)}
+[data-slot=spinner]{animation-timing-function:steps(8,end)}
+

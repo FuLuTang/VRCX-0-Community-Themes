@@ -1,0 +1,208 @@
+/* SECTION banner-frame-r96 */
+.entity-dialog [data-slot="card-header"]>div.relative:has(>button[class*="aspect-[4/3]"][aria-label]):has(>.absolute.bottom-3.left-3.z-30.size-16){--r9-banner-stitch-opacity:.52;--r9-banner-hem-opacity:.96;--r96-banner-frame-image:var(--jk-asset-user-dialog-banner-hem-lace-2)}
+.entity-dialog [data-slot="card-header"]>div.relative:has(>button[class*="aspect-[4/3]"][aria-label]):has(>.absolute.bottom-3.left-3.z-30.size-16)::before{content:"";position:absolute;inset:-4px;z-index:20;pointer-events:none;background:var(--r96-banner-frame-image) center/100% 100% no-repeat;image-rendering:pixelated}
+.entity-dialog [data-slot="card-header"]>div.relative:has(>button[class*="aspect-[4/3]"][aria-label]):has(>.absolute.bottom-3.left-3.z-30.size-16)>[data-slot="button"][class*="aspect-[4/3]"]::before{z-index:21;background-color:#F3ADD9}
+.entity-dialog [data-slot="card-header"]>div.relative:has(>button[class*="aspect-[4/3]"][aria-label]):has(>.absolute.bottom-3.left-3.z-30.size-16)>[data-slot="button"][class*="aspect-[4/3]"]::after{z-index:22;background-color:#D97FC6}
+.entity-dialog [data-slot="card-header"]>div.relative:has(>button[class*="aspect-[4/3]"][aria-label]):has(>.absolute.bottom-3.left-3.z-30.size-16)>[data-slot="button"][class*="aspect-[4/3]"]>span.relative.size-full::after{z-index:23}
+
+/* SECTION privacy-lock-r96 */
+/* R9.6 privacy-lock surface only. Paint-only: keep Popup/card geometry, focus and PIN keyboard semantics. */
+[data-vrcx-0-surface="privacy-lock"] > div[class~="bg-popover/80"][class~="rounded-2xl"][class~="ring-1"]:is([class~="max-w-xs"], [class~="max-w-sm"]) {
+  border-radius: 2px;
+  background-color: var(--wd-window, #201936);
+  background-image: linear-gradient(to right, var(--wd-pink, #ff7fcf) 0 36px, var(--wd-frame, #6c5ce0) 36px 100%);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  color: var(--wd-text, #f2ebff);
+  box-shadow: 0 0 0 1px var(--wd-frame, #6c5ce0), 4px 4px 0 #100b1e, inset 1px 1px rgb(253 244 255 / .16), inset -1px -1px #16112a;
+}
+
+/* PrivacyLockOverlay imports Base UI Title directly (not the shared DialogTitle wrapper). */
+[data-vrcx-0-surface="privacy-lock"] > div[class~="bg-popover/80"][class~="rounded-2xl"] > :is(h1, h2, h3)[class~="text-base"][class~="font-medium"] {
+  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
+  font-synthesis: none;
+}
+
+/* Match the status-bar pixel lamp while retaining each semantic fill and blink state. */
+[data-vrcx-0-surface="privacy-lock"] span[class~="inline-block"][class~="size-2"][class~="rounded-full"] {
+  border: 1px solid var(--jk-chrome-edge, #1a1226);
+  border-radius: 0;
+  background-image: none;
+  box-shadow: inset -1px -1px 0 rgb(0 0 0 / .28);
+}
+
+/* R10 fields-toolbar already provides this treatment; scope it here as a lock-surface guarantee. */
+[data-vrcx-0-surface="privacy-lock"] [data-slot="input-otp-slot"][data-active="true"] {
+  border-color: var(--wd-pink, #ff7fcf);
+  outline: 2px solid var(--wd-pink, #ff7fcf);
+  outline-offset: 1px;
+}
+
+/* The overlay is portaled outside main-content; buttons-badges-r10 does not own it. */
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"] {
+  border: 1px solid #8c71b0;
+  border-radius: 2px;
+  background-color: #3b2c55;
+  color: #f2ebff;
+  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
+}
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"] {
+  border: 1px solid var(--wd-frame, #6c5ce0);
+  border-radius: 2px;
+  background-color: var(--wd-pink, #ff7fcf);
+  color: #16112a;
+  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
+}
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
+[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"]:hover:not(:disabled) {
+  border-color: var(--wd-pink, #ff7fcf);
+  background-color: var(--wd-select, #4a3784);
+  color: var(--wd-text, #f2ebff);
+}
+
+/* SECTION brand-heart-r97 */
+/* R9.7 brand heart (Q7, replaces brand-heart-r96.css): three independent native pixel grids
+   9x7 / 10x8 / 11x9 (original-assets/r97-heart), drawn 1:1 - background-size equals each grid,
+   no fractional scaling, so every cell stays exactly 1 CSS px. Multicolor art => background-image;
+   this is now the single owner of heart art/geometry; mask:none is retained defensively so no inherited mask can clip the multicolor pixels.
+   Box 11x9 = largest frame. right:-12px keeps the left edge at brand right +1px (as before),
+   inside the 21px trigger padding. Vertical: top:calc(50% - 4px) with transform:none puts the box
+   on the brand's 9px cap-height ink rows (brand top +2..+10). The inherited translateY(-50%) would
+   be -4.5px on a 9px box: a fractional transform makes Chromium anti-alias the tip row.
+   Integer background-position per frame: "center" would put the 10x8 frame half a pixel off. */
+.vrcx-0-titlebar[data-app-titlebar]{--jk-r97-heart-s:var(--jk-asset-pixel-heart);--jk-r97-heart-m:var(--jk-asset-pixel-heart-2);--jk-r97-heart-l:var(--jk-asset-pixel-heart-3)}
+
+.vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand::after{
+  top:calc(50% - 4px);right:-12px;width:11px;height:9px;transform:none;
+  -webkit-mask:none;mask:none;background-color:transparent;
+  background-image:var(--jk-r97-heart-m);background-position:1px 1px;background-repeat:no-repeat;background-size:10px 8px;
+  image-rendering:pixelated;
+  animation:r97-brand-heart-pixels 2.5s steps(1,end) infinite;
+}
+@media (prefers-reduced-motion:reduce){
+  .vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand::after{animation:none!important;background-image:var(--jk-r97-heart-m)!important;background-size:10px 8px!important;background-position:1px 1px!important}
+}
+html.reduce-effects .vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand::after{animation:none!important;background-image:var(--jk-r97-heart-m)!important;background-size:10px 8px!important;background-position:1px 1px!important}
+
+/* SECTION cat-motion-r96 */
+/* R96 · Windows: cats too slow/faint. Discrete integer hops. Nav (2x art): 2px grid,
+   peak 8px. SOCIAL (1x): 1px grid, peak 4px; box grows upward only, ground y=22. */
+
+
+.vrcx-0-sidebar-surface [data-sidebar="content"]::after{opacity:1;animation:r96-nav-cat 2s step-end infinite}
+.vrcx-0-side-panel::after{top:0;height:22px;opacity:1;background-position:0 5px,24px 4px;animation:r96-social-cat 2s step-end -1s infinite}
+@media(prefers-reduced-motion:reduce){
+.vrcx-0-sidebar-surface [data-sidebar="content"]::after,.vrcx-0-side-panel::after{animation:none!important;transform:none;opacity:1}
+}
+html.reduce-effects .vrcx-0-sidebar-surface [data-sidebar="content"]::after,html.reduce-effects .vrcx-0-side-panel::after{animation:none!important;transform:none;opacity:1}
+
+/* SECTION dialog-header-r97 */
+/* R9.7 header with actions (flex-row / non-title child holding a button, e.g. AssistantDialog): whole header = r9 pink title bar, one row. */
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"])[class~=p-0]>:is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):is(.flex-row,:has(>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]),:is([data-slot="alert-description"],[data-slot="card-description"],[data-slot="empty-description"],[data-slot="field-description"],[data-slot="toast-description"])) button)){--r9-dialog-inset:0px}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog)>:is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only):is(.flex-row,:has(>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]),:is([data-slot="alert-description"],[data-slot="card-description"],[data-slot="empty-description"],[data-slot="field-description"],[data-slot="toast-description"])) button)){flex-direction:row;justify-content:space-between;gap:8px;min-height:30px;padding:0 calc(var(--r9-dialog-inset,1rem) + 4px) 0 0;border-bottom:1px solid var(--r9-dialog-frame);background:var(--r9-dialog-pink);color:var(--r9-dialog-ink)}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog)>:is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only):is(.flex-row,:has(>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]),:is([data-slot="alert-description"],[data-slot="card-description"],[data-slot="empty-description"],[data-slot="field-description"],[data-slot="toast-description"])) button))>:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]){flex:1 1 auto;min-width:0;margin:0;padding-inline:calc(var(--r9-dialog-inset,1rem) + 9px) 0;border:0;background:none}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog)>:is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only):is(.flex-row,:has(>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]),:is([data-slot="alert-description"],[data-slot="card-description"],[data-slot="empty-description"],[data-slot="field-description"],[data-slot="toast-description"])) button))>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"])) :is(button,.text-muted-foreground){border-radius:0;color:var(--r9-dialog-ink)}
+/* AssistantDialog health dot (HEALTH_DOT_CLASS .size-2.rounded-full): square 1px ink ring so the
+   semi-transparent unconfigured fill stays readable on the pink bar; source fill colours kept. */
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog)>:is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only):is(.flex-row,:has(>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]),:is([data-slot="alert-description"],[data-slot="card-description"],[data-slot="empty-description"],[data-slot="field-description"],[data-slot="toast-description"])) button))>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"])) .size-2.rounded-full{border-radius:1px;box-shadow:0 0 0 1px var(--r9-dialog-ink)}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog):not(.owner-dialog)>:is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only):is(.flex-row,:has(>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"]),:is([data-slot="alert-description"],[data-slot="card-description"],[data-slot="empty-description"],[data-slot="field-description"],[data-slot="toast-description"])) button))>:not(:is([data-slot="alert-dialog-title"],[data-slot="alert-title"],[data-slot="card-title"],[data-slot="dialog-title"],[data-slot="empty-title"],[data-slot="sheet-title"],[data-slot="toast-title"])) button:is(:hover,:focus-visible,[aria-expanded=true],.bg-card){background:var(--r9-dialog-ink);color:var(--r9-dialog-pink)}
+
+/* SECTION loader-r97 */
+/* R9.7 loader routing (inventory: checks/r97-loader/inventory.md).
+   A = page/block loaders -> loader-r9 dancer (reuses its sheet vars + keyframes).
+   B = button/inline spinners -> stepped pixel ring; static refresh icons untouched. */
+:root{--jk-dance:jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames),end) infinite}
+svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation-timing-function:steps(8,end)}
+div.justify-center.gap-2:not([data-slot],.min-h-\[72px\]):has(>svg:is([data-slot=spinner],.animate-spin)){flex-direction:column;gap:10px}
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg:is([data-slot=spinner],.animate-spin),.inset-0>svg.text-muted-foreground[data-slot=spinner],svg.my-8[data-slot=spinner]{
+  display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
+  background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
+  image-rendering:pixelated;animation:var(--jk-dance)!important;
+  transform:none;rotate:none;color:transparent;opacity:1;-webkit-mask:none;mask:none
+}
+@media(prefers-reduced-motion:reduce){
+  :root{--jk-dance:none}
+  svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation:none!important}
+}
+html.reduce-effects{--jk-dance:none}
+html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg){animation:none!important}
+
+/* SECTION cards-r97 */
+/* R9.7 Q3+Q4 · pixel cards (Settings + Tools) and outward-hanging lace.
+   Tools reuses SettingsCard (ToolsPageContent.tsx:456-476, anchor [data-tools-section]); its rail is the
+   vertical Tabs right before the card column (:816-845). Lace head hangs on the OUTER edge of the frame
+   line, tails outward. Charm = --jk-r97-card-charm (Q5 #3 pill, original-assets/r97-charm/cand-3-pill.svg,
+   16x8 multi-colour, 1:1 centred in the 24x16 box). Lace = --jk-r97-lace-px, native 16x8 grid. */
+:root{
+ --jk-r97-card-charm:var(--jk-asset-lace-tile-2);
+ --jk-r97-lace-px:var(--jk-asset-lace-tile-3);
+ --jk-r97-lace:var(--jk-r97-lace-px) 0 0/16px 8px repeat-x;
+ --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
+}
+/* Rails: keep the stair corners, open an 8px strip under the bottom edge, hang the lace there. */
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+/* settings-pixel.css:57 padded the rail bottom to 12px for the old in-frame lace; back to the 3px of its other sides. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+/* Tools cards: same face as Settings (settings-pixel.css:74-78). */
+[data-tools-section] [data-slot=card]{position:relative;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
+[data-tools-section] [data-slot=card]::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid #6c5ce0;pointer-events:none}
+[data-tools-section] [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
+[data-tools-section] [data-slot=card-content]{border-radius:0}
+[data-tools-section] [data-slot=card-content] .rounded-b-xl{border-radius:0}
+[data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
+[data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
+/* Charm (both pages): 24x16 box, position unchanged; top floored to whole px. Multi-colour, so no mask. */
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header] [data-slot=collapsible-trigger]::before{content:"";position:absolute;left:7px;top:calc(50% - 8px);top:round(down,50% - 8px,1px);width:24px;height:16px;pointer-events:none;mask:none;background:var(--jk-r97-card-charm) center/16px 8px no-repeat;image-rendering:pixelated}
+/* Title-bar lace: head on the bar's bottom line, tails into the card body (inside the card clip). */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:none}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]{position:relative;z-index:1}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]::after{content:"";position:absolute;left:0;right:0;top:calc(100% + 1px);height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+
+/* SECTION splitter-r97 */
+/* R9.7 Q6 pixel splitter. ui/shadcn/resizable.tsx Separator[data-slot=resizable-handle];
+   react-resizable-panels 4.12 sets data-separator=inactive|hover|active|focus|disabled.
+   Paint only: ::after hit area, widths and panel layout stay source-owned.
+   WorkspaceResizeHandle = 8px .bg-transparent slot whose ::before is the line. */
+[data-slot=resizable-handle]{--jk-sl:#6c5ce0;--jk-sb:#16112a;--jk-sd:#ffb8e6}
+[data-slot=resizable-handle]:is([data-separator=hover],[data-separator=active]){--jk-sl:#ff7fcf;--jk-sd:#fdf4ff}
+[data-slot=resizable-handle][data-separator=active]{--jk-sb:#ff7fcf;--jk-sd:#16112a}
+[data-slot=resizable-handle]:not(.bg-transparent),[data-slot=resizable-handle].bg-transparent::before{background:var(--jk-sl);box-shadow:1px 0 #16112a}
+[data-slot=resizable-handle][aria-orientation=horizontal]:not(.bg-transparent){box-shadow:0 1px #16112a}
+[data-slot=resizable-handle].bg-transparent{box-shadow:none}
+[data-slot=resizable-handle].bg-transparent::before{left:calc(50% - 1px);translate:none}
+[data-slot=resizable-handle]:focus-visible{outline:1px dotted #ff7fcf;outline-offset:1px}
+/* withHandle grip: 4x16, 1px line-colour frame, ink well, three 2x2 dots (drag = filled/pressed);
+   horizontal keeps the source rotate-90. */
+[data-slot=resizable-handle]>div{width:4px;height:16px;border-radius:0;box-shadow:inset 0 0 0 1px var(--jk-sl);background:linear-gradient(#0000 2px,var(--jk-sd) 0 4px,#0000 0 7px,var(--jk-sd) 0 9px,#0000 0 12px,var(--jk-sd) 0 14px,#0000 0) 1px 0/2px 100% no-repeat var(--jk-sb)}
+@media (prefers-reduced-motion:reduce){[data-slot=resizable-handle],[data-slot=resizable-handle]::before{transition:none}}
+
+/* SECTION language-badges-r98 */
+/* R9.8: selected 01 BlackBerry/Pink language labels, not generic Badge styling.
+   FriendListColumns:308–330 and PlayerListColumns:350–366 render the same
+   TooltipTrigger span directly inside a wrapping div directly inside TableCell.
+   DataTableSurface supplies .vrcx-0-data-table in BOTH lists. TableCell has no
+   column-id attribute, so use the exact source-shaped structure + utility contract.
+   DashboardInstanceWidget:446–467 instead wraps the same span in another span;
+   it is intentionally excluded, as are h-4 JP region chips and other triggers.
+   Keep app-owned height/min-width/padding/wrap/gap, attributes, tooltip portals,
+   borders' width/style and all row/column layout. No pseudo-elements or motion. */
+.vrcx-0-data-table td[data-slot="table-cell"]
+  > div.flex.flex-wrap.items-center.gap-1
+  > span[data-slot="tooltip-trigger"].inline-flex.h-5.min-w-8.items-center.justify-center.rounded.border.px-1.font-mono.text-\[10px\].leading-none.font-semibold {
+  border-color: #ff7fcf;
+  border-radius: 0;
+  background-color: #211a33;
+  color: #ffd9ee;
+  background-image: linear-gradient(90deg, #fff1f8 0 2px, #ff7fcf 2px 100%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  font-family: var(--wd-body-font-family);
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 400;
+  font-synthesis: none;
+}
+

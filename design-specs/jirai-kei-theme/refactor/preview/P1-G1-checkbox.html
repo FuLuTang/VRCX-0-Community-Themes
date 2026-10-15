@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P1-G1 Checkbox 变体预览</title>
+<style>
+:root{color-scheme:dark;--page:#151020;--panel:#211a33;--ink:#f2ebff;--muted:#b8a9ca;--pink:#ffb8e6;--focus:#ff7fcf;--violet:#6c5ce0}
+*{box-sizing:border-box}body{margin:0;padding:32px;background:radial-gradient(ellipse at 50% -10%,#33244a,var(--page) 65%);color:var(--ink);font:15px/1.55 system-ui,"Noto Sans SC",sans-serif}
+main{max-width:1120px;margin:auto}h1{margin:0 0 8px;font-size:25px}p{color:var(--muted);margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{background:#201a2d;border:1px solid #57456f;padding:18px;min-height:178px;box-shadow:inset 1px 1px #332747,inset -1px -1px #16112a}.card h2{font-size:15px;margin:0 0 4px}.meta{font-size:12px;color:#b8a9ca;margin-bottom:22px}.row{display:flex;align-items:center;gap:12px;font-size:14px;color:#f2ebff}.box{position:relative;display:inline-block;width:14px;height:14px;flex:none;border:1px solid #8c71b0;border-radius:0;background:#211a33;color:#16112a;box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a}.checked{border-color:#6c5ce0;background:#ffb8e6;box-shadow:inset 1px 1px #fff0fa,inset -1px -1px #b15b9d}.checked:after{content:"";position:absolute;left:4px;top:1px;width:4px;height:7px;border:solid #16112a;border-width:0 2px 2px 0;transform:rotate(45deg)}.inventory-a{width:16px;height:16px;background:#201936;border-color:#6c5ce0;box-shadow:inset 1px 1px rgba(253,244,255,.18),inset -1px -1px #16112a}.inventory-b{background:#211a33;border-color:#8c71b0;box-shadow:inset 1px 1px #392a52,inset -1px -1px #16112a}.favorite-checked{border-color:#6c5ce0;background:#ffb8e6;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}.focus{outline:2px solid #ff7fcf;outline-offset:2px}.tag{display:inline-block;margin-left:auto;padding:2px 6px;border:1px solid #55436d;color:#d9c9ed;font-size:11px}footer{margin-top:22px;font-size:12px;color:#9e8cac}
+</style>
+</head>
+<body><main>
+<h1>P1-G1 · Checkbox 视觉变体</h1>
+<p>并排对照 inventory 的四个 fingerprint 与 theme.css 当前的状态规则。配色、边框和 inset 阴影按真实 computedStyle / CSS 声明呈现；非勾选卡片仅展示方框，不伪造状态。</p>
+<div class="grid">
+<section class="card"><h2>Inventory · 4b95ee99</h2><div class="meta">65 observations · 蓝紫边 / 蓝黑底</div><div class="row"><span class="box inventory-a"></span>观察到的方框<span class="tag">14px · #6c5ce0</span></div></section>
+<section class="card"><h2>Inventory · b3d96d0f</h2><div class="meta">19 observations · 紫灰边 / 暗底</div><div class="row"><span class="box inventory-b"></span>观察到的方框<span class="tag">14px · #8c71b0</span></div></section>
+<section class="card"><h2>Inventory · e8f36008</h2><div class="meta">14 observations · 与 b3d 同皮肤</div><div class="row"><span class="box inventory-b"></span>观察到的方框<span class="tag">仅 font-size 16px</span></div></section>
+<section class="card"><h2>Inventory · 1c15a77f</h2><div class="meta">2 observations · 与 b3d 同皮肤</div><div class="row"><span class="box inventory-b"></span>观察到的方框<span class="tag">仅 font-weight 500</span></div></section>
+<section class="card"><h2>CSS 当前 · 未选中</h2><div class="meta">form-controls-r9 · 通用 14px</div><div class="row"><span class="box"></span>未选中<span class="tag">#211a33</span></div></section>
+<section class="card"><h2>CSS 当前 · 已选中</h2><div class="meta">粉色面 + 深色勾号</div><div class="row"><span class="box checked"></span>已选中<span class="tag">#ffb8e6</span></div></section>
+<section class="card"><h2>CSS 当前 · 键盘焦点</h2><div class="meta">共享 focus-visible · 2px offset</div><div class="row"><span class="box focus"></span>未选中且聚焦<span class="tag">outline #ff7fcf</span></div></section>
+<section class="card"><h2>Favorites · tile checked</h2><div class="meta">页面局部覆盖 · 16px 方框</div><div class="row"><span class="box inventory-a favorite-checked"></span>tile 已选中<span class="tag">16px · 粉色</span></div></section>
+</div><footer>数据来源：component-variant-inventory.json 的 G1 checkbox 记录；theme.css 的 form-controls-r9 与 favorites-r9。预览独立内嵌样式，可离线双击打开。</footer>
+</main></body></html>

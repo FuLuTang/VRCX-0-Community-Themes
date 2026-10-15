@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jirai Kei Toggle · 四态可视化</title>
+<style>
+:root{color-scheme:dark;--ink:#16112a;--text:#f2ebff;--muted:#b9add9;--edge:#6c5ce0;--face:#211a33;--hover:#392a52;--pink:#ffb8e6;--hi:#fdf4ff;--shade:#7a3f6d}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:48px 28px;background:#171124;color:var(--text);font:16px/1.55 system-ui,"Noto Sans SC",sans-serif}
+main{max-width:1060px;margin:auto}.eyebrow{color:#ff9dd5;letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:700}h1{margin:.3em 0;font-size:clamp(28px,5vw,44px);line-height:1.15}p{color:#c5b7df}.grid{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:18px;margin:34px 0}.tile{padding:20px 16px 18px;background:#241b36;border:1px solid #44345f;box-shadow:inset 1px 1px #493758,inset -1px -1px #171124}.state{display:block;margin-bottom:15px;font-size:13px;color:#cbbde5;font-weight:650}.toggle{width:100%;min-height:74px;border:1px solid var(--edge);border-radius:0;background:var(--face);color:var(--muted);font:600 17px/1 system-ui,"Noto Sans SC",sans-serif;box-shadow:inset 1px 1px rgba(0,0,0,.5),inset -1px -1px #8f7fe0;cursor:pointer;transition:none}.hover{background:#3b2c55;color:var(--text);box-shadow:inset 1px 1px #8f7fe0,inset -1px -1px rgba(0,0,0,.5)}.pressed{background:var(--pink);color:var(--ink);border-color:var(--edge);box-shadow:inset 2px 2px var(--hi),inset -2px -2px var(--shade),inset 0 0 0 1px var(--ink);font-weight:750}.disabled{opacity:.55;cursor:not-allowed}.caption{margin-top:14px;font-size:12px;color:#b9add9}.legend{padding:16px 18px;border-left:3px solid #ff7fcf;background:#211a33;color:#ddd1ef}.legend strong{color:#ffb8e6}@media(max-width:720px){body{padding:28px 16px}.grid{grid-template-columns:repeat(2,minmax(130px,1fr));gap:12px}}@media(max-width:380px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">Jirai Kei · G2 component audit</div>
+<h1>Toggle 四态对照</h1>
+<p>主题实际 pressed/selected 面是粉色，并沿用 Win98 式<strong>凸起</strong> inset bevel：左上亮、右下暗。Hover 变紫，不会与按下态混淆。</p>
+<section class="grid" aria-label="toggle 四种状态">
+  <article class="tile"><span class="state">未按下 · resting</span><button class="toggle">☆ 收藏</button><div class="caption">暗紫面 · 浅紫字 · 轻微内阴影</div></article>
+  <article class="tile"><span class="state">Hover · pointer</span><button class="toggle hover">☆ 收藏</button><div class="caption">提亮紫面 · 近白字</div></article>
+  <article class="tile"><span class="state">按下 · pressed</span><button class="toggle pressed" aria-pressed="true">★ 已收藏</button><div class="caption">粉色面 · 墨色字 · 亮左上 / 暗右下凸起</div></article>
+  <article class="tile"><span class="state">禁用 · disabled</span><button class="toggle disabled" disabled>☆ 不可用</button><div class="caption">沿用常态配色 · opacity .55 · 禁止交互</div></article>
+</section>
+<div class="legend"><strong>视觉判读：</strong>按下不是把亮暗 inset 反转成凹陷；它切换为粉色底，并保留凸起方向。此页为静态状态对照，颜色/阴影按样式层证据绘制。</div>
+</main></body></html>
