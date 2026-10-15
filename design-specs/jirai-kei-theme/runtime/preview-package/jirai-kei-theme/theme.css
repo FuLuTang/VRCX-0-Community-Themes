@@ -3315,8 +3315,10 @@ html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(
   color:#f2ebff!important;
   box-shadow:var(--jk-field-inset)!important;
 }
-:where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]):focus-visible){
-  outline:2px solid #ff7fcf;outline-offset:1px;
+/* Button-backed dropdowns share the toolbar frame; native selects retain their bevel. */
+:where([data-slot="select-trigger"],[data-slot="combobox-trigger"]){
+  border-color:#6c5ce0!important;
+  background-color:#201936!important;
 }
 :where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]) > svg:is(.lucide-chevron-down,.lucide-chevrons-up-down)){
   width:12px;height:12px;
@@ -3328,7 +3330,9 @@ html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(
   background-repeat:no-repeat;background-position:right 8px center;background-size:12px 12px;
   padding-right:28px;
 }
-:where(select:focus-visible){outline:2px solid #ff7fcf;outline-offset:1px}
+:where(:is(select,[data-slot="select-trigger"],[data-slot="combobox-trigger"]):focus-visible){
+  outline:2px solid #ff7fcf;outline-offset:1px;
+}
 /* Ordinary inline spinner: existing pixel mask glyph, small and stepped (not the page loader). */
 :where([data-slot="spinner"]:is(.size-4,.size-3\.5)){
   animation:r5-spinner-step 1s steps(8,end) infinite;
