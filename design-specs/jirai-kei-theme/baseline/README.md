@@ -58,6 +58,17 @@ to make an independent run for determinism checks.
    stylesheet. The checker fails on missing/extra locators, tag/attribute identity changes,
    property-set changes, or any computed-style difference.
 
+6. Audit every distinct compiled selector against the frozen route/interaction DOMs (read-only;
+   output goes to `reports/selector-coverage.{json,md}`):
+
+   ```sh
+   node audit-selector-coverage.mjs
+   ```
+
+   The report distinguishes actual matches, pseudo-state structural candidates, pseudo-element
+   host matches, shadow-only selectors, and selectors with no match in the captured states; it
+   is not a claim about which declaration wins the CSS cascade.
+
 Playwright resolves from `../tools` or `/tmp/dsh-theme-tools`; to use another install set
 `PW_MODULE` to its package directory. Never call `browser.close()` on a `connectOverCDP`
 connection: that would close the user's live app.
@@ -96,5 +107,11 @@ connection: that would close the user's live app.
   theme CSS was passed through `--theme-css`; this proves the candidate comparison path
   replaces the intended layer and compares the full baseline, not just two identical runs.
   See `reports/step2-css-injection-equivalence.txt`.
+- Selector coverage against the same fixtures: **1,111 unique selector branches** from
+  1,114 qualified rules; 482 query hits (pseudo-element selectors are measured on their
+  host), 92 dynamic-state structural candidates, 531 with no match in these captured
+  states, and 6 pseudo-element-only scrollbar selectors. This is DOM presence, not cascade
+  wins. A previous planning estimate of 1,095 used a different/unverified counting scope;
+  the report pins the parser method and 42-state denominator.
 - `/login` remains a known limitation: while authenticated it redirects to the remembered
   page, so the real login form is not captured.

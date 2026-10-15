@@ -11,7 +11,7 @@ comparisons. Canonical route replay passed 34/34. After adding eight safe intera
 static replays passed **42/42** snapshots with zero missing paths, identity differences,
 or computed-style differences. `/activity` initially failed because avatar `animate-in`
 CSS animations completed at inconsistent times; replay now pauses animations at document
-parse time and pins them to the start frame. The final canonical 42-state refresh is running.
+parse time and pins them to the start frame. The final canonical 42-state refresh completed; 42 fixture files and 42 computed-style snapshots are present.
 
 Test
 ----
