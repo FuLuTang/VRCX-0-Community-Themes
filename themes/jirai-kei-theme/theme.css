@@ -4,6 +4,7 @@
 :root,
 :root.dark,
 .dark {
+  /* Core semantic palette and control tokens */
   --background: #161219;
   --foreground: #f7eef4;
   --card: #211b25;
@@ -24,6 +25,7 @@
   --input: #bdb3c2;
   --ring: #f0a8c8;
   --radius: 0.5rem;
+  /* Sidebar semantic palette */
   --sidebar: #211b25;
   --sidebar-foreground: #f7eef4;
   --sidebar-primary: #f0a8c8;
@@ -32,6 +34,7 @@
   --sidebar-accent-foreground: #f7eef4;
   --sidebar-border: #564151;
   --sidebar-ring: #f0a8c8;
+  /* Shared surface layers */
   --surface-canvas: #161219;
   --surface-shell: #211b25;
   --surface-panel: #211b25;
@@ -39,19 +42,23 @@
   --surface-overlay: #2b2230;
   --surface-interactive: #2b2230;
   --surface-interactive-hover: #392a38;
+  /* Text/content hierarchy */
   --content-primary: #f7eef4;
   --content-secondary: #c4aab9;
   --content-tertiary: #c4aab9;
   --content-disabled: #c4aab9;
+  /* Strokes and border emphasis */
   --stroke-subtle: #564151;
   --stroke-default: #564151;
   --stroke-strong: #bdb3c2;
   --border-subtle: #564151;
   --border-hover: #bdb3c2;
+  /* Interaction/selection states */
   --state-hover-surface: #392a38;
   --state-pressed-surface: #4a293d;
   --state-selected-surface: #4a293d;
   --state-selected-hover-surface: #392a38;
+  /* App shell and navigation surfaces */
   --vrcx-0-app-surface: #211b25;
   --vrcx-0-titlebar-surface: #211b25;
   --vrcx-0-main-surface: #211b25;
@@ -60,6 +67,7 @@
   --vrcx-0-sidebar-inset-surface: #211b25;
   --vrcx-0-side-panel-surface: #211b25;
   --vrcx-0-statusbar-surface: #211b25;
+  /* Data-table surfaces and dividers */
   --vrcx-0-table-surface: #211b25;
   --vrcx-0-table-header-surface: #2b2230;
   --vrcx-0-table-header-foreground: #f7eef4;
@@ -70,15 +78,18 @@
   --vrcx-0-table-border: #564151;
   --vrcx-0-table-divider: #564151;
   --vrcx-0-table-sticky-edge: #bdb3c2;
+  /* Toolbar/control surfaces */
   --vrcx-0-toolbar-control-surface: #2b2230;
   --vrcx-0-toolbar-control-hover-surface: #392a38;
   --vrcx-0-toolbar-control-border: #564151;
   --vrcx-0-toolbar-group-surface: #211b25;
   --vrcx-0-toolbar-group-border: #564151;
+  /* Main-content geometry and focus accents */
   --vrcx-0-main-content-radius: 0.5rem;
   --vrcx-0-main-content-edge: #564151;
   --vrcx-0-main-content-highlight: transparent;
   --vrcx-0-main-content-lift: none;
+  /* Resize accent and chart series */
   --vrcx-0-resize-accent-active: #f0a8c8;
   --chart-1: #f0a8c8;
   --chart-2: #b9cfa9;

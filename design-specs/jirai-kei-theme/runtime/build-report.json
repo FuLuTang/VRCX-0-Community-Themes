@@ -1,11 +1,11 @@
 {
-  "cssBytes": 1043966,
+  "cssBytes": 1044385,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
     {
       "name": "tokens",
-      "bytes": 2696
+      "bytes": 3115
     },
     {
       "name": "native-icons",

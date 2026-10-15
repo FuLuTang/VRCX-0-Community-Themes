@@ -141,5 +141,9 @@ connection: that would close the user's live app.
   This artifact has **149** `!important` declarations by PostCSS—not the older unverified 838
   note. See `reports/declaration-clusters.md` and its JSON companion; none of these counts
   implies a safe merge without source/context review and computed-style verification.
+- First user-approved base batch grouped the 81 `:root` design tokens with comments only;
+  names, values, and declaration order are unchanged. The rebuilt candidate remains under
+  the 1 MiB cap, and all 42 frozen states pass with zero computed-style differences.
+  Evidence: `reports/token-grouping-batch-01.md`.
 - `/login` remains a known limitation: while authenticated it redirects to the remembered
   page, so the real login form is not captured.
