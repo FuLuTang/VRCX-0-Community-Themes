@@ -3308,17 +3308,10 @@ html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(
   outline-offset:2px;
 }
 
+/* Select ink only. Radius, border, background and inset shadow are the shared
+   field frame in fields-toolbar-r10.css, together with fields and input groups. */
 :where(select,[data-slot="select-trigger"],[data-slot="combobox-trigger"]){
-  border-radius:0!important;
-  border-color:var(--jk-field-edge)!important;
-  background-color:#211a33!important;
-  color:#f2ebff!important;
-  box-shadow:var(--jk-field-inset)!important;
-}
-/* Button-backed dropdowns share the toolbar frame; native selects retain their bevel. */
-:where([data-slot="select-trigger"],[data-slot="combobox-trigger"]){
-  border-color:#6c5ce0!important;
-  background-color:#201936!important;
+  color:#f2ebff;
 }
 :where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]) > svg:is(.lucide-chevron-down,.lucide-chevrons-up-down)){
   width:12px;height:12px;
@@ -3513,11 +3506,11 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 }
 
 /* SECTION fields-toolbar-r10 */
-/* R10 G1 — unify the existing standalone-field and input-group outer-frame selectors.
-   Select/checkbox/range controls and nested buttons retain their own component rules. */
+/* R10 G1 — one shared outer frame for every field surface: standalone fields,
+   input groups and select controls (native select, SelectTrigger, ComboboxTrigger).
+   Toolbar/select icons are component content, not frame. */
 
-/* Shared inset shadow; native select borders retain the four-side edge token.
-   Standalone fields and input groups use the unified toolbar frame below. */
+/* Shared inset shadow for the unified field frame below. */
 :root{
   --jk-field-edge:#69557c #fdf4ff #fdf4ff #69557c;
   --jk-field-inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;
@@ -3582,13 +3575,18 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="input-group"]:has(> [data-slot="combobox-chips"]){
   color:#e3d2f5;
 }
-/* One toolbar-style outer frame for standalone fields and every input group.
-   Focus/error/disabled states and component content remain in their own rules. */
+/* One outer frame shared by all three field surfaces: a standalone field, an input
+   group and a select surface (native or button-backed). The toolbar's extra
+   magnifier icon and the select chevron are content, not frame, and stay out of
+   this layer. Focus/error/disabled states remain in their own rules. */
 :where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])),
-:where([data-slot="input-group"]){
+:where([data-slot="input-group"]),
+:where(:is(select,[data-slot="select-trigger"],[data-slot="combobox-trigger"])){
   background-color:#201936;
   border:1px solid #6c5ce0;
-  border-radius:0;
+  /* Square corners are forced: the select trigger carries app rounded-* utility
+     classes whose specificity outranks a zero-specificity rule. */
+  border-radius:0!important;
   box-shadow:var(--jk-field-inset);
 }
 :where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):focus-visible){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}

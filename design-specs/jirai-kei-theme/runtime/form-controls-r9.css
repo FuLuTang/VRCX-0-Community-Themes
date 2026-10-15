@@ -102,17 +102,10 @@
   outline-offset:2px;
 }
 
+/* Select ink only. Radius, border, background and inset shadow are the shared
+   field frame in fields-toolbar-r10.css, together with fields and input groups. */
 :where(select,[data-slot="select-trigger"],[data-slot="combobox-trigger"]){
-  border-radius:0!important;
-  border-color:var(--jk-field-edge)!important;
-  background-color:#211a33!important;
-  color:#f2ebff!important;
-  box-shadow:var(--jk-field-inset)!important;
-}
-/* Button-backed dropdowns share the toolbar frame; native selects retain their bevel. */
-:where([data-slot="select-trigger"],[data-slot="combobox-trigger"]){
-  border-color:#6c5ce0!important;
-  background-color:#201936!important;
+  color:#f2ebff;
 }
 :where(:is([data-slot="select-trigger"],[data-slot="combobox-trigger"]) > svg:is(.lucide-chevron-down,.lucide-chevrons-up-down)){
   width:12px;height:12px;
