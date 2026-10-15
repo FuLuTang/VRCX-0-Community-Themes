@@ -78,6 +78,15 @@ to make an independent run for determinism checks.
    This never reads or writes the live app and emits `reports/component-variant-inventory.{json,md}`.
    It is an evidence index, not permission to flatten different contexts into one rule.
 
+8. Compare exact and near CSS declaration blocks, join candidate selectors to static DOM coverage
+   and component-context fingerprints, and flag likely context boundaries:
+
+   ```sh
+   node audit-declaration-clusters.mjs
+   ```
+
+   This remains a CSS-only candidate audit; no cascade claim or automatic merge is made.
+
 Playwright resolves from `../tools` or `/tmp/dsh-theme-tools`; to use another install set
 `PW_MODULE` to its package directory. Never call `browser.close()` on a `connectOverCDP`
 connection: that would close the user's live app.
@@ -126,5 +135,11 @@ connection: that would close the user's live app.
   groups. The paint fingerprint is intentionally a warning signal: multiple fingerprints
   can be real state/context differences, not candidates to forcibly merge. Report:
   `reports/component-variant-inventory.md` (JSON companion carries safe sample values).
+- CSS-only declaration audit: 90 exact repeated declaration-block groups, 63 selector branches
+  redeclared across blocks, and 39 near-equivalent candidate pairs after strict similarity
+  thresholds; selectors are joined to frozen-DOM coverage and component-context fingerprints.
+  This artifact has **149** `!important` declarations by PostCSS—not the older unverified 838
+  note. See `reports/declaration-clusters.md` and its JSON companion; none of these counts
+  implies a safe merge without source/context review and computed-style verification.
 - `/login` remains a known limitation: while authenticated it redirects to the remembered
   page, so the real login form is not captured.
