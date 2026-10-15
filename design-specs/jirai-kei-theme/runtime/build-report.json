@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1043805,
+  "cssBytes": 1044553,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -145,7 +145,7 @@
     },
     {
       "name": "fields-toolbar-r10",
-      "bytes": 9439
+      "bytes": 10187
     },
     {
       "name": "overlays-r10",
