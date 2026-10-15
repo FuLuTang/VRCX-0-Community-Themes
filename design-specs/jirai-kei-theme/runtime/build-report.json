@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1044266,
+  "cssBytes": 1043805,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -121,7 +121,7 @@
     },
     {
       "name": "tools-ui-r9",
-      "bytes": 6877
+      "bytes": 6859
     },
     {
       "name": "avatars-status-r9",
@@ -145,7 +145,7 @@
     },
     {
       "name": "fields-toolbar-r10",
-      "bytes": 9746
+      "bytes": 9439
     },
     {
       "name": "overlays-r10",
@@ -157,7 +157,7 @@
     },
     {
       "name": "browse-history-r9",
-      "bytes": 7621
+      "bytes": 7485
     },
     {
       "name": "buttons-badges-r10",

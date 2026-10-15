@@ -2804,12 +2804,9 @@ body:has(.vrcx-0-statusbar [data-slot="tooltip-trigger"][data-popup-open])
    vertical TabsList under its scroll body. Other #chart roots are excluded unless they expose
    that exact toolbar control. This is not the app navigation rail or Settings vertical Tabs. */
 
+/* The shared toolbar-style frame is supplied by fields-toolbar-r10; retain only chart ink/motion. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]{
-  border-radius:0;
-  background-color:#201936;
   color:#e3d2f5;
-  border-color:var(--jk-field-edge);
-  box-shadow:var(--jk-field-inset);
   transition:none;
 }
 .vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:focus-within{
@@ -3512,24 +3509,20 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 }
 
 /* SECTION fields-toolbar-r10 */
-/* R10 G1 — text fields, toolbar search, filter chips and remaining native fields.
-   Deliberately avoids checkbox/range/select/combobox triggers (form-controls-r9),
-   Settings (w-44 rail), Login, entity dialogs, and the already-styled Tools toolbar. */
+/* R10 G1 — unify the existing standalone-field and input-group outer-frame selectors.
+   Select/checkbox/range controls and nested buttons retain their own component rules. */
 
-/* Shared Win98 sunken field: two hard 1px steps, dark top/left and light bottom/right.
-   Keep border widths and hit boxes unchanged; all input/select owners reuse these tokens. */
+/* Shared inset shadow; native select borders retain the four-side edge token.
+   Standalone fields and input groups use the unified toolbar frame below. */
 :root{
   --jk-field-edge:#69557c #fdf4ff #fdf4ff #69557c;
   --jk-field-inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;
 }
 
-/* Share the R9 Tools search-frame language with all other page toolbars. The exact
-   #chart + vertical-rail Tools surface remains exclusively owned by tools-ui-r9.css. */
+/* Page-toolbar groups keep context-specific ink/motion; #chart's inner controls/layout stay
+   in tools-ui-r9.css. All input-group outer frames are centralized below. */
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *){
-  border:1px solid #6c5ce0;
-  background:#201936;
   color:#e3d2f5;
-  
   transition:none;
 }
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *):focus-within{
@@ -3545,9 +3538,9 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 }
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:not(.vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) *) [data-slot="input-group-button"]:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
 
-/* Standalone fields: same dark inset field treatment; no geometry changes. */
+/* Standalone field text ink; the toolbar-style outer frame is shared below. */
 :where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])){
-  border:1px solid #6c5ce0;background-color:#16112a;color:#f2ebff;
+  color:#f2ebff;
   
 }
 :where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]))::placeholder{color:#b9add9;opacity:1}
@@ -3572,17 +3565,17 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"])::before{content:none!important}
 .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:disabled{opacity:.55}
 
-/* Feed multi-user search: scoped to the chip input group, not other comboboxes. */
+/* Feed multi-user search: keep the toolbar ink tone scoped to the chip input group. */
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="input-group"]:has(> [data-slot="combobox-chips"]){
-  border:1px solid #6c5ce0;background:#201936;color:#e3d2f5;
-  
+  color:#e3d2f5;
 }
-/* Shared low-specificity field frame for standalone and grouped controls.
-   Focus/error stay as later state overrides; the marked #chart toolbar remains excluded. */
+/* One toolbar-style outer frame for standalone fields and every input group.
+   Focus/error/disabled states and component content remain in their own rules. */
 :where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])),
-:where([data-slot="input-group"]:not(#chart [data-vrcx-0-control="toolbar"][data-slot="input-group"])){
+:where([data-slot="input-group"]){
+  background-color:#201936;
+  border:1px solid #6c5ce0;
   border-radius:0;
-  border-color:var(--jk-field-edge);
   box-shadow:var(--jk-field-inset);
 }
 :where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"]):focus-visible){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
@@ -4061,8 +4054,7 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-align="inline-end"] svg.lucide-calendar-range):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-slot="tabs-list"] > [data-slot="tabs-tab"]:nth-of-type(5)):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"] svg.lucide-refresh-cw):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"] svg.lucide-ellipsis):has(> [data-slot="tabs"] > [data-slot="tabs-content"] .object-row__context-action){
   & > [data-slot="tabs"] > .vrcx-0-page-toolbar{
     [data-vrcx-0-control="toolbar"][data-slot="input-group"]{
-      border-color:#6c5ce0;border-radius:0;background-color:#201936;color:#e3d2f5;
-      border-color:var(--jk-field-edge);box-shadow:var(--jk-field-inset);transition:none;
+      color:#e3d2f5;transition:none;
       &:focus-within{outline:2px solid #ff7fcf;outline-offset:1px;z-index:2}
       [data-slot="input-group-addon"]{color:#d6b8ef}
       [data-slot="input-group-control"]{border-radius:0;background-color:transparent;color:#f2ebff;caret-color:#ffb8e6;outline:none;box-shadow:none}

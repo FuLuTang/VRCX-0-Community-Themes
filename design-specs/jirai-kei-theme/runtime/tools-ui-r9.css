@@ -3,12 +3,9 @@
    vertical TabsList under its scroll body. Other #chart roots are excluded unless they expose
    that exact toolbar control. This is not the app navigation rail or Settings vertical Tabs. */
 
+/* The shared toolbar-style frame is supplied by fields-toolbar-r10; retain only chart ink/motion. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]{
-  border-radius:0;
-  background-color:#201936;
   color:#e3d2f5;
-  border-color:var(--jk-field-edge);
-  box-shadow:var(--jk-field-inset);
   transition:none;
 }
 .vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]:focus-within{
