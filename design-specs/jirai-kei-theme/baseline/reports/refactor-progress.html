@@ -3,168 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <title>Jirai Kei CSS 重构进度</title>
+  <title>Jirai Kei CSS：本批视觉预览</title>
   <style>
-    :root {
-      color-scheme: dark;
-      --canvas: #16112a;
-      --panel: #211a33;
-      --panel-raised: #2a2147;
-      --ink: #f2ebff;
-      --muted: #c3b4d8;
-      --edge: #6c5ce0;
-      --pink: #ffb8e6;
-      --mint: #6fe3d3;
-      --amber: #ffd36f;
-      --danger: #ff6b8a;
-      --line: #4a3784;
-      --radius: 2px;
-      font: 16px/1.55 system-ui, "Segoe UI", sans-serif;
-      background: var(--canvas);
-      color: var(--ink);
-    }
+    :root { color-scheme: light; font: 16px/1.65 system-ui, sans-serif; color: #171717; background: #fff; }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-width: 320px;
-      background-color: var(--canvas);
-      background-image: linear-gradient(90deg, rgb(108 92 224 / 7%) 1px, transparent 1px),
-                        linear-gradient(rgb(108 92 224 / 7%) 1px, transparent 1px);
-      background-size: 24px 24px;
-    }
-    main { width: min(1120px, calc(100% - 32px)); margin: 32px auto 56px; }
-    header { padding: 24px; border: 1px solid var(--edge); background: var(--panel); box-shadow: 4px 4px 0 #0c0918; }
-    .eyebrow { margin: 0 0 8px; color: var(--pink); font: 700 .76rem/1.4 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { margin-bottom: 8px; font-size: clamp(1.55rem, 4vw, 2.3rem); line-height: 1.15; text-wrap: balance; }
-    .lede { max-width: 70ch; margin: 0; color: var(--muted); }
-    .status-line { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .badge { display: inline-flex; align-items: center; gap: 7px; padding: 4px 9px; border: 1px solid var(--edge); color: var(--ink); background: #1b1530; font-size: .83rem; }
-    .badge::before { width: 7px; height: 7px; content: ""; background: currentColor; }
-    .badge.ok { color: var(--mint); border-color: #3e978e; }
-    .badge.wait { color: var(--amber); border-color: #9e7c2f; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; margin-top: 16px; }
-    section { min-width: 0; padding: 18px; border: 1px solid var(--line); background: var(--panel); box-shadow: 3px 3px 0 #0c0918; transition: border-color 140ms ease, transform 140ms ease; }
-    section:hover { border-color: var(--pink); transform: translateY(-1px); }
-    .wide { grid-column: span 12; }
-    .half { grid-column: span 6; }
-    .third { grid-column: span 4; }
-    h2 { margin-bottom: 12px; font-size: 1.1rem; }
-    h3 { margin-bottom: 5px; color: var(--pink); font-size: .9rem; }
-    .metric { display: flex; flex-direction: column; gap: 4px; height: 100%; }
-    .metric strong { color: var(--mint); font: 700 clamp(1.35rem, 3vw, 1.9rem)/1.15 ui-monospace, monospace; }
-    .metric span, .note { color: var(--muted); font-size: .9rem; }
-    .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
-    .facts div { min-width: 0; padding: 10px; border-left: 2px solid var(--edge); background: #1b1530; }
-    dt { color: var(--muted); font-size: .8rem; }
-    dd { margin: 4px 0 0; overflow-wrap: anywhere; font: .82rem/1.45 ui-monospace, monospace; }
-    .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
-    .steps li { padding: 10px; border: 1px solid var(--line); background: #1b1530; font-size: .84rem; }
-    .steps b { display: block; margin-bottom: 3px; color: var(--mint); font: 700 .74rem/1.4 ui-monospace, monospace; }
-    .steps .current { border-color: var(--amber); }
-    .steps .current b { color: var(--amber); }
-    .meter { height: 9px; margin: 12px 0 5px; border: 1px solid var(--edge); background: #100c20; }
-    .meter span { display: block; width: 100%; height: 100%; background: var(--mint); }
-    details { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 10px; }
-    summary { width: fit-content; color: var(--pink); cursor: pointer; }
-    summary:focus-visible, a:focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; }
-    a { color: var(--pink); text-underline-offset: 3px; }
-    a:hover { color: var(--ink); }
-    code { color: var(--pink); font: .86em/1.4 ui-monospace, monospace; overflow-wrap: anywhere; }
-    .caveat { padding: 12px; border: 1px solid #9e7c2f; background: #292116; color: #ffe8ad; }
-    footer { padding: 18px 2px 0; color: var(--muted); font-size: .8rem; }
-    @media (max-width: 760px) {
-      main { width: min(100% - 20px, 620px); margin: 10px auto 32px; }
-      header { padding: 17px; }
-      .half, .third { grid-column: span 12; }
-      .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .facts { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
-    }
+    body { margin: 0; background: #fff; }
+    main { width: min(760px, calc(100% - 32px)); margin: 36px auto; }
+    h1 { margin: 0 0 20px; font-size: 1.5rem; line-height: 1.25; }
+    h2 { margin: 26px 0 8px; font-size: 1rem; }
+    p { margin: 8px 0; }
+    .plain { padding: 16px; border: 1px solid #d4d4d4; background: #fff; }
+    .empty { margin-top: 10px; padding: 18px; border: 1px dashed #a3a3a3; color: #525252; background: #fff; }
+    code { padding: 1px 4px; background: #f5f5f5; font: .9em ui-monospace, monospace; }
+    a { color: #1d4ed8; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid #1d4ed8; outline-offset: 3px; }
+    @media (max-width: 520px) { main { width: calc(100% - 24px); margin: 18px auto; } }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <p class="eyebrow">Jirai Kei · CSS refactor</p>
-      <h1>重构进度与验证记录</h1>
-      <p class="lede">按“基础到细分、逐组件”推进。当前只完成全局设计令牌分组；后续组件批次会先列明范围并等你确认。</p>
-      <div class="status-line" aria-label="当前状态">
-        <span class="badge ok">令牌批次通过</span>
-        <span class="badge ok">42 / 42 状态零样式差异</span>
-        <span class="badge wait">下一组件待确认</span>
-      </div>
-    </header>
+    <h1>本批视觉预览</h1>
+    <section class="plain">
+      <h2>本批修改</h2>
+      <p>只在全局 <code>:root</code> 变量区添加了分组注释。没有修改选择器、CSS 属性或属性值。</p>
 
-    <div class="grid">
-      <section class="third metric">
-        <h2>冻结状态</h2>
-        <strong>42 / 42</strong>
-        <span>34 个路由状态 + 8 个安全交互状态；本批全部可比较。</span>
-      </section>
-      <section class="third metric">
-        <h2>Computed properties</h2>
-        <strong>163</strong>
-        <span>冻结属性集合内没有缺失元素、身份变化或计算样式差异。</span>
-      </section>
-      <section class="third metric">
-        <h2>差异</h2>
-        <strong>0</strong>
-        <span>令牌批次：42 态 computed-style diff 为空集。</span>
-      </section>
+      <h2>元素样式</h2>
+      <div class="empty">本批没有任何元素样式发生变化，所以这里不伪造控件预览。</div>
 
-      <section class="wide">
-        <h2>第一批：全局设计令牌</h2>
-        <p>在 <code>:root, :root.dark, .dark</code> 块中添加语义分组注释。81 个变量的名称、值、选择器和声明顺序均未改变；没有触碰组件规则或交互状态。</p>
-        <ol class="steps" aria-label="令牌分组">
-          <li><b>01</b>核心语义色与控件</li>
-          <li><b>02</b>侧栏颜色</li>
-          <li><b>03</b>表面、内容、描边与交互状态</li>
-          <li><b>04</b>应用外壳、表格、工具栏</li>
-          <li><b>05</b>内容几何、缩放提示与图表色</li>
-        </ol>
-        <div class="meter" role="img" aria-label="42 个冻结状态全部通过"><span></span></div>
-        <p class="note">验证：变量声明序列 SHA-256 保持不变；PostCSS 移除注释后，新旧编译 CSS 完全相同。</p>
-      </section>
-
-      <section class="half">
-        <h2>基线与候选</h2>
-        <dl class="facts">
-          <div><dt>冻结基线大小</dt><dd>1,043,966 bytes</dd></div>
-          <div><dt>当前候选大小</dt><dd>1,044,385 bytes / 1,048,576 上限</dd></div>
-          <div><dt>基线 SHA-256</dt><dd>6f7491de06f09ed8ce33c11d58af7dbc9bf27a2d65c230a5d60462508c4c7260</dd></div>
-          <div><dt>候选 SHA-256</dt><dd>ed39a3d53c68b99cd0a91bb8ea8da86499a696f2c1e216af1d45d77d4104e061</dd></div>
-        </dl>
-        <p class="note">新增 419 bytes，来自注释；低于构建上限 4,191 bytes。</p>
-      </section>
-
-      <section class="half">
-        <h2>分析基线</h2>
-        <dl class="facts">
-          <div><dt>Selector 分支</dt><dd>1,111 unique branches / 1,114 qualified rules</dd></div>
-          <div><dt>组件上下文</dt><dd>5,877 observations / 136 groups</dd></div>
-          <div><dt>精确重复声明组</dt><dd>90</dd></div>
-          <div><dt>近似候选对</dt><dd>39（不是自动合并指令）</dd></div>
-        </dl>
-        <details>
-          <summary>展开边界提醒</summary>
-          <p class="note">Step 5 报告基于冻结基线 CSS：63 个 selector 曾在多个块重宣；26 个近似候选有潜在上下文边界，9 个至少共享一个命中路由。所有数字都是审阅线索，不代表 cascade 冲突或安全合并证明。</p>
-        </details>
-      </section>
-
-      <section class="wide">
-        <h2>接下来</h2>
-        <p>下一批组件尚未获准。之前提出过 outline/secondary 按钮基础配色，但你要求先用 HTML 报告；因此本页只记录当前进度，不把那个提案当作批准。</p>
-        <p class="caveat">每个组件批次开始前仍会单独确认。候选验证以同一组 42 个冻结 DOM 状态为准；原始 DOM、截图和逐元素快照不放进本报告。</p>
-      </section>
-    </div>
-    <footer>
-      <span>本页为静态离线 HTML；CSS 仅用于层级、交互展开与窄屏适配，无外部字体、脚本或网络资源。</span>
-      <span> · 当前验证提交：a4d39ca</span>
-    </footer>
+      <h2>后续预览方式</h2>
+      <p>下一批组件获得确认并完成后，我会只展示该批实际涉及的元素：从冻结页面提取并去敏实际 DOM 结构，在隔离的白底预览区直接加载完整主题 CSS。未涉及的页面区域保持白色。</p>
+      <p><a href="../../runtime/preview-package/jirai-kei-theme/theme.css">查看当前完整主题 CSS</a></p>
+    </section>
   </main>
 </body>
 </html>
