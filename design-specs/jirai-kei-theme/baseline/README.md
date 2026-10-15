@@ -69,6 +69,15 @@ to make an independent run for determinism checks.
    host matches, shadow-only selectors, and selectors with no match in the captured states; it
    is not a claim about which declaration wins the CSS cascade.
 
+7. Generate the read-only component/context variant inventory from the saved computed snapshots:
+
+   ```sh
+   node build-component-variant-inventory.mjs
+   ```
+
+   This never reads or writes the live app and emits `reports/component-variant-inventory.{json,md}`.
+   It is an evidence index, not permission to flatten different contexts into one rule.
+
 Playwright resolves from `../tools` or `/tmp/dsh-theme-tools`; to use another install set
 `PW_MODULE` to its package directory. Never call `browser.close()` on a `connectOverCDP`
 connection: that would close the user's live app.
@@ -84,9 +93,9 @@ connection: that would close the user's live app.
 - `/dashboard/<placeholder>` renders without real user data.
 - `/favorites/import/friends` redirects to `/favorites/worlds` in the current app state.
 - `/charts` redirects to `/charts/mutual`; `/community-themes` redirects to `/themes`.
-- This route pass does not yet cover controls that need an explicit interaction (dialogs,
-  popovers, tooltips, context menus). Add those as named state fixtures without triggering
-  any destructive or data-mutating action.
+- Eight representative interaction states are included; this is not exhaustive for every
+  app-specific menu/dialog/popover. Add more named fixtures when the component batch needs
+  that context, without selecting menu items or triggering destructive/data-mutating actions.
 
 ## Current progress
 
@@ -113,5 +122,9 @@ connection: that would close the user's live app.
   states, and 6 pseudo-element-only scrollbar selectors. This is DOM presence, not cascade
   wins. A previous planning estimate of 1,095 used a different/unverified counting scope;
   the report pins the parser method and 42-state denominator.
+- Context inventory groups 5,877 component observations into 136 component/surface/variant
+  groups. The paint fingerprint is intentionally a warning signal: multiple fingerprints
+  can be real state/context differences, not candidates to forcibly merge. Report:
+  `reports/component-variant-inventory.md` (JSON companion carries safe sample values).
 - `/login` remains a known limitation: while authenticated it redirects to the remembered
   page, so the real login form is not captured.
