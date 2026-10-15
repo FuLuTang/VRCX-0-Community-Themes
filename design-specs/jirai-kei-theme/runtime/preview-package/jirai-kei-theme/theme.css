@@ -3577,13 +3577,9 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
   border:1px solid #6c5ce0;background:#201936;color:#e3d2f5;
   
 }
-/* Shared text-field skin after base border shorthands; focus/error remain later state overrides. */
-:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])){
-  border-radius:0;
-  border-color:var(--jk-field-edge);
-  box-shadow:var(--jk-field-inset);
-}
-/* Input groups share it too, except the marked #chart toolbar owned by tools-ui-r9.css. */
+/* Shared low-specificity field frame for standalone and grouped controls.
+   Focus/error stay as later state overrides; the marked #chart toolbar remains excluded. */
+:where(:is([data-slot="input"],[data-slot="textarea"],textarea,input[type="time"])),
 :where([data-slot="input-group"]:not(#chart [data-vrcx-0-control="toolbar"][data-slot="input-group"])){
   border-radius:0;
   border-color:var(--jk-field-edge);
