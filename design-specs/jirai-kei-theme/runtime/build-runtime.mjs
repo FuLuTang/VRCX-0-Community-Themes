@@ -53,7 +53,7 @@ parts.push(['dialog-header-r97',await read(path.join(here,'dialog-header-r97.css
 // NOTE: the part name IS the marker text. Two of them carry a description after a
 // colon — that description is part of the marker and must never be shortened.
 ['portal-button-roles-b073-b100',await read(path.join(here,'portal-button-roles-b073-b100.css'))],
-['entity-button-roles-b054-b072: explicit action roles share portal states.',await read(path.join(here,'entity-button-roles-b054-b072.css'))],
+['entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.',await read(path.join(here,'entity-button-roles-b054-b072.css'))],
 ['auth-button-feedback: retain login-r8 / privacy-lock-r96 paint.',await read(path.join(here,'auth-button-feedback.css'))]);
 const css='/* LOCAL PREVIEW DRAFT: Windose × Jirai. Not release validated. */\n'+parts.map(([n,s])=>'/* SECTION '+n+' */\n'+s).join('\n');
 const bytes=Buffer.byteLength(css);if(bytes>1048576)throw Error('CSS exceeds 1 MiB');

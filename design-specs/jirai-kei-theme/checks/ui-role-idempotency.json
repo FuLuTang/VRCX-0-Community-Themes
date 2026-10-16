@@ -1,0 +1,59 @@
+{
+  "mode": "dry-run",
+  "backup": null,
+  "browser": "isolated headless Chromium",
+  "computedStyleComparisons": 7398,
+  "validated": [
+    {
+      "file": "runtime/preview-package/jirai-kei-theme/theme.css",
+      "selectors": 0
+    },
+    {
+      "file": "refactor/src/style/16-final-navigation.css",
+      "selectors": 0
+    },
+    {
+      "file": "runtime/entity-button-roles-b054-b072.css",
+      "selectors": 0
+    }
+  ],
+  "files": [
+    {
+      "file": "runtime/preview-package/jirai-kei-theme/theme.css",
+      "changed": false,
+      "beforeBytes": 1044021,
+      "afterBytes": 1044021,
+      "beforeHash": "746fc9c086c0ef17cb48b01c6ebdc7b000991809d4d035bc5ecabdc7b5aae36b",
+      "afterHash": "746fc9c086c0ef17cb48b01c6ebdc7b000991809d4d035bc5ecabdc7b5aae36b",
+      "remainingRoleOccurrences": 0
+    },
+    {
+      "file": "refactor/src/style/16-final-navigation.css",
+      "changed": false,
+      "beforeBytes": 19870,
+      "afterBytes": 19870,
+      "beforeHash": "55dcf8734ae6326f88ea3b4a4fe7e1792112c8d0fba9c095578d9d98620e1673",
+      "afterHash": "55dcf8734ae6326f88ea3b4a4fe7e1792112c8d0fba9c095578d9d98620e1673",
+      "remainingRoleOccurrences": 0
+    },
+    {
+      "file": "runtime/entity-button-roles-b054-b072.css",
+      "changed": false,
+      "beforeBytes": 6064,
+      "afterBytes": 6064,
+      "beforeHash": "93812c0db2f5bdbdc7f9aa11d4ad4847216c39db379e1555411a45957897eab2",
+      "afterHash": "93812c0db2f5bdbdc7f9aa11d4ad4847216c39db379e1555411a45957897eab2",
+      "remainingRoleOccurrences": 0
+    }
+  ],
+  "protectedFiles": [
+    {
+      "file": "refactor/reference/baseline-theme.css",
+      "sha256": "6f7491de06f09ed8ce33c11d58af7dbc9bf27a2d65c230a5d60462508c4c7260"
+    },
+    {
+      "file": "../../themes/jirai-kei-theme/theme.css",
+      "sha256": "cc6dda3d2b1c96976aa3652f8861c0d1392dcc99889f8b0437e6c7157e5c2a41"
+    }
+  ]
+}

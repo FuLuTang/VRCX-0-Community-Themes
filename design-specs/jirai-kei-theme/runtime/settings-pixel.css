@@ -52,21 +52,8 @@
 [data-slot=toggle-group][data-variant=outline] > [data-slot=separator]{width:2px;background-color:#16112a}
 [data-slot=toggle-group][data-variant=outline] > [data-slot=separator]::before{display:none}
 
-/* --------------------------------------------------------------------------
-   (6)① Settings rail (系统/界面/社交…) as a pixel window list.
-   -------------------------------------------------------------------------- */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px 3px 12px;gap:1px;border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;clip-path:var(--jk-px-cut)}
-/* Lace fringe inside the rail's bottom padding. */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]::after{content:"";position:absolute;left:3px;right:3px;bottom:2px;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-mask-s1-s) 0 0/16px 8px repeat-x}
-/* The app's sliding indicator would double the selected face; the app already
-   hides it this way in SidePanel.tsx:502. */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tab-indicator]{display:none}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]{border:1px solid transparent;border-radius:0;background-color:transparent;color:#b9add9;box-shadow:none}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab] .lucide{color:inherit;opacity:1}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:hover{background-color:#4a3784;border-color:#6c5ce0;color:#f2ebff}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]{background-color:#ffb8e6;border-color:#16112a;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab]:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list] > [data-slot=tabs-tab][data-active]:focus-visible{outline-color:#16112a}
+/* Settings layout only; controls-r9 owns the shared face, cards-r97 the lace. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px;gap:1px;clip-path:var(--jk-px-cut)}
 
 /* --------------------------------------------------------------------------
    (6)②③ Settings cards: pixel window title bar + bow charm + lace, and

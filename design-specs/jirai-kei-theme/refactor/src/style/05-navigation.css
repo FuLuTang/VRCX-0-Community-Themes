@@ -82,7 +82,10 @@
    panel edge (measured: panel right 1350 == tab left 1350 after, tab left 1354
    before). */
 .vrcx-0-side-panel .vrcx-0-side-panel-rail [data-slot='tabs-list'] {
-    padding-inline: 0;
+    /* Preserve the exact effective R10 frame here, not a global Tabs patch. */
+    gap:2px;padding:1px 0;border:1px solid var(--wd-frame);border-radius:0;
+    background:#201936;color:#e3d2f5;
+    box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
 }
 
 .vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'] {

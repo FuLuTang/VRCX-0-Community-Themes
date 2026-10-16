@@ -77,7 +77,7 @@
 [data-slot="dialog-title"] { color:var(--wd-text); }
 [data-slot="button"], [data-slot="select-trigger"] { border-radius:2px; } /* [data-slot="input"] radius: owned by the generic field rule in fields-toolbar-r10.css (login-r8 keeps 2px) */
 [data-slot="button"]:focus-visible { outline:2px dashed var(--wd-pink); outline-offset:2px; }
-[data-slot="tabs-tab"][data-active] { background-color:var(--wd-pink); color:#16112a; }
+/* Tabs selected paint belongs to its default/property/rail skin. */
 /* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] { position:relative; }
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {

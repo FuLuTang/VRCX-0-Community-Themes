@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "file": "runtime/preview-package/jirai-kei-theme/theme.css",
+      "backupHashVerified": true,
+      "afterHashVerified": true,
+      "beforeRoleOccurrences": 11,
+      "afterRoleOccurrences": 0,
+      "unrelatedDeclarationsUnchanged": true,
+      "nonRoleAttributeSelectorsUnchanged": true,
+      "tabsAndEarlierSectionsUnchanged": true
+    },
+    {
+      "file": "refactor/src/style/16-final-navigation.css",
+      "backupHashVerified": true,
+      "afterHashVerified": true,
+      "beforeRoleOccurrences": 11,
+      "afterRoleOccurrences": 0,
+      "unrelatedDeclarationsUnchanged": true,
+      "nonRoleAttributeSelectorsUnchanged": true,
+      "tabsAndEarlierSectionsUnchanged": true
+    },
+    {
+      "file": "runtime/entity-button-roles-b054-b072.css",
+      "backupHashVerified": true,
+      "afterHashVerified": true,
+      "beforeRoleOccurrences": 11,
+      "afterRoleOccurrences": 0,
+      "unrelatedDeclarationsUnchanged": true,
+      "nonRoleAttributeSelectorsUnchanged": true,
+      "tabsAndEarlierSectionsUnchanged": "fragment only"
+    }
+  ],
+  "protectedFiles": [
+    {
+      "file": "refactor/reference/baseline-theme.css",
+      "sha256": "6f7491de06f09ed8ce33c11d58af7dbc9bf27a2d65c230a5d60462508c4c7260",
+      "unchanged": true,
+      "roleOccurrences": 11
+    },
+    {
+      "file": "../../themes/jirai-kei-theme/theme.css",
+      "sha256": "cc6dda3d2b1c96976aa3652f8861c0d1392dcc99889f8b0437e6c7157e5c2a41",
+      "unchanged": true,
+      "roleOccurrences": 0
+    }
+  ],
+  "previewBudget": {
+    "bytes": 1044021,
+    "limit": 1048576,
+    "headroom": 4555
+  },
+  "activeFragmentEmbeddedExactly": true
+}

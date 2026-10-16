@@ -1,0 +1,2241 @@
+{
+  "theme": {
+    "bytes": 1038625,
+    "sha256": "6e7c987c39eba5f3d48e7052b1695f0ce847e86795df8cd76a19ba494fdf1370",
+    "limit": 1048576,
+    "previousBytes": 1038888,
+    "savedFromPreviousBytes": 263,
+    "headroom": 9951
+  },
+  "backup": "/tmp/jk-tabs-identity-fJZc4c",
+  "assertions": [
+    "active theme within 1 MiB",
+    "active merged theme data-ui-role = 0",
+    "controls-r9.css / refactor active role dependency = 0",
+    "controls-r9.css Tabs/root blocks synchronized in runtime, refactor, merged artifact",
+    "settings-pixel.css / refactor active role dependency = 0",
+    "settings-pixel.css Tabs/root blocks synchronized in runtime, refactor, merged artifact",
+    "tools-ui-r9.css / refactor active role dependency = 0",
+    "tools-ui-r9.css Tabs/root blocks synchronized in runtime, refactor, merged artifact",
+    "buttons-badges-r10.css / refactor active role dependency = 0",
+    "buttons-badges-r10.css Tabs/root blocks synchronized in runtime, refactor, merged artifact",
+    "side-panel-r4.css / refactor active role dependency = 0",
+    "side-panel-r4.css Tabs/root blocks synchronized in runtime, refactor, merged artifact",
+    "windose-runtime.css / refactor active role dependency = 0",
+    "windose-runtime.css Tabs/root blocks synchronized in runtime, refactor, merged artifact",
+    "separate complete refactor candidate now within budget; NOT published",
+    "no newly unsupported selectors in Chromium; inherited keyframes/vendor pseudos excluded",
+    "01–04 original list/item width/height/orientation/wrap/overflow preserved",
+    "identity default selector recognizes all six lists; role skins revert only default layer",
+    "01–04 shared idle core computed style equal",
+    "01–04 shared hover core computed style equal",
+    "01–04 shared active core computed style equal",
+    "01–04 shared focus core computed style equal",
+    "01–04 shared disabled core computed style equal",
+    "shared state probes positively change paint (not false equality)",
+    "01–04 list frame paint equal (geometry intentionally excluded)",
+    "04 existing icons inherit shared active/idle tab color; no icons synthesized",
+    "04 independent outward 8px lace preserved",
+    "05 all standard computed properties / before-after pseudos / icons unchanged in five states",
+    "01 keyboard Tab enters selected tab",
+    "01 arrow changes focus without activation",
+    "02 keyboard Tab enters selected tab",
+    "02 arrow changes focus without activation",
+    "03 keyboard Tab enters selected tab",
+    "03 arrow changes focus without activation",
+    "04 keyboard Tab enters selected tab",
+    "04 arrow changes focus without activation",
+    "05 keyboard Tab enters selected tab",
+    "05 arrow changes focus without activation",
+    "06 keyboard Tab enters selected tab",
+    "06 arrow changes focus without activation",
+    "all six real BaseUI disabled props block selection",
+    "06 active tab fuses with same-color panel, bottom seam open, idle recessed 4px",
+    "1440px preview no horizontal document overflow",
+    "1440px first/last toolbar tabs reachable by horizontal scrolling",
+    "390px preview no horizontal document overflow",
+    "390px first/last toolbar tabs reachable by horizontal scrolling",
+    "no browser page errors",
+    "final standalone preview embeds exact active theme hash",
+    "all six groups match previous round in 302400 standard computed properties including pseudos and selected+hover",
+    "four new ordinary containers without rounded-lg match default list and five-state tab/icon paint",
+    "ordinary underline outside role scopes receives default skin",
+    "unrelated role-only tabs do not receive component skin",
+    "default layer has no important declarations; both role branches exit only that layer"
+  ],
+  "screenshots": [
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/checks/tabs-converged-desktop.png",
+    "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/checks/tabs-converged-mobile.png"
+  ],
+  "boundary": "Linux headless Chromium / real app primitives + compiled application CSS + complete merged theme; no app routes, Windows, deployment or release validation.",
+  "syntax": {
+    "parsedSelectors": 1213,
+    "selectorParser": true,
+    "unsupportedSelectors": [
+      ":where(input[type=\"range\"])::-moz-range-track",
+      ":where(input[type=\"range\"])::-moz-range-thumb"
+    ],
+    "inheritedUnsupportedSelectors": [
+      ":where(input[type=\"range\"])::-moz-range-track",
+      ":where(input[type=\"range\"])::-moz-range-thumb"
+    ]
+  },
+  "sync": [
+    {
+      "runtime": "controls-r9.css",
+      "refactor": "11-controls-and-pages.css",
+      "tabAndRootBlocks": 11,
+      "matching": 11
+    },
+    {
+      "runtime": "settings-pixel.css",
+      "refactor": "06-panels-and-settings.css",
+      "tabAndRootBlocks": 9,
+      "matching": 9
+    },
+    {
+      "runtime": "tools-ui-r9.css",
+      "refactor": "11-controls-and-pages.css",
+      "tabAndRootBlocks": 1,
+      "matching": 1
+    },
+    {
+      "runtime": "buttons-badges-r10.css",
+      "refactor": "14-buttons-and-data.css",
+      "tabAndRootBlocks": 0,
+      "matching": 0
+    },
+    {
+      "runtime": "side-panel-r4.css",
+      "refactor": "05-navigation.css",
+      "tabAndRootBlocks": 6,
+      "matching": 6
+    },
+    {
+      "runtime": "windose-runtime.css",
+      "refactor": "02-foundation.css",
+      "tabAndRootBlocks": 4,
+      "matching": 4
+    }
+  ],
+  "refactorCandidate": {
+    "bytes": 1048066,
+    "sha256": "ac63a54697d49bda7ad0983eaac9b68e9a26cb1e709799fa2f598b1b84c7609f",
+    "published": false,
+    "priorBytes": 1048329,
+    "headroom": 510
+  },
+  "geometry": {
+    "before": [
+      {
+        "id": "sample-01",
+        "elements": [
+          {
+            "width": "455.781px",
+            "height": "34px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          {
+            "width": "62.5938px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "80.2969px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "80.2969px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "164.297px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "56.2969px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      },
+      {
+        "id": "sample-02",
+        "elements": [
+          {
+            "width": "282px",
+            "height": "34px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "44px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "68px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "92px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "68px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      },
+      {
+        "id": "sample-03",
+        "elements": [
+          {
+            "width": "134.844px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          {
+            "width": "30.8594px",
+            "height": "26px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "60.9219px",
+            "height": "26px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "35.0625px",
+            "height": "26px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      },
+      {
+        "id": "sample-04",
+        "elements": [
+          {
+            "width": "176px",
+            "height": "131px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "column",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "id": "sample-01",
+        "elements": [
+          {
+            "width": "455.781px",
+            "height": "34px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          {
+            "width": "62.5938px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "80.2969px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "80.2969px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "164.297px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "56.2969px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      },
+      {
+        "id": "sample-02",
+        "elements": [
+          {
+            "width": "282px",
+            "height": "34px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "44px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "68px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "92px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "68px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      },
+      {
+        "id": "sample-03",
+        "elements": [
+          {
+            "width": "134.844px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          {
+            "width": "30.8594px",
+            "height": "26px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "60.9219px",
+            "height": "26px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "35.0625px",
+            "height": "26px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "horizontal",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      },
+      {
+        "id": "sample-04",
+        "elements": [
+          {
+            "width": "176px",
+            "height": "131px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "column",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          {
+            "width": "168px",
+            "height": "30px",
+            "minWidth": "auto",
+            "minHeight": "auto",
+            "orientation": "vertical",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          }
+        ]
+      }
+    ],
+    "equal": true
+  },
+  "defaultSelectorMatches": [
+    {
+      "id": "sample-01",
+      "match": true
+    },
+    {
+      "id": "sample-02",
+      "match": true
+    },
+    {
+      "id": "sample-03",
+      "match": true
+    },
+    {
+      "id": "sample-04",
+      "match": true
+    },
+    {
+      "id": "sample-05",
+      "match": true
+    },
+    {
+      "id": "sample-06",
+      "match": true
+    }
+  ],
+  "shared": {
+    "idle": [
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      }
+    ],
+    "hover": [
+      {
+        "backgroundColor": "rgb(59, 44, 85)",
+        "color": "rgb(242, 235, 255)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(59, 44, 85)",
+        "color": "rgb(242, 235, 255)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(59, 44, 85)",
+        "color": "rgb(242, 235, 255)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(59, 44, 85)",
+        "color": "rgb(242, 235, 255)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      }
+    ],
+    "active": [
+      {
+        "backgroundColor": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "borderTopColor": "rgb(108, 92, 224)",
+        "borderRightColor": "rgb(108, 92, 224)",
+        "borderBottomColor": "rgb(108, 92, 224)",
+        "borderLeftColor": "rgb(108, 92, 224)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "borderTopColor": "rgb(108, 92, 224)",
+        "borderRightColor": "rgb(108, 92, 224)",
+        "borderBottomColor": "rgb(108, 92, 224)",
+        "borderLeftColor": "rgb(108, 92, 224)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "borderTopColor": "rgb(108, 92, 224)",
+        "borderRightColor": "rgb(108, 92, 224)",
+        "borderBottomColor": "rgb(108, 92, 224)",
+        "borderLeftColor": "rgb(108, 92, 224)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(255, 184, 230)",
+        "color": "rgb(22, 17, 42)",
+        "borderTopColor": "rgb(108, 92, 224)",
+        "borderRightColor": "rgb(108, 92, 224)",
+        "borderBottomColor": "rgb(108, 92, 224)",
+        "borderLeftColor": "rgb(108, 92, 224)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      }
+    ],
+    "focus": [
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineOffset": "-2px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineOffset": "-2px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineOffset": "-2px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(227, 210, 245)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "rgb(255, 127, 207)",
+        "outlineWidth": "2px",
+        "outlineStyle": "solid",
+        "outlineOffset": "-2px",
+        "opacity": "1",
+        "transitionDuration": "0s"
+      }
+    ],
+    "disabled": [
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      },
+      {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    ],
+    "list": [
+      {
+        "background": "rgb(32, 25, 54)",
+        "border": "1px solid rgb(108, 92, 224)",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+        "color": "rgb(227, 210, 245)"
+      },
+      {
+        "background": "rgb(32, 25, 54)",
+        "border": "1px solid rgb(108, 92, 224)",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+        "color": "rgb(227, 210, 245)"
+      },
+      {
+        "background": "rgb(32, 25, 54)",
+        "border": "1px solid rgb(108, 92, 224)",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+        "color": "rgb(227, 210, 245)"
+      },
+      {
+        "background": "rgb(32, 25, 54)",
+        "border": "1px solid rgb(108, 92, 224)",
+        "borderRadius": "0px",
+        "boxShadow": "rgb(253, 244, 255) 1px 1px 0px 0px inset, rgb(122, 63, 109) -1px -1px 0px 0px inset",
+        "color": "rgb(227, 210, 245)"
+      }
+    ]
+  },
+  "iconPaint": [
+    {
+      "selected": "true",
+      "tabColor": "rgb(22, 17, 42)",
+      "iconColor": "rgb(22, 17, 42)",
+      "iconOpacity": "1"
+    },
+    {
+      "selected": "false",
+      "tabColor": "rgb(227, 210, 245)",
+      "iconColor": "rgb(227, 210, 245)",
+      "iconOpacity": "1"
+    },
+    {
+      "selected": "false",
+      "tabColor": "rgb(227, 210, 245)",
+      "iconColor": "rgb(227, 210, 245)",
+      "iconOpacity": "1"
+    },
+    {
+      "selected": "false",
+      "tabColor": "rgb(227, 210, 245)",
+      "iconColor": "rgb(227, 210, 245)",
+      "iconOpacity": "1"
+    }
+  ],
+  "lace": {
+    "content": "\"\"",
+    "height": "8px",
+    "top": "130px",
+    "maskImage": "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 8' shape-rendering='crispEdges'><path d='M0 0h16v3H0M1 3h14v1H1M1 4h6v1H1M9 4h6v1H9M2 5h5v1H2M9 5h5v1H9M3 6h10v1H3M5 7h6v1H5'/></svg>\")",
+    "clipPath": "polygon(0px 2px, 2px 2px, 2px 0px, calc(100% - 2px) 0px, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% + 8px), 2px calc(100% + 8px), 2px calc(100% - 2px), 0px calc(100% - 2px))"
+  },
+  "rail": [
+    {
+      "state": "idle",
+      "elements": 8,
+      "standardPropertiesPerPseudo": 480,
+      "pseudoSamples": 24,
+      "equal": true
+    },
+    {
+      "state": "hover",
+      "elements": 8,
+      "standardPropertiesPerPseudo": 480,
+      "pseudoSamples": 24,
+      "equal": true
+    },
+    {
+      "state": "focus",
+      "elements": 8,
+      "standardPropertiesPerPseudo": 480,
+      "pseudoSamples": 24,
+      "equal": true
+    },
+    {
+      "state": "selected",
+      "elements": 8,
+      "standardPropertiesPerPseudo": 480,
+      "pseudoSamples": 24,
+      "equal": true
+    },
+    {
+      "state": "disabled",
+      "elements": 8,
+      "standardPropertiesPerPseudo": 480,
+      "pseudoSamples": 24,
+      "equal": true
+    }
+  ],
+  "railEvidence": {
+    "list": {
+      "width": "36px",
+      "height": "104px",
+      "padding": "1px 0px"
+    },
+    "tabs": [
+      {
+        "slot": "tooltip-trigger",
+        "orientation": "vertical",
+        "width": "34px",
+        "height": "32px",
+        "iconSize": "18px"
+      },
+      {
+        "slot": "tooltip-trigger",
+        "orientation": "vertical",
+        "width": "34px",
+        "height": "32px",
+        "iconSize": "18px"
+      },
+      {
+        "slot": "tooltip-trigger",
+        "orientation": "vertical",
+        "width": "34px",
+        "height": "32px",
+        "iconSize": "18px"
+      }
+    ],
+    "railDirection": "column"
+  },
+  "interactions": [
+    {
+      "id": "#sample-01",
+      "click": true,
+      "tab": true,
+      "arrow": "ArrowRight",
+      "manualActivationWithEnter": true,
+      "homeEnter": true
+    },
+    {
+      "id": "#sample-02",
+      "click": true,
+      "tab": true,
+      "arrow": "ArrowRight",
+      "manualActivationWithEnter": true,
+      "homeEnter": true
+    },
+    {
+      "id": "#sample-03",
+      "click": true,
+      "tab": true,
+      "arrow": "ArrowRight",
+      "manualActivationWithEnter": true,
+      "homeEnter": true
+    },
+    {
+      "id": "#sample-04",
+      "click": true,
+      "tab": true,
+      "arrow": "ArrowDown",
+      "manualActivationWithEnter": true,
+      "homeEnter": true
+    },
+    {
+      "id": "#sample-05",
+      "click": true,
+      "tab": true,
+      "arrow": "ArrowDown",
+      "manualActivationWithEnter": true,
+      "homeEnter": true
+    },
+    {
+      "id": "#sample-06",
+      "click": true,
+      "tab": true,
+      "arrow": "ArrowRight",
+      "manualActivationWithEnter": true,
+      "homeEnter": true
+    }
+  ],
+  "disabled": [
+    {
+      "id": 1,
+      "blocked": true,
+      "css": {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    },
+    {
+      "id": 2,
+      "blocked": true,
+      "css": {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    },
+    {
+      "id": 3,
+      "blocked": true,
+      "css": {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    },
+    {
+      "id": 4,
+      "blocked": true,
+      "css": {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    },
+    {
+      "id": 5,
+      "blocked": true,
+      "css": {
+        "backgroundColor": "rgb(29, 22, 49)",
+        "color": "rgb(162, 148, 200)",
+        "borderTopColor": "rgba(0, 0, 0, 0)",
+        "borderRightColor": "rgba(0, 0, 0, 0)",
+        "borderBottomColor": "rgba(0, 0, 0, 0)",
+        "borderLeftColor": "rgba(0, 0, 0, 0)",
+        "borderTopWidth": "1px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    },
+    {
+      "id": 6,
+      "blocked": true,
+      "css": {
+        "backgroundColor": "rgb(32, 25, 54)",
+        "color": "rgb(185, 173, 217)",
+        "borderTopColor": "rgb(108, 92, 224)",
+        "borderRightColor": "rgb(108, 92, 224)",
+        "borderBottomColor": "rgb(108, 92, 224)",
+        "borderLeftColor": "rgb(108, 92, 224)",
+        "borderTopWidth": "1px",
+        "borderRadius": "2px 2px 0px 0px",
+        "boxShadow": "rgb(143, 127, 224) 1px 1px 0px 0px inset",
+        "outlineColor": "oklab(0.765878 0.172198 -0.0498766 / 0.5)",
+        "outlineWidth": "3px",
+        "outlineStyle": "none",
+        "outlineOffset": "0px",
+        "opacity": "0.64",
+        "transitionDuration": "0s"
+      }
+    }
+  ],
+  "entity": {
+    "activeBackground": "rgb(42, 33, 71)",
+    "panelBackground": "rgb(42, 33, 71)",
+    "activeBottomColor": "rgb(42, 33, 71)",
+    "activeBottom": 1148.34375,
+    "panelTop": 1148.34375,
+    "activeTop": 1104.34375,
+    "idleTop": 1108.34375,
+    "listHeight": 44,
+    "padding": "0px",
+    "indicatorDisplay": "none"
+  },
+  "viewports": [
+    {
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "bodyHeight": 1355,
+      "htmlOverflow": "visible",
+      "groups": [
+        {
+          "id": "sample-01",
+          "listWidth": 455.78125,
+          "listHeight": 34,
+          "listOverflowX": "auto",
+          "flexWrap": "nowrap",
+          "orientation": "horizontal"
+        },
+        {
+          "id": "sample-02",
+          "listWidth": 282,
+          "listHeight": 34,
+          "listOverflowX": "visible",
+          "flexWrap": "wrap",
+          "orientation": "horizontal"
+        },
+        {
+          "id": "sample-03",
+          "listWidth": 134.84375,
+          "listHeight": 30,
+          "listOverflowX": "auto",
+          "flexWrap": "nowrap",
+          "orientation": "horizontal"
+        },
+        {
+          "id": "sample-04",
+          "listWidth": 176,
+          "listHeight": 131,
+          "listOverflowX": "visible",
+          "flexWrap": "nowrap",
+          "orientation": "vertical"
+        },
+        {
+          "id": "sample-05",
+          "listWidth": 36,
+          "listHeight": 104,
+          "listOverflowX": "visible",
+          "flexWrap": "nowrap",
+          "orientation": "vertical"
+        },
+        {
+          "id": "sample-06",
+          "listWidth": 587,
+          "listHeight": 44,
+          "listOverflowX": "auto",
+          "flexWrap": "nowrap",
+          "orientation": "horizontal"
+        }
+      ],
+      "scrollReachability": {
+        "firstInset": 2,
+        "lastInsetAtMaxScroll": 2,
+        "scrollWidth": 454,
+        "clientWidth": 454
+      }
+    },
+    {
+      "viewport": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "bodyHeight": 2284,
+      "htmlOverflow": "visible",
+      "groups": [
+        {
+          "id": "sample-01",
+          "listWidth": 336,
+          "listHeight": 38,
+          "listOverflowX": "auto",
+          "flexWrap": "nowrap",
+          "orientation": "horizontal"
+        },
+        {
+          "id": "sample-02",
+          "listWidth": 282,
+          "listHeight": 38,
+          "listOverflowX": "visible",
+          "flexWrap": "wrap",
+          "orientation": "horizontal"
+        },
+        {
+          "id": "sample-03",
+          "listWidth": 134.84375,
+          "listHeight": 34,
+          "listOverflowX": "auto",
+          "flexWrap": "nowrap",
+          "orientation": "horizontal"
+        },
+        {
+          "id": "sample-04",
+          "listWidth": 144.46875,
+          "listHeight": 147,
+          "listOverflowX": "visible",
+          "flexWrap": "nowrap",
+          "orientation": "vertical"
+        },
+        {
+          "id": "sample-05",
+          "listWidth": 36,
+          "listHeight": 104,
+          "listOverflowX": "visible",
+          "flexWrap": "nowrap",
+          "orientation": "vertical"
+        },
+        {
+          "id": "sample-06",
+          "listWidth": 310,
+          "listHeight": 44,
+          "listOverflowX": "auto",
+          "flexWrap": "nowrap",
+          "orientation": "horizontal"
+        }
+      ],
+      "scrollReachability": {
+        "firstInset": 2,
+        "lastInsetAtMaxScroll": 2.21875,
+        "scrollWidth": 454,
+        "clientWidth": 334
+      }
+    }
+  ],
+  "errors": [],
+  "preview": {
+    "path": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/checks/preview.html",
+    "bytes": 2407144,
+    "themeHashEmbedded": "6e7c987c39eba5f3d48e7052b1695f0ce847e86795df8cd76a19ba494fdf1370"
+  },
+  "passed": true,
+  "identityMatching": {
+    "baseline": "/tmp/jk-tabs-identity-fJZc4c",
+    "defaultSelector": "[data-slot=\"tabs-list\"] > [data-slot=\"tabs-tab\"]",
+    "specialConditions": [
+      ".vrcx-0-side-panel-rail [data-slot=\"tabs-list\"]",
+      ".entity-dialog [data-slot=\"tabs-list\"][class~=\"h-11\"][data-orientation=\"horizontal\"]"
+    ],
+    "mechanism": "normal-priority jirai-tabs layer; role branches revert only that layer then retain original unlayered skins",
+    "notes": [
+      "h-11 remains a layout proxy for EntityDialogTabs, not a semantic attribute",
+      "No arbitrary role=tab fallback outside rail",
+      "No new app attributes or app edits"
+    ],
+    "allSixBeforeAfter": [
+      {
+        "group": 1,
+        "state": "idle",
+        "elements": 7,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 1,
+        "state": "hover",
+        "elements": 7,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 1,
+        "state": "focus",
+        "elements": 7,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 1,
+        "state": "selected",
+        "elements": 7,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 1,
+        "state": "disabled",
+        "elements": 7,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 2,
+        "state": "idle",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 2,
+        "state": "hover",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 2,
+        "state": "focus",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 2,
+        "state": "selected",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 2,
+        "state": "disabled",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 3,
+        "state": "idle",
+        "elements": 5,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 3,
+        "state": "hover",
+        "elements": 5,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 3,
+        "state": "focus",
+        "elements": 5,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 3,
+        "state": "selected",
+        "elements": 5,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 3,
+        "state": "disabled",
+        "elements": 5,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 4,
+        "state": "idle",
+        "elements": 10,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 4,
+        "state": "hover",
+        "elements": 10,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 4,
+        "state": "focus",
+        "elements": 10,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 4,
+        "state": "selected",
+        "elements": 10,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 4,
+        "state": "disabled",
+        "elements": 10,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 5,
+        "state": "idle",
+        "elements": 8,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 5,
+        "state": "hover",
+        "elements": 8,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 5,
+        "state": "focus",
+        "elements": 8,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 5,
+        "state": "selected",
+        "elements": 8,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 5,
+        "state": "disabled",
+        "elements": 8,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 6,
+        "state": "idle",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 6,
+        "state": "hover",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 6,
+        "state": "focus",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 6,
+        "state": "selected",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      },
+      {
+        "group": 6,
+        "state": "disabled",
+        "elements": 6,
+        "propertiesPerPseudo": 480,
+        "pseudos": 3,
+        "equal": true
+      }
+    ],
+    "newContainers": [
+      {
+        "id": "new-container",
+        "list": {
+          "slot": "tabs-list",
+          "hasRoundedLg": false,
+          "background": "rgb(32, 25, 54)",
+          "border": "1px"
+        },
+        "states": {
+          "idle": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "hover": {
+            "backgroundColor": "rgb(59, 44, 85)",
+            "color": "rgb(242, 235, 255)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(242, 235, 255)",
+              "icon": "rgb(242, 235, 255)",
+              "opacity": "1"
+            }
+          },
+          "active": {
+            "backgroundColor": "rgb(255, 184, 230)",
+            "color": "rgb(22, 17, 42)",
+            "borderTopColor": "rgb(108, 92, 224)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(22, 17, 42)",
+              "icon": "rgb(22, 17, 42)",
+              "opacity": "1"
+            }
+          },
+          "focus": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "2px",
+            "outlineStyle": "solid",
+            "outlineOffset": "-2px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "disabled": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(185, 173, 217)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "0.64",
+            "icon": {
+              "tab": "rgb(185, 173, 217)",
+              "icon": "rgb(185, 173, 217)",
+              "opacity": "1"
+            }
+          }
+        }
+      },
+      {
+        "id": "portal-container",
+        "list": {
+          "slot": "tabs-list",
+          "hasRoundedLg": false,
+          "background": "rgb(32, 25, 54)",
+          "border": "1px"
+        },
+        "states": {
+          "idle": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "hover": {
+            "backgroundColor": "rgb(59, 44, 85)",
+            "color": "rgb(242, 235, 255)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(242, 235, 255)",
+              "icon": "rgb(242, 235, 255)",
+              "opacity": "1"
+            }
+          },
+          "active": {
+            "backgroundColor": "rgb(255, 184, 230)",
+            "color": "rgb(22, 17, 42)",
+            "borderTopColor": "rgb(108, 92, 224)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(22, 17, 42)",
+              "icon": "rgb(22, 17, 42)",
+              "opacity": "1"
+            }
+          },
+          "focus": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "2px",
+            "outlineStyle": "solid",
+            "outlineOffset": "-2px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "disabled": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(185, 173, 217)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "0.64",
+            "icon": {
+              "tab": "rgb(185, 173, 217)",
+              "icon": "rgb(185, 173, 217)",
+              "opacity": "1"
+            }
+          }
+        }
+      },
+      {
+        "id": "nested-entity",
+        "list": {
+          "slot": "tabs-list",
+          "hasRoundedLg": false,
+          "background": "rgb(32, 25, 54)",
+          "border": "1px"
+        },
+        "states": {
+          "idle": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "hover": {
+            "backgroundColor": "rgb(59, 44, 85)",
+            "color": "rgb(242, 235, 255)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(242, 235, 255)",
+              "icon": "rgb(242, 235, 255)",
+              "opacity": "1"
+            }
+          },
+          "active": {
+            "backgroundColor": "rgb(255, 184, 230)",
+            "color": "rgb(22, 17, 42)",
+            "borderTopColor": "rgb(108, 92, 224)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(22, 17, 42)",
+              "icon": "rgb(22, 17, 42)",
+              "opacity": "1"
+            }
+          },
+          "focus": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "2px",
+            "outlineStyle": "solid",
+            "outlineOffset": "-2px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "disabled": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(185, 173, 217)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "0.64",
+            "icon": {
+              "tab": "rgb(185, 173, 217)",
+              "icon": "rgb(185, 173, 217)",
+              "opacity": "1"
+            }
+          }
+        }
+      },
+      {
+        "id": "ordinary-underline",
+        "list": {
+          "slot": "tabs-list",
+          "hasRoundedLg": false,
+          "background": "rgb(32, 25, 54)",
+          "border": "1px"
+        },
+        "states": {
+          "idle": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "hover": {
+            "backgroundColor": "rgb(59, 44, 85)",
+            "color": "rgb(242, 235, 255)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(242, 235, 255)",
+              "icon": "rgb(242, 235, 255)",
+              "opacity": "1"
+            }
+          },
+          "active": {
+            "backgroundColor": "rgb(255, 184, 230)",
+            "color": "rgb(22, 17, 42)",
+            "borderTopColor": "rgb(108, 92, 224)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "rgb(253, 244, 255) 2px 2px 0px 0px inset, rgb(122, 63, 109) -2px -2px 0px 0px inset",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(22, 17, 42)",
+              "icon": "rgb(22, 17, 42)",
+              "opacity": "1"
+            }
+          },
+          "focus": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(227, 210, 245)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "2px",
+            "outlineStyle": "solid",
+            "outlineOffset": "-2px",
+            "opacity": "1",
+            "icon": {
+              "tab": "rgb(227, 210, 245)",
+              "icon": "rgb(227, 210, 245)",
+              "opacity": "1"
+            }
+          },
+          "disabled": {
+            "backgroundColor": "rgb(32, 25, 54)",
+            "color": "rgb(185, 173, 217)",
+            "borderTopColor": "rgba(0, 0, 0, 0)",
+            "borderTopWidth": "1px",
+            "borderRadius": "0px",
+            "boxShadow": "none",
+            "outlineWidth": "3px",
+            "outlineStyle": "none",
+            "outlineOffset": "0px",
+            "opacity": "0.64",
+            "icon": {
+              "tab": "rgb(185, 173, 217)",
+              "icon": "rgb(185, 173, 217)",
+              "opacity": "1"
+            }
+          }
+        }
+      }
+    ],
+    "unrelatedRoleOnlyUnchanged": true,
+    "passed": true
+  },
+  "previousRound": {
+    "theme": {
+      "bytes": 1038888,
+      "sha256": "dbffe62e48f3d78db0f84c86fc0e080143e308550f2e6d12c7cb34cfb56caa7b",
+      "limit": 1048576,
+      "previousBytes": 1044021
+    },
+    "backup": "/tmp/jk-tabs-converge-mebZIN",
+    "generationChain": {
+      "runtime": {
+        "entry": "runtime/build-runtime.mjs",
+        "mode": "evaluate original generator through CSS construction only, JIRAI_OUT isolated; skip package manifests/README/image output",
+        "bytes": 1038888,
+        "sha256": "dbffe62e48f3d78db0f84c86fc0e080143e308550f2e6d12c7cb34cfb56caa7b",
+        "exactlyMatchesActive": true
+      },
+      "refactor": {
+        "entry": "refactor/tools/build-theme.mjs --out /tmp/jk-tabs-converge-mebZIN/refactor-generated.css",
+        "sections": 24,
+        "separators": true,
+        "bytes": 1048329,
+        "headroom": 247,
+        "published": false,
+        "differenceFromRuntimeBytes": 9441,
+        "preexistingDifferencePreserved": true
+      }
+    },
+    "verificationSnapshot": "/tmp/jk-tabs-identity-fJZc4c/checks/tabs-convergence-verification.json"
+  },
+  "generationChain": {
+    "runtime": {
+      "entry": "runtime/build-runtime.mjs",
+      "mode": "Original generator through CSS construction only; JIRAI_OUT isolated; manifests/README/images skipped",
+      "bytes": 1038625,
+      "sha256": "6e7c987c39eba5f3d48e7052b1695f0ce847e86795df8cd76a19ba494fdf1370",
+      "exactlyMatchesActive": true
+    },
+    "refactor": {
+      "entry": "refactor/tools/build-theme.mjs --out /tmp/jk-tabs-identity-fJZc4c/refactor-generated.css",
+      "sections": 24,
+      "separators": true,
+      "bytes": 1048066,
+      "headroom": 510,
+      "published": false,
+      "differenceFromRuntimeBytes": 9441,
+      "preexistingDifferencePreserved": true
+    }
+  },
+  "backupManifest": "/tmp/jk-tabs-identity-fJZc4c/manifest.json",
+  "testScripts": [
+    "/tmp/jk-tabs-identity-fJZc4c/verify-tabs.mjs",
+    "/tmp/jk-tabs-identity-fJZc4c/verify-identity.mjs"
+  ],
+  "stateTestMethod": {
+    "hover": "CDP CSS.forcePseudoState, with positive computed-color assertion; not claimed physical mouse test",
+    "focus": "real keyboard Tab/arrow/Enter interaction plus forced focus-visible computed equality",
+    "disabled": "shared-style attributes probe plus all six genuine BaseUI disabled props / blocked click",
+    "motion": "animations/transitions disabled in verification fixture only to stabilize standard computed comparisons",
+    "newContainerProbes": "Cloned real BaseUI DOM, rounded-lg removed, ordinary/portal/nested entity/ordinary underline hosts; sequential forced pseudo-state probes and positive paint assertions; not claimed new React route interaction"
+  },
+  "protectedFiles": [
+    {
+      "file": "refactor/reference/baseline-theme.css",
+      "sha256": "6f7491de06f09ed8ce33c11d58af7dbc9bf27a2d65c230a5d60462508c4c7260",
+      "unchanged": true
+    },
+    {
+      "file": "../../themes/jirai-kei-theme/theme.css",
+      "sha256": "cc6dda3d2b1c96976aa3652f8861c0d1392dcc99889f8b0437e6c7157e5c2a41",
+      "unchanged": true
+    }
+  ],
+  "applicationSourceUnchanged": {
+    "gitStatusBefore": "",
+    "gitStatusAfter": ""
+  },
+  "visualReview": {
+    "reviewed": true,
+    "method": "read_image of both final fullPage PNGs",
+    "desktop": {
+      "width": 1440,
+      "height": 1355,
+      "sha256": "13d2f3e512b07c6de5240f81c5a8868b1313261381e8a78124b2b45cce2a6ca4"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 2284,
+      "sha256": "8485ade5fa9a0e4602c4d632fafc0942c885360873393a72d57a566f39e2fa1b"
+    },
+    "observations": [
+      "01–04 share pink selected bevel / dark idle; sm and vertical geometry remain",
+      "04 lace visible below original vertical frame",
+      "05 remains compact right-edge icon rail",
+      "06 active purple tab joins matching panel without a bottom seam; idle tabs recessed",
+      "390px 01 uses internal horizontal scrolling, first tab visible and first/last reachable; no document overflow",
+      "fullPage covers all six groups and footer, no 100vh blank lower half"
+    ]
+  },
+  "htmlFragments": {
+    "01": {
+      "listOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" role=\"tablist\" data-size=\"default\" data-slot=\"tabs-list\" class=\"relative z-0 flex w-fit items-center justify-center gap-x-0.5 data-[orientation=vertical]:flex-col text-muted-foreground/72 rounded-lg bg-(--state-pressed-surface) p-0.5 max-w-full shrink-0 overflow-x-auto\">",
+      "firstTabOuterHTML": "<button type=\"button\" data-active=\"\" data-orientation=\"horizontal\" data-activation-direction=\"none\" aria-disabled=\"false\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" id=\"base-ui-_r_0_\" data-composite-item-active=\"\" data-size=\"default\" data-slot=\"tabs-tab\" class=\"hover:text-muted-foreground focus-visible:ring-ring data-active:text-foreground relative flex shrink-0 grow cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-inset data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm gap-1.5 [&amp;_svg:not(.lucide):not([class*='opacity-'])]:opacity-80 [&amp;_.lucide]:text-muted-foreground [&amp;_.lucide:not([class*='opacity-'])]:opacity-[0.576] hover:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-active:[&amp;_.lucide]:text-foreground data-active:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-checked:[&amp;_.lucide]:text-foreground data-checked:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 aria-[current=page]:[&amp;_.lucide]:text-foreground aria-[current=page]:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-pressed:[&amp;_.lucide]:text-foreground data-pressed:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 [&amp;_.lucide:not([class*='transition-'])]:transition-[color,opacity] [&amp;_svg:not([class*='size-'])]:size-4.5 sm:[&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:-mx-0.5 [&amp;_svg]:shrink-0 h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5\" aria-controls=\"base-ui-_r_5_\">在线<span class=\"text-content-tertiary text-[11px] leading-none font-medium tabular-nums\">19</span></button>",
+      "panelOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" id=\"base-ui-_r_5_\" role=\"tabpanel\" tabindex=\"0\" data-index=\"0\" data-slot=\"tabs-content\" class=\"flex-1 outline-none\" aria-labelledby=\"base-ui-_r_0_\">"
+    },
+    "02": {
+      "listOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" role=\"tablist\" data-size=\"default\" data-slot=\"tabs-list\" class=\"relative z-0 flex w-fit items-center justify-center gap-x-0.5 data-[orientation=vertical]:flex-col text-muted-foreground/72 rounded-lg bg-(--state-pressed-surface) p-0.5 flex-wrap\">",
+      "firstTabOuterHTML": "<button type=\"button\" data-active=\"\" data-orientation=\"horizontal\" data-activation-direction=\"none\" aria-disabled=\"false\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" id=\"base-ui-_r_a_\" data-composite-item-active=\"\" data-size=\"default\" data-slot=\"tabs-tab\" class=\"hover:text-muted-foreground focus-visible:ring-ring data-active:text-foreground relative flex shrink-0 grow cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-inset data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm gap-1.5 [&amp;_svg:not(.lucide):not([class*='opacity-'])]:opacity-80 [&amp;_.lucide]:text-muted-foreground [&amp;_.lucide:not([class*='opacity-'])]:opacity-[0.576] hover:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-active:[&amp;_.lucide]:text-foreground data-active:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-checked:[&amp;_.lucide]:text-foreground data-checked:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 aria-[current=page]:[&amp;_.lucide]:text-foreground aria-[current=page]:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-pressed:[&amp;_.lucide]:text-foreground data-pressed:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 [&amp;_.lucide:not([class*='transition-'])]:transition-[color,opacity] [&amp;_svg:not([class*='size-'])]:size-4.5 sm:[&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:-mx-0.5 [&amp;_svg]:shrink-0 h-8.5 px-[calc(--spacing(2.5)-1px)] sm:h-7.5\" aria-controls=\"base-ui-_r_e_\">邀请</button>",
+      "panelOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" id=\"base-ui-_r_e_\" role=\"tabpanel\" tabindex=\"0\" data-index=\"0\" data-slot=\"tabs-content\" class=\"flex-1 outline-none\" aria-labelledby=\"base-ui-_r_a_\">"
+    },
+    "03": {
+      "listOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" role=\"tablist\" data-size=\"sm\" data-slot=\"tabs-list\" class=\"relative z-0 flex w-fit items-center justify-center gap-x-0.5 data-[orientation=vertical]:flex-col text-muted-foreground/72 rounded-lg bg-(--state-pressed-surface) p-0.5 max-w-full shrink-0 overflow-x-auto\">",
+      "firstTabOuterHTML": "<button type=\"button\" data-active=\"\" data-orientation=\"horizontal\" data-activation-direction=\"none\" aria-disabled=\"false\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" id=\"base-ui-_r_i_\" data-composite-item-active=\"\" data-size=\"sm\" data-slot=\"tabs-tab\" class=\"hover:text-muted-foreground focus-visible:ring-ring data-active:text-foreground relative flex shrink-0 grow cursor-pointer items-center justify-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-inset data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm gap-1.5 [&amp;_svg:not(.lucide):not([class*='opacity-'])]:opacity-80 [&amp;_.lucide]:text-muted-foreground [&amp;_.lucide:not([class*='opacity-'])]:opacity-[0.576] hover:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-active:[&amp;_.lucide]:text-foreground data-active:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-checked:[&amp;_.lucide]:text-foreground data-checked:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 aria-[current=page]:[&amp;_.lucide]:text-foreground aria-[current=page]:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-pressed:[&amp;_.lucide]:text-foreground data-pressed:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 [&amp;_.lucide:not([class*='transition-'])]:transition-[color,opacity] [&amp;_svg:not([class*='size-'])]:size-4.5 sm:[&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:-mx-0.5 [&amp;_svg]:shrink-0 h-7.5 px-[calc(--spacing(2)-1px)] sm:h-6.5\" aria-controls=\"base-ui-_r_l_\">PC</button>",
+      "panelOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" id=\"base-ui-_r_l_\" role=\"tabpanel\" tabindex=\"0\" data-index=\"0\" data-slot=\"tabs-content\" class=\"flex-1 outline-none\" aria-labelledby=\"base-ui-_r_i_\">"
+    },
+    "04": {
+      "listOpeningTag": "<div data-orientation=\"vertical\" data-activation-direction=\"none\" aria-orientation=\"vertical\" role=\"tablist\" data-size=\"default\" data-slot=\"tabs-list\" class=\"relative z-0 flex items-center justify-center data-[orientation=vertical]:flex-col text-muted-foreground/72 rounded-lg bg-(--state-pressed-surface) p-0.5 h-fit w-44 shrink-0 gap-0.5 self-start\">",
+      "firstTabOuterHTML": "<button type=\"button\" data-active=\"\" data-orientation=\"vertical\" data-activation-direction=\"none\" aria-disabled=\"false\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" id=\"base-ui-_r_o_\" data-composite-item-active=\"\" data-size=\"default\" data-slot=\"tabs-tab\" class=\"hover:text-muted-foreground focus-visible:ring-ring data-active:text-foreground relative flex shrink-0 grow cursor-pointer items-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-inset data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm [&amp;_svg:not(.lucide):not([class*='opacity-'])]:opacity-80 [&amp;_.lucide]:text-muted-foreground [&amp;_.lucide:not([class*='opacity-'])]:opacity-[0.576] hover:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-active:[&amp;_.lucide]:text-foreground data-active:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-checked:[&amp;_.lucide]:text-foreground data-checked:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 aria-[current=page]:[&amp;_.lucide]:text-foreground aria-[current=page]:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-pressed:[&amp;_.lucide]:text-foreground data-pressed:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 [&amp;_.lucide:not([class*='transition-'])]:transition-[color,opacity] [&amp;_svg:not([class*='size-'])]:size-4.5 sm:[&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:-mx-0.5 [&amp;_svg]:shrink-0 h-8.5 sm:h-7.5 justify-start gap-2.5 px-3 py-1.5\" aria-controls=\"base-ui-_r_s_\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-settings\" aria-hidden=\"true\"><path d=\"M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915\"></path><circle cx=\"12\" cy=\"12\" r=\"3\"></circle></svg>系统</button>",
+      "panelOpeningTag": "<div data-orientation=\"vertical\" data-activation-direction=\"none\" id=\"base-ui-_r_s_\" role=\"tabpanel\" tabindex=\"0\" data-index=\"0\" data-slot=\"tabs-content\" class=\"flex-1 outline-none\" aria-labelledby=\"base-ui-_r_o_\">"
+    },
+    "05": {
+      "listOpeningTag": "<div data-orientation=\"vertical\" data-activation-direction=\"none\" aria-orientation=\"vertical\" role=\"tablist\" data-size=\"default\" data-slot=\"tabs-list\" class=\"text-muted-foreground relative z-0 flex items-center justify-center data-[orientation=vertical]:flex-col data-[orientation=horizontal]:py-1 data-[orientation=vertical]:px-1 w-full flex-col gap-0.5 p-0 [&amp;&gt;[data-slot=tab-indicator]]:hidden\">",
+      "firstTabOuterHTML": "<button type=\"button\" data-active=\"\" data-orientation=\"vertical\" data-activation-direction=\"none\" aria-disabled=\"false\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" id=\"base-ui-_r_14_\" data-composite-item-active=\"\" data-size=\"default\" data-slot=\"tooltip-trigger\" data-base-ui-tooltip-trigger=\"\" aria-label=\"特别关注\" title=\"特别关注\" class=\"hover:text-muted-foreground focus-visible:ring-ring data-active:text-foreground relative flex shrink-0 grow cursor-pointer items-center rounded-md border border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-inset data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm [&amp;_svg:not(.lucide):not([class*='opacity-'])]:opacity-80 [&amp;_.lucide]:text-muted-foreground [&amp;_.lucide:not([class*='opacity-'])]:opacity-[0.576] hover:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-active:[&amp;_.lucide]:text-foreground data-active:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-checked:[&amp;_.lucide]:text-foreground data-checked:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 aria-[current=page]:[&amp;_.lucide]:text-foreground aria-[current=page]:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-pressed:[&amp;_.lucide]:text-foreground data-pressed:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 [&amp;_.lucide:not([class*='transition-'])]:transition-[color,opacity] [&amp;_svg:not([class*='size-'])]:size-4.5 sm:[&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:-mx-0.5 [&amp;_svg]:shrink-0 data-active:bg-secondary h-auto w-full flex-col justify-center gap-0.5 px-0 py-1.5 sm:h-auto\" aria-controls=\"base-ui-_r_10_\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-user-search size-4.5\" aria-hidden=\"true\" data-icon=\"icon\"><circle cx=\"10\" cy=\"7\" r=\"4\"></circle><path d=\"M10.3 15H7a4 4 0 0 0-4 4v2\"></path><circle cx=\"17\" cy=\"17\" r=\"3\"></circle><path d=\"m21 21-1.9-1.9\"></path></svg><span class=\"sr-only\">特别关注</span></button>",
+      "panelOpeningTag": "<div data-orientation=\"vertical\" data-activation-direction=\"none\" id=\"base-ui-_r_10_\" role=\"tabpanel\" tabindex=\"0\" data-index=\"0\" data-slot=\"tabs-content\" class=\"flex-1 outline-none\" aria-labelledby=\"base-ui-_r_14_\">"
+    },
+    "06": {
+      "listOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" role=\"tablist\" data-size=\"default\" data-slot=\"tabs-list\" class=\"text-muted-foreground z-0 items-center gap-x-0.5 data-[orientation=vertical]:flex-col data-[orientation=horizontal]:py-1 data-[orientation=vertical]:px-1 relative flex h-11 min-h-11 w-full justify-start overflow-x-auto overflow-y-hidden rounded-none border-b bg-transparent p-0\">",
+      "firstTabOuterHTML": "<button type=\"button\" data-active=\"\" data-orientation=\"horizontal\" data-activation-direction=\"none\" aria-disabled=\"false\" tabindex=\"0\" role=\"tab\" aria-selected=\"true\" id=\"base-ui-_r_1c_\" data-composite-item-active=\"\" data-size=\"default\" data-slot=\"tabs-tab\" class=\"focus-visible:ring-ring data-active:text-foreground relative flex cursor-pointer items-center justify-center border-transparent text-base font-medium whitespace-nowrap transition-[color,background-color,box-shadow] outline-none focus-visible:ring-2 focus-visible:ring-inset data-disabled:pointer-events-none data-disabled:opacity-64 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start sm:text-sm gap-1.5 [&amp;_svg:not(.lucide):not([class*='opacity-'])]:opacity-80 [&amp;_.lucide]:text-muted-foreground [&amp;_.lucide:not([class*='opacity-'])]:opacity-[0.576] hover:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-active:[&amp;_.lucide]:text-foreground data-active:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-checked:[&amp;_.lucide]:text-foreground data-checked:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 aria-[current=page]:[&amp;_.lucide]:text-foreground aria-[current=page]:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 data-pressed:[&amp;_.lucide]:text-foreground data-pressed:[&amp;_.lucide:not([class*='opacity-'])]:opacity-80 [&amp;_.lucide:not([class*='transition-'])]:transition-[color,opacity] [&amp;_svg:not([class*='size-'])]:size-4.5 sm:[&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:pointer-events-none [&amp;_svg]:-mx-0.5 [&amp;_svg]:shrink-0 sm:h-7.5 text-muted-foreground hover:text-foreground h-11 flex-none rounded-none border-0 bg-transparent px-3 shadow-none after:hidden data-active:bg-transparent data-active:shadow-none\" aria-controls=\"base-ui-_r_1g_\">概览</button>",
+      "panelOpeningTag": "<div data-orientation=\"horizontal\" data-activation-direction=\"none\" id=\"base-ui-_r_1g_\" role=\"tabpanel\" tabindex=\"0\" data-index=\"0\" data-slot=\"tabs-content\" class=\"flex-1 outline-none\" aria-labelledby=\"base-ui-_r_1c_\">"
+    }
+  },
+  "modifiedFiles": [
+    "runtime/controls-r9.css",
+    "refactor/src/style/11-controls-and-pages.css",
+    "runtime/preview-package/jirai-kei-theme/theme.css",
+    "checks/tabs-visual-preview.tsx",
+    "checks/preview.html",
+    "checks/tabs-convergence-verification.json",
+    "checks/tabs-converged-desktop.png",
+    "checks/tabs-converged-mobile.png"
+  ],
+  "layerInspection": {
+    "layer": "jirai-tabs",
+    "importantDeclarations": 0,
+    "defaultUsesRoundedLg": false,
+    "wholeLayerSynchronized": true,
+    "roleExit": "all:revert-layer; current normal unlayered skins stay intact"
+  },
+  "incrementalSourcePatch": "/tmp/jk-tabs-identity-fJZc4c/source.patch"
+}

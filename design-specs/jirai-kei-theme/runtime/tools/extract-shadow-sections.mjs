@@ -25,7 +25,7 @@
  * build-runtime.mjs emits `/* SECTION <part-name> *\/` verbatim, and part names
  * are arbitrary strings. Two of the three shadow sections carry a human-readable
  * description inside the marker itself, e.g.
- *     /* SECTION entity-button-roles-b054-b072: explicit action roles share portal states. *\/
+ *     /* SECTION entity-button-roles-b054-b072: portal button states use existing app attributes/classes only. *\/
  * so the *part name* must be the full string including the description. Writing
  * only the short id would silently drop the description and break byte equality.
  * SHADOWS below therefore maps short-id -> exact marker name -> output file.
@@ -46,7 +46,7 @@ const SHADOWS = [
   ['portal-button-roles-b073-b100', 'portal-button-roles-b073-b100', 'portal-button-roles-b073-b100.css'],
   [
     'entity-button-roles-b054-b072',
-    'entity-button-roles-b054-b072: explicit action roles share portal states.',
+    'entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.',
     'entity-button-roles-b054-b072.css',
   ],
   [
