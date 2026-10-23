@@ -31,24 +31,3 @@
   outline-offset: 1px;
 }
 
-/* The overlay is portaled outside main-content; buttons-badges-r10 does not own it. */
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"] {
-  border: 1px solid #8c71b0;
-  border-radius: 2px;
-  background-color: #3b2c55;
-  color: #f2ebff;
-  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
-}
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"] {
-  border: 1px solid var(--wd-frame, #6c5ce0);
-  border-radius: 2px;
-  background-color: var(--wd-pink, #ff7fcf);
-  color: #16112a;
-  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
-}
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"]:hover:not(:disabled) {
-  border-color: var(--wd-pink, #ff7fcf);
-  background-color: var(--wd-select, #4a3784);
-  color: var(--wd-text, #f2ebff);
-}

@@ -8,15 +8,12 @@ const out=process.env.JIRAI_OUT?path.resolve(process.env.JIRAI_OUT):path.join(he
 const isolated=Boolean(process.env.JIRAI_OUT);
 await fs.mkdir(out,{recursive:true});
 const read=p=>fs.readFile(p,'utf8');
-const original=await read(path.join(repo,'themes/jirai-kei-theme/theme.css'));
-let tokens=original.slice(original.indexOf(':root'),original.indexOf('\n}')+2);
+// Standalone base variables; preserve the original block bytes and palette conversions below.
+let tokens=await read(path.join(here,'tokens.css'));
 const palette={'#161219':'#16112a','#f7eef4':'#f2ebff','#211b25':'#201936','#2b2230':'#2a2147','#f0a8c8':'#ff7fcf','#271722':'#16112a','#c4aab9':'#b9add9','#392a38':'#332650','#ff8899':'#ff6b8a','#564151':'#6c5ce0','#bdb3c2':'#a294c8','#4a293d':'#4a3784','#b9cfa9':'#6fe3d3','#e0b97f':'#ffd36f','#ad80d7':'#8f7fe0','0.5rem':'2px'};
 for(const [a,b]of Object.entries(palette))tokens=tokens.split(a).join(b);
 // `none` is not a valid item inside the app's comma-separated box-shadow list; it voided the whole workspace frame.
 tokens=tokens.replace('--vrcx-0-main-content-lift: none;','--vrcx-0-main-content-lift: 0 0 #0000;');
-const fonts=await read(path.join(design,'fonts/fonts-body.css'));
-const notices=await Promise.all(['OFL-Fusion-Pixel.txt','OFL-Silkscreen.txt'].map(n=>read(path.join(design,'fonts',n))));
-const fontLicenses=notices.map(t=>'/*! Bundled font license\n'+t.replace(/\*\//g,'* /')+'\n*/').join('\n');
 const iconVars=[];
 for(const [key,name]of Object.entries({chevron:'chevron-down',clock:'clock',right:'chevron-right',ellipsis:'ellipsis'})){
  let file=path.join(design,'original-assets/icons/src-hand',name+'.svg');
@@ -44,17 +41,13 @@ iconVars.push('--wd-bg-ribbon-charm:url("data:image/svg+xml,'+encodeURIComponent
 const avatarRing='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges"><path fill="#000" fill-rule="evenodd" d="M8 0H24V2H28V4H30V8H32V24H30V28H28V30H24V32H8V30H4V28H2V24H0V8H2V4H4V2H8Z M8 2H24V4H28V8H30V24H28V28H24V30H8V28H4V24H2V8H4V4H8Z"/></svg>';
 iconVars.push('--wd-avatar-ring:url("data:image/svg+xml,'+encodeURIComponent(avatarRing)+'")');
 const nativeIcons=':root{'+iconVars.join(';')+'}';
-const parts=[['tokens',tokens],['native-icons',nativeIcons],['assets',await read(path.join(design,'original-assets/dist/jirai-assets.css'))],['fonts',fontLicenses+'\n'+fonts],['icons',await read(path.join(design,'original-assets/icons/dist/jirai-icons.css'))],['runtime',await read(path.join(here,'windose-runtime.css'))],['window-chrome',await read(path.join(here,'window-chrome.css'))],['group-spacing',await read(path.join(here,'group-spacing.css'))],['body-typography',await read(path.join(here,'fonts-pixel-body.css'))],['side-panel',await read(path.join(here,'side-panel-r4.css'))],['feed-badges',await read(path.join(here,'feed-badges.css'))],['settings',await read(path.join(here,'settings-pixel.css'))],['pixel-controls',await read(path.join(here,'pixel-controls.css'))],['assets-r5',await read(path.join(design,'original-assets/r5/assets-r5.css'))],['motion',await read(path.join(here,'motion-r5.css'))],['navigation-r7',await read(path.join(here,'navigation-r7.css'))],['motion-r7',await read(path.join(here,'motion-r7.css'))],['assets-r7',await read(path.join(design,'original-assets/r7-backgrounds/assets-r7.css'))],['backgrounds-r7',await read(path.join(here,'backgrounds-r7.css'))],['chrome-r8',await read(path.join(here,'chrome-r8.css'))],['bio-diff-r8',await read(path.join(here,'bio-diff-r8.css'))],['motion-r8',await read(path.join(here,'motion-r8.css'))],['cat-r8-final',await read(path.join(here,'cat-r8-final.css'))],['user-dialog-r8',await read(path.join(here,'user-dialog-r8.css'))],['login-r8',await read(path.join(here,'login-r8.css'))],['user-dialog-r9',await read(path.join(here,'user-dialog-r9.css'))],['badge-r9',await read(path.join(here,'badge-r9.css'))],['controls-r9',await read(path.join(here,'controls-r9.css'))],['popups-r9',await read(path.join(here,'popups-r9.css'))],['tools-ui-r9',await read(path.join(here,'tools-ui-r9.css'))],['avatars-status-r9',await read(path.join(here,'avatars-status-r9.css'))],['brand-heart-r9',await read(path.join(here,'brand-heart-r9.css'))],['loader-r9',await read(path.join(here,'loader-r9.css'))],['form-controls-r9',await read(path.join(here,'form-controls-r9.css'))],['dialogs-r9',await read(path.join(here,'dialogs-r9.css'))],['fields-toolbar-r10',await read(path.join(here,'fields-toolbar-r10.css'))],['overlays-r10',await read(path.join(here,'overlays-r10.css'))],['favorites-r9',await read(path.join(here,'favorites-r9.css'))],['browse-history-r9',await read(path.join(here,'browse-history-r9.css'))],['buttons-badges-r10',await read(path.join(here,'buttons-badges-r10.css'))],['data-surfaces-r10',await read(path.join(here,'data-surfaces-r10.css'))],['banner-frame-r96',await read(path.join(here,'banner-frame-r96.css'))],['privacy-lock-r96',await read(path.join(here,'privacy-lock-r96.css'))],['brand-heart-r97',await read(path.join(here,'brand-heart-r97.css'))],['cat-motion-r96',await read(path.join(here,'cat-motion-r96.css'))]];
-parts.push(['dialog-header-r97',await read(path.join(here,'dialog-header-r97.css'))],['loader-r97',await read(path.join(here,'loader-r97.css'))],['cards-r97',await read(path.join(here,'cards-r97.css'))],['splitter-r97',await read(path.join(here,'splitter-r97.css'))],['language-badges-r98',await read(path.join(here,'language-badges-r98.css'))],['status-icons-r10',await read(path.join(here,'status-icons-r10.css'))],['nav-phone-r10',await read(path.join(here,'nav-phone-r10.css'))],
-// Shadow sections: these three used to exist ONLY in the built artifact, because
-// checks/element-style-audit/patch-shared-button-states.mjs appended them in place.
-// They are recovered here by tools/extract-shadow-sections.mjs so a plain build
-// reproduces the artifact byte-for-byte instead of silently dropping 42 rules.
-// NOTE: the part name IS the marker text. Two of them carry a description after a
-// colon — that description is part of the marker and must never be shortened.
-['portal-button-roles-b073-b100',await read(path.join(here,'portal-button-roles-b073-b100.css'))],
-['entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.',await read(path.join(here,'entity-button-roles-b054-b072.css'))],
-['auth-button-feedback: retain login-r8 / privacy-lock-r96 paint.',await read(path.join(here,'auth-button-feedback.css'))]);
+// Fragment order lives in parts.json (one entry per SECTION, cascade order). Edit that file, not this one.
+const generated={tokens,'native-icons':nativeIcons};
+const parts=[];
+for(const p of JSON.parse(await read(path.join(here,'parts.json'))).parts){
+ if(p.generated){if(!(p.generated in generated))throw Error('Unknown generated part: '+p.generated);parts.push([p.name,generated[p.generated]]);}
+ else parts.push([p.name,await read(path.join(here,p.file))]);
+}
 const css='/* LOCAL PREVIEW DRAFT: Windose × Jirai. Not release validated. */\n'+parts.map(([n,s])=>'/* SECTION '+n+' */\n'+s).join('\n');
 const bytes=Buffer.byteLength(css);if(bytes>1048576)throw Error('CSS exceeds 1 MiB');
 if(/@import\b/.test(css))throw Error('Unexpected @import');
@@ -72,4 +65,4 @@ const require=createRequire(import.meta.url);const sharp=require(process.env.SHA
 await sharp(previewSource).resize({width:1200}).webp({quality:80}).toFile(path.join(out,'preview.webp'));
 const previewBytes=(await fs.stat(path.join(out,'preview.webp'))).size;if(previewBytes>262144)throw Error('Preview exceeds 256 KiB');
 const report={cssBytes:bytes,limit:1048576,previewSource,sections:parts.map(([name,s])=>({name,bytes:Buffer.byteLength(s)})),previewBytes,output:out};
-await fs.writeFile(path.join(here,'build-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+await fs.writeFile(path.join(isolated?out:here,'build-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

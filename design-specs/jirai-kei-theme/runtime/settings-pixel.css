@@ -43,17 +43,8 @@
    because TooltipTrigger overrides data-slot (tooltip.tsx:27,
    ToolbarControls.tsx:350 wraps a ToggleGroupItem).
    -------------------------------------------------------------------------- */
-[data-slot=toggle-group][data-variant=outline]{border:1px solid #16112a;border-radius:0;background-color:#201936;gap:0;clip-path:var(--jk-px-cut)}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]){border:0;border-radius:0;background-color:#201936;color:#b9add9;box-shadow:inset 1px 1px rgb(0 0 0/.5),inset -1px -1px #8f7fe0}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])::before{border-radius:0}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):hover{background-color:#4a3784;color:#f2ebff;box-shadow:inset 1px 1px #8f7fe0,inset -1px -1px rgb(0 0 0/.5)}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])[data-pressed]{background-color:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d,inset 0 0 0 1px #16112a}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
-[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]{width:2px;background-color:#16112a}
-[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]::before{display:none}
 
-/* Settings layout only; controls-r9 owns the shared face, cards-r97 the lace. */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px;gap:1px;clip-path:var(--jk-px-cut)}
+/* Settings rail geometry, shared face and lace all live in tabs.css. */
 
 /* --------------------------------------------------------------------------
    (6)②③ Settings cards: pixel window title bar + bow charm + lace, and

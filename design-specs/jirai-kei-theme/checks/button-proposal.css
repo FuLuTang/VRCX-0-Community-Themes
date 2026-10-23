@@ -1,0 +1,119 @@
+/* Button proposal, round 2 — preview only (right-hand pane, .jk-proposal). The two-id boost only beats the
+   old scattered rules still in theme.css; runtime/button.css will not need it.
+
+   Kept from the current theme (user's choice):
+   - the two-frame press: every state change is an 80ms steps(2,end) transition (pixel "两段")
+   - the pressed look of 06: dark 2px inset top-left, light 1px bottom-right, button sinks
+   - destructive is a dark wine button with a red frame, not a filled red block (08)
+   - side-panel group headers (collapsible triggers, 16) keep their own skin: not touched here
+   Families, by what the ORIGINAL app shows at rest:
+   - raised: default / outline / secondary / destructive
+   - flat (ghost): invisible at rest; on hover it BECOMES a raised button in the surface's accent
+     (dark surfaces: purple, light pink bars such as titlebar/statusbar: magenta, as the titlebar already does)
+   - list rows (ghost at size default): tint + thin frame on hover, sunken on press
+   - ghost carrying a shortcut hint (kbd) is a search field: visible at rest
+   - link: text only */
+
+:is(#p#p,.jk-proposal) button[data-variant]:not([data-slot="collapsible-trigger"]){
+  --step:80ms steps(2,end);
+  border-radius:0 !important;transform:none !important;
+  transition:background-color var(--step),color var(--step),box-shadow var(--step),translate var(--step) !important;
+}
+:is(#p#p,.jk-proposal) button[data-variant]:not([data-slot="collapsible-trigger"]):is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled]){translate:1px 2px !important}
+
+/* ---------- raised ---------- */
+:is(#p#p,.jk-proposal) button:is([data-variant="default"],[data-variant="outline"],[data-variant="secondary"],[data-variant="destructive"]){
+  --hl:rgba(253,244,255,.72);--sh:rgba(22,17,42,.72);
+  border:1px solid var(--wd-frame) !important;box-shadow:inset 1px 1px 0 var(--hl),inset -1px -1px 0 var(--sh) !important;
+}
+:is(#p#p,.jk-proposal) button[data-variant="default"]{background:#ffb8e6 !important;color:#16112a !important}
+:is(#p#p,.jk-proposal) button[data-variant="outline"]{background:#211a33 !important;color:#f2ebff !important}
+:is(#p#p,.jk-proposal) button[data-variant="secondary"]{--hl:rgba(253,244,255,.4);background:#2f2552 !important;color:#f2ebff !important}
+:is(#p#p,.jk-proposal) button[data-variant="destructive"]{--hl:#ffb8e6;--sh:#16112a;border-color:#ff6b8a !important;background:#3d1b35 !important;color:#ffd9e4 !important}
+:is(#p#p,.jk-proposal) button[data-variant="default"]:hover:not(:disabled,[data-disabled]){background:#ffcdef !important}
+:is(#p#p,.jk-proposal) button[data-variant="outline"]:hover:not(:disabled,[data-disabled]){background:#2c2345 !important}
+:is(#p#p,.jk-proposal) button[data-variant="secondary"]:hover:not(:disabled,[data-disabled]){background:#3a2e66 !important}
+:is(#p#p,.jk-proposal) button[data-variant="destructive"]:hover:not(:disabled,[data-disabled]){background:#5a2140 !important}
+:is(#p#p,.jk-proposal) button:is([data-variant="default"],[data-variant="outline"],[data-variant="secondary"],[data-variant="destructive"]):is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled]){
+  box-shadow:inset 2px 2px 0 #16112a,inset -1px -1px 0 #fdf4ff !important;
+}
+:is(#p#p,.jk-proposal) button[data-variant="destructive"]:active:not(:disabled,[data-disabled]){background:#ff6b8a !important;color:#16112a !important}
+
+/* ---------- flat ---------- */
+:is(#p#p,.jk-proposal) button[data-variant="ghost"]:not([data-slot="collapsible-trigger"]){
+  --acc:#332650;--acc-fg:#f2ebff;--acc-hl:rgba(253,244,255,.5);--acc-sh:#07050f;
+  border:1px solid transparent !important;background-color:transparent !important;box-shadow:none !important;
+}
+/* light pink bars: magenta accent, as the titlebar already does */
+/* pink surfaces: the titlebar, the statusbar, and any selected row (the app marks it with bg-(--state-selected-surface)) */
+:is(#p#p,.jk-proposal) :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) button[data-variant="ghost"]{--acc:#b0305f;--acc-fg:#fff1f8;--acc-hl:rgba(255,241,248,.55);--acc-sh:#21132d}
+:is(#p#p,.jk-proposal) button[data-variant="ghost"]:not([data-slot="collapsible-trigger"]):hover:not(:disabled,[data-disabled]){
+  border-color:var(--acc-sh) !important;background-color:var(--acc) !important;color:var(--acc-fg) !important;
+  box-shadow:inset 1px 1px 0 var(--acc-hl),inset -1px -1px 0 rgba(0,0,0,.45) !important;
+}
+:is(#p#p,.jk-proposal) button[data-variant="ghost"]:not([data-slot="collapsible-trigger"]):is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled]){
+  border-color:var(--acc-sh) !important;background-color:var(--acc) !important;color:var(--acc-fg) !important;
+  box-shadow:inset 2px 2px 0 var(--acc-sh),inset -1px -1px 0 var(--acc-hl) !important;
+}
+/* search field: a ghost with a shortcut hint is visible at rest */
+:is(#p#p,.jk-proposal) button[data-variant="ghost"]:has(> [data-slot="kbd-group"],> kbd){
+  border-color:var(--acc-sh) !important;background-color:#f8c6e3 !important;color:#21132d !important;
+  box-shadow:inset 1px 1px 0 #fff1f8,inset -1px -1px 0 #b86ba4 !important;
+}
+
+/* ---------- list rows ---------- */
+:is(#p#p,.jk-proposal) button[data-variant="ghost"][data-size="default"]:not([data-slot="collapsible-trigger"]):hover:not(:disabled,[data-disabled]){
+  border-color:transparent !important;background-color:color-mix(in srgb,var(--wd-frame) 22%,transparent) !important;color:inherit !important;
+  box-shadow:inset 1px 1px 0 rgba(253,244,255,.72),inset -1px -1px 0 #16112a !important; /* raised: light top-left */
+}
+:is(#p#p,.jk-proposal) button[data-variant="ghost"][data-size="default"]:not([data-slot="collapsible-trigger"]):active:not(:disabled,[data-disabled]){
+  border-color:transparent !important;background-color:color-mix(in srgb,var(--wd-frame) 30%,transparent) !important;color:inherit !important;
+  box-shadow:inset 2px 2px 0 #16112a,inset -1px -1px 0 #fdf4ff !important; /* pressed: same edges as the confirm button */
+}
+
+/* ---------- link ---------- */
+:is(#p#p,.jk-proposal) button[data-variant="link"]{
+  background:transparent !important;border-color:transparent !important;box-shadow:none !important;translate:none !important;
+  color:#ffa6dc !important;text-decoration:underline !important;text-decoration-thickness:1px !important;text-underline-offset:3px !important;
+}
+:is(#p#p,.jk-proposal) button[data-variant="link"]:hover:not(:disabled,[data-disabled]){color:#ffd2ef !important;text-decoration-thickness:2px !important}
+:is(#p#p,.jk-proposal) button[data-variant="link"]:active:not(:disabled,[data-disabled]){color:var(--wd-pink) !important;translate:none !important}
+
+/* ---------- shared ---------- */
+:is(#p#p,.jk-proposal) button[data-variant]:not([data-slot="collapsible-trigger"]):focus-visible{outline:2px solid var(--wd-pink) !important;outline-offset:1px !important;z-index:1}
+:is(#p#p,.jk-proposal) button[data-variant]:not([data-slot="collapsible-trigger"]):is(:disabled,[data-disabled],[aria-disabled="true"]){opacity:.45 !important;cursor:not-allowed !important}
+/* pressing a pink primary darkens it (as the current theme does) */
+:is(#p#p,.jk-proposal) button[data-variant="default"]:active:not(:disabled,[data-disabled]){background:#f37fc4 !important}
+/* raised buttons on the light pink bars press into the same magenta as the flat ones there */
+:is(#p#p,.jk-proposal) :is(.vrcx-0-titlebar,.vrcx-0-statusbar) button:is([data-variant="secondary"],[data-variant="outline"]):is(:active,[aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled]){background:#b0305f !important;color:#fff1f8 !important}
+
+/* A selected row is itself the raised pink key (the app paints it on the row: bg-(--state-selected-surface)).
+   Its row button must not draw a second frame or a purple tint inside it; pressing the button presses the row. */
+:is(#p#p,.jk-proposal) [class~="bg-(--state-selected-surface)"] > button[data-variant="ghost"][data-size="default"]:is(:hover,:active):not(:disabled,[data-disabled]){
+  background-color:transparent !important;box-shadow:none !important;
+}
+:is(#p#p,.jk-proposal) [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]:hover:not(:disabled,[data-disabled])){background-color:#ffcdef !important}
+:is(#p#p,.jk-proposal) [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]:active:not(:disabled,[data-disabled])){
+  box-shadow:inset 2px 2px 0 #7a3f6d,inset -1px -1px 0 #fdf4ff !important;
+}
+
+/* ---------- row actions ----------
+   Icon buttons that sit in a list row (a container whose direct child is a list-row button, e.g. the "…"
+   menu after a folder name). The app shows them only when they matter (selected row, or the hovered row),
+   so when they are there they are drawn as a small raised key in the row's own colour. */
+:is(#p#p#p,.jk-proposal) :has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"]{
+  border:1px solid #07050f !important;background-color:#2a2147 !important;color:#f2ebff !important;
+  box-shadow:inset 1px 1px 0 rgba(253,244,255,.5),inset -1px -1px 0 rgba(7,5,15,.6) !important;
+}
+:is(#p#p#p,.jk-proposal) :has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"]:hover:not(:disabled,[data-disabled]){background-color:#3a2d60 !important;color:#fff !important}
+/* on a selected (pink) row: a slightly deeper pink key */
+:is(#p#p#p,.jk-proposal) [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"]{
+  border-color:#7a3f6d !important;background-color:#f5a3d7 !important;color:#16112a !important;
+  box-shadow:inset 1px 1px 0 #fdf4ff,inset -1px -1px 0 #b05b93 !important;
+}
+:is(#p#p#p,.jk-proposal) [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"]:hover:not(:disabled,[data-disabled]){background-color:#ffc3e8 !important;color:#16112a !important}
+/* pressed / menu open: sunken, like every other button */
+:is(#p#p#p,.jk-proposal) :has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"]:is(:active,[aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled]){
+  box-shadow:inset 2px 2px 0 #07050f,inset -1px -1px 0 rgba(253,244,255,.6) !important;
+}
+:is(#p#p#p,.jk-proposal) :has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"] svg{color:inherit !important;opacity:1 !important}

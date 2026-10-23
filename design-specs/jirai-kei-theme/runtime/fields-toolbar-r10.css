@@ -50,18 +50,6 @@
 
 /* Toolbar default ToggleGroup is a multi-select chip row, not a segmented switch.
    controls-r9 intentionally reserved the outline variant; chips retain small gaps. */
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"]{
-  display:flex;gap:2px;padding:0;max-width:100%;
-}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]{
-  min-height:28px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#d6c8ee;
-  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;transition:none;
-}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:hover:not(:disabled):not([aria-disabled="true"]){background:#392a52;color:#f2ebff}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"]){border-color:#6c5ce0;background:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:focus-visible{z-index:2;outline:2px solid #ff7fcf;outline-offset:1px}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"])::before{content:none!important}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:disabled{opacity:.55}
 
 /* Feed multi-user search: keep the toolbar ink tone scoped to the chip input group. */
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="input-group"]:has(> [data-slot="combobox-chips"]){

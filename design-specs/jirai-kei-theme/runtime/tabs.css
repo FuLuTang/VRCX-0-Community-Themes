@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Tabs · the single owner of every Tabs skin rule (see
+   checks/和用户商讨后收敛的"每个组件什么样".md, "Tabs").
+   A rule lives here when its subject (the right-most styled element) is a Tabs
+   part: tabs-list, tabs-tab, tab-indicator, the rail's [role=tab], the
+   property-tab tabs-content seam, or their pseudo-elements. Rules that only use
+   Tabs as an ancestor/page anchor (settings and tools cards, tools toolbar,
+   browse-history rows, fields-toolbar exclusion) stay in their own fragments,
+   as do the --jk-px-cut / --jk-r97-lace* variables these rules consume.
+   Rule text is moved verbatim; build-runtime.mjs explains the splice point.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   层级一 · component default (layered). Matches the existing data-slot identity
+   of any TabsList and its direct TabsTrigger children, on any page/orientation.
+   Component identity defaults; independent role skins exit only this layer.
+   -------------------------------------------------------------------------- */
+@layer jirai-tabs{
+[data-slot="tabs-list"]{
+  padding:1px;border:1px solid var(--wd-frame);border-radius:0;background:#201936;color:#e3d2f5;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+/* Existing page geometry only; identity matching is independent of location. */
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]){gap:2px;padding:1px}
+/* Keep overflowing centered toolbar tabs reachable from their first item. */
+[data-slot="tabs-list"][class~="overflow-x-auto"]:not([class~="justify-start"]){justify-content:safe center}
+[data-slot="tabs-list"] > [data-slot="tab-indicator"]{display:none}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]{
+  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;font-synthesis:none;font-size:12px;
+  border:1px solid transparent;border-radius:0;background:#201936;color:#e3d2f5;box-shadow:none;transition:none;
+}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:hover:where(:not(:disabled,[data-disabled],[aria-disabled="true"])){background:#3b2c55;color:#f2ebff}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
+  border-color:var(--wd-frame);background:#ffb8e6;color:#16112a;
+  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
+}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"] > span:last-child{color:inherit}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"] .lucide{color:inherit;opacity:1}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:focus-visible{z-index:2;outline:2px solid var(--wd-pink);outline-offset:-2px}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is(:disabled,[data-disabled],[aria-disabled="true"]){color:var(--wd-muted);opacity:.64;cursor:not-allowed}
+/* Tier 3 / tier 4 lists leave the default layer entirely (revert-layer). */
+:is(.vrcx-0-side-panel-rail [data-slot="tabs-list"],.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]){&, & *{all:revert-layer}}
+}
+
+/* --------------------------------------------------------------------------
+   Page geometry for vertical lists (sizes/spacing only; paint is tier 1).
+   Settings: the vertical Tabs that is a DIRECT child of the page scaffold
+   (SettingsPage.tsx:67-77). Tools: ToolsPageContent's category rail.
+   -------------------------------------------------------------------------- */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px;gap:1px;clip-path:var(--jk-px-cut)}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]{gap:2px;padding:1px}
+
+/* --------------------------------------------------------------------------
+   层级二 · bottom lace on vertical navigation rails (page-scaffold direct
+   vertical Tabs, or the vertical Tabs right before the tools card column).
+   Keep the stair corners, open an 8px strip under the bottom edge, hang the
+   lace there. No separate base skin.
+   -------------------------------------------------------------------------- */
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+/* The settings geometry above pads the rail to 3px; the old in-frame lace once needed 12px at the bottom. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+
+/* --------------------------------------------------------------------------
+   层级三 · right side-panel folder tabs (.vrcx-0-side-panel-rail).
+   Real DOM (SSR-verified, see checks/r4-side-panel/): each rail tab is
+   `button[role=tab]` and Base UI itself emits `data-active` on the selected one
+   (no `data-active="false"`), while the app's Tooltip wrapper overwrites
+   data-slot with "tooltip-trigger" - so `[data-slot='tabs-tab']` never matches
+   these tabs. Select on the real role/attribute instead of the slot. The
+   friends panel they fuse with is styled in side-panel-r4.css.
+   -------------------------------------------------------------------------- */
+/* Resting tabs: dark, frameless, clearly outside the panel. The list still
+   carries the underline variant's 4px inline padding, which left a 4px strip of
+   rail colour between panel and tab; drop it so the strip is flush with the
+   panel edge (measured: panel right 1350 == tab left 1350 after, tab left 1354
+   before). */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [data-slot='tabs-list'] {
+    /* Preserve the exact effective R10 frame here, not a global Tabs patch. */
+    gap:2px;padding:1px 0;border:1px solid var(--wd-frame);border-radius:0;
+    background:#201936;color:#e3d2f5;
+    box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'] {
+    border-radius: 0;
+    border-color: transparent;
+    background-color: #1d1631;
+    color: var(--wd-faint);
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab']:hover {
+    background-color: var(--wd-select);
+    color: var(--wd-text);
+}
+
+/* Selected tab: same face as the panel, three-sided --wd-frame frame (the left
+   edge stays open) and a pink spine on the far side. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active] {
+    border-color: var(--wd-frame);
+    border-left-color: transparent;
+    background-color: var(--wd-raised);
+    color: var(--wd-pink);
+}
+
+/* Pink spine as a pseudo element, not an inset box-shadow: the app's
+   focus-visible ring is itself a box-shadow and must survive for keyboard use. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    pointer-events: none;
+    background-color: var(--wd-pink);
+}
+
+/* Cut the panel's right rule where the selected tab fuses with it. The panel's
+   outline sits in [right-1px, right) and the tab's own 1px transparent left
+   border starts at right, so the sliver has to start 2px left of the tab's
+   padding box (measured: panel rule at x1349 was still drawn at left:-1px). */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2px;
+    width: 3px;
+    pointer-events: none;
+    background-color: var(--wd-raised);
+}
+
+/* --------------------------------------------------------------------------
+   层级四 · entity-dialog top property tabs (parallel to tier 3).
+   EntityDialogScaffold's real h-11 horizontal underline call becomes property tabs.
+   A raised purple sheet, not the pink selected button above; rail is independent.
+   -------------------------------------------------------------------------- */
+/* Inline decorative heart sits in the real tabs row; no clipped negative-bottom pseudo-element. */
+.entity-dialog [data-slot="tabs-list"][class~="h-11"]::before {
+ content:""; display:block; width:16px; height:16px; flex:none; margin:0 4px 0 8px; pointer-events:none;
+ background-color:var(--wd-square); mask:var(--jk-mask-s16) center/16px 16px no-repeat;
+}
+.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]{
+  align-items:flex-end;gap:2px;padding-block:0;border:0;border-radius:0;background:linear-gradient(var(--wd-frame),var(--wd-frame)) left bottom/100% 1px no-repeat;box-shadow:none;
+  & > [data-slot="tab-indicator"]{display:none}
+  & > [data-slot="tabs-tab"]{height:calc(100% - 4px);font-synthesis:none;font-size:12px;border:1px solid var(--wd-frame);border-radius:2px 2px 0 0;background:#201936;color:var(--wd-muted);box-shadow:inset 1px 1px #8f7fe0;transition:none}
+  & > [data-slot="tabs-tab"]:hover:not([data-disabled]){background:#332650;color:var(--wd-text)}
+  & > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){height:100%;z-index:2;border-bottom-color:var(--wd-raised);background:var(--wd-raised);color:#ffd9ee;box-shadow:inset 1px 1px #fdf4ff}
+  & > [data-slot="tabs-tab"]:focus-visible{outline:2px solid var(--wd-pink);outline-offset:-3px}
+}
+.entity-dialog [data-slot="tabs"]:has(> [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]) > [data-slot="tabs-content"]{border:1px solid var(--wd-frame);border-top:0;background:var(--wd-raised)}

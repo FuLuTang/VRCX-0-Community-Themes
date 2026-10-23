@@ -96,6 +96,44 @@
   --chart-4: #8f7fe0;
   --chart-5: #ff6b8a;
 }
+/* Win98 key tokens: values only, no selectors, so nothing changes until a component file uses them.
+   A "key" is any pressable face: two faces (pink, dark) x two depths (raised, sunken), plus the
+   accent of the surface it sits on. Built from the --wd palette (windose-runtime.css). */
+:root {
+  /* bevel edges */
+  --jk-bevel-hi: #fdf4ff;          /* light edge (all faces) */
+  --jk-bevel-pink-lo: #7a3f6d;     /* dark edge of a pink face */
+  --jk-bevel-lo: #100b1e;          /* dark edge of a dark face (same as the panel edge) */
+  /* faces */
+  --jk-key-pink: var(--wd-square);           /* #ffb8e6 */
+  --jk-key-pink-hover: #ffcdef;
+  --jk-key-pink-press: #f37fc4;
+  --jk-key-ink: var(--wd-desktop);           /* #16112a, text on pink */
+  --jk-key-dark: #211a33;                    /* outline button */
+  --jk-key-dark-raised: var(--wd-raised);    /* #2a2147, toggle item, row action */
+  --jk-key-dark-hover: #392a52;
+  --jk-key-text: var(--wd-text);             /* #f2ebff */
+  --jk-key-text-hover: #fff0fa;
+  --jk-key-danger: #3d1b35;
+  --jk-key-danger-edge: #ff6b8a;
+  --jk-key-danger-text: #ffd9e4;
+  /* depth (1px for buttons, 2px for toggle keys) */
+  --jk-raised: inset 1px 1px rgb(253 244 255/.72), inset -1px -1px rgb(22 17 42/.72);
+  --jk-raised-pink: inset 1px 1px var(--jk-bevel-hi), inset -1px -1px var(--jk-bevel-pink-lo);
+  --jk-sunken: inset 2px 2px var(--jk-key-ink), inset -1px -1px var(--jk-bevel-hi);
+  --jk-sunken-pink: inset 2px 2px var(--jk-bevel-pink-lo), inset -1px -1px var(--jk-bevel-hi);
+  --jk-raised-2: inset 2px 2px rgb(253 244 255/.6), inset -2px -2px var(--jk-bevel-lo);
+  --jk-sunken-pink-2: inset 2px 2px #4a1f40, inset 3px 3px rgb(122 63 109/.6), inset -2px -2px var(--jk-bevel-hi);
+  /* motion: two-frame pixel transition, press moves 1px right / 2px down */
+  --jk-step: 80ms steps(2, end);
+  --jk-press-move: 1px 2px;
+  /* light pink bars (titlebar, statusbar) and selected rows */
+  --jk-bar-face: #f8c6e3;
+  --jk-bar-ink: #21132d;
+  --jk-bar-accent: #b0305f;
+  --jk-bar-accent-text: #fff1f8;
+}
+
 /* SECTION native-icons */
 :root{--wd-icon-chevron:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M3%205h2v1h-2%20M11%205h2v1h-2%20M4%206h2v1h-2%20M10%206h2v1h-2%20M5%207h2v1h-2%20M9%207h2v1h-2%20M6%208h4v1h-4%20M7%209h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-native-chevron:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23f2ebff%22%20d%3D%22M3%205h2v1h-2%20M11%205h2v1h-2%20M4%206h2v1h-2%20M10%206h2v1h-2%20M5%207h2v1h-2%20M9%207h2v1h-2%20M6%208h4v1h-4%20M7%209h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-icon-clock:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M7%200h2v1h-2m-3%200h8v1h-8m-1%200h3v1h-3m7-1h3v1h-3m-8%200h2v1h-2m5-1h2v5h-2m5-5h2v1h-2m-11%200h2v2h-2m12-2h2v2h-2m-12%200h1v1h-1m13-1h1v1h-1m-14%200h2v2h-2m14-2h2v2h-2m-7-1h4v1h-4m-6%200h1v1h-1m8-1h2v1h-2m5-1h1v1h-1m-13%200h2v2h-2m12-2h2v2h-2m-11%200h2v1h-2m10-1h2v1h-2m-9%200h3v1h-3m7-1h3v1h-3m-6%200h8v1h-8m3%200h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-native-clock:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23f2ebff%22%20d%3D%22M7%200h2v1h-2m-3%200h8v1h-8m-1%200h3v1h-3m7-1h3v1h-3m-8%200h2v1h-2m5-1h2v5h-2m5-5h2v1h-2m-11%200h2v2h-2m12-2h2v2h-2m-12%200h1v1h-1m13-1h1v1h-1m-14%200h2v2h-2m14-2h2v2h-2m-7-1h4v1h-4m-6%200h1v1h-1m8-1h2v1h-2m5-1h1v1h-1m-13%200h2v2h-2m12-2h2v2h-2m-11%200h2v1h-2m10-1h2v1h-2m-9%200h3v1h-3m7-1h3v1h-3m-6%200h8v1h-8m3%200h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-icon-right:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M5%203h2v1h-2%20M6%204h2v1h-2%20M7%205h2v1h-2%20M8%206h2v1h-2%20M9%207h2v1h-2%20M9%208h2v1h-2%20M8%209h2v1h-2%20M7%2010h2v1h-2%20M6%2011h2v1h-2%20M5%2012h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-native-right:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23f2ebff%22%20d%3D%22M5%203h2v1h-2%20M6%204h2v1h-2%20M7%205h2v1h-2%20M8%206h2v1h-2%20M9%207h2v1h-2%20M9%208h2v1h-2%20M8%209h2v1h-2%20M7%2010h2v1h-2%20M6%2011h2v1h-2%20M5%2012h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-icon-ellipsis:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M1%207h2v1h-2%20M7%207h2v1h-2%20M13%207h2v1h-2%20M1%208h2v1h-2%20M7%208h2v1h-2%20M13%208h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-native-ellipsis:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23f2ebff%22%20d%3D%22M1%207h2v1h-2%20M7%207h2v1h-2%20M13%207h2v1h-2%20M1%208h2v1h-2%20M7%208h2v1h-2%20M13%208h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-bg-cloud:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2012%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%2350335f%22%20d%3D%22M10%200h4v1h-4M8%201h8v1h-8M8%202h8v1h-8M2%203h4v1h-4M7%203h10v1h-10M18%203h4v1h-4M1%204h22v1h-22M1%205h22v1h-22M1%206h22v1h-22M1%207h22v1h-22M2%208h20v1h-20M2%209h20v1h-20M2%2010h20v1h-20%22%2F%3E%3C%2Fsvg%3E");--wd-bg-heart:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2028%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%2348325e%22%20d%3D%22M5%201h6v1h-6M21%201h6v1h-6M3%202h10v1h-10M19%202h10v1h-10M2%203h3v1h-3M11%203h3v1h-3M18%203h3v1h-3M27%203h3v1h-3M1%204h2v1h-2M13%204h2v1h-2M17%204h2v1h-2M29%204h2v1h-2M1%205h2v1h-2M13%205h2v1h-2M17%205h2v1h-2M29%205h2v1h-2M0%206h2v1h-2M14%206h4v1h-4M30%206h2v1h-2M0%207h2v1h-2M15%207h2v1h-2M30%207h2v1h-2M0%208h2v1h-2M30%208h2v1h-2M0%209h2v1h-2M30%209h2v1h-2M1%2010h2v1h-2M29%2010h2v1h-2M1%2011h2v1h-2M29%2011h2v1h-2M2%2012h2v1h-2M28%2012h2v1h-2M2%2013h2v1h-2M28%2013h2v1h-2M3%2014h2v1h-2M27%2014h2v1h-2M3%2015h2v1h-2M27%2015h2v1h-2M4%2016h2v1h-2M26%2016h2v1h-2M5%2017h2v1h-2M25%2017h2v1h-2M5%2018h2v1h-2M25%2018h2v1h-2M6%2019h2v1h-2M24%2019h2v1h-2M7%2020h2v1h-2M23%2020h2v1h-2M8%2021h2v1h-2M22%2021h2v1h-2M9%2022h2v1h-2M21%2022h2v1h-2M9%2023h3v1h-3M20%2023h3v1h-3M10%2024h3v1h-3M19%2024h3v1h-3M12%2025h3v1h-3M17%2025h3v1h-3M13%2026h6v1h-6M15%2027h2v1h-2M5%204h6v1h-6M21%204h6v1h-6M4%205h1v1h-1M11%205h1v1h-1M20%205h1v1h-1M27%205h1v1h-1M3%206h1v1h-1M12%206h1v1h-1M19%206h1v1h-1M28%206h1v1h-1M3%207h1v1h-1M13%207h1v1h-1M18%207h1v1h-1M28%207h1v1h-1M3%208h1v1h-1M14%208h1v1h-1M17%208h1v1h-1M28%208h1v1h-1M3%209h1v1h-1M15%209h2v1h-2M28%209h1v1h-1M4%2010h1v1h-1M27%2010h1v1h-1M4%2011h1v1h-1M27%2011h1v1h-1M5%2012h1v1h-1M26%2012h1v1h-1M5%2013h1v1h-1M26%2013h1v1h-1M6%2014h1v1h-1M25%2014h1v1h-1M6%2015h1v1h-1M25%2015h1v1h-1M7%2016h1v1h-1M24%2016h1v1h-1M8%2017h1v1h-1M23%2017h1v1h-1M8%2018h1v1h-1M23%2018h1v1h-1M9%2019h1v1h-1M22%2019h1v1h-1M10%2020h1v1h-1M21%2020h1v1h-1M11%2021h1v1h-1M20%2021h1v1h-1M12%2022h1v1h-1M19%2022h1v1h-1M13%2023h2v1h-2M17%2023h2v1h-2M15%2024h2v1h-2%22%2F%3E%3C%2Fsvg%3E");--wd-bg-stars:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%232c2145%22%20d%3D%22M52%2047h1v1h-1ZM11%2013h1v1h-1ZM8%2033h1v1h-1ZM45%2013h1v1h-1ZM26%2018h1v1h-1ZM31%2016h1v1h-1ZM35%203h3v1h-3Z%20M36%202h1v1h-1Z%20M36%204h1v1h-1ZM44%2056h1v1h-1ZM53%202h3v1h-3Z%20M54%201h1v1h-1Z%20M54%203h1v1h-1ZM28%205h1v1h-1ZM14%2013h3v1h-3Z%20M15%2012h1v1h-1Z%20M15%2014h1v1h-1ZM33%2026h3v1h-3Z%20M34%2025h1v1h-1Z%20M34%2027h1v1h-1ZM14%202h1v1h-1ZM21%2056h3v1h-3Z%20M22%2055h1v1h-1Z%20M22%2057h1v1h-1ZM28%2020h1v1h-1ZM39%2011h1v1h-1ZM23%2055h1v1h-1ZM36%2011h1v1h-1Z%22%2F%3E%3C%2Fsvg%3E");--wd-bg-ribbon-charm:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2080%22%3E%3Cg%20transform%3D%22translate(8%200)%20scale(1.5)%22%3E%3Cpath%20fill%3D%22%23ac8ac5%22%20d%3D%22M15%208C11%201%203%201%202%204c-2%205%204%2010%2012%209l1-3zm2%200c4-7%2012-7%2013-4%202%205-4%2010-12%209l-1-3zM13%2011l-6%209%207-3%202%203%201-8zm6%200%206%209-7-3-2%203-1-8z%22%2F%3E%3Cpath%20fill%3D%22%23ac8ac5%22%20d%3D%22M16%206%2021%2010l-5%205-5-5z%22%2F%3E%3C%2Fg%3E%3Cpath%20fill%3D%22%23826597%22%20d%3D%22M31%2031h2v3h-2m0%203h2v3h-2m0%203h2v3h-2%22%2F%3E%3Cg%20transform%3D%22translate(12%2044)%20scale(1.25)%22%3E%3Cpath%20fill%3D%22%23b47ca8%22%20d%3D%22M5%201h6v1h-6M21%201h6v1h-6M3%202h10v1h-10M19%202h10v1h-10M2%203h3v1h-3M11%203h3v1h-3M18%203h3v1h-3M27%203h3v1h-3M1%204h2v1h-2M13%204h2v1h-2M17%204h2v1h-2M29%204h2v1h-2M1%205h2v1h-2M13%205h2v1h-2M17%205h2v1h-2M29%205h2v1h-2M0%206h2v1h-2M14%206h4v1h-4M30%206h2v1h-2M0%207h2v1h-2M15%207h2v1h-2M30%207h2v1h-2M0%208h2v1h-2M30%208h2v1h-2M0%209h2v1h-2M30%209h2v1h-2M1%2010h2v1h-2M29%2010h2v1h-2M1%2011h2v1h-2M29%2011h2v1h-2M2%2012h2v1h-2M28%2012h2v1h-2M2%2013h2v1h-2M28%2013h2v1h-2M3%2014h2v1h-2M27%2014h2v1h-2M3%2015h2v1h-2M27%2015h2v1h-2M4%2016h2v1h-2M26%2016h2v1h-2M5%2017h2v1h-2M25%2017h2v1h-2M5%2018h2v1h-2M25%2018h2v1h-2M6%2019h2v1h-2M24%2019h2v1h-2M7%2020h2v1h-2M23%2020h2v1h-2M8%2021h2v1h-2M22%2021h2v1h-2M9%2022h2v1h-2M21%2022h2v1h-2M9%2023h3v1h-3M20%2023h3v1h-3M10%2024h3v1h-3M19%2024h3v1h-3M12%2025h3v1h-3M17%2025h3v1h-3M13%2026h6v1h-6M15%2027h2v1h-2M5%204h6v1h-6M21%204h6v1h-6M4%205h1v1h-1M11%205h1v1h-1M20%205h1v1h-1M27%205h1v1h-1M3%206h1v1h-1M12%206h1v1h-1M19%206h1v1h-1M28%206h1v1h-1M3%207h1v1h-1M13%207h1v1h-1M18%207h1v1h-1M28%207h1v1h-1M3%208h1v1h-1M14%208h1v1h-1M17%208h1v1h-1M28%208h1v1h-1M3%209h1v1h-1M15%209h2v1h-2M28%209h1v1h-1M4%2010h1v1h-1M27%2010h1v1h-1M4%2011h1v1h-1M27%2011h1v1h-1M5%2012h1v1h-1M26%2012h1v1h-1M5%2013h1v1h-1M26%2013h1v1h-1M6%2014h1v1h-1M25%2014h1v1h-1M6%2015h1v1h-1M25%2015h1v1h-1M7%2016h1v1h-1M24%2016h1v1h-1M8%2017h1v1h-1M23%2017h1v1h-1M8%2018h1v1h-1M23%2018h1v1h-1M9%2019h1v1h-1M22%2019h1v1h-1M10%2020h1v1h-1M21%2020h1v1h-1M11%2021h1v1h-1M20%2021h1v1h-1M12%2022h1v1h-1M19%2022h1v1h-1M13%2023h2v1h-2M17%2023h2v1h-2M15%2024h2v1h-2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");--wd-avatar-ring:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20shape-rendering%3D%22crispEdges%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20d%3D%22M8%200H24V2H28V4H30V8H32V24H30V28H28V30H24V32H8V30H4V28H2V24H0V8H2V4H4V2H8Z%20M8%202H24V4H28V8H30V24H28V28H24V30H8V28H4V24H2V8H4V4H8Z%22%2F%3E%3C%2Fsvg%3E")}
 /* SECTION assets */
@@ -603,19 +641,12 @@ svg.lucide-person-standing{transform:none}
  /* Shared, slightly raised Win98 panels: light top/left, dark bottom/right. */
  --jk-panel-edge:#a294c8 #100b1e #100b1e #a294c8;
  --jk-panel-raised:inset 1px 1px #e3d2f5,inset -1px -1px #4b3a63,1px 1px 0 #100b1e;
- --jk-button-edge:#6c5ce0; --jk-button-face:#211a33; --jk-button-text:#f2ebff;
- --jk-button-hover-face:#392a52; --jk-button-hover-text:#fff0fa;
- --jk-button-default-face:#ffb8e6; --jk-button-default-hover:#f37fc4; --jk-button-default-text:#16112a;
- --jk-button-danger-edge:#ff6b8a; --jk-button-danger-face:#3d1b35; --jk-button-danger-text:#ffd9e4;
- --jk-button-bevel:inset 1px 1px rgb(253 244 255/.72),inset -1px -1px rgb(22 17 42/.72);
- --jk-button-pressed:inset 2px 2px #16112a,inset -1px -1px #fdf4ff;
  }
 /* Explicit chrome-only font. Preserve user content and user-selected body font. */
 .vrcx-0-titlebar, .vrcx-0-statusbar,
 .vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"],
 .vrcx-0-sidebar-surface [data-slot="sidebar-group-label"],
-.vrcx-0-table-header, [data-slot="dialog-title"],
-[data-slot="tabs-tab"] {
+.vrcx-0-table-header, [data-slot="dialog-title"] {
  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
  font-synthesis:none; font-size:12px;
 }
@@ -671,9 +702,8 @@ svg.lucide-person-standing{transform:none}
 }
 [data-slot="dialog-overlay"] { background-color:rgb(36 18 66 / .62); }
 [data-slot="dialog-title"] { color:var(--wd-text); }
-[data-slot="button"], [data-slot="select-trigger"] { border-radius:2px; } /* [data-slot="input"] radius: owned by the generic field rule in fields-toolbar-r10.css (login-r8 keeps 2px) */
-[data-slot="button"]:focus-visible { outline:2px dashed var(--wd-pink); outline-offset:2px; }
-/* Tabs selected paint belongs to its default/property/rail skin. */
+[data-slot="select-trigger"] { border-radius:2px; } /* [data-slot="input"] radius: owned by the generic field rule in fields-toolbar-r10.css (login-r8 keeps 2px) */
+/* Tabs paint (incl. the entity-dialog tabs-row heart) lives in tabs.css. */
 /* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] { position:relative; }
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {
@@ -684,11 +714,6 @@ svg.lucide-person-standing{transform:none}
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::after {
  content:""; position:absolute; inset:auto 0 0; z-index:1; pointer-events:none;
  mask:var(--jk-mask-s2) left bottom/10px 6px repeat-x;
-}
-/* Inline decorative heart sits in the real tabs row; no clipped negative-bottom pseudo-element. */
-.entity-dialog [data-slot="tabs-list"][class~="h-11"]::before {
- content:""; display:block; width:16px; height:16px; flex:none; margin:0 4px 0 8px; pointer-events:none;
- background-color:var(--wd-square); mask:var(--jk-mask-s16) center/16px 16px no-repeat;
 }
 /* A custom VRChat icon frame remains a separate application-owned node; remove theme avatar borders/rings. */
 .entity-dialog [data-slot="card-header"] div.absolute.bottom-3.left-3 [data-slot="button"]:not(.border-0) {
@@ -760,11 +785,11 @@ svg.lucide-person-standing{transform:none}
 
 /* R3 text/keycap tokens remain here; chrome-r8.css owns the shared bar/control faces. */
 :root {
-    --jk-chrome-ink: #16112a;
+    --jk-chrome-ink: var(--jk-key-ink);
     --jk-chrome-ink-soft: #3b2a45;
     --jk-chrome-edge: #1a1226;
-    --jk-chrome-bevel-light: #fdf4ff;
-    --jk-chrome-bevel-dark: #7a3f6d;
+    --jk-chrome-bevel-light: var(--jk-bevel-hi);
+    --jk-chrome-bevel-dark: var(--jk-bevel-pink-lo);
 }
 
 /* Chrome R8 owns titlebar fill/ink; this structural rule only clears the legacy
@@ -1049,12 +1074,8 @@ kbd:not(.font-mono) {
 
 /* --------------------------------------------------------------------------
    R4-9 · the vertical tab strip becomes folder tabs on the pane's right edge.
-   Real DOM (SSR-verified, see checks/r4-side-panel/): each rail tab is
-   `button[role=tab]` and Base UI itself emits `data-active` on the selected one
-   (no `data-active="false"`), while the app's Tooltip wrapper overwrites
-   data-slot with "tooltip-trigger" - so `[data-slot='tabs-tab'][data-active]`
-   from windose-runtime.css:70 never matched these tabs. Select on the real
-   role/attribute instead of the slot.
+   The rail tabs themselves (list frame, [role=tab] states, spine and seam cut)
+   live in tabs.css (tier 3). This fragment keeps only the panel they fuse with.
 
    The inner box is the friends panel: Tabs' first div child
    (SidePanel.tsx:401); the rail is its sibling (SidePanel.tsx:499). They are
@@ -1064,67 +1085,6 @@ kbd:not(.font-mono) {
     background-color: var(--wd-raised);
     outline: 1px solid var(--wd-frame);
     outline-offset: -1px; /* outline, not border: zero layout change */
-}
-
-/* Resting tabs: dark, frameless, clearly outside the panel. The list still
-   carries the underline variant's 4px inline padding, which left a 4px strip of
-   rail colour between panel and tab; drop it so the strip is flush with the
-   panel edge (measured: panel right 1350 == tab left 1350 after, tab left 1354
-   before). */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [data-slot='tabs-list'] {
-    /* Preserve the exact effective R10 frame here, not a global Tabs patch. */
-    gap:2px;padding:1px 0;border:1px solid var(--wd-frame);border-radius:0;
-    background:#201936;color:#e3d2f5;
-    box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'] {
-    border-radius: 0;
-    border-color: transparent;
-    background-color: #1d1631;
-    color: var(--wd-faint);
-}
-
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab']:hover {
-    background-color: var(--wd-select);
-    color: var(--wd-text);
-}
-
-/* Selected tab: same face as the panel, three-sided --wd-frame frame (the left
-   edge stays open) and a pink spine on the far side. */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active] {
-    border-color: var(--wd-frame);
-    border-left-color: transparent;
-    background-color: var(--wd-raised);
-    color: var(--wd-pink);
-}
-
-/* Pink spine as a pseudo element, not an inset box-shadow: the app's
-   focus-visible ring is itself a box-shadow and must survive for keyboard use. */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 3px;
-    pointer-events: none;
-    background-color: var(--wd-pink);
-}
-
-/* Cut the panel's right rule where the selected tab fuses with it. The panel's
-   outline sits in [right-1px, right) and the tab's own 1px transparent left
-   border starts at right, so the sliver has to start 2px left of the tab's
-   padding box (measured: panel rule at x1349 was still drawn at left:-1px). */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -2px;
-    width: 3px;
-    pointer-events: none;
-    background-color: var(--wd-raised);
 }
 
 /* The configure "+" button belongs to the same strip. */
@@ -1286,17 +1246,8 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
    because TooltipTrigger overrides data-slot (tooltip.tsx:27,
    ToolbarControls.tsx:350 wraps a ToggleGroupItem).
    -------------------------------------------------------------------------- */
-[data-slot=toggle-group][data-variant=outline]{border:1px solid #16112a;border-radius:0;background-color:#201936;gap:0;clip-path:var(--jk-px-cut)}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]){border:0;border-radius:0;background-color:#201936;color:#b9add9;box-shadow:inset 1px 1px rgb(0 0 0/.5),inset -1px -1px #8f7fe0}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])::before{border-radius:0}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):hover{background-color:#4a3784;color:#f2ebff;box-shadow:inset 1px 1px #8f7fe0,inset -1px -1px rgb(0 0 0/.5)}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger])[data-pressed]{background-color:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d,inset 0 0 0 1px #16112a}
-[data-slot=toggle-group][data-variant=outline] > :is([data-slot=toggle],[data-slot=tooltip-trigger]):focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
-[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]{width:2px;background-color:#16112a}
-[data-slot=toggle-group][data-variant=outline] > [data-slot=separator]::before{display:none}
 
-/* Settings layout only; controls-r9 owns the shared face, cards-r97 the lace. */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px;gap:1px;clip-path:var(--jk-px-cut)}
+/* Settings rail geometry, shared face and lace all live in tabs.css. */
 
 /* --------------------------------------------------------------------------
    (6)②③ Settings cards: pixel window title bar + bow charm + lace, and
@@ -1406,8 +1357,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 .vrcx-0-sidebar-surface { position:relative; }
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface::after { display:none; }
 .vrcx-0-sidebar-surface::after { content:""; position:absolute; right:8px; bottom:104px; width:48px; height:72px; background-image:var(--r5-ribbon-pendant); background-size:48px 72px; background-repeat:no-repeat; pointer-events:none; animation:r5-charm-swing 4.8s steps(3,end) infinite; }
-/* Main-tabs pseudo box only; motion-r7.css owns its current bottom-edge artwork. */
-[data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after { content:""; position:absolute; z-index:1; opacity:0; pointer-events:none; }
 [data-slot="progress-indicator"] { animation:r5-progress-flow 1.8s steps(5,end) infinite; }
 [data-slot="spinner"] { animation:r5-spinner-step 1s steps(8,end) infinite; }
 [data-slot="dialog-content"][data-open] { animation:r5-dialog-step-in 120ms steps(4,end) both; }
@@ -1560,33 +1509,7 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
  pointer-events:none;
 }
 /* Title-heart and statusbar-lace animations have dedicated owners in R9.7/R8. */
-/* Leader review: the inherited left-edge star can cover the tab label.
-   Put the glint in the 2px bottom border instead; no text transform/overpaint. */
-@keyframes r7-tab-edge {
- 0%,60% { opacity:0; background-position:-24px 0; }
- 68% { opacity:.65; background-position:0 0; }
- 80% { opacity:.65; background-position:24px 0; }
- 90% { opacity:.45; background-position:48px 0; }
- 100% { opacity:0; background-position:72px 0; }
-}
-[data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after {
- top:auto;
- bottom:0;
- left:0;
- width:100%;
- height:2px;
- transform:none;
- background-image:linear-gradient(#ffe4f5,#ffe4f5);
- background-size:24px 2px;
- background-repeat:no-repeat;
- animation:r7-tab-edge 6s steps(4,end) infinite;
-}
-/* R7's tab glint owns the only reduced-motion override in this module. */
-@media(prefers-reduced-motion:reduce) {
- [data-slot="tabs"]:not(.vrcx-0-side-panel-rail) [data-slot="tabs-tab"][data-active]::after {
-  animation:none !important;
- }
-}
+
 
 /* SECTION assets-r7 */
 /* R7 background art. Inline data: URLs only; no remote request.
@@ -1643,8 +1566,8 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
     color: var(--r8-ink);
 }
 
-/* Square outer corners across brand/help, middle actions, and native window controls. */
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']) {
+/* Menubar plates (not Button): square, no transition. Buttons in the titlebar belong to button.css. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger'] {
     box-sizing: border-box;
     border-radius: 0;
     transition: none;
@@ -1662,22 +1585,7 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
         inset -1px -1px 0 var(--r8-face-low);
 }
 
-/* Keep the existing quick-search hit area; align its frame and face with the plates. */
-.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] {
-    background-color: var(--r8-face);
-    border-color: var(--r8-ink);
-    border-radius: 0;
-    color: var(--r8-ink);
-    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
-        inset -1px -1px 0 var(--r8-face-low);
-}
-
-/* Mid-bar icon actions stay flat at rest, but share the same square interaction language. */
-.vrcx-0-titlebar[data-app-titlebar] button:not([class~='w-9'][class~='rounded-none'][class~='border-0']) {
-    border-radius: 0;
-    transition: none;
-}
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):is(
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger']:is(
     :hover,
     [aria-expanded='true'],
     [aria-pressed='true'],
@@ -1689,12 +1597,12 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
     box-shadow: inset 1px 1px 0 var(--r8-face-hi),
         inset -1px -1px 0 var(--r8-face-low);
 }
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):active {
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger']:active {
     background-color: var(--r8-pressed) !important;
     box-shadow: inset 1px 1px 0 var(--r8-face-low),
         inset -1px -1px 0 var(--r8-face-hi);
 }
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):focus-visible {
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger']:focus-visible {
     outline: 2px solid var(--r8-ink);
     outline-offset: -3px;
 }
@@ -1754,11 +1662,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 /* Preserve each semantic lamp fill; the existing 1px square outline only gains ink. */
 .vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'] {
     border-color: var(--r8-ink);
-}
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button']):hover,
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button'])[aria-expanded='true'] {
-    background-color: var(--r8-hover);
-    color: var(--r8-ink);
 }
 
 /* No new motion or ornamental pseudo-elements are introduced by R8. */
@@ -1887,10 +1790,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 }
 
 /* SOCIAL ::after is intentionally untouched: the user asked to retain the R7 star+cat as-is. */
-/* R7's 2px tab-edge glint is too faint; leave the tab border static in R8. */
-[data-slot='tabs']:not(.vrcx-0-side-panel-rail) [data-slot='tabs-tab'][data-active]::after {
-  animation: none !important;
-}
 
 /* 5 · User-selected nav pocket. Only its 36px cat pseudo bobs by one integer px. */
 .vrcx-0-sidebar-surface [data-sidebar='content']::after {
@@ -2134,6 +2033,7 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
   font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
   font-synthesis: none;
 }
+/* Link on the pink card header: Button default link pink would vanish here, so only its ink changes. */
 [data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="button"][data-variant="link"] {
   color: #21132d;
   text-decoration: underline;
@@ -2143,31 +2043,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 [data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="button"][data-variant="link"]:hover {
   color: #100b1e;
   text-decoration-color: currentColor;
-}
-
-/* Saved rows: crisp tile buttons; preserve data, hit targets and the real image. */
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] [data-slot="button"][data-variant="ghost"]:has([data-slot="avatar"]) {
-  border: 1px solid #4b3a63;
-  border-radius: 2px;
-  background-color: #2a2147;
-  color: #f2ebff;
-  box-shadow: 2px 2px 0 #100b1e;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] [data-slot="button"][data-variant="ghost"]:has([data-slot="avatar"]):hover:not(:disabled) {
-  border-color: #d97fc6;
-  background-color: #3b2c55;
-  color: #fff4fb;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] div.overflow-y-auto > div.flex.items-center.gap-2 > [data-slot="button"][data-size="icon-sm"] {
-  border: 1px solid transparent;
-  border-radius: 2px;
-  color: #d6b8ef;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] div.overflow-y-auto > div.flex.items-center.gap-2 > [data-slot="button"][data-size="icon-sm"]:hover:not(:disabled) {
-  border-color: #ff7fcf;
-  background-color: #4b1c3a;
-  color: #ffd9ee;
-  box-shadow: 2px 2px 0 #100b1e;
 }
 
 /* Login account portraits are user avatars too: pixel-cut the photo, with no theme avatar ring. */
@@ -2194,37 +2069,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 }
 [data-vrcx-0-surface="login-page"] [data-slot="avatar"][data-size="lg"] > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) {
   clip-path: var(--wd-avatar-cut);
-}
-
-/* Secondary controls keep their native box, disabled opacity, focus ring and icons. */
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="outline"],
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="secondary"] {
-  border: 1px solid #8c71b0;
-  border-radius: 2px;
-  background-color: #3b2c55;
-  color: #f2ebff;
-  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
-}
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="secondary"]:hover:not(:disabled) {
-  border-color: #ff7fcf;
-  background-color: #4a3784;
-  color: #fff4fb;
-}
-[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"] {
-  border: 1px solid #6c5ce0;
-  border-radius: 2px;
-  background-color: #ff7fcf;
-  color: #21132d;
-  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
-}
-[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"]:hover:not(:disabled) {
-  border-color: #8c71b0;
-  background-color: #ffb8e6;
-}
-[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"]:active:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 #100b1e;
 }
 
 /* Recessed inputs; no changes to source height, padding, type, or focus behavior. */
@@ -2258,16 +2102,9 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 [data-vrcx-0-surface="login-page"] [data-slot="checkbox"] {
   border-radius: 0;
 }
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="link"] {
-  color: #d6b8ef;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="link"]:hover {
-  color: #ffd9ee;
-}
 @media (prefers-reduced-motion: reduce) {
   [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::before,
   [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::after,
-  [data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"],
   [data-vrcx-0-surface="login-page"] [data-slot="spinner"] {
     animation: none !important;
     transition-duration: 0s !important;
@@ -2429,81 +2266,8 @@ html.reduce-effects .vrcx-0-titlebar button:has(> svg.lucide-bell) > [data-slot=
 }
 
 /* SECTION controls-r9 */
-/* Component identity defaults; independent role skins exit only this layer. */
-@layer jirai-tabs{
-[data-slot="tabs-list"]{
-  padding:1px;border:1px solid var(--wd-frame);border-radius:0;background:#201936;color:#e3d2f5;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-/* Existing page geometry only; identity matching is independent of location. */
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]){gap:2px;padding:1px}
-/* Keep overflowing centered toolbar tabs reachable from their first item. */
-[data-slot="tabs-list"][class~="overflow-x-auto"]:not([class~="justify-start"]){justify-content:safe center}
-[data-slot="tabs-list"] > [data-slot="tab-indicator"]{display:none}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]{
-  border:1px solid transparent;border-radius:0;background:#201936;color:#e3d2f5;box-shadow:none;transition:none;
-}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:hover:where(:not(:disabled,[data-disabled],[aria-disabled="true"])){background:#3b2c55;color:#f2ebff}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
-  border-color:var(--wd-frame);background:#ffb8e6;color:#16112a;
-  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
-}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"] > span:last-child{color:inherit}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"] .lucide{color:inherit;opacity:1}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:focus-visible{z-index:2;outline:2px solid var(--wd-pink);outline-offset:-2px}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is(:disabled,[data-disabled],[aria-disabled="true"]){color:var(--wd-muted);opacity:.64;cursor:not-allowed}
-:is(.vrcx-0-side-panel-rail [data-slot="tabs-list"],.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]){&, & *{all:revert-layer}}
-}
+/* Tabs (default layer + entity-dialog property tabs) live in tabs.css. */
 
-/* EntityDialogScaffold's real h-11 horizontal underline call becomes property tabs.
-   A raised purple sheet, not the pink selected button above; rail is independent. */
-.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]{
-  align-items:flex-end;gap:2px;padding-block:0;border:0;border-radius:0;background:linear-gradient(var(--wd-frame),var(--wd-frame)) left bottom/100% 1px no-repeat;box-shadow:none;
-  & > [data-slot="tab-indicator"]{display:none}
-  & > [data-slot="tabs-tab"]{height:calc(100% - 4px);border:1px solid var(--wd-frame);border-radius:2px 2px 0 0;background:#201936;color:var(--wd-muted);box-shadow:inset 1px 1px #8f7fe0;transition:none}
-  & > [data-slot="tabs-tab"]:hover:not([data-disabled]){background:#332650;color:var(--wd-text)}
-  & > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){height:100%;z-index:2;border-bottom-color:var(--wd-raised);background:var(--wd-raised);color:#ffd9ee;box-shadow:inset 1px 1px #fdf4ff}
-  & > [data-slot="tabs-tab"]:focus-visible{outline:2px solid var(--wd-pink);outline-offset:-3px}
-}
-.entity-dialog [data-slot="tabs"]:has(> [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]) > [data-slot="tabs-content"]{border:1px solid var(--wd-frame);border-top:0;background:var(--wd-raised)}
-
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"]{
-  gap:0;
-  padding:0;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background-color:#201936;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]){
-  border-color:#6c5ce0;
-  border-radius:0;
-  background-color:#201936;
-  color:#e3d2f5;
-  box-shadow:none;
-  transition:none;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):hover:not([data-disabled]):not([aria-disabled="true"]){
-  background-color:#3b2c55;
-  color:#f2ebff;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):is([aria-pressed="true"],[data-pressed]){
-  border-color:#6c5ce0;
-  background-color:#ffb8e6 !important;
-  color:#16112a !important;
-  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d !important;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):is([aria-pressed="true"],[data-pressed])::before{
-  content:none !important;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > [data-slot="separator"]{
-  background-color:#6c5ce0;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):focus-visible{
-  z-index:2;
-  outline:2px solid #ff7fcf;
-  outline-offset:-3px;
-}
 
 /* Activity exhibits: opaque pixel window; leave --act-* chart palette intact. */
 .vrcx-0-main-content .vrcx-0-page-scaffold:has(.activity-skin) .activity-skin section.activity-card{
@@ -2560,39 +2324,6 @@ html.reduce-effects .vrcx-0-titlebar button:has(> svg.lucide-bell) > [data-slot=
 .vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="badge"]{
   border:1px solid #6c5ce0;
   border-radius:0;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]{
-  min-height:28px;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
-  transition:none;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){
-  background:#ffd9ee;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]:focus-visible{
-  outline:2px solid #ff7fcf;
-  outline-offset:1px;
-}
-/* Installed entries use custom bordered rows, but their primary enable buttons are still theme actions. */
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]{
-  min-height:28px;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
-  transition:none;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){
-  background:#ffd9ee;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]:focus-visible{
-  outline:2px solid #ff7fcf;
-  outline-offset:1px;
 }
 
 /* Mutual Friends Graph surfaces are the source PageScaffold id=chart overlays w-64/w-72.
@@ -2820,8 +2551,7 @@ body:has(.vrcx-0-statusbar [data-slot="tooltip-trigger"][data-popup-open])
   outline-offset:1px;
 }
 
-/* Tools category geometry only; shared default Tabs paint lives in controls-r9. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]{gap:2px;padding:1px}
+/* Tools category rail geometry lives in tabs.css with the shared default Tabs paint. */
 
 /* SECTION avatars-status-r9 */
 /* R9+ user profile/activity/favorite friend faces and semantic user-presence lamps only.
@@ -3510,18 +3240,6 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 
 /* Toolbar default ToggleGroup is a multi-select chip row, not a segmented switch.
    controls-r9 intentionally reserved the outline variant; chips retain small gaps. */
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"]{
-  display:flex;gap:2px;padding:0;max-width:100%;
-}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]{
-  min-height:28px;border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#d6c8ee;
-  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;transition:none;
-}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:hover:not(:disabled):not([aria-disabled="true"]){background:#392a52;color:#f2ebff}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"]){border-color:#6c5ce0;background:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:focus-visible{z-index:2;outline:2px solid #ff7fcf;outline-offset:1px}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:is([data-pressed],[aria-pressed="true"])::before{content:none!important}
-.vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="default"] > [data-slot="toggle"]:disabled{opacity:.55}
 
 /* Feed multi-user search: keep the toolbar ink tone scoped to the chip input group. */
 .vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="input-group"]:has(> [data-slot="combobox-chips"]){
@@ -3725,6 +3443,10 @@ html.reduce-effects [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .luc
 /* Folder rows keep their source padding and hit targets; only the face changes. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]{
+  transition:none;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]:not([class~="bg-(--state-selected-surface)"]){
   border-radius:0;
   background-color:transparent;
   color:#f2ebff;
@@ -3732,32 +3454,6 @@ html.reduce-effects [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .luc
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"]{
-  border-radius:0;
-  background:transparent;
-  color:#f2ebff;
-  transition:none;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]:hover:not([class~="bg-(--state-selected-surface)"]){
-  background-color:#2a2147;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"]{
-  background-color:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"]{
-  color:#16112a;
-}
-
-/* Selected rows keep their label treatment; force muted icon/count descendants to ink. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"] :is([class~="text-muted-foreground"],[class~="tabular-nums"]){
   color:#16112a;
@@ -3788,18 +3484,6 @@ html.reduce-effects [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .luc
   z-index:2;
 }
 
-/* Small square affordances: the refresh/menu buttons and dotted create affordance. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-sm"],
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-xs"]{
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#201936;
-  color:#f2ebff;
-  box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a;
-  transition:none;
-}
 
 /* Source GroupMenu is inside a shrink-0/pr-1 wrapper; keep its icon-xs hit box square. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
@@ -3811,13 +3495,6 @@ html.reduce-effects [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .luc
   padding:0;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-sm"]:hover,
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-xs"]:hover{
-  background:#ffb8e6;
-  color:#16112a;
-}
 
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]{
@@ -4095,36 +3772,10 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
         outline-offset:-3px;
         box-shadow:inset 0 0 0 2px #ff7fcf;
       }
-      .object-row__context-action{
-        border-color:transparent;
-        border-radius:0;
-        background-color:transparent;
-        color:#d6b8ef;
-        box-shadow:none;
-        opacity:1;
-        pointer-events:auto;
-        transition:opacity 80ms steps(2,end),background-color 80ms steps(2,end),color 80ms steps(2,end);
-        &:focus-visible{
-          z-index:11;
-          border-color:#ff6b8a;
-          outline:2px solid #ff7fcf;
-          outline-offset:1px;
-          background-color:#ffb8e6;
-          color:#16112a;
-          box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-          opacity:1;
-          pointer-events:auto;
-        }
-      }
-      &:hover .object-row__context-action{
-        z-index:11;
-        border-color:#ff6b8a;
-        background-color:#ffb8e6;
-        color:#16112a;
-        box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-        opacity:1;
-        pointer-events:auto;
-      }
+      /* The row action's face is a Button row action (button.css tier 4a); only its reveal lives here. */
+      .object-row__context-action{opacity:1;pointer-events:auto}
+      &:hover .object-row__context-action,
+      .object-row__context-action:focus-visible{z-index:11;opacity:1;pointer-events:auto}
     }
     :where(.object-row:hover){
       transform:translateY(-1px);
@@ -4165,12 +3816,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
   & > [data-slot="tabs"] > [data-slot="tabs-content"] .object-row:focus-within .object-row__context-action,
   & > [data-slot="tabs"] > [data-slot="tabs-content"] .object-row .object-row__context-action:focus-visible{
     z-index:11;
-    border-color:#ff6b8a;
-    outline:2px solid #ff7fcf;
-    outline-offset:1px;
-    background-color:#ffb8e6;
-    color:#16112a;
-    box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
     opacity:1;
     pointer-events:auto;
   }
@@ -4179,44 +3824,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 /* SECTION buttons-badges-r10 */
 /* R10 G2: intentionally low-specificity additions for main and side-panel surfaces.
    Put scope exclusions inside :where() so existing R9/R10 component partitions win. */
-
-/* Variant-bearing ordinary shadcn Buttons receive Win98 feedback in main/side-panel
-   surfaces, including PageToolbar. Keep menu/popover, compact article-card and row actions partitioned. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){
-  border-radius:0;-webkit-appearance:none;appearance:none;
-  box-shadow:var(--jk-button-bevel);
-  transition:background-color 80ms steps(2,end),color 80ms steps(2,end),box-shadow 80ms steps(2,end),transform 80ms steps(2,end);
-}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="default"]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-color:var(--jk-button-edge);background:var(--jk-button-default-face);color:var(--jk-button-default-text)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="default"]:hover:where(:not(:disabled):not([aria-disabled="true"]):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:var(--jk-button-default-hover);color:var(--jk-button-default-text)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="outline"]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)),:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="secondary"]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-color:var(--jk-button-edge);background:var(--jk-button-face);color:var(--jk-button-text)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"]:is([data-variant="outline"],[data-variant="secondary"]):hover:where(:not(:disabled):not([aria-disabled="true"]):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:var(--jk-button-hover-face);color:var(--jk-button-hover-text)}
-/* Ghost level chips keep their utility-provided red/amber/blue semantic paint. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="ghost"]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.bg-red-50):not(.bg-amber-50):not(.bg-sky-50)){background:transparent;color:#e3d2f5;box-shadow:none}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="ghost"]:hover:where(:not(:disabled):not([aria-disabled="true"]):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.bg-red-50):not(.bg-amber-50):not(.bg-sky-50)){background:#392a52;color:#fff0fa;box-shadow:inset 1px 1px #6c5ce0,inset -1px -1px #16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="ghost"]:is(.bg-red-50,.bg-amber-50,.bg-sky-50):hover:where(:not(:disabled):not([aria-disabled="true"])){box-shadow:inset 1px 1px #6c5ce0,inset -1px -1px #16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="destructive"]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-color:var(--jk-button-danger-edge);background:var(--jk-button-danger-face);color:var(--jk-button-danger-text);box-shadow:inset 1px 1px var(--jk-button-default-face),inset -1px -1px #16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="destructive"]:hover:where(:not(:disabled):not([aria-disabled="true"]):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:#ff6b8a;color:#16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="link"]:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border:0;background:transparent;color:#d6b8ef;box-shadow:none;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant="link"]:hover:where(:not(:disabled):not([aria-disabled="true"]):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){color:#ffb8e6;text-decoration-color:#ffb8e6}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant]:active:where(:not(:disabled):not([aria-disabled="true"]):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){box-shadow:var(--jk-button-pressed);transform:translate(1px,1px)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant]:focus-visible:where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){outline:2px solid #ff7fcf;outline-offset:2px}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant]:is(:disabled,[aria-disabled="true"]):where(:not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){cursor:not-allowed;filter:grayscale(.65);opacity:.58;box-shadow:inset 1px 1px rgb(253 244 255/.24),inset -1px -1px #16112a}
-
-/* Mutual-friends graph floating HUD controls: reuse the shared Win98 button tokens,
-   while keeping the menu-popup exclusion intact (menus carry their own interaction paint). */
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant]{
-  border:1px solid var(--jk-button-edge);border-radius:0;appearance:none;-webkit-appearance:none;
-  box-shadow:var(--jk-button-bevel);transition:background-color 80ms steps(2,end),color 80ms steps(2,end),box-shadow 80ms steps(2,end);
-}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="default"]{background:var(--jk-button-default-face);color:var(--jk-button-default-text)}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="default"]:hover:not(:disabled){background:var(--jk-button-default-hover)}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="outline"],:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="secondary"],:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="ghost"]{background:var(--jk-button-face);color:var(--jk-button-text)}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="ghost"]:hover:not(:disabled){background:var(--jk-button-hover-face);color:var(--jk-button-hover-text)}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant="destructive"]{border-color:var(--jk-button-danger-edge);background:var(--jk-button-danger-face);color:var(--jk-button-danger-text)}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant]:active:not(:disabled){box-shadow:var(--jk-button-pressed);transform:translate(1px,1px)}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant]:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
-:where(.vrcx-0-main-content .vrcx-0-page-scaffold#chart [class~="bg-popover/70"]:not([data-slot])) [data-slot="button"][data-variant]:is(:disabled,[aria-disabled="true"]){opacity:.58;filter:grayscale(.65);cursor:not-allowed}
 
 /* Common badges: square pixel labels with semantic variant colors. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-radius:0;letter-spacing:0;box-shadow:inset 1px 1px rgb(253 244 255/.28),inset -1px -1px rgb(22 17 42/.48)}
@@ -4244,8 +3851,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 /* Precisely gated source-shaped floating bars; unrelated rounded surfaces stay intact. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) div.bg-popover.text-popover-foreground:has(> span.text-muted-foreground.px-1\.5.font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) div.bg-popover.text-popover-foreground:has(> span.text-muted-foreground.px-2.font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant][class~="bg-popover/95"][class~="backdrop-blur"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;background:#ffb8e6;color:#16112a;backdrop-filter:none;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="button"][data-variant][class~="bg-popover/95"][class~="backdrop-blur"]:hover:where(:not(:disabled):not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:#f37fc4;color:#16112a}
 
 /* Dotted separator strokes preserve the primitive's one-pixel dimensions. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="horizontal"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px)}
@@ -4712,27 +4317,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
   outline-offset: 1px;
 }
 
-/* The overlay is portaled outside main-content; buttons-badges-r10 does not own it. */
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"] {
-  border: 1px solid #8c71b0;
-  border-radius: 2px;
-  background-color: #3b2c55;
-  color: #f2ebff;
-  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
-}
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"] {
-  border: 1px solid var(--wd-frame, #6c5ce0);
-  border-radius: 2px;
-  background-color: var(--wd-pink, #ff7fcf);
-  color: #16112a;
-  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
-}
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
-[data-vrcx-0-surface="privacy-lock"] [data-slot="button"][data-variant="default"]:hover:not(:disabled) {
-  border-color: var(--wd-pink, #ff7fcf);
-  background-color: var(--wd-select, #4a3784);
-  color: var(--wd-text, #f2ebff);
-}
 
 /* SECTION brand-heart-r97 */
 /* R9.7 brand heart (Q7, replaces brand-heart-r96.css): three independent native pixel grids
@@ -4833,11 +4417,7 @@ html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=l
  --jk-r97-lace:var(--jk-r97-lace-px) 0 0/16px 8px repeat-x;
  --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
 }
-/* Rails: keep the stair corners, open an 8px strip under the bottom edge, hang the lace there. */
-:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
-:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
-/* settings-pixel.css:57 padded the rail bottom to 12px for the old in-frame lace; back to the 3px of its other sides. */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+/* Rail lace (tabs-list clip/::after/padding-bottom) lives in tabs.css; the --jk-r97-lace* variables stay above. */
 /* Tools cards: same face as Settings (settings-pixel.css:74-78). */
 [data-tools-section] [data-slot=card]{position:relative;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
 [data-tools-section] [data-slot=card]::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid #6c5ce0;pointer-events:none}
@@ -4852,6 +4432,211 @@ html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=l
 .vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]) [data-slot=card-header] [data-slot=collapsible-trigger]::after{content:none}
 :is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]{position:relative;z-index:1}
 :is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),[data-tools-section]) [data-slot=card-header]::after{content:"";position:absolute;left:0;right:0;top:calc(100% + 1px);height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+
+/* SECTION tabs */
+/* ==========================================================================
+   Tabs · the single owner of every Tabs skin rule (see
+   checks/和用户商讨后收敛的"每个组件什么样".md, "Tabs").
+   A rule lives here when its subject (the right-most styled element) is a Tabs
+   part: tabs-list, tabs-tab, tab-indicator, the rail's [role=tab], the
+   property-tab tabs-content seam, or their pseudo-elements. Rules that only use
+   Tabs as an ancestor/page anchor (settings and tools cards, tools toolbar,
+   browse-history rows, fields-toolbar exclusion) stay in their own fragments,
+   as do the --jk-px-cut / --jk-r97-lace* variables these rules consume.
+   Rule text is moved verbatim; build-runtime.mjs explains the splice point.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   层级一 · component default (layered). Matches the existing data-slot identity
+   of any TabsList and its direct TabsTrigger children, on any page/orientation.
+   Component identity defaults; independent role skins exit only this layer.
+   -------------------------------------------------------------------------- */
+@layer jirai-tabs{
+[data-slot="tabs-list"]{
+  padding:1px;border:1px solid var(--wd-frame);border-radius:0;background:#201936;color:#e3d2f5;
+  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+/* Existing page geometry only; identity matching is independent of location. */
+.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]){gap:2px;padding:1px}
+/* Keep overflowing centered toolbar tabs reachable from their first item. */
+[data-slot="tabs-list"][class~="overflow-x-auto"]:not([class~="justify-start"]){justify-content:safe center}
+[data-slot="tabs-list"] > [data-slot="tab-indicator"]{display:none}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]{
+  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;font-synthesis:none;font-size:12px;
+  border:1px solid transparent;border-radius:0;background:#201936;color:#e3d2f5;box-shadow:none;transition:none;
+}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:hover:where(:not(:disabled,[data-disabled],[aria-disabled="true"])){background:#3b2c55;color:#f2ebff}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
+  border-color:var(--wd-frame);background:#ffb8e6;color:#16112a;
+  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
+}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"] > span:last-child{color:inherit}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"] .lucide{color:inherit;opacity:1}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:focus-visible{z-index:2;outline:2px solid var(--wd-pink);outline-offset:-2px}
+[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is(:disabled,[data-disabled],[aria-disabled="true"]){color:var(--wd-muted);opacity:.64;cursor:not-allowed}
+/* Tier 3 / tier 4 lists leave the default layer entirely (revert-layer). */
+:is(.vrcx-0-side-panel-rail [data-slot="tabs-list"],.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]){&, & *{all:revert-layer}}
+}
+
+/* --------------------------------------------------------------------------
+   Page geometry for vertical lists (sizes/spacing only; paint is tier 1).
+   Settings: the vertical Tabs that is a DIRECT child of the page scaffold
+   (SettingsPage.tsx:67-77). Tools: ToolsPageContent's category rail.
+   -------------------------------------------------------------------------- */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) > [data-slot=tabs-list]{position:relative;padding:3px;gap:1px;clip-path:var(--jk-px-cut)}
+.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]{gap:2px;padding:1px}
+
+/* --------------------------------------------------------------------------
+   层级二 · bottom lace on vertical navigation rails (page-scaffold direct
+   vertical Tabs, or the vertical Tabs right before the tools card column).
+   Keep the stair corners, open an 8px strip under the bottom edge, hang the
+   lace there. No separate base skin.
+   -------------------------------------------------------------------------- */
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+/* The settings geometry above pads the rail to 3px; the old in-frame lace once needed 12px at the bottom. */
+.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+
+/* --------------------------------------------------------------------------
+   层级三 · right side-panel folder tabs (.vrcx-0-side-panel-rail).
+   Real DOM (SSR-verified, see checks/r4-side-panel/): each rail tab is
+   `button[role=tab]` and Base UI itself emits `data-active` on the selected one
+   (no `data-active="false"`), while the app's Tooltip wrapper overwrites
+   data-slot with "tooltip-trigger" - so `[data-slot='tabs-tab']` never matches
+   these tabs. Select on the real role/attribute instead of the slot. The
+   friends panel they fuse with is styled in side-panel-r4.css.
+   -------------------------------------------------------------------------- */
+/* Resting tabs: dark, frameless, clearly outside the panel. The list still
+   carries the underline variant's 4px inline padding, which left a 4px strip of
+   rail colour between panel and tab; drop it so the strip is flush with the
+   panel edge (measured: panel right 1350 == tab left 1350 after, tab left 1354
+   before). */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [data-slot='tabs-list'] {
+    /* Preserve the exact effective R10 frame here, not a global Tabs patch. */
+    gap:2px;padding:1px 0;border:1px solid var(--wd-frame);border-radius:0;
+    background:#201936;color:#e3d2f5;
+    box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'] {
+    border-radius: 0;
+    border-color: transparent;
+    background-color: #1d1631;
+    color: var(--wd-faint);
+}
+
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab']:hover {
+    background-color: var(--wd-select);
+    color: var(--wd-text);
+}
+
+/* Selected tab: same face as the panel, three-sided --wd-frame frame (the left
+   edge stays open) and a pink spine on the far side. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active] {
+    border-color: var(--wd-frame);
+    border-left-color: transparent;
+    background-color: var(--wd-raised);
+    color: var(--wd-pink);
+}
+
+/* Pink spine as a pseudo element, not an inset box-shadow: the app's
+   focus-visible ring is itself a box-shadow and must survive for keyboard use. */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    pointer-events: none;
+    background-color: var(--wd-pink);
+}
+
+/* Cut the panel's right rule where the selected tab fuses with it. The panel's
+   outline sits in [right-1px, right) and the tab's own 1px transparent left
+   border starts at right, so the sliver has to start 2px left of the tab's
+   padding box (measured: panel rule at x1349 was still drawn at left:-1px). */
+.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2px;
+    width: 3px;
+    pointer-events: none;
+    background-color: var(--wd-raised);
+}
+
+/* --------------------------------------------------------------------------
+   层级四 · entity-dialog top property tabs (parallel to tier 3).
+   EntityDialogScaffold's real h-11 horizontal underline call becomes property tabs.
+   A raised purple sheet, not the pink selected button above; rail is independent.
+   -------------------------------------------------------------------------- */
+/* Inline decorative heart sits in the real tabs row; no clipped negative-bottom pseudo-element. */
+.entity-dialog [data-slot="tabs-list"][class~="h-11"]::before {
+ content:""; display:block; width:16px; height:16px; flex:none; margin:0 4px 0 8px; pointer-events:none;
+ background-color:var(--wd-square); mask:var(--jk-mask-s16) center/16px 16px no-repeat;
+}
+.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]{
+  align-items:flex-end;gap:2px;padding-block:0;border:0;border-radius:0;background:linear-gradient(var(--wd-frame),var(--wd-frame)) left bottom/100% 1px no-repeat;box-shadow:none;
+  & > [data-slot="tab-indicator"]{display:none}
+  & > [data-slot="tabs-tab"]{height:calc(100% - 4px);font-synthesis:none;font-size:12px;border:1px solid var(--wd-frame);border-radius:2px 2px 0 0;background:#201936;color:var(--wd-muted);box-shadow:inset 1px 1px #8f7fe0;transition:none}
+  & > [data-slot="tabs-tab"]:hover:not([data-disabled]){background:#332650;color:var(--wd-text)}
+  & > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){height:100%;z-index:2;border-bottom-color:var(--wd-raised);background:var(--wd-raised);color:#ffd9ee;box-shadow:inset 1px 1px #fdf4ff}
+  & > [data-slot="tabs-tab"]:focus-visible{outline:2px solid var(--wd-pink);outline-offset:-3px}
+}
+.entity-dialog [data-slot="tabs"]:has(> [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]) > [data-slot="tabs-content"]{border:1px solid var(--wd-frame);border-top:0;background:var(--wd-raised)}
+
+/* SECTION toggle-group */
+/* ToggleGroup · owns the component default skin. */
+@layer jirai-toggle-group {
+  [data-slot="toggle-group"] {
+    /* Layout-neutral well: the 1px border keeps the app's size and becomes the dark rim; the purple
+       frame is an outline, which takes no space. Only the gap between keys is new. */
+    gap:2px;
+    border:1px solid var(--jk-bevel-lo);
+    outline:1px solid var(--wd-frame);
+    border-radius:0;
+    background:var(--jk-bevel-lo);
+    box-shadow:none;
+  }
+  [data-slot="toggle-group"] > [data-slot="separator"] { display:none; }
+  [data-slot="toggle-group"] > button {
+    margin:0;
+    border:0;
+    border-radius:0;
+    opacity:1;
+    transform:none;
+    background:var(--jk-key-dark-raised);
+    color:var(--jk-key-text);
+    box-shadow:var(--jk-raised-2);
+    transition:background-color var(--jk-step),color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step);
+  }
+  [data-slot="toggle-group"] > button:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    background:var(--jk-key-dark-hover);
+  }
+  [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]) {
+    background:var(--jk-key-pink);
+    color:var(--jk-key-ink);
+    box-shadow:var(--jk-sunken-pink-2);
+    translate:1px 1px;
+  }
+  [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]):hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    background:var(--jk-key-pink-hover);
+    color:var(--jk-key-ink);
+  }
+  [data-slot="toggle-group"] > button:active:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    box-shadow:var(--jk-sunken);
+    translate:var(--jk-press-move);
+  }
+  [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]):active:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    box-shadow:var(--jk-sunken-pink-2);
+    translate:var(--jk-press-move);
+  }
+  [data-slot="toggle-group"] > button :is(svg,span) { color:inherit; opacity:1; }
+  [data-slot="toggle-group"] > button:focus-visible { outline:2px solid var(--wd-pink); outline-offset:-3px; z-index:1; }
+  [data-slot="toggle-group"] > button:is(:disabled,[data-disabled],[aria-disabled="true"]) { opacity:.45; cursor:not-allowed; }
+}
 
 /* SECTION splitter-r97 */
 /* R9.7 Q6 pixel splitter. ui/shadcn/resizable.tsx Separator[data-slot=resizable-handle];
@@ -5158,61 +4943,166 @@ html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sid
    Width/height/padding, reveal opacity, selected borders/rings and joined borders
    remain source-owned. Native CSS nesting keeps this patch within the 1MiB cap. */
 /* SECTION entity-button-roles-b054-b072: portal button states use existing app attributes/classes only. */
-:is(:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]) button[data-variant]:where(:not(.entity-dialog *,.owner-dialog *,.rounded-object,.rounded-full,[data-slot="dialog-close"],[data-slot="combobox-chip-remove"],[data-slot$="dialog-header"] *,[data-slot$="menu-content"] *,[data-slot$="menu-sub-content"] *,[data-slot="collapsible-trigger"],.h-auto.justify-start,.h-auto:has(img),.absolute.inset-0.h-full.w-full))){
-    border-radius:0;appearance:none;box-shadow:var(--jk-button-bevel);
-    --jk-portal-open-face:var(--jk-button-hover-face);--jk-portal-open-text:var(--jk-button-hover-text);
-    transition:background-color 80ms steps(2,end),color 80ms steps(2,end),box-shadow 80ms steps(2,end),transform 80ms steps(2,end);
-    &[data-variant="default"]{border-color:var(--jk-button-edge);background:var(--jk-button-default-face);color:var(--jk-button-default-text);--jk-portal-open-face:var(--jk-button-default-hover);--jk-portal-open-text:var(--jk-button-default-text)}
-    &[data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:var(--jk-button-default-hover);color:var(--jk-button-default-text)}
-    &:is([data-variant="outline"],[data-variant="secondary"]){border-color:var(--jk-button-edge);background:var(--jk-button-face);color:var(--jk-button-text)}
-    &:is([data-variant="outline"],[data-variant="secondary"]):hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:var(--jk-button-hover-face);color:var(--jk-button-hover-text)}
-    &[data-variant="ghost"]{background:transparent;color:#e3d2f5;box-shadow:none;--jk-portal-open-face:#392a52;--jk-portal-open-text:#fff0fa}
-    &[data-variant="ghost"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:#392a52;color:#fff0fa;box-shadow:inset 1px 1px #6c5ce0,inset -1px -1px #16112a}
-    /* NoteExport's include/skip utility colours are semantic, not ghost exemption. */
-    &[data-variant="ghost"].text-primary{color:#ffb8e6}
-    &[data-variant="ghost"].text-destructive{color:var(--jk-button-danger-text)}
-    &[data-variant="ghost"].text-destructive:is(:hover,:focus-visible){color:#ff6b8a}
-    &[data-variant="ghost"][class~="hover:text-destructive"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){color:var(--jk-button-danger-text)}
-    &[data-variant="destructive"]{border-color:var(--jk-button-danger-edge);background:var(--jk-button-danger-face);color:var(--jk-button-danger-text);box-shadow:inset 1px 1px var(--jk-button-default-face),inset -1px -1px #16112a;--jk-portal-open-face:#ff6b8a;--jk-portal-open-text:#16112a}
-    &[data-variant="destructive"]:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:#ff6b8a;color:#16112a}
-    &[data-variant="link"]{border:0;background:transparent;color:#d6b8ef;box-shadow:none;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px}
-    &[data-variant="link"]:hover:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){color:#ffb8e6;text-decoration-color:#ffb8e6}
-    /* State comes AFTER variant paint, including pointer hover. Open/latched != idle. */
-    &:not([data-variant="link"]):is([aria-expanded="true"],[aria-pressed="true"],[data-pressed],[data-popup-open]):not(:disabled):not([aria-disabled="true"]):not([data-disabled]){background:var(--jk-portal-open-face);color:var(--jk-portal-open-text);box-shadow:var(--jk-button-pressed)}
-    &:not([data-variant="link"]):active:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){box-shadow:var(--jk-button-pressed);translate:none;transform:translate(1px,1px)}
-    /* Joined preset halves depress in place: translating only one half opens a seam. */
-    &:is(.rounded-r-none.border-r-0,.rounded-l-none):active:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){transform:none;translate:none}
-    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
-    &:is(:disabled,[aria-disabled="true"],[data-disabled]){cursor:not-allowed;filter:grayscale(.65);opacity:.58;box-shadow:inset 1px 1px rgb(253 244 255/.24),inset -1px -1px #16112a;transform:none;translate:none}
-    &[data-variant="link"]:is(:disabled,[aria-disabled="true"],[data-disabled]){box-shadow:none}
-}
 :where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]){
-  /* List/identity rows are flat, not entity keys. Do not repaint selected/current
-     state: variants, aria-current and UserPickerRow's selected child stay intact. */
-  & button[data-variant]:not(.entity-dialog *,.owner-dialog *):is(.h-auto.justify-start):not(.rounded-object,.rounded-full):where(:not(.p-0):not(:has(img))){
-    border-radius:0;
-    &:is(:hover,:focus-visible):not(:disabled):not([aria-disabled="true"]):not([data-disabled]):not([aria-current="true"]):not([aria-pressed="true"]):not([data-variant="secondary"]):not(.border-primary){background:#392a52;color:#fff0fa;box-shadow:inset 2px 0 #ff7fcf}
-    &:active:not(:disabled):not([aria-disabled="true"]):not([data-disabled]){outline:1px solid #8f7fe0;outline-offset:-1px}
-    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:-2px}
-    &:is(:disabled,[aria-disabled="true"],[data-disabled]){filter:grayscale(.65);opacity:.58}
-  }
-  /* B096 p-0 UserPickerRow wrappers retain child-selected paint and existing list
-     rules. B097 keeps secondary vs ghost and its dense grid geometry. B100 and
-     collapsible/group headings remain flat disclosures; no bevel/translation. */
   & button:not(.entity-dialog *,.owner-dialog *):is([data-slot="collapsible-trigger"],.h-auto.justify-between):not([data-size^="icon"]){
     border-radius:0;box-shadow:none;
     &:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
   }
 }
 
-/* SECTION auth-button-feedback: retain login-r8 / privacy-lock-r96 paint. */
-:where([data-vrcx-0-surface="login-page"],[data-vrcx-0-surface="privacy-lock"]) button[data-variant]{
-  &:focus-visible{outline:2px solid #ff7fcf;outline-offset:2px}
-  &:active:not(:disabled):not([aria-disabled="true"]):not([data-variant="link"]){translate:none;transform:translate(1px,1px);box-shadow:1px 1px #100b1e}
-  &:is(:disabled,[aria-disabled="true"],[data-disabled]){transform:none;translate:none}
-}
-[data-vrcx-0-surface="login-page"] form>button[type="submit"][data-variant="default"]:active:not(:disabled){translate:none}
-[data-vrcx-0-surface="privacy-lock"] button[data-variant="link"]{color:#d6b8ef;text-decoration:underline dotted #8f7fe0;text-underline-offset:4px;
-  &:hover:not(:disabled){color:#ffb8e6;text-decoration-color:currentColor}
-  &:active:not(:disabled){color:#fdf4ff;transform:none;translate:none}
+/* SECTION button */
+/* ==========================================================================
+   Button · the single owner of the Button skin (see
+   checks/和用户商讨后收敛的"每个组件什么样".md, "Button").
+   Identity is button[data-variant]: wrapper components rewrite data-slot to
+   tooltip-trigger / dropdown-menu-trigger / ... so a slot is never identity.
+   Not owned here: toggle-group > button, toggle, input-group-button, tabs-tab,
+   and the side-panel group headings (collapsible-trigger keeps its own skin).
+   The default layer lives in @layer jirai-button, so rules that remain in
+   component fragments (menus, login page, window chrome) stay in front of it;
+   tiers 2-4 are modifiers of that layer, not separate skins.
+   ========================================================================== */
+
+@layer jirai-button {
+  /* ------------------------------------------------------------------------
+     Tier 1 · component default. Every pressable key: square corners, the same
+     80ms two-frame step for face/ink/depth, 1px pink focus ring, 1px press move.
+     ------------------------------------------------------------------------ */
+  /* :where() keeps tier 1 at button[data-variant] specificity so tiers 2-4 can override it. */
+  button[data-variant]:where(:not([data-slot="collapsible-trigger"],[data-slot="toggle"],[data-slot="input-group-button"],[data-slot="tabs-tab"],[data-slot="toggle-group"] *)) {
+    border-radius:0;
+    transition:background-color var(--jk-step),color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step);
+    &:focus-visible { outline:2px solid var(--wd-pink); outline-offset:1px; z-index:1; }
+    &:is(:disabled,[data-disabled],[aria-disabled="true"]) { opacity:.45; cursor:not-allowed; }
+    &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { translate:var(--jk-press-move); }
+
+    /* raised family: default / outline / secondary / destructive */
+    &:is([data-variant="default"],[data-variant="outline"],[data-variant="secondary"],[data-variant="destructive"]) {
+      border:1px solid var(--wd-frame);
+      box-shadow:var(--jk-raised);
+    }
+    &[data-variant="default"] {
+      background-color:var(--jk-key-pink); color:var(--jk-key-ink);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-pink-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-pink-press); box-shadow:var(--jk-sunken); }
+    }
+    &[data-variant="outline"] {
+      background-color:var(--jk-key-dark); color:var(--jk-key-text);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-dark-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { box-shadow:var(--jk-sunken); }
+    }
+    &[data-variant="secondary"] {
+      --btn-secondary-hover:#3a2e66;
+      background-color:var(--wd-title); color:var(--jk-key-text);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--btn-secondary-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { box-shadow:var(--jk-sunken); }
+    }
+    &[data-variant="destructive"] {
+      --btn-danger-hover:#5a2140;
+      border-color:var(--jk-key-danger-edge);
+      background-color:var(--jk-key-danger); color:var(--jk-key-danger-text);
+      box-shadow:inset 1px 1px var(--jk-key-pink),inset -1px -1px var(--jk-key-ink);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--btn-danger-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-danger-edge); color:var(--jk-key-ink); box-shadow:var(--jk-sunken); }
+    }
+
+    /* flat family: ghost. Invisible at rest; on hover it becomes a raised key in
+       the accent of the surface it sits on (tier 2 changes that accent). */
+    &[data-variant="ghost"] {
+      --btn-acc:var(--jk-key-dark-hover); --btn-acc-text:var(--jk-key-text-hover);
+      --btn-acc-hl:rgb(253 244 255/.5); --btn-acc-sh:var(--jk-bevel-lo);
+      border:1px solid transparent; background-color:transparent; box-shadow:none;
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+        border-color:var(--btn-acc-sh); background-color:var(--btn-acc); color:var(--btn-acc-text);
+        box-shadow:inset 1px 1px var(--btn-acc-hl),inset -1px -1px rgb(0 0 0/.45);
+      }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) {
+        border-color:var(--btn-acc-sh); background-color:var(--btn-acc); color:var(--btn-acc-text);
+        box-shadow:inset 2px 2px var(--btn-acc-sh),inset -1px -1px var(--btn-acc-hl);
+      }
+    }
+
+    /* link family: text only, in every state (no frame, no motion). */
+    &[data-variant="link"] {
+      border:0; background-color:transparent; box-shadow:none; translate:none; /* border:0 keeps the app's line height */
+      color:#ffa6dc; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { color:#ffd2ef; text-decoration-thickness:2px; }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { color:var(--wd-pink); translate:none; }
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     Tier 2 · accent modifier for pink surfaces. No second skin: only the
+     ghost accent variables and the pressed colour of raised keys change.
+     `[class~="bg-(--state-selected-surface)"]` is the app's selected-row marker
+     (utility class): a fragile proxy, documented in the report.
+     ------------------------------------------------------------------------ */
+  :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) button[data-variant="ghost"] {
+    --btn-acc:var(--jk-bar-accent); --btn-acc-text:var(--jk-bar-accent-text);
+    --btn-acc-hl:rgb(255 241 248/.55); --btn-acc-sh:var(--jk-bar-ink);
+  }
+  :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) button[data-variant]:is([data-variant="secondary"],[data-variant="outline"]):is(:active,[aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    background-color:var(--jk-bar-accent); color:var(--jk-bar-accent-text);
+  }
+
+  /* ------------------------------------------------------------------------
+     Tier 3 · list rows: ghost at data-size default. Hover tints the row button
+     purple and draws a 1px bevel; press sinks it. A row that is itself the
+     selected (pink) key draws no second frame: the row lights up instead.
+     ------------------------------------------------------------------------ */
+  button[data-variant="ghost"][data-size="default"]:not([data-slot="toggle-group"] *) {
+    &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+      border-color:transparent;
+      background-color:color-mix(in srgb,var(--wd-frame) 22%,transparent);
+      box-shadow:inset 1px 1px rgb(253 244 255/.72),inset -1px -1px var(--jk-key-ink);
+    }
+    &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) {
+      border-color:transparent;
+      background-color:color-mix(in srgb,var(--wd-frame) 30%,transparent);
+      box-shadow:var(--jk-sunken);
+    }
+  }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]) {
+    background-color:var(--jk-key-pink); color:var(--jk-key-ink); box-shadow:var(--jk-raised-pink);
+  }
+  [class~="bg-(--state-selected-surface)"] > button[data-variant="ghost"][data-size="default"]:not([data-slot="toggle-group"] *) {
+    border-color:transparent; background-color:transparent; box-shadow:none; color:var(--jk-key-ink);
+    &:is(:hover,:active):not(:disabled,[data-disabled],[aria-disabled="true"]) { border-color:transparent; background-color:transparent; box-shadow:none; color:var(--jk-key-ink); }
+  }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]:hover:not(:disabled,[data-disabled],[aria-disabled="true"])) { background-color:var(--jk-key-pink-hover); }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]:is(:active,[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"])) { box-shadow:var(--jk-sunken-pink); }
+
+  /* ------------------------------------------------------------------------
+     Tier 4a · row actions (parallel to tier 3, does not inherit it). A
+     container that directly holds a row button also holds its icon keys: those
+     are visible small raised keys so the app's hover-reveal still reads. The
+     structural `:has(> row button)` is a fragile proxy, documented.
+     ------------------------------------------------------------------------ */
+  /* .object-row__context-action: the app's own class for a list row's trailing action (browse history). */
+  :is(:has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"], button.object-row__context-action[data-variant="ghost"]):not([data-slot="toggle-group"] *) {
+    --btn-row-hi:rgb(253 244 255/.5); --btn-row-lo:rgb(7 5 15/.6);
+    border:1px solid var(--jk-bevel-lo);
+    background-color:var(--jk-key-dark-raised); color:var(--jk-key-text);
+    box-shadow:inset 1px 1px var(--btn-row-hi),inset -1px -1px var(--btn-row-lo);
+    &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-dark-hover); color:#fff; }
+    &:is(:active,[aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { box-shadow:inset 2px 2px var(--jk-bevel-lo),inset -1px -1px rgb(253 244 255/.6); }
+    & :is(svg,span) { color:inherit; opacity:1; }
+  }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"] {
+    --btn-row-pink:#f5a3d7; --btn-row-pink-hover:#ffc3e8; --btn-row-edge:#b05b93;
+    border-color:var(--jk-bevel-pink-lo);
+    background-color:var(--btn-row-pink); color:var(--jk-key-ink);
+    box-shadow:inset 1px 1px var(--jk-bevel-hi),inset -1px -1px var(--btn-row-edge);
+    &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--btn-row-pink-hover); color:var(--jk-key-ink); }
+  }
+
+  /* ------------------------------------------------------------------------
+     Tier 4b · search field (parallel to tier 3). A ghost that carries the app's
+     shortcut hint is visible at rest as a light bar key; hover/press are
+     tier 1 + tier 2 (the titlebar accent), so only the resting paint is new.
+     ------------------------------------------------------------------------ */
+  button[data-variant="ghost"]:has(> [data-slot="kbd-group"],> kbd):not([data-slot="toggle-group"] *) {
+    border-color:var(--jk-bar-ink); background-color:var(--jk-bar-face); color:var(--jk-bar-ink);
+    box-shadow:inset 1px 1px #fff1f8,inset -1px -1px #b86ba4;
+  }
 }

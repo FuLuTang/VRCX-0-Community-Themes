@@ -1,0 +1,36 @@
+/* ToggleGroup proposal, round 2 — preview only (right-hand pane, .jk-proposal).
+
+   "老电风扇按钮": keys sit side by side in one shared well; pressing a key in is choosing it.
+   - not selected: dark key, raised (light top-left edge, dark bottom-right) — sticks out, unchosen
+   - selected:     pink key, pressed in (dark 2px top-left, light bottom-right) — locked down, chosen
+   - hover lightens the key without changing raised/pressed; the moment of pressing pushes it in
+   - every change uses the same two-frame 80ms steps(2,end) as the buttons
+   Tabs differ: their selected tab is pink and RAISED, so the two families read differently. */
+
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"]{
+  gap:2px !important;padding:0 !important;border:1px solid #100b1e !important;outline:1px solid var(--wd-frame) !important;border-radius:0 !important;
+  background:#07050f !important;box-shadow:none !important;
+}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > [data-slot="separator"]{display:none !important}
+
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button{
+  --step:80ms steps(2,end);
+  border:0 !important;border-radius:0 !important;margin:0 !important;opacity:1 !important;transform:none !important;
+  background:#2a2046 !important;color:#e3d2f5 !important;
+  box-shadow:inset 2px 2px 0 rgba(253,244,255,.6),inset -2px -2px 0 #07050f,inset -3px -3px 0 rgba(122,108,190,.35) !important;
+  transition:background-color var(--step),color var(--step),box-shadow var(--step),translate var(--step) !important;
+}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button:hover:not(:disabled,[data-disabled]){background:#3a2d60 !important;color:#f2ebff !important}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]){
+  background:#ffb8e6 !important;color:#16112a !important;
+  box-shadow:inset 2px 2px 0 #4a1f40,inset 3px 3px 0 rgba(122,63,109,.6),inset -2px -2px 0 #fdf4ff !important;
+  translate:1px 1px !important; /* a pressed-in key stays a little lower-right */
+}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]):hover:not(:disabled,[data-disabled]){background:#ffcdef !important;color:#16112a !important}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button:active:not(:disabled,[data-disabled]){
+  box-shadow:inset 2px 2px 0 #07050f,inset 3px 3px 0 rgba(7,5,15,.5),inset -2px -2px 0 rgba(253,244,255,.5) !important;
+  translate:1px 2px !important;
+}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button :is(svg,span){color:inherit !important;opacity:1 !important}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button:focus-visible{outline:2px solid var(--wd-pink) !important;outline-offset:-3px !important;z-index:1}
+:is(#p#p,.jk-proposal) [data-slot="toggle-group"] > button:is(:disabled,[data-disabled]){opacity:.45 !important;cursor:not-allowed !important}

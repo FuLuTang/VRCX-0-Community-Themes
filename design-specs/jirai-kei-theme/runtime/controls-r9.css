@@ -1,78 +1,5 @@
-/* Component identity defaults; independent role skins exit only this layer. */
-@layer jirai-tabs{
-[data-slot="tabs-list"]{
-  padding:1px;border:1px solid var(--wd-frame);border-radius:0;background:#201936;color:#e3d2f5;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-/* Existing page geometry only; identity matching is independent of location. */
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]){gap:2px;padding:1px}
-/* Keep overflowing centered toolbar tabs reachable from their first item. */
-[data-slot="tabs-list"][class~="overflow-x-auto"]:not([class~="justify-start"]){justify-content:safe center}
-[data-slot="tabs-list"] > [data-slot="tab-indicator"]{display:none}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]{
-  border:1px solid transparent;border-radius:0;background:#201936;color:#e3d2f5;box-shadow:none;transition:none;
-}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:hover:where(:not(:disabled,[data-disabled],[aria-disabled="true"])){background:#3b2c55;color:#f2ebff}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
-  border-color:var(--wd-frame);background:#ffb8e6;color:#16112a;
-  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
-}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"] > span:last-child{color:inherit}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"] .lucide{color:inherit;opacity:1}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:focus-visible{z-index:2;outline:2px solid var(--wd-pink);outline-offset:-2px}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is(:disabled,[data-disabled],[aria-disabled="true"]){color:var(--wd-muted);opacity:.64;cursor:not-allowed}
-:is(.vrcx-0-side-panel-rail [data-slot="tabs-list"],.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]){&, & *{all:revert-layer}}
-}
+/* Tabs (default layer + entity-dialog property tabs) live in tabs.css. */
 
-/* EntityDialogScaffold's real h-11 horizontal underline call becomes property tabs.
-   A raised purple sheet, not the pink selected button above; rail is independent. */
-.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]{
-  align-items:flex-end;gap:2px;padding-block:0;border:0;border-radius:0;background:linear-gradient(var(--wd-frame),var(--wd-frame)) left bottom/100% 1px no-repeat;box-shadow:none;
-  & > [data-slot="tab-indicator"]{display:none}
-  & > [data-slot="tabs-tab"]{height:calc(100% - 4px);border:1px solid var(--wd-frame);border-radius:2px 2px 0 0;background:#201936;color:var(--wd-muted);box-shadow:inset 1px 1px #8f7fe0;transition:none}
-  & > [data-slot="tabs-tab"]:hover:not([data-disabled]){background:#332650;color:var(--wd-text)}
-  & > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){height:100%;z-index:2;border-bottom-color:var(--wd-raised);background:var(--wd-raised);color:#ffd9ee;box-shadow:inset 1px 1px #fdf4ff}
-  & > [data-slot="tabs-tab"]:focus-visible{outline:2px solid var(--wd-pink);outline-offset:-3px}
-}
-.entity-dialog [data-slot="tabs"]:has(> [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]) > [data-slot="tabs-content"]{border:1px solid var(--wd-frame);border-top:0;background:var(--wd-raised)}
-
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"]{
-  gap:0;
-  padding:0;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background-color:#201936;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]){
-  border-color:#6c5ce0;
-  border-radius:0;
-  background-color:#201936;
-  color:#e3d2f5;
-  box-shadow:none;
-  transition:none;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):hover:not([data-disabled]):not([aria-disabled="true"]){
-  background-color:#3b2c55;
-  color:#f2ebff;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):is([aria-pressed="true"],[data-pressed]){
-  border-color:#6c5ce0;
-  background-color:#ffb8e6 !important;
-  color:#16112a !important;
-  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d !important;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):is([aria-pressed="true"],[data-pressed])::before{
-  content:none !important;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > [data-slot="separator"]{
-  background-color:#6c5ce0;
-}
-.vrcx-0-main-content .vrcx-0-page-toolbar [data-slot="toggle-group"][data-variant="outline"] > :is([data-slot="toggle"],[data-slot="tooltip-trigger"][aria-pressed]):focus-visible{
-  z-index:2;
-  outline:2px solid #ff7fcf;
-  outline-offset:-3px;
-}
 
 /* Activity exhibits: opaque pixel window; leave --act-* chart palette intact. */
 .vrcx-0-main-content .vrcx-0-page-scaffold:has(.activity-skin) .activity-skin section.activity-card{
@@ -129,39 +56,6 @@
 .vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="badge"]{
   border:1px solid #6c5ce0;
   border-radius:0;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]{
-  min-height:28px;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
-  transition:none;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){
-  background:#ffd9ee;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="button"][data-variant="default"]:focus-visible{
-  outline:2px solid #ff7fcf;
-  outline-offset:1px;
-}
-/* Installed entries use custom bordered rows, but their primary enable buttons are still theme actions. */
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]{
-  min-height:28px;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d,2px 2px 0 #100b1e;
-  transition:none;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]:hover:not(:disabled):not([aria-disabled="true"]){
-  background:#ffd9ee;
-}
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="1"] [data-slot="button"][data-variant="default"]:focus-visible{
-  outline:2px solid #ff7fcf;
-  outline-offset:1px;
 }
 
 /* Mutual Friends Graph surfaces are the source PageScaffold id=chart overlays w-64/w-72.

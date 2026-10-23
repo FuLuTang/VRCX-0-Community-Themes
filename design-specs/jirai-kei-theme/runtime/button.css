@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Button · the single owner of the Button skin (see
+   checks/和用户商讨后收敛的"每个组件什么样".md, "Button").
+   Identity is button[data-variant]: wrapper components rewrite data-slot to
+   tooltip-trigger / dropdown-menu-trigger / ... so a slot is never identity.
+   Not owned here: toggle-group > button, toggle, input-group-button, tabs-tab,
+   and the side-panel group headings (collapsible-trigger keeps its own skin).
+   The default layer lives in @layer jirai-button, so rules that remain in
+   component fragments (menus, login page, window chrome) stay in front of it;
+   tiers 2-4 are modifiers of that layer, not separate skins.
+   ========================================================================== */
+
+@layer jirai-button {
+  /* ------------------------------------------------------------------------
+     Tier 1 · component default. Every pressable key: square corners, the same
+     80ms two-frame step for face/ink/depth, 1px pink focus ring, 1px press move.
+     ------------------------------------------------------------------------ */
+  /* :where() keeps tier 1 at button[data-variant] specificity so tiers 2-4 can override it. */
+  button[data-variant]:where(:not([data-slot="collapsible-trigger"],[data-slot="toggle"],[data-slot="input-group-button"],[data-slot="tabs-tab"],[data-slot="toggle-group"] *)) {
+    border-radius:0;
+    transition:background-color var(--jk-step),color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step);
+    &:focus-visible { outline:2px solid var(--wd-pink); outline-offset:1px; z-index:1; }
+    &:is(:disabled,[data-disabled],[aria-disabled="true"]) { opacity:.45; cursor:not-allowed; }
+    &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { translate:var(--jk-press-move); }
+
+    /* raised family: default / outline / secondary / destructive */
+    &:is([data-variant="default"],[data-variant="outline"],[data-variant="secondary"],[data-variant="destructive"]) {
+      border:1px solid var(--wd-frame);
+      box-shadow:var(--jk-raised);
+    }
+    &[data-variant="default"] {
+      background-color:var(--jk-key-pink); color:var(--jk-key-ink);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-pink-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-pink-press); box-shadow:var(--jk-sunken); }
+    }
+    &[data-variant="outline"] {
+      background-color:var(--jk-key-dark); color:var(--jk-key-text);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-dark-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { box-shadow:var(--jk-sunken); }
+    }
+    &[data-variant="secondary"] {
+      --btn-secondary-hover:#3a2e66;
+      background-color:var(--wd-title); color:var(--jk-key-text);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--btn-secondary-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { box-shadow:var(--jk-sunken); }
+    }
+    &[data-variant="destructive"] {
+      --btn-danger-hover:#5a2140;
+      border-color:var(--jk-key-danger-edge);
+      background-color:var(--jk-key-danger); color:var(--jk-key-danger-text);
+      box-shadow:inset 1px 1px var(--jk-key-pink),inset -1px -1px var(--jk-key-ink);
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--btn-danger-hover); }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-danger-edge); color:var(--jk-key-ink); box-shadow:var(--jk-sunken); }
+    }
+
+    /* flat family: ghost. Invisible at rest; on hover it becomes a raised key in
+       the accent of the surface it sits on (tier 2 changes that accent). */
+    &[data-variant="ghost"] {
+      --btn-acc:var(--jk-key-dark-hover); --btn-acc-text:var(--jk-key-text-hover);
+      --btn-acc-hl:rgb(253 244 255/.5); --btn-acc-sh:var(--jk-bevel-lo);
+      border:1px solid transparent; background-color:transparent; box-shadow:none;
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+        border-color:var(--btn-acc-sh); background-color:var(--btn-acc); color:var(--btn-acc-text);
+        box-shadow:inset 1px 1px var(--btn-acc-hl),inset -1px -1px rgb(0 0 0/.45);
+      }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) {
+        border-color:var(--btn-acc-sh); background-color:var(--btn-acc); color:var(--btn-acc-text);
+        box-shadow:inset 2px 2px var(--btn-acc-sh),inset -1px -1px var(--btn-acc-hl);
+      }
+    }
+
+    /* link family: text only, in every state (no frame, no motion). */
+    &[data-variant="link"] {
+      border:0; background-color:transparent; box-shadow:none; translate:none; /* border:0 keeps the app's line height */
+      color:#ffa6dc; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;
+      &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { color:#ffd2ef; text-decoration-thickness:2px; }
+      &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { color:var(--wd-pink); translate:none; }
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     Tier 2 · accent modifier for pink surfaces. No second skin: only the
+     ghost accent variables and the pressed colour of raised keys change.
+     `[class~="bg-(--state-selected-surface)"]` is the app's selected-row marker
+     (utility class): a fragile proxy, documented in the report.
+     ------------------------------------------------------------------------ */
+  :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) button[data-variant="ghost"] {
+    --btn-acc:var(--jk-bar-accent); --btn-acc-text:var(--jk-bar-accent-text);
+    --btn-acc-hl:rgb(255 241 248/.55); --btn-acc-sh:var(--jk-bar-ink);
+  }
+  :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) button[data-variant]:is([data-variant="secondary"],[data-variant="outline"]):is(:active,[aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    background-color:var(--jk-bar-accent); color:var(--jk-bar-accent-text);
+  }
+
+  /* ------------------------------------------------------------------------
+     Tier 3 · list rows: ghost at data-size default. Hover tints the row button
+     purple and draws a 1px bevel; press sinks it. A row that is itself the
+     selected (pink) key draws no second frame: the row lights up instead.
+     ------------------------------------------------------------------------ */
+  button[data-variant="ghost"][data-size="default"]:not([data-slot="toggle-group"] *) {
+    &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+      border-color:transparent;
+      background-color:color-mix(in srgb,var(--wd-frame) 22%,transparent);
+      box-shadow:inset 1px 1px rgb(253 244 255/.72),inset -1px -1px var(--jk-key-ink);
+    }
+    &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) {
+      border-color:transparent;
+      background-color:color-mix(in srgb,var(--wd-frame) 30%,transparent);
+      box-shadow:var(--jk-sunken);
+    }
+  }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]) {
+    background-color:var(--jk-key-pink); color:var(--jk-key-ink); box-shadow:var(--jk-raised-pink);
+  }
+  [class~="bg-(--state-selected-surface)"] > button[data-variant="ghost"][data-size="default"]:not([data-slot="toggle-group"] *) {
+    border-color:transparent; background-color:transparent; box-shadow:none; color:var(--jk-key-ink);
+    &:is(:hover,:active):not(:disabled,[data-disabled],[aria-disabled="true"]) { border-color:transparent; background-color:transparent; box-shadow:none; color:var(--jk-key-ink); }
+  }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]:hover:not(:disabled,[data-disabled],[aria-disabled="true"])) { background-color:var(--jk-key-pink-hover); }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]:is(:active,[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"])) { box-shadow:var(--jk-sunken-pink); }
+
+  /* ------------------------------------------------------------------------
+     Tier 4a · row actions (parallel to tier 3, does not inherit it). A
+     container that directly holds a row button also holds its icon keys: those
+     are visible small raised keys so the app's hover-reveal still reads. The
+     structural `:has(> row button)` is a fragile proxy, documented.
+     ------------------------------------------------------------------------ */
+  /* .object-row__context-action: the app's own class for a list row's trailing action (browse history). */
+  :is(:has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"], button.object-row__context-action[data-variant="ghost"]):not([data-slot="toggle-group"] *) {
+    --btn-row-hi:rgb(253 244 255/.5); --btn-row-lo:rgb(7 5 15/.6);
+    border:1px solid var(--jk-bevel-lo);
+    background-color:var(--jk-key-dark-raised); color:var(--jk-key-text);
+    box-shadow:inset 1px 1px var(--btn-row-hi),inset -1px -1px var(--btn-row-lo);
+    &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--jk-key-dark-hover); color:#fff; }
+    &:is(:active,[aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]) { box-shadow:inset 2px 2px var(--jk-bevel-lo),inset -1px -1px rgb(253 244 255/.6); }
+    & :is(svg,span) { color:inherit; opacity:1; }
+  }
+  [class~="bg-(--state-selected-surface)"]:has(> button[data-variant="ghost"][data-size="default"]) button[data-variant="ghost"][data-size^="icon"] {
+    --btn-row-pink:#f5a3d7; --btn-row-pink-hover:#ffc3e8; --btn-row-edge:#b05b93;
+    border-color:var(--jk-bevel-pink-lo);
+    background-color:var(--btn-row-pink); color:var(--jk-key-ink);
+    box-shadow:inset 1px 1px var(--jk-bevel-hi),inset -1px -1px var(--btn-row-edge);
+    &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) { background-color:var(--btn-row-pink-hover); color:var(--jk-key-ink); }
+  }
+
+  /* ------------------------------------------------------------------------
+     Tier 4b · search field (parallel to tier 3). A ghost that carries the app's
+     shortcut hint is visible at rest as a light bar key; hover/press are
+     tier 1 + tier 2 (the titlebar accent), so only the resting paint is new.
+     ------------------------------------------------------------------------ */
+  button[data-variant="ghost"]:has(> [data-slot="kbd-group"],> kbd):not([data-slot="toggle-group"] *) {
+    border-color:var(--jk-bar-ink); background-color:var(--jk-bar-face); color:var(--jk-bar-ink);
+    box-shadow:inset 1px 1px #fff1f8,inset -1px -1px #b86ba4;
+  }
+}

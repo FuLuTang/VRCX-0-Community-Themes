@@ -1,0 +1,49 @@
+/* ToggleGroup · owns the component default skin. */
+@layer jirai-toggle-group {
+  [data-slot="toggle-group"] {
+    /* Layout-neutral well: the 1px border keeps the app's size and becomes the dark rim; the purple
+       frame is an outline, which takes no space. Only the gap between keys is new. */
+    gap:2px;
+    border:1px solid var(--jk-bevel-lo);
+    outline:1px solid var(--wd-frame);
+    border-radius:0;
+    background:var(--jk-bevel-lo);
+    box-shadow:none;
+  }
+  [data-slot="toggle-group"] > [data-slot="separator"] { display:none; }
+  [data-slot="toggle-group"] > button {
+    margin:0;
+    border:0;
+    border-radius:0;
+    opacity:1;
+    transform:none;
+    background:var(--jk-key-dark-raised);
+    color:var(--jk-key-text);
+    box-shadow:var(--jk-raised-2);
+    transition:background-color var(--jk-step),color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step);
+  }
+  [data-slot="toggle-group"] > button:hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    background:var(--jk-key-dark-hover);
+  }
+  [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]) {
+    background:var(--jk-key-pink);
+    color:var(--jk-key-ink);
+    box-shadow:var(--jk-sunken-pink-2);
+    translate:1px 1px;
+  }
+  [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]):hover:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    background:var(--jk-key-pink-hover);
+    color:var(--jk-key-ink);
+  }
+  [data-slot="toggle-group"] > button:active:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    box-shadow:var(--jk-sunken);
+    translate:var(--jk-press-move);
+  }
+  [data-slot="toggle-group"] > button:is([aria-pressed="true"],[data-pressed]):active:not(:disabled,[data-disabled],[aria-disabled="true"]) {
+    box-shadow:var(--jk-sunken-pink-2);
+    translate:var(--jk-press-move);
+  }
+  [data-slot="toggle-group"] > button :is(svg,span) { color:inherit; opacity:1; }
+  [data-slot="toggle-group"] > button:focus-visible { outline:2px solid var(--wd-pink); outline-offset:-3px; z-index:1; }
+  [data-slot="toggle-group"] > button:is(:disabled,[data-disabled],[aria-disabled="true"]) { opacity:.45; cursor:not-allowed; }
+}

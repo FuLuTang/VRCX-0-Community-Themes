@@ -9,11 +9,7 @@
  --jk-r97-lace:var(--jk-r97-lace-px) 0 0/16px 8px repeat-x;
  --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
 }
-/* Rails: keep the stair corners, open an 8px strip under the bottom edge, hang the lace there. */
-:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
-:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
-/* settings-pixel.css:57 padded the rail bottom to 12px for the old in-frame lace; back to the 3px of its other sides. */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
+/* Rail lace (tabs-list clip/::after/padding-bottom) lives in tabs.css; the --jk-r97-lace* variables stay above. */
 /* Tools cards: same face as Settings (settings-pixel.css:74-78). */
 [data-tools-section] [data-slot=card]{position:relative;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
 [data-tools-section] [data-slot=card]::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid #6c5ce0;pointer-events:none}

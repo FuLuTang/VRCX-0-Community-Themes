@@ -85,36 +85,10 @@
         outline-offset:-3px;
         box-shadow:inset 0 0 0 2px #ff7fcf;
       }
-      .object-row__context-action{
-        border-color:transparent;
-        border-radius:0;
-        background-color:transparent;
-        color:#d6b8ef;
-        box-shadow:none;
-        opacity:1;
-        pointer-events:auto;
-        transition:opacity 80ms steps(2,end),background-color 80ms steps(2,end),color 80ms steps(2,end);
-        &:focus-visible{
-          z-index:11;
-          border-color:#ff6b8a;
-          outline:2px solid #ff7fcf;
-          outline-offset:1px;
-          background-color:#ffb8e6;
-          color:#16112a;
-          box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-          opacity:1;
-          pointer-events:auto;
-        }
-      }
-      &:hover .object-row__context-action{
-        z-index:11;
-        border-color:#ff6b8a;
-        background-color:#ffb8e6;
-        color:#16112a;
-        box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-        opacity:1;
-        pointer-events:auto;
-      }
+      /* The row action's face is a Button row action (button.css tier 4a); only its reveal lives here. */
+      .object-row__context-action{opacity:1;pointer-events:auto}
+      &:hover .object-row__context-action,
+      .object-row__context-action:focus-visible{z-index:11;opacity:1;pointer-events:auto}
     }
     :where(.object-row:hover){
       transform:translateY(-1px);
@@ -155,12 +129,6 @@
   & > [data-slot="tabs"] > [data-slot="tabs-content"] .object-row:focus-within .object-row__context-action,
   & > [data-slot="tabs"] > [data-slot="tabs-content"] .object-row .object-row__context-action:focus-visible{
     z-index:11;
-    border-color:#ff6b8a;
-    outline:2px solid #ff7fcf;
-    outline-offset:1px;
-    background-color:#ffb8e6;
-    color:#16112a;
-    box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
     opacity:1;
     pointer-events:auto;
   }

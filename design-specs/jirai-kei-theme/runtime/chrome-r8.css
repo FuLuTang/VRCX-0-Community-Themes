@@ -22,8 +22,8 @@
     color: var(--r8-ink);
 }
 
-/* Square outer corners across brand/help, middle actions, and native window controls. */
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']) {
+/* Menubar plates (not Button): square, no transition. Buttons in the titlebar belong to button.css. */
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger'] {
     box-sizing: border-box;
     border-radius: 0;
     transition: none;
@@ -41,22 +41,7 @@
         inset -1px -1px 0 var(--r8-face-low);
 }
 
-/* Keep the existing quick-search hit area; align its frame and face with the plates. */
-.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] {
-    background-color: var(--r8-face);
-    border-color: var(--r8-ink);
-    border-radius: 0;
-    color: var(--r8-ink);
-    box-shadow: inset 1px 1px 0 var(--r8-face-hi),
-        inset -1px -1px 0 var(--r8-face-low);
-}
-
-/* Mid-bar icon actions stay flat at rest, but share the same square interaction language. */
-.vrcx-0-titlebar[data-app-titlebar] button:not([class~='w-9'][class~='rounded-none'][class~='border-0']) {
-    border-radius: 0;
-    transition: none;
-}
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):is(
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger']:is(
     :hover,
     [aria-expanded='true'],
     [aria-pressed='true'],
@@ -68,12 +53,12 @@
     box-shadow: inset 1px 1px 0 var(--r8-face-hi),
         inset -1px -1px 0 var(--r8-face-low);
 }
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):active {
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger']:active {
     background-color: var(--r8-pressed) !important;
     box-shadow: inset 1px 1px 0 var(--r8-face-low),
         inset -1px -1px 0 var(--r8-face-hi);
 }
-.vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']):focus-visible {
+.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger']:focus-visible {
     outline: 2px solid var(--r8-ink);
     outline-offset: -3px;
 }
@@ -133,11 +118,6 @@
 /* Preserve each semantic lamp fill; the existing 1px square outline only gains ink. */
 .vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'] {
     border-color: var(--r8-ink);
-}
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button']):hover,
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(button, [data-slot='button'])[aria-expanded='true'] {
-    background-color: var(--r8-hover);
-    color: var(--r8-ink);
 }
 
 /* No new motion or ornamental pseudo-elements are introduced by R8. */

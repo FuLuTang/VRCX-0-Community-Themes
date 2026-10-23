@@ -15,10 +15,9 @@ or close the CDP browser. The fixtures are generated from the authenticated user
 may include private UI/account data; `snapshot/`, `fixtures/`, and `screens/` are gitignored
 and must not be committed or pushed.
 
-`replay-fixtures.mjs` loads each frozen fixture into an off-screen same-origin iframe and
-writes the computed-style snapshot. It runs no React app code. The canonical snapshot is
-`./snapshot/<route>.json`; replay writes there by default. Pass `--out /tmp/replay-run-N`
-to make an independent run for determinism checks.
+Comparison, census and rule-ownership tools that read these fixtures live in `../tools/`
+(see `../tools/README.md`). They load each fixture into headless Chromium with scripts
+removed and swap only the `data-vrcx-0-css-layer="local-theme-preview"` stylesheet.
 
 ## Run
 
@@ -30,66 +29,12 @@ to make an independent run for determinism checks.
    node collect.mjs
    ```
 
-3. Replay to generate the canonical computed-style baseline:
+3. Use `../tools/style-diff.mjs`, `../tools/slot-census.mjs` and `../tools/rule-owners.mjs`
+   against the new fixtures. The older replay/compare/audit scripts were removed; their
+   historical reports remain under `reports/`.
 
-   ```sh
-   node replay-fixtures.mjs
-   ```
-
-4. Verify replay determinism without overwriting the canonical output:
-
-   ```sh
-   node replay-fixtures.mjs --out /tmp/jirai-replay-a
-   node replay-fixtures.mjs --out /tmp/jirai-replay-b
-   node check-idempotency.mjs /tmp/jirai-replay-a /tmp/jirai-replay-b
-   ```
-
-5. Replay a candidate theme CSS against the same 42 frozen DOM states and compare it
-   mechanically to the canonical baseline:
-
-   ```sh
-   node replay-fixtures.mjs \\
-     --theme-css ../runtime/preview-package/jirai-kei-theme/theme.css \\
-     --out /tmp/jirai-candidate
-   node compare-snapshots snapshot /tmp/jirai-candidate
-   ```
-
-   Candidate CSS replaces exactly the `data-vrcx-0-css-layer="local-theme-preview"`
-   stylesheet. The checker fails on missing/extra locators, tag/attribute identity changes,
-   property-set changes, or any computed-style difference.
-
-6. Audit every distinct compiled selector against the frozen route/interaction DOMs (read-only;
-   output goes to `reports/selector-coverage.{json,md}`):
-
-   ```sh
-   node audit-selector-coverage.mjs
-   ```
-
-   The report distinguishes actual matches, pseudo-state structural candidates, pseudo-element
-   host matches, shadow-only selectors, and selectors with no match in the captured states; it
-   is not a claim about which declaration wins the CSS cascade.
-
-7. Generate the read-only component/context variant inventory from the saved computed snapshots:
-
-   ```sh
-   node build-component-variant-inventory.mjs
-   ```
-
-   This never reads or writes the live app and emits `reports/component-variant-inventory.{json,md}`.
-   It is an evidence index, not permission to flatten different contexts into one rule.
-
-8. Compare exact and near CSS declaration blocks, join candidate selectors to static DOM coverage
-   and component-context fingerprints, and flag likely context boundaries:
-
-   ```sh
-   node audit-declaration-clusters.mjs
-   ```
-
-   This remains a CSS-only candidate audit; no cascade claim or automatic merge is made.
-
-Playwright resolves from `../tools` or `/tmp/dsh-theme-tools`; to use another install set
-`PW_MODULE` to its package directory. Never call `browser.close()` on a `connectOverCDP`
-connection: that would close the user's live app.
+`collect.mjs` connects over CDP to the user's live app. Never call `browser.close()` on a
+`connectOverCDP` connection: that would close the user's app.
 
 ## Frozen schema and known route limitations
 

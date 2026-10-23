@@ -1,0 +1,32 @@
+[
+ {
+  "id": "tg-toolbar-icon",
+  "fixture": "feed",
+  "select": ".vrcx-0-page-toolbar [data-slot=toggle-group]"
+ },
+ {
+  "id": "tg-toolbar-text",
+  "fixture": "activity",
+  "select": ".vrcx-0-page-toolbar [data-slot=toggle-group]"
+ },
+ {
+  "id": "tg-scaffold-sm",
+  "fixture": "community-themes",
+  "select": ".vrcx-0-page-scaffold [data-slot=toggle-group][data-size=sm]"
+ },
+ {
+  "id": "menu-content",
+  "fixture": "feed-account-menu",
+  "select": "[data-slot=dropdown-menu-content]"
+ },
+ {
+  "id": "settings-card",
+  "fixture": "settings",
+  "select": ".vrcx-0-page-scaffold [data-slot=card] [data-slot=card-content]"
+ },
+ {
+  "id": "tabs-ref",
+  "fixture": "friends-locations",
+  "select": ".vrcx-0-page-toolbar [data-slot=tabs-list]"
+ }
+]

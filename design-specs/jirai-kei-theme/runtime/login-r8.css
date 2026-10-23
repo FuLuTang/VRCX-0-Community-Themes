@@ -104,6 +104,7 @@
   font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
   font-synthesis: none;
 }
+/* Link on the pink card header: Button default link pink would vanish here, so only its ink changes. */
 [data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="button"][data-variant="link"] {
   color: #21132d;
   text-decoration: underline;
@@ -113,31 +114,6 @@
 [data-vrcx-0-surface="login-page"] [data-slot="card"] > [data-slot="card-header"] [data-slot="button"][data-variant="link"]:hover {
   color: #100b1e;
   text-decoration-color: currentColor;
-}
-
-/* Saved rows: crisp tile buttons; preserve data, hit targets and the real image. */
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] [data-slot="button"][data-variant="ghost"]:has([data-slot="avatar"]) {
-  border: 1px solid #4b3a63;
-  border-radius: 2px;
-  background-color: #2a2147;
-  color: #f2ebff;
-  box-shadow: 2px 2px 0 #100b1e;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] [data-slot="button"][data-variant="ghost"]:has([data-slot="avatar"]):hover:not(:disabled) {
-  border-color: #d97fc6;
-  background-color: #3b2c55;
-  color: #fff4fb;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] div.overflow-y-auto > div.flex.items-center.gap-2 > [data-slot="button"][data-size="icon-sm"] {
-  border: 1px solid transparent;
-  border-radius: 2px;
-  color: #d6b8ef;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="card-content"] div.overflow-y-auto > div.flex.items-center.gap-2 > [data-slot="button"][data-size="icon-sm"]:hover:not(:disabled) {
-  border-color: #ff7fcf;
-  background-color: #4b1c3a;
-  color: #ffd9ee;
-  box-shadow: 2px 2px 0 #100b1e;
 }
 
 /* Login account portraits are user avatars too: pixel-cut the photo, with no theme avatar ring. */
@@ -164,37 +140,6 @@
 }
 [data-vrcx-0-surface="login-page"] [data-slot="avatar"][data-size="lg"] > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) {
   clip-path: var(--wd-avatar-cut);
-}
-
-/* Secondary controls keep their native box, disabled opacity, focus ring and icons. */
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="outline"],
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="secondary"] {
-  border: 1px solid #8c71b0;
-  border-radius: 2px;
-  background-color: #3b2c55;
-  color: #f2ebff;
-  box-shadow: 2px 2px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 12%);
-}
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="outline"]:hover:not(:disabled),
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="secondary"]:hover:not(:disabled) {
-  border-color: #ff7fcf;
-  background-color: #4a3784;
-  color: #fff4fb;
-}
-[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"] {
-  border: 1px solid #6c5ce0;
-  border-radius: 2px;
-  background-color: #ff7fcf;
-  color: #21132d;
-  box-shadow: 3px 3px 0 #100b1e, inset 0 1px 0 rgb(255 255 255 / 38%);
-}
-[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"]:hover:not(:disabled) {
-  border-color: #8c71b0;
-  background-color: #ffb8e6;
-}
-[data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"]:active:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 #100b1e;
 }
 
 /* Recessed inputs; no changes to source height, padding, type, or focus behavior. */
@@ -228,16 +173,9 @@
 [data-vrcx-0-surface="login-page"] [data-slot="checkbox"] {
   border-radius: 0;
 }
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="link"] {
-  color: #d6b8ef;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="button"][data-variant="link"]:hover {
-  color: #ffd9ee;
-}
 @media (prefers-reduced-motion: reduce) {
   [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::before,
   [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::after,
-  [data-vrcx-0-surface="login-page"] form > [data-slot="button"][type="submit"][data-variant="default"],
   [data-vrcx-0-surface="login-page"] [data-slot="spinner"] {
     animation: none !important;
     transition-duration: 0s !important;

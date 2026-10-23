@@ -69,10 +69,6 @@
 }
 
 /* SOCIAL ::after is intentionally untouched: the user asked to retain the R7 star+cat as-is. */
-/* R7's 2px tab-edge glint is too faint; leave the tab border static in R8. */
-[data-slot='tabs']:not(.vrcx-0-side-panel-rail) [data-slot='tabs-tab'][data-active]::after {
-  animation: none !important;
-}
 
 /* 5 · User-selected nav pocket. Only its 36px cat pseudo bobs by one integer px. */
 .vrcx-0-sidebar-surface [data-sidebar='content']::after {

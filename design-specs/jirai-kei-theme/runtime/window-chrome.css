@@ -17,11 +17,11 @@
 
 /* R3 text/keycap tokens remain here; chrome-r8.css owns the shared bar/control faces. */
 :root {
-    --jk-chrome-ink: #16112a;
+    --jk-chrome-ink: var(--jk-key-ink);
     --jk-chrome-ink-soft: #3b2a45;
     --jk-chrome-edge: #1a1226;
-    --jk-chrome-bevel-light: #fdf4ff;
-    --jk-chrome-bevel-dark: #7a3f6d;
+    --jk-chrome-bevel-light: var(--jk-bevel-hi);
+    --jk-chrome-bevel-dark: var(--jk-bevel-pink-lo);
 }
 
 /* Chrome R8 owns titlebar fill/ink; this structural rule only clears the legacy

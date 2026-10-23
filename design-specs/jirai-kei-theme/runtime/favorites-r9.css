@@ -40,6 +40,10 @@
 /* Folder rows keep their source padding and hit targets; only the face changes. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]{
+  transition:none;
+}
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]:not([class~="bg-(--state-selected-surface)"]){
   border-radius:0;
   background-color:transparent;
   color:#f2ebff;
@@ -47,32 +51,6 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"]{
-  border-radius:0;
-  background:transparent;
-  color:#f2ebff;
-  transition:none;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]:hover:not([class~="bg-(--state-selected-surface)"]){
-  background-color:#2a2147;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"]{
-  background-color:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"]{
-  color:#16112a;
-}
-
-/* Selected rows keep their label treatment; force muted icon/count descendants to ink. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"] :is([class~="text-muted-foreground"],[class~="tabular-nums"]){
   color:#16112a;
@@ -103,18 +81,6 @@
   z-index:2;
 }
 
-/* Small square affordances: the refresh/menu buttons and dotted create affordance. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-sm"],
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-xs"]{
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#201936;
-  color:#f2ebff;
-  box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a;
-  transition:none;
-}
 
 /* Source GroupMenu is inside a shrink-0/pr-1 wrapper; keep its icon-xs hit box square. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
@@ -126,13 +92,6 @@
   padding:0;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-sm"]:hover,
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[data-size="icon-xs"]:hover{
-  background:#ffb8e6;
-  color:#16112a;
-}
 
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]{

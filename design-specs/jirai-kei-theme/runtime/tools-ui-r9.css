@@ -39,5 +39,4 @@
   outline-offset:1px;
 }
 
-/* Tools category geometry only; shared default Tabs paint lives in controls-r9. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold#chart:has(> .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"]):has(> div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]) > div.relative.mt-4 [data-slot="tabs"][data-orientation="vertical"] > [data-slot="tabs-list"][data-orientation="vertical"]{gap:2px;padding:1px}
+/* Tools category rail geometry lives in tabs.css with the shared default Tabs paint. */

@@ -1,0 +1,133 @@
+:root,
+:root.dark,
+.dark {
+  /* Core semantic palette and control tokens */
+  --background: #161219;
+  --foreground: #f7eef4;
+  --card: #211b25;
+  --card-foreground: #f7eef4;
+  --popover: #2b2230;
+  --popover-foreground: #f7eef4;
+  --primary: #f0a8c8;
+  --primary-foreground: #271722;
+  --secondary: #2b2230;
+  --secondary-foreground: #f7eef4;
+  --muted: #2b2230;
+  --muted-foreground: #c4aab9;
+  --accent: #392a38;
+  --accent-foreground: #f7eef4;
+  --destructive: #ff8899;
+  --destructive-foreground: #161219;
+  --border: #564151;
+  --input: #bdb3c2;
+  --ring: #f0a8c8;
+  --radius: 0.5rem;
+  /* Sidebar semantic palette */
+  --sidebar: #211b25;
+  --sidebar-foreground: #f7eef4;
+  --sidebar-primary: #f0a8c8;
+  --sidebar-primary-foreground: #271722;
+  --sidebar-accent: #4a293d;
+  --sidebar-accent-foreground: #f7eef4;
+  --sidebar-border: #564151;
+  --sidebar-ring: #f0a8c8;
+  /* Shared surface layers */
+  --surface-canvas: #161219;
+  --surface-shell: #211b25;
+  --surface-panel: #211b25;
+  --surface-raised: #2b2230;
+  --surface-overlay: #2b2230;
+  --surface-interactive: #2b2230;
+  --surface-interactive-hover: #392a38;
+  /* Text/content hierarchy */
+  --content-primary: #f7eef4;
+  --content-secondary: #c4aab9;
+  --content-tertiary: #c4aab9;
+  --content-disabled: #c4aab9;
+  /* Strokes and border emphasis */
+  --stroke-subtle: #564151;
+  --stroke-default: #564151;
+  --stroke-strong: #bdb3c2;
+  --border-subtle: #564151;
+  --border-hover: #bdb3c2;
+  /* Interaction/selection states */
+  --state-hover-surface: #392a38;
+  --state-pressed-surface: #4a293d;
+  --state-selected-surface: #4a293d;
+  --state-selected-hover-surface: #392a38;
+  /* App shell and navigation surfaces */
+  --vrcx-0-app-surface: #211b25;
+  --vrcx-0-titlebar-surface: #211b25;
+  --vrcx-0-main-surface: #211b25;
+  --vrcx-0-main-content-surface: #161219;
+  --vrcx-0-sidebar-surface: #211b25;
+  --vrcx-0-sidebar-inset-surface: #211b25;
+  --vrcx-0-side-panel-surface: #211b25;
+  --vrcx-0-statusbar-surface: #211b25;
+  /* Data-table surfaces and dividers */
+  --vrcx-0-table-surface: #211b25;
+  --vrcx-0-table-header-surface: #2b2230;
+  --vrcx-0-table-header-foreground: #f7eef4;
+  --vrcx-0-table-row-hover-surface: #392a38;
+  --vrcx-0-table-row-selected-surface: #4a293d;
+  --vrcx-0-table-row-selected-hover-surface: #392a38;
+  --vrcx-0-table-row-expanded-surface: #2b2230;
+  --vrcx-0-table-border: #564151;
+  --vrcx-0-table-divider: #564151;
+  --vrcx-0-table-sticky-edge: #bdb3c2;
+  /* Toolbar/control surfaces */
+  --vrcx-0-toolbar-control-surface: #2b2230;
+  --vrcx-0-toolbar-control-hover-surface: #392a38;
+  --vrcx-0-toolbar-control-border: #564151;
+  --vrcx-0-toolbar-group-surface: #211b25;
+  --vrcx-0-toolbar-group-border: #564151;
+  /* Main-content geometry and focus accents */
+  --vrcx-0-main-content-radius: 0.5rem;
+  --vrcx-0-main-content-edge: #564151;
+  --vrcx-0-main-content-highlight: transparent;
+  --vrcx-0-main-content-lift: none;
+  /* Resize accent and chart series */
+  --vrcx-0-resize-accent-active: #f0a8c8;
+  --chart-1: #f0a8c8;
+  --chart-2: #b9cfa9;
+  --chart-3: #e0b97f;
+  --chart-4: #ad80d7;
+  --chart-5: #ff8899;
+}
+/* Win98 key tokens: values only, no selectors, so nothing changes until a component file uses them.
+   A "key" is any pressable face: two faces (pink, dark) x two depths (raised, sunken), plus the
+   accent of the surface it sits on. Built from the --wd palette (windose-runtime.css). */
+:root {
+  /* bevel edges */
+  --jk-bevel-hi: #fdf4ff;          /* light edge (all faces) */
+  --jk-bevel-pink-lo: #7a3f6d;     /* dark edge of a pink face */
+  --jk-bevel-lo: #100b1e;          /* dark edge of a dark face (same as the panel edge) */
+  /* faces */
+  --jk-key-pink: var(--wd-square);           /* #ffb8e6 */
+  --jk-key-pink-hover: #ffcdef;
+  --jk-key-pink-press: #f37fc4;
+  --jk-key-ink: var(--wd-desktop);           /* #16112a, text on pink */
+  --jk-key-dark: #211a33;                    /* outline button */
+  --jk-key-dark-raised: var(--wd-raised);    /* #2a2147, toggle item, row action */
+  --jk-key-dark-hover: #392a52;
+  --jk-key-text: var(--wd-text);             /* #f2ebff */
+  --jk-key-text-hover: #fff0fa;
+  --jk-key-danger: #3d1b35;
+  --jk-key-danger-edge: #ff6b8a;
+  --jk-key-danger-text: #ffd9e4;
+  /* depth (1px for buttons, 2px for toggle keys) */
+  --jk-raised: inset 1px 1px rgb(253 244 255/.72), inset -1px -1px rgb(22 17 42/.72);
+  --jk-raised-pink: inset 1px 1px var(--jk-bevel-hi), inset -1px -1px var(--jk-bevel-pink-lo);
+  --jk-sunken: inset 2px 2px var(--jk-key-ink), inset -1px -1px var(--jk-bevel-hi);
+  --jk-sunken-pink: inset 2px 2px var(--jk-bevel-pink-lo), inset -1px -1px var(--jk-bevel-hi);
+  --jk-raised-2: inset 2px 2px rgb(253 244 255/.6), inset -2px -2px var(--jk-bevel-lo);
+  --jk-sunken-pink-2: inset 2px 2px #4a1f40, inset 3px 3px rgb(122 63 109/.6), inset -2px -2px var(--jk-bevel-hi);
+  /* motion: two-frame pixel transition, press moves 1px right / 2px down */
+  --jk-step: 80ms steps(2, end);
+  --jk-press-move: 1px 2px;
+  /* light pink bars (titlebar, statusbar) and selected rows */
+  --jk-bar-face: #f8c6e3;
+  --jk-bar-ink: #21132d;
+  --jk-bar-accent: #b0305f;
+  --jk-bar-accent-text: #fff1f8;
+}

@@ -1,11 +1,11 @@
 {
-  "cssBytes": 1044718,
+  "cssBytes": 1024742,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
     {
       "name": "tokens",
-      "bytes": 3115
+      "bytes": 5163
     },
     {
       "name": "native-icons",
@@ -25,11 +25,11 @@
     },
     {
       "name": "runtime",
-      "bytes": 12257
+      "bytes": 11242
     },
     {
       "name": "window-chrome",
-      "bytes": 9327
+      "bytes": 9364
     },
     {
       "name": "group-spacing",
@@ -41,7 +41,7 @@
     },
     {
       "name": "side-panel",
-      "bytes": 6533
+      "bytes": 4236
     },
     {
       "name": "feed-badges",
@@ -49,7 +49,7 @@
     },
     {
       "name": "settings",
-      "bytes": 10104
+      "bytes": 6379
     },
     {
       "name": "pixel-controls",
@@ -61,7 +61,7 @@
     },
     {
       "name": "motion",
-      "bytes": 2223
+      "bytes": 1969
     },
     {
       "name": "navigation-r7",
@@ -69,7 +69,7 @@
     },
     {
       "name": "motion-r7",
-      "bytes": 1700
+      "bytes": 701
     },
     {
       "name": "assets-r7",
@@ -81,7 +81,7 @@
     },
     {
       "name": "chrome-r8",
-      "bytes": 6872
+      "bytes": 5912
     },
     {
       "name": "bio-diff-r8",
@@ -89,7 +89,7 @@
     },
     {
       "name": "motion-r8",
-      "bytes": 3506
+      "bytes": 3302
     },
     {
       "name": "cat-r8-final",
@@ -101,7 +101,7 @@
     },
     {
       "name": "login-r8",
-      "bytes": 9691
+      "bytes": 7031
     },
     {
       "name": "user-dialog-r9",
@@ -113,7 +113,7 @@
     },
     {
       "name": "controls-r9",
-      "bytes": 12973
+      "bytes": 6137
     },
     {
       "name": "popups-r9",
@@ -121,7 +121,7 @@
     },
     {
       "name": "tools-ui-r9",
-      "bytes": 6859
+      "bytes": 3622
     },
     {
       "name": "avatars-status-r9",
@@ -145,7 +145,7 @@
     },
     {
       "name": "fields-toolbar-r10",
-      "bytes": 10187
+      "bytes": 8907
     },
     {
       "name": "overlays-r10",
@@ -153,15 +153,15 @@
     },
     {
       "name": "favorites-r9",
-      "bytes": 17421
+      "bytes": 14905
     },
     {
       "name": "browse-history-r9",
-      "bytes": 7485
+      "bytes": 6648
     },
     {
       "name": "buttons-badges-r10",
-      "bytes": 17098
+      "bytes": 6708
     },
     {
       "name": "data-surfaces-r10",
@@ -173,7 +173,7 @@
     },
     {
       "name": "privacy-lock-r96",
-      "bytes": 2679
+      "bytes": 1715
     },
     {
       "name": "brand-heart-r97",
@@ -193,7 +193,15 @@
     },
     {
       "name": "cards-r97",
-      "bytes": 4975
+      "bytes": 3981
+    },
+    {
+      "name": "tabs",
+      "bytes": 10506
+    },
+    {
+      "name": "toggle-group",
+      "bytes": 2205
     },
     {
       "name": "splitter-r97",
@@ -216,12 +224,12 @@
       "bytes": 417
     },
     {
-      "name": "entity-button-roles-b054-b072: explicit action roles share portal states.",
-      "bytes": 6781
+      "name": "entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.",
+      "bytes": 478
     },
     {
-      "name": "auth-button-feedback: retain login-r8 / privacy-lock-r96 paint.",
-      "bytes": 828
+      "name": "button",
+      "bytes": 11516
     }
   ],
   "previewBytes": 24252,
