@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1019310,
+  "cssBytes": 1019412,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -25,11 +25,11 @@
     },
     {
       "name": "runtime",
-      "bytes": 10963
+      "bytes": 10830
     },
     {
       "name": "window-chrome",
-      "bytes": 9364
+      "bytes": 8745
     },
     {
       "name": "group-spacing",
@@ -65,7 +65,7 @@
     },
     {
       "name": "navigation-r7",
-      "bytes": 4835
+      "bytes": 2698
     },
     {
       "name": "motion-r7",
@@ -89,7 +89,11 @@
     },
     {
       "name": "motion-r8",
-      "bytes": 3302
+      "bytes": 2703
+    },
+    {
+      "name": "sidebar-nav",
+      "bytes": 3595
     },
     {
       "name": "cat-r8-final",
@@ -113,7 +117,7 @@
     },
     {
       "name": "controls-r9",
-      "bytes": 5784
+      "bytes": 5408
     },
     {
       "name": "popups-r9",
@@ -145,7 +149,7 @@
     },
     {
       "name": "fields-toolbar-r10",
-      "bytes": 1056
+      "bytes": 856
     },
     {
       "name": "overlays-r10",
@@ -153,7 +157,7 @@
     },
     {
       "name": "favorites-r9",
-      "bytes": 13144
+      "bytes": 12703
     },
     {
       "name": "browse-history-r9",
@@ -161,7 +165,11 @@
     },
     {
       "name": "buttons-badges-r10",
-      "bytes": 6708
+      "bytes": 4313
+    },
+    {
+      "name": "badge",
+      "bytes": 3359
     },
     {
       "name": "data-surfaces-r10",

@@ -9,7 +9,6 @@
  }
 /* Explicit chrome-only font. Preserve user content and user-selected body font. */
 .vrcx-0-titlebar, .vrcx-0-statusbar,
-.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"],
 .vrcx-0-sidebar-surface [data-slot="sidebar-group-label"],
 .vrcx-0-table-header, [data-slot="dialog-title"] {
  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
@@ -32,9 +31,7 @@
 .vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down)::before {
  content:""; width:6px; height:6px; flex:none; border-radius:50%; background-color:var(--wd-title-active);
 }
-.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down) > [data-slot="badge"] {
- background:transparent; border-color:transparent; color:var(--wd-muted); font-family:"WD Pixel CJK",sans-serif;
-}
+.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down) > [data-slot="badge"] { font-family:"WD Pixel CJK",sans-serif; }
 .vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down):hover { background-color:var(--wd-select); }
 /* R7 owns the visible expanded-nav banner; this base rule keeps only the flex layout roles. */
 [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::before {

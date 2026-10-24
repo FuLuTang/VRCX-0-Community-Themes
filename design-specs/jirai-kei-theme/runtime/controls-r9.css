@@ -47,11 +47,6 @@
   border-radius:0;
   background:#16112a;
 }
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="badge"]{
-  border:1px solid #6c5ce0;
-  border-radius:0;
-}
-
 /* Mutual Friends Graph surfaces are the source PageScaffold id=chart overlays w-64/w-72.
    Keep the SVG graph's circle encoding intact; square only the legend swatches and detail-card avatar. */
 .vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64,.w-72){

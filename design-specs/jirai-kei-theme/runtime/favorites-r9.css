@@ -27,15 +27,6 @@
   color:#f2ebff;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [data-slot="badge"]{
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#201936;
-  color:#d6b8ef;
-  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;
-  font-variant-numeric:tabular-nums;
-}
 
 /* Folder rows keep their source padding and hit targets; only the face changes. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])

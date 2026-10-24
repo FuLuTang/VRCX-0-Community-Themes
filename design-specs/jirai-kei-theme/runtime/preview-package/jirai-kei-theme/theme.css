@@ -644,7 +644,6 @@ svg.lucide-person-standing{transform:none}
  }
 /* Explicit chrome-only font. Preserve user content and user-selected body font. */
 .vrcx-0-titlebar, .vrcx-0-statusbar,
-.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"],
 .vrcx-0-sidebar-surface [data-slot="sidebar-group-label"],
 .vrcx-0-table-header, [data-slot="dialog-title"] {
  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
@@ -667,9 +666,7 @@ svg.lucide-person-standing{transform:none}
 .vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down)::before {
  content:""; width:6px; height:6px; flex:none; border-radius:50%; background-color:var(--wd-title-active);
 }
-.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down) > [data-slot="badge"] {
- background:transparent; border-color:transparent; color:var(--wd-muted); font-family:"WD Pixel CJK",sans-serif;
-}
+.vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down) > [data-slot="badge"] { font-family:"WD Pixel CJK",sans-serif; }
 .vrcx-0-side-panel [data-slot="collapsible"] > button[data-variant="ghost"][data-size="sm"]:has(> svg.lucide-chevron-down):hover { background-color:var(--wd-select); }
 /* R7 owns the visible expanded-nav banner; this base rule keeps only the flex layout roles. */
 [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::before {
@@ -896,20 +893,8 @@ svg.lucide-person-standing{transform:none}
     padding-inline: 7px;
 }
 
-/* R4-2 · Ctrl / K caps: light face, 1px ink frame, bevel, ink text. The app
-   painted them bg-background/45 (dark on dark). height 14px→16px centres the
-   14px line box inside the frame, still well inside the 24px control. */
-.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] kbd[data-slot='kbd'] {
-    height: 16px;
-    min-width: 16px;
-    padding-inline: 3px;
-    border: 1px solid var(--jk-chrome-edge);
-    border-radius: 0;
-    background-color: var(--jk-r4-keycap);
-    color: var(--jk-chrome-ink);
-    box-shadow: inset 1px 1px 0 #ffffff,
-        inset -1px -1px 0 var(--jk-chrome-bevel-dark);
-}
+/* R4-2 geometry only · the shared Kbd owner supplies the light face/bevel. */
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] kbd[data-slot='kbd'] { height:16px;min-width:16px;padding-inline:3px; }
 
 /* R4-3 · R8 owns the plate/help face and bevel; retain its unique 7px inset. */
 .vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'] {
@@ -933,10 +918,6 @@ svg.lucide-person-standing{transform:none}
     content: '';
     position: absolute;
     pointer-events: none;
-}
-/* Build badge inside the help trigger follows the square pixel language. */
-.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'] [data-slot='badge'] {
-    border-radius: 0;
 }
 
 /* SECTION group-spacing */
@@ -1402,67 +1383,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
  padding:4px;
  box-shadow:var(--jk-field-inset);
 }
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"] {
- box-sizing:border-box;
- min-width:0;
- height:36px;
- padding:7px 8px;
- gap:10px;
- border:1px solid transparent;
- border-radius:0;
- color:#f2ebff;
- background:transparent;
- font-family:"WD Pixel CJK",sans-serif;
- font-size:16px;
- line-height:20px;
- font-weight:400;
- font-synthesis:none;
- text-shadow:none;
- transition:none;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"] svg {
- width:18px;
- height:18px;
- color:#ceb8e8;
- opacity:1;
- flex-shrink:0;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"] > span:has(> svg) { width:18px; height:18px; flex-shrink:0; }
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:hover {
- color:#fff3fc;
- background:#392949;
- border-color:#735486;
- box-shadow:inset 1px 1px #493458;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"][data-active] {
- color:#21132d;
- background:#f3add9;
- border-color:#ffe2f3 #986b9e #986b9e #ffe2f3;
- box-shadow:inset 3px 0 #6a366d,1px 1px #100b1e;
- font-weight:400;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"][data-active] svg { color:#42214f; }
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:focus-visible {
- outline:2px dashed #ffb8e6;
- outline-offset:-3px;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:active {
- box-shadow:inset 1px 1px #100b1e;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:disabled,
-.vrcx-0-sidebar-surface [data-sidebar="menu-button"][aria-disabled="true"] {
- opacity:.45;
- pointer-events:none;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-sub"] {
- border-left-color:#8e6eab;
- margin-left:18px;
-}
-.vrcx-0-sidebar-surface [data-sidebar="menu-sub-button"] {
- color:#dfd0ef;
- font:14px/20px "WD Pixel CJK",sans-serif;
- border-radius:0;
-}
 .vrcx-0-sidebar-surface [data-sidebar="footer"] {
  color:#f2ebff;
  background:#241a35;
@@ -1479,11 +1399,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="content"] { padding:4px; }
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu"] { border:0; padding:0; background:transparent; box-shadow:none; }
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="footer"] { padding:8px 4px; }
-[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu-button"] { gap:0; justify-content:center; }
-[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu-button"] svg { width:16px; height:16px; }
-@media(max-height:760px) {
- .vrcx-0-sidebar-surface [data-sidebar="menu-button"] { height:34px; padding-top:6px; padding-bottom:6px; }
-}
 @media(max-height:620px) {
  [data-slot="sidebar"][data-state="expanded"] .vrcx-0-sidebar-surface [data-sidebar="footer"]::before { display:none; }
 }
@@ -1745,24 +1660,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
   animation: r8-lace-flow 4.8s steps(2, end) infinite;
 }
 
-/* 3 · Pixel cursor at the active nav item's left inset. Only the free pseudo-element blinks. */
-.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active] {
-  position: relative;
-}
-.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  left: 4px;
-  top: 50%;
-  margin-top: -7px;
-  width: 3px;
-  height: 14px;
-  background: linear-gradient(#fff1f8, #fff1f8);
-  pointer-events: none;
-  animation: r8-nav-cursor 3s steps(4, end) infinite;
-}
-
 /* 4 · On hover only, a 3px corner pixel presses down by one integer px.
    Confirmed free on AppTitleBar's window-button selector; button hit geometry is unchanged. */
 .vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'] {
@@ -1792,11 +1689,115 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 
 @media (prefers-reduced-motion: reduce) {
   .vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before,
-  .vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before,
   .vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0']::after,
   .vrcx-0-sidebar-surface [data-sidebar='content']::after { 
     animation: none !important;
   }
+}
+
+/* SECTION sidebar-nav */
+/* Sidebar navigation items only. No @layer: all rules remain in the unlayered cascade.
+   Kept after motion-r8 in parts.json so the moved nav selectors retain their former
+   order relative to their owners; the explicit declarations below preserve their
+   original internal ordering. Group labels, badges/keycaps and sidebar chrome stay elsewhere. */
+
+/* Layer 1 · legacy shared chrome font assignment (split from windose-runtime.css). */
+.vrcx-0-sidebar-surface [data-slot="sidebar-menu-button"] {
+ font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
+ font-synthesis:none; font-size:12px;
+}
+
+/* Layer 1 · main navigation item, icon and interaction states. */
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"] {
+ box-sizing:border-box;
+ min-width:0;
+ height:36px;
+ padding:7px 8px;
+ gap:10px;
+ border:1px solid transparent;
+ border-radius:0;
+ color:#f2ebff;
+ background:transparent;
+ font-family:"WD Pixel CJK",sans-serif;
+ font-size:16px;
+ line-height:20px;
+ font-weight:400;
+ font-synthesis:none;
+ text-shadow:none;
+ transition:none;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"] svg {
+ width:18px;
+ height:18px;
+ color:#ceb8e8;
+ opacity:1;
+ flex-shrink:0;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"] > span:has(> svg) { width:18px; height:18px; flex-shrink:0; }
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:hover {
+ color:#fff3fc;
+ background:#392949;
+ border-color:#735486;
+ box-shadow:inset 1px 1px #493458;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"][data-active] {
+ color:#21132d;
+ background:#f3add9;
+ border-color:#ffe2f3 #986b9e #986b9e #ffe2f3;
+ box-shadow:inset 3px 0 #6a366d,1px 1px #100b1e;
+ font-weight:400;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"][data-active] svg { color:#42214f; }
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:focus-visible {
+ outline:2px dashed #ffb8e6;
+ outline-offset:-3px;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:active {
+ box-shadow:inset 1px 1px #100b1e;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"]:disabled,
+.vrcx-0-sidebar-surface [data-sidebar="menu-button"][aria-disabled="true"] {
+ opacity:.45;
+ pointer-events:none;
+}
+
+/* Layer 1 · subnavigation. */
+.vrcx-0-sidebar-surface [data-sidebar="menu-sub"] {
+ border-left-color:#8e6eab;
+ margin-left:18px;
+}
+.vrcx-0-sidebar-surface [data-sidebar="menu-sub-button"] {
+ color:#dfd0ef;
+ font:14px/20px "WD Pixel CJK",sans-serif;
+ border-radius:0;
+}
+
+/* Layer 2 · collapsed and short-window navigation item geometry. */
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu-button"] { gap:0; justify-content:center; }
+[data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface [data-sidebar="menu-button"] svg { width:16px; height:16px; }
+@media(max-height:760px) {
+ .vrcx-0-sidebar-surface [data-sidebar="menu-button"] { height:34px; padding-top:6px; padding-bottom:6px; }
+}
+
+/* Layer 2 · active-nav pixel cursor from motion-r8, now co-located with its owner. */
+.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active] {
+  position: relative;
+}
+.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: 4px;
+  top: 50%;
+  margin-top: -7px;
+  width: 3px;
+  height: 14px;
+  background: linear-gradient(#fff1f8, #fff1f8);
+  pointer-events: none;
+  animation: r8-nav-cursor 3s steps(4, end) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before { animation: none !important; }
 }
 
 /* SECTION cat-r8-final */
@@ -2281,11 +2282,6 @@ html.reduce-effects .vrcx-0-titlebar button:has(> svg.lucide-bell) > [data-slot=
   border-radius:0;
   background:#16112a;
 }
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="badge"]{
-  border:1px solid #6c5ce0;
-  border-radius:0;
-}
-
 /* Mutual Friends Graph surfaces are the source PageScaffold id=chart overlays w-64/w-72.
    Keep the SVG graph's circle encoding intact; square only the legend swatches and detail-card avatar. */
 .vrcx-0-main-content .vrcx-0-page-scaffold#chart > .relative > div.absolute:is(.w-64,.w-72){
@@ -2990,8 +2986,6 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
 :where([data-slot="field-label"]),:where([data-slot="label"]){color:#e3d2f5}
 :where([data-slot="field-description"]){color:#b9add9}
 :where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *)){color:#ff8fae}
-:where([data-slot="kbd"]){border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;}
-:where([data-slot="kbd-group"]){gap:1px}
 :where([data-slot="input-otp-slot"]){border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;}
 :where([data-slot="input-otp-slot"]:is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
 :where(input[type="time"])::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}
@@ -3133,15 +3127,6 @@ html.reduce-effects [data-slot="sheet-popup"]:has([data-slot="sheet-title"] .luc
   color:#f2ebff;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [data-slot="badge"]{
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#201936;
-  color:#d6b8ef;
-  box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;
-  font-variant-numeric:tabular-nums;
-}
 
 /* Folder rows keep their source padding and hit targets; only the face changes. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
@@ -3482,14 +3467,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 /* R10 G2: intentionally low-specificity additions for main and side-panel surfaces.
    Put scope exclusions inside :where() so existing R9/R10 component partitions win. */
 
-/* Common badges: square pixel labels with semantic variant colors. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-radius:0;letter-spacing:0;box-shadow:inset 1px 1px rgb(253 244 255/.28),inset -1px -1px rgb(22 17 42/.48)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="default"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#6c5ce0;background:#ffb8e6;color:#16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="secondary"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#8f7fe0;background:#332650;color:#f2ebff}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="destructive"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#ff6b8a;background:#3d1b35;color:#ffd9e4}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="outline"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#8c71b0;background:#211a33;color:#e3d2f5}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="ghost"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#6c5ce0;background:#211a33;color:#d6c8ee}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="link"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:transparent;background:transparent;color:#d6b8ef;text-decoration:underline dotted}
 
 /* Pagination links are Button-rendered anchors and retain the source icon/default sizes. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-content"]{gap:2px}
@@ -3512,6 +3489,57 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 /* Dotted separator strokes preserve the primitive's one-pixel dimensions. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="horizontal"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px)}
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="vertical"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:repeating-linear-gradient(180deg,#8c71b0 0 1px,transparent 1px 3px)}
+
+/* SECTION badge */
+/* Badge + Kbd suite owner. Defaults live in jirai-badge; the notification bell
+   remains the unlayered animated exception in badge-r9.css. */
+@layer jirai-badge {
+  /* Tier 1 · Badge labels everywhere, including dialogs and popovers. */
+  :where([data-slot="badge"]:not(button:has(> svg.lucide-bell) > *) ) {
+    border-width:1px;
+    border-style:solid;
+    border-radius:0;
+    letter-spacing:0;
+    background-image:none;
+    box-shadow:inset 1px 1px rgb(253 244 255/.28),inset -1px -1px rgb(22 17 42/.48);
+    transition:none;
+  }
+  :where([data-slot="badge"][data-variant="default"]:not(button:has(> svg.lucide-bell) > *)) { border-color:var(--wd-frame);background-color:var(--jk-key-pink);color:var(--jk-key-ink); }
+  :where([data-slot="badge"][data-variant="secondary"]) { border-color:var(--wd-frame);background-color:#332650;color:var(--jk-key-text); }
+  :where([data-slot="badge"][data-variant="outline"]) { border-color:#8c71b0;background-color:var(--jk-key-dark);color:#e3d2f5; }
+  :where([data-slot="badge"][data-variant="destructive"]) { border-color:var(--jk-key-danger-edge);background-color:var(--jk-key-danger);color:var(--jk-key-danger-text); }
+  :where([data-slot="badge"][data-variant="ghost"]) { border-color:var(--wd-frame);background-color:var(--jk-key-dark);color:#d6c8ee; }
+  :where([data-slot="badge"][data-variant="link"]) { border-color:transparent;background-color:transparent;box-shadow:none;color:#d6b8ef;text-decoration:underline dotted; }
+  :where([data-slot="badge"] > svg) { color:inherit; }
+
+  /* Count labels: same outline identity, but preserve the chosen Favorites dark block. */
+  :where([data-slot="badge"][data-variant="outline"].tabular-nums) {
+    border-color:#6c5ce0;background-color:#201936;color:#d6b8ef;
+    box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* Tier 2 · pink surfaces use the existing bar accent for default badges. */
+  :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) [data-slot="badge"][data-variant="default"]:not(button:has(> svg.lucide-bell) > *) {
+    border-color:var(--jk-bar-ink);background-color:var(--jk-bar-accent);color:var(--jk-bar-accent-text);
+    box-shadow:inset 1px 1px rgb(255 241 248/.55),inset -1px -1px rgb(0 0 0/.45);
+  }
+
+  /* Kbd default · dark key, preserving KbdGroup's 1px key spacing. */
+  :where([data-slot="kbd"]) { border:1px solid var(--wd-frame);border-radius:0;background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised-pink); }
+  :where([data-slot="kbd-group"]) { gap:1px; }
+}
+
+/* Kbd tier 2 · light cap on pink chrome/selected rows. The selected sidebar
+   navigation sequence key is an intentional exception and stays dark. */
+:is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) [data-slot="kbd"],
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] kbd[data-slot='kbd'] {
+  border-color:var(--jk-chrome-edge);background-color:var(--jk-r4-keycap);color:var(--jk-chrome-ink);
+  box-shadow:inset 1px 1px #fff,inset -1px -1px var(--jk-bevel-pink-lo);
+}
+[data-slot="sidebar-menu-button"][data-active] [data-slot="kbd"] {
+  border-color:var(--wd-frame);background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised-pink);
+}
 
 /* SECTION data-surfaces-r10 */
 /* R10-G4 · pixel language for dense data, lists and page surfaces.

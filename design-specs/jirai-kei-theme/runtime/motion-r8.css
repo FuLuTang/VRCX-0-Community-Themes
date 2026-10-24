@@ -30,24 +30,6 @@
   animation: r8-lace-flow 4.8s steps(2, end) infinite;
 }
 
-/* 3 · Pixel cursor at the active nav item's left inset. Only the free pseudo-element blinks. */
-.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active] {
-  position: relative;
-}
-.vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  left: 4px;
-  top: 50%;
-  margin-top: -7px;
-  width: 3px;
-  height: 14px;
-  background: linear-gradient(#fff1f8, #fff1f8);
-  pointer-events: none;
-  animation: r8-nav-cursor 3s steps(4, end) infinite;
-}
-
 /* 4 · On hover only, a 3px corner pixel presses down by one integer px.
    Confirmed free on AppTitleBar's window-button selector; button hit geometry is unchanged. */
 .vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0'] {
@@ -77,7 +59,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before,
-  .vrcx-0-sidebar-surface [data-sidebar='menu-button'][data-active]::before,
   .vrcx-0-titlebar[data-app-titlebar] button[class~='w-9'][class~='rounded-none'][class~='border-0']::after,
   .vrcx-0-sidebar-surface [data-sidebar='content']::after { 
     animation: none !important;

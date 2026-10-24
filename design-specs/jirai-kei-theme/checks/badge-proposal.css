@@ -1,0 +1,99 @@
+/* Badge + Kbd proposal — preview comparison (right-hand pane, .jk-proposal). The two-id boost scopes
+   these sample rules over the shared runtime CSS; runtime/badge.css uses the ordinary component layer.
+   Top decision cards below are isolated preview-only alternatives.
+
+   Nothing new is drawn. Every value below already exists in the current theme:
+   - badges: the "square pixel label" of buttons-badges-r10.css:5–11 (square, 1px frame, opaque face, light
+     .28/.48 bevel — one step lighter than a button's .72 bevel, so a label never reads as pressable);
+     today it only covers .vrcx-0-main-content / .vrcx-0-side-panel, here it covers every [data-slot=badge].
+   - count badges: the three current looks (transparent in side-panel group headers, #211a33 chip, darker
+     #201936 chip in favorites) converge on the existing darker Favorites face.
+   - on pink surfaces (titlebar, statusbar, selected rows) a default (pink) badge would vanish: it takes the
+     bar accent, exactly like Button tier 2 (--jk-bar-accent).
+   - bell corner badge: badge-r9.css is kept untouched (special case).
+   - kbd: the two current key caps, unchanged; dark key by default, light key on pink surfaces.
+   - log levels: preserve the current all-pink appearance (B2-A); no utility-class override.
+   - counts: use the darker Favorites outline block (B1-C); selected-nav sequence Kbd stays dark (B4-A). */
+
+:is(#p#p,.jk-proposal){
+  --jk-badge-bevel:inset 1px 1px rgb(253 244 255/.28),inset -1px -1px rgb(22 17 42/.48);
+  --jk-badge-outline-edge:#8c71b0; --jk-badge-outline-text:#e3d2f5;
+  --jk-badge-secondary:#332650; --jk-badge-secondary-edge:var(--wd-frame);
+}
+
+/* ---------- tier 1 · every badge except the bell corner badge ---------- */
+:is(#p#p,.jk-proposal) [data-slot="badge"]:where(:not(button:has(> svg.lucide-bell) > *)){
+  border-width:1px;border-style:solid;border-radius:0;letter-spacing:0;
+  background-image:none;box-shadow:var(--jk-badge-bevel);transition:none;
+}
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="default"]:where(:not(button:has(> svg.lucide-bell) > *)){border-color:var(--wd-frame);background-color:var(--jk-key-pink);color:var(--jk-key-ink)}
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="secondary"]{border-color:var(--jk-badge-secondary-edge);background-color:var(--jk-badge-secondary);color:var(--jk-key-text)}
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="outline"]{border-color:var(--jk-badge-outline-edge);background-color:var(--jk-key-dark);color:var(--jk-badge-outline-text)}
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="destructive"]{border-color:var(--jk-key-danger-edge);background-color:var(--jk-key-danger);color:var(--jk-key-danger-text)}
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="ghost"]{border-color:var(--wd-frame);background-color:var(--jk-key-dark);color:#d6c8ee}
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="link"]{border-color:transparent;background-color:transparent;box-shadow:none;color:#d6b8ef;text-decoration:underline dotted}
+:is(#p#p,.jk-proposal) [data-slot="badge"] > svg{color:inherit}
+
+/* ---------- tier 2 · pink surfaces: the pink face takes the bar accent (= Button tier 2) ---------- */
+:is(#p#p,.jk-proposal) :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) [data-slot="badge"][data-variant="default"]:where(:not(button:has(> svg.lucide-bell) > *)){
+  border-color:var(--jk-bar-ink);background-color:var(--jk-bar-accent);color:var(--jk-bar-accent-text);
+  box-shadow:inset 1px 1px rgb(255 241 248/.55),inset -1px -1px rgb(0 0 0/.45);
+}
+
+/* B1-C · count badges use the existing darker Favorites face (#201936 / .12 bevel). */
+:is(#p#p,.jk-proposal) [data-slot="badge"][data-variant="outline"].tabular-nums{border-color:#6c5ce0;background-color:#201936;color:#d6b8ef;box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a}
+
+/* ---------- kbd · tier 1 dark key (fields-toolbar-r10.css:6, unchanged) ---------- */
+:is(#p#p,.jk-proposal) [data-slot="kbd"]{
+  border:1px solid var(--wd-frame);border-radius:0;
+  background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised-pink);
+}
+/* ---------- kbd · tier 2 light key on pink surfaces (window-chrome.css R4-2 face, unchanged) ---------- */
+/* Pink chrome and selected rows use light caps; the selected-nav sequence key is the explicit dark-key exception below. */
+:is(#p#p,.jk-proposal) :is(.vrcx-0-titlebar,.vrcx-0-statusbar,[class~="bg-(--state-selected-surface)"]) [data-slot="kbd"]{
+  border-color:var(--jk-chrome-edge);background-color:var(--jk-r4-keycap);color:var(--jk-chrome-ink);
+  box-shadow:inset 1px 1px #fff,inset -1px -1px var(--jk-bevel-pink-lo);
+}
+
+/* B4-A exception: selected navigation's sequence key stays dark, as in the current theme. */
+:is(#p#p#p,.jk-proposal) .demo-row-compare[data-ctx="kbd-nav"] [data-slot="kbd"]{border-color:var(--wd-frame);background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised-pink)}
+
+/* Decision controls are preview chrome; the specimens reuse existing theme paints. */
+.badge-choices{margin-bottom:32px;color:#e3d2f5;font-size:14px;line-height:1.6}
+.badge-choices h1{font-size:26px;font-weight:700;color:#ffb8e6;margin:0 0 8px}
+.badge-choices p{margin:8px 0 16px}
+.choice-question{min-width:0;min-height:330px;margin:18px 0;padding:16px;border:1px solid #8c71b0;background:#211a33}
+.choice-question legend{padding:0 8px;font-size:18px;font-weight:700;color:#ffb8e6}
+.choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.choice-card{display:block;min-width:0;padding:12px;border:1px solid #8c71b0;background:#201936;cursor:pointer}
+.choice-card[data-selected=true]{border-color:#ffb8e6;box-shadow:inset 0 0 0 1px #ffb8e6}
+.choice-card:focus-within{outline:2px solid #fff2fb;outline-offset:3px}
+.choice-card-heading{display:flex;align-items:flex-start;gap:8px;min-height:56px;font-size:14px}
+.choice-card-heading input{appearance:auto;accent-color:#b0305f;width:16px;height:16px;margin-top:4px;flex:none}
+.choice-card-heading strong{flex:1}
+.choice-recommended{font-size:12px;color:#ffb8e6;white-space:nowrap}
+.choice-samples{pointer-events:none;display:grid;gap:12px;min-height:150px}
+.choice-example small{display:block;font-size:12px;color:#e3d2f5;margin-bottom:5px}
+.choice-surface{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px;min-height:46px;position:static!important;width:auto!important;height:auto!important}
+.choice-samples .demo-pane{min-width:0;overflow:hidden;padding:10px;background:#201936}
+.choice-log{display:grid;gap:6px}
+.choice-log .demo-pane{min-height:38px}
+.choice-summary{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:16px;border:1px solid #8c71b0}
+.choice-summary input{min-width:260px;flex:1;background:#211a33;color:#e3d2f5;border:1px solid #8c71b0;padding:8px;font-family:monospace}
+.choice-summary button{padding:8px 16px;background:#ffb8e6;color:#21132d;border:1px solid #8c71b0;cursor:pointer}
+@media(max-width:640px){.choice-grid{grid-template-columns:1fr}.choice-question{padding:10px}.choice-summary input{min-width:0;width:100%;flex-basis:100%}}
+/* B1: three already-existing count treatments, same real Badge. */
+:is(#p#p#p,.choice-B1-A) [data-slot=badge]{background:transparent;border-color:transparent;color:#e3d2f5}
+:is(#p#p#p,.choice-B1-C) [data-slot=badge]{background:#201936;border-color:#6c5ce0;color:#d6b8ef;box-shadow:inset 1px 1px rgb(253 244 255/.12),inset -1px -1px #16112a}
+/* B2: A restores the current all-pink rule; C adds existing secondary purple to Info. */
+:is(#p#p#p,.choice-B2-A) [data-slot=badge]{border-color:var(--wd-frame);background:var(--jk-key-pink);color:var(--jk-key-ink)}
+:is(#p#p#p,.choice-B2-C) [data-slot=badge][class~="dark:bg-sky-950"]{border-color:var(--jk-badge-secondary-edge);background:var(--jk-badge-secondary);color:var(--jk-key-text)}
+/* B3: leave the existing pink badge unchanged, even on pink. */
+:is(#p#p#p,.choice-B3-A) [data-slot=badge]{border-color:var(--wd-frame);background:var(--jk-key-pink);color:var(--jk-key-ink);box-shadow:var(--jk-badge-bevel)}
+/* B4: existing deep keycap on both surfaces. */
+:is(#p#p#p,.choice-B4-B) [data-slot=kbd]{border-color:var(--wd-frame);background:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised-pink)}
+/* B5: retain real span structure; borrow only the existing badge recipes. */
+:is(#p#p#p,.choice-B5-B) [data-jk-target]{border:1px solid var(--jk-badge-secondary-edge);border-radius:0;background:var(--jk-badge-secondary);color:var(--jk-key-text);box-shadow:var(--jk-badge-bevel);clip-path:none;background-image:none}
+:is(#p#p#p,.choice-B5-B) .choice-lang-label [data-jk-target]{border-color:var(--jk-badge-outline-edge);background:var(--jk-key-dark);color:var(--jk-badge-outline-text)}
+:is(#p#p#p,.choice-B5-B) [data-jk-target]::before,:is(#p#p#p,.choice-B5-B) [data-jk-target]::after{display:none}
+

@@ -129,20 +129,8 @@
     padding-inline: 7px;
 }
 
-/* R4-2 · Ctrl / K caps: light face, 1px ink frame, bevel, ink text. The app
-   painted them bg-background/45 (dark on dark). height 14px→16px centres the
-   14px line box inside the frame, still well inside the 24px control. */
-.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] kbd[data-slot='kbd'] {
-    height: 16px;
-    min-width: 16px;
-    padding-inline: 3px;
-    border: 1px solid var(--jk-chrome-edge);
-    border-radius: 0;
-    background-color: var(--jk-r4-keycap);
-    color: var(--jk-chrome-ink);
-    box-shadow: inset 1px 1px 0 #ffffff,
-        inset -1px -1px 0 var(--jk-chrome-bevel-dark);
-}
+/* R4-2 geometry only · the shared Kbd owner supplies the light face/bevel. */
+.vrcx-0-titlebar[data-app-titlebar] button.vrcx-0-toolbar-control[data-vrcx-0-control='toolbar'] kbd[data-slot='kbd'] { height:16px;min-width:16px;padding-inline:3px; }
 
 /* R4-3 · R8 owns the plate/help face and bevel; retain its unique 7px inset. */
 .vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'] {
@@ -166,8 +154,4 @@
     content: '';
     position: absolute;
     pointer-events: none;
-}
-/* Build badge inside the help trigger follows the square pixel language. */
-.vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger'] [data-slot='badge'] {
-    border-radius: 0;
 }

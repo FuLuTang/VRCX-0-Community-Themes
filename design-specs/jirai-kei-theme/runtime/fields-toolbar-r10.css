@@ -3,8 +3,6 @@
 :where([data-slot="field-label"]),:where([data-slot="label"]){color:#e3d2f5}
 :where([data-slot="field-description"]){color:#b9add9}
 :where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *)){color:#ff8fae}
-:where([data-slot="kbd"]){border:1px solid #6c5ce0;border-radius:0;background:#211a33;color:#f2ebff;box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;}
-:where([data-slot="kbd-group"]){gap:1px}
 :where([data-slot="input-otp-slot"]){border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;}
 :where([data-slot="input-otp-slot"]:is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
 :where(input[type="time"])::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}

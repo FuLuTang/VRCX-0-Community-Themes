@@ -1,14 +1,6 @@
 /* R10 G2: intentionally low-specificity additions for main and side-panel surfaces.
    Put scope exclusions inside :where() so existing R9/R10 component partitions win. */
 
-/* Common badges: square pixel labels with semantic variant colors. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-radius:0;letter-spacing:0;box-shadow:inset 1px 1px rgb(253 244 255/.28),inset -1px -1px rgb(22 17 42/.48)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="default"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#6c5ce0;background:#ffb8e6;color:#16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="secondary"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#8f7fe0;background:#332650;color:#f2ebff}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="destructive"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#ff6b8a;background:#3d1b35;color:#ffd9e4}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="outline"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#8c71b0;background:#211a33;color:#e3d2f5}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="ghost"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:#6c5ce0;background:#211a33;color:#d6c8ee}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="badge"][data-variant="link"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not(.vrcx-0-titlebar *)){border-color:transparent;background:transparent;color:#d6b8ef;text-decoration:underline dotted}
 
 /* Pagination links are Button-rendered anchors and retain the source icon/default sizes. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-content"]{gap:2px}
