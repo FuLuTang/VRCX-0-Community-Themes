@@ -194,39 +194,6 @@
   z-index:2;
 }
 
-/* The checked tile selector is intentionally square and pink; its 16px box and hit expansion stay intact. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"]{
-  width:16px;
-  height:16px;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background-color:#201936;
-  color:#16112a;
-  box-shadow:inset 1px 1px rgb(253 244 255/.18),inset -1px -1px #16112a;
-  transition:none;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"]:is([data-checked],[aria-checked="true"]){
-  border-color:#6c5ce0;
-  background-color:#ffb8e6;
-  color:#16112a;
-  box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"]:focus-visible{
-  outline:2px solid #ff7fcf;
-  outline-offset:1px;
-}
-
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [data-slot="checkbox"] [data-slot="checkbox-indicator"]{
-  color:#16112a;
-  transition:none;
-}
-
 /* Keep FavoriteCardView's source top-left placement; its own selection/hover states hide the pill. */
 .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
   [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]){
@@ -269,14 +236,14 @@
 /* No motion is introduced by this layer; keep hover/selected state changes static for both reducers. */
 @media (prefers-reduced-motion:reduce){
   .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-    :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"],[data-slot="checkbox"]){
+    :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"]){
     animation:none!important;
     transition:none!important;
   }
 }
 
 html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"],[data-slot="checkbox"]){
+  :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"]){
   animation:none!important;
   transition:none!important;
 }

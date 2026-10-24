@@ -56,9 +56,8 @@
  background-color:transparent; background-image:none;
 }
 .vrcx-0-side-panel { background-image:var(--wd-bg-cloud); background-repeat:no-repeat; background-position:right 20px bottom 24px; background-size:96px 48px; }
-[data-slot="card"] { border-color:var(--wd-frame); border-radius:2px; }
-/* No baked strip behind header text: SVG default dimensions had enlarged the stitch tile. */
-[data-slot="card-header"] { background-image:none; border-bottom:1px dotted #70518f; }
+/* Card face and header skin are owned by card.css. Keep only the no-image guard. */
+[data-slot="card-header"] { background-image:none; }
 
 [data-slot="dialog-content"] {
  border:1px solid var(--wd-frame); border-radius:2px;
@@ -67,7 +66,7 @@
 }
 [data-slot="dialog-overlay"] { background-color:rgb(36 18 66 / .62); }
 [data-slot="dialog-title"] { color:var(--wd-text); }
-[data-slot="select-trigger"] { border-radius:2px; } /* [data-slot="input"] radius: owned by the generic field rule in fields-toolbar-r10.css (login-r8 keeps 2px) */
+
 /* Tabs paint (incl. the entity-dialog tabs-row heart) lives in tabs.css. */
 /* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] { position:relative; }

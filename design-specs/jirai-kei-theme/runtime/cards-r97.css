@@ -10,11 +10,9 @@
  --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
 }
 /* Rail lace (tabs-list clip/::after/padding-bottom) lives in tabs.css; the --jk-r97-lace* variables stay above. */
-/* Tools cards: same face as Settings (settings-pixel.css:74-78). */
-[data-tools-section] [data-slot=card]{position:relative;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
-[data-tools-section] [data-slot=card]::after{content:"";position:absolute;inset:0;z-index:2;border:1px solid #6c5ce0;pointer-events:none}
-[data-tools-section] [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
-[data-tools-section] [data-slot=card-content]{border-radius:0}
+/* Shared collapsible-card frame/title bar is owned by card.css. The card-header
+   trigger charm, hover, and lace embellishments below remain here. */
+/* Keep the rounded-bottom child clipping inside Tools cards; Card is only its context. */
 [data-tools-section] [data-slot=card-content] .rounded-b-xl{border-radius:0}
 [data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
 [data-tools-section] [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}

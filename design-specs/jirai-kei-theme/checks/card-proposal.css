@@ -1,0 +1,69 @@
+/* Review only. Existing media-tile skin (data-surfaces-r10.css:185–209),
+   promoted to shared Card face. No Button / Field / Checkbox declarations.
+   Preserve sm/default spacing and the existing collapsible title-bar/lace.
+   Login explicitly opts out. No new interaction semantics on passive cards. */
+:is(#p#p,.jk-proposal) [data-slot="card"]:not([data-vrcx-0-surface="login-page"] *) {
+  /* --jk-panel-edge is a 4-colour list: only border-color accepts it (inside the border shorthand it
+     invalidated the whole declaration, so the card lost its frame entirely). */
+  border-width:1px !important;
+  border-style:solid !important;
+  border-color:var(--jk-panel-edge) !important;
+  border-radius:0 !important;
+  background-color:var(--wd-window) !important;
+  color:var(--wd-text) !important;
+  box-shadow:var(--jk-panel-raised) !important;
+  /* Keep existing pixel-corner cuts on collapsible cards; they are not smooth radii. */
+}
+:is(#p#p,.jk-proposal) [data-slot="card"]:not([data-vrcx-0-surface="login-page"] *) > [data-slot="card-header"] {
+  border-radius:0 !important;
+}
+/* Existing media states only: never turn a settings group into a large button. */
+:is(#p#p,.jk-proposal) [data-slot="card"][class~="group/tile"]:hover {
+  border-color:var(--wd-pink) !important; background-color:var(--wd-raised) !important;
+}
+:is(#p#p,.jk-proposal) [data-slot="card"][class~="group/tile"][class~="ring-2"] {
+  border-color:var(--wd-pink) !important; background-color:var(--wd-select) !important;
+}
+:is(#p#p,.jk-proposal) [data-slot="card"][class~="group/tile"]:focus-visible {
+  outline:2px dashed var(--wd-pink) !important; outline-offset:-2px !important;
+}
+/* Collapsible group cards (settings + tools share SettingsCard). Their header and body are opaque, so the
+   panel bevel cannot live on the card (children paint over inset shadows): it is redrawn on top as a
+   pointer-transparent overlay, the same two rings as every other panel — outer frame (border, --jk-panel-edge),
+   inner light ring #e3d2f5 (from --jk-panel-raised). The header's own white top line is dropped so the top
+   edge is not three lines deep.
+   Pixel corners are a real 1px stair: the old 2x2 square notch left the corner open with no outline.
+   The clip removes the three outer pixels of each corner; ::after paints the stair pixel in the frame colour
+   (top-left light, the other three dark, as on a Win98 frame). It also replaces the tools overlay frame. */
+:is(#p#p,.jk-proposal) [data-slot="collapsible"] > [data-slot="card"]{
+  position:relative !important;
+  box-shadow:none !important;
+  clip-path:polygon(0 2px,1px 2px,1px 1px,2px 1px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 1px,calc(100% - 1px) 1px,calc(100% - 1px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 1px) calc(100% - 2px),calc(100% - 1px) calc(100% - 1px),calc(100% - 2px) calc(100% - 1px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 1px),1px calc(100% - 1px),1px calc(100% - 2px),0 calc(100% - 2px)) !important;
+}
+:is(#p#p,.jk-proposal) [data-slot="collapsible"] > [data-slot="card"] > [data-slot="card-header"]{box-shadow:none !important}
+:is(#p#p,.jk-proposal) [data-slot="collapsible"] > [data-slot="card"]::before,
+:is(#p#p,.jk-proposal) [data-slot="collapsible"] > [data-slot="card"]::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  border:0 !important;
+  clip-path:none !important;
+  background:none;
+}
+:is(#p#p,.jk-proposal) [data-slot="collapsible"] > [data-slot="card"]::before{
+  z-index:2 !important;
+  /* only the light inner ring: #4b3a63 is lighter than this dark body, so as a bottom/right ring it read
+     as a second highlight; the dark outer frame alone carries the shadow side */
+  box-shadow:inset 1px 1px #e3d2f5 !important;
+}
+/* the overlays sit in the padding box, so its 0/100% corners are the card's stair pixels */
+:is(#p#p,.jk-proposal) [data-slot="collapsible"] > [data-slot="card"]::after{
+  z-index:3 !important;
+  box-shadow:none !important;
+  background:
+    linear-gradient(#a294c8,#a294c8) 0 0/1px 1px no-repeat,
+    linear-gradient(#100b1e,#100b1e) 100% 0/1px 1px no-repeat,
+    linear-gradient(#100b1e,#100b1e) 0 100%/1px 1px no-repeat,
+    linear-gradient(#100b1e,#100b1e) 100% 100%/1px 1px no-repeat !important;
+}

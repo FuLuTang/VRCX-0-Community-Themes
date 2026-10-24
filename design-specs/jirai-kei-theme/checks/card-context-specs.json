@@ -1,0 +1,9 @@
+[
+ {"id":"catalog","fixture":"community-themes","select":"[data-slot=card]"},
+ {"id":"catalog-themes","fixture":"themes","select":"[data-slot=card]"},
+ {"id":"settings","fixture":"settings","select":"[data-slot=card]"},
+ {"id":"tools","fixture":"tools","select":"[data-slot=card]"},
+ {"id":"gallery","fixture":"tools_gallery","select":"[data-slot=card]"},
+ {"id":"inventory","fixture":"tools_inventory","select":"[data-slot=card]"},
+ {"id":"dashboard","fixture":"dashboard_usr_00000000-0000-0000-0000-000000000000","select":"[data-slot=card]"}
+]

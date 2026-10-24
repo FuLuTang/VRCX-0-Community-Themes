@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1024742,
+  "cssBytes": 1019310,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -25,7 +25,7 @@
     },
     {
       "name": "runtime",
-      "bytes": 11242
+      "bytes": 10963
     },
     {
       "name": "window-chrome",
@@ -49,7 +49,7 @@
     },
     {
       "name": "settings",
-      "bytes": 6379
+      "bytes": 5669
     },
     {
       "name": "pixel-controls",
@@ -101,7 +101,7 @@
     },
     {
       "name": "login-r8",
-      "bytes": 7031
+      "bytes": 6106
     },
     {
       "name": "user-dialog-r9",
@@ -113,7 +113,7 @@
     },
     {
       "name": "controls-r9",
-      "bytes": 6137
+      "bytes": 5784
     },
     {
       "name": "popups-r9",
@@ -121,7 +121,7 @@
     },
     {
       "name": "tools-ui-r9",
-      "bytes": 3622
+      "bytes": 460
     },
     {
       "name": "avatars-status-r9",
@@ -137,7 +137,7 @@
     },
     {
       "name": "form-controls-r9",
-      "bytes": 5818
+      "bytes": 488
     },
     {
       "name": "dialogs-r9",
@@ -145,7 +145,7 @@
     },
     {
       "name": "fields-toolbar-r10",
-      "bytes": 8907
+      "bytes": 1056
     },
     {
       "name": "overlays-r10",
@@ -153,11 +153,11 @@
     },
     {
       "name": "favorites-r9",
-      "bytes": 14905
+      "bytes": 13144
     },
     {
       "name": "browse-history-r9",
-      "bytes": 6648
+      "bytes": 5650
     },
     {
       "name": "buttons-badges-r10",
@@ -165,7 +165,7 @@
     },
     {
       "name": "data-surfaces-r10",
-      "bytes": 21560
+      "bytes": 20462
     },
     {
       "name": "banner-frame-r96",
@@ -193,7 +193,11 @@
     },
     {
       "name": "cards-r97",
-      "bytes": 3981
+      "bytes": 3679
+    },
+    {
+      "name": "card",
+      "bytes": 3194
     },
     {
       "name": "tabs",
@@ -230,6 +234,14 @@
     {
       "name": "button",
       "bytes": 11516
+    },
+    {
+      "name": "fields",
+      "bytes": 7046
+    },
+    {
+      "name": "choice",
+      "bytes": 7033
     }
   ],
   "previewBytes": 24252,

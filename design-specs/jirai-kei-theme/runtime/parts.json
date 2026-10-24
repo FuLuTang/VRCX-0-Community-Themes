@@ -49,6 +49,7 @@
   {"name":"dialog-header-r97","file":"dialog-header-r97.css"},
   {"name":"loader-r97","file":"loader-r97.css"},
   {"name":"cards-r97","file":"cards-r97.css"},
+   {"name":"card","file":"card.css","note":"Owns Card defaults and modifiers; immediately after cards-r97, the last legacy card owner. The jirai-card layer intentionally yields to unlayered login/entity exceptions."},
   {"name":"tabs","file":"tabs.css","note":"Owns every Tabs skin rule. Placed right after cards-r97, the last fragment that used to hold Tabs rules, so moved rules only move later. The @layer jirai-tabs block is the only named layer, so its priority is position-independent."},
   {"name":"toggle-group","file":"toggle-group.css","note":"Owns ToggleGroup default skin; after the prior toolbar rule owners; isolated in jirai-toggle-group layer."},
   {"name":"splitter-r97","file":"splitter-r97.css"},
@@ -57,6 +58,8 @@
   {"name":"nav-phone-r10","file":"nav-phone-r10.css"},
   {"name":"portal-button-roles-b073-b100","file":"portal-button-roles-b073-b100.css","note":"Shadow sections (this and the next two) once existed only in the built artifact; the part name IS the marker text, never shorten the descriptions after the colon."},
   {"name":"entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.","file":"entity-button-roles-b054-b072.css"},
-  {"name":"button","file":"button.css","note":"Owns the Button default skin and its three modifier levels. Last entry on purpose: @layer jirai-button is declared after every other layer, and the button rules that must keep winning (menus, login page, window chrome, side-panel +) stay unlayered before it."}
+  {"name":"button","file":"button.css","note":"Owns the Button default skin and its three modifier levels. Last named layer before the choice layer."},
+  {"name":"fields","file":"fields.css","note":"Unlayered field-suite owner after button.css: field-scoped rules must override the final jirai-button layer without !important."},
+   {"name":"choice","file":"choice.css","note":"Owns checkbox, radio, native range, and Base UI slider appearance; last so component state rules are consolidated after their legacy owners. Switch remains in pixel-controls.css."}
  ]
 }

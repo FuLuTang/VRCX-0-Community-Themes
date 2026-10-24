@@ -1,0 +1,74 @@
+/* Card suite owner. Layer 1 is the shared default; the settings/tools
+   collapsible frame and media tile states are additive modifiers. Keep this in
+   jirai-card so unlayered login and entity-dialog exceptions retain precedence. */
+@layer jirai-card {
+  /* Tier 1 · component default. Keep the four-sided bevel token in border-color
+     (not border shorthand: --jk-panel-edge is a four-colour list). */
+  :where([data-slot="card"]:not([data-vrcx-0-surface="login-page"] *)) {
+    border-width:1px;
+    border-style:solid;
+    border-color:var(--jk-panel-edge);
+    border-radius:0;
+    background-color:var(--wd-window);
+    color:var(--wd-text);
+    box-shadow:var(--jk-panel-raised);
+  }
+  :where([data-slot="card-header"]) { border-radius:0; border-bottom:1px dotted #70518f; }
+  /* the app also rounds the body (rounded-t-xl on the collapsible body): square, like the frame */
+  :where([data-slot="card-content"]) { border-radius:0; }
+
+  /* Tier 2a · existing clickable MediaAssetTile / MyGroupCard marker. */
+  [data-slot="card"][class~="group/tile"] {
+    transition:border-color 100ms steps(2,end),background-color 100ms steps(2,end),box-shadow 100ms steps(2,end);
+  }
+  [data-slot="card"][class~="group/tile"]:hover {
+    border-color:var(--wd-pink);
+    background-color:var(--wd-raised);
+  }
+  [data-slot="card"][class~="group/tile"][class~="ring-2"] {
+    --tw-ring-color:var(--wd-square);
+    border-color:var(--wd-pink);
+    background-color:var(--wd-select);
+    color:var(--wd-text);
+  }
+  [data-slot="card"][class~="group/tile"]:focus-visible {
+    outline:2px dashed var(--wd-pink);
+    outline-offset:-2px;
+  }
+
+  /* Tier 2b · SettingsCard in settings and tools (shared semantic structure).
+     Keep title-band/charm/lace; replace only the outer frame treatment. */
+  [data-slot="collapsible"] > [data-slot="card"] {
+    position:relative;
+    box-shadow:none;
+    clip-path:polygon(0 2px,1px 2px,1px 1px,2px 1px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 1px,calc(100% - 1px) 1px,calc(100% - 1px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 1px) calc(100% - 2px),calc(100% - 1px) calc(100% - 1px),calc(100% - 2px) calc(100% - 1px),calc(100% - 2px) 100%,2px 100%,2px calc(100% - 1px),1px calc(100% - 1px),1px calc(100% - 2px),0 calc(100% - 2px));
+  }
+  [data-slot="collapsible"] > [data-slot="card"] > [data-slot="card-header"] {
+    background-color:#2f2552;
+    border-bottom:1px solid #16112a;
+    box-shadow:none;
+  }
+  [data-slot="collapsible"] > [data-slot="card"]::before,
+  [data-slot="collapsible"] > [data-slot="card"]::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    border:0;
+    clip-path:none;
+    background:none;
+  }
+  [data-slot="collapsible"] > [data-slot="card"]::before {
+    z-index:2;
+    box-shadow:inset 1px 1px #e3d2f5;
+  }
+  [data-slot="collapsible"] > [data-slot="card"]::after {
+    z-index:3;
+    box-shadow:none;
+    background:
+      linear-gradient(#a294c8,#a294c8) 0 0/1px 1px no-repeat,
+      linear-gradient(#100b1e,#100b1e) 100% 0/1px 1px no-repeat,
+      linear-gradient(#100b1e,#100b1e) 0 100%/1px 1px no-repeat,
+      linear-gradient(#100b1e,#100b1e) 100% 100%/1px 1px no-repeat;
+  }
+}

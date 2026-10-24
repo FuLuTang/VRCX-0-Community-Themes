@@ -40,14 +40,8 @@
 
 /* R9+ Community Themes catalog: identify the Base UI Tabs root by its first panel's
    ThemeCatalogCard preview structure (Base UI exposes panel data-index, not the value prop). */
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"]{
-  overflow:hidden;
-  border:1px solid #6c5ce0;
-  border-radius:0;
-  background:#201936;
-  color:#f2ebff;
-  box-shadow:inset 1px 1px rgb(253 244 255/.14),inset -1px -1px #16112a,2px 2px 0 #100b1e;
-}
+/* Theme-catalog Card face is now the shared default in card.css. The targeted
+   inner preview surface and controls below remain catalog-specific. */
 .vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs"]:has([data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] [data-slot="card-content"] .bg-muted.overflow-hidden.border > img[loading="lazy"]) [data-slot="tabs-content"][data-index="0"] [data-slot="card"][data-size="sm"] > [data-slot="card-content"] > .bg-muted.overflow-hidden.border{
   border-color:#6c5ce0;
   border-radius:0;

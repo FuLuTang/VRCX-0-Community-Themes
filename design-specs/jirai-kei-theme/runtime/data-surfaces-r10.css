@@ -182,7 +182,8 @@
 /* TileShell consumers owned by G4: MediaAssetTile (gallery/inventory) and MyGroupCard only.
    Favorites TileShell and .object-row consumers (favorites/browse-history) remain untouched;
    My Avatars has its separate controls-r9 selector and is intentionally not matched here. */
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"],
+/* The Button half of the former mixed TileShell selectors remains here; Card's
+   matching skin and states are now owned by card.css. */
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"] {
   border-radius: 0;
   border-color: var(--jk-panel-edge);
@@ -191,23 +192,9 @@
   box-shadow: var(--jk-panel-raised);
   transition: border-color 100ms steps(2, end), background-color 100ms steps(2, end), box-shadow 100ms steps(2, end);
 }
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"]:hover,
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"]:hover {
-  border-color: var(--wd-pink);
-  background-color: var(--wd-raised);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"][class~="ring-2"],
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"][class~="ring-2"] {
-  --tw-ring-color: var(--wd-square);
-  border-color: var(--wd-pink);
-  background-color: var(--wd-select);
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) [data-slot="card"][data-size="sm"][class~="group/tile"][class~="rounded-object"]:focus-visible,
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"]:focus-visible {
-  outline: 2px dashed var(--wd-pink);
-  outline-offset: -2px;
-}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"]:hover { border-color: var(--wd-pink); background-color: var(--wd-raised); }
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"][class~="ring-2"] { --tw-ring-color: var(--wd-square); border-color: var(--wd-pink); background-color: var(--wd-select); color: var(--wd-text); }
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"]:focus-visible { outline: 2px dashed var(--wd-pink); outline-offset: -2px; }
 
 /* Feed columns: square, opaque Windose panel + compact title band. */
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold) .group\/feed-column {
@@ -250,21 +237,8 @@
   background-color: var(--wd-select);
 }
 
-/* Friend location cards and their revealed action tray; no card padding or density changes. */
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] {
-  border-radius: 0;
-  border-color: var(--jk-panel-edge);
-  background-color: var(--wd-window);
-  box-shadow: var(--jk-panel-raised);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"]:hover,
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"]:focus-visible {
-  border-color: var(--wd-pink);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"]:focus-visible {
-  outline: 2px dashed var(--wd-pink);
-  outline-offset: -3px;
-}
+/* Friend-view card base is now the shared Card default; its child inset frame
+   below remains a distinct content ornament. */
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] > [data-dim-exempt] {
   border: 1px solid var(--wd-frame);
   border-radius: 0;

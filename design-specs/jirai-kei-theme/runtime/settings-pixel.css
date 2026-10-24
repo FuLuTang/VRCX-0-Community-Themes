@@ -46,13 +46,8 @@
 
 /* Settings rail geometry, shared face and lace all live in tabs.css. */
 
-/* --------------------------------------------------------------------------
-   (6)②③ Settings cards: pixel window title bar + bow charm + lace, and
-   stair-stepped corners instead of right angles. SettingsCard.tsx:50-97.
-   -------------------------------------------------------------------------- */
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card]{border:1px solid #6c5ce0;border-radius:0;background-color:#201936;box-shadow:none;clip-path:var(--jk-px-cut)}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header]{background-color:#2f2552;border-bottom:1px solid #16112a;box-shadow:inset 0 1px #fdf4ff}
-.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-content]{border-radius:0}
+/* SettingsCard ornament and shared collapsible-card frame are owned by card.css.
+   The trigger's bow charm and lace below remain this fragment's embellishments. */
 .vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
 .vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}
 /* 24x16 bow charm at its native 1:1 size. */

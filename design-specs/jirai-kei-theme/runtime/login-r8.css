@@ -142,36 +142,8 @@
   clip-path: var(--wd-avatar-cut);
 }
 
-/* Recessed inputs; no changes to source height, padding, type, or focus behavior. */
-[data-vrcx-0-surface="login-page"] [data-slot="input"] {
-  border: 1px solid #8c71b0;
-  border-radius: 2px;
-  background-color: #16112a;
-  color: #f2ebff;
-  box-shadow: inset 2px 2px 0 rgb(0 0 0 / 28%), inset -1px -1px 0 #3d305e;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="input"]::placeholder {
-  color: #c5b5e1;
-  opacity: 1;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="input"]:focus-visible {
-  border-color: #ff7fcf;
-  border-radius: 0;
-  outline: 2px solid #ff7fcf;
-  outline-offset: 1px;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="input"][aria-invalid="true"] {
-  border-color: #ff5a83;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="input"][aria-invalid="true"]:focus-visible {
-  border-color: #ff5a83;
-  outline-color: #ff5a83;
-}
 [data-vrcx-0-surface="login-page"] [data-slot="field-error"] {
   color: #ff9eb5;
-}
-[data-vrcx-0-surface="login-page"] [data-slot="checkbox"] {
-  border-radius: 0;
 }
 @media (prefers-reduced-motion: reduce) {
   [data-vrcx-0-surface="login-page"].vrcx-0-main-shell::before,
