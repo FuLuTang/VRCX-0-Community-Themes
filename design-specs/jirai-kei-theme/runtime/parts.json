@@ -31,7 +31,6 @@
   {"name":"badge-r9","file":"badge-r9.css"},
   {"name":"controls-r9","file":"controls-r9.css"},
   {"name":"popups-r9","file":"popups-r9.css"},
-  {"name":"tools-ui-r9","file":"tools-ui-r9.css"},
   {"name":"avatars-status-r9","file":"avatars-status-r9.css"},
   {"name":"brand-heart-r9","file":"brand-heart-r9.css"},
   {"name":"loader-r9","file":"loader-r9.css"},
@@ -58,8 +57,6 @@
   {"name":"language-badges-r98","file":"language-badges-r98.css"},
   {"name":"status-icons-r10","file":"status-icons-r10.css"},
   {"name":"nav-phone-r10","file":"nav-phone-r10.css"},
-  {"name":"portal-button-roles-b073-b100","file":"portal-button-roles-b073-b100.css","note":"Shadow sections (this and the next two) once existed only in the built artifact; the part name IS the marker text, never shorten the descriptions after the colon."},
-  {"name":"entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.","file":"entity-button-roles-b054-b072.css"},
   {"name":"button","file":"button.css","note":"Owns the Button default skin and its three modifier levels. Last named layer before the choice layer."},
   {"name":"fields","file":"fields.css","note":"Unlayered field-suite owner after button.css: field-scoped rules must override the final jirai-button layer without !important."},
    {"name":"choice","file":"choice.css","note":"Owns checkbox, radio, native range, and Base UI slider appearance; last so component state rules are consolidated after their legacy owners. Switch remains in pixel-controls.css."}

@@ -1,6 +1,0 @@
-/* R9+ ToolsPageContent only. Source anchor: ToolsPageContent.tsx renders a PageScaffold
-   id="chart", direct PageToolbar > ToolbarSearch (data-vrcx-0-control="toolbar"), and a
-   vertical TabsList under its scroll body. Other #chart roots are excluded unless they expose
-   that exact toolbar control. This is not the app navigation rail or Settings vertical Tabs. */
-
-/* Tools category rail geometry lives in tabs.css with the shared default Tabs paint. */

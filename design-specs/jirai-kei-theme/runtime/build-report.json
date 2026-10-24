@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1019412,
+  "cssBytes": 1018662,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -124,10 +124,6 @@
       "bytes": 13405
     },
     {
-      "name": "tools-ui-r9",
-      "bytes": 460
-    },
-    {
       "name": "avatars-status-r9",
       "bytes": 11588
     },
@@ -232,16 +228,8 @@
       "bytes": 16543
     },
     {
-      "name": "portal-button-roles-b073-b100",
-      "bytes": 417
-    },
-    {
-      "name": "entity-button-roles-b054-b072: portal button states use existing app attributes/classes only.",
-      "bytes": 478
-    },
-    {
       "name": "button",
-      "bytes": 11516
+      "bytes": 12302
     },
     {
       "name": "fields",

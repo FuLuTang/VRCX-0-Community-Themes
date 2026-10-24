@@ -2465,14 +2465,6 @@ body:has(.vrcx-0-statusbar [data-slot="tooltip-trigger"][data-popup-open])
 /* ToolsPageContent is ToolbarSearch + vertical TabsList, NOT a dropdown.
    Independent tools-ui-r9.css owns that rail. Popup CSS does not style it. */
 
-/* SECTION tools-ui-r9 */
-/* R9+ ToolsPageContent only. Source anchor: ToolsPageContent.tsx renders a PageScaffold
-   id="chart", direct PageToolbar > ToolbarSearch (data-vrcx-0-control="toolbar"), and a
-   vertical TabsList under its scroll body. Other #chart roots are excluded unless they expose
-   that exact toolbar control. This is not the app navigation rail or Settings vertical Tabs. */
-
-/* Tools category rail geometry lives in tabs.css with the shared default Tabs paint. */
-
 /* SECTION avatars-status-r9 */
 /* R9+ user profile/activity/favorite friend faces and semantic user-presence lamps only.
    Do NOT target [data-slot=avatar], generic img, world/group media, mixed search cards,
@@ -4669,20 +4661,6 @@ html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=l
 }
 html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
 
-/* SECTION portal-button-roles-b073-b100 */
-/* Real responsibilities, not B IDs: portals are ordinary surfaces too. Entity/owner
-   roots retain their paint; nested independent portals use their own root. Render
-   props may replace data-slot (tooltip/menu trigger), so route by button+variant.
-   Width/height/padding, reveal opacity, selected borders/rings and joined borders
-   remain source-owned. Native CSS nesting keeps this patch within the 1MiB cap. */
-/* SECTION entity-button-roles-b054-b072: portal button states use existing app attributes/classes only. */
-:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]){
-  & button:not(.entity-dialog *,.owner-dialog *):is([data-slot="collapsible-trigger"],.h-auto.justify-between):not([data-size^="icon"]){
-    border-radius:0;box-shadow:none;
-    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
-  }
-}
-
 /* SECTION button */
 /* ==========================================================================
    Button · the single owner of the Button skin (see
@@ -4695,6 +4673,16 @@ html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sid
    component fragments (menus, login page, window chrome) stay in front of it;
    tiers 2-4 are modifiers of that layer, not separate skins.
    ========================================================================== */
+
+/* Tier 3 (exception) · collapsible triggers and full-width split rows inside ordinary dialogs, sheets and
+   popovers (not entity/owner dialogs): square, no shadow, pink focus ring. Unlayered on purpose, as before
+   (moved from entity-button-roles-b054-b072.css, which sat directly before this file). */
+:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]){
+  & button:not(.entity-dialog *,.owner-dialog *):is([data-slot="collapsible-trigger"],.h-auto.justify-between):not([data-size^="icon"]){
+    border-radius:0;box-shadow:none;
+    &:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}
+  }
+}
 
 @layer jirai-button {
   /* ------------------------------------------------------------------------
