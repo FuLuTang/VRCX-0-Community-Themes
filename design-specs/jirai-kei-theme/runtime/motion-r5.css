@@ -15,12 +15,12 @@
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface::after { display:none; }
 .vrcx-0-sidebar-surface::after { content:""; position:absolute; right:8px; bottom:104px; width:48px; height:72px; background-image:var(--r5-ribbon-pendant); background-size:48px 72px; background-repeat:no-repeat; pointer-events:none; animation:r5-charm-swing 4.8s steps(3,end) infinite; }
 [data-slot="progress-indicator"] { animation:r5-progress-flow 1.8s steps(5,end) infinite; }
-[data-slot="dialog-content"][data-open] { animation:r5-dialog-step-in 120ms steps(4,end) both; }
+/* Dialog suite owns open motion in dialog.css. */
 
 @media (prefers-reduced-motion:reduce) {
  
  
  .vrcx-0-sidebar-surface::after,
  
- [data-slot="progress-indicator"],[data-slot="dialog-content"][data-open] { animation:none !important; }
+ [data-slot="progress-indicator"] { animation:none !important; }
 }

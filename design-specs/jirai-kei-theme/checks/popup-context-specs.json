@@ -1,0 +1,18 @@
+[
+ {"id":"dd-content","fixture":"feed-account-menu","select":"[data-slot=dropdown-menu-content]","index":0},
+ {"id":"dd-item","fixture":"feed-account-menu","select":"[data-slot=dropdown-menu-item]","index":0},
+ {"id":"dd-check-on","fixture":"feed-account-menu","select":"[data-slot=dropdown-menu-checkbox-item][data-checked]","index":0},
+ {"id":"dd-check-off","fixture":"feed-account-menu","select":"[data-slot=dropdown-menu-checkbox-item][data-unchecked]","index":0},
+ {"id":"dd-separator","fixture":"feed-account-menu","select":"[data-slot=dropdown-menu-separator]","index":0},
+ {"id":"dd-sub-trigger","fixture":"feed-account-menu","select":"[data-slot=dropdown-menu-sub-trigger]","index":0},
+ {"id":"dd-check-hl","fixture":"tools-actions-menu","select":"[data-slot=dropdown-menu-checkbox-item]","index":0},
+ {"id":"dd-check-plain","fixture":"tools-actions-menu","select":"[data-slot=dropdown-menu-checkbox-item]","index":1},
+ {"id":"ctx-content","fixture":"feed-notification-context-menu","select":"[data-slot=context-menu-content]","index":0},
+ {"id":"ctx-item","fixture":"feed-notification-context-menu","select":"[data-slot=context-menu-item]","index":0},
+ {"id":"select-content","fixture":"favorites-worlds-select-listbox","select":"[data-slot=select-content]","index":0},
+ {"id":"select-item","fixture":"favorites-worlds-select-listbox","select":"[data-slot=select-item]","index":0},
+ {"id":"select-item-2","fixture":"favorites-worlds-select-listbox","select":"[data-slot=select-item]","index":1},
+ {"id":"popover-content","fixture":"browse-history-time-range-popover","select":"[data-slot=popover-content]","index":0},
+ {"id":"hovercard-content","fixture":"feed-avatar-hover-card","select":"[data-slot=hover-card-content]","index":0},
+ {"id":"tooltip-content","fixture":"feed-quick-search-tooltip","select":"[data-slot=tooltip-content]","index":0}
+]

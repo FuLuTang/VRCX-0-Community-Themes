@@ -1,0 +1,64 @@
+/* Dialog suite owner. Defaults cover titled dialogs, alerts and sheets; entity/owner dialogs,
+   notification-center sheets and sr-only-title surfaces retain their unlayered exceptions.
+   Kept unlayered: these declarations replace legacy unlayered owners and must beat the app's
+   component defaults without !important; @layer would lose to all application unlayered CSS. */
+:root {
+  --r9-dialog-face:#211a33; --r9-dialog-ink:#16112a; --r9-dialog-pink:#f2c6e8;
+  --r9-dialog-pink-edge:#d97fc6; --r9-dialog-indigo:#3a22c8; --r9-dialog-frame:#6c5ce0;
+  --r9-dialog-inner:#f2ebff; --r9-dialog-mint:#8ee6dd; --r9-dialog-lace:var(--r8-lace-tile);
+}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"]):not(.entity-dialog,.owner-dialog):not(:has([data-slot="sheet-title"] .lucide-bell)):has(> :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"],[data-slot="sheet-header"]):not(.sr-only)) {
+  --r9-dialog-inset:1rem; color:var(--r9-dialog-inner); background-color:var(--r9-dialog-face);
+  background-image:linear-gradient(#ff7fcf,#ff7fcf),linear-gradient(var(--r9-dialog-mint),var(--r9-dialog-mint));
+  background-repeat:no-repeat; background-size:18px 5px,100% 5px; background-position:bottom left,bottom center;
+  border:1px solid var(--r9-dialog-frame); border-radius:0!important; box-shadow:inset 0 0 0 1px var(--r9-dialog-inner),4px 4px 0 #100b1e;
+}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"])[class~="p-0"] { --r9-dialog-inset:0px; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"])[class~="p-2"] { --r9-dialog-inset:.5rem; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"])[class~="p-3"] { --r9-dialog-inset:.75rem; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"])[class~="p-5"] { --r9-dialog-inset:1.25rem; }
+/* Titled dialogs/alerts and non-notification sheets share one header + pink title strip. The sheet side
+   carries the same :not(.entity-dialog,.owner-dialog) so both halves have equal specificity (0,4,0). */
+:is(:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog):has(> :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only)),[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)):not(.entity-dialog,.owner-dialog)) > :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"],[data-slot="sheet-header"]) {
+  position:relative; display:flex; flex-direction:column; align-items:stretch; gap:.5rem;
+  margin-block-start:calc(-1 * var(--r9-dialog-inset,1rem)); margin-inline:calc(-1 * var(--r9-dialog-inset,1rem));
+  padding-inline:var(--r9-dialog-inset,1rem); min-width:0;
+  & > :is([data-slot="dialog-title"],[data-slot="alert-dialog-title"],[data-slot="sheet-title"]) {
+  position:relative; z-index:1; display:flex; min-height:30px; align-items:center; gap:8px; margin-inline:calc(-1 * var(--r9-dialog-inset,1rem)); margin-block:0;
+  padding-block:5px; padding-inline:calc(var(--r9-dialog-inset,1rem) + 9px) calc(var(--r9-dialog-inset,1rem) + 48px);
+  border-bottom:1px solid var(--r9-dialog-frame); border-radius:0; background:var(--r9-dialog-pink); color:var(--r9-dialog-ink);
+  font-family:var(--wd-body-font-family,system-ui,sans-serif); font-size:.875rem; font-weight:700; line-height:1.25; text-align:left; text-wrap:pretty;
+    &::before { content:""; display:block; width:8px; height:8px; flex:0 0 8px; background:var(--r9-dialog-indigo); box-shadow:1px 1px 0 #b86ba4; }
+  }
+}
+/* Sheet header uses a static flow row, not the dialog's negative-inset title wrapper. */
+[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)):not(.entity-dialog,.owner-dialog) > [data-slot="sheet-header"] { position:static; margin:0; padding:0; gap:0;
+  & > [data-slot="sheet-title"] { margin:0; padding:5px 48px 5px 9px; } }
+/* Window close key matches the titlebar destructive key face and magenta hover. */
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog):has(> :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only)) > [data-slot="dialog-close"],
+[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)) > [data-slot="button"][data-variant="ghost"][class*="absolute"] {
+  position:absolute!important; top:4px!important; right:4px!important; z-index:2; display:inline-flex; width:22px!important; min-width:22px; height:22px!important; min-height:22px; align-items:center; justify-content:center; padding:0!important;
+  border:1px solid #21132d!important; border-radius:0!important; background:#f8c6e3!important; color:#21132d!important;
+  box-shadow:inset 1px 1px 0 #fff1f8,inset -1px -1px 0 #b86ba4!important; opacity:1;
+}
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog) > [data-slot="dialog-close"] svg,
+[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)) > [data-slot="button"][data-variant="ghost"][class*="absolute"] svg { width:12px; height:12px; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog) > [data-slot="dialog-close"]:hover:not(:disabled),
+[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)) > [data-slot="button"][data-variant="ghost"][class*="absolute"]:hover:not(:disabled) { background:#b0305f!important; color:#fff1f8!important; box-shadow:inset 1px 1px 0 rgb(255 241 248/.55),inset -1px -1px 0 rgb(72 12 39/.5)!important; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog) > [data-slot="dialog-close"]:focus-visible,
+[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)) > [data-slot="button"][data-variant="ghost"][class*="absolute"]:focus-visible { outline:2px solid #6fe3d3; outline-offset:1px; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog):has(> :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only)) > :is([data-slot="dialog-footer"],[data-slot="alert-dialog-footer"]) { position:relative; border-top-color:transparent; border-radius:0!important; background:transparent!important;
+  &::before { content:""; position:absolute; top:2px; right:0; left:0; height:8px; background-color:transparent; background-image:var(--r9-dialog-lace); background-position:left center; background-repeat:repeat-x; background-size:20px 8px; image-rendering:pixelated; pointer-events:none; } }
+:is([data-slot="dialog-overlay"],[data-slot="alert-dialog-overlay"],[data-slot="sheet-backdrop"]) { background-color:rgb(36 18 66/.62)!important; }
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"])[data-open]:not(.entity-dialog,.owner-dialog) { animation:r5-dialog-step-in 120ms steps(4,end) both!important; transition:none!important;
+  @media (prefers-reduced-motion:reduce) { animation:none!important; transition:none!important; }
+  html.reduce-effects & { animation:none!important; transition:none!important; } }
+/* R9.7 flex-row dialog headers with actions: additive header layout, merged here. */
+[data-slot$="dialog-content"]:not(.entity-dialog,.owner-dialog) > [data-slot$="dialog-header"]:not(.sr-only):is(.flex-row,:has(>:not([data-slot$="title"],[data-slot$="description"]) button)) { flex-direction:row; justify-content:space-between; gap:8px; min-height:30px; padding:0 calc(var(--r9-dialog-inset,1rem) + 4px) 0 0; border-bottom:1px solid var(--r9-dialog-frame); background:var(--r9-dialog-pink); color:var(--r9-dialog-ink);
+  & > [data-slot$="title"] { flex:1 1 auto; min-width:0; margin:0; padding-inline:calc(var(--r9-dialog-inset,1rem) + 9px) 0; border:0; background:none; }
+  & > :not([data-slot$="title"]) {
+    & :is(button,.text-muted-foreground) { border-radius:0; color:var(--r9-dialog-ink); }
+    & .size-2.rounded-full { border-radius:1px; box-shadow:0 0 0 1px var(--r9-dialog-ink); }
+    & button:is(:hover,:focus-visible,[aria-expanded=true],.bg-card) { background:var(--r9-dialog-ink); color:var(--r9-dialog-pink); }
+  }
+}

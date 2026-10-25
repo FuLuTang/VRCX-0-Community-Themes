@@ -1,0 +1,87 @@
+/* Popup suite owner. Defaults are layered so unlayered structural exceptions can
+   still win. Important declarations are limited to values that must beat host utilities. */
+@layer jirai-popup {
+  /* Tier 1A · shared popup shell, including menubar (formerly duplicated). */
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"],[data-slot="hover-card-content"]) {
+    --radius:0px;
+    background:#211a33 !important;
+    color:#f2ebff;
+    opacity:1;
+    border:1px solid #6c5ce0;
+    border-radius:0 !important;
+    box-shadow:inset 1px 1px 0 #69557c,inset -1px -1px 0 #7a3f6d,3px 3px 0 #100b1e !important;
+    backdrop-filter:none;
+    animation:none !important;
+    transition:none !important;
+  }
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="select-content"],[data-slot="combobox-content"])::before { backdrop-filter:none;border-radius:0; }
+
+  /* Tier 1B · menu/select/combobox item states share one rule family. */
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) {
+    & :is([data-slot$="menu-item"],[data-slot$="menu-checkbox-item"],[data-slot$="menu-radio-item"],[data-slot$="menu-sub-trigger"],[data-slot="menubar-item"],[data-slot="menubar-checkbox-item"],[data-slot="menubar-radio-item"],[data-slot="menubar-sub-trigger"],[data-slot="select-item"],[data-slot="combobox-item"],[data-slot="button"][data-variant="ghost"][class~="h-auto"][class~="justify-start"][class~="p-0"]) {
+      background:transparent;
+      color:#f2ebff;
+      border-radius:0;
+      animation:none !important;
+      transition:none !important;
+      &:is(:hover,:focus-visible,[data-highlighted],[data-popup-open]):not([data-disabled],:disabled,[aria-disabled="true"],[data-variant="destructive"]) {
+        background:var(--jk-key-pink) !important;
+        color:var(--jk-key-ink) !important;
+        clip-path:none !important;
+        box-shadow:var(--jk-raised-pink) !important;
+      }
+      &:is([data-disabled],[aria-disabled="true"],:disabled) .text-muted-foreground { color:#b9add9 !important; }
+      &:is(:focus-visible,[data-highlighted],[data-popup-open],:hover) :is(.text-muted-foreground,[data-slot$="menu-shortcut"],[data-slot="menubar-shortcut"]) { color:#2a1d6e !important; }
+    }
+    /* Any disabled descendant (menu items and e.g. calendar days in a popover): readable, not selected-looking. */
+    & :is([data-disabled],[aria-disabled="true"],:disabled) {
+      color:#b9add9 !important;background:transparent !important;opacity:1;clip-path:none;box-shadow:none;
+    }
+    & :is([data-slot$="menu-label"],[data-slot="menubar-label"],[data-slot="select-label"],[data-slot="combobox-label"]) {
+      color:#ffd9ee;
+      background:linear-gradient(#ffb8e6,#ffb8e6) 7px center/7px 7px no-repeat #302344;
+      padding-left:22px;border-bottom:1px solid #6c5ce0;font-weight:600;
+    }
+    & [data-slot$="menu-shortcut"],[data-slot="menubar-shortcut"] { color:#b9add9; }
+    & :is([data-slot$="menu-separator"],[data-slot="menubar-separator"],[data-slot="select-separator"],[data-slot="combobox-separator"]) { background:var(--wd-frame) !important;border:0 !important;height:1px; }
+  }
+
+  /* Tier 1C · ordinary tooltip inverted; stack exception is below. */
+  [data-slot="tooltip-content"]:not(:has(> div.flex.flex-col.gap-1.text-xs)):not(.flex.flex-col.gap-1.text-xs) {
+    --radius:0px;box-sizing:border-box;padding:6px 12px;overflow-wrap:anywhere;
+    background:var(--jk-key-pink) !important;color:var(--jk-key-ink) !important;opacity:1;
+    border:1px solid var(--wd-frame) !important;border-radius:0;
+    box-shadow:var(--jk-raised-pink),2px 2px 0 var(--wd-desktop) !important;
+    backdrop-filter:none;animation:none !important;transition:none !important;
+    & > div.rotate-45 { background:var(--jk-key-pink) !important; }
+  }
+
+  /* Tier 2 · destructive base label remains readable outside its active state. */
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-variant="destructive"] { color:#ff7fae !important; }
+
+  /* Tier 3 · status-bar stacked tooltip retains its dark face and 2px shadow. */
+  body:has(.vrcx-0-statusbar [data-slot="tooltip-trigger"][data-popup-open]) [data-slot="tooltip-content"]:is(:has(> div.flex.flex-col.gap-1.text-xs),.flex.flex-col.gap-1.text-xs) {
+    --radius:0px;padding:6px 8px;overflow-wrap:anywhere;background:#211a33 !important;color:#f2ebff;opacity:1;
+    border:1px solid #6c5ce0;border-radius:0 !important;box-shadow:inset 1px 1px 0 #69557c,2px 2px 0 #100b1e;
+    backdrop-filter:none;animation:none !important;transition:none !important;
+    & > div[class~="rotate-45"] { display:none; }
+  }
+}
+
+/* Same host utilities layer as Tailwind's destructive text utility; higher specificity wins. */
+@layer utilities {
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-variant="destructive"]:is(:hover,:focus-visible,[data-highlighted]):not([data-disabled],:disabled,[aria-disabled="true"]) {
+    background:var(--jk-key-danger) !important;color:var(--jk-key-danger-text) !important;clip-path:none !important;
+    box-shadow:inset 1px 1px var(--jk-key-pink),inset -1px -1px var(--jk-key-ink) !important;
+    & * { color:var(--jk-key-danger-text) !important; }
+  }
+}
+
+/* Menu-contained avatars belong to avatars-status-r9.css and are intentionally untouched. */
+[data-slot="menu-positioner"] { --radius:0px; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar-image"] { animation:none !important;transition:none !important; }
+:is([data-slot="popover-content"] [data-slot="scroll-area"] button:is([data-slot="button"],[data-slot="tooltip-trigger"])[data-variant="ghost"] span[class~="mr-2.5"][class~="size-9"][class~="rounded-full"][class~="border"]) { border-radius:0;border-width:0;clip-path:var(--wd-avatar-cut-sm);box-shadow:none;outline:none; }
+@media (prefers-reduced-motion: reduce) {
+  :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"],[data-slot="hover-card-content"],[data-slot="tooltip-content"]) { animation:none !important;transition:none !important; }
+}
+html.reduce-effects :is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="menubar-content"],[data-slot="menubar-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"],[data-slot="hover-card-content"],[data-slot="tooltip-content"]) { animation:none !important;transition:none !important; }

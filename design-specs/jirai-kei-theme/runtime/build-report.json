@@ -1,5 +1,5 @@
 {
-  "cssBytes": 927194,
+  "cssBytes": 922023,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -25,7 +25,7 @@
     },
     {
       "name": "runtime",
-      "bytes": 10576
+      "bytes": 10406
     },
     {
       "name": "window-chrome",
@@ -61,7 +61,7 @@
     },
     {
       "name": "motion",
-      "bytes": 1869
+      "bytes": 1783
     },
     {
       "name": "navigation-r7",
@@ -121,7 +121,7 @@
     },
     {
       "name": "popups-r9",
-      "bytes": 13405
+      "bytes": 2668
     },
     {
       "name": "avatars-status-r9",
@@ -136,12 +136,16 @@
       "bytes": 29738
     },
     {
-      "name": "dialogs-r9",
-      "bytes": 7421
+      "name": "overlays-r10",
+      "bytes": 2391
     },
     {
-      "name": "overlays-r10",
-      "bytes": 4176
+      "name": "popup",
+      "bytes": 7358
+    },
+    {
+      "name": "dialog",
+      "bytes": 8188
     },
     {
       "name": "favorites-r9",
@@ -196,10 +200,6 @@
       "bytes": 1472
     },
     {
-      "name": "dialog-header-r97",
-      "bytes": 2170
-    },
-    {
       "name": "loader-r97",
       "bytes": 1662
     },
@@ -237,7 +237,7 @@
     },
     {
       "name": "button",
-      "bytes": 12302
+      "bytes": 12274
     },
     {
       "name": "fields",

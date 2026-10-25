@@ -1,0 +1,8 @@
+[
+ {
+  "id": "sheet-popup",
+  "fixture": "charts-mutual-settings-sheet",
+  "select": "[data-slot=sheet-popup]",
+  "index": 0
+ }
+]

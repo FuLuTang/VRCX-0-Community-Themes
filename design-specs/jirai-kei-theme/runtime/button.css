@@ -13,7 +13,7 @@
 /* Tier 3 (exception) · collapsible triggers and full-width split rows inside ordinary dialogs, sheets and
    popovers (not entity/owner dialogs): square, no shadow, pink focus ring. Unlayered on purpose, as before
    (moved from entity-button-roles-b054-b072.css, which sat directly before this file). */
-:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="sheet-content"],[data-slot="popover-content"],[data-slot="hover-card-content"]){
+:where([data-slot="dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="alert-dialog-content"]:not(.entity-dialog,.owner-dialog),[data-slot="popover-content"],[data-slot="hover-card-content"]){
   & button:not(.entity-dialog *,.owner-dialog *):is([data-slot="collapsible-trigger"],.h-auto.justify-between):not([data-size^="icon"]){
     border-radius:0;box-shadow:none;
     &:focus-visible{outline:2px solid #ff7fcf;outline-offset:1px}

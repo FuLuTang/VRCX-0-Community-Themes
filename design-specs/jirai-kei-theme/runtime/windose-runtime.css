@@ -52,12 +52,7 @@
 /* Card face and header skin are owned by card.css. Keep only the no-image guard. */
 [data-slot="card-header"] { background-image:none; }
 
-[data-slot="dialog-content"] {
- border:1px solid var(--wd-frame); border-radius:2px;
- box-shadow:0 0 0 1px #3d305e,5px 5px 0 rgb(11 7 24 / .55);
- background-color:var(--wd-window);
-}
-[data-slot="dialog-overlay"] { background-color:rgb(36 18 66 / .62); }
+/* Dialog frames and overlays are owned by dialog.css. Keep title text defaults. */
 [data-slot="dialog-title"] { color:var(--wd-text); }
 
 /* Tabs paint (incl. the entity-dialog tabs-row heart) lives in tabs.css. */
