@@ -1,8 +1,7 @@
 /* Miscellaneous primitives retained as independently owned sections. */
 
 /* Separators: unified 1px solid Windose frame; dropdown separators stay with popups. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="horizontal"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not([data-slot="toggle-group"] *)) { background:var(--wd-frame); }
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="vertical"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not([data-slot="toggle-group"] *)) { background:var(--wd-frame); }
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not([data-slot="toggle-group"] *)) { background:var(--wd-frame); }
 
 /* Pagination links: migrated without changing their existing scope or paint. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-content"]{gap:2px}
@@ -25,8 +24,3 @@
   color: var(--wd-text); font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif; font-synthesis: none; text-wrap: pretty;
 }
 :where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] { color: var(--wd-muted); text-wrap: pretty; }
-
-/* Browse-history date-rule separator, unified with the shared 1px solid rule. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-align="inline-end"] svg.lucide-calendar-range):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-slot="tabs-list"] > [data-slot="tabs-tab"]:nth-of-type(5)):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"] svg.lucide-refresh-cw):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"] svg.lucide-ellipsis):has(> [data-slot="tabs"] > [data-slot="tabs-content"] .object-row__context-action) > [data-slot="tabs"] > [data-slot="tabs-content"] .absolute > .flex.h-full.items-center.gap-3.px-1 > [data-slot="separator"][data-orientation="horizontal"] {
- height:1px; flex:1 1 0%; border:0; background:var(--wd-frame); opacity:1;
-}

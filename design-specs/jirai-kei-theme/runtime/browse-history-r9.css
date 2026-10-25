@@ -9,8 +9,10 @@
     }
   }
 
-  /* Date rows retain their source geometry; only the separator becomes dotted. */
+  /* Date rows retain their source geometry. The date rule is the shared solid separator (misc.css);
+     it only keeps its border cleared and full opacity here. */
   & > [data-slot="tabs"] > [data-slot="tabs-content"]{
+    .absolute > .flex.h-full.items-center.gap-3.px-1 > [data-slot="separator"][data-orientation="horizontal"]{border:0;opacity:1}
     .absolute > .flex.h-full.items-center.gap-3.px-1 > h2.text-muted-foreground{
       display:flex;
       flex:none;

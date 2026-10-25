@@ -48,7 +48,26 @@ for(const p of JSON.parse(await read(path.join(here,'parts.json'))).parts){
  if(p.generated){if(!(p.generated in generated))throw Error('Unknown generated part: '+p.generated);parts.push([p.name,generated[p.generated]]);}
  else parts.push([p.name,await read(path.join(here,p.file))]);
 }
-const css='/* LOCAL PREVIEW DRAFT: Windose × Jirai. Not release validated. */\n'+parts.map(([n,s])=>'/* SECTION '+n+' */\n'+s).join('\n');
+// Source comments are documentation only: drop them from the artifact. Each comment is replaced by the
+// newlines it contained, so line numbers inside a SECTION still equal the source file's (tools/rule-owners
+// reports file:line from them). The SECTION markers themselves stay: tools split the artifact on them.
+function stripComments(src,name){
+ let o='',i=0;
+ while(i<src.length){
+  const c=src[i];
+  if(c==='"'||c==="'"){let j=i+1;while(j<src.length&&src[j]!==c){if(src[j]==='\\')j++;j++;}o+=src.slice(i,j+1);i=j+1;continue;}
+  if(c==='/'&&src[i+1]==='*'){
+   const j=src.indexOf('*/',i+2);if(j<0)throw Error('Unclosed comment in '+name);
+   const nl=(src.slice(i,j).match(/\n/g)||[]).length;
+   // A comment is not whitespace in CSS: refuse to turn one that glues two tokens together into a line break.
+   if(nl&&/\S/.test(o.slice(-1))&&/\S/.test(src[j+2]||''))throw Error('Multi-line comment between tokens in '+name+' at '+i);
+   o+='\n'.repeat(nl);i=j+2;continue;
+  }
+  o+=c;i++;
+ }
+ return o;
+}
+const css='/* LOCAL PREVIEW DRAFT: Windose × Jirai. Not release validated. */\n'+parts.map(([n,s])=>'/* SECTION '+n+' */\n'+stripComments(s,n)).join('\n');
 const bytes=Buffer.byteLength(css);if(bytes>1048576)throw Error('CSS exceeds 1 MiB');
 if(/@import\b/.test(css))throw Error('Unexpected @import');
 await fs.writeFile(path.join(out,'theme.css'),css);
