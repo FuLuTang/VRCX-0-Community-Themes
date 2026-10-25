@@ -17,46 +17,44 @@
   --vrcx-0-table-row-focus:var(--wd-pink);
   background-color:transparent;
   background-image:none;
+  & :is(.vrcx-0-table-header,[data-slot="table-header"]),
+  & [data-slot="table-head"] {
+    color:var(--jk-bar-ink);
+    background-color:var(--jk-bar-face);
+    border-bottom-color:var(--jk-bar-accent);
+  }
+  & [data-slot="table-header"] > tr {
+    border-bottom-style:dotted;
+    border-bottom-color:var(--jk-bar-accent);
+  }
+  & [data-slot="table-head"] :is(button,[role="button"],svg) { color:var(--jk-bar-ink); }
+  & [data-slot="table-footer"] {
+    border-top-style:dotted;
+    border-top-color:#70518f;
+    border-radius:0;
+    background-color:var(--wd-raised);
+    color:var(--wd-text);
+  }
+  & [data-slot="table-caption"] { color:var(--wd-muted); }
+  & :is([data-slot="table-row"],[data-vrcx-0-table-row]) {
+    &:hover:where(:not([data-state="selected"]):not([data-state="expanded"]):not(:has([aria-expanded="true"]))) {
+      background-color:#302650;
+    }
+    &[data-state="selected"] {
+      background-color:var(--jk-bar-face);
+      background-image:none;
+      color:var(--jk-bar-ink);
+      box-shadow:var(--jk-raised-pink);
+      & > [data-slot="table-cell"] { color:var(--jk-bar-ink); }
+      & a { color:var(--jk-bar-ink);text-decoration:underline;text-underline-offset:2px; }
+      & [data-slot="badge"][data-variant="default"] {
+        background-color:var(--jk-bar-accent);color:var(--jk-bar-accent-text);border-color:var(--jk-bar-ink);
+      }
+    }
+    &:has([aria-expanded="true"]),
+    &[data-state="expanded"] { background-color:#332650; }
+    &:focus-visible { outline:2px dashed var(--wd-pink);outline-offset:-2px; }
+  }
 }
-:is(.vrcx-0-data-table,.app-data-table) :is(.vrcx-0-table-header,[data-slot="table-header"]) {
-  color:var(--jk-bar-ink);
-  background-color:var(--jk-bar-face);
-  border-bottom-color:var(--jk-bar-accent);
-}
-:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-header"] > tr {
-  border-bottom-style:dotted;
-  border-bottom-color:var(--jk-bar-accent);
-}
-:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-head"] {
-  color:var(--jk-bar-ink);
-  background-color:var(--jk-bar-face);
-  border-bottom-color:var(--jk-bar-accent);
-}
-:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-head"] :is(button,[role="button"],svg) { color:var(--jk-bar-ink); }
-:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-footer"] {
-  border-top-style:dotted;
-  border-top-color:#70518f;
-  border-radius:0;
-  background-color:var(--wd-raised);
-  color:var(--wd-text);
-}
-:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-caption"] { color:var(--wd-muted); }
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row]):hover:where(:not([data-state="selected"]):not([data-state="expanded"]):not(:has([aria-expanded="true"]))) {
-  background-color:#302650;
-}
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] {
-  background-color:var(--jk-bar-face);
-  background-image:none;
-  color:var(--jk-bar-ink);
-  box-shadow:var(--jk-raised-pink);
-}
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] > [data-slot="table-cell"] { color:var(--jk-bar-ink); }
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] a { color:var(--jk-bar-ink);text-decoration:underline;text-underline-offset:2px; }
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] [data-slot="badge"][data-variant="default"] {
-  background-color:var(--jk-bar-accent);color:var(--jk-bar-accent-text);border-color:var(--jk-bar-ink);
-}
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row]):has([aria-expanded="true"]),
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="expanded"] { background-color:#332650; }
-:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row]):focus-visible { outline:2px dashed var(--wd-pink);outline-offset:-2px; }
 /* Header keeps the app's original pixel font sizing and synthesis settings. */
 .vrcx-0-table-header { font-family:"WD Pixel CJK",var(--vrcx-app-font-family,system-ui),sans-serif;font-synthesis:none;font-size:12px; }

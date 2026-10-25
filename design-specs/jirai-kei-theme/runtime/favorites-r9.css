@@ -8,8 +8,9 @@
 
 /* The splitter ID + handle slot are a page-unique anchor, not a global TileShell rule. */
 /* Rail section headings: reuse Windose window colors, with a tiny pixel marker. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] > .flex.h-full.min-h-0.flex-col.gap-3.overflow-auto.p-2
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"]) {
+& [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] {
+& > .flex.h-full.min-h-0.flex-col.gap-3.overflow-auto.p-2
   > .flex.flex-col.gap-1 > .mb-1.flex.items-center.justify-between.text-sm.font-semibold > span.flex.min-w-0.items-center.gap-1\.5::before{
   content:"";
   display:block;
@@ -21,20 +22,17 @@
   image-rendering:pixelated;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] > .flex.h-full.min-h-0.flex-col.gap-3.overflow-auto.p-2
+& > .flex.h-full.min-h-0.flex-col.gap-3.overflow-auto.p-2
   > .flex.flex-col.gap-1 > .mb-1.flex.items-center.justify-between.text-sm.font-semibold{
   color:#f2ebff;
 }
 
 
 /* Folder rows keep their source padding and hit targets; only the face changes. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]{
+& [class~="group/rail-row"]{
   transition:none;
 }
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"]:not([class~="bg-(--state-selected-surface)"]){
+& [class~="group/rail-row"]:not([class~="bg-(--state-selected-surface)"]){
   border-radius:0;
   background-color:transparent;
   color:#f2ebff;
@@ -42,14 +40,12 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"] :is([class~="text-muted-foreground"],[class~="tabular-nums"]){
+& [class~="group/rail-row"][class~="bg-(--state-selected-surface)"] > [data-slot="button"] :is([class~="text-muted-foreground"],[class~="tabular-nums"]){
   color:#16112a;
 }
 
 /* The source's label flexes/truncates; its numeric count remains a fixed trailing item. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"] > span[class~="truncate"]{
+& [class~="group/rail-row"] > [data-slot="button"] > span[class~="truncate"]{
   display:block;
   flex:1 1 auto;
   min-width:0;
@@ -58,15 +54,13 @@
   white-space:nowrap;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"] > span[class~="tabular-nums"]{
+& [class~="group/rail-row"] > [data-slot="button"] > span[class~="tabular-nums"]{
   flex:0 0 auto;
   white-space:nowrap;
   font-variant-numeric:tabular-nums;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] > [data-slot="button"]:focus-visible{
+& [class~="group/rail-row"] > [data-slot="button"]:focus-visible{
   outline:2px solid #ff7fcf;
   outline-offset:-2px;
   z-index:2;
@@ -74,8 +68,7 @@
 
 
 /* Source GroupMenu is inside a shrink-0/pr-1 wrapper; keep its icon-xs hit box square. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] [class~="group/rail-row"] button[data-size="icon-xs"]{
+& [class~="group/rail-row"] button[data-size="icon-xs"]{
   width:24px;
   height:24px;
   min-width:24px;
@@ -84,8 +77,7 @@
 }
 
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]{
+& button[class~="border-dashed"]{
   border:1px dotted #6c5ce0;
   border-radius:0;
   background:#201936;
@@ -94,40 +86,39 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]:is(:hover,:focus-visible){
+& button[class~="border-dashed"]:is(:hover,:focus-visible){
   background:#ffb8e6;
   color:#16112a;
   border-color:#ff7fcf;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"]:focus-visible{
+& button[class~="border-dashed"]:focus-visible{
   outline:2px solid #ff7fcf;
   outline-offset:1px;
   z-index:2;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-groups"] button[class~="border-dashed"] [data-icon="inline-start"]{
+& button[class~="border-dashed"] [data-icon="inline-start"]{
   shape-rendering:crispEdges;
   stroke-linecap:square;
   stroke-width:2.5px;
 }
 
+}
+
 /* Vertical split grip: paint the existing 1px separator and 4px hit zone, do not resize either. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+&
   [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]{
   background:#6c5ce0;
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+&
   [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]::after{
   width:4px;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+&
   [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"] > div{
   width:4px;
   height:28px;
@@ -139,7 +130,7 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+&
   [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]:is(:hover,:active) > div{
   border-color:#ff7fcf;
   background-color:#ffb8e6;
@@ -147,15 +138,15 @@
   box-shadow:inset 1px 0 #fdf4ff,inset -1px 0 #7a3f6d;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+&
   [data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"] > [data-slot="resizable-handle"]:focus-visible{
   outline:2px solid #ff7fcf;
   outline-offset:1px;
 }
 
 /* Favorite TileShell cards only: square window frame, hard bevel, pink selected edge. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"]{
+& [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] {
+& [class~="group/tile"]{
   border:1px solid;
   border-color:var(--jk-panel-edge);
   border-radius:0;
@@ -165,29 +156,25 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"]:hover:not([class~="border-object-selected-border"]){
+& [class~="group/tile"]:hover:not([class~="border-object-selected-border"]){
   border-color:#ffb8e6;
   box-shadow:var(--jk-panel-raised);
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"][class~="border-object-selected-border"]{
+& [class~="group/tile"][class~="border-object-selected-border"]{
   border-color:#ffb8e6;
   background-color:#3b2c55;
   box-shadow:var(--jk-panel-raised),0 0 0 1px #ffb8e6;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"]:focus-visible{
+& [class~="group/tile"]:focus-visible{
   outline:2px solid #ff7fcf;
   outline-offset:1px;
   z-index:2;
 }
 
 /* Keep FavoriteCardView's source top-left placement; its own selection/hover states hide the pill. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]){
+& [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]){
   border:1px solid #6c5ce0;
   border-radius:0;
   background:#201936;
@@ -197,8 +184,7 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]) > span[class*="bg-[var(--status-online)]"]{
+& [class~="group/tile"] [class~="group-hover/tile:opacity-0"]:has(> span[class*="bg-[var(--status-online)]"]) > span[class*="bg-[var(--status-online)]"]{
   width:6px;
   height:6px;
   border-radius:0;
@@ -207,8 +193,7 @@
 }
 
 /* Favorite cards' context menu is square, but card actions keep their existing size and placement. */
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] button[data-size="icon-sm"]{
+& [class~="group/tile"] button[data-size="icon-sm"]{
   border:1px solid #6c5ce0;
   border-radius:0;
   background:#201936;
@@ -217,20 +202,23 @@
   transition:none;
 }
 
-.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
-  [data-slot="resizable-panel"][id^="favorites-"][id$="-content"] [class~="group/tile"] button[data-size="icon-sm"]:is(:hover,:focus-visible){
+& [class~="group/tile"] button[data-size="icon-sm"]:is(:hover,:focus-visible){
   border-color:#ff7fcf;
   background:#ffb8e6;
   color:#16112a;
 }
 
+}
+
 /* No motion is introduced by this layer; keep hover/selected state changes static for both reducers. */
 @media (prefers-reduced-motion:reduce){
-  .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])
+  &
     :is([class~="group/rail-row"],[class~="group/tile"],[class~="group-hover/tile:opacity-0"],[class~="absolute"][class~="top-2"][class~="left-2"],[data-slot="resizable-handle"]){
     animation:none!important;
     transition:none!important;
   }
+}
+
 }
 
 html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"]):has([data-slot="resizable-handle"])

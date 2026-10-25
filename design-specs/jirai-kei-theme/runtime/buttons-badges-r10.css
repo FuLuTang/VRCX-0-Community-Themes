@@ -1,17 +1,15 @@
 /* R10 G2: intentionally low-specificity additions for main and side-panel surfaces.
    Put scope exclusions inside :where() so existing R9/R10 component partitions win. */
 
-
-
 /* Tabs paint is owned by controls-r9 and the dedicated side-panel rail. */
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) :where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)) {
+  /* Inline alert panels, with a destructive semantic rail. */
+  &[data-slot="alert"]{border:1px solid #6c5ce0;border-radius:0;background:#201936;color:#f2ebff;box-shadow:inset 1px 1px rgb(253 244 255/.2),inset -1px -1px #16112a}
+  &[data-slot="alert"].text-destructive{border-color:#ff6b8a;background:#30182e;color:#ffd9e4}
+  &[data-slot="alert-title"]{color:#f2ebff}
+  &[data-slot="alert-description"]{color:#b9add9}
 
-/* Inline alert panels, with a destructive semantic rail. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="alert"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border:1px solid #6c5ce0;border-radius:0;background:#201936;color:#f2ebff;box-shadow:inset 1px 1px rgb(253 244 255/.2),inset -1px -1px #16112a}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="alert"].text-destructive:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-color:#ff6b8a;background:#30182e;color:#ffd9e4}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="alert-title"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){color:#f2ebff}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="alert-description"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){color:#b9add9}
-
-/* Precisely gated source-shaped floating bars; unrelated rounded surfaces stay intact. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) div.bg-popover.text-popover-foreground:has(> span.text-muted-foreground.px-1\.5.font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) div.bg-popover.text-popover-foreground:has(> span.text-muted-foreground.px-2.font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
-
+  /* Precisely gated source-shaped floating bars; unrelated rounded surfaces stay intact.
+     Both padding classes have identical specificity; :is() keeps that unchanged. */
+  &:is(div).bg-popover.text-popover-foreground:has(> span.text-muted-foreground:is(.px-1\.5,.px-2).font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
+}

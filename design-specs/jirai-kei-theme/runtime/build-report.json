@@ -1,5 +1,5 @@
 {
-  "cssBytes": 941395,
+  "cssBytes": 927194,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -93,7 +93,7 @@
     },
     {
       "name": "sidebar-nav",
-      "bytes": 3595
+      "bytes": 3123
     },
     {
       "name": "cat-r8-final",
@@ -117,7 +117,7 @@
     },
     {
       "name": "controls-r9",
-      "bytes": 5408
+      "bytes": 4675
     },
     {
       "name": "popups-r9",
@@ -145,7 +145,7 @@
     },
     {
       "name": "favorites-r9",
-      "bytes": 12703
+      "bytes": 7448
     },
     {
       "name": "browse-history-r9",
@@ -153,7 +153,7 @@
     },
     {
       "name": "buttons-badges-r10",
-      "bytes": 2490
+      "bytes": 1344
     },
     {
       "name": "badge",
@@ -161,7 +161,7 @@
     },
     {
       "name": "data-surfaces-r10",
-      "bytes": 13851
+      "bytes": 12311
     },
     {
       "name": "misc",
@@ -169,11 +169,11 @@
     },
     {
       "name": "splitter",
-      "bytes": 3277
+      "bytes": 2417
     },
     {
       "name": "table",
-      "bytes": 3710
+      "bytes": 2751
     },
     {
       "name": "timeline",
@@ -213,15 +213,15 @@
     },
     {
       "name": "card",
-      "bytes": 3194
+      "bytes": 2855
     },
     {
       "name": "tabs",
-      "bytes": 10506
+      "bytes": 9728
     },
     {
       "name": "toggle-group",
-      "bytes": 2205
+      "bytes": 2003
     },
     {
       "name": "language-badges-r98",
@@ -241,11 +241,11 @@
     },
     {
       "name": "fields",
-      "bytes": 7916
+      "bytes": 7254
     },
     {
       "name": "choice",
-      "bytes": 7033
+      "bytes": 5861
     }
   ],
   "previewBytes": 24252,

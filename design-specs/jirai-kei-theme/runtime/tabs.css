@@ -19,25 +19,25 @@
 [data-slot="tabs-list"]{
   padding:1px;border:1px solid var(--wd-frame);border-radius:0;background:#201936;color:#e3d2f5;
   box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
+  /* Existing page geometry only; identity matching is independent of location. */
+  .vrcx-0-main-content .vrcx-0-page-scaffold &:not([data-orientation="vertical"]){gap:2px;padding:1px}
+  /* Keep overflowing centered toolbar tabs reachable from their first item. */
+  &[class~="overflow-x-auto"]:not([class~="justify-start"]){justify-content:safe center}
+  & > [data-slot="tab-indicator"]{display:none}
+  & > [data-slot="tabs-tab"]{
+    font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;font-synthesis:none;font-size:12px;
+    border:1px solid transparent;border-radius:0;background:#201936;color:#e3d2f5;box-shadow:none;transition:none;
+    &:hover:where(:not(:disabled,[data-disabled],[aria-disabled="true"])){background:#3b2c55;color:#f2ebff}
+    &:is([data-active],[aria-selected="true"]){
+      border-color:var(--wd-frame);background:#ffb8e6;color:#16112a;
+      box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
+    }
+    & > span:last-child{color:inherit}
+    & .lucide{color:inherit;opacity:1}
+    &:focus-visible{z-index:2;outline:2px solid var(--wd-pink);outline-offset:-2px}
+    &:is(:disabled,[data-disabled],[aria-disabled="true"]){color:var(--wd-muted);opacity:.64;cursor:not-allowed}
+  }
 }
-/* Existing page geometry only; identity matching is independent of location. */
-.vrcx-0-main-content .vrcx-0-page-scaffold [data-slot="tabs-list"]:not([data-orientation="vertical"]){gap:2px;padding:1px}
-/* Keep overflowing centered toolbar tabs reachable from their first item. */
-[data-slot="tabs-list"][class~="overflow-x-auto"]:not([class~="justify-start"]){justify-content:safe center}
-[data-slot="tabs-list"] > [data-slot="tab-indicator"]{display:none}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]{
-  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;font-synthesis:none;font-size:12px;
-  border:1px solid transparent;border-radius:0;background:#201936;color:#e3d2f5;box-shadow:none;transition:none;
-}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:hover:where(:not(:disabled,[data-disabled],[aria-disabled="true"])){background:#3b2c55;color:#f2ebff}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is([data-active],[aria-selected="true"]){
-  border-color:var(--wd-frame);background:#ffb8e6;color:#16112a;
-  box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d;
-}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"] > span:last-child{color:inherit}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"] .lucide{color:inherit;opacity:1}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:focus-visible{z-index:2;outline:2px solid var(--wd-pink);outline-offset:-2px}
-[data-slot="tabs-list"] > [data-slot="tabs-tab"]:is(:disabled,[data-disabled],[aria-disabled="true"]){color:var(--wd-muted);opacity:.64;cursor:not-allowed}
 /* Tier 3 / tier 4 lists leave the default layer entirely (revert-layer). */
 :is(.vrcx-0-side-panel-rail [data-slot="tabs-list"],.entity-dialog [data-slot="tabs-list"][class~="h-11"][data-orientation="horizontal"]){&, & *{all:revert-layer}}
 }
@@ -56,8 +56,10 @@
    Keep the stair corners, open an 8px strip under the bottom edge, hang the
    lace there. No separate base skin.
    -------------------------------------------------------------------------- */
-:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{clip-path:var(--jk-r97-lace-cut)}
-:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+:is(.vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical]),.vrcx-0-main-content>[id=chart] [data-slot=tabs][data-orientation=vertical]:has(+div [data-tools-section]))>[data-slot=tabs-list]{
+  clip-path:var(--jk-r97-lace-cut);
+  &::after{content:"";position:absolute;left:1px;right:1px;top:calc(100% + 1px);bottom:auto;height:8px;background-color:rgb(217 127 198/.55);pointer-events:none;mask:var(--jk-r97-lace)}
+}
 /* The settings geometry above pads the rail to 3px; the old in-frame lace once needed 12px at the bottom. */
 .vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(>[data-slot=tabs-list][data-orientation=vertical])>[data-slot=tabs-list]{padding-bottom:3px}
 
@@ -87,16 +89,15 @@
     border-color: transparent;
     background-color: #1d1631;
     color: var(--wd-faint);
-}
 
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab']:hover {
+&:hover {
     background-color: var(--wd-select);
     color: var(--wd-text);
 }
 
 /* Selected tab: same face as the panel, three-sided --wd-frame frame (the left
    edge stays open) and a pink spine on the far side. */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active] {
+&[data-active] {
     border-color: var(--wd-frame);
     border-left-color: transparent;
     background-color: var(--wd-raised);
@@ -105,7 +106,7 @@
 
 /* Pink spine as a pseudo element, not an inset box-shadow: the app's
    focus-visible ring is itself a box-shadow and must survive for keyboard use. */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::after {
+&[data-active]::after {
     content: '';
     position: absolute;
     top: 0;
@@ -120,7 +121,7 @@
    outline sits in [right-1px, right) and the tab's own 1px transparent left
    border starts at right, so the sliver has to start 2px left of the tab's
    padding box (measured: panel rule at x1349 was still drawn at left:-1px). */
-.vrcx-0-side-panel .vrcx-0-side-panel-rail [role='tab'][data-active]::before {
+&[data-active]::before {
     content: '';
     position: absolute;
     top: 0;
@@ -129,6 +130,7 @@
     width: 3px;
     pointer-events: none;
     background-color: var(--wd-raised);
+}
 }
 
 /* --------------------------------------------------------------------------

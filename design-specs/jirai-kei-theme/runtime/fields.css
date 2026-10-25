@@ -8,7 +8,7 @@
   color:var(--jk-slot-ink);
 }
 :is([data-slot="input-group-control"],[data-slot="combobox-chip-input"],[data-slot="input-group"] > [data-slot="combobox-chips"]){
-  border:0; border-radius:0; background:transparent; background-image:none; box-shadow:none; outline:none; color:var(--jk-slot-ink);
+  border:0; border-radius:0; background:transparent; box-shadow:none; outline:none; color:var(--jk-slot-ink);
 }
 :is(input,textarea)::placeholder{color:var(--jk-slot-soft);opacity:1}
 :is([data-slot="select-trigger"][data-placeholder],[data-slot="select-trigger"] [data-placeholder]){color:var(--jk-slot-soft)}
@@ -32,20 +32,24 @@
   border:1px solid var(--btn-acc-sh);border-radius:0;background-color:var(--btn-acc);background-image:none;
   box-shadow:inset 1px 1px var(--btn-acc-hl),inset -1px -1px rgb(0 0 0/.45);color:var(--btn-acc-text);opacity:1;translate:none;transform:none;
   transition:background-color var(--jk-step),color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step);
+  & svg{color:inherit;opacity:1}
+  &:hover:not(:disabled,[data-disabled],[aria-disabled="true"]){background-color:var(--btn-acc-hover)}
+  &:is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]){background-color:var(--btn-acc);box-shadow:inset 2px 2px var(--btn-acc-sh),inset -1px -1px var(--btn-acc-hl);translate:var(--jk-press-move)}
+  &:focus-visible{outline:2px solid var(--wd-pink);outline-offset:1px;z-index:1}
+  &:is(:disabled,[data-disabled],[aria-disabled="true"]){opacity:.45;cursor:not-allowed}
 }
-[data-slot="input-group"].h-7 button:not([data-slot="select-trigger"]),[data-slot="input-group"][class~="h-7"] button:not([data-slot="select-trigger"]){width:20px;height:20px;min-width:20px}
-:is([data-slot="input-group"],[data-slot="combobox-chips"]) button:not([data-slot="select-trigger"]) svg{color:inherit;opacity:1}
-:is([data-slot="input-group"],[data-slot="combobox-chips"]) button:not([data-slot="select-trigger"]):hover:not(:disabled,[data-disabled],[aria-disabled="true"]){background-color:var(--btn-acc-hover)}
-:is([data-slot="input-group"],[data-slot="combobox-chips"]) button:not([data-slot="select-trigger"]):is(:active,[aria-haspopup][aria-expanded="true"],[data-popup-open]):not(:disabled,[data-disabled],[aria-disabled="true"]){background-color:var(--btn-acc);box-shadow:inset 2px 2px var(--btn-acc-sh),inset -1px -1px var(--btn-acc-hl);translate:var(--jk-press-move)}
-:is([data-slot="input-group"],[data-slot="combobox-chips"]) button:not([data-slot="select-trigger"]):focus-visible{outline:2px solid var(--wd-pink);outline-offset:1px;z-index:1}
-:is([data-slot="input-group"],[data-slot="combobox-chips"]) button:not([data-slot="select-trigger"]):is(:disabled,[data-disabled],[aria-disabled="true"]){opacity:.45;cursor:not-allowed}
+[data-slot="input-group"].h-7 button:not([data-slot="select-trigger"]){width:20px;height:20px;min-width:20px}
 /* a disabled slot already dims everything once (.45); its keys must not dim a second time */
 [data-slot="input-group"]:has([data-slot="input-group-control"]:disabled) button:not([data-slot="select-trigger"]){opacity:1}
 [data-slot="input-group"]:has([data-slot="input-group-control"][role="combobox"]:is([aria-expanded="true"],[data-popup-open])) button:is([aria-expanded="true"],[data-popup-open]):not(:disabled){color:var(--wd-pink)}
 [data-slot="input-group-addon"]:has(> button){padding-block:0;gap:2px;align-items:center}
-[data-slot="combobox-chip"]{box-sizing:border-box;height:24px;min-height:24px;border:1px solid var(--wd-frame);border-radius:0;background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised);padding-left:5px;padding-right:3px;gap:4px;line-height:1}
-[data-slot="combobox-chip"] button[data-slot="combobox-chip-remove"]{width:16px;height:16px;min-width:16px;min-height:16px;margin:0;padding:0;align-self:center;display:inline-flex;align-items:center;justify-content:center}
-[data-slot="combobox-chip"] button[data-slot="combobox-chip-remove"] svg{width:10px;height:10px;flex:none;display:block}
+[data-slot="combobox-chip"]{
+  box-sizing:border-box;height:24px;min-height:24px;border:1px solid var(--wd-frame);border-radius:0;background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised);padding-left:5px;padding-right:3px;gap:4px;line-height:1;
+  & button[data-slot="combobox-chip-remove"]{
+    width:16px;height:16px;min-width:16px;min-height:16px;margin:0;padding:0;align-self:center;display:inline-flex;align-items:center;justify-content:center;
+    & svg{width:10px;height:10px;flex:none;display:block}
+  }
+}
 [data-slot="combobox-chips"]:not([data-slot="input-group"] > *){gap:4px}
 input[type="file"]{color:var(--jk-slot-soft)}
 input[type="file"]::file-selector-button{appearance:none;-webkit-appearance:none;font:inherit;padding:2px 8px;margin-right:8px;border:1px solid var(--wd-frame);border-radius:0;background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised);transition:background-color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step)}
