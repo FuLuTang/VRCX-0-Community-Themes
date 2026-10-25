@@ -1,0 +1,63 @@
+/* Spinner-owned rules consolidated without changing cascade order. */
+[data-slot="spinner"] { animation:r5-spinner-step 1s steps(8,end) infinite; }
+:where([data-slot="spinner"]:is(.size-4,.size-3\.5)){
+  animation:r5-spinner-step 1s steps(8,end) infinite;
+  transform-origin:center;
+}
+[data-slot=spinner]{animation-timing-function:steps(8,end)}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-slot="spinner"] { animation:none !important; }
+}
+@media(prefers-reduced-motion:reduce){
+  :where([data-slot="spinner"]){animation:none!important}
+}
+
+/* Page loading spinner sprite treatment migrated from loader-r9. */
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"] > * {
+  display: none;
+}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+  display: block;
+  flex: none;
+  width: var(--jk-loader-frame-w);
+  height: var(--jk-loader-frame-h);
+  margin: 0;
+  padding: 0;
+  background-image: var(--jk-loader-sheet);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(var(--jk-loader-frame-w) * var(--jk-loader-frames)) var(--jk-loader-frame-h);
+  /* Native 1x: the source frame is rendered at 56x72 CSS px; pixelated keeps
+     discrete edges on 150% Windows scaling without changing its layout size. */
+  image-rendering: pixelated;
+  animation: jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames), end) infinite;
+  transform: none;
+  rotate: none;
+  /* Override lucide's size-4 / animate-spin and hide the ring glyph underneath. */
+  color: transparent;
+  /* jirai-icons.css paints every svg.lucide as currentColor through a pixel-glyph
+     mask (--px). On the loader that ring mask cut the dancer into fragments. */
+  background-color: transparent;
+  -webkit-mask: none;
+  mask: none;
+}
+@media (prefers-reduced-motion: reduce){
+  .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+    animation: none !important;
+    background-position: 0 0 !important;
+  }
+}
+html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+  animation: none !important;
+  background-position: 0 0 !important;
+}
+
+/* R9.7 page/block spinner sprite routing; moved from loader-r97. */
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg[data-slot=spinner],.inset-0>svg.text-muted-foreground[data-slot=spinner],svg.my-8[data-slot=spinner]{
+  display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
+  background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
+  image-rendering:pixelated;animation:var(--jk-dance)!important;
+  transform:none;rotate:none;color:transparent;opacity:1;-webkit-mask:none;mask:none
+}
+html.reduce-effects :is([data-slot=spinner]){animation:none!important}

@@ -1,0 +1,67 @@
+:is(#p#p,.jk-proposal) [data-slot="separator"]{background:repeating-linear-gradient(90deg,var(--jk-bevel-pink-lo) 0 1px,transparent 1px 3px)!important}
+:is(#p#p,.jk-proposal) [data-slot="pagination-link"]{border-radius:0!important}
+:is(#p#p,.jk-proposal) [data-slot="pagination-link"][aria-current="page"]{background:var(--jk-key-pink)!important;color:var(--jk-key-ink)!important;box-shadow:var(--jk-sunken-pink)!important}
+:is(#p#p,.jk-proposal) [data-slot="empty"]:not(:has([data-slot="spinner"])){border:1px dashed var(--wd-frame);background:var(--wd-window);color:var(--wd-text)}
+:is(#p#p,.jk-proposal) [data-slot="empty-title"]{color:var(--wd-text)!important}
+:is(#p#p,.jk-proposal) [data-slot="empty-description"]{color:var(--wd-muted)!important}
+:is(#p#p,.jk-proposal) [data-slot="spinner"]{color:var(--wd-pink)!important}
+:is(#p#p,.jk-proposal) [data-slot="field-label"]{color:var(--wd-text)!important}
+:is(#p#p,.jk-proposal) [data-slot="field-description"]{color:var(--wd-muted)!important}
+:is(#p#p,.jk-proposal) [data-slot="resizable-handle"]{--jk-sl:var(--wd-frame)!important;--jk-sd:var(--wd-pink)!important}
+:is(#p#p,.jk-proposal) [data-slot="scroll-area-scrollbar"]{background-color:var(--wd-raised)!important}
+:is(#p#p,.jk-proposal) [data-slot="scroll-area-thumb"]{background-color:var(--wd-pink)!important}
+:is(#p#p,.jk-proposal) [data-slot="toast-viewport"]>*{border-radius:0!important;border-color:var(--wd-frame)!important;background:var(--wd-window)!important;color:var(--wd-text)!important;box-shadow:var(--jk-panel-raised)!important}
+
+/* ---------- 请你选择 (M1–M3): preview layout, copied from badge-proposal.css .badge-choices ---------- */
+.misc-choices{max-width:1000px;margin-bottom:32px;color:#e3d2f5;font-size:14px;line-height:1.6}
+.misc-choices h1{font-size:26px;font-weight:700;color:#ffb8e6;margin:0 0 8px}
+.misc-choices p{margin:8px 0 16px}
+.misc-choices .choice-question{min-width:0;min-height:340px;margin:18px 0;padding:16px;border:1px solid #8c71b0;background:#211a33}
+.misc-choices .choice-question legend{padding:0 8px;font-size:18px;font-weight:700;color:#ffb8e6}
+.misc-choices .choice-plain{margin:0 0 12px;font-size:13px}
+.misc-choices .choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.misc-choices .choice-card{display:block;min-width:0;padding:12px;border:1px solid #8c71b0;background:#201936;cursor:pointer}
+.misc-choices .choice-card[data-selected=true]{border-color:#ffb8e6;box-shadow:inset 0 0 0 1px #ffb8e6}
+.misc-choices .choice-card:focus-within{outline:2px solid #fff2fb;outline-offset:3px}
+.misc-choices .choice-card-heading{display:flex;align-items:flex-start;gap:8px;font-size:14px}
+.misc-choices .choice-card-heading input{appearance:auto;accent-color:#b0305f;width:16px;height:16px;margin-top:4px;flex:none}
+.misc-choices .choice-card-heading strong{flex:1}
+.misc-choices .choice-recommended{font-size:12px;color:#16112a;background:#ffb8e6;padding:0 6px;white-space:nowrap}
+.misc-choices .choice-effect{margin:4px 0 10px;min-height:44px;font-size:12px;color:#d6b8ef}
+.misc-choices .choice-samples{pointer-events:none;display:grid;gap:4px}
+.misc-choices .choice-samples small{display:block;font-size:11px;color:#ac9cba}
+.misc-choices .choice-samples .demo-pane{border:0;padding:14px;background:#201936;min-height:64px;justify-content:center}
+.misc-choices .choice-summary{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:16px;border:1px solid #8c71b0}
+.misc-choices .choice-summary input{min-width:260px;flex:1;background:#211a33;color:#e3d2f5;border:1px solid #8c71b0;padding:8px;font-family:monospace}
+.misc-choices .choice-summary button{padding:8px 16px;background:#ffb8e6;color:#21132d;border:1px solid #8c71b0;cursor:pointer}
+/* M1 rows: layout only. Ancestors above the separator's parent are stacked blocks (same idea as preview-compare.css). */
+.misc-choices .m1-rows{display:grid;gap:12px;margin-top:14px}
+.misc-choices .m1-row{display:grid;grid-template-columns:250px minmax(0,1fr) minmax(0,1fr);gap:10px;max-width:860px;padding:12px;border:1px solid #4c3c58;background:#1b1524}
+.misc-choices .m1-meta h3{margin:0 0 4px;font-size:14px;color:#ffb8e6}
+.misc-choices .m1-meta p{margin:2px 0;font-size:12px;line-height:1.5;color:#d6b8ef}
+.misc-choices .m1-meta p b{color:#e3d2f5}
+.misc-choices .m1-meta p.m1-now{color:#ffd9ef}
+.misc-choices .m1-row small{display:block;margin:6px 0 4px;font-size:11px;color:#ac9cba}
+.misc-choices .m1-side{min-width:0;display:flex;flex-direction:column}
+.misc-choices .m1-side>small{margin-top:0}
+.misc-choices .m1-side[data-pick=true]>small{color:#ffb8e6}
+.misc-choices .m1-row .demo-pane{border:1px solid #33283d;padding:14px 12px;background:#201936;align-items:flex-start}
+.misc-choices .m1-side .demo-pane{flex:1;min-height:250px}
+.misc-choices .m1-side[data-pick=true] .demo-pane{border-color:#ffb8e6;box-shadow:inset 0 0 0 1px #ffb8e6}
+.misc-choices .m1-current{max-height:170px;padding:8px!important}
+.misc-choices .m1-row .demo-pane>.m1-body{flex:1 1 auto;min-width:0}
+#m1-sheet .m1-side .demo-pane{max-height:300px}
+:is(#m1f#m1f#m1f,.m1-body) [data-m1-flat]{display:block!important;position:relative!important;inset:auto!important;z-index:auto!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;width:auto!important;min-width:0!important;max-width:100%!important;aspect-ratio:auto!important;margin:0!important;transform:none!important;translate:none!important}
+@media(max-width:900px){.misc-choices .m1-row{grid-template-columns:1fr}}
+@media(max-width:640px){.misc-choices .choice-grid{grid-template-columns:1fr}.misc-choices .choice-question{padding:10px}.misc-choices .choice-summary input{min-width:0;width:100%;flex-basis:100%}}
+
+/* Option paints. B options are the unmodified current theme. Each A/B rule is copied from an existing theme rule. */
+/* M1 per-position comparison. Solid = the value the toolbar / drawer separators already paint (shadcn `bg-border`,
+   computed #6c5ce0); dotted = buttons-badges-r10.css:24 (horizontal) / :25 (vertical), unchanged. Panes .m1-current get neither. */
+:is(#p#p#p#p,.m1-solid) [data-slot="separator"]{background:#6c5ce0!important}
+:is(#p#p#p#p,.m1-dotted) [data-slot="separator"][data-orientation="horizontal"]{background:repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px)!important}
+:is(#p#p#p#p,.m1-dotted) [data-slot="separator"][data-orientation="vertical"]{background:repeating-linear-gradient(180deg,#8c71b0 0 1px,transparent 1px 3px)!important}
+/* M2-A: finalized Button default key, pressed (button.css:34,38,42,44) */
+:is(#p#p#p,.choice-M2-A) [data-slot="pagination-link"]:is([data-active="true"],[aria-current="page"]){border:1px solid var(--wd-frame);background:var(--jk-key-pink-press);color:var(--jk-key-ink);box-shadow:var(--jk-sunken);translate:var(--jk-press-move)}
+/* M3-B: the app's own `border` + `border-dashed` (dialog call sites) in the theme's empty frame colour (data-surfaces-r10.css:81) */
+:is(#p#p#p,.choice-M3-B) [data-slot="empty"]{border:1px dashed #70518f}

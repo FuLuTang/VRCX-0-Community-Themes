@@ -1,3 +1,33 @@
+/* Shared draggable resizable handles; paint only, preserve layout and hit areas. */
+/* Resize grip: use the existing pseudo hit-strip; keep separator dimensions and focus geometry intact.
+   Favorites owns its splitter via favorites-r9; exclude its group ID and the favorites-body decoy host. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"] {
+  background-color: var(--wd-frame);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 16px;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, var(--wd-square) 0 2px, transparent 2px 4px);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"][aria-orientation="horizontal"]::before {
+  width: 16px;
+  height: 3px;
+  background: repeating-linear-gradient(to right, var(--wd-square) 0 2px, transparent 2px 4px);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: 1px;
+}
+
+
 /* R9.7 Q6 pixel splitter. ui/shadcn/resizable.tsx Separator[data-slot=resizable-handle];
    react-resizable-panels 4.12 sets data-separator=inactive|hover|active|focus|disabled.
    Paint only: ::after hit area, widths and panel layout stay source-owned.

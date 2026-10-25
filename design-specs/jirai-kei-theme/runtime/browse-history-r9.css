@@ -31,14 +31,6 @@
       background:#ffb8e6;
       box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
     }
-    .absolute > .flex.h-full.items-center.gap-3.px-1 > [data-slot="separator"][data-orientation="horizontal"]{
-      height:1px;
-      flex:1 1 0%;
-      border:0;
-      background-color:transparent;
-      background-image:repeating-linear-gradient(to right,#8c71b0 0 2px,transparent 2px 4px);
-      opacity:1;
-    }
 
     /* The 62px media matches the source card's 62px inner height. */
     .object-row{

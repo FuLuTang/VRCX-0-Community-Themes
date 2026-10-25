@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1018829,
+  "cssBytes": 1020252,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -53,7 +53,7 @@
     },
     {
       "name": "pixel-controls",
-      "bytes": 13798
+      "bytes": 13738
     },
     {
       "name": "assets-r5",
@@ -61,7 +61,7 @@
     },
     {
       "name": "motion",
-      "bytes": 1969
+      "bytes": 1869
     },
     {
       "name": "navigation-r7",
@@ -133,19 +133,11 @@
     },
     {
       "name": "loader-r9",
-      "bytes": 31815
-    },
-    {
-      "name": "form-controls-r9",
-      "bytes": 488
+      "bytes": 29738
     },
     {
       "name": "dialogs-r9",
       "bytes": 7421
-    },
-    {
-      "name": "fields-toolbar-r10",
-      "bytes": 856
     },
     {
       "name": "overlays-r10",
@@ -157,11 +149,11 @@
     },
     {
       "name": "browse-history-r9",
-      "bytes": 5650
+      "bytes": 5333
     },
     {
       "name": "buttons-badges-r10",
-      "bytes": 4313
+      "bytes": 2490
     },
     {
       "name": "badge",
@@ -169,7 +161,15 @@
     },
     {
       "name": "data-surfaces-r10",
-      "bytes": 16544
+      "bytes": 13851
+    },
+    {
+      "name": "misc",
+      "bytes": 3913
+    },
+    {
+      "name": "splitter",
+      "bytes": 3277
     },
     {
       "name": "table",
@@ -201,7 +201,11 @@
     },
     {
       "name": "loader-r97",
-      "bytes": 1789
+      "bytes": 1662
+    },
+    {
+      "name": "spinner",
+      "bytes": 3588
     },
     {
       "name": "cards-r97",
@@ -218,10 +222,6 @@
     {
       "name": "toggle-group",
       "bytes": 2205
-    },
-    {
-      "name": "splitter-r97",
-      "bytes": 1657
     },
     {
       "name": "language-badges-r98",
@@ -241,7 +241,7 @@
     },
     {
       "name": "fields",
-      "bytes": 7046
+      "bytes": 7916
     },
     {
       "name": "choice",

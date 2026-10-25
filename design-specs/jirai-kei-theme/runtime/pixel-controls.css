@@ -39,4 +39,3 @@
 [data-slot=progress-indicator]{border-radius:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23ffb8e6' d='M0 0h8v1h-8z'/%3E%3Cpath fill='%23ff7fcf' d='M0 1h8v1h-8zM0 2h8v1h-8zM0 3h8v1h-8zM0 4h8v1h-8zM0 5h8v1h-8zM0 6h8v1h-8z'/%3E%3Cpath fill='%23b35aa0' d='M0 7h8v1h-8z'/%3E%3C/svg%3E") 0 50%/10px 8px repeat-x}
 .indeterminate-progress [data-slot=progress-indicator]{animation-timing-function:steps(10,end)}
 [data-slot=skeleton]{animation-timing-function:steps(3,end)}
-[data-slot=spinner]{animation-timing-function:steps(8,end)}

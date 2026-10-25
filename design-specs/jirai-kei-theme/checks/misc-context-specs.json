@@ -1,0 +1,13 @@
+[
+ {"id":"sep","fixture":"community-themes","select":"[data-slot=separator]"},
+ {"id":"pagination","fixture":"game-log","select":"[data-slot=pagination]"},
+ {"id":"empty","fixture":"favorites_groups","select":"[data-slot=empty]"},
+ {"id":"spinner","fixture":"charts_timeline","select":"[data-slot=spinner]"},
+ {"id":"field","fixture":"settings","select":"[data-slot=field-label]"},
+ {"id":"resize","fixture":"favorites_groups","select":"[data-slot=resizable-handle]"},
+ {"id":"scroll","fixture":"charts-mutual-settings-sheet","select":"[data-slot=scroll-area-scrollbar]"},
+ {"id":"toast","fixture":"activity","select":"[data-slot=toast-viewport]"},
+ {"id":"m1-toolbar","fixture":"activity","select":"[data-slot=tabs-list] + [data-slot=separator]"},
+ {"id":"m1-history","fixture":"browse-history","select":"h2 + [data-slot=separator][data-orientation=horizontal]"},
+ {"id":"m1-sheet","fixture":"charts-mutual-settings-sheet","select":"[data-slot=sheet-popup] [data-slot=separator]"}
+]

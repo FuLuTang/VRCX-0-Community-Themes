@@ -24,42 +24,5 @@
   flex-direction: column;
   gap: 10px;
 }
-.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
-  display: block;
-  flex: none;
-  width: var(--jk-loader-frame-w);
-  height: var(--jk-loader-frame-h);
-  margin: 0;
-  padding: 0;
-  background-image: var(--jk-loader-sheet);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(var(--jk-loader-frame-w) * var(--jk-loader-frames)) var(--jk-loader-frame-h);
-  /* Native 1x: the source frame is rendered at 56x72 CSS px; pixelated keeps
-     discrete edges on 150% Windows scaling without changing its layout size. */
-  image-rendering: pixelated;
-  animation: jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames), end) infinite;
-  transform: none;
-  rotate: none;
-  /* Override lucide's size-4 / animate-spin and hide the ring glyph underneath. */
-  color: transparent;
-  /* jirai-icons.css paints every svg.lucide as currentColor through a pixel-glyph
-     mask (--px). On the loader that ring mask cut the dancer into fragments. */
-  background-color: transparent;
-  -webkit-mask: none;
-  mask: none;
-}
-.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"] > * {
-  display: none;
-}
-/* A CSS-owned sprite can be frozen; an inlined GIF could not. Hold frame 1. */
-@media (prefers-reduced-motion: reduce){
-  .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
-    animation: none !important;
-    background-position: 0 0 !important;
-  }
-}
-html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
-  animation: none !important;
-  background-position: 0 0 !important;
-}
+
+

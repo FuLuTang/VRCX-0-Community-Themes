@@ -1276,7 +1276,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 [data-slot=progress-indicator]{border-radius:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8' shape-rendering='crispEdges'%3E%3Cpath fill='%23ffb8e6' d='M0 0h8v1h-8z'/%3E%3Cpath fill='%23ff7fcf' d='M0 1h8v1h-8zM0 2h8v1h-8zM0 3h8v1h-8zM0 4h8v1h-8zM0 5h8v1h-8zM0 6h8v1h-8z'/%3E%3Cpath fill='%23b35aa0' d='M0 7h8v1h-8z'/%3E%3C/svg%3E") 0 50%/10px 8px repeat-x}
 .indeterminate-progress [data-slot=progress-indicator]{animation-timing-function:steps(10,end)}
 [data-slot=skeleton]{animation-timing-function:steps(3,end)}
-[data-slot=spinner]{animation-timing-function:steps(8,end)}
 
 /* SECTION assets-r5 */
 :root {
@@ -1329,7 +1328,6 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface::after { display:none; }
 .vrcx-0-sidebar-surface::after { content:""; position:absolute; right:8px; bottom:104px; width:48px; height:72px; background-image:var(--r5-ribbon-pendant); background-size:48px 72px; background-repeat:no-repeat; pointer-events:none; animation:r5-charm-swing 4.8s steps(3,end) infinite; }
 [data-slot="progress-indicator"] { animation:r5-progress-flow 1.8s steps(5,end) infinite; }
-[data-slot="spinner"] { animation:r5-spinner-step 1s steps(8,end) infinite; }
 [data-slot="dialog-content"][data-open] { animation:r5-dialog-step-in 120ms steps(4,end) both; }
 
 @media (prefers-reduced-motion:reduce) {
@@ -1337,7 +1335,7 @@ span.h-4.shrink-0.items-center.rounded.border.px-1.font-mono.text-\[10px\] {
  
  .vrcx-0-sidebar-surface::after,
  
- [data-slot="progress-indicator"],[data-slot="spinner"],[data-slot="dialog-content"][data-open] { animation:none !important; }
+ [data-slot="progress-indicator"],[data-slot="dialog-content"][data-open] { animation:none !important; }
 }
 
 /* SECTION navigation-r7 */
@@ -2746,57 +2744,8 @@ div[class~="bg-muted"][class~="mr-2.5"][class~="size-9"][class~="shrink-0"][clas
   flex-direction: column;
   gap: 10px;
 }
-.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
-  display: block;
-  flex: none;
-  width: var(--jk-loader-frame-w);
-  height: var(--jk-loader-frame-h);
-  margin: 0;
-  padding: 0;
-  background-image: var(--jk-loader-sheet);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: calc(var(--jk-loader-frame-w) * var(--jk-loader-frames)) var(--jk-loader-frame-h);
-  /* Native 1x: the source frame is rendered at 56x72 CSS px; pixelated keeps
-     discrete edges on 150% Windows scaling without changing its layout size. */
-  image-rendering: pixelated;
-  animation: jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames), end) infinite;
-  transform: none;
-  rotate: none;
-  /* Override lucide's size-4 / animate-spin and hide the ring glyph underneath. */
-  color: transparent;
-  /* jirai-icons.css paints every svg.lucide as currentColor through a pixel-glyph
-     mask (--px). On the loader that ring mask cut the dancer into fragments. */
-  background-color: transparent;
-  -webkit-mask: none;
-  mask: none;
-}
-.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"] > * {
-  display: none;
-}
-/* A CSS-owned sprite can be frozen; an inlined GIF could not. Hold frame 1. */
-@media (prefers-reduced-motion: reduce){
-  .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
-    animation: none !important;
-    background-position: 0 0 !important;
-  }
-}
-html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
-  animation: none !important;
-  background-position: 0 0 !important;
-}
 
-/* SECTION form-controls-r9 */
-/* R9.5 shared native and Base UI form controls. Preserve control boxes/hit targets;
-   excluded surfaces already have deliberate control treatments. */
-/* Ordinary inline spinner: existing pixel mask glyph, small and stepped (not the page loader). */
-:where([data-slot="spinner"]:is(.size-4,.size-3\.5)){
-  animation:r5-spinner-step 1s steps(8,end) infinite;
-  transform-origin:center;
-}
-@media(prefers-reduced-motion:reduce){
-  :where([data-slot="spinner"]){animation:none!important}
-}
+
 
 /* SECTION dialogs-r9 */
 /* R9.5 generic second-level dialogs: Win98/Windose chrome for ordinary dialogs only.
@@ -2967,16 +2916,6 @@ html.reduce-effects :is([data-slot="dialog-content"], [data-slot="alert-dialog-c
     transition: none !important;
   }
 }
-
-/* SECTION fields-toolbar-r10 */
-/* Shared field inset token remains available to legacy consumers. */
-:root{--jk-field-edge:#69557c #fdf4ff #fdf4ff #69557c;--jk-field-inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;}
-:where([data-slot="field-label"]),:where([data-slot="label"]){color:#e3d2f5}
-:where([data-slot="field-description"]){color:#b9add9}
-:where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *)){color:#ff8fae}
-:where([data-slot="input-otp-slot"]){border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;}
-:where([data-slot="input-otp-slot"]:is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
-:where(input[type="time"])::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}
 
 /* SECTION overlays-r10 */
 /* R10-G3 overlay surfaces. Load after popups-r9.css.
@@ -3361,14 +3300,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
       background:#ffb8e6;
       box-shadow:inset 1px 1px #fdf4ff,inset -1px -1px #7a3f6d;
     }
-    .absolute > .flex.h-full.items-center.gap-3.px-1 > [data-slot="separator"][data-orientation="horizontal"]{
-      height:1px;
-      flex:1 1 0%;
-      border:0;
-      background-color:transparent;
-      background-image:repeating-linear-gradient(to right,#8c71b0 0 2px,transparent 2px 4px);
-      opacity:1;
-    }
 
     /* The 62px media matches the source card's 62px inner height. */
     .object-row{
@@ -3456,11 +3387,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
    Put scope exclusions inside :where() so existing R9/R10 component partitions win. */
 
 
-/* Pagination links are Button-rendered anchors and retain the source icon/default sizes. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-content"]{gap:2px}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-link"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-link"]:is([data-active="true"],[aria-current="page"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-link"]:focus-visible:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){outline:2px solid #ff7fcf;outline-offset:1px}
 
 /* Tabs paint is owned by controls-r9 and the dedicated side-panel rail. */
 
@@ -3474,9 +3400,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) div.bg-popover.text-popover-foreground:has(> span.text-muted-foreground.px-1\.5.font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) div.bg-popover.text-popover-foreground:has(> span.text-muted-foreground.px-2.font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
 
-/* Dotted separator strokes preserve the primitive's one-pixel dimensions. */
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="horizontal"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:repeating-linear-gradient(90deg,#8c71b0 0 1px,transparent 1px 3px)}
-:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="vertical"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:repeating-linear-gradient(180deg,#8c71b0 0 1px,transparent 1px 3px)}
 
 /* SECTION badge */
 /* Badge + Kbd suite owner. Defaults live in jirai-badge; the notification bell
@@ -3537,33 +3460,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
    Paint-only on virtual/compact rows: do not alter their height, padding, position, or hit-area. */
 
 
-/* Empty states get a quiet dashed pixel frame; LoadingState is explicitly left to loader-r9. */
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) {
-  border-radius: 0;
-  border-color: #70518f;
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-header"] {
-  border-bottom: 1px dotted #70518f;
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-icon"][data-variant="icon"] {
-  border: 1px solid var(--wd-frame);
-  border-radius: 0;
-  background: var(--wd-raised);
-  color: var(--wd-square);
-  box-shadow: inset 1px 1px rgb(253 244 255 / .16), inset -1px -1px #16112a;
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-title"] {
-  color: var(--wd-text);
-  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
-  font-synthesis: none;
-  text-wrap: pretty;
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] {
-  color: var(--wd-muted);
-  text-wrap: pretty;
-}
-
 /* Calendar lives in the main surface or a date-picker popover (not modal/dialog content). */
 :is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) {
   border-radius: 0;
@@ -3602,34 +3498,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 :is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day]:is(:disabled, [aria-disabled="true"]) {
   color: var(--wd-faint);
   opacity: .55;
-}
-
-/* Resize grip: use the existing pseudo hit-strip; keep separator dimensions and focus geometry intact.
-   Favorites owns its splitter via favorites-r9; exclude its group ID and the favorites-body decoy host. */
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"] {
-  background-color: var(--wd-frame);
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 3px;
-  height: 16px;
-  pointer-events: none;
-  background: repeating-linear-gradient(to bottom, var(--wd-square) 0 2px, transparent 2px 4px);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"][aria-orientation="horizontal"]::before {
-  width: 16px;
-  height: 3px;
-  background: repeating-linear-gradient(to right, var(--wd-square) 0 2px, transparent 2px 4px);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]:focus-visible {
-  outline: 2px dashed var(--wd-pink);
-  outline-offset: 1px;
 }
 
 /* Card footers: dotted separator, but preserve Card's slot padding and child flow. */
@@ -3853,6 +3721,88 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
   background-color: var(--wd-pink);
 }
 
+/* SECTION misc */
+/* Miscellaneous primitives retained as independently owned sections. */
+
+/* Separators: unified 1px solid Windose frame; dropdown separators stay with popups. */
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="horizontal"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not([data-slot="toggle-group"] *)) { background:var(--wd-frame); }
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation="vertical"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not([data-slot="toggle-group"] *)) { background:var(--wd-frame); }
+
+/* Pagination links: migrated without changing their existing scope or paint. */
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-content"]{gap:2px}
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-link"]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){border-radius:0}
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-link"]:is([data-active="true"],[aria-current="page"]):where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){background:#ffb8e6;color:#16112a;box-shadow:inset 2px 2px #fdf4ff,inset -2px -2px #7a3f6d}
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="pagination-link"]:focus-visible:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)){outline:2px solid #ff7fcf;outline-offset:1px}
+
+/* Empty states; the loading-state spinner exception remains in loader-r9. */
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) {
+  border-radius: 0;
+  border-color: #70518f;
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-header"] { border-bottom: 1px dotted #70518f; }
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-icon"][data-variant="icon"] {
+  border: 1px solid var(--wd-frame); border-radius: 0; background: var(--wd-raised); color: var(--wd-square);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .16), inset -1px -1px #16112a;
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-title"] {
+  color: var(--wd-text); font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif; font-synthesis: none; text-wrap: pretty;
+}
+:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] { color: var(--wd-muted); text-wrap: pretty; }
+
+/* Browse-history date-rule separator, unified with the shared 1px solid rule. */
+.vrcx-0-main-content > .vrcx-0-page-scaffold:has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"][data-slot="input-group"] [data-align="inline-end"] svg.lucide-calendar-range):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-slot="tabs-list"] > [data-slot="tabs-tab"]:nth-of-type(5)):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"] svg.lucide-refresh-cw):has(> [data-slot="tabs"] > .vrcx-0-page-toolbar [data-vrcx-0-control="toolbar"] svg.lucide-ellipsis):has(> [data-slot="tabs"] > [data-slot="tabs-content"] .object-row__context-action) > [data-slot="tabs"] > [data-slot="tabs-content"] .absolute > .flex.h-full.items-center.gap-3.px-1 > [data-slot="separator"][data-orientation="horizontal"] {
+ height:1px; flex:1 1 0%; border:0; background:var(--wd-frame); opacity:1;
+}
+
+/* SECTION splitter */
+/* Shared draggable resizable handles; paint only, preserve layout and hit areas. */
+/* Resize grip: use the existing pseudo hit-strip; keep separator dimensions and focus geometry intact.
+   Favorites owns its splitter via favorites-r9; exclude its group ID and the favorites-body decoy host. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"] {
+  background-color: var(--wd-frame);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 16px;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, var(--wd-square) 0 2px, transparent 2px 4px);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"][aria-orientation="horizontal"]::before {
+  width: 16px;
+  height: 3px;
+  background: repeating-linear-gradient(to right, var(--wd-square) 0 2px, transparent 2px 4px);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]:focus-visible {
+  outline: 2px dashed var(--wd-pink);
+  outline-offset: 1px;
+}
+
+
+/* R9.7 Q6 pixel splitter. ui/shadcn/resizable.tsx Separator[data-slot=resizable-handle];
+   react-resizable-panels 4.12 sets data-separator=inactive|hover|active|focus|disabled.
+   Paint only: ::after hit area, widths and panel layout stay source-owned.
+   WorkspaceResizeHandle = 8px .bg-transparent slot whose ::before is the line. */
+[data-slot=resizable-handle]{--jk-sl:#6c5ce0;--jk-sb:#16112a;--jk-sd:#ffb8e6}
+[data-slot=resizable-handle]:is([data-separator=hover],[data-separator=active]){--jk-sl:#ff7fcf;--jk-sd:#fdf4ff}
+[data-slot=resizable-handle][data-separator=active]{--jk-sb:#ff7fcf;--jk-sd:#16112a}
+[data-slot=resizable-handle]:not(.bg-transparent),[data-slot=resizable-handle].bg-transparent::before{background:var(--jk-sl);box-shadow:1px 0 #16112a}
+[data-slot=resizable-handle][aria-orientation=horizontal]:not(.bg-transparent){box-shadow:0 1px #16112a}
+[data-slot=resizable-handle].bg-transparent{box-shadow:none}
+[data-slot=resizable-handle].bg-transparent::before{left:calc(50% - 1px);translate:none}
+[data-slot=resizable-handle]:focus-visible{outline:1px dotted #ff7fcf;outline-offset:1px}
+/* withHandle grip: 4x16, 1px line-colour frame, ink well, three 2x2 dots (drag = filled/pressed);
+   horizontal keeps the source rotate-90. */
+[data-slot=resizable-handle]>div{width:4px;height:16px;border-radius:0;box-shadow:inset 0 0 0 1px var(--jk-sl);background:linear-gradient(#0000 2px,var(--jk-sd) 0 4px,#0000 0 7px,var(--jk-sd) 0 9px,#0000 0 12px,var(--jk-sd) 0 14px,#0000 0) 1px 0/2px 100% no-repeat var(--jk-sb)}
+@media (prefers-reduced-motion:reduce){[data-slot=resizable-handle],[data-slot=resizable-handle]::before{transition:none}}
+
 /* SECTION table */
 /* Table suite owner. DOM identity only; preserve layout, cell spacing and table-specific
    virtualisation. App table wrappers share this skin; unrelated avatar/badge conditions
@@ -4045,7 +3995,7 @@ html.reduce-effects .vrcx-0-sidebar-surface [data-sidebar="content"]::after,html
 :root{--jk-dance:jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames),end) infinite}
 svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation-timing-function:steps(8,end)}
 div.justify-center.gap-2:not([data-slot],.min-h-\[72px\]):has(>svg:is([data-slot=spinner],.animate-spin)){flex-direction:column;gap:10px}
-:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg:is([data-slot=spinner],.animate-spin),.inset-0>svg.text-muted-foreground[data-slot=spinner],svg.my-8[data-slot=spinner]{
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg.animate-spin{
   display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
   background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
   image-rendering:pixelated;animation:var(--jk-dance)!important;
@@ -4056,7 +4006,72 @@ div.justify-center.gap-2:not([data-slot],.min-h-\[72px\]):has(>svg:is([data-slot
   svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation:none!important}
 }
 html.reduce-effects{--jk-dance:none}
-html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg){animation:none!important}
+html.reduce-effects :is(svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg){animation:none!important}
+
+/* SECTION spinner */
+/* Spinner-owned rules consolidated without changing cascade order. */
+[data-slot="spinner"] { animation:r5-spinner-step 1s steps(8,end) infinite; }
+:where([data-slot="spinner"]:is(.size-4,.size-3\.5)){
+  animation:r5-spinner-step 1s steps(8,end) infinite;
+  transform-origin:center;
+}
+[data-slot=spinner]{animation-timing-function:steps(8,end)}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-slot="spinner"] { animation:none !important; }
+}
+@media(prefers-reduced-motion:reduce){
+  :where([data-slot="spinner"]){animation:none!important}
+}
+
+/* Page loading spinner sprite treatment migrated from loader-r9. */
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"] > * {
+  display: none;
+}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+  display: block;
+  flex: none;
+  width: var(--jk-loader-frame-w);
+  height: var(--jk-loader-frame-h);
+  margin: 0;
+  padding: 0;
+  background-image: var(--jk-loader-sheet);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(var(--jk-loader-frame-w) * var(--jk-loader-frames)) var(--jk-loader-frame-h);
+  /* Native 1x: the source frame is rendered at 56x72 CSS px; pixelated keeps
+     discrete edges on 150% Windows scaling without changing its layout size. */
+  image-rendering: pixelated;
+  animation: jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames), end) infinite;
+  transform: none;
+  rotate: none;
+  /* Override lucide's size-4 / animate-spin and hide the ring glyph underneath. */
+  color: transparent;
+  /* jirai-icons.css paints every svg.lucide as currentColor through a pixel-glyph
+     mask (--px). On the loader that ring mask cut the dancer into fragments. */
+  background-color: transparent;
+  -webkit-mask: none;
+  mask: none;
+}
+@media (prefers-reduced-motion: reduce){
+  .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+    animation: none !important;
+    background-position: 0 0 !important;
+  }
+}
+html.reduce-effects .vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{
+  animation: none !important;
+  background-position: 0 0 !important;
+}
+
+/* R9.7 page/block spinner sprite routing; moved from loader-r97. */
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg[data-slot=spinner],.inset-0>svg.text-muted-foreground[data-slot=spinner],svg.my-8[data-slot=spinner]{
+  display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
+  background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
+  image-rendering:pixelated;animation:var(--jk-dance)!important;
+  transform:none;rotate:none;color:transparent;opacity:1;-webkit-mask:none;mask:none
+}
+html.reduce-effects :is([data-slot=spinner]){animation:none!important}
 
 /* SECTION cards-r97 */
 /* R9.7 Q3+Q4 · pixel cards (Settings + Tools) and outward-hanging lace.
@@ -4364,24 +4379,6 @@ html.reduce-effects :is([data-slot=spinner],svg.lucide.animate-spin,[data-type=l
   [data-slot="toggle-group"] > button:focus-visible { outline:2px solid var(--wd-pink); outline-offset:-3px; z-index:1; }
   [data-slot="toggle-group"] > button:is(:disabled,[data-disabled],[aria-disabled="true"]) { opacity:.45; cursor:not-allowed; }
 }
-
-/* SECTION splitter-r97 */
-/* R9.7 Q6 pixel splitter. ui/shadcn/resizable.tsx Separator[data-slot=resizable-handle];
-   react-resizable-panels 4.12 sets data-separator=inactive|hover|active|focus|disabled.
-   Paint only: ::after hit area, widths and panel layout stay source-owned.
-   WorkspaceResizeHandle = 8px .bg-transparent slot whose ::before is the line. */
-[data-slot=resizable-handle]{--jk-sl:#6c5ce0;--jk-sb:#16112a;--jk-sd:#ffb8e6}
-[data-slot=resizable-handle]:is([data-separator=hover],[data-separator=active]){--jk-sl:#ff7fcf;--jk-sd:#fdf4ff}
-[data-slot=resizable-handle][data-separator=active]{--jk-sb:#ff7fcf;--jk-sd:#16112a}
-[data-slot=resizable-handle]:not(.bg-transparent),[data-slot=resizable-handle].bg-transparent::before{background:var(--jk-sl);box-shadow:1px 0 #16112a}
-[data-slot=resizable-handle][aria-orientation=horizontal]:not(.bg-transparent){box-shadow:0 1px #16112a}
-[data-slot=resizable-handle].bg-transparent{box-shadow:none}
-[data-slot=resizable-handle].bg-transparent::before{left:calc(50% - 1px);translate:none}
-[data-slot=resizable-handle]:focus-visible{outline:1px dotted #ff7fcf;outline-offset:1px}
-/* withHandle grip: 4x16, 1px line-colour frame, ink well, three 2x2 dots (drag = filled/pressed);
-   horizontal keeps the source rotate-90. */
-[data-slot=resizable-handle]>div{width:4px;height:16px;border-radius:0;box-shadow:inset 0 0 0 1px var(--jk-sl);background:linear-gradient(#0000 2px,var(--jk-sd) 0 4px,#0000 0 7px,var(--jk-sd) 0 9px,#0000 0 12px,var(--jk-sd) 0 14px,#0000 0) 1px 0/2px 100% no-repeat var(--jk-sb)}
-@media (prefers-reduced-motion:reduce){[data-slot=resizable-handle],[data-slot=resizable-handle]::before{transition:none}}
 
 /* SECTION language-badges-r98 */
 /* R9.8: selected 01 BlackBerry/Pink language labels, not generic Badge styling.
@@ -4884,6 +4881,15 @@ input[type="file"]{color:var(--jk-slot-soft)}
 input[type="file"]::file-selector-button{appearance:none;-webkit-appearance:none;font:inherit;padding:2px 8px;margin-right:8px;border:1px solid var(--wd-frame);border-radius:0;background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised);transition:background-color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step)}
 input[type="file"]:not(:disabled)::file-selector-button:hover{background-color:var(--jk-key-dark-hover)}
 input[type="file"]:not(:disabled)::file-selector-button:active{box-shadow:var(--jk-sunken);translate:var(--jk-press-move)}
+
+/* Shared field labels and auxiliary controls migrated from fields-toolbar-r10. */
+:root{--jk-field-edge:#69557c #fdf4ff #fdf4ff #69557c;--jk-field-inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;}
+:where([data-slot="field-label"]),:where([data-slot="label"]){color:#e3d2f5}
+:where([data-slot="field-description"]){color:#b9add9}
+:where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *)){color:#ff8fae}
+:where([data-slot="input-otp-slot"]){border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;}
+:where([data-slot="input-otp-slot"]:is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+:where(input[type="time"])::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}
 
 /* SECTION choice */
 /* Choice controls · shared checkbox/radio and slider ownership.

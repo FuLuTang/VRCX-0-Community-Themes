@@ -5,33 +5,6 @@
    Paint-only on virtual/compact rows: do not alter their height, padding, position, or hit-area. */
 
 
-/* Empty states get a quiet dashed pixel frame; LoadingState is explicitly left to loader-r9. */
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) {
-  border-radius: 0;
-  border-color: #70518f;
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-header"] {
-  border-bottom: 1px dotted #70518f;
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-icon"][data-variant="icon"] {
-  border: 1px solid var(--wd-frame);
-  border-radius: 0;
-  background: var(--wd-raised);
-  color: var(--wd-square);
-  box-shadow: inset 1px 1px rgb(253 244 255 / .16), inset -1px -1px #16112a;
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-title"] {
-  color: var(--wd-text);
-  font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif;
-  font-synthesis: none;
-  text-wrap: pretty;
-}
-:where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] {
-  color: var(--wd-muted);
-  text-wrap: pretty;
-}
-
 /* Calendar lives in the main surface or a date-picker popover (not modal/dialog content). */
 :is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) {
   border-radius: 0;
@@ -70,34 +43,6 @@
 :is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) [data-day]:is(:disabled, [aria-disabled="true"]) {
   color: var(--wd-faint);
   opacity: .55;
-}
-
-/* Resize grip: use the existing pseudo hit-strip; keep separator dimensions and focus geometry intact.
-   Favorites owns its splitter via favorites-r9; exclude its group ID and the favorites-body decoy host. */
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"] {
-  background-color: var(--wd-frame);
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 3px;
-  height: 16px;
-  pointer-events: none;
-  background: repeating-linear-gradient(to bottom, var(--wd-square) 0 2px, transparent 2px 4px);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"][aria-orientation="horizontal"]::before {
-  width: 16px;
-  height: 3px;
-  background: repeating-linear-gradient(to right, var(--wd-square) 0 2px, transparent 2px 4px);
-}
-:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"]:focus-visible {
-  outline: 2px dashed var(--wd-pink);
-  outline-offset: 1px;
 }
 
 /* Card footers: dotted separator, but preserve Card's slot padding and child flow. */

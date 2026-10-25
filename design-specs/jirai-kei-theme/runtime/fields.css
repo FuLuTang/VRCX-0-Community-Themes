@@ -51,3 +51,12 @@ input[type="file"]{color:var(--jk-slot-soft)}
 input[type="file"]::file-selector-button{appearance:none;-webkit-appearance:none;font:inherit;padding:2px 8px;margin-right:8px;border:1px solid var(--wd-frame);border-radius:0;background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised);transition:background-color var(--jk-step),box-shadow var(--jk-step),translate var(--jk-step)}
 input[type="file"]:not(:disabled)::file-selector-button:hover{background-color:var(--jk-key-dark-hover)}
 input[type="file"]:not(:disabled)::file-selector-button:active{box-shadow:var(--jk-sunken);translate:var(--jk-press-move)}
+
+/* Shared field labels and auxiliary controls migrated from fields-toolbar-r10. */
+:root{--jk-field-edge:#69557c #fdf4ff #fdf4ff #69557c;--jk-field-inset:inset 1px 1px #16112a,inset -1px -1px #a294c8;}
+:where([data-slot="field-label"]),:where([data-slot="label"]){color:#e3d2f5}
+:where([data-slot="field-description"]){color:#b9add9}
+:where([data-slot="field-error"]:not([data-vrcx-0-surface="login-page"] *)){color:#ff8fae}
+:where([data-slot="input-otp-slot"]){border-radius:0;border-color:#6c5ce0;background:#16112a;color:#f2ebff;box-shadow:inset 1px 1px #3d305e,inset -1px -1px #0e0a17;}
+:where([data-slot="input-otp-slot"]:is([data-active="true"],[data-focused])){border-color:#ff7fcf;outline:2px solid #ff7fcf;outline-offset:1px}
+:where(input[type="time"])::-webkit-calendar-picker-indicator{background:var(--wd-native-clock) center/16px 16px no-repeat;opacity:1}
