@@ -43,6 +43,8 @@
   {"name":"buttons-badges-r10","file":"buttons-badges-r10.css"},
   {"name":"badge","file":"badge.css","note":"Owns Badge/Kbd defaults, count modifier and pink-surface accents. Placed after legacy owners it replaces; defaults are layered so bell and other unlayered exceptions retain precedence."},
   {"name":"data-surfaces-r10","file":"data-surfaces-r10.css"},
+  {"name":"table","file":"table.css","note":"Owns rendered table surfaces and row states after the former data-surfaces owner; placed here to preserve cascade position while migrating rules. Ordinary hover deliberately retains #302650."},
+  {"name":"timeline","file":"timeline.css","note":"Owns only timeline marker/connector/date paint; follows table for isolated component styling and preserves app-provided size/status classes."},
   {"name":"banner-frame-r96","file":"banner-frame-r96.css"},
   {"name":"privacy-lock-r96","file":"privacy-lock-r96.css"},
   {"name":"brand-heart-r97","file":"brand-heart-r97.css"},

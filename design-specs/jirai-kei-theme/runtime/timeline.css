@@ -1,0 +1,10 @@
+/* Timeline suite owner. Preserve application-defined marker sizes, status fills,
+   spacing and copy; only restyle the major marker, connector and date ink. */
+[data-slot="timeline-item"] [data-slot="timeline-indicator"] { border-radius:0; }
+[data-slot="timeline-item"] [data-slot="timeline-indicator"][class~="size-3"] {
+  background-color:var(--wd-square);
+  border-color:var(--wd-frame);
+  box-shadow:var(--jk-raised-pink);
+}
+[data-slot="timeline-item"] [data-slot="timeline-separator"] { background-color:var(--wd-frame); }
+[data-slot="timeline-date"] { color:var(--wd-muted); }

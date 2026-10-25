@@ -645,7 +645,7 @@ svg.lucide-person-standing{transform:none}
 /* Explicit chrome-only font. Preserve user content and user-selected body font. */
 .vrcx-0-titlebar, .vrcx-0-statusbar,
 .vrcx-0-sidebar-surface [data-slot="sidebar-group-label"],
-.vrcx-0-table-header, [data-slot="dialog-title"] {
+[data-slot="dialog-title"] {
  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
  font-synthesis:none; font-size:12px;
 }
@@ -682,11 +682,7 @@ svg.lucide-person-standing{transform:none}
  background-repeat:no-repeat,no-repeat,repeat; background-position:left 14px bottom 92px,0 0,0 0; background-size:60px 60px,100% 100%,32px 32px;
 }
 /* The former heart/star main-content image is superseded by backgrounds-r7.css. */
-/* Only the data container is transparent. Sticky header/action surfaces and hover/expanded states stay opaque. */
-.vrcx-0-main-content .vrcx-0-data-table {
- --vrcx-0-table-surface:var(--wd-window); --vrcx-0-table-header-surface:var(--wd-raised);
- background-color:transparent; background-image:none;
-}
+/* Table container surface and table tokens are owned by table.css. */
 .vrcx-0-side-panel { background-image:var(--wd-bg-cloud); background-repeat:no-repeat; background-position:right 20px bottom 24px; background-size:96px 48px; }
 /* Card face and header skin are owned by card.css. Keep only the no-image guard. */
 [data-slot="card-header"] { background-image:none; }
@@ -3540,76 +3536,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
    and G4 page rows in checks/r9-coverage-audit/coverage-table.md.
    Paint-only on virtual/compact rows: do not alter their height, padding, position, or hit-area. */
 
-/* Data-table-only palette; do not leak table tokens into unrelated page surfaces. */
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) {
-  --vrcx-0-table-header-surface: var(--wd-raised);
-  --vrcx-0-table-header-foreground: var(--wd-text);
-  --vrcx-0-table-row-hover-surface: #302650;
-  --vrcx-0-table-row-selected-surface: var(--wd-select);
-  --vrcx-0-table-row-selected-hover-surface: #58458f;
-  --vrcx-0-table-row-expanded-surface: #332650;
-  --vrcx-0-table-row-striped-surface: #241b3c;
-  --vrcx-0-table-border: var(--wd-frame);
-  --vrcx-0-table-divider: #51436d;
-  --vrcx-0-table-striped-divider: #49385f;
-  --vrcx-0-table-sticky-edge: var(--wd-frame);
-  --vrcx-0-table-row-focus: var(--wd-pink);
-}
-
-/* Sticky table header: keep its existing pixel font, height, sticky position and cell sizing. */
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is(.vrcx-0-table-header, [data-slot="table-header"]) {
-  color: var(--wd-text);
-  background-color: var(--wd-raised);
-  border-bottom-color: #70518f;
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-header"] > tr {
-  border-bottom-style: dotted;
-  border-bottom-color: #70518f;
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-head"] {
-  color: var(--wd-text);
-  border-bottom-color: #70518f;
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-footer"] {
-  border-top-style: dotted;
-  border-top-color: #70518f;
-  border-radius: 0;
-  background-color: var(--wd-raised);
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-caption"] {
-  color: var(--wd-muted);
-}
-
-/* Selected rows echo the sidebar's pixel selection: pale violet field + 3px pink left edge.
-   The gradient is paint-only; no table-column width or virtual-row height is added. */
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row]):hover:where(:not([data-state="selected"]):not([data-state="expanded"]):not(:has([aria-expanded="true"]))) {
-  background-color: var(--vrcx-0-table-row-hover-surface);
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-row"][data-state="selected"],
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-vrcx-0-table-row][data-state="selected"] {
-  background-color: var(--wd-select);
-  background-image: linear-gradient(to right, var(--wd-square) 0 3px, transparent 3px);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: var(--wd-text);
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-row"][data-state="selected"] > [data-slot="table-cell"]:first-child,
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-vrcx-0-table-row][data-state="selected"] > [data-slot="table-cell"]:first-child {
-  box-shadow: inset 3px 0 var(--wd-square);
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-slot="table-row"][data-state="selected"]:hover,
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) [data-vrcx-0-table-row][data-state="selected"]:hover {
-  background-color: var(--vrcx-0-table-row-selected-hover-surface);
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row]):has([aria-expanded="true"]),
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row])[data-state="expanded"] {
-  background-color: var(--vrcx-0-table-row-expanded-surface);
-}
-:where(.vrcx-0-main-content) :is(.vrcx-0-data-table, .app-data-table) :is([data-slot="table-row"], [data-vrcx-0-table-row]):focus-visible {
-  outline: 2px dashed var(--wd-pink);
-  outline-offset: -2px;
-}
 
 /* Empty states get a quiet dashed pixel frame; LoadingState is explicitly left to loader-r9. */
 :where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) {
@@ -3926,6 +3852,82 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
   border-radius: 0;
   background-color: var(--wd-pink);
 }
+
+/* SECTION table */
+/* Table suite owner. DOM identity only; preserve layout, cell spacing and table-specific
+   virtualisation. App table wrappers share this skin; unrelated avatar/badge conditions
+   remain with their owning suites. */
+:is(.vrcx-0-data-table,.app-data-table) {
+  --vrcx-0-table-surface:var(--wd-window);
+  --vrcx-0-table-header-surface:var(--jk-bar-face);
+  --vrcx-0-table-header-foreground:var(--jk-bar-ink);
+  --vrcx-0-table-row-hover-surface:#302650; /* existing hover, intentionally unchanged */
+  --vrcx-0-table-row-selected-surface:var(--jk-bar-face);
+  --vrcx-0-table-row-selected-hover-surface:var(--jk-bar-face);
+  --vrcx-0-table-row-expanded-surface:#332650;
+  --vrcx-0-table-row-striped-surface:#241b3c;
+  --vrcx-0-table-border:var(--wd-frame);
+  --vrcx-0-table-divider:#51436d;
+  --vrcx-0-table-striped-divider:#49385f;
+  --vrcx-0-table-sticky-edge:var(--wd-frame);
+  --vrcx-0-table-row-focus:var(--wd-pink);
+  background-color:transparent;
+  background-image:none;
+}
+:is(.vrcx-0-data-table,.app-data-table) :is(.vrcx-0-table-header,[data-slot="table-header"]) {
+  color:var(--jk-bar-ink);
+  background-color:var(--jk-bar-face);
+  border-bottom-color:var(--jk-bar-accent);
+}
+:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-header"] > tr {
+  border-bottom-style:dotted;
+  border-bottom-color:var(--jk-bar-accent);
+}
+:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-head"] {
+  color:var(--jk-bar-ink);
+  background-color:var(--jk-bar-face);
+  border-bottom-color:var(--jk-bar-accent);
+}
+:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-head"] :is(button,[role="button"],svg) { color:var(--jk-bar-ink); }
+:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-footer"] {
+  border-top-style:dotted;
+  border-top-color:#70518f;
+  border-radius:0;
+  background-color:var(--wd-raised);
+  color:var(--wd-text);
+}
+:is(.vrcx-0-data-table,.app-data-table) [data-slot="table-caption"] { color:var(--wd-muted); }
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row]):hover:where(:not([data-state="selected"]):not([data-state="expanded"]):not(:has([aria-expanded="true"]))) {
+  background-color:#302650;
+}
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] {
+  background-color:var(--jk-bar-face);
+  background-image:none;
+  color:var(--jk-bar-ink);
+  box-shadow:var(--jk-raised-pink);
+}
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] > [data-slot="table-cell"] { color:var(--jk-bar-ink); }
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] a { color:var(--jk-bar-ink);text-decoration:underline;text-underline-offset:2px; }
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="selected"] [data-slot="badge"][data-variant="default"] {
+  background-color:var(--jk-bar-accent);color:var(--jk-bar-accent-text);border-color:var(--jk-bar-ink);
+}
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row]):has([aria-expanded="true"]),
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row])[data-state="expanded"] { background-color:#332650; }
+:is(.vrcx-0-data-table,.app-data-table) :is([data-slot="table-row"],[data-vrcx-0-table-row]):focus-visible { outline:2px dashed var(--wd-pink);outline-offset:-2px; }
+/* Header keeps the app's original pixel font sizing and synthesis settings. */
+.vrcx-0-table-header { font-family:"WD Pixel CJK",var(--vrcx-app-font-family,system-ui),sans-serif;font-synthesis:none;font-size:12px; }
+
+/* SECTION timeline */
+/* Timeline suite owner. Preserve application-defined marker sizes, status fills,
+   spacing and copy; only restyle the major marker, connector and date ink. */
+[data-slot="timeline-item"] [data-slot="timeline-indicator"] { border-radius:0; }
+[data-slot="timeline-item"] [data-slot="timeline-indicator"][class~="size-3"] {
+  background-color:var(--wd-square);
+  border-color:var(--wd-frame);
+  box-shadow:var(--jk-raised-pink);
+}
+[data-slot="timeline-item"] [data-slot="timeline-separator"] { background-color:var(--wd-frame); }
+[data-slot="timeline-date"] { color:var(--wd-muted); }
 
 /* SECTION banner-frame-r96 */
 .entity-dialog [data-slot="card-header"]>div.relative:has(>button[class*="aspect-[4/3]"][aria-label]):has(>.absolute.bottom-3.left-3.z-30.size-16){--r9-banner-stitch-opacity:.52;--r9-banner-hem-opacity:.96;--r96-banner-frame-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjgiIGhlaWdodD0iMjQ4IiB2aWV3Qm94PSIwIDAgMzI4IDI0OCIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj48ZGVmcz48cGF0dGVybiBpZD0icGVyZnMiIHdpZHRoPSIxNiIgaGVpZ2h0PSI4IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB4PSIyIiB5PSIyIiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmRmNGZmIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjIiIGhlaWdodD0iMiIgZmlsbD0iIzE2MTEyYSIvPjxyZWN0IHg9IjEwIiB5PSIxIiB3aWR0aD0iNCIgaGVpZ2h0PSI2IiBmaWxsPSIjZmY3ZmNmIi8+PHJlY3QgeD0iMTEiIHk9IjIiIHdpZHRoPSIyIiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmI4ZTYiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InBlcmZzViIgd2lkdGg9IjgiIGhlaWdodD0iMTYiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZGY0ZmYiLz48cmVjdCB4PSIzIiB5PSIzIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIiBmaWxsPSIjMTYxMTJhIi8+PHJlY3QgeD0iMSIgeT0iMTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZjdmY2YiLz48L3BhdHRlcm4+PC9kZWZzPjxwYXRoIGZpbGw9IiMxNjExMmEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEyIDBIMzE2VjRIMzIwVjhIMzI0VjEySDMyOFYyMzZIMzI0VjI0MEgzMjBWMjQ0SDMxNlYyNDhIMTJWMjQ0SDhWMjQwSDRWMjM2SDBWMTJINFY4SDhWNEgxMlogTTEyIDhIMzE2VjEySDMyMFYxNkgzMjRWMjMySDMyMFYyMzZIMzE2VjI0MEgxMlYyMzZIOFYyMzJINFYxNkg4VjEySDEyWiIvPjxwYXRoIGQ9Ik0xMiA0SDMxNk0xMiAyNDRIMzE2TTQgMTJWMjM2TTMyNCAxMlYyMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZjNWNlMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTIiIHk9IjAiIHdpZHRoPSIzMDQiIGhlaWdodD0iOCIgZmlsbD0idXJsKCNwZXJmcykiLz48cmVjdCB4PSIxMiIgeT0iMjQwIiB3aWR0aD0iMzA0IiBoZWlnaHQ9IjgiIGZpbGw9InVybCgjcGVyZnMpIi8+PHJlY3QgeD0iMCIgeT0iMTIiIHdpZHRoPSI4IiBoZWlnaHQ9IjIyNCIgZmlsbD0idXJsKCNwZXJmc1YpIi8+PHJlY3QgeD0iMzIwIiB5PSIxMiIgd2lkdGg9IjgiIGhlaWdodD0iMjI0IiBmaWxsPSJ1cmwoI3BlcmZzVikiLz48ZyBmaWxsPSIjZmZiOGU2Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNCIvPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjEyIi8+PHJlY3QgeD0iMzE2IiB5PSIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNCIvPjxyZWN0IHg9IjMyNCIgeT0iMCIgd2lkdGg9IjQiIGhlaWdodD0iMTIiLz48cmVjdCB4PSIwIiB5PSIyNDQiIHdpZHRoPSIxMiIgaGVpZ2h0PSI0Ii8+PHJlY3QgeD0iMCIgeT0iMjM2IiB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIvPjxyZWN0IHg9IjMxNiIgeT0iMjQ0IiB3aWR0aD0iMTIiIGhlaWdodD0iNCIvPjxyZWN0IHg9IjMyNCIgeT0iMjM2IiB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIvPjwvZz48ZyBmaWxsPSIjZmRmNGZmIj48cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ii8+PHJlY3QgeD0iMzIwIiB5PSI0IiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ii8+PHJlY3QgeD0iNCIgeT0iMjQwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ii8+PHJlY3QgeD0iMzIwIiB5PSIyNDAiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiLz48L2c+PGcgZmlsbD0iIzZjNWNlMCI+PHJlY3QgeD0iNSIgeT0iNSIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjMyMSIgeT0iNSIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjUiIHk9IjI0MSIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjMyMSIgeT0iMjQxIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PC9nPjwvc3ZnPg==")}

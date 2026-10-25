@@ -1,0 +1,9 @@
+[
+ {"id":"friends-head","fixture":"social_friend-list","select":"[data-slot=table-head]","index":0},
+ {"id":"friends-row","fixture":"social_friend-list","select":"[data-slot=table-row]","index":2},
+ {"id":"friends-avatar-cell","fixture":"social_friend-list","select":"[data-slot=table-cell]:has(img)","index":0},
+ {"id":"log-head","fixture":"game-log","select":"[data-slot=table-head]","index":0},
+ {"id":"log-row","fixture":"game-log","select":"[data-slot=table-row]","index":2},
+ {"id":"log-cell","fixture":"game-log","select":"[data-slot=table-cell]","index":0},
+ {"id":"activity-timeline","fixture":"activity","select":"[data-slot=timeline-item]","index":0}
+]

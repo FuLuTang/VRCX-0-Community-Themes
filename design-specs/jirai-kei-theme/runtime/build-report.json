@@ -1,5 +1,5 @@
 {
-  "cssBytes": 1018662,
+  "cssBytes": 1018829,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -25,7 +25,7 @@
     },
     {
       "name": "runtime",
-      "bytes": 10830
+      "bytes": 10576
     },
     {
       "name": "window-chrome",
@@ -169,7 +169,15 @@
     },
     {
       "name": "data-surfaces-r10",
-      "bytes": 20462
+      "bytes": 16544
+    },
+    {
+      "name": "table",
+      "bytes": 3710
+    },
+    {
+      "name": "timeline",
+      "bytes": 584
     },
     {
       "name": "banner-frame-r96",

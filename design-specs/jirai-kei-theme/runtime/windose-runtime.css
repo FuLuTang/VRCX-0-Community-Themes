@@ -10,7 +10,7 @@
 /* Explicit chrome-only font. Preserve user content and user-selected body font. */
 .vrcx-0-titlebar, .vrcx-0-statusbar,
 .vrcx-0-sidebar-surface [data-slot="sidebar-group-label"],
-.vrcx-0-table-header, [data-slot="dialog-title"] {
+[data-slot="dialog-title"] {
  font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
  font-synthesis:none; font-size:12px;
 }
@@ -47,11 +47,7 @@
  background-repeat:no-repeat,no-repeat,repeat; background-position:left 14px bottom 92px,0 0,0 0; background-size:60px 60px,100% 100%,32px 32px;
 }
 /* The former heart/star main-content image is superseded by backgrounds-r7.css. */
-/* Only the data container is transparent. Sticky header/action surfaces and hover/expanded states stay opaque. */
-.vrcx-0-main-content .vrcx-0-data-table {
- --vrcx-0-table-surface:var(--wd-window); --vrcx-0-table-header-surface:var(--wd-raised);
- background-color:transparent; background-image:none;
-}
+/* Table container surface and table tokens are owned by table.css. */
 .vrcx-0-side-panel { background-image:var(--wd-bg-cloud); background-repeat:no-repeat; background-position:right 20px bottom 24px; background-size:96px 48px; }
 /* Card face and header skin are owned by card.css. Keep only the no-image guard. */
 [data-slot="card-header"] { background-image:none; }
