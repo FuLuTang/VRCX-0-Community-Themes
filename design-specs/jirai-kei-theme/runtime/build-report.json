@@ -1,5 +1,5 @@
 {
-  "cssBytes": 922023,
+  "cssBytes": 922620,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -157,19 +157,23 @@
     },
     {
       "name": "buttons-badges-r10",
-      "bytes": 1344
+      "bytes": 970
     },
     {
       "name": "badge",
       "bytes": 3359
     },
     {
+      "name": "calendar",
+      "bytes": 1485
+    },
+    {
       "name": "data-surfaces-r10",
-      "bytes": 12311
+      "bytes": 11172
     },
     {
       "name": "misc",
-      "bytes": 2662
+      "bytes": 3587
     },
     {
       "name": "splitter",

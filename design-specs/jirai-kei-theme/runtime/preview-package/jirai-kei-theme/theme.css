@@ -3161,10 +3161,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) :where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)) {
   
-  &[data-slot="alert"]{border:1px solid #6c5ce0;border-radius:0;background:#201936;color:#f2ebff;box-shadow:inset 1px 1px rgb(253 244 255/.2),inset -1px -1px #16112a}
-  &[data-slot="alert"].text-destructive{border-color:#ff6b8a;background:#30182e;color:#ffd9e4}
-  &[data-slot="alert-title"]{color:#f2ebff}
-  &[data-slot="alert-description"]{color:#b9add9}
 
   
 
@@ -3222,6 +3218,48 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
   border-color:var(--wd-frame);background-color:var(--jk-key-dark);color:var(--jk-key-text);box-shadow:var(--jk-raised-pink);
 }
 
+/* SECTION calendar */
+
+
+:where(.vrcx-0-main-content,[data-slot="popover-content"],[data-slot="hover-card-content"],[data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"],.entity-dialog,.owner-dialog) [data-slot="calendar"] {
+  border-radius: 0;
+  background-color: var(--wd-window);
+  color: var(--wd-text);
+  box-shadow: inset 0 0 0 1px var(--wd-frame);
+  & [data-slot="calendar-month-caption"],
+  & .text-sm.font-medium {
+    color: var(--wd-text);
+  }
+  & [data-day] {
+    border-radius: 0;
+    color: var(--wd-text);
+  }
+  & [data-day][data-selected-single="true"],
+  & [data-day][data-range-start="true"],
+  & [data-day][data-range-end="true"] {
+    border-radius: 0;
+    background-color: var(--wd-square);
+    color: #16112a;
+  }
+  & [data-day][data-range-middle="true"] {
+    border-radius: 0;
+    background-color: var(--wd-select);
+    color: var(--wd-text);
+  }
+  & td[data-today="true"] > [data-day]:not([data-selected-single="true"]):not([data-range-start="true"]):not([data-range-end="true"]) {
+    outline: 1px dashed var(--wd-pink);
+    outline-offset: -2px;
+  }
+  & [data-day]:focus-visible {
+    outline: 2px dashed var(--wd-pink);
+    outline-offset: -2px;
+  }
+  & [data-day]:is(:disabled, [aria-disabled="true"]) {
+    color: var(--wd-faint);
+    opacity: .55;
+  }
+}
+
 /* SECTION data-surfaces-r10 */
 
 
@@ -3231,45 +3269,6 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 
 
 
-:is(:where(.vrcx-0-main-content) [data-slot="calendar"], :where([data-slot="popover-content"]) [data-slot="calendar"]) {
-  border-radius: 0;
-  background-color: var(--wd-window);
-  color: var(--wd-text);
-  box-shadow: inset 0 0 0 1px var(--wd-frame);
-& [data-slot="calendar-month-caption"],
-& .text-sm.font-medium {
-  color: var(--wd-text);
-}
-& [data-day] {
-  border-radius: 0;
-  color: var(--wd-text);
-}
-& [data-day][data-selected-single="true"],
-& [data-day][data-range-start="true"],
-& [data-day][data-range-end="true"] {
-  border-radius: 0;
-  background-color: var(--wd-square);
-  color: #16112a;
-}
-& [data-day][data-range-middle="true"] {
-  border-radius: 0;
-  background-color: var(--wd-select);
-  color: var(--wd-text);
-}
-& td[data-today="true"] > [data-day]:not([data-selected-single="true"]):not([data-range-start="true"]):not([data-range-end="true"]) {
-  outline: 1px dashed var(--wd-pink);
-  outline-offset: -2px;
-}
-& [data-day]:focus-visible {
-  outline: 2px dashed var(--wd-pink);
-  outline-offset: -2px;
-}
-& [data-day]:is(:disabled, [aria-disabled="true"]) {
-  color: var(--wd-faint);
-  opacity: .55;
-}
-
-}
 
 
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="card-footer"] {
@@ -3495,6 +3494,15 @@ html.reduce-effects .vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot=
 
 /* SECTION misc */
 
+
+
+
+:where(:is(.vrcx-0-main-content,.vrcx-0-side-panel) :not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action), :is([data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"],[data-slot="popover-content"],[data-slot="hover-card-content"],.entity-dialog,.owner-dialog) *) {
+  &[data-slot="alert"]{border:1px solid #6c5ce0;border-radius:0;background:#201936;color:#f2ebff;box-shadow:inset 1px 1px rgb(253 244 255/.2),inset -1px -1px #16112a}
+  &[data-slot="alert"].text-destructive{border-color:#ff6b8a;background:#30182e;color:#ffd9e4}
+  &[data-slot="alert-title"]{color:#f2ebff}
+  &[data-slot="alert-description"]{color:#b9add9}
+}
 
 
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) [data-slot="separator"][data-orientation]:where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action):not([data-slot="toggle-group"] *)) { background:var(--wd-frame); }

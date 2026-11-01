@@ -3,11 +3,7 @@
 
 /* Tabs paint is owned by controls-r9 and the dedicated side-panel rail. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) :where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)) {
-  /* Inline alert panels, with a destructive semantic rail. */
-  &[data-slot="alert"]{border:1px solid #6c5ce0;border-radius:0;background:#201936;color:#f2ebff;box-shadow:inset 1px 1px rgb(253 244 255/.2),inset -1px -1px #16112a}
-  &[data-slot="alert"].text-destructive{border-color:#ff6b8a;background:#30182e;color:#ffd9e4}
-  &[data-slot="alert-title"]{color:#f2ebff}
-  &[data-slot="alert-description"]{color:#b9add9}
+  /* Inline alerts are owned by misc.css. */
 
   /* Precisely gated source-shaped floating bars; unrelated rounded surfaces stay intact.
      Both padding classes have identical specificity; :is() keeps that unchanged. */
