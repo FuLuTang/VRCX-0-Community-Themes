@@ -1,4 +1,4 @@
-/* R10-G3 overlays not owned by popup.css. Notification-center sheet remains
+/* R10-G3 overlays not owned by components/popup.css. Notification-center sheet remains
    untouched for its separate owner; toast rules remain here as well. */
 /* Base UI toast Root is a direct child of its viewport and has no data-slot itself. */
 [data-slot="toast-viewport"] > * {

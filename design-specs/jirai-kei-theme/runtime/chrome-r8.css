@@ -1,4 +1,4 @@
-/* R8 chrome pass. Append after window-chrome.css and navigation-r7.css.
+/* R8 chrome pass. Append after regions/window-chrome.css and regions/sidebar/navigation.css.
    Scope is paint only: preserve titlebar/statusbar dimensions, all app status fills,
    statusbar ::before lace geometry/animation, and application-owned RGB ::after. */
 :root {
@@ -22,7 +22,7 @@
     color: var(--r8-ink);
 }
 
-/* Menubar plates (not Button): square, no transition. Buttons in the titlebar belong to button.css. */
+/* Menubar plates (not Button): square, no transition. Buttons in the titlebar belong to components/button.css. */
 .vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar-trigger'] {
     box-sizing: border-box;
     border-radius: 0;

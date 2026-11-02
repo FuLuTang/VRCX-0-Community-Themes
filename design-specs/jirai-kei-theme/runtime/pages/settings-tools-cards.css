@@ -9,8 +9,8 @@
  --jk-r97-lace:var(--jk-r97-lace-px) 0 0/16px 8px repeat-x;
  --jk-r97-lace-cut:polygon(0 2px,2px 2px,2px 0,calc(100% - 2px) 0,calc(100% - 2px) 2px,100% 2px,100% calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) calc(100% + 8px),2px calc(100% + 8px),2px calc(100% - 2px),0 calc(100% - 2px));
 }
-/* Rail lace (tabs-list clip/::after/padding-bottom) lives in tabs.css; the --jk-r97-lace* variables stay above. */
-/* Shared collapsible-card frame/title bar is owned by card.css. The card-header
+/* Rail lace (tabs-list clip/::after/padding-bottom) lives in components/tabs.css; the --jk-r97-lace* variables stay above. */
+/* Shared collapsible-card frame/title bar is owned by components/card.css. The card-header
    trigger charm, hover, and lace embellishments below remain here. */
 /* Keep the rounded-bottom child clipping inside Tools cards; Card is only its context. */
 [data-tools-section] [data-slot=card-content] .rounded-b-xl{border-radius:0}

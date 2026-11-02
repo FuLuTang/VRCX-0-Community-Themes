@@ -9,7 +9,7 @@ const isolated=Boolean(process.env.JIRAI_OUT);
 await fs.mkdir(out,{recursive:true});
 const read=p=>fs.readFile(p,'utf8');
 // Standalone base variables; preserve the original block bytes and palette conversions below.
-let tokens=await read(path.join(here,'tokens.css'));
+let tokens=await read(path.join(here,'foundation/tokens.css'));
 const palette={'#161219':'#16112a','#f7eef4':'#f2ebff','#211b25':'#201936','#2b2230':'#2a2147','#f0a8c8':'#ff7fcf','#271722':'#16112a','#c4aab9':'#b9add9','#392a38':'#332650','#ff8899':'#ff6b8a','#564151':'#6c5ce0','#bdb3c2':'#a294c8','#4a293d':'#4a3784','#b9cfa9':'#6fe3d3','#e0b97f':'#ffd36f','#ad80d7':'#8f7fe0','0.5rem':'2px'};
 for(const [a,b]of Object.entries(palette))tokens=tokens.split(a).join(b);
 // `none` is not a valid item inside the app's comma-separated box-shadow list; it voided the whole workspace frame.

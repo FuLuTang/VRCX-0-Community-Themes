@@ -142,14 +142,14 @@
     padding-right: 17px;
 }
 /* Fusion Pixel has real lowercase (Silkscreen does not), so the brand never gets
-   forced to caps; --wd-body-font-family is defined in fonts-pixel-body.css. */
+   forced to caps; --wd-body-font-family is defined in foundation/body-typography.css. */
 .vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand {
     position: relative;
     font-family: var(--wd-body-font-family, 'WD Pixel CJK');
     font-synthesis: none;
 }
 /* Reserve the decorative pseudo-element without adding DOM/layout impact.
-   brand-heart-r97.css is the single owner of its art, placement and animation. */
+   regions/titlebar/brand-heart.css is the single owner of its art, placement and animation. */
 .vrcx-0-titlebar[data-app-titlebar] .vrcx-0-brand::after {
     content: '';
     position: absolute;

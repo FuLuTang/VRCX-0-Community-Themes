@@ -5,7 +5,7 @@
    Paint-only on virtual/compact rows: do not alter their height, padding, position, or hit-area. */
 
 
-/* Calendar is owned by calendar.css, immediately before this fragment. */
+/* Calendar is owned by components/calendar.css, immediately before this fragment. */
 
 /* Card footers: dotted separator, but preserve Card's slot padding and child flow. */
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="card-footer"] {
@@ -20,7 +20,7 @@
    Favorites TileShell and .object-row consumers (favorites/browse-history) remain untouched;
    My Avatars has its separate controls-r9 selector and is intentionally not matched here. */
 /* The Button half of the former mixed TileShell selectors remains here; Card's
-   matching skin and states are now owned by card.css. */
+   matching skin and states are now owned by components/card.css. */
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"] {
   border-radius: 0;
   border-color: var(--jk-panel-edge);

@@ -1,5 +1,5 @@
 {
-  "cssBytes": 922550,
+  "cssBytes": 922607,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -25,31 +25,31 @@
     },
     {
       "name": "runtime",
-      "bytes": 10406
+      "bytes": 10466
     },
     {
       "name": "window-chrome",
-      "bytes": 8745
+      "bytes": 8768
     },
     {
-      "name": "group-spacing",
+      "name": "side-panel-group-spacing",
       "bytes": 1392
     },
     {
       "name": "body-typography",
-      "bytes": 2616
+      "bytes": 2627
     },
     {
       "name": "side-panel",
-      "bytes": 4236
+      "bytes": 4247
     },
     {
       "name": "feed-badges",
-      "bytes": 5652
+      "bytes": 5658
     },
     {
       "name": "settings",
-      "bytes": 5669
+      "bytes": 5691
     },
     {
       "name": "pixel-controls",
@@ -61,14 +61,14 @@
     },
     {
       "name": "motion",
-      "bytes": 1783
+      "bytes": 1815
     },
     {
-      "name": "navigation-r7",
+      "name": "sidebar-navigation",
       "bytes": 2698
     },
     {
-      "name": "motion-r7",
+      "name": "side-panel-cat-motion",
       "bytes": 701
     },
     {
@@ -76,64 +76,64 @@
       "bytes": 3841
     },
     {
-      "name": "backgrounds-r7",
+      "name": "main-wallpaper",
       "bytes": 1027
     },
     {
       "name": "chrome-r8",
-      "bytes": 5912
+      "bytes": 5944
     },
     {
-      "name": "bio-diff-r8",
+      "name": "entity-bio-diff",
       "bytes": 2014
     },
     {
       "name": "motion-r8",
-      "bytes": 2703
+      "bytes": 2733
     },
     {
       "name": "sidebar-nav",
       "bytes": 3123
     },
     {
-      "name": "cat-r8-final",
-      "bytes": 1258
+      "name": "sidebar-cat-pocket",
+      "bytes": 1271
     },
     {
       "name": "user-dialog-r8",
       "bytes": 3383
     },
     {
-      "name": "login-r8",
+      "name": "login",
       "bytes": 6106
     },
     {
-      "name": "user-dialog-r9",
+      "name": "entity-banner",
       "bytes": 3390
     },
     {
-      "name": "badge-r9",
+      "name": "titlebar-bell-badge",
       "bytes": 2866
     },
     {
       "name": "controls-r9",
-      "bytes": 4675
+      "bytes": 4697
     },
     {
       "name": "popups-r9",
-      "bytes": 2668
+      "bytes": 2679
     },
     {
       "name": "avatars-status-r9",
       "bytes": 11588
     },
     {
-      "name": "loader-r9",
+      "name": "loader-dancer",
       "bytes": 29738
     },
     {
       "name": "overlays-r10",
-      "bytes": 2391
+      "bytes": 2402
     },
     {
       "name": "popup",
@@ -144,16 +144,16 @@
       "bytes": 8188
     },
     {
-      "name": "favorites-r9",
+      "name": "favorites",
       "bytes": 7448
     },
     {
-      "name": "browse-history-r9",
-      "bytes": 5545
+      "name": "browse-history",
+      "bytes": 5567
     },
     {
       "name": "badge",
-      "bytes": 3359
+      "bytes": 3378
     },
     {
       "name": "calendar",
@@ -161,7 +161,7 @@
     },
     {
       "name": "data-surfaces-r10",
-      "bytes": 11172
+      "bytes": 11194
     },
     {
       "name": "misc",
@@ -169,7 +169,7 @@
     },
     {
       "name": "splitter",
-      "bytes": 2417
+      "bytes": 2414
     },
     {
       "name": "table",
@@ -180,32 +180,32 @@
       "bytes": 584
     },
     {
-      "name": "banner-frame-r96",
+      "name": "entity-banner-frame",
       "bytes": 3956
     },
     {
-      "name": "privacy-lock-r96",
+      "name": "privacy-lock",
       "bytes": 1715
     },
     {
-      "name": "brand-heart-r97",
+      "name": "titlebar-brand-heart",
       "bytes": 3921
     },
     {
-      "name": "cat-motion-r96",
+      "name": "sidebar-cats-motion",
       "bytes": 1472
     },
     {
       "name": "loader-r97",
-      "bytes": 1662
+      "bytes": 1666
     },
     {
       "name": "spinner",
-      "bytes": 1939
+      "bytes": 1943
     },
     {
-      "name": "cards-r97",
-      "bytes": 3679
+      "name": "settings-tools-cards",
+      "bytes": 3701
     },
     {
       "name": "card",
@@ -213,23 +213,23 @@
     },
     {
       "name": "tabs",
-      "bytes": 9728
+      "bytes": 9733
     },
     {
       "name": "toggle-group",
       "bytes": 2003
     },
     {
-      "name": "language-badges-r98",
+      "name": "language-badge",
       "bytes": 1377
     },
     {
-      "name": "status-icons-r10",
+      "name": "toast-icons",
       "bytes": 9849
     },
     {
-      "name": "nav-phone-r10",
-      "bytes": 16543
+      "name": "sidebar-nav-phone",
+      "bytes": 16548
     },
     {
       "name": "button",

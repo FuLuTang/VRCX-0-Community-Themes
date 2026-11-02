@@ -44,9 +44,9 @@
    ToolbarControls.tsx:350 wraps a ToggleGroupItem).
    -------------------------------------------------------------------------- */
 
-/* Settings rail geometry, shared face and lace all live in tabs.css. */
+/* Settings rail geometry, shared face and lace all live in components/tabs.css. */
 
-/* SettingsCard ornament and shared collapsible-card frame are owned by card.css.
+/* SettingsCard ornament and shared collapsible-card frame are owned by components/card.css.
    The trigger's bow charm and lace below remain this fragment's embellishments. */
 .vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]{position:relative;padding-left:36px;padding-right:10px;border-radius:0;color:#f2ebff}
 .vrcx-0-page-scaffold>[data-slot=tabs][data-orientation=vertical]:has(> [data-slot=tabs-list]) [data-slot=card-header] [data-slot=collapsible-trigger]:hover{background-color:#3a2b63}

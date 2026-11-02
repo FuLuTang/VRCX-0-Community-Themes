@@ -1,8 +1,8 @@
 /*
- * R8 motion layer; load AFTER motion-r5.css, motion-r7.css and chrome-r8.css.
+ * R8 motion layer; load AFTER motion-r5.css, motion/side-panel-cat.css and chrome-r8.css.
  * It owns the 36px nav-content pocket, statusbar lace timing, and active-tab motion;
- * cat-motion-r96.css is the sole owner of the SOCIAL ::after cat loop.
- * Title-heart art/motion belongs exclusively to brand-heart-r97.css.
+ * motion/sidebar-cats.css is the sole owner of the SOCIAL ::after cat loop.
+ * Title-heart art/motion belongs exclusively to regions/titlebar/brand-heart.css.
  * This module does not touch app-owned status colors,
  * statusbar::after RGB, main-content::before wallpaper, or the main-content::after
  * 2px resize accent. All movement is on decoration only.

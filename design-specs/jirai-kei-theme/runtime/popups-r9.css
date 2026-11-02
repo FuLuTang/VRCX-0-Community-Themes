@@ -1,5 +1,5 @@
 /* Avatar/status shaping remains owned by this legacy fragment. Popup surfaces and
-   menu states moved to popup.css; menu avatar geometry belongs to avatar suite. */
+   menu states moved to components/popup.css; menu avatar geometry belongs to avatar suite. */
 /* Only shape: accessible masks and status color mapping remain untouched. */
 i.x-user-status { border-radius:0;box-shadow:0 0 0 1px #100b1e; }
 /* Keep VRChat membership-frame children visible. For unframed avatars, clear the shell border and

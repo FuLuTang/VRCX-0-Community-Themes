@@ -59,7 +59,7 @@
 /* --------------------------------------------------------------------------
    R4-9 · the vertical tab strip becomes folder tabs on the pane's right edge.
    The rail tabs themselves (list frame, [role=tab] states, spine and seam cut)
-   live in tabs.css (tier 3). This fragment keeps only the panel they fuse with.
+   live in components/tabs.css (tier 3). This fragment keeps only the panel they fuse with.
 
    The inner box is the friends panel: Tabs' first div child
    (SidePanel.tsx:401); the rail is its sibling (SidePanel.tsx:499). They are

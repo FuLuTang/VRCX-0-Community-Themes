@@ -1,5 +1,5 @@
 /* ==========================================================================
-   R4 · dynamic-list (feed) type icons & badges            feed-badges.css
+   R4 · dynamic-list (feed) type icons & badges            pages/feed-badges.css
    Concatenate LAST in build-runtime.mjs (after body-typography). Main app is
    read-only; every selector below is anchored on a class/attribute that the
    application writes as a literal (evidence in ../research/feed-r4.md).

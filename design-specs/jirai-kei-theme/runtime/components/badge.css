@@ -1,5 +1,5 @@
 /* Badge + Kbd suite owner. Defaults live in jirai-badge; the notification bell
-   remains the unlayered animated exception in badge-r9.css. */
+   remains the unlayered animated exception in regions/titlebar/bell-badge.css. */
 @layer jirai-badge {
   /* Tier 1 · Badge labels everywhere, including dialogs and popovers. */
   :where([data-slot="badge"]:not(button:has(> svg.lucide-bell) > *) ) {

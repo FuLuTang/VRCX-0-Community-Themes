@@ -51,7 +51,7 @@
 [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after {
   content: "";
   /* sidebar-inner also carries .vrcx-0-sidebar-surface, whose ::after is display:none
-     (navigation-r7 retires the R5 pendant there). Re-enable explicitly. */
+     (sidebar-navigation retires the R5 pendant there). Re-enable explicitly. */
   display: block;
   position: absolute;
   /* Anchored to the top of the 32px title bar: the window tab bar above wins the stacking

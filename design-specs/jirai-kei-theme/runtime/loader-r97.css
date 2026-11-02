@@ -1,5 +1,5 @@
 /* R9.7 loader routing (inventory: checks/r97-loader/inventory.md).
-   A = page/block loaders -> loader-r9 dancer (reuses its sheet vars + keyframes).
+   A = page/block loaders -> loader-dancer dancer (reuses its sheet vars + keyframes).
    B = button/inline spinners -> stepped pixel ring; static refresh icons untouched. */
 :root{--jk-dance:jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames),end) infinite}
 svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation-timing-function:steps(8,end)}

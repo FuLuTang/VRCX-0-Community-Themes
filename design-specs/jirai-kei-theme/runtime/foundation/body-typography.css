@@ -1,4 +1,4 @@
-/* Windose body typography, r3: concatenate AFTER fonts.css and windose-runtime.css.
+/* Windose body typography, r3: concatenate AFTER foundation/fonts.css and windose-runtime.css.
    User-requested pixel UI + user text. No assets, size/line-height overrides,
    blanket descendants, icon selectors, or font-synthesis changes here. */
 :root {

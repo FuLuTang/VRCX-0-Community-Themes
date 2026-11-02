@@ -1,6 +1,6 @@
 /* Shared draggable resizable handles; paint only, preserve layout and hit areas. */
 /* Resize grip: use the existing pseudo hit-strip; keep separator dimensions and focus geometry intact.
-   Favorites owns its splitter via favorites-r9; exclude its group ID and the favorites-body decoy host. */
+   Favorites owns its splitter via favorites; exclude its group ID and the favorites-body decoy host. */
 :where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="resizable-handle"] {
   background-color: var(--wd-frame);
   color: var(--wd-text);

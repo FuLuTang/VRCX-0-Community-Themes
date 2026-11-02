@@ -70,7 +70,7 @@
    (no `data-active="false"`), while the app's Tooltip wrapper overwrites
    data-slot with "tooltip-trigger" - so `[data-slot='tabs-tab']` never matches
    these tabs. Select on the real role/attribute instead of the slot. The
-   friends panel they fuse with is styled in side-panel-r4.css.
+   friends panel they fuse with is styled in regions/side-panel.css.
    -------------------------------------------------------------------------- */
 /* Resting tabs: dark, frameless, clearly outside the panel. The list still
    carries the underline variant's 4px inline padding, which left a 4px strip of

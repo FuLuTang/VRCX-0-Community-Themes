@@ -18,7 +18,7 @@
 .vrcx-0-titlebar { background-color:var(--wd-title); border-bottom:1px solid var(--wd-frame); }
 .vrcx-0-statusbar { background-color:var(--wd-title); border-top:1px solid var(--wd-frame); }
 .vrcx-0-sidebar-surface { background-color:#1e1a3e; border-right:1px solid var(--wd-frame); }
-/* Main-content wallpaper and surface are owned by backgrounds-r7.css. */
+/* Main-content wallpaper and surface are owned by regions/main-wallpaper.css. */
 .vrcx-0-side-panel { background-color:#291c3e; border-left:1px solid var(--wd-frame); }
 /* FriendsSidebar ListSectionHeader: actual collapsible button with title, count and chevron.
    Keep its virtual-row allocation; do not add blocks or alter spacer/row transforms. */
@@ -46,16 +46,16 @@
  background-image:var(--r5-pixel-mascot),linear-gradient(rgb(30 26 62 / .7),rgb(30 26 62 / .7)),var(--r5-pattern-heart-check);
  background-repeat:no-repeat,no-repeat,repeat; background-position:left 14px bottom 92px,0 0,0 0; background-size:60px 60px,100% 100%,32px 32px;
 }
-/* The former heart/star main-content image is superseded by backgrounds-r7.css. */
-/* Table container surface and table tokens are owned by table.css. */
+/* The former heart/star main-content image is superseded by regions/main-wallpaper.css. */
+/* Table container surface and table tokens are owned by components/table.css. */
 .vrcx-0-side-panel { background-image:var(--wd-bg-cloud); background-repeat:no-repeat; background-position:right 20px bottom 24px; background-size:96px 48px; }
-/* Card face and header skin are owned by card.css. Keep only the no-image guard. */
+/* Card face and header skin are owned by components/card.css. Keep only the no-image guard. */
 [data-slot="card-header"] { background-image:none; }
 
-/* Dialog frames and overlays are owned by dialog.css. Keep title text defaults. */
+/* Dialog frames and overlays are owned by components/dialog.css. Keep title text defaults. */
 [data-slot="dialog-title"] { color:var(--wd-text); }
 
-/* Tabs paint (incl. the entity-dialog tabs-row heart) lives in tabs.css. */
+/* Tabs paint (incl. the entity-dialog tabs-row heart) lives in components/tabs.css. */
 /* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] { position:relative; }
 .entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {

@@ -1,10 +1,10 @@
-/* R5 motion layer: append after window-chrome.css and pixel-controls.css. */
+/* R5 motion layer: append after regions/window-chrome.css and pixel-controls.css. */
 @keyframes r5-charm-swing { 0%,70%,100%{transform:translateY(0)} 78%{transform:translateY(-2px)} 86%{transform:translateY(0)} }
 @keyframes r5-dialog-step-in { from{opacity:0} to{opacity:1} }
 @keyframes r5-spinner-step { to { transform:rotate(360deg) } }
 @keyframes r5-progress-flow { to { background-position:10px 50% } }
 
-/* Title-heart and statusbar-lace motion are owned by brand-heart-r97.css and motion-r8.css. */
+/* Title-heart and statusbar-lace motion are owned by regions/titlebar/brand-heart.css and motion-r8.css. */
 /* Leader R5: sparkles live in the empty right end of the 24px SOCIAL title strip (::before),
    never over friend rows. Full-colour art, twinkle via opacity steps. */
 .vrcx-0-side-panel { position:relative; }
@@ -15,7 +15,7 @@
 [data-slot="sidebar"][data-state="collapsed"] .vrcx-0-sidebar-surface::after { display:none; }
 .vrcx-0-sidebar-surface::after { content:""; position:absolute; right:8px; bottom:104px; width:48px; height:72px; background-image:var(--r5-ribbon-pendant); background-size:48px 72px; background-repeat:no-repeat; pointer-events:none; animation:r5-charm-swing 4.8s steps(3,end) infinite; }
 [data-slot="progress-indicator"] { animation:r5-progress-flow 1.8s steps(5,end) infinite; }
-/* Dialog suite owns open motion in dialog.css. */
+/* Dialog suite owns open motion in components/dialog.css. */
 
 @media (prefers-reduced-motion:reduce) {
  
