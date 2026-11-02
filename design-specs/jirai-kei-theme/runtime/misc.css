@@ -33,3 +33,11 @@
   color: var(--wd-text); font-family: "WD Pixel CJK", var(--vrcx-app-font-family, system-ui), sans-serif; font-synthesis: none; text-wrap: pretty;
 }
 :where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] { color: var(--wd-muted); text-wrap: pretty; }
+
+/* Floating selection/action bars (formerly buttons-badges-r10.css). Precisely gated source shape;
+   unrelated rounded surfaces stay intact. */
+:where(.vrcx-0-main-content,.vrcx-0-side-panel) :where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)) {
+  /* Precisely gated source-shaped floating bars; unrelated rounded surfaces stay intact.
+     Both padding classes have identical specificity; :is() keeps that unchanged. */
+  &:is(div).bg-popover.text-popover-foreground:has(> span.text-muted-foreground:is(.px-1\.5,.px-2).font-medium.whitespace-nowrap.tabular-nums):has(> [data-slot="button"]){border-radius:0;border-color:#6c5ce0;background:#201936;box-shadow:0 0 0 1px #3d305e,3px 3px 0 #100b1e;backdrop-filter:none}
+}
