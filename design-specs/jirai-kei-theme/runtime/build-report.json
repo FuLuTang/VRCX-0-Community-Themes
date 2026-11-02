@@ -1,11 +1,11 @@
 {
-  "cssBytes": 922607,
+  "cssBytes": 923713,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
     {
       "name": "tokens",
-      "bytes": 5163
+      "bytes": 5174
     },
     {
       "name": "native-icons",
@@ -24,12 +24,32 @@
       "bytes": 111131
     },
     {
-      "name": "runtime",
-      "bytes": 10466
+      "name": "foundation-windose-palette",
+      "bytes": 726
+    },
+    {
+      "name": "regions-app-frame",
+      "bytes": 3987
+    },
+    {
+      "name": "entity-dialog-banner-avatar",
+      "bytes": 1379
+    },
+    {
+      "name": "components-avatar-base",
+      "bytes": 2887
+    },
+    {
+      "name": "foundation-app-utilities",
+      "bytes": 1692
+    },
+    {
+      "name": "regions-sidebar-compact-and-reduced",
+      "bytes": 818
     },
     {
       "name": "window-chrome",
-      "bytes": 8768
+      "bytes": 8821
     },
     {
       "name": "side-panel-group-spacing",
@@ -37,31 +57,43 @@
     },
     {
       "name": "body-typography",
-      "bytes": 2627
+      "bytes": 2629
     },
     {
       "name": "side-panel",
-      "bytes": 4247
+      "bytes": 4251
     },
     {
       "name": "feed-badges",
-      "bytes": 5658
+      "bytes": 5669
     },
     {
-      "name": "settings",
-      "bytes": 5691
+      "name": "components-number-field",
+      "bytes": 3758
     },
     {
-      "name": "pixel-controls",
-      "bytes": 13738
+      "name": "pages-settings-ornaments",
+      "bytes": 2200
+    },
+    {
+      "name": "components-switch",
+      "bytes": 9187
+    },
+    {
+      "name": "foundation-scrollbars",
+      "bytes": 4004
+    },
+    {
+      "name": "components-progress",
+      "bytes": 967
     },
     {
       "name": "assets-r5",
       "bytes": 79337
     },
     {
-      "name": "motion",
-      "bytes": 1815
+      "name": "motion-ornaments-and-primitives",
+      "bytes": 2002
     },
     {
       "name": "sidebar-navigation",
@@ -77,31 +109,47 @@
     },
     {
       "name": "main-wallpaper",
-      "bytes": 1027
+      "bytes": 1029
     },
     {
-      "name": "chrome-r8",
-      "bytes": 5944
+      "name": "regions-titlebar-paint",
+      "bytes": 3915
+    },
+    {
+      "name": "regions-sidebar-footer",
+      "bytes": 731
+    },
+    {
+      "name": "regions-statusbar-paint",
+      "bytes": 1748
     },
     {
       "name": "entity-bio-diff",
       "bytes": 2014
     },
     {
-      "name": "motion-r8",
-      "bytes": 2733
+      "name": "motion-chrome-decorations",
+      "bytes": 2998
     },
     {
       "name": "sidebar-nav",
-      "bytes": 3123
+      "bytes": 3165
     },
     {
       "name": "sidebar-cat-pocket",
       "bytes": 1271
     },
     {
-      "name": "user-dialog-r8",
-      "bytes": 3383
+      "name": "entity-dialog-nameplate",
+      "bytes": 1426
+    },
+    {
+      "name": "entity-dialog-range",
+      "bytes": 1784
+    },
+    {
+      "name": "entity-dialog-banner-base",
+      "bytes": 597
     },
     {
       "name": "login",
@@ -116,24 +164,36 @@
       "bytes": 2866
     },
     {
-      "name": "controls-r9",
-      "bytes": 4697
+      "name": "pages-activity-showcase",
+      "bytes": 642
     },
     {
-      "name": "popups-r9",
-      "bytes": 2679
+      "name": "pages-my-avatars",
+      "bytes": 1461
     },
     {
-      "name": "avatars-status-r9",
-      "bytes": 11588
+      "name": "pages-community-themes",
+      "bytes": 904
+    },
+    {
+      "name": "pages-mutual-friends-overlays",
+      "bytes": 2196
+    },
+    {
+      "name": "components-avatar",
+      "bytes": 14483
     },
     {
       "name": "loader-dancer",
       "bytes": 29738
     },
     {
-      "name": "overlays-r10",
-      "bytes": 2402
+      "name": "components-toast",
+      "bytes": 1057
+    },
+    {
+      "name": "pages-notification-center",
+      "bytes": 1624
     },
     {
       "name": "popup",
@@ -160,12 +220,52 @@
       "bytes": 1485
     },
     {
-      "name": "data-surfaces-r10",
-      "bytes": 11194
+      "name": "components-object-row",
+      "bytes": 2226
+    },
+    {
+      "name": "pages-feed-columns",
+      "bytes": 1760
+    },
+    {
+      "name": "pages-friend-list",
+      "bytes": 707
+    },
+    {
+      "name": "pages-instance-history",
+      "bytes": 1120
+    },
+    {
+      "name": "pages-game-log",
+      "bytes": 694
+    },
+    {
+      "name": "pages-dashboard",
+      "bytes": 1716
+    },
+    {
+      "name": "pages-group-moderation",
+      "bytes": 612
+    },
+    {
+      "name": "pages-vrchat-log",
+      "bytes": 702
+    },
+    {
+      "name": "pages-mutual-friends-history",
+      "bytes": 891
+    },
+    {
+      "name": "pages-activity-palette",
+      "bytes": 1635
+    },
+    {
+      "name": "components-progress-custom",
+      "bytes": 699
     },
     {
       "name": "misc",
-      "bytes": 4407
+      "bytes": 4426
     },
     {
       "name": "splitter",
@@ -189,19 +289,15 @@
     },
     {
       "name": "titlebar-brand-heart",
-      "bytes": 3921
+      "bytes": 3986
     },
     {
       "name": "sidebar-cats-motion",
       "bytes": 1472
     },
     {
-      "name": "loader-r97",
-      "bytes": 1666
-    },
-    {
-      "name": "spinner",
-      "bytes": 1943
+      "name": "components-spinner",
+      "bytes": 3881
     },
     {
       "name": "settings-tools-cards",
@@ -233,7 +329,7 @@
     },
     {
       "name": "button",
-      "bytes": 12274
+      "bytes": 12284
     },
     {
       "name": "fields",
@@ -241,7 +337,7 @@
     },
     {
       "name": "choice",
-      "bytes": 5861
+      "bytes": 5864
     }
   ],
   "previewBytes": 24252,

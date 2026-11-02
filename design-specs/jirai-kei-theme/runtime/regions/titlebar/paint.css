@@ -1,3 +1,4 @@
+/* 窗口涂装共享变量、标题栏菜单及窗口按钮状态；从 旧片段 chrome-r8（原文件）:1–73 连续拆出/原序合并。 */
 /* R8 chrome pass. Append after regions/window-chrome.css and regions/sidebar/navigation.css.
    Scope is paint only: preserve titlebar/statusbar dimensions, all app status fills,
    statusbar ::before lace geometry/animation, and application-owned RGB ::after. */
@@ -71,59 +72,3 @@
         inset -1px -1px 0 rgb(72 12 39 / 0.5);
 }
 
-/* Footer becomes a recessed sibling of the R7 menu panel. Reserve right-side cat space;
-   no pseudo-element is claimed here, so a later task can own footer::after. */
-.vrcx-0-sidebar-surface [data-sidebar='footer'] {
-    background-color: #211a33;
-    border: 1px solid #4b3a63;
-    border-radius: 0;
-    padding-block: 7px;
-    box-shadow: inset 1px 1px 0 #120d20,
-        inset -1px -1px 0 #4b3a63,
-        inset 0 2px 0 #3f2c50;
-}
-[data-slot='sidebar'][data-state='expanded'] .vrcx-0-sidebar-surface [data-sidebar='footer'] {
-    box-sizing: border-box;
-    padding-inline-end: 32px;
-}
-
-/* Statusbar and lace share the measured R8.2 cloth color; keep its 1px border box. */
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] {
-    background-color: var(--r8-status-face);
-    border-top-color: var(--r8-status-face);
-    color: var(--r8-ink);
-}
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] > div[class~='min-h-6'][class~='flex-col'] {
-    background-color: var(--r8-status-face);
-    box-shadow: none;
-}
-/* B · library s2 fan-lace pixels, flipped up and reduced to the existing 8px strip.
-   The pseudo box geometry is untouched; only its two-color repeat paint is replaced. */
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar']::before {
-    background-color: transparent;
-    background-image: var(--r8-lace-tile);
-    background-repeat: repeat-x;
-    background-position: 0 center;
-    background-size: 20px 8px;
-    image-rendering: pixelated;
-    -webkit-mask: none;
-    mask: none;
-}
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] :is(
-    [class*='text-content-'],
-    [class*='text-muted-foreground']
-) {
-    color: var(--r8-ink);
-}
-/* Preserve each semantic lamp fill; the existing 1px square outline only gains ink. */
-.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'] {
-    border-color: var(--r8-ink);
-}
-
-/* No new motion or ornamental pseudo-elements are introduced by R8. */
-@media (prefers-reduced-motion: reduce) {
-    .vrcx-0-titlebar[data-app-titlebar] :is(button, [data-slot='menubar-trigger']),
-    .vrcx-0-sidebar-surface [data-sidebar='footer'] {
-        transition: none !important;
-    }
-}

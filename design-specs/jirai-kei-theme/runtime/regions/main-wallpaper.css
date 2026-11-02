@@ -1,4 +1,4 @@
-/* R7 main-content wallpaper. Ordering note: this layer loads AFTER windose-runtime.css
+/* R7 main-content wallpaper. Ordering note: this layer loads AFTER regions/app-frame.css
    so it replaces that file's old right-bottom heart outline with the requested art.
    ::before (app wallpaper) and ::after (nav-resize accent) stay untouched.
    User layout: Ame-chan's Tweeter profile bottom-LEFT, Icon for the game bottom-RIGHT,

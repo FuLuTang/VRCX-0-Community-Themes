@@ -1,9 +1,9 @@
 /* Sidebar navigation items only. No @layer: all rules remain in the unlayered cascade.
-   Kept after motion-r8 in parts.json so the moved nav selectors retain their former
+   Kept after motion/chrome-decorations.css in parts.json so the moved nav selectors retain their former
    order relative to their owners; the explicit declarations below preserve their
    original internal ordering. Group labels, badges/keycaps and sidebar chrome stay elsewhere. */
 .vrcx-0-sidebar-surface {
-  /* Layer 1 · legacy shared chrome font assignment (split from windose-runtime.css). */
+  /* Layer 1 · legacy shared chrome font assignment (split from regions/app-frame.css). */
   & [data-slot="sidebar-menu-button"] {
     font-family:"WD Pixel CJK", var(--vrcx-app-font-family,system-ui),sans-serif;
     font-synthesis:none; font-size:12px;
@@ -81,7 +81,7 @@
     & [data-sidebar="menu-button"] { height:34px; padding-top:6px; padding-bottom:6px; }
   }
 
-  /* Layer 2 · active-nav pixel cursor from motion-r8, now co-located with its owner. */
+  /* Layer 2 · active-nav pixel cursor from motion/chrome-decorations.css, now co-located with its owner. */
   & [data-sidebar="menu-button"][data-active] {
     position:relative;
     &::before {

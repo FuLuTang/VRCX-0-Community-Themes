@@ -1,0 +1,11 @@
+/* 游戏日志吸顶会话标题及其按钮；从 旧片段 data-surfaces-r10（原文件）:114–123 连续拆出/原序合并。 */
+/* GameLog sticky session header: reuse the shared window-chrome surface, not new layout. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="collapsible"] > div.sticky.top-0)) [data-slot="collapsible"] > div.sticky.top-0.border-b {
+  border-bottom: 1px dotted #70518f;
+  background-color: var(--wd-raised);
+  color: var(--wd-text);
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:has([data-slot="collapsible"] > div.sticky.top-0)) [data-slot="collapsible"] > div.sticky.top-0.border-b [data-slot="button"] {
+  border-radius: 0;
+}
+

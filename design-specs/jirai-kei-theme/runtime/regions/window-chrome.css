@@ -9,13 +9,13 @@
      - src/components/layout/status-bar/StatusBarFooter.tsx:353,371  <footer data-vrcx-0-surface="statusbar" class="vrcx-0-statusbar …">
    These rules are unlayered, so they outrank Tailwind's @layer utilities; the two
    "!" utilities on the close button are NOT overridden on purpose (see R3-3b).
-   Line numbers are the 2026-10-11 20:38 UTC snapshot; runtime/windose-runtime.css
+   Line numbers are the 2026-10-11 20:38 UTC snapshot; regions/app-frame.css
    is being edited concurrently by the Lead (the fake pink page header it used to
    draw is already gone), so match by selector, not by line, when re-checking.
    R4 adds the quick-search control, key caps, brand plate, help trigger and the
    status pixel square; the R4 block at the end carries its source evidence. */
 
-/* R3 text/keycap tokens remain here; chrome-r8.css owns the shared bar/control faces. */
+/* R3 text/keycap tokens remain here; regions/titlebar/paint.css 与 regions/statusbar-paint.css owns the shared bar/control faces. */
 :root {
     --jk-chrome-ink: var(--jk-key-ink);
     --jk-chrome-ink-soft: #3b2a45;
@@ -68,7 +68,7 @@
     background-image: none;
     border-top: 1px solid var(--jk-chrome-edge);
 }
-/* Statusbar text colors are owned by chrome-r8.css. */
+/* Statusbar text colors are owned by regions/statusbar-paint.css. */
 /* R3-4b / R4-4 · semantic fills are preserved, the round ring becomes a pixel
    square: square corners, a real 1px ink frame and a shaded lower/right edge so
    the dot reads as a solid block on the pink bar instead of a hollow circle. */

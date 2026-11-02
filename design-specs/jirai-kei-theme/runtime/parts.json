@@ -1,65 +1,360 @@
 {
- "comment": "Concatenation order of theme.css. One entry per /* SECTION name */. Add a component file (e.g. components/tabs.css) by inserting one entry. Order is cascade order: moving an entry can change the look; verify with tools/build-compare.mjs and tools/style-diff.mjs.",
- "parts": [
-  {"name":"tokens","file":"foundation/tokens.css","generated":"tokens","note":"Base variables. Built from foundation/tokens.css after the palette conversion in build-runtime.mjs."},
-  {"name":"native-icons","generated":"native-icons","note":"Icon/background data-URI variables generated in build-runtime.mjs from original-assets SVGs."},
-  {"name":"assets","file":"../original-assets/dist/jirai-assets.css"},
-  {"name":"fonts","file":"foundation/fonts.css","note":"Both OFL notices and all embedded @font-face rules. Default-font application stays in foundation/body-typography.css (body-typography): moving it here would cross windose-runtime.css and change the cascade."},
-  {"name":"icons","file":"../original-assets/icons/dist/jirai-icons.css"},
-  {"name":"runtime","file":"windose-runtime.css"},
-  {"name":"window-chrome","file":"regions/window-chrome.css"},
-  {"name":"side-panel-group-spacing","file":"regions/side-panel-group-spacing.css"},
-  {"name":"body-typography","file":"foundation/body-typography.css"},
-  {"name":"side-panel","file":"regions/side-panel.css"},
-  {"name":"feed-badges","file":"pages/feed-badges.css"},
-  {"name":"settings","file":"settings-pixel.css"},
-  {"name":"pixel-controls","file":"pixel-controls.css"},
-  {"name":"assets-r5","file":"../original-assets/r5/assets-r5.css"},
-  {"name":"motion","file":"motion-r5.css"},
-  {"name":"sidebar-navigation","file":"regions/sidebar/navigation.css"},
-  {"name":"side-panel-cat-motion","file":"motion/side-panel-cat.css"},
-  {"name":"assets-r7","file":"../original-assets/r7-backgrounds/assets-r7.css"},
-  {"name":"main-wallpaper","file":"regions/main-wallpaper.css"},
-  {"name":"chrome-r8","file":"chrome-r8.css"},
-  {"name":"entity-bio-diff","file":"entity-dialog/bio-diff.css"},
-  {"name":"motion-r8","file":"motion-r8.css"},
-  {"name":"sidebar-nav","file":"components/sidebar-nav.css","note":"Owns sidebar navigation items. Follows motion-r8 (rather than sidebar-navigation) to preserve the former later position of the R8 active-item cursor while keeping all nav rules unlayered."},
-  {"name":"sidebar-cat-pocket","file":"regions/sidebar/cat-pocket.css"},
-  {"name":"user-dialog-r8","file":"user-dialog-r8.css"},
-  {"name":"login","file":"pages/login.css"},
-  {"name":"entity-banner","file":"entity-dialog/banner.css"},
-  {"name":"titlebar-bell-badge","file":"regions/titlebar/bell-badge.css"},
-  {"name":"controls-r9","file":"controls-r9.css"},
-  {"name":"popups-r9","file":"popups-r9.css"},
-  {"name":"avatars-status-r9","file":"avatars-status-r9.css"},
-  {"name":"loader-dancer","file":"components/loader-dancer.css"},
-  {"name":"overlays-r10","file":"overlays-r10.css"},
-  {"name":"popup","file":"components/popup.css","note":"Owns popup shells, menu states and tooltips after legacy owners; layered defaults yield to unlayered structural exceptions."},
-  {"name":"dialog","file":"components/dialog.css","note":"Owns dialogs, alerts and sheets; follows former owners, with unlayered precedence to retain legacy cascade over app defaults."},
-  {"name":"favorites","file":"pages/favorites.css"},
-  {"name":"browse-history","file":"pages/browse-history.css"},
-  {"name":"badge","file":"components/badge.css","note":"Owns Badge/Kbd defaults, count modifier and pink-surface accents. Placed after legacy owners it replaces; defaults are layered so bell and other unlayered exceptions retain precedence."},
-  {"name":"calendar","file":"components/calendar.css","note":"Owns Calendar paint, immediately before data-surfaces-r10 to retain its former cascade position; zero-specificity hosts now include dialogs and sheets."},
-  {"name":"data-surfaces-r10","file":"data-surfaces-r10.css"},
-  {"name":"misc","file":"components/misc.css","note":"Owns inline alerts, shared separators, pagination and empty states; alert declarations move only across unrelated badge/data rules, with unchanged specificity."},
-  {"name":"splitter","file":"components/splitter.css","note":"Owns shared draggable handles; follows data-surfaces where generic handle paint lived and retains the former later splitter-r97 cascade position."},
-  {"name":"table","file":"components/table.css","note":"Owns rendered table surfaces and row states after the former data-surfaces owner; placed here to preserve cascade position while migrating rules. Ordinary hover deliberately retains #302650."},
-  {"name":"timeline","file":"components/timeline.css","note":"Owns only timeline marker/connector/date paint; follows table for isolated component styling and preserves app-provided size/status classes."},
-  {"name":"entity-banner-frame","file":"entity-dialog/banner-frame.css"},
-  {"name":"privacy-lock","file":"pages/privacy-lock.css"},
-  {"name":"titlebar-brand-heart","file":"regions/titlebar/brand-heart.css"},
-  {"name":"sidebar-cats-motion","file":"motion/sidebar-cats.css"},
-  {"name":"loader-r97","file":"loader-r97.css"},
-  {"name":"spinner","file":"spinner.css","note":"Owns spinner-specific motion, sizing and loader sprite rules consolidated from legacy owners."},
-  {"name":"settings-tools-cards","file":"pages/settings-tools-cards.css"},
-  {"name":"card","file":"components/card.css","note":"Owns Card defaults and modifiers; immediately after settings-tools-cards, the last legacy card owner. The jirai-card layer intentionally yields to unlayered login/entity exceptions."},
-  {"name":"tabs","file":"components/tabs.css","note":"Owns every Tabs skin rule. Placed right after settings-tools-cards, the last fragment that used to hold Tabs rules, so moved rules only move later. The @layer jirai-tabs block is the only named layer, so its priority is position-independent."},
-  {"name":"toggle-group","file":"components/toggle-group.css","note":"Owns ToggleGroup default skin; after the prior toolbar rule owners; isolated in jirai-toggle-group layer."},
-  {"name":"language-badge","file":"components/language-badge.css"},
-  {"name":"toast-icons","file":"components/toast-icons.css"},
-  {"name":"sidebar-nav-phone","file":"regions/sidebar/nav-phone.css"},
-  {"name":"button","file":"components/button.css","note":"Owns the Button default skin and its three modifier levels. Last named layer before the choice layer."},
-  {"name":"fields","file":"components/fields.css","note":"Unlayered field-suite owner after components/button.css: field-scoped rules must override the final jirai-button layer without !important."},
-  {"name":"choice","file":"components/choice.css","note":"Owns checkbox, radio, native range, and Base UI slider appearance; last so component state rules are consolidated after their legacy owners. Switch remains in pixel-controls.css."}
- ]
+  "comment": "Concatenation order of theme.css. One entry per /* SECTION name */. Add a component file (e.g. components/tabs.css) by inserting one entry. Order is cascade order: moving an entry can change the look; verify with tools/build-compare.mjs and tools/style-diff.mjs.",
+  "parts": [
+    {
+      "name": "tokens",
+      "file": "foundation/tokens.css",
+      "generated": "tokens",
+      "note": "Base variables. Built from foundation/tokens.css after the palette conversion in build-runtime.mjs."
+    },
+    {
+      "name": "native-icons",
+      "generated": "native-icons",
+      "note": "Icon/background data-URI variables generated in build-runtime.mjs from original-assets SVGs."
+    },
+    {
+      "name": "assets",
+      "file": "../original-assets/dist/jirai-assets.css"
+    },
+    {
+      "name": "fonts",
+      "file": "foundation/fonts.css",
+      "note": "Both OFL notices and all embedded @font-face rules. Default-font application stays in foundation/body-typography.css (body-typography): moving it here would cross foundation/windose-palette.css、regions/app-frame.css、entity-dialog/banner-avatar.css、components/avatar-base.css、foundation/app-utilities.css、regions/sidebar/compact-and-reduced.css and change the cascade."
+    },
+    {
+      "name": "icons",
+      "file": "../original-assets/icons/dist/jirai-icons.css"
+    },
+    {
+      "name": "foundation-windose-palette",
+      "file": "foundation/windose-palette.css"
+    },
+    {
+      "name": "regions-app-frame",
+      "file": "regions/app-frame.css"
+    },
+    {
+      "name": "entity-dialog-banner-avatar",
+      "file": "entity-dialog/banner-avatar.css"
+    },
+    {
+      "name": "components-avatar-base",
+      "file": "components/avatar-base.css"
+    },
+    {
+      "name": "foundation-app-utilities",
+      "file": "foundation/app-utilities.css"
+    },
+    {
+      "name": "regions-sidebar-compact-and-reduced",
+      "file": "regions/sidebar/compact-and-reduced.css"
+    },
+    {
+      "name": "window-chrome",
+      "file": "regions/window-chrome.css"
+    },
+    {
+      "name": "side-panel-group-spacing",
+      "file": "regions/side-panel-group-spacing.css"
+    },
+    {
+      "name": "body-typography",
+      "file": "foundation/body-typography.css"
+    },
+    {
+      "name": "side-panel",
+      "file": "regions/side-panel.css"
+    },
+    {
+      "name": "feed-badges",
+      "file": "pages/feed-badges.css"
+    },
+    {
+      "name": "components-number-field",
+      "file": "components/number-field.css"
+    },
+    {
+      "name": "pages-settings-ornaments",
+      "file": "pages/settings-ornaments.css"
+    },
+    {
+      "name": "components-switch",
+      "file": "components/switch.css"
+    },
+    {
+      "name": "foundation-scrollbars",
+      "file": "foundation/scrollbars.css"
+    },
+    {
+      "name": "components-progress",
+      "file": "components/progress.css"
+    },
+    {
+      "name": "assets-r5",
+      "file": "../original-assets/r5/assets-r5.css"
+    },
+    {
+      "name": "motion-ornaments-and-primitives",
+      "file": "motion/ornaments-and-primitives.css"
+    },
+    {
+      "name": "sidebar-navigation",
+      "file": "regions/sidebar/navigation.css"
+    },
+    {
+      "name": "side-panel-cat-motion",
+      "file": "motion/side-panel-cat.css"
+    },
+    {
+      "name": "assets-r7",
+      "file": "../original-assets/r7-backgrounds/assets-r7.css"
+    },
+    {
+      "name": "main-wallpaper",
+      "file": "regions/main-wallpaper.css"
+    },
+    {
+      "name": "regions-titlebar-paint",
+      "file": "regions/titlebar/paint.css"
+    },
+    {
+      "name": "regions-sidebar-footer",
+      "file": "regions/sidebar/footer.css"
+    },
+    {
+      "name": "regions-statusbar-paint",
+      "file": "regions/statusbar-paint.css"
+    },
+    {
+      "name": "entity-bio-diff",
+      "file": "entity-dialog/bio-diff.css"
+    },
+    {
+      "name": "motion-chrome-decorations",
+      "file": "motion/chrome-decorations.css"
+    },
+    {
+      "name": "sidebar-nav",
+      "file": "components/sidebar-nav.css",
+      "note": "Owns sidebar navigation items. Follows motion/chrome-decorations.css (rather than sidebar-navigation) to preserve the former later position of the R8 active-item cursor while keeping all nav rules unlayered."
+    },
+    {
+      "name": "sidebar-cat-pocket",
+      "file": "regions/sidebar/cat-pocket.css"
+    },
+    {
+      "name": "entity-dialog-nameplate",
+      "file": "entity-dialog/nameplate.css"
+    },
+    {
+      "name": "entity-dialog-range",
+      "file": "entity-dialog/range.css"
+    },
+    {
+      "name": "entity-dialog-banner-base",
+      "file": "entity-dialog/banner-base.css"
+    },
+    {
+      "name": "login",
+      "file": "pages/login.css"
+    },
+    {
+      "name": "entity-banner",
+      "file": "entity-dialog/banner.css"
+    },
+    {
+      "name": "titlebar-bell-badge",
+      "file": "regions/titlebar/bell-badge.css"
+    },
+    {
+      "name": "pages-activity-showcase",
+      "file": "pages/activity-showcase.css"
+    },
+    {
+      "name": "pages-my-avatars",
+      "file": "pages/my-avatars.css"
+    },
+    {
+      "name": "pages-community-themes",
+      "file": "pages/community-themes.css"
+    },
+    {
+      "name": "pages-mutual-friends-overlays",
+      "file": "pages/mutual-friends-overlays.css"
+    },
+    {
+      "name": "components-avatar",
+      "file": "components/avatar.css"
+    },
+    {
+      "name": "loader-dancer",
+      "file": "components/loader-dancer.css"
+    },
+    {
+      "name": "components-toast",
+      "file": "components/toast.css"
+    },
+    {
+      "name": "pages-notification-center",
+      "file": "pages/notification-center.css"
+    },
+    {
+      "name": "popup",
+      "file": "components/popup.css",
+      "note": "Owns popup shells, menu states and tooltips after legacy owners; layered defaults yield to unlayered structural exceptions."
+    },
+    {
+      "name": "dialog",
+      "file": "components/dialog.css",
+      "note": "Owns dialogs, alerts and sheets; follows former owners, with unlayered precedence to retain legacy cascade over app defaults."
+    },
+    {
+      "name": "favorites",
+      "file": "pages/favorites.css"
+    },
+    {
+      "name": "browse-history",
+      "file": "pages/browse-history.css"
+    },
+    {
+      "name": "badge",
+      "file": "components/badge.css",
+      "note": "Owns Badge/Kbd defaults, count modifier and pink-surface accents. Placed after legacy owners it replaces; defaults are layered so bell and other unlayered exceptions retain precedence."
+    },
+    {
+      "name": "calendar",
+      "file": "components/calendar.css",
+      "note": "Owns Calendar paint, immediately before components/object-row.css 至 components/progress-custom.css 的连续片段 to retain its former cascade position; zero-specificity hosts now include dialogs and sheets."
+    },
+    {
+      "name": "components-object-row",
+      "file": "components/object-row.css"
+    },
+    {
+      "name": "pages-feed-columns",
+      "file": "pages/feed-columns.css"
+    },
+    {
+      "name": "pages-friend-list",
+      "file": "pages/friend-list.css"
+    },
+    {
+      "name": "pages-instance-history",
+      "file": "pages/instance-history.css"
+    },
+    {
+      "name": "pages-game-log",
+      "file": "pages/game-log.css"
+    },
+    {
+      "name": "pages-dashboard",
+      "file": "pages/dashboard.css"
+    },
+    {
+      "name": "pages-group-moderation",
+      "file": "pages/group-moderation.css"
+    },
+    {
+      "name": "pages-vrchat-log",
+      "file": "pages/vrchat-log.css"
+    },
+    {
+      "name": "pages-mutual-friends-history",
+      "file": "pages/mutual-friends-history.css"
+    },
+    {
+      "name": "pages-activity-palette",
+      "file": "pages/activity-palette.css"
+    },
+    {
+      "name": "components-progress-custom",
+      "file": "components/progress-custom.css"
+    },
+    {
+      "name": "misc",
+      "file": "components/misc.css",
+      "note": "Owns inline alerts, shared separators, pagination and empty states; alert declarations move only across unrelated badge/data rules, with unchanged specificity."
+    },
+    {
+      "name": "splitter",
+      "file": "components/splitter.css",
+      "note": "Owns shared draggable handles; follows data-surfaces where generic handle paint lived and retains the former later splitter-r97 cascade position."
+    },
+    {
+      "name": "table",
+      "file": "components/table.css",
+      "note": "Owns rendered table surfaces and row states after the former data-surfaces owner; placed here to preserve cascade position while migrating rules. Ordinary hover deliberately retains #302650."
+    },
+    {
+      "name": "timeline",
+      "file": "components/timeline.css",
+      "note": "Owns only timeline marker/connector/date paint; follows table for isolated component styling and preserves app-provided size/status classes."
+    },
+    {
+      "name": "entity-banner-frame",
+      "file": "entity-dialog/banner-frame.css"
+    },
+    {
+      "name": "privacy-lock",
+      "file": "pages/privacy-lock.css"
+    },
+    {
+      "name": "titlebar-brand-heart",
+      "file": "regions/titlebar/brand-heart.css"
+    },
+    {
+      "name": "sidebar-cats-motion",
+      "file": "motion/sidebar-cats.css"
+    },
+    {
+      "name": "components-spinner",
+      "file": "components/spinner.css"
+    },
+    {
+      "name": "settings-tools-cards",
+      "file": "pages/settings-tools-cards.css"
+    },
+    {
+      "name": "card",
+      "file": "components/card.css",
+      "note": "Owns Card defaults and modifiers; immediately after settings-tools-cards, the last legacy card owner. The jirai-card layer intentionally yields to unlayered login/entity exceptions."
+    },
+    {
+      "name": "tabs",
+      "file": "components/tabs.css",
+      "note": "Owns every Tabs skin rule. Placed right after settings-tools-cards, the last fragment that used to hold Tabs rules, so moved rules only move later. The @layer jirai-tabs block is the only named layer, so its priority is position-independent."
+    },
+    {
+      "name": "toggle-group",
+      "file": "components/toggle-group.css",
+      "note": "Owns ToggleGroup default skin; after the prior toolbar rule owners; isolated in jirai-toggle-group layer."
+    },
+    {
+      "name": "language-badge",
+      "file": "components/language-badge.css"
+    },
+    {
+      "name": "toast-icons",
+      "file": "components/toast-icons.css"
+    },
+    {
+      "name": "sidebar-nav-phone",
+      "file": "regions/sidebar/nav-phone.css"
+    },
+    {
+      "name": "button",
+      "file": "components/button.css",
+      "note": "Owns the Button default skin and its three modifier levels. Last named layer before the choice layer."
+    },
+    {
+      "name": "fields",
+      "file": "components/fields.css",
+      "note": "Unlayered field-suite owner after components/button.css: field-scoped rules must override the final jirai-button layer without !important."
+    },
+    {
+      "name": "choice",
+      "file": "components/choice.css",
+      "note": "Owns checkbox, radio, native range, and Base UI slider appearance; last so component state rules are consolidated after their legacy owners. Switch remains in components/switch.css、foundation/scrollbars.css、components/progress.css."
+    }
+  ]
 }

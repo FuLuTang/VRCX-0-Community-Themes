@@ -1,0 +1,37 @@
+/* 页面卡片页脚基底与媒体资源和群组磁贴 object-row 表面；从 旧片段 data-surfaces-r10（原文件）:1–36 连续拆出/原序合并。 */
+/* R10-G4 · pixel language for dense data, lists and page surfaces.
+   Source anchors: ui/shadcn/table.tsx:20-76, components/data-table/DataTableView.tsx:306-360,
+   ui/shadcn/empty.tsx:5-98, calendar.tsx:115-157/219-240, resizable.tsx:25-44,
+   and G4 page rows in checks/r9-coverage-audit/coverage-table.md.
+   Paint-only on virtual/compact rows: do not alter their height, padding, position, or hit-area. */
+
+
+/* Calendar is owned by components/calendar.css, immediately before this fragment. */
+
+/* Card footers: dotted separator, but preserve Card's slot padding and child flow. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold:not(:has([data-slot="resizable-panel-group"][id^="favorites-"][id$="-splitter"], .favorites-body))) [data-slot="card-footer"] {
+  border-top-style: dotted;
+  border-top-color: #70518f;
+  border-radius: 0;
+  background-color: var(--wd-raised);
+  color: var(--wd-text);
+}
+
+/* TileShell consumers owned by G4: MediaAssetTile (gallery/inventory) and MyGroupCard only.
+   Favorites TileShell and .object-row consumers (favorites/browse-history) remain untouched;
+   My Avatars has its separate pages/my-avatars.css selector and is intentionally not matched here. */
+/* The Button half of the former mixed TileShell selectors remains here; Card's
+   matching skin and states are now owned by components/card.css. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold) button[data-slot="button"][class~="object-row"][class~="rounded-object"] {
+  border-radius: 0;
+  border-color: var(--jk-panel-edge);
+  background-color: var(--wd-window);
+  color: var(--wd-text);
+  box-shadow: var(--jk-panel-raised);
+  transition: border-color 100ms steps(2, end), background-color 100ms steps(2, end), box-shadow 100ms steps(2, end);
+&:hover { border-color: var(--wd-pink); background-color: var(--wd-raised); }
+&[class~="ring-2"] { --tw-ring-color: var(--wd-square); border-color: var(--wd-pink); background-color: var(--wd-select); color: var(--wd-text); }
+&:focus-visible { outline: 2px dashed var(--wd-pink); outline-offset: -2px; }
+
+}
+

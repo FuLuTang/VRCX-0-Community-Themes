@@ -11,7 +11,7 @@
    rail. `.vrcx-0-workspace` carries margin 12px / 6px / 10px from
    globals.css:835-846, so a band of shell colour sat above and right of the
    rail, and the rail drew its own 1px left border inside it
-   (windose-runtime.css:20) -> the "box in a box" the user saw. Measured: the
+   (regions/app-frame.css:14) -> the "box in a box" the user saw. Measured: the
    rail was 12px from the right edge and the 8px resize slot exposed the
    workspace canvas (#16112a) as a black seam on the left.
    Keep the floating content card, but let the rail reach the window edge: the
@@ -48,7 +48,7 @@
 
 /* --------------------------------------------------------------------------
    R4-4b · the rail reads as one window pane: a 1px hard frame on all four
-   sides. windose-runtime.css:20 already draws the left one, this restates all
+   sides. regions/app-frame.css:14 already draws the left one, this restates all
    four so the pane keeps its frame even if that rule is folded in. SOCIAL stays
    the pane's real title bar, now flush with the window edge.
    -------------------------------------------------------------------------- */

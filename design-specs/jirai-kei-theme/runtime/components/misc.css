@@ -34,7 +34,7 @@
 }
 :where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] { color: var(--wd-muted); text-wrap: pretty; }
 
-/* Floating selection/action bars (formerly buttons-badges-r10.css). Precisely gated source shape;
+/* Floating selection/action bars (formerly components/misc.css 的浮动操作栏段). Precisely gated source shape;
    unrelated rounded surfaces stay intact. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) :where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)) {
   /* Precisely gated source-shaped floating bars; unrelated rounded surfaces stay intact.

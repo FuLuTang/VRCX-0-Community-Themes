@@ -1,0 +1,17 @@
+/* 详情横幅遮罩框架及横幅头像切角；从 旧片段 windose-runtime（原文件）:59–74 连续拆出/原序合并。 */
+/* Real entity dialog: keep left portrait rail / right tabs, never invent a wide banner or footer. */
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"] { position:relative; }
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::before {
+ content:""; position:absolute; z-index:1; pointer-events:none;
+ mask-image:var(--jk-mask-s4),var(--jk-mask-s4);
+ mask-position:left top,right top; mask-repeat:repeat-y,repeat-y;
+}
+.entity-dialog [data-slot="card-header"] > div.relative > [data-slot="button"][class*="aspect-[4/3]"]::after {
+ content:""; position:absolute; inset:auto 0 0; z-index:1; pointer-events:none;
+ mask:var(--jk-mask-s2) left bottom/10px 6px repeat-x;
+}
+/* A custom VRChat icon frame remains a separate application-owned node; remove theme avatar borders/rings. */
+.entity-dialog [data-slot="card-header"] div.absolute.bottom-3.left-3 [data-slot="button"]:not(.border-0) {
+ border-color:transparent; border-radius:0; border-width:0; box-shadow:none; outline:none;
+}
+.entity-dialog [data-slot="card-header"] div.absolute.bottom-3.left-3 [data-slot="button"]:not(.border-0) img { border-radius:0; clip-path:var(--wd-avatar-cut); }

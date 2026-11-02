@@ -1,3 +1,20 @@
+/* 弹层与各页面用户头像、群组头像例外、头像骨架及状态灯；从 旧片段 popups-r9（原文件）:1–15 + 旧片段 avatars-status-r9（原文件）:1–249 连续拆出/原序合并。 */
+/* Avatar/status shaping remains owned by this legacy fragment. Popup surfaces and
+   menu states moved to components/popup.css; menu avatar geometry belongs to avatar suite. */
+/* Only shape: accessible masks and status color mapping remain untouched. */
+i.x-user-status { border-radius:0;box-shadow:0 0 0 1px #100b1e; }
+/* Keep VRChat membership-frame children visible. For unframed avatars, clear the shell border and
+   pixel-cut only the image/fallback; do not synthesize an avatar ring. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) { border-radius:0;background:transparent;box-shadow:none;outline:none; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset]))::after { border-color:transparent;border-width:0; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) { border-radius:0;clip-path:var(--wd-avatar-cut-sm);border-width:0;box-shadow:none;outline:none; }
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar"][data-size="lg"]:not(:has([class~="-inset-[18.75%]"],[data-profile-decoration-asset])) > :is([data-slot="avatar-image"],[data-slot="avatar-fallback"]) { clip-path:var(--wd-avatar-cut); }
+/* A row containing an external member frame must not clip its descendants. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) :is([data-slot$="menu-item"],[data-slot="button"]):has([data-slot="avatar"] [class~="-inset-[18.75%]"],[data-profile-decoration-asset]) { clip-path:none !important; }
+/* No popup motion: avatar image source uses animate-in/fade-in/ease-out. */
+:is([data-slot$="menu-content"],[data-slot$="menu-sub-content"],[data-slot="popover-content"],[data-slot="select-content"],[data-slot="combobox-content"]) [data-slot="avatar-image"] { animation:none !important;transition:none !important; }
+/* ToolsPageContent is ToolbarSearch + vertical TabsList, NOT a dropdown. */
+
 /* R9+ user profile/activity/favorite friend faces and semantic user-presence lamps only.
    Do NOT target [data-slot=avatar], generic img, world/group media, mixed search cards,
    friendship-network circles, or i.x-status-icon. Surface selectors mirror the source-only

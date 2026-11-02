@@ -1,0 +1,14 @@
+/* VRChat 日志容器与错误表面；从 旧片段 data-surfaces-r10（原文件）:157–169 连续拆出/原序合并。 */
+/* VRChat log container/error surface only (no modal and no browser-generated table layout). */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.vrchat-log-page) .border-destructive\/40.bg-destructive\/10.rounded-md {
+  border-color: #ff6b8a;
+  border-radius: 0;
+  background-color: rgb(255 107 138 / .12);
+  color: #ffd9e5;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.vrchat-log-page) .border-border.bg-background.relative.min-h-0.flex-1.overflow-hidden.rounded-md.border {
+  border-color: var(--wd-frame);
+  border-radius: 0;
+  background-color: #16112a;
+}
+

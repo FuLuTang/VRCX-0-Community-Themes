@@ -1,0 +1,38 @@
+/* 页面区块跳舞加载精灵路由与行内像素转圈及减少动效处理；从 旧片段 components/spinner.css（原文件）:1–18 + 旧片段 spinner（原文件）:1–18 连续拆出/原序合并。 */
+/* R9.7 loader routing (inventory: checks/r97-loader/inventory.md).
+   A = page/block loaders -> components/loader-dancer.css dancer (reuses its sheet vars + keyframes).
+   B = button/inline spinners -> stepped pixel ring; static refresh icons untouched. */
+:root{--jk-dance:jk-loader-dance var(--jk-loader-duration) steps(var(--jk-loader-frames),end) infinite}
+svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation-timing-function:steps(8,end)}
+div.justify-center.gap-2:not([data-slot],.min-h-\[72px\]):has(>svg:is([data-slot=spinner],.animate-spin)){flex-direction:column;gap:10px}
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg.animate-spin{
+  display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
+  background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
+  image-rendering:pixelated;animation:var(--jk-dance)!important;
+  transform:none;rotate:none;color:transparent;opacity:1;-webkit-mask:none;mask:none
+}
+@media(prefers-reduced-motion:reduce){
+  :root{--jk-dance:none}
+  svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg{animation:none!important}
+}
+html.reduce-effects{--jk-dance:none}
+html.reduce-effects :is(svg.lucide.animate-spin,[data-type=loading] [data-slot=toast-icon]>svg){animation:none!important}
+
+/* Spinner (data-slot="spinner"). Inline ring: stepped pixel rotation. Page/block loaders: the dancer
+   sprite (rules from components/loader-dancer.css / components/spinner.css, same cascade position). */
+[data-slot="spinner"]{animation:r5-spinner-step 1s steps(8,end) infinite}
+:where([data-slot="spinner"]:is(.size-4,.size-3\.5)){transform-origin:center}
+@media (prefers-reduced-motion:reduce){[data-slot="spinner"]{animation:none!important}}
+html.reduce-effects [data-slot="spinner"]{animation:none!important}
+
+/* Loading empty state: the sprite rule below paints it; this only drops the svg box spacing and the ring glyph. */
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"]{margin:0;padding:0}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0) > [data-slot="empty-content"] > div.flex.items-center.gap-2:has(> svg[data-slot="spinner"]) > svg[data-slot="spinner"] > *{display:none}
+
+/* Page/block loader sprite (reduced motion: --jk-dance becomes none in components/spinner.css). */
+:is(div.justify-center:is(.gap-2,.flex-1):not([data-slot]),div[class="flex items-center justify-center"],.mt-\[100px\],.min-h-24.border-dashed,[data-slot=empty-header],[role=status].gap-3,td span.inline-flex.gap-2,.min-h-24>span.inline-flex.gap-2,[data-vrcx-0-surface=privacy-lock],[data-slot=empty]:not(.min-h-24,.min-h-0)>[data-slot=empty-content]>div)>svg[data-slot=spinner],.inset-0>svg.text-muted-foreground[data-slot=spinner],svg.my-8[data-slot=spinner]{
+  display:block;flex:none;width:var(--jk-loader-frame-w);height:var(--jk-loader-frame-h);
+  background:var(--jk-loader-sheet) 0 0/calc(var(--jk-loader-frame-w)*var(--jk-loader-frames)) var(--jk-loader-frame-h) no-repeat;
+  image-rendering:pixelated;animation:var(--jk-dance)!important;
+  transform:none;rotate:none;color:transparent;opacity:1;-webkit-mask:none;mask:none
+}

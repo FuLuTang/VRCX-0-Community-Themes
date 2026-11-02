@@ -1,4 +1,4 @@
-/* R9.7 brand heart (Q7, replaces brand-heart-r96.css): three independent native pixel grids
+/* R9.7 brand heart (Q7, replaces regions/titlebar/brand-heart.css 的早期实现): three independent native pixel grids
    9x7 / 10x8 / 11x9 (original-assets/r97-heart), drawn 1:1 - background-size equals each grid,
    no fractional scaling, so every cell stays exactly 1 CSS px. Multicolor art => background-image;
    this is now the single owner of heart art/geometry; mask:none is retained defensively so no inherited mask can clip the multicolor pixels.
@@ -7,7 +7,7 @@
    on the brand's 9px cap-height ink rows (brand top +2..+10). The inherited translateY(-50%) would
    be -4.5px on a 9px box: a fractional transform makes Chromium anti-alias the tip row.
    Integer background-position per frame: "center" would put the 10x8 frame half a pixel off. */
-/* Right-side trigger clearance for the heart (formerly brand-heart-r9.css). */
+/* Right-side trigger clearance for the heart (formerly regions/titlebar/brand-heart.css 的触发器留白段). */
 .vrcx-0-titlebar[data-app-titlebar] [data-slot='menubar'] [data-slot='menubar-trigger']:has(> .vrcx-0-brand) {
   padding-right: 21px;
 }

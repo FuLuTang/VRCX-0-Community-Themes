@@ -96,7 +96,7 @@
 }
 /* Win98 key tokens: values only, no selectors, so nothing changes until a component file uses them.
    A "key" is any pressable face: two faces (pink, dark) x two depths (raised, sunken), plus the
-   accent of the surface it sits on. Built from the --wd palette (windose-runtime.css). */
+   accent of the surface it sits on. Built from the --wd palette (foundation/windose-palette.css). */
 :root {
   /* bevel edges */
   --jk-bevel-hi: #fdf4ff;          /* light edge (all faces) */

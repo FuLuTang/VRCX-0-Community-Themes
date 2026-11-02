@@ -19,7 +19,7 @@
     node rule-owners.mjs toggle-group                       # ⑤ 动手前：旧规则在哪
     node rule-owners.mjs toggle-group --runtime             #    运行时实际命中哪些（含泛规则）
     node build-compare.mjs save --label toggle-group        # ⑤ 动手前先存“改动前”
-    （写 runtime/toggle-group.css，在 runtime/parts.json 插一行，删旧规则）
+    （写 runtime/components/toggle-group.css，在 runtime/parts.json 插一行，删旧规则）
     node build-compare.mjs diff                             # ⑥ 字节/规则变化，报告目录里有 before.css、after.css
     node style-diff.mjs --before <报告目录>/before.css --after <报告目录>/after.css \
       --expect '[data-slot="toggle-group"]' --states '[data-slot="toggle-group"] > button' \
@@ -34,3 +34,5 @@
 - 片段拼接顺序在 `runtime/parts.json`，顺序即层叠顺序。
 
 注意：`ssh pc114514` 默认是 cmd；`baseline/collect.mjs` 经 CDP 连用户正在用的 app，绝不能 `browser.close()`。
+
+当前运行时职责索引见 `../runtime/README.md`。`sidebar` 指左侧导航，`side-panel` 指右侧社交面板，`entity-dialog` 指实体详情弹窗。目录不表示层叠顺序；只以 `runtime/parts.json` 为准。

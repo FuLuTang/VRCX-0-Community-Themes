@@ -1,5 +1,6 @@
+/* 窗口装饰共享关键帧、状态栏蕾丝和标题栏及导航装饰动效；共用减少动效块保持完整；从 旧片段 motion-r8（原文件）:1–66 连续拆出/原序合并。 */
 /*
- * R8 motion layer; load AFTER motion-r5.css, motion/side-panel-cat.css and chrome-r8.css.
+ * R8 motion layer; load AFTER motion/ornaments-and-primitives.css, motion/side-panel-cat.css and regions/titlebar/paint.css 与 regions/statusbar-paint.css.
  * It owns the 36px nav-content pocket, statusbar lace timing, and active-tab motion;
  * motion/sidebar-cats.css is the sole owner of the SOCIAL ::after cat loop.
  * Title-heart art/motion belongs exclusively to regions/titlebar/brand-heart.css.

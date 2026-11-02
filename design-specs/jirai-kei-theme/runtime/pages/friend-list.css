@@ -1,0 +1,13 @@
+/* 好友列表卡片内容内嵌边框；从 旧片段 data-surfaces-r10（原文件）:78–89 连续拆出/原序合并。 */
+/* Friend-view card base is now the shared Card default; its child inset frame
+   below remains a distinct content ornament. */
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] > [data-dim-exempt] {
+  border: 1px solid var(--wd-frame);
+  border-radius: 0;
+  background: var(--wd-window);
+  box-shadow: inset 1px 1px rgb(253 244 255 / .14), 2px 2px 0 #100b1e;
+}
+:where(.vrcx-0-main-content > .vrcx-0-page-scaffold.friend-view) [data-slot="card"][data-size="sm"] > [data-dim-exempt] [data-slot="button"] {
+  border-radius: 0;
+}
+

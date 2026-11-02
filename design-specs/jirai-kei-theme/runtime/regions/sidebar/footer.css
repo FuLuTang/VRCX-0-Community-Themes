@@ -1,0 +1,17 @@
+/* 导航底部凹槽底色及展开态猫咪预留间距；从 旧片段 chrome-r8（原文件）:74–89 连续拆出/原序合并。 */
+/* Footer becomes a recessed sibling of the R7 menu panel. Reserve right-side cat space;
+   no pseudo-element is claimed here, so a later task can own footer::after. */
+.vrcx-0-sidebar-surface [data-sidebar='footer'] {
+    background-color: #211a33;
+    border: 1px solid #4b3a63;
+    border-radius: 0;
+    padding-block: 7px;
+    box-shadow: inset 1px 1px 0 #120d20,
+        inset -1px -1px 0 #4b3a63,
+        inset 0 2px 0 #3f2c50;
+}
+[data-slot='sidebar'][data-state='expanded'] .vrcx-0-sidebar-surface [data-sidebar='footer'] {
+    box-sizing: border-box;
+    padding-inline-end: 32px;
+}
+

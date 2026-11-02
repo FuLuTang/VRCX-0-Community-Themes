@@ -43,7 +43,7 @@ span.inline-flex.min-w-0.items-center.gap-1\.5:has(> svg.lucide[aria-hidden='tru
    5b · the "status change" detail cell printed two round dots
    (`size-2.5 shrink-0 rounded-full` in FeedStatusBadge.tsx:22-25) next to a
    lucide arrow, while the friend avatars in the rail already show square pixel
-   status blocks (windose-runtime.css:105 zeroes the radius of the rail's
+   status blocks (components/avatar-base.css:14–15 zeroes the radius of the rail's
    `size-3.75` status spans). Square the feed dots and give them the same 1px
    dark keyline so both surfaces read as the same material. The status fill is
    untouched: it still comes from the row's --status-* class

@@ -1,0 +1,18 @@
+/* 保留 SOCIAL 标题默认值、原生时间图标、JSON 折叠图标与选区颜色；从 旧片段 windose-runtime（原文件）:89–105 连续拆出/原序合并。 */
+/* R3: use the real application titlebar; no duplicate heading in the main view. */
+.vrcx-0-side-panel::before { content:"SOCIAL"; display:block; flex:none; min-height:24px; padding:3px 10px;
+ font:12px/18px "WD Pixel",sans-serif; color:var(--wd-muted); background-color:var(--wd-title); border-bottom:1px solid var(--wd-frame); }
+/* R3 lace is outside and above the real footer; no inside-bar background strip. */
+
+/* Preserve native control interaction; only change their arrow/clock artwork. */
+/* native <select>: generic rule lives in form-pages/activity-showcase.css、pages/my-avatars.css、pages/community-themes.css 与 pages/mutual-friends-overlays.css (same chevron art, applies in every context). */
+.vrcx-0-app-root input[type="time"]::-webkit-calendar-picker-indicator {
+ background-image:var(--wd-native-clock); background-size:16px 16px; background-position:center; background-repeat:no-repeat;
+}
+.entity-json-view-collapse::after, .entity-json-view-expand::after, .entity-json-view-collapsed::after {
+ content:""; display:inline-block; width:12px; height:12px; vertical-align:middle; background-color:currentColor; mask:var(--wd-icon-chevron) center/contain no-repeat;
+}
+.entity-json-view-expand::after { mask-image:var(--wd-icon-right); }
+.entity-json-view-collapsed::after { mask-image:var(--wd-icon-ellipsis); }
+/* Accessibility/VRChat status masks and data-driven charts intentionally retain semantic artwork. */
+.vrcx-0-app-root ::selection { background-color:var(--wd-pink); color:#16112a; }

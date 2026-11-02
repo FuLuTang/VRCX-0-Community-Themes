@@ -1,6 +1,6 @@
 /* Choice controls · shared checkbox/radio and slider ownership.
    Placed last so removed legacy control overrides cannot leak back in; the
-   switch remains owned by pixel-controls.css. */
+   switch remains owned by components/switch.css. */
 @layer jirai-choice {
   :where([data-slot="checkbox"], [role="radio"], input[type="checkbox"], input[type="radio"]) {
     appearance:none;
