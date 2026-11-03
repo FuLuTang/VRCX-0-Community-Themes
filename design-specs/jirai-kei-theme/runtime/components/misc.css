@@ -34,6 +34,27 @@
 }
 :where(.vrcx-0-main-content) [data-slot="empty"]:not(:has([data-slot="spinner"])) [data-slot="empty-description"] { color: var(--wd-muted); text-wrap: pretty; }
 
+/* 03-empty · 空状态：NSO 引导小猫（原生像素 PNG，66x54 画布，2x/1x 整数倍）
+   建议位置：runtime/components/misc.css，紧接 "Empty states" 段（:where(...) [data-slot="empty-title"]/[empty-description] 规则）之后。
+   宿主：有图标的空状态 -> [data-slot=empty-icon][data-variant=icon]；无图标 -> empty-header::before。无新增 DOM。
+   仅 page(min-h-72) / panel(min-h-48)；table(min-h-24) / inline(min-h-0) / LoadingState(spinner) 不画。静止，无动画。
+   素材来源 art-references/nso-steam-ss-04.jpg 右下角猫（版权归原作者），见 REPORT.md。 */
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0):not(:has([data-slot="spinner"])) {
+  --jk-empty-w: 132px; --jk-empty-h: 108px; --jk-art-w: 132px; --jk-art-h: 108px;
+  --jk-empty-art: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAA2CAMAAABEOb8NAAAAS1BMVEVMaXH01uzOqMr14vbgrd3UntLmx+HtueL6xOj90e396fzVstHOnMxwUW69m7xGOltbRmReUXM4OmVsXnZISnO3i7iGWYF7bIg1LEs8HJsoAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAD6AAAA+gBtXtSawAAAk5JREFUSMftluuaoyAMhg2BBARPPc3e/5VugqfadkZqn/m1m6e1auXNlxAhVfXffsWQAD9EkIkbxAEeWEd0d0kHGJxSXGLBaOBAJNYlOzGQkqMDkbB1FtQ3ouAcH0motV8iAmsIQnNuz+ULAjUN1jWezwheGMm8i6AAKARh4LlvWBg7iKdcEcAwZESNQBD8EQReulHFV32m4HkvkhoeEzEMp14ReEa89N7vRgIPMpgHHEhFQHe5nDraR4Tt38TcN5IOgADd6XTqeD+fFLeX3vswmu//dNjsIqiO1RNiYnjqu0ZU8c8EDI93WBmeaTzyngiChzDELAuEm0ZRPBKc/R5QPxOqKAy+WXuzvBAs01oD2WS+IAT9iS/IMco4+dx0vL5kToXpFGXAnOtRIsWX6qK61eF5fBbBOcXzcAVoxUVjvsuSSe7ORoLfDM+I8FOttGah2KxonejVeG8laq/XlCYAz7Xi/TsIpcRpUjaE+YaclKypsLhccrhCuURGBeEOsQAmbXJStJZPSdwQpgTJSVUayaaWcrWMDGvKEFNVhVXDXCu2EDHmThFzDAJIuVx2V+U7RGb4ESCElKaSc1U5gjMimqTm8lcRpmxnFN8RDAsiUjYBXLlVIYZKVYgziiLCzMuJS9LEKKJwg/Z56syK0F1fQfZNBK2ImvQMSqtiLAx91C+IKiPk+AEifIxAb2UmcI1s10LYIjBk74oo7MDkbU/66OKUbBszgmOhCBPHAkLmdmodKHcDEUrbQMr7RAQf2/shAO/2kdIr0IHe85+2v84dHJ9QUOl7AAAAAElFTkSuQmCC");
+}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0):not(:has([data-slot="spinner"])).min-h-48 { --jk-empty-w: 88px; --jk-empty-h: 72px; --jk-art-w: 66px; --jk-art-h: 54px; }
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0):not(:has([data-slot="spinner"])) > [data-slot="empty-header"] > [data-slot="empty-icon"][data-variant="icon"] {
+  box-sizing: border-box; flex: none; width: var(--jk-empty-w); height: var(--jk-empty-h); margin: 0; padding: 0;
+  border: 0; border-radius: 0; box-shadow: none; color: transparent; pointer-events: none;
+  background: var(--jk-empty-art) center / var(--jk-art-w) var(--jk-art-h) no-repeat; image-rendering: pixelated;
+}
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0):not(:has([data-slot="spinner"])) > [data-slot="empty-header"] > [data-slot="empty-icon"][data-variant="icon"] > svg { display: none; }
+.vrcx-0-main-content [data-slot="empty"]:not(.min-h-24):not(.min-h-0):not(:has([data-slot="spinner"])) > [data-slot="empty-header"]:not(:has(> [data-slot="empty-icon"]))::before {
+  content: ""; display: block; flex: none; width: var(--jk-empty-w); height: var(--jk-empty-h); margin-bottom: 2px;
+  pointer-events: none; background: var(--jk-empty-art) center / var(--jk-art-w) var(--jk-art-h) no-repeat; image-rendering: pixelated;
+}
+
 /* Floating selection/action bars (formerly components/misc.css 的浮动操作栏段). Precisely gated source shape;
    unrelated rounded surfaces stay intact. */
 :where(.vrcx-0-main-content,.vrcx-0-side-panel) :where(:not(.vrcx-0-page-toolbar *):not([class~="bg-popover/70"] *):not(article[data-slot="card"][data-size="sm"] *):not(.object-row__context-action)) {

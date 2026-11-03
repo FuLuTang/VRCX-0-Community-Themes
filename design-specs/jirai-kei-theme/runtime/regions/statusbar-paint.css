@@ -39,3 +39,15 @@
         transition: none !important;
     }
 }
+
+/* 05 · 状态灯 B 圆灯定稿 —— 圆形像素灯座（8×8，宿主 span.size-2 不变）+ 状态冗余图案。
+   形状：8×8 阶梯像素圆（宿主 mask 取圆；SVG 雪碧图 crispEdges，不用 border-radius / 渐变，避免 125%/150% 抗锯齿糊边）。
+   语义色仍来自应用的 bg-[var(--status-*)] / bg-muted-foreground 类（宿主底色经 mask 变圆），伪元素只画 1px 墨圈、高光、暗部。
+   帧（每帧 8px，纵向 0/-8/-16/-24/-32）：在线=圆灯泡+高光 · 警告(active/askme)=暗棋盘半调+1px高光 · 严重(busy)=无圈满填 · 离线=暗洞 · 末帧=圆形 mask。
+   无 animation/transition；警告闪烁仍是应用 WAAPI dimBlink。放在 regions/statusbar-paint.css 文件末尾（须晚于 window-chrome.css 的同选择器灯规则）。 */
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full']{--jk-led:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='40' viewBox='0 0 8 40' shape-rendering='crispEdges'%3E%3Cpath fill='%2321132d' d='M2 0h4v1h-4zM1 1h1v1h-1zM6 1h1v1h-1zM0 2h1v1h-1zM7 2h1v1h-1zM0 3h1v1h-1zM7 3h1v1h-1zM0 4h1v1h-1zM7 4h1v1h-1zM0 5h1v1h-1zM7 5h1v1h-1zM1 6h1v1h-1zM6 6h1v1h-1zM2 7h4v1h-4zM2 8h4v1h-4zM1 9h1v1h-1zM6 9h1v1h-1zM0 10h1v1h-1zM7 10h1v1h-1zM0 11h1v1h-1zM7 11h1v1h-1zM0 12h1v1h-1zM7 12h1v1h-1zM0 13h1v1h-1zM7 13h1v1h-1zM1 14h1v1h-1zM6 14h1v1h-1zM2 15h4v1h-4zM2 24h4v1h-4zM1 25h1v1h-1zM6 25h1v1h-1zM0 26h1v1h-1zM7 26h1v1h-1zM0 27h1v1h-1zM7 27h1v1h-1zM0 28h1v1h-1zM7 28h1v1h-1zM0 29h1v1h-1zM7 29h1v1h-1zM1 30h1v1h-1zM6 30h1v1h-1zM2 31h4v1h-4zM2 32h4v1h-4zM1 33h6v1h-6zM0 34h8v1h-8zM0 35h8v1h-8zM0 36h8v1h-8zM0 37h8v1h-8zM1 38h6v1h-6zM2 39h4v1h-4z'/%3E%3Cpath fill='%23fff1f8' fill-opacity='.85' d='M2 2h2v1h-2zM2 3h1v1h-1zM2 10h1v1h-1zM2 17h1v1h-1zM1 18h2v1h-2z'/%3E%3Cpath fill='%23000' fill-opacity='.28' d='M6 3h1v1h-1zM6 4h1v1h-1zM6 5h1v1h-1zM3 6h3v1h-3zM7 19h1v1h-1zM7 20h1v1h-1zM7 21h1v1h-1zM6 22h1v1h-1zM3 23h3v1h-3z'/%3E%3Cpath fill='%2321132d' fill-opacity='.6' d='M2 25h4v1h-4zM1 26h6v1h-6zM1 27h6v1h-6zM1 28h6v1h-6zM1 29h6v1h-6zM2 30h4v1h-4z'/%3E%3Cpath fill='%2321132d' fill-opacity='.4' d='M3 9h1v1h-1zM5 9h1v1h-1zM4 10h1v1h-1zM6 10h1v1h-1zM1 11h1v1h-1zM3 11h1v1h-1zM5 11h1v1h-1zM2 12h1v1h-1zM4 12h1v1h-1zM6 12h1v1h-1zM1 13h1v1h-1zM3 13h1v1h-1zM5 13h1v1h-1zM2 14h1v1h-1zM4 14h1v1h-1z'/%3E%3C/svg%3E");position:relative;border:0;box-shadow:none;background-image:none;-webkit-mask:var(--jk-led) no-repeat 0 -32px/8px 40px;mask:var(--jk-led) no-repeat 0 -32px/8px 40px}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full']::before{content:'';position:absolute;inset:0;pointer-events:none;background:var(--jk-led) no-repeat 0 0/8px 40px}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'][class*='bg-muted-foreground']::before{background-position:0 -24px}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full']:is([class*='status-active'],[class*='status-askme'])::before{background-position:0 -8px}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] span[class~='size-2'][class~='rounded-full'][class*='status-busy']::before{background-position:0 -16px}
+.vrcx-0-statusbar[data-vrcx-0-surface='statusbar'] .group\/button:hover span[class~='size-2'][class~='rounded-full']{filter:brightness(1.12)}

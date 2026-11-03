@@ -138,3 +138,13 @@
   [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
 }
 html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]::after { animation: none !important; background-position: var(--r10-phone-nav-state-stop); }
+
+/* 08 悬停彩蛋定稿：A 手机来电回应（悬停时触发，节奏同上轮 Sonnet 稿；方案 C 已删除） */
+/* A：导航标题条悬停 → 手机整数 3px 横抖 + 三条紫色震动线，.6s×2 次 */
+@keyframes jk-hov-bars{0%{background-image:var(--jk-hov-bars-1)}34%{background-image:var(--jk-hov-bars-2)}67%,100%{background-image:var(--jk-hov-bars-1)}}
+@keyframes jk-hov-buzz{0%,100%{translate:0 0}20%,60%{translate:-3px 0}40%,80%{translate:3px 0}}
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]:hover:not(:has(> :hover))::before{--jk-hov-bars-1:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='7' shape-rendering='crispEdges'%3E%3Cpath fill='%238a7cf2' d='M0 3h1v2h-1zM2 2h1v4h-1zM4 3h1v2h-1z'/%3E%3Cpath fill='%23c9c0ff' d='M0 2h1v1h-1zM2 1h1v1h-1zM4 2h1v1h-1z'/%3E%3C/svg%3E");--jk-hov-bars-2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='7' shape-rendering='crispEdges'%3E%3Cpath fill='%238a7cf2' d='M0 2h1v4h-1zM2 1h1v6h-1zM4 2h1v4h-1z'/%3E%3Cpath fill='%23c9c0ff' d='M0 1h1v1h-1zM2 0h1v1h-1zM4 1h1v1h-1z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:15px 21px;background-position:right 79px top 5px;image-rendering:pixelated;animation:jk-hov-bars .6s steps(1,end) 2}
+[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]:hover:not(:has(> :hover))::after{animation:r10-nav-phone-loop 27.54s steps(153,end) infinite,r10-nav-phone-float 8.6s ease-in-out -2.3s infinite,jk-hov-buzz .6s steps(1,end) 2}
+/* 减效：prefers-reduced-motion 与 html.reduce-effects 下 ::before 装饰动画关闭（::after 已被主题原有的减效规则 !important 覆盖） */
+@media (prefers-reduced-motion:reduce){[data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]:hover:not(:has(> :hover))::before{animation:none!important}}
+html.reduce-effects [data-slot="sidebar"][data-state="expanded"] [data-slot="sidebar-inner"]:hover:not(:has(> :hover))::before{animation:none!important}

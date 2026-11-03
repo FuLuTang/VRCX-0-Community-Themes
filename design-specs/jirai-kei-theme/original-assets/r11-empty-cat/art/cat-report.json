@@ -1,0 +1,57 @@
+{
+  "source": "art-references/nso-steam-ss-04.jpg",
+  "crop": {
+    "left": 1334,
+    "top": 688,
+    "width": 116,
+    "height": 96
+  },
+  "nativeGrid": "2x2 (960x540 canvas)",
+  "nativeSize": [
+    54,
+    45
+  ],
+  "bboxInCells": [
+    1,
+    2,
+    54,
+    46
+  ],
+  "palette": [
+    "#edb9e2",
+    "#352c4b",
+    "#7b6c88",
+    "#b78bb8",
+    "#fde9fc",
+    "#484a73",
+    "#70516e",
+    "#cea8ca",
+    "#fdd1ed",
+    "#463a5b",
+    "#d49ed2",
+    "#865981",
+    "#f5e2f6",
+    "#5b4664",
+    "#e6c7e1",
+    "#383a65",
+    "#5e5173",
+    "#bd9bbc",
+    "#ce9ccc",
+    "#6c5e76",
+    "#f4d6ec",
+    "#d5b2d1",
+    "#fac4e8",
+    "#e0addd"
+  ],
+  "canvas": [
+    66,
+    54,
+    6,
+    5
+  ],
+  "bytes": {
+    "native": 738,
+    "canvas": 768,
+    "dataUri": 1046
+  }
+}

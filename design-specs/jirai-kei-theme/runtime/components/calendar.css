@@ -12,6 +12,11 @@
   & [data-day] {
     border-radius: 0;
     color: var(--wd-text);
+    /* two 1-colour marker layers (today bar, range-end block); colour 0 = transparent until a rule sets --jk-t / --jk-m */
+    background-image: linear-gradient(var(--jk-t, #0000) 0 0), linear-gradient(var(--jk-m, #0000) 0 0);
+    background-repeat: no-repeat;
+    background-size: 10px 2px, 3px 3px;
+    background-position: 50% calc(100% - 5px), var(--jk-p, 0 0);
   }
   & [data-day][data-selected-single="true"],
   & [data-day][data-range-start="true"],
@@ -19,22 +24,30 @@
     border-radius: 0;
     background-color: var(--wd-square);
     color: #16112a;
+    box-shadow: inset 0 0 0 1px var(--wd-frame), inset 3px 3px var(--jk-bevel-hi), inset -3px -3px var(--jk-key-pink-press);
+    &:hover { background-color: var(--jk-key-pink-hover); }
+    &:focus-visible { outline-color: var(--wd-desktop); }
   }
+  & [data-day][data-range-start="true"] { --jk-m: var(--wd-frame); --jk-p: 4px 4px; }
+  & [data-day][data-range-end="true"] { --jk-m: var(--wd-frame); --jk-p: calc(100% - 4px) calc(100% - 4px); }
   & [data-day][data-range-middle="true"] {
     border-radius: 0;
     background-color: var(--wd-select);
     color: var(--wd-text);
+    box-shadow: inset 0 2px var(--wd-desktop), inset 0 -2px var(--wd-frame);
+    &:hover { background-color: color-mix(in srgb, var(--wd-select) 78%, var(--wd-text)); }
   }
-  & td[data-today="true"] > [data-day]:not([data-selected-single="true"]):not([data-range-start="true"]):not([data-range-end="true"]) {
-    outline: 1px dashed var(--wd-pink);
-    outline-offset: -2px;
-  }
+  & td[data-today="true"] > [data-day] { --jk-t: var(--wd-mint); }
+  & td[data-today="true"] > [data-day]:is([data-selected-single="true"], [data-range-start="true"], [data-range-end="true"]) { --jk-t: var(--wd-frame); }
+  & td:not([data-selected], [data-disabled]) > [data-day]:hover { box-shadow: inset 0 0 0 1px var(--wd-frame); }
   & [data-day]:focus-visible {
-    outline: 2px dashed var(--wd-pink);
-    outline-offset: -2px;
+    outline: 1px dotted var(--wd-text);
+    outline-offset: -4px;
   }
   & [data-day]:is(:disabled, [aria-disabled="true"]) {
     color: var(--wd-faint);
     opacity: .55;
   }
+  @media (prefers-reduced-motion: reduce) { & [data-day] { transition: none; } }
+  :root.reduce-effects & [data-day] { transition: none; }
 }
