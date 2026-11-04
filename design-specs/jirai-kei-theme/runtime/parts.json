@@ -167,6 +167,10 @@
       "file": "regions/titlebar/bell-badge.css"
     },
     {
+      "name": "titlebar-action-icons",
+      "file": "regions/titlebar/action-icons.css"
+    },
+    {
       "name": "pages-activity-showcase",
       "file": "pages/activity-showcase.css"
     },

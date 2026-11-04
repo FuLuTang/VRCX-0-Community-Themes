@@ -72,3 +72,6 @@
   }
   }
 }
+
+/* 06 相册贴角定稿：截图相册瓦片缩小版（创可贴 29×29 + 三颗尖底心 1×），静态，pointer-events:none。 */
+[class~="group/tile"]:has(>[data-slot="button"]>div.bg-muted.relative:is([class~="h-[118px]"],[class~="h-[94px]"])>img)::after{content:"";position:absolute;inset:0;z-index:10;pointer-events:none;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAMAAABhTZc9AAAAG1BMVEVMaXEiFET/09jZhK3uuc3/+Pv/7O70ssj21uKIPp0rAAAAAnRSTlMASA6UBJoAAAAJcEhZcwAAA+gAAAPoAbV7UmsAAAB8SURBVCjPndLBDsMwCANQgr0m///Fo0zr2iZG6nx9wgfAbA4AUwE23xSHRQR/0L2jwCX/0B2twH7XQJ5G24SkGE18DX6xzRihxhFKgWFDYvbyca07de0e6snkBRqO5a3wuvn76iu83HvC868sMLgXmNyhMN+7STSr7N+8AQekBFN8nMCnAAAAAElFTkSuQmCC") -2px -2px/29px 29px no-repeat,url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAALBAMAAAAZwRmCAAAAIVBMVEVMaXG/Yo/pmb70ttP7xOT9qdLkjLX10OP3o8zrlL3+9v8vzk4GAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAD6AAAA+gBtXtSawAAAFFJREFUGNNjYBAUACEGdJrRxRGIMGmR5SYixiYCGLRoibGxsSkmLaQEApg0YxCQCmTAoBlE09JSBbDQjGFpIGkMmkF0qgBWmrGRASvNIICFBgCZwh0g+GDFkAAAAABJRU5ErkJggg==") right 10px top -2px/45px 11px no-repeat;image-rendering:pixelated}
