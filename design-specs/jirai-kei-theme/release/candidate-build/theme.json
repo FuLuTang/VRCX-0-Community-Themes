@@ -1,0 +1,19 @@
+{
+  "id": "jirai-kei-theme",
+  "name": "Jirai Kei · Windose Dark (Local Preview R9.7)",
+  "version": "1.3.0-preview.7",
+  "author": {
+    "name": "FuLuTang",
+    "github": "FuLuTang"
+  },
+  "description": "Dark pixel desktop × jirai: pixel window chrome and dialogs, corrected assistant header, pixel cards and outward lace, pixel charm, routed loading dancers, pixel splitters, pixel heart, mini-window popups/tooltips/toasts, forms, badges, favorites, avatars and game-art backgrounds. Local preview; no remote assets.",
+  "tags": [
+    "dark",
+    "jirai-kei",
+    "local"
+  ],
+  "testedWith": "0.0.0-unverified",
+  "remoteAssets": false,
+  "darkMode": true,
+  "accentMode": false
+}

@@ -1,5 +1,5 @@
 {
-  "cssBytes": 923713,
+  "cssBytes": 940714,
   "limit": 1048576,
   "previewSource": "/home/fulutang/Documents/Github/VRCX-0-Themes-JiraiKeiKuteWin98/design-specs/jirai-kei-theme/runtime/checks/status-icons-r10/preview.png",
   "sections": [
@@ -121,7 +121,7 @@
     },
     {
       "name": "regions-statusbar-paint",
-      "bytes": 1748
+      "bytes": 5158
     },
     {
       "name": "entity-bio-diff",
@@ -164,6 +164,10 @@
       "bytes": 2866
     },
     {
+      "name": "titlebar-action-icons",
+      "bytes": 3504
+    },
+    {
       "name": "pages-activity-showcase",
       "bytes": 642
     },
@@ -201,7 +205,7 @@
     },
     {
       "name": "dialog",
-      "bytes": 8188
+      "bytes": 9449
     },
     {
       "name": "favorites",
@@ -217,7 +221,7 @@
     },
     {
       "name": "calendar",
-      "bytes": 1485
+      "bytes": 2727
     },
     {
       "name": "components-object-row",
@@ -265,7 +269,7 @@
     },
     {
       "name": "misc",
-      "bytes": 4426
+      "bytes": 7650
     },
     {
       "name": "splitter",
@@ -281,7 +285,7 @@
     },
     {
       "name": "entity-banner-frame",
-      "bytes": 3956
+      "bytes": 6890
     },
     {
       "name": "privacy-lock",
@@ -289,7 +293,7 @@
     },
     {
       "name": "titlebar-brand-heart",
-      "bytes": 3986
+      "bytes": 6633
     },
     {
       "name": "sidebar-cats-motion",
@@ -305,7 +309,7 @@
     },
     {
       "name": "card",
-      "bytes": 2855
+      "bytes": 3987
     },
     {
       "name": "tabs",
@@ -325,7 +329,7 @@
     },
     {
       "name": "sidebar-nav-phone",
-      "bytes": 16548
+      "bytes": 18592
     },
     {
       "name": "button",

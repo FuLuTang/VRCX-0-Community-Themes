@@ -1,5 +1,5 @@
-/* Dialog suite owner. Defaults cover titled dialogs, alerts and sheets; entity/owner dialogs,
-   notification-center sheets and sr-only-title surfaces retain their unlayered exceptions.
+/* Dialog suite owner. All dialog shells share the Win98 frame, including entity/owner dialogs.
+   Notification-center sheets retain their dedicated skin; hidden media titles stay hidden.
    Kept unlayered: these declarations replace legacy unlayered owners and must beat the app's
    component defaults without !important; @layer would lose to all application unlayered CSS. */
 :root {
@@ -7,8 +7,8 @@
   --r9-dialog-pink-edge:#d97fc6; --r9-dialog-indigo:#3a22c8; --r9-dialog-frame:#6c5ce0;
   --r9-dialog-inner:#f2ebff; --r9-dialog-mint:#8ee6dd; --r9-dialog-lace:var(--r8-lace-tile);
 }
-:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"]):not(.entity-dialog,.owner-dialog):not(:has([data-slot="sheet-title"] .lucide-bell)):has(> :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"],[data-slot="sheet-header"]):not(.sr-only)) {
-  --r9-dialog-inset:1rem; color:var(--r9-dialog-inner); background-color:var(--r9-dialog-face);
+:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"]):not(:has([data-slot="sheet-title"] .lucide-bell)) {
+  color:var(--r9-dialog-inner); background-color:var(--r9-dialog-face);
   background-image:linear-gradient(#ff7fcf,#ff7fcf),linear-gradient(var(--r9-dialog-mint),var(--r9-dialog-mint));
   background-repeat:no-repeat; background-size:18px 5px,100% 5px; background-position:bottom left,bottom center;
   border:1px solid var(--r9-dialog-frame); border-radius:0!important; box-shadow:inset 0 0 0 1px var(--r9-dialog-inner),4px 4px 0 #100b1e;
@@ -20,7 +20,7 @@
 /* Titled dialogs/alerts and non-notification sheets share one header + pink title strip. The sheet side
    carries the same :not(.entity-dialog,.owner-dialog) so both halves have equal specificity (0,4,0). */
 :is(:is([data-slot="dialog-content"],[data-slot="alert-dialog-content"]):not(.entity-dialog,.owner-dialog):has(> :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"]):not(.sr-only)),[data-slot="sheet-popup"]:not(:has([data-slot="sheet-title"] .lucide-bell)):not(.entity-dialog,.owner-dialog)) > :is([data-slot="dialog-header"],[data-slot="alert-dialog-header"],[data-slot="sheet-header"]) {
-  position:relative; display:flex; flex-direction:column; align-items:stretch; gap:.5rem;
+  position:relative; display:flex; flex-shrink:0; flex-direction:column; align-items:stretch; gap:.5rem;
   margin-block-start:calc(-1 * var(--r9-dialog-inset,1rem)); margin-inline:calc(-1 * var(--r9-dialog-inset,1rem));
   padding-inline:var(--r9-dialog-inset,1rem); min-width:0;
   & > :is([data-slot="dialog-title"],[data-slot="alert-dialog-title"],[data-slot="sheet-title"]) {
@@ -53,6 +53,24 @@
 :is([data-slot="dialog-content"],[data-slot="alert-dialog-content"],[data-slot="sheet-popup"])[data-open]:not(.entity-dialog,.owner-dialog) { animation:r5-dialog-step-in 120ms steps(4,end) both!important; transition:none!important;
   @media (prefers-reduced-motion:reduce) { animation:none!important; transition:none!important; }
   html.reduce-effects & { animation:none!important; transition:none!important; } }
+/* Entity hosts provide a real accessible title but hide its wrapper. Reuse that DOM as the
+   visible title strip; do not invent translated text or expose the screen-reader description.
+   Only these known hosts opt in: image/media dialogs with sr-only titles remain untouched. */
+[data-slot="dialog-content"]:is(.entity-dialog,.owner-dialog) > [data-slot="dialog-header"].sr-only {
+  position:relative; width:auto; height:auto; padding:0; margin:-1rem -1rem 0;
+  overflow:visible; clip:auto; clip-path:none; white-space:normal;
+  display:flex; flex:none; min-width:0; gap:0;
+}
+[data-slot="dialog-content"]:is(.entity-dialog,.owner-dialog) > [data-slot="dialog-header"] > [data-slot="dialog-title"] {
+  display:flex; align-items:center; gap:8px; min-height:30px; margin:0; padding:5px 9px;
+  border-bottom:1px solid var(--r9-dialog-frame); background:var(--r9-dialog-pink); color:var(--r9-dialog-ink);
+  font-family:var(--wd-body-font-family,system-ui,sans-serif); font-size:.875rem; font-weight:700; line-height:1.25;
+  &::before { content:""; width:8px; height:8px; flex:none; background:var(--r9-dialog-indigo); box-shadow:1px 1px 0 #b86ba4; }
+}
+[data-slot="dialog-content"]:is(.entity-dialog,.owner-dialog) > [data-slot="dialog-header"] > [data-slot="dialog-description"] {
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
 /* R9.7 flex-row dialog headers with actions: additive header layout, merged here. */
 [data-slot$="dialog-content"]:not(.entity-dialog,.owner-dialog) > [data-slot$="dialog-header"]:not(.sr-only):is(.flex-row,:has(>:not([data-slot$="title"],[data-slot$="description"]) button)) { flex-direction:row; justify-content:space-between; gap:8px; min-height:30px; padding:0 calc(var(--r9-dialog-inset,1rem) + 4px) 0 0; border-bottom:1px solid var(--r9-dialog-frame); background:var(--r9-dialog-pink); color:var(--r9-dialog-ink);
   & > [data-slot$="title"] { flex:1 1 auto; min-width:0; margin:0; padding-inline:calc(var(--r9-dialog-inset,1rem) + 9px) 0; border:0; background:none; }

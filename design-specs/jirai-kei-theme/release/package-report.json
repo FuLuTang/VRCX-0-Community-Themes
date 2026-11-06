@@ -1,0 +1,71 @@
+{
+  "upstreamBase": "bfd4bb852afd52382e730bda93cba8e2d21c430c",
+  "version": "1.0.0-rc.1",
+  "cssBytes": 975565,
+  "cssLimit": 1048576,
+  "underLimit": true,
+  "formattingAstEqual": false,
+  "remoteUrls": [],
+  "sha256": "7cb9aecc4ecccf9bcef8b73760add497ce9762c15d9d59cfaec281bbeaa19dfe",
+  "licenses": [
+    "Lucide / Feather",
+    "Fusion Pixel",
+    "Silkscreen"
+  ],
+  "publicDistributionReady": false,
+  "blockers": [
+    "Embedded NSO/Steam/Fandom-derived artwork has no established redistribution permission in local records.",
+    "Latest upstream release v2.33.0 has not been verified; local Windows checks used a custom VRCX-0-jirai build.",
+    "Maintainer review required for the upstream policy against generated CSS: this is formatted assembly of modular CSS and generated embedded assets."
+  ],
+  "files": {
+    "theme.css": {
+      "bytes": 975565,
+      "sha256": "7cb9aecc4ecccf9bcef8b73760add497ce9762c15d9d59cfaec281bbeaa19dfe"
+    },
+    "theme.json": {
+      "bytes": 530,
+      "sha256": "ec044f1480bdf6f12c32ce8a88ab2ed58928853e09684d04e77d54daca6394e1"
+    },
+    "README.md": {
+      "bytes": 3466,
+      "sha256": "5b6b330983df77f35f3057efbb426693548fc549707c9e4801fb0f336297cc14"
+    },
+    "preview.webp": {
+      "bytes": 61590,
+      "sha256": "f19d3a1b0f94a796513bdefee66ca1c4c5808706b3527b9564b66d5c084c4559"
+    }
+  },
+  "preview": {
+    "width": 1200,
+    "height": 750,
+    "synthetic": true,
+    "personalData": false
+  },
+  "embeddedResourceCount": 379,
+  "embeddedResourcesUnchanged": true,
+  "prPaths": [
+    "README.md",
+    "themes/index.json",
+    "themes/jirai-kei-theme/README.md",
+    "themes/jirai-kei-theme/preview.webp",
+    "themes/jirai-kei-theme/theme.css",
+    "themes/jirai-kei-theme/theme.json"
+  ],
+  "pushed": false,
+  "prCreated": false,
+  "formatStyleReport": "format-style-diff.json",
+  "formattingNote": "Raw/normalized AST strings differ due to quote, whitespace and number formatting. Embedded URL payloads and their order are byte-identical; frozen-page computed-style equivalence is checked separately.",
+  "validation": {
+    "repositoryValidator": true,
+    "validatorUnitTests": "3 passed",
+    "frozenPages": "42 passed, zero computed-style differences",
+    "diffCheck": true
+  },
+  "archive": {
+    "file": "jirai-kei-theme-1.0.0-rc.1-local-only.zip",
+    "bytes": 515508,
+    "sha256": "7b58b6799a2397c28429bf86f9bc7bf7d23cd63cfc3ed9bb90ce7cbfbac45e0a",
+    "verified": true
+  }
+}
