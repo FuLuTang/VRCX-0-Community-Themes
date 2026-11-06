@@ -1,7 +1,0 @@
-[
-  {"id":"primary-rest","fixture":"activity","select":"[data-slot=sidebar-menu-button]:not([data-active=true]):not([data-active])"},
-  {"id":"primary-active","fixture":"activity","select":"[data-slot=sidebar-menu-button][data-active]"},
-  {"id":"secondary-rest","fixture":"activity","select":"[data-slot=sidebar-menu-sub-button]:not([data-active=true]):not([data-active])"},
-  {"id":"secondary-active","fixture":"favorites-worlds-select-listbox","select":"[data-slot=sidebar-menu-sub-button][data-active]"},
-  {"id":"collapsed-primary","fixture":"activity","select":"[data-slot=sidebar-menu-button][data-sidebar=menu-button]","index":0}
-]

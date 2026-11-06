@@ -1,6 +1,0 @@
-# Captures are generated from the authenticated live app and may contain private UI data.
-# Keep the complete frozen baseline locally; do not accidentally commit or push it.
-snapshot/
-fixtures/
-replay-snapshot/
-screens/

@@ -1,16 +1,16 @@
 {
   "id": "jirai-kei-theme",
-  "name": "Jirai Kei · Noir Ribbon",
-  "version": "1.1.0",
+  "name": "Jirai Kei · Windose Dark",
+  "version": "1.0.0-rc.1",
   "author": {
     "name": "FuLuTang",
     "github": "FuLuTang"
   },
-  "description": "Noir Ribbon: original openwork lace, tailored collar edges, satin stitches, portrait bezels and tactile BaseUI controls. Draft; no remote assets.",
+  "description": "Pink Win98-style window chrome, dark jirai-kei panels, pixel controls, lace, hearts and photo-corner decorations. Self-contained dark theme with embedded assets.",
   "tags": [
     "dark",
     "jirai-kei",
-    "local"
+    "pixel"
   ],
   "testedWith": "0.0.0-unverified",
   "remoteAssets": false,

@@ -19,7 +19,7 @@ content.
 
 - [VS Code Dark](themes/vscode-dark-theme/) by FuLuTang
 
-- [Jirai Kei · Noir Ribbon](themes/jirai-kei-theme/) by FuLuTang
+- [Jirai Kei · Windose Dark](themes/jirai-kei-theme/) by FuLuTang
 
 ## Documentation
 
